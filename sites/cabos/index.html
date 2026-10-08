@@ -1,9 +1,4194 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CABOS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CABOS — Contemporary Homes Inspired by Goa's Slower Rhythm</title>
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5.0.0/index.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/index.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5.0.0/index.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<style>
+:root {
+  --c1: #D65B2C;
+  --c2: #5B3E33;
+  --c3: #FFE8C3;
+  --c4: #414123;
+  --c5: #9E4723;
+  --c6: #D7C09B;
+  --dark: #1a120e;
+  --display: 'Playfair Display', Georgia, serif;
+  --body: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { overflow-x: hidden; }
+body {
+  font-family: var(--body);
+  background: var(--c3);
+  color: var(--c2);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+body.loading { overflow: hidden; height: 100vh; }
+
+a { text-decoration: none; color: inherit; }
+button { border: none; background: none; cursor: pointer; font-family: inherit; }
+img { display: block; max-width: 100%; }
+
+::selection { background: var(--c1); color: var(--c3); }
+
+/* ===== PRELOADER ===== */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: var(--c2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.preloader-text {
+  font-family: var(--display);
+  font-size: clamp(80px, 18vw, 240px);
+  color: var(--c3);
+  letter-spacing: -4px;
+  line-height: 0.85;
+  overflow: hidden;
+}
+.preloader-text span {
+  display: inline-block;
+  transform: translateY(100%);
+}
+.preloader-meta {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--c6);
+  text-transform: uppercase;
+  opacity: 0;
+}
+.preloader-line {
+  position: absolute;
+  bottom: 80px;
+  left: 40px;
+  width: 0;
+  height: 1px;
+  background: var(--c1);
+}
+
+/* ===== CURSOR ===== */
+.cursor {
+  position: fixed;
+  width: 10px; height: 10px;
+  background: var(--c1);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: transform 0.2s, width 0.3s, height 0.3s;
+}
+.cursor.expand {
+  width: 80px; height: 80px;
+  background: transparent;
+  border: 1px solid var(--c1);
+  mix-blend-mode: normal;
+}
+.cursor-text {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--c1);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+@media (max-width: 900px) {
+  .cursor, .cursor-text { display: none; }
+}
+
+/* ===== NAVIGATION ===== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 5000;
+  padding: 32px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  mix-blend-mode: difference;
+  color: var(--c3);
+}
+.nav-logo {
+  font-family: var(--display);
+  font-size: 18px;
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.nav-links a {
+  position: relative;
+  padding: 4px 0;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: currentColor;
+  transition: width 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.nav-links a:hover::after { width: 100%; }
+.nav-cta {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border: 1px solid currentColor;
+  transition: background 0.3s, color 0.3s;
+}
+.nav-cta:hover { background: var(--c1); border-color: var(--c1); }
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+.burger span {
+  display: block;
+  width: 24px; height: 1.5px;
+  background: currentColor;
+  transition: all 0.4s;
+}
+.burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 4999;
+  background: var(--c2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+.mobile-nav.open { opacity: 1; pointer-events: all; }
+.mobile-nav a {
+  font-family: var(--display);
+  font-size: 36px;
+  color: var(--c3);
+  letter-spacing: 4px;
+}
+
+@media (max-width: 900px) {
+  .nav { padding: 20px 24px; }
+  .nav-right { display: none; }
+  .burger { display: flex; }
+}
+
+/* ===== PAGE TRANSITION ===== */
+.page-trans {
+  position: fixed;
+  inset: 0;
+  z-index: 90000;
+  pointer-events: none;
+  background: var(--c2);
+  clip-path: circle(0% at 50% 50%);
+}
+
+/* ===== PAGES ===== */
+.page { display: none; }
+.page.active { display: block; }
+
+/* ===== HOME HERO ===== */
+.home-hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-hero-img {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0);
+}
+.home-hero-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.home-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 48px;
+}
+.home-hero-title {
+  font-family: var(--display);
+  font-size: clamp(100px, 22vw, 320px);
+  font-weight: 400;
+  color: var(--c3);
+  line-height: 0.85;
+  letter-spacing: -6px;
+  margin-bottom: 40px;
+}
+.home-hero-title .char {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.home-hero-meta {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--c6);
+}
+.home-hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.home-hero-scroll-line {
+  width: 1px; height: 60px;
+  background: var(--c6);
+  position: relative;
+  overflow: hidden;
+}
+.home-hero-scroll-line::after {
+  content: '';
+  position: absolute;
+  top: -100%; left: 0;
+  width: 100%; height: 100%;
+  background: var(--c1);
+  animation: scrollDown 2s infinite;
+}
+@keyframes scrollDown {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+/* ===== MASSIVE TYPE SECTION ===== */
+.massive-section {
+  padding: 200px 48px;
+  background: var(--c3);
+  position: relative;
+  overflow: hidden;
+}
+.massive-num {
+  position: absolute;
+  top: 80px;
+  right: 48px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--c1);
+  text-transform: uppercase;
+}
+.massive-heading {
+  font-family: var(--display);
+  font-size: clamp(48px, 8vw, 120px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--c2);
+  max-width: 1200px;
+  margin-bottom: 60px;
+}
+.massive-heading em {
+  font-style: italic;
+  color: var(--c1);
+}
+.massive-text {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--c2);
+  opacity: 0.7;
+  max-width: 500px;
+  margin-left: auto;
+}
+
+/* ===== SPLIT MASSIVE ===== */
+.split-massive {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  background: var(--c3);
+}
+.split-massive-img {
+  position: relative;
+  overflow: hidden;
+}
+.split-massive-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.split-massive-img .mask {
+  position: absolute;
+  inset: 0;
+  background: var(--c3);
+  transform-origin: right;
+}
+.split-massive-content {
+  padding: 120px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.split-massive-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c1);
+  margin-bottom: 40px;
+}
+.split-massive-heading {
+  font-family: var(--display);
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--c2);
+  margin-bottom: 40px;
+}
+.split-massive-heading em { font-style: italic; color: var(--c1); }
+.split-massive-text {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--c2);
+  opacity: 0.7;
+  max-width: 400px;
+}
+
+@media (max-width: 900px) {
+  .split-massive { grid-template-columns: 1fr; }
+  .split-massive-img { height: 60vh; min-height: 400px; }
+  .split-massive-content { padding: 60px 24px; }
+  .massive-section { padding: 100px 24px; }
+  .massive-num { right: 24px; top: 40px; }
+}
+
+/* ===== HORIZONTAL SCROLL ===== */
+.hscroll {
+  overflow: hidden;
+  background: var(--c2);
+  color: var(--c3);
+  padding: 120px 0 80px;
+}
+.hscroll-header {
+  padding: 0 48px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.hscroll-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c1);
+}
+.hscroll-heading {
+  font-family: var(--display);
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 400;
+  color: var(--c3);
+  line-height: 1.1;
+}
+.hscroll-heading em { font-style: italic; color: var(--c1); }
+.hscroll-wrapper {
+  display: flex;
+  width: max-content;
+  gap: 40px;
+  padding: 0 48px;
+}
+.hscroll-panel {
+  width: 60vw;
+  max-width: 700px;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  height: 70vh;
+  min-height: 500px;
+}
+.hscroll-panel-img {
+  overflow: hidden;
+  position: relative;
+}
+.hscroll-panel-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.hscroll-panel-content {
+  background: var(--c4);
+  padding: 60px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hscroll-panel-num {
+  font-family: var(--display);
+  font-size: 80px;
+  color: var(--c1);
+  opacity: 0.2;
+  line-height: 1;
+}
+.hscroll-panel-title {
+  font-family: var(--display);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 400;
+  color: var(--c3);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.hscroll-panel-text {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--c6);
+  opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+  .hscroll-panel { grid-template-columns: 1fr; width: 85vw; height: auto; }
+  .hscroll-panel-img { height: 300px; }
+  .hscroll-header { padding: 0 24px 40px; flex-direction: column; gap: 16px; align-items: flex-start; }
+  .hscroll-wrapper { padding: 0 24px; }
+}
+
+/* ===== HOMES SECTION ===== */
+.homes-section {
+  background: var(--c3);
+  padding: 200px 48px;
+}
+.homes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 120px;
+}
+.homes-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c1);
+}
+.homes-heading {
+  font-family: var(--display);
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--c2);
+  max-width: 700px;
+}
+.homes-heading em { font-style: italic; color: var(--c1); }
+.homes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.home-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.home-item:nth-child(even) { direction: rtl; }
+.home-item:nth-child(even) > * { direction: ltr; }
+.home-item-img {
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  position: relative;
+}
+.home-item-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16,1,0.3,1);
+}
+.home-item:hover .home-item-img img { transform: scale(1.05); }
+.home-item-content {
+  padding: 40px 0;
+}
+.home-item-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--c1);
+  margin-bottom: 24px;
+}
+.home-item-title {
+  font-family: var(--display);
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 400;
+  color: var(--c2);
+  line-height: 1;
+  margin-bottom: 24px;
+}
+.home-item-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--c2);
+  opacity: 0.65;
+  max-width: 380px;
+  margin-bottom: 32px;
+}
+.home-item-cta {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c1);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: gap 0.4s;
+}
+.home-item:hover .home-item-cta { gap: 24px; }
+
+@media (max-width: 900px) {
+  .homes-section { padding: 100px 24px; }
+  .home-item { grid-template-columns: 1fr; gap: 32px; }
+  .home-item:nth-child(even) { direction: ltr; }
+  .home-item-img { aspect-ratio: 16/10; }
+  .homes-header { flex-direction: column; gap: 24px; align-items: flex-start; margin-bottom: 60px; }
+}
+
+/* ===== AMENITIES SECTION ===== */
+.amenities-section {
+  background: var(--c4);
+  color: var(--c3);
+  padding: 200px 48px;
+}
+.amenities-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 120px;
+}
+.amenities-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c1);
+}
+.amenities-heading {
+  font-family: var(--display);
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: 400;
+  color: var(--c3);
+  line-height: 1.1;
+  max-width: 600px;
+}
+.amenities-heading em { font-style: italic; color: var(--c1); }
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.amenity-card {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.amenity-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1s cubic-bezier(0.16,1,0.3,1);
+}
+.amenity-card:hover img { transform: scale(1.08); }
+.amenity-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26,18,14,0.85) 0%, transparent 50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+}
+.amenity-card-num {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--c1);
+  margin-bottom: 8px;
+}
+.amenity-card-title {
+  font-family: var(--display);
+  font-size: 20px;
+  color: var(--c3);
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .amenities-grid { grid-template-columns: 1fr 1fr; }
+  .amenities-section { padding: 100px 24px; }
+  .amenities-header { flex-direction: column; gap: 24px; align-items: flex-start; margin-bottom: 60px; }
+}
+
+/* ===== FINAL CTA ===== */
+.final-cta {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--c3);
+}
+.final-cta-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+}
+.final-cta-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.final-cta-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+}
+.final-cta-heading {
+  font-family: var(--display);
+  font-size: clamp(48px, 8vw, 120px);
+  font-weight: 400;
+  color: var(--c2);
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+.final-cta-heading em { font-style: italic; color: var(--c1); }
+.final-cta-location {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--c1);
+  margin-bottom: 60px;
+}
+.cta-buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 20px 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.4s;
+}
+.btn-dark { background: var(--c2); color: var(--c3); }
+.btn-dark:hover { background: var(--c1); }
+.btn-outline { border: 1px solid var(--c2); color: var(--c2); }
+.btn-outline:hover { background: var(--c2); color: var(--c3); }
+
+/* ===== ABOUT PAGE ===== */
+.about-hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.about-hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 48px;
+}
+.about-hero-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c6);
+  margin-bottom: 40px;
+}
+.about-hero-title {
+  font-family: var(--display);
+  font-size: clamp(60px, 12vw, 160px);
+  font-weight: 400;
+  color: var(--c3);
+  line-height: 0.9;
+  letter-spacing: -3px;
+}
+.about-hero-title em { font-style: italic; color: var(--c6); }
+
+.about-chapters {
+  background: var(--c3);
+}
+.about-chapter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  border-bottom: 1px solid rgba(91,62,51,0.1);
+}
+.about-chapter:nth-child(even) { direction: rtl; }
+.about-chapter:nth-child(even) > * { direction: ltr; }
+.about-chapter-img {
+  position: relative;
+  overflow: hidden;
+}
+.about-chapter-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.about-chapter-img .mask {
+  position: absolute;
+  inset: 0;
+  background: var(--c3);
+}
+.about-chapter-content {
+  padding: 120px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.chapter-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--c1);
+  margin-bottom: 40px;
+}
+.chapter-title {
+  font-family: var(--display);
+  font-size: clamp(36px, 4.5vw, 56px);
+  font-weight: 400;
+  color: var(--c2);
+  line-height: 1.15;
+  margin-bottom: 32px;
+}
+.chapter-title em { font-style: italic; color: var(--c1); }
+.chapter-text {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--c2);
+  opacity: 0.7;
+  max-width: 440px;
+}
+
+@media (max-width: 900px) {
+  .about-chapter { grid-template-columns: 1fr; min-height: auto; }
+  .about-chapter:nth-child(even) { direction: ltr; }
+  .about-chapter-img { height: 50vh; }
+  .about-chapter-content { padding: 60px 24px; }
+}
+
+/* ===== PROPERTY ARCHITECTURE SPLIT ===== */
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.split-section.reverse {
+  direction: rtl;
+}
+
+.split-section.reverse > * {
+  direction: ltr;
+}
+
+.split-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.split-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.split-image .img-reveal {
+  position: absolute;
+  inset: 0;
+  background: var(--cream);
+  transform-origin: left;
+}
+
+.split-content {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.split-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 24px;
+}
+
+.split-heading {
+  font-family: var(--display);
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--brown);
+  margin-bottom: 28px;
+}
+
+.split-heading em {
+  font-style: italic;
+  color: var(--orange);
+}
+
+.split-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--brown);
+  opacity: 0.8;
+  max-width: 440px;
+}
+
+@media (max-width: 900px) {
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+
+  .split-section.reverse {
+    direction: ltr;
+  }
+
+  .split-image {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .split-content {
+    padding: 48px 24px;
+  }
+}
+
+/* ===== PROPERTY PAGE ===== */
+.property-hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.property-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.property-hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.property-hero-content {
+  position: relative;
+  z-index: 2;
+}
+.property-hero-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c6);
+  margin-bottom: 40px;
+}
+.property-hero-title {
+  font-family: var(--display);
+  font-size: clamp(60px, 12vw, 160px);
+  font-weight: 400;
+  color: var(--c3);
+  line-height: 0.9;
+  margin-bottom: 32px;
+}
+.property-hero-title em { font-style: italic; color: var(--c6); }
+.property-hero-sub {
+  font-size: 15px;
+  color: var(--c6);
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.property-types {
+  padding: 200px 48px;
+  background: var(--c3);
+}
+.property-types-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+.pt-card {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.pt-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1s cubic-bezier(0.16,1,0.3,1);
+}
+.pt-card:hover img { transform: scale(1.06); }
+.pt-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26,18,14,0.8) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+}
+.pt-card-name {
+  font-family: var(--display);
+  font-size: 28px;
+  color: var(--c3);
+  margin-bottom: 6px;
+}
+.pt-card-count {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--c6);
+}
+
+@media (max-width: 768px) {
+  .property-types { padding: 100px 24px; }
+  .property-types-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ===== UNIT PAGES ===== */
+.unit-hero {
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--dark);
+  display: flex;
+  align-items: flex-end;
+}
+.unit-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.unit-hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.unit-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26,18,14,0.7) 0%, transparent 60%);
+}
+.unit-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 48px 80px;
+  width: 100%;
+}
+.unit-hero-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c6);
+  margin-bottom: 24px;
+}
+.unit-hero-title {
+  font-family: var(--display);
+  font-size: clamp(60px, 12vw, 140px);
+  font-weight: 400;
+  color: var(--c3);
+  line-height: 0.9;
+  margin-bottom: 16px;
+}
+.unit-hero-sub {
+  font-size: 14px;
+  color: var(--c6);
+  letter-spacing: 1px;
+}
+
+.unit-content {
+  padding: 160px 48px;
+  background: var(--c3);
+}
+.unit-block {
+  margin-bottom: 160px;
+}
+.unit-block-title {
+  font-family: var(--display);
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 400;
+  color: var(--c2);
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(91,62,51,0.15);
+}
+.unit-block-text {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--c2);
+  opacity: 0.75;
+  max-width: 600px;
+}
+
+.typology-list { display: flex; flex-direction: column; }
+.typology-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(91,62,51,0.1);
+  align-items: baseline;
+  transition: all 0.3s;
+}
+.typology-row:hover { padding-left: 24px; background: rgba(214,91,44,0.03); }
+.typology-name {
+  font-family: var(--display);
+  font-size: 20px;
+  color: var(--c2);
+}
+.typology-detail {
+  font-size: 14px;
+  color: var(--c2);
+  opacity: 0.6;
+}
+
+.unit-gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 320px 320px;
+  gap: 2px;
+}
+.unit-gallery-item { overflow: hidden; }
+.unit-gallery-item:first-child { grid-row: 1 / 3; }
+.unit-gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s;
+}
+.unit-gallery-item:hover img { transform: scale(1.04); }
+
+.floorplan-ph {
+  background: var(--c6);
+  padding: 100px 48px;
+  text-align: center;
+  border: 1px dashed var(--c2);
+  opacity: 0.35;
+}
+.floorplan-ph-text {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--c2);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 60px;
+}
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(91,62,51,0.1);
+  font-size: 14px;
+}
+.spec-label { opacity: 0.55; }
+.spec-value { font-weight: 500; }
+
+@media (max-width: 768px) {
+  .unit-content { padding: 80px 24px; }
+  .unit-block { margin-bottom: 80px; }
+  .typology-row { grid-template-columns: 1fr; gap: 8px; }
+  .unit-gallery { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .unit-gallery-item { height: 260px; }
+  .unit-gallery-item:first-child { grid-row: auto; }
+  .specs-grid { grid-template-columns: 1fr; }
+  .unit-hero-content { padding: 0 24px 60px; }
+}
+
+/* ===== AMENITIES PAGE ===== */
+.amenities-page-hero {
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.amenities-page-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.amenities-page-hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.amenities-page-hero-content {
+  position: relative;
+  z-index: 2;
+}
+.amenity-full {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 90vh;
+  border-bottom: 1px solid rgba(91,62,51,0.1);
+  background: var(--c3);
+}
+.amenity-full:nth-child(even) { direction: rtl; }
+.amenity-full:nth-child(even) > * { direction: ltr; }
+.amenity-full-img {
+  overflow: hidden;
+  position: relative;
+}
+.amenity-full-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.amenity-full-content {
+  padding: 120px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.amenity-full-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--c1);
+  margin-bottom: 32px;
+}
+.amenity-full-name {
+  font-family: var(--display);
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 400;
+  color: var(--c2);
+  line-height: 1.2;
+  margin-bottom: 28px;
+}
+.amenity-full-name em { font-style: italic; color: var(--c1); }
+.amenity-full-desc {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--c2);
+  opacity: 0.7;
+  max-width: 440px;
+}
+
+@media (max-width: 900px) {
+  .amenity-full { grid-template-columns: 1fr; min-height: auto; }
+  .amenity-full:nth-child(even) { direction: ltr; }
+  .amenity-full-img { height: 50vh; }
+  .amenity-full-content { padding: 60px 24px; }
+}
+
+.services-section {
+  background: var(--c2);
+  color: var(--c3);
+  padding: 200px 48px;
+}
+.services-header {
+  margin-bottom: 80px;
+}
+.services-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c1);
+  margin-bottom: 32px;
+}
+.services-heading {
+  font-family: var(--display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 400;
+  color: var(--c3);
+  line-height: 1.15;
+}
+.services-heading em { font-style: italic; color: var(--c1); }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.service-card {
+  padding: 48px 40px;
+  border: 1px solid rgba(215,192,155,0.1);
+  transition: background 0.4s;
+}
+.service-card:hover { background: rgba(214,91,44,0.08); }
+.service-card-title {
+  font-family: var(--display);
+  font-size: 20px;
+  color: var(--c3);
+  margin-bottom: 16px;
+}
+.service-card-desc {
+  font-size: 13px;
+  color: var(--c6);
+  opacity: 0.7;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .services-section { padding: 100px 24px; }
+}
+
+.beyond-section {
+  padding: 200px 48px;
+  background: var(--c3);
+}
+.beyond-header { margin-bottom: 80px; }
+.beyond-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+.beyond-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+}
+.beyond-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s;
+}
+.beyond-item:hover img { transform: scale(1.05); }
+.beyond-item-label {
+  position: absolute;
+  bottom: 24px; left: 24px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--c3);
+  background: rgba(26,18,14,0.7);
+  padding: 10px 16px;
+}
+
+@media (max-width: 768px) {
+  .beyond-section { padding: 100px 24px; }
+  .beyond-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== ENQUIRY PAGE ===== */
+.enquiry-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.enquiry-left {
+  background: var(--c2);
+  color: var(--c3);
+  padding: 160px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.enquiry-left-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 10 Q50 20 40 35 Q30 20 40 10Z' fill='%23D65B2C'/%3E%3C/svg%3E");
+  background-size: 80px 80px;
+}
+.enquiry-left-content { position: relative; z-index: 2; }
+.enquiry-left-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c1);
+  margin-bottom: 40px;
+}
+.enquiry-left-title {
+  font-family: var(--display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 400;
+  color: var(--c3);
+  line-height: 1.15;
+  margin-bottom: 32px;
+}
+.enquiry-left-title em { font-style: italic; color: var(--c6); }
+.enquiry-left-text {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--c6);
+  opacity: 0.75;
+  max-width: 400px;
+  margin-bottom: 60px;
+}
+.enquiry-contact {
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 2;
+  color: var(--c6);
+}
+.enquiry-contact strong { color: var(--c3); }
+
+.enquiry-right {
+  padding: 160px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--c3);
+}
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  max-width: 440px;
+}
+.form-group { display: flex; flex-direction: column; gap: 10px; }
+.form-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c2);
+  opacity: 0.55;
+}
+.form-input, .form-select, .form-textarea {
+  font-family: var(--body);
+  font-size: 16px;
+  padding: 16px 0;
+  border: none;
+  border-bottom: 1px solid rgba(91,62,51,0.2);
+  background: transparent;
+  color: var(--c2);
+  outline: none;
+  transition: border-color 0.3s;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-bottom-color: var(--c1);
+}
+.form-textarea { resize: vertical; min-height: 100px; }
+.form-submit {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: var(--c2);
+  color: var(--c3);
+  padding: 20px 40px;
+  margin-top: 16px;
+  transition: background 0.3s;
+  align-self: flex-start;
+}
+.form-submit:hover { background: var(--c1); }
+
+@media (max-width: 900px) {
+  .enquiry-page { grid-template-columns: 1fr; }
+  .enquiry-left { padding: 80px 24px; }
+  .enquiry-right { padding: 60px 24px; }
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--dark);
+  color: var(--c6);
+  padding: 120px 48px 48px;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 120px;
+}
+.footer-brand {
+  font-family: var(--display);
+  font-size: 32px;
+  letter-spacing: 5px;
+  color: var(--c3);
+  margin-bottom: 20px;
+}
+.footer-tagline {
+  font-size: 13px;
+  line-height: 1.8;
+  opacity: 0.6;
+  max-width: 280px;
+}
+.footer-col-title {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c1);
+  margin-bottom: 24px;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-links a {
+  font-size: 13px;
+  opacity: 0.6;
+  transition: opacity 0.3s, color 0.3s;
+}
+.footer-links a:hover { opacity: 1; color: var(--c3); }
+.footer-bottom {
+  border-top: 1px solid rgba(215,192,155,0.1);
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+
+@media (max-width: 900px) {
+  .footer { padding: 80px 24px 32px; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+  .footer-bottom { flex-direction: column; gap: 12px; }
+}
+
+/* EXACT SOURCE OVERRIDES */
+:root{--orange:var(--c1);--brown:var(--c2);--cream:var(--c3);--olive:var(--c4);--rust:var(--c5);--sand:var(--c6);}
+/* ===== LOADER ===== */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+}
+.loader-logo {
+  font-family: var(--display);
+  font-size: clamp(48px, 8vw, 96px);
+  color: var(--cream);
+  letter-spacing: 12px;
+  opacity: 0;
+}
+.loader-line {
+  width: 0;
+  height: 1px;
+  background: var(--orange);
+}
+.loader-sub {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--sand);
+  opacity: 0;
+}
+
+/* ===== PAGE TRANSITION ===== */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  pointer-events: none;
+  display: flex;
+}
+.pt-col {
+  flex: 1;
+  background: var(--brown);
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+
+/* ===== NAVIGATION ===== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 5000;
+  padding: 28px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  mix-blend-mode: difference;
+  color: var(--cream);
+  transition: padding 0.4s;
+}
+.nav.compact { padding: 18px 40px; }
+.nav-logo {
+  font-family: var(--display);
+  font-size: 22px;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+}
+.nav-menu a {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 4px 0;
+}
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: currentColor;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-menu a:hover::after { width: 100%; }
+.nav-menu .nav-cta {
+  border: 1px solid currentColor;
+  padding: 10px 20px;
+  transition: background 0.3s, color 0.3s;
+}
+.nav-menu .nav-cta:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+.nav-menu .nav-cta::after { display: none; }
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+.burger span {
+  display: block;
+  width: 24px; height: 1.5px;
+  background: currentColor;
+  transition: all 0.4s;
+}
+.burger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 4999;
+  background: var(--brown);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+.mobile-nav.open { opacity: 1; pointer-events: all; }
+.mobile-nav a {
+  font-family: var(--display);
+  font-size: 32px;
+  color: var(--cream);
+  letter-spacing: 3px;
+}
+
+@media (max-width: 900px) {
+  .nav { padding: 20px 24px; }
+  .nav-menu { display: none; }
+  .burger { display: flex; }
+}
+
+
+/* ===== HOME HERO ===== */
+.home-hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.home-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.home-hero-bg img {
+  width: 100%; height: 120%;
+  object-fit: cover;
+  object-position: center;
+}
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(42,31,26,0.6) 0%, rgba(42,31,26,0.1) 40%, transparent 100%);
+}
+.home-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 40px 60px;
+  width: 100%;
+}
+.hero-location {
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-align: left;
+}
+.hero-location span { display: inline-block; }
+.hero-title {
+  font-family: var(--display);
+  font-size: clamp(56px, 11vw, 160px);
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 0.9;
+  letter-spacing: -3px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+.hero-title .line {
+  display: block;
+  overflow: hidden;
+}
+.hero-title .line span {
+  display: inline-block;
+}
+.hero-tagline {
+  font-size: 15px;
+  color: var(--sand);
+  max-width: 420px;
+  line-height: 1.7;
+  overflow: hidden;
+}
+.hero-tagline span { display: inline-block; }
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--cream);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.hero-scroll-indicator .line {
+  width: 48px; height: 1px;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.hero-scroll-indicator .line::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: var(--orange);
+  animation: scrollAnim 2s infinite;
+}
+@keyframes scrollAnim {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* ===== MARQUEE ===== */
+.marquee {
+  overflow: hidden;
+  padding: 32px 0;
+  border-top: 1px solid rgba(91,62,51,0.12);
+  border-bottom: 1px solid rgba(91,62,51,0.12);
+  background: var(--cream);
+}
+.marquee-track {
+  display: flex;
+  gap: 60px;
+  white-space: nowrap;
+  animation: marqueeScroll 30s linear infinite;
+  width: max-content;
+}
+.marquee-item {
+  font-family: var(--display);
+  font-size: clamp(24px, 3vw, 40px);
+  font-weight: 400;
+  color: var(--brown);
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.marquee-item::after {
+  content: '✦';
+  color: var(--orange);
+  font-size: 16px;
+}
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+/* ===== MARQUEE ===== */
+.marquee {
+  overflow: hidden;
+  padding: 32px 0;
+  border-top: 1px solid rgba(91,62,51,0.12);
+  border-bottom: 1px solid rgba(91,62,51,0.12);
+  background: var(--cream);
+}
+.marquee-track {
+  display: flex;
+  gap: 60px;
+  white-space: nowrap;
+  animation: marqueeScroll 30s linear infinite;
+  width: max-content;
+}
+.marquee-item {
+  font-family: var(--display);
+  font-size: clamp(24px, 3vw, 40px);
+  font-weight: 400;
+  color: var(--brown);
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.marquee-item::after {
+  content: '✦';
+  color: var(--orange);
+  font-size: 16px;
+}
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+/* ===== FULL-WIDTH IMAGE WITH OVERLAY TEXT ===== */
+.full-img-text {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.full-img-text img {
+  width: 100%; height: 110%;
+  object-fit: cover;
+}
+.full-img-text-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26,18,14,0.8) 0%, rgba(26,18,14,0.2) 50%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 80px 48px;
+}
+.full-img-text-content {
+  max-width: 700px;
+}
+.full-img-text-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--c1);
+  margin-bottom: 20px;
+}
+.full-img-text-heading {
+  font-family: var(--display);
+  font-size: clamp(40px, 6vw, 80px);
+  font-weight: 400;
+  color: var(--c3);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.full-img-text-heading em { font-style: italic; color: var(--c6); }
+.full-img-text-text {
+  font-size: 15px;
+  color: var(--c6);
+  line-height: 1.8;
+  max-width: 480px;
+}
+
+
+/* ===== HORIZONTAL SCROLL SECTION ===== */
+.hscroll-section {
+  overflow: hidden;
+  background: var(--c2);
+  color: var(--c3);
+  padding: 80px 0;
+}
+.hscroll-header {
+  padding: 0 48px 60px;
+}
+.hscroll-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--c1);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.hscroll-label::before {
+  content: '';
+  width: 40px; height: 1px;
+  background: var(--c1);
+}
+.hscroll-heading {
+  font-family: var(--display);
+  font-size: clamp(32px, 4.5vw, 60px);
+  font-weight: 400;
+  color: var(--c3);
+  line-height: 1.15;
+}
+.hscroll-heading em { font-style: italic; color: var(--c1); }
+.hscroll-wrapper {
+  display: flex;
+  width: max-content;
+  gap: 2px;
+}
+.hscroll-panel {
+  width: 70vw;
+  max-width: 800px;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  height: 60vh;
+  min-height: 400px;
+}
+.hscroll-panel-img {
+  overflow: hidden;
+}
+.hscroll-panel-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.hscroll-panel-content {
+  background: var(--c4);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hscroll-panel-num {
+  font-family: var(--display);
+  font-size: 60px;
+  color: var(--c1);
+  opacity: 0.3;
+  line-height: 1;
+}
+.hscroll-panel-title {
+  font-family: var(--display);
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 400;
+  color: var(--c3);
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+.hscroll-panel-text {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--c6);
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .hscroll-panel { grid-template-columns: 1fr; width: 85vw; height: auto; }
+  .hscroll-panel-img { height: 250px; }
+  .hscroll-header { padding: 0 24px 40px; }
+}
+
+
+/* ===== PROPERTY SELECTOR (HOME) ===== */
+.homes-section {
+  background: var(--c3);
+  padding: 120px 0;
+}
+.homes-header {
+  padding: 0 48px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: end;
+}
+.homes-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--c1);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.homes-label::before {
+  content: '';
+  width: 40px; height: 1px;
+  background: var(--c1);
+}
+.homes-heading {
+  font-family: var(--display);
+  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--c2);
+}
+.homes-heading em { font-style: italic; color: var(--c1); }
+.homes-desc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--c2);
+  opacity: 0.7;
+  max-width: 400px;
+}
+
+.homes-list {
+  border-top: 1px solid rgba(91,62,51,0.12);
+}
+.home-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid rgba(91,62,51,0.12);
+  min-height: 50vh;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.5s;
+}
+.home-row:hover { background: rgba(214,91,44,0.03); }
+.home-row-img {
+  overflow: hidden;
+  position: relative;
+}
+.home-row-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16,1,0.3,1);
+}
+.home-row:hover .home-row-img img { transform: scale(1.05); }
+.home-row-content {
+  grid-column: span 2;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.home-row:nth-child(even) { direction: rtl; }
+.home-row:nth-child(even) > * { direction: ltr; }
+.home-row:nth-child(even) .home-row-content { text-align: right; align-items: flex-end; }
+.home-row-num {
+  font-family: var(--display);
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: var(--c1);
+  margin-bottom: 16px;
+}
+.home-row-title {
+  font-family: var(--display);
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 400;
+  color: var(--c2);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+.home-row-desc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--c2);
+  opacity: 0.65;
+  max-width: 380px;
+  margin-bottom: 28px;
+}
+.home-row-cta {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--c1);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: gap 0.4s;
+}
+.home-row:hover .home-row-cta { gap: 24px; }
+
+@media (max-width: 900px) {
+  .home-row { grid-template-columns: 1fr; min-height: auto; }
+  .home-row:nth-child(even) { direction: ltr; }
+  .home-row:nth-child(even) .home-row-content { text-align: left; align-items: flex-start; }
+  .home-row-img { height: 50vh; }
+  .home-row-content { padding: 40px 24px; grid-column: span 1; }
+  .homes-header { grid-template-columns: 1fr; padding: 0 24px 48px; gap: 24px; }
+}
+
+
+
+
+/* ===== EXACT INNER-PAGE CSS FROM INNER-PAGES-ONLY ===== */
+/* ===== ABOUT PAGE ===== */
+.about-hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.about-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.about-hero-bg img {
+  width: 100%; height: 120%;
+  object-fit: cover;
+}
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(42,31,26,0.7) 0%, rgba(42,31,26,0.2) 50%, transparent 100%);
+}
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 40px 80px;
+  width: 100%;
+}
+.about-hero-label {
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 24px;
+}
+.about-hero-title {
+  font-family: var(--display);
+  font-size: clamp(48px, 8vw, 120px);
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+/* About Chapters - Horizontal Scroll */
+.about-chapters {
+  overflow: hidden;
+  background: var(--cream);
+}
+.about-chapters-wrapper {
+  display: flex;
+  width: max-content;
+}
+.about-chapter {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+.about-chapter-image {
+  position: relative;
+  overflow: hidden;
+}
+.about-chapter-image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.about-chapter-content {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.chapter-num {
+  font-family: var(--display);
+  font-size: 100px;
+  color: var(--orange);
+  opacity: 0.2;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+.chapter-title {
+  font-family: var(--display);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  color: var(--brown);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+.chapter-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--brown);
+  opacity: 0.75;
+  max-width: 440px;
+}
+
+@media (max-width: 900px) {
+  .about-chapter { grid-template-columns: 1fr; height: auto; min-height: 100vh; }
+  .about-chapter-image { height: 50vh; }
+  .about-chapter-content { padding: 48px 24px; }
+}
+
+/* ===== PROPERTY PAGE ===== */
+.property-hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.property-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.property-hero-bg img {
+  width: 100%; height: 120%;
+  object-fit: cover;
+}
+.property-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(42,31,26,0.4);
+}
+.property-hero-content {
+  position: relative;
+  z-index: 2;
+}
+.property-hero-label {
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 24px;
+}
+.property-hero-title {
+  font-family: var(--display);
+  font-size: clamp(48px, 8vw, 120px);
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.property-hero-sub {
+  font-size: 15px;
+  color: var(--sand);
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Property Types Grid */
+.property-types {
+  padding: 120px 40px;
+  background: var(--cream);
+}
+.property-types-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+.pt-card {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.pt-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pt-card:hover img { transform: scale(1.06); }
+.pt-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(42,31,26,0.8) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+}
+.pt-card-name {
+  font-family: var(--display);
+  font-size: 28px;
+  color: var(--cream);
+  margin-bottom: 6px;
+}
+.pt-card-count {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sand);
+}
+
+@media (max-width: 768px) {
+  .property-types { padding: 60px 24px; }
+  .property-types-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ===== UNIT PAGES ===== */
+.unit-hero {
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.unit-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.unit-hero-bg img {
+  width: 100%; height: 120%;
+  object-fit: cover;
+}
+.unit-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(42,31,26,0.7) 0%, transparent 60%);
+}
+.unit-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 40px 60px;
+  width: 100%;
+}
+.unit-hero-label {
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 16px;
+}
+.unit-hero-title {
+  font-family: var(--display);
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.unit-hero-sub {
+  font-size: 14px;
+  color: var(--sand);
+  letter-spacing: 1px;
+}
+
+.unit-content {
+  padding: 100px 40px;
+  background: var(--cream);
+}
+.unit-block {
+  margin-bottom: 100px;
+}
+.unit-block-title {
+  font-family: var(--display);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 400;
+  color: var(--brown);
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(91,62,51,0.15);
+}
+.unit-block-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--brown);
+  opacity: 0.8;
+  max-width: 600px;
+}
+
+/* Typology list */
+.typology-list { display: flex; flex-direction: column; }
+.typology-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(91,62,51,0.1);
+  align-items: baseline;
+  transition: background 0.3s;
+}
+.typology-row:hover { background: rgba(214,91,44,0.04); padding-left: 16px; }
+.typology-name {
+  font-family: var(--display);
+  font-size: 18px;
+  color: var(--brown);
+}
+.typology-detail {
+  font-size: 14px;
+  color: var(--brown);
+  opacity: 0.65;
+}
+
+/* Gallery */
+.unit-gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 280px 280px;
+  gap: 2px;
+}
+.unit-gallery-item {
+  overflow: hidden;
+}
+.unit-gallery-item:first-child { grid-row: 1 / 3; }
+.unit-gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s;
+}
+.unit-gallery-item:hover img { transform: scale(1.04); }
+
+/* Floorplan placeholder */
+.floorplan-ph {
+  background: var(--sand);
+  padding: 80px 40px;
+  text-align: center;
+  border: 1px dashed var(--brown);
+  opacity: 0.35;
+}
+.floorplan-ph-text {
+  font-family: var(--display);
+  font-size: 20px;
+  color: var(--brown);
+  letter-spacing: 4px;
+}
+
+/* Specs */
+.specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
+}
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(91,62,51,0.1);
+  font-size: 14px;
+}
+.spec-label { opacity: 0.55; }
+.spec-value { font-weight: 500; }
+
+@media (max-width: 768px) {
+  .unit-content { padding: 60px 24px; }
+  .typology-row { grid-template-columns: 1fr; gap: 6px; }
+  .unit-gallery { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .unit-gallery-item { height: 240px; }
+  .unit-gallery-item:first-child { grid-row: auto; }
+  .specs-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== AMENITIES PAGE ===== */
+.amenities-page-hero {
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.amenities-page-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.amenities-page-hero-bg img {
+  width: 100%; height: 120%;
+  object-fit: cover;
+}
+.amenities-page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(65,65,35,0.8) 0%, rgba(65,65,35,0.3) 50%, transparent 100%);
+}
+.amenities-page-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 40px 60px;
+  width: 100%;
+}
+
+/* Amenity full-width alternating */
+.amenity-full {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 90vh;
+  border-bottom: 1px solid rgba(91,62,51,0.1);
+}
+.amenity-full:nth-child(even) { direction: rtl; }
+.amenity-full:nth-child(even) > * { direction: ltr; }
+.amenity-full-img {
+  overflow: hidden;
+  position: relative;
+}
+.amenity-full-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.amenity-full-content {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.amenity-full-num {
+  font-family: var(--display);
+  font-size: 72px;
+  color: var(--orange);
+  opacity: 0.2;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.amenity-full-name {
+  font-family: var(--display);
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 400;
+  color: var(--brown);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.amenity-full-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--brown);
+  opacity: 0.75;
+  max-width: 440px;
+}
+
+@media (max-width: 900px) {
+  .amenity-full { grid-template-columns: 1fr; min-height: auto; }
+  .amenity-full:nth-child(even) { direction: ltr; }
+  .amenity-full-img { height: 50vh; }
+  .amenity-full-content { padding: 48px 24px; }
+}
+
+/* Services */
+.services-section {
+  background: var(--olive);
+  color: var(--cream);
+  padding: 120px 40px;
+}
+.services-section .split-label { color: var(--orange); }
+.services-section .split-heading { color: var(--cream); }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 48px;
+}
+.service-card {
+  padding: 40px 32px;
+  border: 1px solid rgba(215,192,155,0.12);
+  transition: background 0.4s;
+}
+.service-card:hover { background: rgba(214,91,44,0.08); }
+.service-card-title {
+  font-family: var(--display);
+  font-size: 18px;
+  color: var(--cream);
+  margin-bottom: 12px;
+}
+.service-card-desc {
+  font-size: 13px;
+  color: var(--sand);
+  opacity: 0.7;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .services-section { padding: 80px 24px; }
+}
+
+/* Beyond */
+.beyond-section {
+  padding: 120px 40px;
+  background: var(--cream);
+}
+.beyond-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin-top: 48px;
+}
+.beyond-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+}
+.beyond-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s;
+}
+.beyond-item:hover img { transform: scale(1.05); }
+.beyond-item-label {
+  position: absolute;
+  bottom: 20px; left: 20px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cream);
+  background: rgba(42,31,26,0.6);
+  padding: 8px 14px;
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 768px) {
+  .beyond-section { padding: 60px 24px; }
+  .beyond-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== ENQUIRY PAGE ===== */
+.enquiry-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.enquiry-left {
+  background: var(--brown);
+  color: var(--cream);
+  padding: 120px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.enquiry-left-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 10 Q50 20 40 35 Q30 20 40 10Z' fill='%23D65B2C'/%3E%3C/svg%3E");
+  background-size: 80px 80px;
+}
+.enquiry-left-content { position: relative; z-index: 2; }
+.enquiry-left-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 24px;
+}
+.enquiry-left-title {
+  font-family: var(--display);
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.enquiry-left-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--sand);
+  opacity: 0.8;
+  max-width: 400px;
+  margin-bottom: 48px;
+}
+.enquiry-contact {
+  font-size: 14px;
+  line-height: 2;
+  color: var(--sand);
+}
+.enquiry-contact strong { color: var(--cream); }
+
+.enquiry-right {
+  padding: 120px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--cream);
+}
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 440px;
+}
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-label {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--brown);
+  opacity: 0.55;
+}
+.form-input, .form-select, .form-textarea {
+  font-family: var(--body);
+  font-size: 15px;
+  padding: 14px 0;
+  border: none;
+  border-bottom: 1px solid rgba(91,62,51,0.2);
+  background: transparent;
+  color: var(--brown);
+  outline: none;
+  transition: border-color 0.3s;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-bottom-color: var(--orange);
+}
+.form-textarea { resize: vertical; min-height: 80px; }
+.form-submit {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: var(--brown);
+  color: var(--cream);
+  padding: 18px 36px;
+  margin-top: 8px;
+  transition: background 0.3s;
+  align-self: flex-start;
+}
+.form-submit:hover { background: var(--orange); }
+
+@media (max-width: 900px) {
+  .enquiry-page { grid-template-columns: 1fr; }
+  .enquiry-left { padding: 80px 24px; }
+  .enquiry-right { padding: 60px 24px; }
+}
+
+/* ===== REVEAL UTILITIES ===== */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(60px);
+}
+.reveal-fade { opacity: 0; }
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+}
+.line-mask {
+  overflow: hidden;
+  display: block;
+}
+.line-mask > * {
+  display: block;
+  transform: translateY(110%);
+}
+
+/* Pattern overlay */
+.pattern-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10 C60 25, 70 35, 50 55 C30 35, 40 25, 50 10Z' fill='%23D65B2C' opacity='0.5'/%3E%3Cpath d='M50 60 C60 75, 70 85, 50 95 C30 85, 40 75, 50 60Z' fill='%235B3E33' opacity='0.3'/%3E%3C/svg%3E");
+  background-size: 100px 100px;
+}
+</style>
 </head>
-<body>
-    <h1>CABOS website is working!</h1>
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <div class="loader-logo" id="loaderLogo">CABOS</div>
+  <div class="loader-line" id="loaderLine"></div>
+  <div class="loader-sub" id="loaderSub">Marna, Siolim — Goa</div>
+</div>
+
+
+<!-- PAGE TRANSITION -->
+<div class="page-transition" id="pageTransition">
+  <div class="pt-col"></div>
+  <div class="pt-col"></div>
+  <div class="pt-col"></div>
+  <div class="pt-col"></div>
+  <div class="pt-col"></div>
+</div>
+
+
+<!-- NAVIGATION -->
+<nav class="nav" id="nav">
+  <a href="#/" class="nav-logo">CABOS</a>
+  <ul class="nav-menu">
+    <li><a href="#/about" data-page="about">About</a></li>
+    <li><a href="#/property" data-page="property">Property</a></li>
+    <li><a href="#/amenities" data-page="amenities">Amenities</a></li>
+    <li><a href="#/enquiry" class="nav-cta" data-page="enquiry">Enquire</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#/" data-page="home">Home</a>
+  <a href="#/about" data-page="about">About</a>
+  <a href="#/property" data-page="property">Property</a>
+  <a href="#/amenities" data-page="amenities">Amenities</a>
+  <a href="#/enquiry" data-page="enquiry">Enquire</a>
+</div>
+
+
+
+<!-- ==================== HOMEPAGE ONLY ==================== -->
+<div class="page active" id="page-home">
+<!-- HERO -->
+  <section class="home-hero">
+    <div class="home-hero-bg">
+      <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/11d2b9273-1ffd-4968-bcbf-69c3baafe61a.png" alt="CABOS" id="heroBg">
+    </div>
+    <div class="home-hero-overlay"></div>
+    <div class="pattern-overlay"></div>
+    <div class="home-hero-content">
+      <div class="hero-location"><span>Marna, Siolim — Goa</span></div>
+      <h1 class="hero-title">
+        <span class="line"><span>CABOS</span></span>
+      </h1>
+      <p class="hero-tagline"><span>Contemporary Homes Inspired by Goa's Slower Rhythm</span></p>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="marquee-item">Goa</span>
+      <span class="marquee-item">Marna</span>
+      <span class="marquee-item">Siolim</span>
+      <span class="marquee-item">Belonging</span>
+      <span class="marquee-item">Slowness</span>
+      <span class="marquee-item">Craft</span>
+      <span class="marquee-item">Nature</span>
+      <span class="marquee-item">Goa</span>
+      <span class="marquee-item">Marna</span>
+      <span class="marquee-item">Siolim</span>
+      <span class="marquee-item">Belonging</span>
+      <span class="marquee-item">Slowness</span>
+      <span class="marquee-item">Craft</span>
+      <span class="marquee-item">Nature</span>
+    </div>
+  </div>
+  <!-- GOA — MASSIVE TYPE -->
+  <section class="massive-section">
+    <div class="massive-num">01 / Goa</div>
+    <h2 class="massive-heading">Some places appreciate in value. Others enrich the way you live. <em>Goa does both.</em></h2>
+    <p class="massive-text">Goa offers the rare balance of everyday serenity and long-term investment potential, making it one of India's most desirable coastal addresses.</p>
+  </section>
+
+  <!-- GOA IMAGE -->
+  <section class="full-img-text">
+    <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/129283efd-3138-4b67-b26c-50ca3aea1665.png" alt="Goa Landscape" id="goaBg">
+    <div class="full-img-text-overlay">
+      <div class="full-img-text-content">
+        <div class="full-img-text-label">The New Geography of Luxury</div>
+        <h2 class="full-img-text-heading">A quieter, more <em>intentional</em> version of North Goa.</h2>
+        <p class="full-img-text-text">Nestled between rolling paddy fields and the Chapora River lies a residential enclave that promises major value inflation for the future.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE — SPLIT REVERSE -->
+  <section class="split-massive" style="direction: rtl;">
+    <div class="split-massive-img" style="direction: ltr;">
+      <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/11d2b9273-1ffd-4968-bcbf-69c3baafe61a.png" alt="Architecture">
+      <div class="mask" style="transform-origin: left;"></div>
+    </div>
+    <div class="split-massive-content" style="direction: ltr;">
+      <div class="split-massive-label">04 / Architecture</div>
+      <h2 class="split-massive-heading">A Tower with a <em>Distinct View.</em></h2>
+      <p class="split-massive-text">29 luxurious duplex & simplex homes. The entry sequence at Cabos is an experience in itself. As one enters the driveway, the building reveals itself. Surrounded by a landscape that has a natural slope makes the entire project feel the fresh breeze of Goa.</p>
+    </div>
+  </section>
+
+  <!-- ELEMENTS — HORIZONTAL SCROLL -->
+  <section class="hscroll-section" id="hscrollElements">
+    <div class="hscroll-header">
+      <div class="hscroll-label">06 — Materiality</div>
+      <h2 class="hscroll-heading">Elements of <em>Cabos.</em></h2>
+    </div>
+    <div class="hscroll-wrapper" id="hscrollWrapper">
+      <div class="hscroll-panel">
+        <div class="hscroll-panel-img">
+          <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1b6d2830c-516d-468b-aae6-405f0d6e5f3d.png" alt="Lime Plaster">
+        </div>
+        <div class="hscroll-panel-content">
+          <div class="hscroll-panel-num">01</div>
+          <div>
+            <h3 class="hscroll-panel-title">Lime Plaster & Clay</h3>
+            <p class="hscroll-panel-text">Breathable, textured walls that age gracefully with the Goan climate. Each surface tells a story of craft and time.</p>
+          </div>
+        </div>
+      </div>
+      <div class="hscroll-panel">
+        <div class="hscroll-panel-img">
+          <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/11d2b9273-1ffd-4968-bcbf-69c3baafe61a.png" alt="Stone">
+        </div>
+        <div class="hscroll-panel-content">
+          <div class="hscroll-panel-num">02</div>
+          <div>
+            <h3 class="hscroll-panel-title">Natural Stone</h3>
+            <p class="hscroll-panel-text">Locally sourced stone that grounds every space in the landscape. Timeless, tactile, and deeply connected to the land.</p>
+          </div>
+        </div>
+      </div>
+      <div class="hscroll-panel">
+        <div class="hscroll-panel-img">
+          <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1859ac2ed-8c5d-47b2-96ca-d45adcf1a82c.png" alt="Brick">
+        </div>
+        <div class="hscroll-panel-content">
+          <div class="hscroll-panel-num">03</div>
+          <div>
+            <h3 class="hscroll-panel-title">Brick & Concrete</h3>
+            <p class="hscroll-panel-text">Rubble masonry and crafted concrete create a dialogue between tradition and contemporary architecture.</p>
+          </div>
+        </div>
+      </div>
+      <div class="hscroll-panel">
+        <div class="hscroll-panel-img">
+          <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/190ec6c92-2cd1-44bb-8167-b3cff7d44d22.png" alt="Wood">
+        </div>
+        <div class="hscroll-panel-content">
+          <div class="hscroll-panel-num">04</div>
+          <div>
+            <h3 class="hscroll-panel-title">Crafted Wood</h3>
+            <p class="hscroll-panel-text">Warm timber accents that bring softness and rhythm to the material palette. Every grain, a quiet signature.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOMES SELECTOR -->
+  <section class="homes-section">
+    <div class="homes-header">
+      <div>
+        <div class="homes-label">07 — Residences</div>
+        <h2 class="homes-heading">Choose Your <em>Way of Living.</em></h2>
+      </div>
+      <p class="homes-desc">Cabos offers a deliberate mix of unit typologies to suit different buyer needs. The project includes 1 BHK simplex, 2 BHK simplex & duplex, and 3 BHK simplex.</p>
+    </div>
+    <div class="homes-list">
+      <a href="#/property/1bhk" class="home-row" data-cursor="EXPLORE">
+        <div class="home-row-img">
+          <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1121fb371-8926-4457-940e-1b348067af0f.png" alt="1 BHK">
+        </div>
+        <div class="home-row-content">
+          <div class="home-row-num">01</div>
+          <h3 class="home-row-title">1 BHK</h3>
+          <p class="home-row-desc">Simplex homes with terrace options. Thoughtfully designed for those seeking a compact yet complete Goan lifestyle.</p>
+          <span class="home-row-cta">Explore →</span>
+        </div>
+      </a>
+      <a href="#/property/2bhk" class="home-row" data-cursor="EXPLORE">
+        <div class="home-row-img">
+          <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1f917d0b4-6a3e-45c9-88dc-ec3849edbe8e.png" alt="2 BHK">
+        </div>
+        <div class="home-row-content">
+          <div class="home-row-num">02</div>
+          <h3 class="home-row-title">2 BHK</h3>
+          <p class="home-row-desc">Spacious duplex and simplex configurations across multiple floors, offering flexibility for growing families.</p>
+          <span class="home-row-cta">Explore →</span>
+        </div>
+      </a>
+      <a href="#/property/3bhk" class="home-row" data-cursor="EXPLORE">
+        <div class="home-row-img">
+          <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/14f0d123f-6cec-48ab-a2a4-e42f487bac67.png" alt="3 BHK">
+        </div>
+        <div class="home-row-content">
+          <div class="home-row-num">03</div>
+          <h3 class="home-row-title">3 BHK</h3>
+          <p class="home-row-desc">Generous simplex homes with multiple typologies across floors, designed for those who value space and light.</p>
+          <span class="home-row-cta">Explore →</span>
+        </div>
+      </a>
+      <a href="#/property/villa" class="home-row" data-cursor="EXPLORE">
+        <div class="home-row-img">
+          <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/11a6fd55e-e58d-4d29-92c6-d1e8d817682c.png" alt="Villa">
+        </div>
+        <div class="home-row-content">
+          <div class="home-row-num">04</div>
+          <h3 class="home-row-title">Villa</h3>
+          <p class="home-row-desc">A private expression of the CABOS way of living — standalone homes immersed in nature.</p>
+          <span class="home-row-cta">Explore →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- AMENITIES PREVIEW -->
+  <section class="amenities-section">
+    <div class="amenities-header">
+      <div class="amenities-label">09 / Lifestyle</div>
+      <h2 class="amenities-heading">Live a Little <em>Slower.</em></h2>
+    </div>
+    <div class="amenities-grid">
+      <a href="#/amenities" class="amenity-card" data-cursor="VIEW">
+        <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/190ec6c92-2cd1-44bb-8167-b3cff7d44d22.png" alt="Pool">
+        <div class="amenity-card-overlay">
+          <div class="amenity-card-num">01</div>
+          <div class="amenity-card-title">Infinity Edge Swimming Pool</div>
+        </div>
+      </a>
+      <a href="#/amenities" class="amenity-card" data-cursor="VIEW">
+        <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1d984bdef-7d0a-4415-a1e7-77710fb819ff.png" alt="Pickleball">
+        <div class="amenity-card-overlay">
+          <div class="amenity-card-num">02</div>
+          <div class="amenity-card-title">Pickleball Court</div>
+        </div>
+      </a>
+      <a href="#/amenities" class="amenity-card" data-cursor="VIEW">
+        <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1457511f8-a251-4b7e-b749-8c817d32594a.png" alt="Gym">
+        <div class="amenity-card-overlay">
+          <div class="amenity-card-num">03</div>
+          <div class="amenity-card-title">Gym</div>
+        </div>
+      </a>
+      <a href="#/amenities" class="amenity-card" data-cursor="VIEW">
+        <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1d8947ee4-e7a1-4a3c-a896-2c6744996115.png" alt="Cafe">
+        <div class="amenity-card-overlay">
+          <div class="amenity-card-num">04</div>
+          <div class="amenity-card-title">Cafe / Restaurant</div>
+        </div>
+      </a>
+      <a href="#/amenities" class="amenity-card" data-cursor="VIEW">
+        <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1a18ef01c-6fd5-4dbf-a165-46e0c7c2d871.png" alt="Jacuzzi">
+        <div class="amenity-card-overlay">
+          <div class="amenity-card-num">05</div>
+          <div class="amenity-card-title">Private Jacuzzi</div>
+        </div>
+      </a>
+      <a href="#/amenities" class="amenity-card" data-cursor="VIEW">
+        <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/18660ae0b-f84c-4a38-b938-bbdea042dc02.png" alt="Coworking">
+        <div class="amenity-card-overlay">
+          <div class="amenity-card-num">06</div>
+          <div class="amenity-card-title">OAT-Style Coworking</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="final-cta-bg">
+      <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/11d2b9273-1ffd-4968-bcbf-69c3baafe61a.png" alt="">
+    </div>
+    <div class="final-cta-content">
+      <h2 class="final-cta-heading">Come home to<br>a <em>slower rhythm.</em></h2>
+      <div class="final-cta-location">Marna, Siolim — Goa</div>
+      <div class="cta-buttons">
+        <a href="#/enquiry" class="btn btn-dark" data-cursor="ENQUIRE">Enquire About CABOS →</a>
+        <a href="#/property" class="btn btn-outline" data-cursor="EXPLORE">Explore the Homes →</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+</div>
+
+
+<div class="page" id="page-about">
+  <section class="about-hero">
+    <div class="about-hero-bg">
+      <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/129283efd-3138-4b67-b26c-50ca3aea1665.png" alt="Goa" id="aboutHeroBg">
+    </div>
+    <div class="about-hero-overlay"></div>
+    <div class="about-hero-content">
+      <div class="about-hero-label">Philosophy</div>
+      <h1 class="about-hero-title">The Shape<br>of Belonging.</h1>
+    </div>
+  </section>
+
+  <div class="about-chapters" id="aboutChapters">
+    <div class="about-chapters-wrapper" id="aboutWrapper">
+      <div class="about-chapter">
+        <div class="about-chapter-image">
+          <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/129283efd-3138-4b67-b26c-50ca3aea1665.png" alt="Goa">
+        </div>
+        <div class="about-chapter-content">
+          <div class="chapter-num">01</div>
+          <h2 class="chapter-title">Goa</h2>
+          <p class="chapter-text">Some places appreciate in value. Others enrich the way you live. Goa does both. It offers the rare balance of everyday serenity and long-term investment potential, making it one of India's most desirable coastal addresses.</p>
+        </div>
+      </div>
+      <div class="about-chapter">
+        <div class="about-chapter-image">
+          <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1859ac2ed-8c5d-47b2-96ca-d45adcf1a82c.png" alt="Marna">
+        </div>
+        <div class="about-chapter-content">
+          <div class="chapter-num">02</div>
+          <h2 class="chapter-title">Marna</h2>
+          <p class="chapter-text">North Goa's best-kept secret. In a region where development continues to grow denser, Marna remains distinguished by its open landscapes, low-density surroundings, proximity to beaches, boutique cafes and cultural hotspots.</p>
+        </div>
+      </div>
+      <div class="about-chapter">
+        <div class="about-chapter-image">
+          <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/11d2b9273-1ffd-4968-bcbf-69c3baafe61a.png" alt="Belonging">
+        </div>
+        <div class="about-chapter-content">
+          <div class="chapter-num">03</div>
+          <h2 class="chapter-title">Belonging</h2>
+          <p class="chapter-text">Cabos is imagined as a collection of homes that is an ode to Goa. Designed around openness and privacy, it keeps you deeply connected to nature. At Cabos, natural light flows effortlessly through every space.</p>
+        </div>
+      </div>
+      <div class="about-chapter">
+        <div class="about-chapter-image">
+          <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/11d2b9273-1ffd-4968-bcbf-69c3baafe61a.png" alt="Architecture">
+        </div>
+        <div class="about-chapter-content">
+          <div class="chapter-num">04</div>
+          <h2 class="chapter-title">Architecture</h2>
+          <p class="chapter-text">A tower with a distinct view. 29 luxurious duplex & simplex homes. The entry sequence at Cabos is an experience in itself. As one enters the driveway, the building reveals itself, surrounded by a landscape with a natural slope.</p>
+        </div>
+      </div>
+      <div class="about-chapter">
+        <div class="about-chapter-image">
+          <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1962c39ce-c298-45a8-8073-363100cf298b.png" alt="Balcao">
+        </div>
+        <div class="about-chapter-content">
+          <div class="chapter-num">05</div>
+          <h2 class="chapter-title">Balcao</h2>
+          <p class="chapter-text">At the heart of Cabos lies a balcao-style courtyard inspired by the traditional Goan front porch. A shared space designed to pause, interact, and experience community living. An act of reinterpretation for residents to gather and unwind.</p>
+        </div>
+      </div>
+      <div class="about-chapter">
+        <div class="about-chapter-image">
+          <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1b6d2830c-516d-468b-aae6-405f0d6e5f3d.png" alt="Material">
+        </div>
+        <div class="about-chapter-content">
+          <div class="chapter-num">06</div>
+          <h2 class="chapter-title">Material</h2>
+          <p class="chapter-text">The earth itself inspires the material palette at Cabos. Lime plaster, clay textures, natural stone, rubble masonry, brick, and crafted concrete come together to create homes with warmth, depth, and character.</p>
+        </div>
+      </div>
+      <div class="about-chapter">
+        <div class="about-chapter-image">
+          <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/190ec6c92-2cd1-44bb-8167-b3cff7d44d22.png" alt="Slow Living">
+        </div>
+        <div class="about-chapter-content">
+          <div class="chapter-num">07</div>
+          <h2 class="chapter-title">Slow Living</h2>
+          <p class="chapter-text">Contemporary homes inspired by Goa's slower rhythm. Cabos is not just a residence — it is a way of being. A place where time moves differently, where nature is a constant companion, and where every moment is an invitation to pause.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="final-cta" style="background: var(--brown);">
+    <div class="final-cta-content">
+      <h2 class="final-cta-heading reveal-up" style="color: var(--cream);">Come home to<br>a slower rhythm.</h2>
+      <div class="final-cta-location reveal-up">Marna, Siolim — Goa</div>
+      <div class="cta-buttons reveal-up">
+        <a href="#/enquiry" class="btn btn-dark">Enquire About CABOS →</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ==================== PROPERTY PAGE ==================== -->
+<div class="page" id="page-property">
+  <section class="property-hero">
+    <div class="property-hero-bg">
+      <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/11d2b9273-1ffd-4968-bcbf-69c3baafe61a.png" alt="Property" id="propHeroBg">
+    </div>
+    <div class="property-hero-overlay"></div>
+    <div class="property-hero-content">
+      <div class="property-hero-label">Residences</div>
+      <h1 class="property-hero-title">The Homes<br>of Cabos.</h1>
+      <p class="property-hero-sub">29 luxurious duplex & simplex homes across 7 storeys.</p>
+    </div>
+  </section>
+
+  <div class="property-types">
+    <div class="property-types-grid">
+      <a href="#/property/1bhk" class="pt-card">
+        <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1121fb371-8926-4457-940e-1b348067af0f.png" alt="1 BHK">
+        <div class="pt-card-overlay">
+          <div class="pt-card-name">1 BHK</div>
+          <div class="pt-card-count">Simplex & Terrace</div>
+        </div>
+      </a>
+      <a href="#/property/2bhk" class="pt-card">
+        <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1f917d0b4-6a3e-45c9-88dc-ec3849edbe8e.png" alt="2 BHK">
+        <div class="pt-card-overlay">
+          <div class="pt-card-name">2 BHK</div>
+          <div class="pt-card-count">Duplex & Simplex</div>
+        </div>
+      </a>
+      <a href="#/property/3bhk" class="pt-card">
+        <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/14f0d123f-6cec-48ab-a2a4-e42f487bac67.png" alt="3 BHK">
+        <div class="pt-card-overlay">
+          <div class="pt-card-name">3 BHK</div>
+          <div class="pt-card-count">Simplex Typologies</div>
+        </div>
+      </a>
+      <a href="#/property/villa" class="pt-card">
+        <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/11a6fd55e-e58d-4d29-92c6-d1e8d817682c.png" alt="Villa">
+        <div class="pt-card-overlay">
+          <div class="pt-card-name">Villa</div>
+          <div class="pt-card-count">Private Expression</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <section class="split-section">
+    <div class="split-image">
+      <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/11d2b9273-1ffd-4968-bcbf-69c3baafe61a.png" alt="Tower">
+      <div class="img-reveal"></div>
+    </div>
+    <div class="split-content">
+      <div class="split-label reveal-up">The 7 Storey Marvel</div>
+      <h2 class="split-heading reveal-up">A Tower with <em>a Distinct View.</em></h2>
+      <p class="split-text reveal-up">The entry sequence at Cabos is an experience in itself. As one enters the driveway, the building reveals itself. Surrounded by a landscape that has a natural slope makes the entire project feel the fresh breeze of Goa.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ==================== 1 BHK PAGE ==================== -->
+<div class="page" id="page-1bhk">
+  <section class="unit-hero">
+    <div class="unit-hero-bg">
+      <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1121fb371-8926-4457-940e-1b348067af0f.png" alt="1 BHK">
+    </div>
+    <div class="unit-hero-overlay"></div>
+    <div class="unit-hero-content">
+      <div class="unit-hero-label">Residence</div>
+      <h1 class="unit-hero-title">1 BHK</h1>
+      <p class="unit-hero-sub">Simplex homes designed for intentional living</p>
+    </div>
+  </section>
+  <div class="unit-content">
+    <div class="unit-block">
+      <h2 class="unit-block-title">Overview</h2>
+      <p class="unit-block-text">The 1 BHK at Cabos offers a deliberate, compact living experience — perfect for those seeking a foothold in Goa's most desirable coastal address. Natural light, open planning, and thoughtful materiality define every square foot.</p>
+    </div>
+    <div class="unit-block">
+      <h2 class="unit-block-title">Typologies</h2>
+      <div class="typology-list">
+        <div class="typology-row">
+          <div class="typology-name">1 BHK Simplex</div>
+          <div class="typology-detail">Ground to upper floors — open plan living with natural ventilation</div>
+        </div>
+        <div class="typology-row">
+          <div class="typology-name">1 BHK Simplex with Terrace</div>
+          <div class="typology-detail">Top floor residences with private terrace access</div>
+        </div>
+      </div>
+    </div>
+    <div class="unit-block">
+      <h2 class="unit-block-title">Gallery</h2>
+      <div class="unit-gallery">
+        <div class="unit-gallery-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1121fb371-8926-4457-940e-1b348067af0f.png" alt="Living"></div>
+        <div class="unit-gallery-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1f917d0b4-6a3e-45c9-88dc-ec3849edbe8e.png" alt="Bedroom"></div>
+        <div class="unit-gallery-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/14f0d123f-6cec-48ab-a2a4-e42f487bac67.png" alt="Kitchen"></div>
+      </div>
+    </div>
+    <div class="unit-block">
+      <h2 class="unit-block-title">Floor Plan</h2>
+      <div class="floorplan-ph"><div class="floorplan-ph-text">FLOOR PLAN — COMING SOON</div></div>
+    </div>
+    <div class="unit-block">
+      <h2 class="unit-block-title">Specifications</h2>
+      <div class="specs-grid">
+        <div class="spec-row"><span class="spec-label">Configuration</span><span class="spec-value">Simplex</span></div>
+        <div class="spec-row"><span class="spec-label">Floors</span><span class="spec-value">Ground to Terrace</span></div>
+        <div class="spec-row"><span class="spec-label">Finishes</span><span class="spec-value">Lime plaster, natural stone</span></div>
+        <div class="spec-row"><span class="spec-label">Lighting</span><span class="spec-value">Natural, cross-ventilated</span></div>
+      </div>
+    </div>
+    <div style="text-align: center; padding: 40px 0;">
+      <a href="#/enquiry" class="btn btn-dark">Enquire About 1 BHK →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 2 BHK PAGE ==================== -->
+<div class="page" id="page-2bhk">
+  <section class="unit-hero">
+    <div class="unit-hero-bg">
+      <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1f917d0b4-6a3e-45c9-88dc-ec3849edbe8e.png" alt="2 BHK">
+    </div>
+    <div class="unit-hero-overlay"></div>
+    <div class="unit-hero-content">
+      <div class="unit-hero-label">Residence</div>
+      <h1 class="unit-hero-title">2 BHK</h1>
+      <p class="unit-hero-sub">Duplex & Simplex — space for growing families</p>
+    </div>
+  </section>
+  <div class="unit-content">
+    <div class="unit-block">
+      <h2 class="unit-block-title">Overview</h2>
+      <p class="unit-block-text">The 2 BHK at Cabos offers generous living across multiple configurations. From ground-floor duplexes with private access to upper-floor simplex homes, each residence is designed with openness, privacy, and connection to nature at its core.</p>
+    </div>
+    <div class="unit-block">
+      <h2 class="unit-block-title">Typologies</h2>
+      <div class="typology-list">
+        <div class="typology-row"><div class="typology-name">2 BHK Duplex — Ground Floor</div><div class="typology-detail">Private entrance, dual-level living with direct garden access</div></div>
+        <div class="typology-row"><div class="typology-name">2 BHK Duplex — 1st / 2nd / 3rd Floor</div><div class="typology-detail">Split-level residences with vertical circulation</div></div>
+        <div class="typology-row"><div class="typology-name">2 BHK Duplex — Terrace</div><div class="typology-detail">Top-floor duplex with private terrace</div></div>
+        <div class="typology-row"><div class="typology-name">2 BHK Simplex Type 1 — Ground Floor</div><div class="typology-detail">Single-level living with garden views</div></div>
+      </div>
+    </div>
+    <div class="unit-block">
+      <h2 class="unit-block-title">Gallery</h2>
+      <div class="unit-gallery">
+        <div class="unit-gallery-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1f917d0b4-6a3e-45c9-88dc-ec3849edbe8e.png" alt="Bedroom"></div>
+        <div class="unit-gallery-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1121fb371-8926-4457-940e-1b348067af0f.png" alt="Living"></div>
+        <div class="unit-gallery-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/12d53dae3-6af5-419c-b711-0c92cfc9b92a.png" alt="Bathroom"></div>
+      </div>
+    </div>
+    <div class="unit-block">
+      <h2 class="unit-block-title">Floor Plan</h2>
+      <div class="floorplan-ph"><div class="floorplan-ph-text">FLOOR PLAN — COMING SOON</div></div>
+    </div>
+    <div style="text-align: center; padding: 40px 0;">
+      <a href="#/enquiry" class="btn btn-dark">Enquire About 2 BHK →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 3 BHK PAGE ==================== -->
+<div class="page" id="page-3bhk">
+  <section class="unit-hero">
+    <div class="unit-hero-bg">
+      <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/14f0d123f-6cec-48ab-a2a4-e42f487bac67.png" alt="3 BHK">
+    </div>
+    <div class="unit-hero-overlay"></div>
+    <div class="unit-hero-content">
+      <div class="unit-hero-label">Residence</div>
+      <h1 class="unit-hero-title">3 BHK</h1>
+      <p class="unit-hero-sub">Generous simplex homes across multiple typologies</p>
+    </div>
+  </section>
+  <div class="unit-content">
+    <div class="unit-block">
+      <h2 class="unit-block-title">Overview</h2>
+      <p class="unit-block-text">The 3 BHK at Cabos represents the most expansive residences in the tower. With multiple typologies across different floors, each home offers generous proportions, abundant natural light, and a deep connection to the Goan landscape.</p>
+    </div>
+    <div class="unit-block">
+      <h2 class="unit-block-title">Typologies</h2>
+      <div class="typology-list">
+        <div class="typology-row"><div class="typology-name">3 BHK Simplex Type 1</div><div class="typology-detail">1st / 3rd Floor — Balanced proportions with cross ventilation</div></div>
+        <div class="typology-row"><div class="typology-name">3 BHK Simplex Type 2</div><div class="typology-detail">1st / 3rd Floor — Alternative layout with enhanced privacy</div></div>
+        <div class="typology-row"><div class="typology-name">3 BHK Simplex Type 1</div><div class="typology-detail">2nd / 4th Floor — Mid-level residences with optimal views</div></div>
+        <div class="typology-row"><div class="typology-name">3 BHK Simplex Type 2</div><div class="typology-detail">2nd / 4th Floor — Refined layout for family living</div></div>
+        <div class="typology-row"><div class="typology-name">3 BHK Simplex Type 1</div><div class="typology-detail">Terrace — Top floor with private outdoor space</div></div>
+        <div class="typology-row"><div class="typology-name">3 BHK Simplex Type 2</div><div class="typology-detail">5th Floor — Premium upper-level residence</div></div>
+      </div>
+    </div>
+    <div class="unit-block">
+      <h2 class="unit-block-title">Gallery</h2>
+      <div class="unit-gallery">
+        <div class="unit-gallery-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/14f0d123f-6cec-48ab-a2a4-e42f487bac67.png" alt="Kitchen"></div>
+        <div class="unit-gallery-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1121fb371-8926-4457-940e-1b348067af0f.png" alt="Living"></div>
+        <div class="unit-gallery-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1f917d0b4-6a3e-45c9-88dc-ec3849edbe8e.png" alt="Bedroom"></div>
+      </div>
+    </div>
+    <div class="unit-block">
+      <h2 class="unit-block-title">Floor Plan</h2>
+      <div class="floorplan-ph"><div class="floorplan-ph-text">FLOOR PLAN — COMING SOON</div></div>
+    </div>
+    <div style="text-align: center; padding: 40px 0;">
+      <a href="#/enquiry" class="btn btn-dark">Enquire About 3 BHK →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== VILLA PAGE ==================== -->
+<div class="page" id="page-villa">
+  <section class="unit-hero">
+    <div class="unit-hero-bg">
+      <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/11a6fd55e-e58d-4d29-92c6-d1e8d817682c.png" alt="Villa">
+    </div>
+    <div class="unit-hero-overlay"></div>
+    <div class="unit-hero-content">
+      <div class="unit-hero-label">Residence</div>
+      <h1 class="unit-hero-title">Villa</h1>
+      <p class="unit-hero-sub">A private expression of the CABOS way of living</p>
+    </div>
+  </section>
+  <div class="unit-content">
+    <div class="unit-block">
+      <h2 class="unit-block-title">Overview</h2>
+      <p class="unit-block-text">The Villa at Cabos is a private expression of the CABOS way of living. Standalone homes immersed in nature, offering the ultimate in privacy, space, and connection to the Goan landscape.</p>
+    </div>
+    <div class="unit-block">
+      <h2 class="unit-block-title">Gallery</h2>
+      <div class="unit-gallery">
+        <div class="unit-gallery-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/11a6fd55e-e58d-4d29-92c6-d1e8d817682c.png" alt="Villa Exterior"></div>
+        <div class="unit-gallery-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1121fb371-8926-4457-940e-1b348067af0f.png" alt="Villa Interior"></div>
+        <div class="unit-gallery-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/190ec6c92-2cd1-44bb-8167-b3cff7d44d22.png" alt="Villa Pool"></div>
+      </div>
+    </div>
+    <div class="unit-block">
+      <h2 class="unit-block-title">Floor Plan</h2>
+      <div class="floorplan-ph"><div class="floorplan-ph-text">FLOOR PLAN — COMING SOON</div></div>
+    </div>
+    <div class="unit-block">
+      <h2 class="unit-block-title">Specifications</h2>
+      <div class="floorplan-ph" style="margin-top: 24px;"><div class="floorplan-ph-text">SPECIFICATIONS — COMING SOON</div></div>
+    </div>
+    <div style="text-align: center; padding: 40px 0;">
+      <a href="#/enquiry" class="btn btn-dark">Enquire About Villa →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== AMENITIES PAGE ==================== -->
+<div class="page" id="page-amenities">
+  <section class="amenities-page-hero">
+    <div class="amenities-page-hero-bg">
+      <img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/190ec6c92-2cd1-44bb-8167-b3cff7d44d22.png" alt="Amenities" id="amenHeroBg">
+    </div>
+    <div class="amenities-page-hero-overlay"></div>
+    <div class="amenities-page-hero-content">
+      <div class="about-hero-label">Lifestyle</div>
+      <h1 class="about-hero-title">The Art of<br>Living Well.</h1>
+    </div>
+  </section>
+
+  <div class="amenity-full">
+    <div class="amenity-full-img"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/190ec6c92-2cd1-44bb-8167-b3cff7d44d22.png" alt="Pool"></div>
+    <div class="amenity-full-content">
+      <div class="amenity-full-num">01</div>
+      <h2 class="amenity-full-name">Infinity Edge<br>Swimming Pool</h2>
+      <p class="amenity-full-desc">A seamless horizon of water that merges with the Goan landscape. The infinity pool at Cabos is designed for quiet mornings and golden evenings — a place to float, reflect, and reconnect.</p>
+    </div>
+  </div>
+  <div class="amenity-full">
+    <div class="amenity-full-img"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1a18ef01c-6fd5-4dbf-a165-46e0c7c2d871.png" alt="Jacuzzi"></div>
+    <div class="amenity-full-content">
+      <div class="amenity-full-num">02</div>
+      <h2 class="amenity-full-name">Private Jacuzzi</h2>
+      <p class="amenity-full-desc">An intimate retreat for personal restoration. Surrounded by tropical greenery, the private jacuzzi offers a sanctuary of warmth and stillness.</p>
+    </div>
+  </div>
+  <div class="amenity-full">
+    <div class="amenity-full-img"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1d984bdef-7d0a-4415-a1e7-77710fb819ff.png" alt="Pickleball"></div>
+    <div class="amenity-full-content">
+      <div class="amenity-full-num">03</div>
+      <h2 class="amenity-full-name">Pickleball Court</h2>
+      <p class="amenity-full-desc">A space for play and community. The pickleball court brings residents together for friendly competition and active living in the Goan sun.</p>
+    </div>
+  </div>
+  <div class="amenity-full">
+    <div class="amenity-full-img"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1457511f8-a251-4b7e-b749-8c817d32594a.png" alt="Gym"></div>
+    <div class="amenity-full-content">
+      <div class="amenity-full-num">04</div>
+      <h2 class="amenity-full-name">Gym</h2>
+      <p class="amenity-full-desc">A considered fitness space with views of the tropical landscape. Natural light, warm materials, and modern equipment create an environment where wellness feels effortless.</p>
+    </div>
+  </div>
+  <div class="amenity-full">
+    <div class="amenity-full-img"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1d8947ee4-e7a1-4a3c-a896-2c6744996115.png" alt="Cafe"></div>
+    <div class="amenity-full-content">
+      <div class="amenity-full-num">05</div>
+      <h2 class="amenity-full-name">Cafe / Restaurant</h2>
+      <p class="amenity-full-desc">A gathering place for residents and guests. The cafe at Cabos celebrates Goan flavors and slow dining — a space to linger over coffee, share meals, and connect.</p>
+    </div>
+  </div>
+  <div class="amenity-full">
+    <div class="amenity-full-img"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/18660ae0b-f84c-4a38-b938-bbdea042dc02.png" alt="Coworking"></div>
+    <div class="amenity-full-content">
+      <div class="amenity-full-num">06</div>
+      <h2 class="amenity-full-name">OAT-Style<br>Coworking Space</h2>
+      <p class="amenity-full-desc">Work surrounded by nature. The open-air terrace coworking space at Cabos blends productivity with the Goan breeze — where focus meets fresh air.</p>
+    </div>
+  </div>
+  <div class="amenity-full">
+    <div class="amenity-full-img"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1859ac2ed-8c5d-47b2-96ca-d45adcf1a82c.png" alt="Gated"></div>
+    <div class="amenity-full-content">
+      <div class="amenity-full-num">07</div>
+      <h2 class="amenity-full-name">Gated Complex</h2>
+      <p class="amenity-full-desc">Privacy and security without compromise. The gated complex at Cabos ensures a safe, exclusive environment while maintaining the openness of the Goan landscape.</p>
+    </div>
+  </div>
+  <div class="amenity-full">
+    <div class="amenity-full-img"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/11d2b9273-1ffd-4968-bcbf-69c3baafe61a.png" alt="Parking"></div>
+    <div class="amenity-full-content">
+      <div class="amenity-full-num">08</div>
+      <h2 class="amenity-full-name">Basement Parking<br>& Car Drop-Off</h2>
+      <p class="amenity-full-desc">Thoughtfully designed vehicular access with basement parking and a dedicated car drop-off zone — ensuring seamless arrival and departure.</p>
+    </div>
+  </div>
+  <div class="amenity-full">
+    <div class="amenity-full-img"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/11d2b9273-1ffd-4968-bcbf-69c3baafe61a.png" alt="CCTV"></div>
+    <div class="amenity-full-content">
+      <div class="amenity-full-num">09</div>
+      <h2 class="amenity-full-name">24-Hour<br>CCTV Services</h2>
+      <p class="amenity-full-desc">Round-the-clock surveillance ensuring the safety and peace of mind of all residents. Discreet, comprehensive, and always active.</p>
+    </div>
+  </div>
+
+  <section class="services-section">
+    <div class="split-label reveal-up">Services</div>
+    <h2 class="split-heading reveal-up" style="max-width: 600px;">Always Attentive,<br><em>Never Intrusive.</em></h2>
+    <div class="services-grid reveal-up">
+      <div class="service-card"><div class="service-card-title">24-Hour Reception</div><div class="service-card-desc">A welcoming presence at all hours, ensuring every arrival feels considered.</div></div>
+      <div class="service-card"><div class="service-card-title">24-Hour Security</div><div class="service-card-desc">Professional security personnel maintaining a safe and serene environment.</div></div>
+      <div class="service-card"><div class="service-card-title">24-Hour Power Backup</div><div class="service-card-desc">Uninterrupted power supply ensuring comfort regardless of external conditions.</div></div>
+      <div class="service-card"><div class="service-card-title">Property Management</div><div class="service-card-desc">Comprehensive management of your residence, maintained to the highest standards.</div></div>
+      <div class="service-card"><div class="service-card-title">Rental Management</div><div class="service-card-desc">Professional handling of rental operations for investment-focused owners.</div></div>
+      <div class="service-card"><div class="service-card-title">Concierge</div><div class="service-card-desc">Personalized assistance for every need, from reservations to local experiences.</div></div>
+    </div>
+  </section>
+
+  <section class="beyond-section">
+    <div class="split-label reveal-up">Context</div>
+    <h2 class="split-heading reveal-up" style="max-width: 600px;">Beyond <em>Cabos.</em></h2>
+    <p class="unit-block-text reveal-up">The world around Cabos is as considered as the project itself. Marna, Siolim offers a quieter version of North Goa — rich in nature, culture, and community.</p>
+    <div class="beyond-grid reveal-up">
+      <div class="beyond-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/129283efd-3138-4b67-b26c-50ca3aea1665.png" alt="Paddy Fields"><div class="beyond-item-label">Rolling Paddy Fields</div></div>
+      <div class="beyond-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/129283efd-3138-4b67-b26c-50ca3aea1665.png" alt="Chapora River"><div class="beyond-item-label">Chapora River</div></div>
+      <div class="beyond-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/190ec6c92-2cd1-44bb-8167-b3cff7d44d22.png" alt="Beaches"><div class="beyond-item-label">Proximity to Beaches</div></div>
+      <div class="beyond-item"><img src="https://image.qwenlm.ai/public_source/5c8e79fd-f936-4bf2-b969-5727c037c87a/1d8947ee4-e7a1-4a3c-a896-2c6744996115.png" alt="Cafes"><div class="beyond-item-label">Boutique Cafes & Cultural Hotspots</div></div>
+    </div>
+  </section>
+</div>
+
+<!-- ==================== ENQUIRY PAGE ==================== -->
+<div class="page" id="page-enquiry">
+  <div class="enquiry-page">
+    <div class="enquiry-left">
+      <div class="enquiry-left-pattern"></div>
+      <div class="enquiry-left-content">
+        <div class="enquiry-left-label">Connect</div>
+        <h1 class="enquiry-left-title">Let's talk about<br>CABOS.</h1>
+        <p class="enquiry-left-text">Whether you're curious about a specific residence, the amenities, or the philosophy behind Cabos — we'd love to hear from you. Every enquiry is handled personally.</p>
+        <div class="enquiry-contact">
+          <strong>Marna, Siolim</strong><br>
+          North Goa, India<br><br>
+          [PHONE]<br>
+          [EMAIL]
+        </div>
+      </div>
+    </div>
+    <div class="enquiry-right">
+      <form class="enquiry-form" id="enquiryForm">
+        <div class="form-group">
+          <label class="form-label" for="name">Name</label>
+          <input class="form-input" type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="phone">Phone</label>
+          <input class="form-input" type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="interest">Interested In</label>
+          <select class="form-select" id="interest" name="interest">
+            <option value="1bhk">1 BHK</option>
+            <option value="2bhk">2 BHK</option>
+            <option value="3bhk">3 BHK</option>
+            <option value="villa">Villa</option>
+            <option value="general">General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-textarea" id="message" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Enquiry →</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+
+
+<footer class="footer" id="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">CABOS</div>
+      <p class="footer-tagline">Contemporary Homes Inspired by Goa's Slower Rhythm</p>
+      <p class="footer-tagline" style="margin-top: 20px;">Marna, Siolim<br>North Goa, India</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigate</div>
+      <ul class="footer-links">
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/about">About</a></li>
+        <li><a href="#/property">Property</a></li>
+        <li><a href="#/amenities">Amenities</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Residences</div>
+      <ul class="footer-links">
+        <li><a href="#/property/1bhk">1 BHK</a></li>
+        <li><a href="#/property/2bhk">2 BHK</a></li>
+        <li><a href="#/property/3bhk">3 BHK</a></li>
+        <li><a href="#/property/villa">Villa</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Connect</div>
+      <ul class="footer-links">
+        <li><a href="#/enquiry">Enquire</a></li>
+        <li><a href="mailto:[EMAIL]">[EMAIL]</a></li>
+        <li><a href="tel:[PHONE]">[PHONE]</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 CABOS. All rights reserved.</div>
+    <div>Designed by The Neat Trick</div>
+  </div>
+</footer>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// ===== LOADER =====
+window.addEventListener('load', () => {
+  const tl = gsap.timeline({
+    onComplete: () => {
+      document.body.classList.remove('loading');
+      gsap.to('#loader', {
+        yPercent: -100,
+        duration: 1,
+        ease: 'power3.inOut',
+        onComplete: () => {
+          document.getElementById('loader').style.display = 'none';
+          initPageAnimations();
+        }
+      });
+    }
+  });
+  tl.to('#loaderLogo', { opacity: 1, duration: 0.8, ease: 'power2.out' })
+    .to('#loaderLine', { width: 120, duration: 0.8, ease: 'power2.inOut' }, '-=0.4')
+    .to('#loaderSub', { opacity: 1, duration: 0.6 }, '-=0.4')
+    .to({}, { duration: 0.4 });
+});
+
+// ===== PAGE TRANSITION =====
+function pageTransition(callback) {
+  const cols = document.querySelectorAll('.pt-col');
+  const tl = gsap.timeline({
+    onComplete: callback
+  });
+  tl.to(cols, {
+    scaleY: 1,
+    duration: 0.6,
+    ease: 'power3.inOut',
+    stagger: 0.05,
+    transformOrigin: 'bottom'
+  })
+  .to(cols, {
+    scaleY: 0,
+    duration: 0.6,
+    ease: 'power3.inOut',
+    stagger: 0.05,
+    transformOrigin: 'top'
+  }, '+=0.1');
+}
+
+// ===== ROUTING =====
+const pages = {
+  'home': 'page-home',
+  'about': 'page-about',
+  'property': 'page-property',
+  'property/1bhk': 'page-1bhk',
+  'property/2bhk': 'page-2bhk',
+  'property/3bhk': 'page-3bhk',
+  'property/villa': 'page-villa',
+  'amenities': 'page-amenities',
+  'enquiry': 'page-enquiry'
+};
+
+function navigateTo(hash) {
+  const route = hash.replace('#/', '') || 'home';
+  const pageId = pages[route];
+  if (!pageId) return;
+
+  pageTransition(() => {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+    window.scrollTo(0, 0);
+    ScrollTrigger.refresh();
+
+    // Re-init animations for new page
+    setTimeout(() => initPageAnimations(), 100);
+  });
+}
+
+window.addEventListener('hashchange', () => navigateTo(window.location.hash));
+
+document.querySelectorAll('a[href^="#/"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const href = link.getAttribute('href');
+    window.location.hash = href.replace('#', '');
+    navigateTo(href);
+    document.getElementById('burger').classList.remove('open');
+    document.getElementById('mobileNav').classList.remove('open');
+  });
+});
+
+// ===== BURGER =====
+document.getElementById('burger').addEventListener('click', function() {
+  this.classList.toggle('open');
+  document.getElementById('mobileNav').classList.toggle('open');
+});
+
+// ===== NAV SCROLL =====
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('nav');
+  if (window.scrollY > 80) nav.classList.add('compact');
+  else nav.classList.remove('compact');
+});
+
+// ===== ANIMATIONS =====
+function initHomeAnimations() {
+  ScrollTrigger.getAll().forEach(st => st.kill());
+
+  // Hero reveal — exact V5
+  gsap.utils.toArray('.hero-title .line span, .hero-location span, .hero-tagline span').forEach((el, i) => {
+    gsap.fromTo(
+      el,
+      { yPercent: 110 },
+      { yPercent: 0, duration: 1.2, delay: i * 0.15, ease: 'power3.out' }
+    );
+  });
+
+  // Hero parallax — exact V5
+  gsap.to('.home-hero-bg img', {
+    yPercent: 15,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.home-hero',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true
+    }
+  });
+
+  // Massive sections
+  gsap.utils.toArray('.massive-section').forEach(section => {
+    const children = section.querySelectorAll('.massive-num, .massive-heading, .massive-text');
+    gsap.fromTo(
+      children,
+      { opacity: 0, y: 60 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.15,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: section, start: 'top 65%' }
+      }
+    );
+  });
+
+  // Split massive
+  gsap.utils.toArray('.split-massive').forEach(section => {
+    const mask = section.querySelector('.mask');
+    const content = section.querySelector('.split-massive-content');
+
+    if (mask) {
+      gsap.to(mask, {
+        scaleX: 0,
+        duration: 1.4,
+        ease: 'power3.inOut',
+        scrollTrigger: { trigger: section, start: 'top 70%' }
+      });
+    }
+
+    if (content) {
+      gsap.fromTo(
+        content.children,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.9,
+          stagger: 0.12,
+          ease: 'power3.out',
+          scrollTrigger: { trigger: section, start: 'top 60%' }
+        }
+      );
+    }
+  });
+
+  // Horizontal scroll
+  const hscrollSection = document.getElementById('hscrollElements');
+  const hscrollWrapper = document.getElementById('hscrollWrapper');
+
+  if (hscrollSection && hscrollWrapper && window.innerWidth > 900) {
+    const panels = hscrollWrapper.querySelectorAll('.hscroll-panel');
+    const totalWidth = Array.from(panels).reduce(
+      (acc, p) => acc + p.offsetWidth + 2,
+      0
+    );
+
+    gsap.to(hscrollWrapper, {
+      x: () => -(totalWidth - window.innerWidth),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: hscrollSection,
+        start: 'top top',
+        end: () => '+=' + Math.max(0, totalWidth - window.innerWidth),
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true
+      }
+    });
+  }
+
+  // Home residence rows
+  gsap.utils.toArray('.home-row').forEach(item => {
+    gsap.fromTo(
+      item,
+      { opacity: 0, y: 60 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: item, start: 'top 80%' }
+      }
+    );
+  });
+
+  // Amenity cards
+  gsap.utils.toArray('.amenity-card').forEach((card, i) => {
+    gsap.fromTo(
+      card,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.9,
+        delay: i * 0.08,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: card, start: 'top 85%' }
+      }
+    );
+  });
+
+  // Final CTA
+  const finalCta = document.querySelector('.final-cta');
+  if (finalCta) {
+    const bg = finalCta.querySelector('.final-cta-bg img');
+    if (bg) {
+      gsap.fromTo(
+        bg,
+        { scale: 1.2 },
+        {
+          scale: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: finalCta,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true
+          }
+        }
+      );
+    }
+  }
+
+  ScrollTrigger.refresh();
+}
+
+function initPageAnimations() {
+  const activePage = document.querySelector('.page.active');
+  if (activePage && activePage.id === 'page-home') {
+    initHomeAnimations();
+    return;
+  }
+
+
+  // Kill existing ScrollTriggers
+  ScrollTrigger.getAll().forEach(st => st.kill());
+
+  // Hero parallax
+  gsap.utils.toArray('.home-hero-bg img, .about-hero-bg img, .property-hero-bg img, .unit-hero-bg img, .amenities-page-hero-bg img').forEach(img => {
+    gsap.to(img, {
+      yPercent: 15,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: img.closest('section'),
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+  });
+
+  // Hero text reveal
+  gsap.utils.toArray('.hero-title .line span, .hero-location span, .hero-tagline span').forEach((el, i) => {
+    gsap.fromTo(el,
+      { yPercent: 110 },
+      { yPercent: 0, duration: 1.2, delay: i * 0.15, ease: 'power3.out' }
+    );
+  });
+
+  // Reveal up
+  gsap.utils.toArray('.reveal-up').forEach(el => {
+    gsap.fromTo(el,
+      { opacity: 0, y: 60 },
+      {
+        opacity: 1, y: 0, duration: 1, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 85%' }
+      }
+    );
+  });
+
+  // Image reveals
+  gsap.utils.toArray('.img-reveal').forEach(el => {
+    gsap.to(el, {
+      scaleX: 0,
+      duration: 1.4,
+      ease: 'power3.inOut',
+      transformOrigin: 'right',
+      scrollTrigger: { trigger: el.parentElement, start: 'top 70%' }
+    });
+  });
+
+  // Split sections fade in
+  gsap.utils.toArray('.split-section').forEach(section => {
+    const content = section.querySelector('.split-content');
+    if (content) {
+      gsap.fromTo(content.children,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out',
+          scrollTrigger: { trigger: section, start: 'top 60%' }
+        }
+      );
+    }
+  });
+
+  // Sticky section (Marna)
+  const stickySection = document.querySelector('.sticky-section');
+  if (stickySection && window.innerWidth > 900) {
+    gsap.to('#marnaBg', {
+      scale: 1.15,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: stickySection,
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: true
+      }
+    });
+  }
+
+  // Type reveal - word by word
+  const typeReveal = document.getElementById('typeReveal');
+  if (typeReveal) {
+    const text = typeReveal.textContent.trim();
+    typeReveal.innerHTML = '';
+    text.split(' ').forEach(word => {
+      const wordSpan = document.createElement('span');
+      wordSpan.className = 'word';
+      const inner = document.createElement('span');
+      inner.textContent = word;
+      wordSpan.appendChild(inner);
+      typeReveal.appendChild(wordSpan);
+    });
+
+    gsap.fromTo(typeReveal.querySelectorAll('.word span'),
+      { yPercent: 110 },
+      {
+        yPercent: 0,
+        duration: 0.8,
+        stagger: 0.04,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: typeReveal,
+          start: 'top 75%'
+        }
+      }
+    );
+  }
+
+  // Horizontal scroll - Elements
+  const elementsSection = document.getElementById('elementsHorizontal');
+  const elementsWrapper = document.getElementById('elementsWrapper');
+  if (elementsSection && elementsWrapper && window.innerWidth > 900) {
+    const panels = elementsWrapper.querySelectorAll('.horizontal-panel');
+    const totalWidth = panels.length * window.innerWidth;
+
+    gsap.to(elementsWrapper, {
+      x: () => -(totalWidth - window.innerWidth),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: elementsSection,
+        start: 'top top',
+        end: () => '+=' + (totalWidth - window.innerWidth),
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true
+      }
+    });
+  }
+
+  // About chapters horizontal scroll
+  const aboutChapters = document.getElementById('aboutChapters');
+  const aboutWrapper = document.getElementById('aboutWrapper');
+  if (aboutChapters && aboutWrapper && window.innerWidth > 900) {
+    const chapters = aboutWrapper.querySelectorAll('.about-chapter');
+    const totalWidth = chapters.length * window.innerWidth;
+
+    gsap.to(aboutWrapper, {
+      x: () => -(totalWidth - window.innerWidth),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: aboutChapters,
+        start: 'top top',
+        end: () => '+=' + (totalWidth - window.innerWidth),
+        scrub: 1,
+        pin: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true
+      }
+    });
+  }
+
+  // Home rows stagger
+  gsap.utils.toArray('.home-row').forEach((row, i) => {
+    gsap.fromTo(row,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: row,
+          start: 'top 80%'
+        }
+      }
+    );
+  });
+
+  // Amenity cards
+  gsap.utils.toArray('.amenity-card').forEach((card, i) => {
+    gsap.fromTo(card,
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1, y: 0,
+        duration: 0.8,
+        delay: i * 0.1,
+        scrollTrigger: { trigger: card, start: 'top 85%' }
+      }
+    );
+  });
+
+  // Property type cards
+  gsap.utils.toArray('.pt-card').forEach((card, i) => {
+    gsap.fromTo(card,
+      { opacity: 0, scale: 0.95 },
+      {
+        opacity: 1, scale: 1,
+        duration: 0.8,
+        delay: i * 0.1,
+        scrollTrigger: { trigger: card, start: 'top 85%' }
+      }
+    );
+  });
+
+  // Amenity full alternating
+  gsap.utils.toArray('.amenity-full').forEach(section => {
+    const img = section.querySelector('.amenity-full-img img');
+    const content = section.querySelector('.amenity-full-content');
+    if (img) {
+      gsap.fromTo(img,
+        { scale: 1.15 },
+        {
+          scale: 1,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: true
+          }
+        }
+      );
+    }
+    if (content) {
+      gsap.fromTo(content.children,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1, y: 0,
+          duration: 0.8, stagger: 0.12,
+          scrollTrigger: { trigger: section, start: 'top 65%' }
+        }
+      );
+    }
+  });
+
+  // Beyond items
+  gsap.utils.toArray('.beyond-item').forEach((item, i) => {
+    gsap.fromTo(item,
+      { opacity: 0, y: 40 },
+      {
+        opacity: 1, y: 0,
+        duration: 0.8,
+        delay: i * 0.1,
+        scrollTrigger: { trigger: item, start: 'top 85%' }
+      }
+    );
+  });
+
+  // Final CTA
+  const finalCta = document.querySelector('.final-cta');
+  if (finalCta) {
+    gsap.fromTo(finalCta.querySelector('.final-cta-bg img'),
+      { scale: 1.2 },
+      {
+        scale: 1,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: finalCta,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true
+        }
+      }
+    );
+  }
+
+  // Unit gallery items
+  gsap.utils.toArray('.unit-gallery-item').forEach((item, i) => {
+    gsap.fromTo(item,
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1, y: 0,
+        duration: 0.8,
+        delay: i * 0.1,
+        scrollTrigger: { trigger: item, start: 'top 85%' }
+      }
+    );
+  });
+
+  // Typology rows
+  gsap.utils.toArray('.typology-row').forEach((row, i) => {
+    gsap.fromTo(row,
+      { opacity: 0, x: -20 },
+      {
+        opacity: 1, x: 0,
+        duration: 0.6,
+        delay: i * 0.08,
+        scrollTrigger: { trigger: row, start: 'top 90%' }
+      }
+    );
+  });
+
+  ScrollTrigger.refresh();
+}
+
+// ===== ENQUIRY FORM =====
+document.getElementById('enquiryForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-submit');
+  btn.textContent = 'SENT ✓';
+  btn.style.background = 'var(--orange)';
+  setTimeout(() => {
+    btn.textContent = 'SEND ENQUIRY →';
+    btn.style.background = '';
+    e.target.reset();
+  }, 3000);
+});
+
+// Initial route
+if (window.location.hash) {
+  const route = window.location.hash.replace('#/', '') || 'home';
+  const pageId = pages[route];
+  if (pageId) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+  }
+}
+
+// Reduced motion
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  gsap.globalTimeline.timeScale(100);
+}
+</script>
 </body>
 </html>
