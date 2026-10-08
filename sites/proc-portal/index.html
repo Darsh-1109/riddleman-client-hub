@@ -1,0 +1,411 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Beroe — Smarter Decisions. Better Procurement.</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+  --black:#111313;--white:#f5f5f2;--paper:#f3f3f0;--ink:#111313;--muted:#6d706d;
+  --purple:#7317f5;--violet:#a84cff;--cyan:#19bff1;--yellow:#ffe26a;
+  --pink:#f13ddd;--green:#12e947;--orange:#ff5c35;--blue:#238dff;
+  --r:14px;--ease:cubic-bezier(.16,1,.3,1)
+}
+
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Inter",sans-serif;overflow-x:hidden}
+
+a{color:inherit;text-decoration:none}button{font:inherit}
+
+.wrap{width:min(1260px,calc(100% - 36px));margin:auto}
+
+header{height:58px;background:rgba(245,245,242,.93);backdrop-filter:blur(12px);position:fixed;top:0;left:0;width:100%;z-index:50;border-bottom:1px solid #ddd}
+
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;font-size:10px}
+
+.brand{font-family:"Space Grotesk";font-weight:700;font-size:16px;letter-spacing:-.07em}
+
+.brand span{display:inline-block;width:12px;height:12px;border:2px solid var(--purple);border-radius:50%;vertical-align:-1px;margin-right:3px}
+
+.links{display:flex;gap:21px;color:#444}.links a:hover{color:var(--purple)}
+
+.nav-cta{background:var(--black);color:white;padding:8px 14px;border-radius:99px;font-size:9px;font-weight:700}
+
+.hero{padding-top:58px;min-height:100vh;background:var(--paper)}
+
+.hero-top{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:end;padding:55px 0 38px}
+
+.hero h1{font-family:"Space Grotesk";font-size:clamp(65px,9vw,128px);line-height:.77;letter-spacing:-.085em;margin:0;max-width:780px}
+
+.hero h1 .purple{color:var(--purple)}
+
+.hero-side{align-self:center;max-width:360px;font-size:12px;line-height:1.45;color:#484b48}
+
+.hero-side .micro{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#777;margin-bottom:10px}
+
+.ctas{display:flex;gap:8px;margin-top:19px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 15px;border-radius:7px;font-size:10px;font-weight:700}.btn.black{background:var(--black);color:white}.btn.purple{background:var(--purple);color:#fff}.btn.white{border:1px solid #c9cac6;background:#fff}
+
+.hero-stage{height:390px;background:#172329;border-radius:14px;position:relative;overflow:hidden;box-shadow:0 18px 45px #00000012}
+
+.hero-stage:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;border:1px solid #ffffff16;left:50%;top:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 100px #ffffff04,0 0 0 200px #ffffff02}
+
+.hero-stage .eyebrow{position:absolute;left:25px;top:22px;color:#b8c2c5;font-size:8px;letter-spacing:.12em;text-transform:uppercase}
+
+.fake-ui{position:absolute;left:50%;top:53%;transform:translate(-50%,-50%);width:min(760px,76%);display:grid;grid-template-columns:1fr 1.35fr;gap:10px;align-items:center}
+
+.fake-tile{height:125px;border-radius:5px;background:#242f34;overflow:hidden;position:relative}
+
+.fake-tile.photo{background:linear-gradient(130deg,#6d3d20,#1d1915 52%,#4d3424)}
+
+.fake-tile.purple{background:var(--purple);display:grid;place-items:center;color:white;font:600 8px "Space Grotesk"}
+
+.fake-tile.ui{background:#e7e8e4;padding:11px}
+
+.fake-tile.ui:before{content:"";display:block;width:60%;height:7px;background:#fff;margin-bottom:10px;box-shadow:0 15px 0 #fff,0 30px 0 #fff}
+
+.float-label{position:absolute;background:#f6f6f1;color:#222;padding:4px 6px;border-radius:3px;font-size:7px;right:12%;top:26%;animation:float 4s ease-in-out infinite}
+
+@keyframes float{50%{transform:translateY(-9px)}}@keyframes drift{50%{transform:translateY(-5px) rotate(1deg)}}
+
+.logo-strip{background:#fff;border-radius:0 0 14px 14px;padding:17px 15px;display:flex;justify-content:space-around;align-items:center;gap:20px;overflow:hidden;border:1px solid #deded9;border-top:0}
+
+.logo-strip span{font-family:"Space Grotesk";font-size:10px;font-weight:700;color:#62645f;white-space:nowrap}.logo-strip span:nth-child(2){color:#1b7cf0}.logo-strip span:nth-child(4){color:#0d9b53}.logo-strip span:nth-child(6){color:#f044aa}
+
+.section{padding:100px 0}.center{text-align:center}.micro{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#777}
+
+.intro{max-width:790px;margin:0 auto}.intro h2{font:600 clamp(28px,4vw,47px)/.95 "Space Grotesk";letter-spacing:-.06em;margin:10px 0}.intro p{font-size:12px;line-height:1.55;color:#6a6d68;max-width:640px;margin:0 auto}
+
+.pills{display:flex;justify-content:center;gap:5px;margin:22px 0 30px}.pills span{background:#191a1a;color:#fff;padding:5px 9px;border-radius:99px;font-size:7px}.pills span:nth-child(2){background:#d7d8d4;color:#222}.pills span:nth-child(3){background:#fff;border:1px solid #ccc;color:#333}
+
+.product-stage{height:390px;background:var(--purple);border-radius:13px;position:relative;overflow:hidden}.product-stage:before{content:"";position:absolute;inset:-40%;background:radial-gradient(circle at 50% 50%,#a744ff,transparent 43%);opacity:.7}
+
+.product-window{position:absolute;width:72%;left:14%;top:10%;height:80%;background:#fff;border-radius:4px;box-shadow:0 25px 70px #21005555;overflow:hidden}
+
+.product-head{height:31px;background:#f7f7f5;border-bottom:1px solid #ddd;padding:9px;font-size:7px;font-weight:700}.product-body{padding:17px}.product-title{font:600 18px "Space Grotesk";letter-spacing:-.05em;margin-bottom:16px}.product-bars{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:7px}.pb{height:100px;background:#f2f2ef;border-radius:3px;position:relative}.pb:after{content:"";position:absolute;left:9px;right:9px;bottom:10px;height:35%;background:#e2e1df}.pb:first-child{background:#f2ddff}.pb:first-child:after{background:var(--purple);opacity:.35}.spark{position:absolute;width:110px;height:110px;border:1px solid #ffffff45;border-radius:50%;right:2%;bottom:-25px}
+
+.challenge{padding-top:30px}.challenge h2{font:600 clamp(30px,4vw,50px)/.9 "Space Grotesk";letter-spacing:-.06em;margin:0 auto 20px;max-width:650px}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}.problem{background:#fff;border-radius:7px;padding:12px;min-height:205px;border:1px solid #ddd}.problem-visual{height:105px;border-radius:4px;background:#111;margin-bottom:11px;position:relative;overflow:hidden}
+
+.problem h3{font:700 11px "Space Grotesk";letter-spacing:-.04em;margin:0 0 6px}.problem p{font-size:8px;line-height:1.45;color:#686b67;margin:0}
+
+.bubbles{display:flex;gap:4px;flex-wrap:wrap;align-content:center;padding:15px}.bubbles i{width:19px;height:19px;background:#18d2e7;border-radius:50%}.bubbles i:nth-child(5n){background:#ff4ac9}.bubbles i:nth-child(3n){background:#a5ff29}
+
+.stack{height:90px;border-radius:9px;display:grid;place-items:center;font:700 14px "Space Grotesk";color:white;letter-spacing:-.04em}.stack.orange{background:#ff5736}.stack.purple{background:#7d18ef}.stack.yellow{background:#ffe06b;color:#111}.stack.green{background:#11e844}.stack.blue{background:#14b8f0}
+
+.agents{padding:105px 0 70px;text-align:center}.agents h2{font:600 clamp(31px,4vw,50px)/.9 "Space Grotesk";letter-spacing:-.06em;margin:0}.agent-list{font:700 clamp(31px,4.4vw,55px)/.86 "Space Grotesk";letter-spacing:-.07em;margin-top:24px;color:#d5d5d1}.agent-list span{display:block;transition:.45s var(--ease)}.agent-list span:hover{color:var(--purple);transform:scale(1.03)}
+
+.stats{padding:65px 0 110px}.stats h2{font:600 clamp(28px,4vw,48px)/.9 "Space Grotesk";letter-spacing:-.06em;margin:0 0 30px}.stat{height:55px;border-radius:9px;margin:5px 0;padding:7px 12px;display:flex;align-items:center;justify-content:space-between;position:relative;overflow:hidden}.stat strong{font:600 30px "Space Grotesk";letter-spacing:-.07em}.stat small{font-size:7px;font-weight:700;max-width:110px;text-align:right}.stat:nth-child(2){width:92%;background:var(--cyan)}.stat:nth-child(3){width:80%;background:var(--yellow)}.stat:nth-child(4){width:100%;background:var(--pink)}
+
+.stack-section{text-align:center;padding:70px 0 100px}.stack-section h2{font:600 clamp(30px,4vw,48px)/.9 "Space Grotesk";letter-spacing:-.06em;margin:0 0 8px}.stack-section p{font-size:9px;color:#777;max-width:480px;margin:0 auto 22px}.stack-row{display:flex;gap:3px;overflow:hidden;border-radius:15px}.stack-row .stack{flex:1;height:100px;border-radius:16px 16px 0 0;font-size:12px}
+
+.people{padding:100px 0}.people h2{font:600 clamp(32px,4vw,50px)/.9 "Space Grotesk";letter-spacing:-.06em;margin:0 0 8px}.people-intro{font-size:9px;color:#777;margin-bottom:25px}.person-card{display:grid;grid-template-columns:1fr 1fr;background:#fff;border-radius:9px;overflow:hidden;margin:8px 0;min-height:300px}.person-image{background:#c5c5bf;position:relative;overflow:hidden}.person-image:before{content:"";position:absolute;width:180px;height:250px;border-radius:90px 90px 20px 20px;background:linear-gradient(160deg,#a0a09b,#ddd);left:30%;bottom:-25px}.person-image:after{content:"";position:absolute;width:110px;height:110px;border-radius:50%;background:#9b9b95;left:39%;top:12%;box-shadow:0 55px 0 30px #b7b7b0}.person-copy{padding:40px;display:flex;flex-direction:column;justify-content:center}.person-copy .quote{font:600 clamp(20px,2.5vw,31px)/1 "Space Grotesk";letter-spacing:-.05em}.person-copy small{font-size:8px;color:#777;margin-top:18px}.person-card:nth-child(3) .person-image{background:#18bff0}.person-card:nth-child(3) .person-copy{background:#18bff0;color:#fff}.person-card:nth-child(3) .person-copy small{color:#e9ffff}
+
+.fresh{padding:90px 0}.fresh h2{font:600 clamp(30px,4vw,50px)/.9 "Space Grotesk";letter-spacing:-.06em;margin:0}.fresh-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:25px}.fresh-card{background:#fff;border-radius:7px;overflow:hidden}.fresh-art{height:150px;background:var(--purple);position:relative}.fresh-card:nth-child(2) .fresh-art{background:var(--pink)}.fresh-card:nth-child(3) .fresh-art{background:#5516e8}.fresh-art:before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;border:1px solid #fff6;left:15%;top:15%;box-shadow:55px 0 0 -25px #fff2,110px 30px 0 -35px #fff2}.fresh-copy{padding:12px}.fresh-copy small{font-size:7px;color:var(--purple);font-weight:700}.fresh-copy h3{font:700 11px/1.05 "Space Grotesk";margin:6px 0}.fresh-copy p{font-size:8px;color:#777}
+
+.cta-band{background:var(--black);color:#fff;display:flex;overflow:hidden}.cta-band a{flex:1;padding:19px 10px;font:700 clamp(18px,3vw,32px) "Space Grotesk";letter-spacing:-.06em;text-align:center;border-right:1px solid #ffffff22}.cta-band a:first-child{background:var(--green);color:#111}.cta-band a:nth-child(2){background:var(--cyan);color:#111}
+
+footer{background:var(--black);color:#fff;padding:45px 0 20px}.foot-grid{display:grid;grid-template-columns:1.5fr repeat(4,1fr);gap:30px}.foot-grid h4{font-size:8px;text-transform:uppercase;letter-spacing:.1em;color:#aaa;margin:0 0 13px}.foot-grid a{display:block;font-size:8px;color:#aaa;margin:8px 0}.foot-brand{font:700 clamp(55px,9vw,115px)/.7 "Space Grotesk";letter-spacing:-.1em;color:#f2f2ef}.copyright{border-top:1px solid #ffffff19;margin-top:45px;padding-top:14px;color:#777;font-size:7px;display:flex;justify-content:space-between}
+
+.reveal{opacity:0;transform:translateY(30px);transition:1s var(--ease)}.reveal.in{opacity:1;transform:none}
+
+/* --- Beroe brand + kinetic interaction layer --- */
+
+body{font-size:15px;line-height:1.55;letter-spacing:-.005em}
+
+p{max-width:70ch}
+
+.floating-header{position:fixed;z-index:100;top:14px;left:0;width:100%;height:auto;background:transparent;border:0;pointer-events:none}
+
+.floating-nav{
+ pointer-events:auto;width:min(760px,calc(100% - 28px));margin:auto;height:48px;
+ padding:5px 6px 5px 13px;border:1px solid rgba(20,20,20,.13);
+ background:rgba(250,250,247,.88);backdrop-filter:blur(18px);
+ border-radius:999px;box-shadow:0 12px 35px rgba(15,15,15,.10);
+ display:flex;align-items:center;gap:17px;transition:.45s var(--ease)
+}
+
+.floating-nav:hover{box-shadow:0 18px 50px rgba(15,15,15,.15)}
+
+.floating-nav .brand{font-size:15px;flex:none}
+
+.floating-nav .links{font-size:9px;gap:15px;flex:1;justify-content:center}
+
+.nav-actions{display:flex;align-items:center;gap:5px;flex:none}
+
+.signin{font-size:9px;padding:8px 9px;color:#555}
+
+.floating-nav .nav-cta{padding:8px 12px;font-size:8px;background:#111313}
+
+.floating-nav .nav-cta:hover{background:#6f17f5;transform:translateY(-1px)}
+
+.hero-top{padding-top:72px}
+
+.hero h1{font-weight:600}
+
+.hero-side{font-size:13px;line-height:1.65;color:#4e514e}
+
+.hero-side .micro,.micro{font-weight:600}
+
+.btn{font-size:10px}
+
+.hero-stage{transition:transform .25s ease,box-shadow .5s var(--ease)}
+
+.hero-stage:hover{box-shadow:0 28px 65px rgba(0,0,0,.18)}
+
+.section{padding:130px 0}
+
+.intro p,.stack-section p,.people-intro,.fresh-copy p,.problem p{font-size:13px;line-height:1.65}
+
+.intro h2{font-weight:600}
+
+.product-stage,.hero-stage,.person-card,.fresh-card,.problem{will-change:transform}
+
+.product-stage{transform-style:preserve-3d;transition:transform .8s var(--ease),box-shadow .8s var(--ease)}
+
+.product-stage:hover{transform:translateY(-7px) rotateX(1deg);box-shadow:0 35px 90px rgba(61,0,130,.22)}
+
+.product-window{transition:transform .8s var(--ease)}
+
+.product-stage:hover .product-window{transform:translateY(-7px) scale(1.012)}
+
+.challenge{position:relative}
+
+.challenge:before{content:"";position:absolute;left:0;right:0;top:-80px;height:160px;background:linear-gradient(to bottom,transparent,#f3f3f0);pointer-events:none}
+
+.three{perspective:1200px}
+
+.problem{position:relative;transition:transform .7s var(--ease),box-shadow .7s var(--ease);transform-origin:center bottom}
+
+.problem:nth-child(2){transform:translateY(30px) rotate(1deg)}
+
+.problem:nth-child(3){transform:translateY(5px) rotate(-1deg)}
+
+.problem:hover{z-index:5;transform:translateY(-18px) rotate(0) scale(1.025)!important;box-shadow:0 28px 60px rgba(15,15,15,.15)}
+
+.agents{position:relative;overflow:hidden}
+
+.agent-list span{cursor:default}
+
+.agent-list span:nth-child(2),.agent-list span:nth-child(5){margin-left:8vw}
+
+.agent-list span:nth-child(3),.agent-list span:nth-child(6){margin-left:-5vw}
+
+.agent-list span:hover{text-shadow:0 8px 30px rgba(111,23,245,.18)}
+
+.stats{position:relative}
+
+.stats .wrap{position:relative}
+
+.stat{transition:transform .6s var(--ease),width .8s var(--ease),box-shadow .6s var(--ease)}
+
+.stat:hover{transform:translateX(12px) scaleY(1.05);box-shadow:0 18px 45px rgba(0,0,0,.10)}
+
+.stat:nth-child(2){width:92%}.stat:nth-child(3){width:80%}.stat:nth-child(4){width:100%}
+
+.stack-section{overflow:hidden}
+
+.stack-row{perspective:1000px}
+
+.stack-row .stack{transition:transform .65s var(--ease),flex .65s var(--ease),filter .65s var(--ease)}
+
+.stack-row .stack:hover{transform:translateY(-18px) scale(1.04);z-index:4;filter:saturate(1.1);flex:1.35}
+
+.people{position:relative}
+
+.person-card{position:sticky;top:92px;box-shadow:0 15px 45px rgba(0,0,0,.08);transition:transform .7s var(--ease),box-shadow .7s var(--ease)}
+
+.person-card:nth-of-type(3){top:120px;transform:scale(.97)}
+
+.person-card:hover{transform:translateY(-8px) scale(1.005);box-shadow:0 30px 80px rgba(0,0,0,.14)}
+
+.person-copy .quote{font-weight:600}
+
+.person-image{transition:transform 1s var(--ease)}
+
+.person-card:hover .person-image{transform:scale(1.035)}
+
+.fresh{position:relative}
+
+.fresh-card{transition:transform .65s var(--ease),box-shadow .65s var(--ease)}
+
+.fresh-card:nth-child(2){transform:translateY(20px)}
+
+.fresh-card:nth-child(3){transform:translateY(-3px)}
+
+.fresh-card:hover{transform:translateY(-14px) rotate(-1deg)!important;box-shadow:0 25px 60px rgba(0,0,0,.13);z-index:4}
+
+.fresh-art{transition:transform .8s var(--ease)}
+
+.fresh-card:hover .fresh-art{transform:scale(1.06)}
+
+.cta-band a{transition:flex .7s var(--ease),filter .5s var(--ease)}
+
+.cta-band a:hover{flex:1.25;filter:saturate(1.08)}
+
+.reveal{transform:translateY(46px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+
+.reveal.in{transform:none}
+
+@media (min-width:801px){
+ .section,.challenge,.agents,.stats,.stack-section,.people,.fresh{position:relative}
+ .section:after,.challenge:after,.agents:after,.stats:after,.stack-section:after,.people:after,.fresh:after{
+   content:"";position:absolute;left:3%;right:3%;bottom:-1px;height:1px;background:rgba(17,19,19,.08)
+ }
+}
+
+@media(max-width:800px){.floating-nav{width:calc(100% - 18px);height:46px}.floating-nav .links{display:none}.floating-nav{justify-content:space-between}.hero-top{grid-template-columns:1fr}.hero-side{max-width:520px}.hero-stage{height:300px}.three{grid-template-columns:1fr}.problem{min-height:170px}.stack-row{width:100vw;margin-left:calc((100% - 100vw)/2)}.person-card{grid-template-columns:1fr;min-height:560px}.person-image{min-height:300px}.fresh-grid{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr}.foot-brand{grid-column:1/-1}.cta-band{display:grid;grid-template-columns:1fr 1fr}.cta-band a{border-bottom:1px solid #ffffff22}}
+
+@media(max-width:520px){.floating-header{top:9px}.floating-nav{padding-left:10px}.signin{display:none}.floating-nav .nav-cta{padding:8px 10px}.wrap{width:calc(100% - 24px)}.hero h1{font-size:68px}.hero-stage{height:260px}.fake-ui{width:90%}.product-stage{height:280px}.product-window{width:86%;left:7%}.product-title{font-size:13px}.section{padding:75px 0}.stats .stat{width:100%!important}.stack-row .stack{min-width:120px}.stack-row{overflow-x:auto}.foot-grid{grid-template-columns:1fr 1fr}}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="floating-header">
+ <div class="floating-nav">
+   <a class="brand" href="#"><span></span>beroe</a>
+   <nav class="links">
+     <a href="#solutions">Solutions</a><a href="#products">Products</a><a href="#partners">Partners</a>
+     <a href="#resources">Resources</a><a href="#company">Company</a>
+   </nav>
+   <div class="nav-actions"><a class="signin" href="#">Sign in</a><a class="nav-cta" href="#demo">Request a demo ↗</a></div>
+ </div>
+</header>
+
+<main>
+ <section class="hero">
+  <div class="wrap">
+   <div class="hero-top reveal">
+    <h1>Smarter<br><span class="purple">Decisions.</span><br>Better Procurement.</h1>
+    <div class="hero-side"><div class="micro">Procurement intelligence, reimagined</div><p>Be ahead of what's next. Beroe combines procurement intelligence, market data, supplier intelligence and expert insight so leaders can make faster, more confident decisions.</p><div class="ctas"><a class="btn black" href="#solutions">Explore Beroe ↗</a><a class="btn white" href="#products">See the intelligence</a></div></div>
+   </div>
+   <div class="hero-stage reveal"><div class="eyebrow">Beroe Intelligence / Live procurement signals</div><div class="fake-ui"><div class="fake-tile photo"></div><div class="fake-tile purple">CATEGORY INTELLIGENCE</div><div class="fake-tile ui"></div></div><span class="float-label">market signal +18.4%</span></div>
+   <div class="logo-strip" id="partners"><span>tradenox</span><span>credit suisse</span><span>Conify</span><span>Coupa</span><span>Siavo</span><span>positive</span><span>supplier.io</span></div>
+  </div>
+ </section>
+
+ <section class="section">
+  <div class="wrap">
+   <div class="intro center reveal"><div class="micro">AI made useful. Intelligence made actionable.</div><h2>Empowering procurement leaders with smarter intelligence and decisions.</h2><p>Every day, we work across thousands of datasets, supplier relationships and procurement categories to turn complexity into clarity. See what's changing. Understand why it matters. Decide what happens next.</p><div class="pills"><span>400+ Analysts</span><span>30M+ Data Points</span><span>25K+ Supplier Network</span></div></div>
+   <div class="product-stage reveal" id="products"><div class="product-window"><div class="product-head">beroe intelligence / PROCUREMENT SIGNALS</div><div class="product-body"><div class="product-title">Good Morning. Here's what changed.</div><div class="product-bars"><div class="pb"></div><div class="pb"></div><div class="pb"></div></div></div></div><div class="spark"></div></div>
+  </div>
+ </section>
+
+ <section class="section challenge" id="solutions">
+  <div class="wrap center">
+   <div class="reveal"><div class="micro">Procurement has changed</div><h2>Traditional Procurement Methods<br>Don't Meet Modern Expectations</h2></div>
+   <div class="three">
+    <article class="problem reveal"><div class="problem-visual bubbles"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>The Data</h3><p>Millions of signals exist. Finding the signal that matters is still too manual, fragmented and slow.</p></article>
+    <article class="problem reveal"><div class="problem-visual" style="display:grid;place-items:center"><div style="width:90%;height:12px;background:#ffe22f;border-radius:99px;box-shadow:0 22px #f52bcf,0 -22px #18d7ea"></div></div><h3>The Intelligence</h3><p>Data becomes valuable only when market, supplier and category context connect around a decision.</p></article>
+    <article class="problem reveal"><div class="problem-visual" style="padding:18px"><div style="height:16px;width:16px;background:#ff3c2b;border-radius:50%;box-shadow:0 30px #ff3c2b,0 60px #ff3c2b"></div><div style="height:10px;width:70px;background:#5516e8;margin:3px 0 0 60px;box-shadow:0 30px #5516e8,0 60px #5516e8"></div></div><h3>The Decision</h3><p>Procurement leaders need answers, not another dashboard. Beroe turns intelligence into action.</p></article>
+   </div>
+  </div>
+ </section>
+
+ <section class="agents">
+  <div class="wrap">
+   <div class="reveal"><div class="micro">Beroe intelligence ecosystem</div><h2>Intelligence for every<br>procurement decision.</h2></div>
+   <div class="agent-list reveal"><span>Category Intelligence</span><span>Supplier Intelligence</span><span>Market Intelligence</span><span>Risk Intelligence</span><span>Performance & Compliance</span><span>Expert Advisory</span><span>Analytics & Discovery</span></div>
+  </div>
+ </section>
+
+ <section class="stats">
+  <div class="wrap">
+   <div class="center reveal"><div class="micro">Faster insight. Wider coverage. Better outcomes.</div><h2>What happens when intelligence<br>moves at the speed of business.</h2></div>
+   <div class="stat reveal" style="margin-top:35px;background:var(--cyan)"><strong>400+</strong><small>Procurement intelligence analysts</small></div>
+   <div class="stat reveal"><strong>30M+</strong><small>Validated procurement data points</small></div>
+   <div class="stat reveal"><strong>25K+</strong><small>Global supplier network</small></div>
+  </div>
+ </section>
+
+ <section class="stack-section">
+  <div class="wrap">
+   <div class="reveal"><div class="micro">Your procurement stack, supercharged.</div><h2>Connect the intelligence<br>behind every decision.</h2><p>Beroe connects people, data, suppliers and expertise so procurement teams can move from signal to decision without changing how they work.</p></div>
+   <div class="stack-row reveal"><div class="stack blue">ERP</div><div class="stack green">Procure</div><div class="stack orange">Supplier</div><div class="stack yellow">Data</div><div class="stack purple">Beroe</div></div>
+  </div>
+ </section>
+
+ <section class="people" id="company">
+  <div class="wrap">
+   <div class="center reveal"><div class="micro">Intelligence that fits how you work</div><h2>Procurement expertise,<br>without the blind spots.</h2><p class="people-intro">Human expertise + connected intelligence = decisions teams can defend.</p></div>
+   <article class="person-card reveal"><div class="person-image"></div><div class="person-copy"><div class="quote">“Beroe gives procurement leaders the context behind the numbers — so strategy doesn't start with a spreadsheet.”</div><small>PROCUREMENT LEADERS / BERoe INTELLIGENCE</small></div></article>
+   <article class="person-card reveal"><div class="person-image"></div><div class="person-copy"><div class="quote">“From market signals to supplier decisions, the intelligence is connected. The decision becomes clearer.”</div><small>STRATEGIC SOURCING / BERoe EXPERT ADVISORY</small></div></article>
+  </div>
+ </section>
+
+ <section class="fresh" id="resources">
+  <div class="wrap">
+   <div class="reveal"><div class="micro">Fresh from Beroe</div><h2>Knowledge for smarter procurement.</h2></div>
+   <div class="fresh-grid">
+    <article class="fresh-card reveal"><div class="fresh-art"></div><div class="fresh-copy"><small>INSIGHT</small><h3>What procurement data can tell you before the market moves.</h3><p>Read the latest perspective.</p></div></article>
+    <article class="fresh-card reveal"><div class="fresh-art"></div><div class="fresh-copy"><small>MARKET INTELLIGENCE</small><h3>The signals procurement leaders should be watching now.</h3><p>Explore the research.</p></div></article>
+    <article class="fresh-card reveal"><div class="fresh-art"></div><div class="fresh-copy"><small>REPORT</small><h3>From category complexity to confident decisions.</h3><p>Download the report.</p></div></article>
+   </div>
+  </div>
+ </section>
+
+ <section class="cta-band" id="demo"><a href="#">Book a Demo ↗</a><a href="#">Talk to Beroe ↗</a></section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="foot-grid">
+   <div class="foot-brand">beroe</div>
+   <div><h4>Solutions</h4><a href="#">Category Intelligence</a><a href="#">Supplier Intelligence</a><a href="#">Risk Intelligence</a><a href="#">Analytics</a></div>
+   <div><h4>Products</h4><a href="#">Beroe Intelligence</a><a href="#">Supplier Network</a><a href="#">Market Data</a><a href="#">Advisory</a></div>
+   <div><h4>Resources</h4><a href="#">Insights</a><a href="#">Reports</a><a href="#">Research</a><a href="#">Knowledge</a></div>
+   <div><h4>Company</h4><a href="#">About Beroe</a><a href="#">Partners</a><a href="#">Contact</a><a href="#">Careers</a></div>
+  </div>
+  <div class="copyright"><span>© Beroe. Concept experience.</span><span>Privacy · Terms · Accessibility</span></div>
+ </div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach((e,i)=>{e.style.transitionDelay=Math.min((i%4)*.06,.24)+'s';obs.observe(e)});
+
+const hero=document.querySelector('.hero-stage');
+window.addEventListener('pointermove',e=>{
+ if(!hero)return;
+ const r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+ hero.style.transform=`perspective(1000px) rotateX(${y*-1.5}deg) rotateY(${x*2}deg)`;
+},{passive:true});
+
+const progress=document.createElement('div');
+progress.style.cssText='position:fixed;z-index:200;left:0;top:0;height:2px;width:0;background:#7317f5;transition:width .08s linear';
+document.body.appendChild(progress);
+window.addEventListener('scroll',()=>{
+ const d=document.documentElement;
+ const p=(window.scrollY/(d.scrollHeight-d.clientHeight))*100;
+ progress.style.width=p+'%';
+},{passive:true});
+
+const sections=[...document.querySelectorAll('main > section')];
+window.addEventListener('scroll',()=>{
+ const vh=window.innerHeight;
+ sections.forEach((s,i)=>{
+   const r=s.getBoundingClientRect();
+   const mid=r.top+r.height/2;
+   const distance=Math.abs(vh*.55-mid);
+   const strength=Math.max(0,1-distance/(vh*.7));
+   if(strength>0 && i>0){
+     s.style.transform=`translateY(${(1-strength)*10}px)`;
+   }else{s.style.transform=''}
+ });
+},{passive:true});
+
+window.addEventListener('pointerout',e=>{if(e.relatedTarget===null && hero)hero.style.transform=''});
+</script>
+
+</body>
+
+</html>
