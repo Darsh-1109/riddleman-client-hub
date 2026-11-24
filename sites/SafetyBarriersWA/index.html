@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Safety Barriers WA (Yarnell Pty Ltd T/as) provides professional safety barrier and infrastructure solutions for commercial, civil, and road-related projects across Western Australia.">
+    <meta name="keywords" content="Safety Barriers WA, Safety Barrier Contractors Western Australia, Road Safety Barriers WA, Guardrail Installation Western Australia, Commercial Safety Barriers, Roadside Safety Infrastructure">
+    <meta name="author" content="Safety Barriers WA">
+    <meta property="og:title" content="Safety Barriers WA | Professional Infrastructure & Road Safety Solutions">
+    <meta property="og:description" content="Building Safer Roads. Protecting Every Journey. Professional safety barrier and infrastructure solutions across Western Australia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.safetybarrier.com.au">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1596739322994-8b2c6b4c8c6f?q=80&w=1200&auto=format&fit=crop">
+    
+    <title>Safety Barriers WA | Professional Infrastructure & Road Safety Solutions</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* =========================================
+           CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --color-industrial-white: #F8F9F8;
+            --color-concrete-grey: #E9ECEB;
+            --color-mist-grey: #D5DCDA;
+            --color-safety-orange: #E88735;
+            --color-muted-amber: #D9A44C;
+            --color-deep-charcoal: #292F32;
+            --color-graphite: #41494C;
+            --color-steel-blue: #607985;
+            --color-pure-white: #FFFFFF;
+            
+            --font-heading: 'Manrope', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --shadow-subtle: 0 4px 20px rgba(41, 47, 50, 0.06);
+            --shadow-hover: 0 8px 30px rgba(41, 47, 50, 0.12);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-industrial-white);
+            color: var(--color-graphite);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--color-deep-charcoal);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* =========================================
+           UTILITY CLASSES
+           ========================================= */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--color-safety-orange);
+            color: var(--color-pure-white);
+        }
+
+        .btn-primary:hover {
+            background-color: #d17528;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-pure-white);
+            border-color: var(--color-pure-white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-pure-white);
+            color: var(--color-deep-charcoal);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--color-deep-charcoal);
+            border-color: var(--color-deep-charcoal);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-deep-charcoal);
+            color: var(--color-pure-white);
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--color-steel-blue);
+        }
+
+        .text-orange {
+            color: var(--color-safety-orange);
+        }
+
+        /* Scroll Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: transparent;
+            transition: var(--transition);
+            padding: 20px 0;
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-subtle);
+            padding: 12px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--color-pure-white);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .navbar.scrolled .logo {
+            color: var(--color-deep-charcoal);
+        }
+
+        .logo span {
+            color: var(--color-safety-orange);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+        }
+
+        .navbar.scrolled .nav-links a {
+            color: var(--color-graphite);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-safety-orange);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 10px 24px !important;
+            font-size: 0.9rem !important;
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-toggle span {
+            width: 28px;
+            height: 3px;
+            background-color: var(--color-pure-white);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .navbar.scrolled .mobile-toggle span {
+            background-color: var(--color-deep-charcoal);
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(41, 47, 50, 0.65), rgba(41, 47, 50, 0.75)), 
+                        url('https://images.unsplash.com/photo-1596739322994-8b2c6b4c8c6f?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+            color: var(--color-pure-white);
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--color-pure-white);
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* =========================================
+           ABOUT SECTION
+           ========================================= */
+        .about {
+            background-color: var(--color-pure-white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            border-top: 4px solid var(--color-safety-orange);
+            border-left: 4px solid var(--color-safety-orange);
+            z-index: 1;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            color: var(--color-graphite);
+            font-size: 1.05rem;
+        }
+
+        /* =========================================
+           SOLUTIONS SECTION
+           ========================================= */
+        .solutions {
+            background-color: var(--color-concrete-grey);
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .solution-card {
+            background-color: var(--color-pure-white);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-bottom-color: var(--color-safety-orange);
+        }
+
+        .solution-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .solution-content {
+            padding: 28px;
+        }
+
+        .solution-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .solution-content p {
+            font-size: 0.95rem;
+            color: var(--color-steel-blue);
+            margin-bottom: 20px;
+        }
+
+        .solution-link {
+            font-weight: 600;
+            color: var(--color-safety-orange);
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .solution-link:hover {
+            gap: 10px;
+        }
+
+        /* =========================================
+           PRODUCTS SECTION
+           ========================================= */
+        .products {
+            background-color: var(--color-pure-white);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .product-card {
+            background-color: var(--color-industrial-white);
+            border: 1px solid var(--color-mist-grey);
+            border-radius: 4px;
+            padding: 24px;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .product-card:hover {
+            border-color: var(--color-safety-orange);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .product-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--color-concrete-grey);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--color-safety-orange);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .product-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            font-size: 0.9rem;
+            color: var(--color-steel-blue);
+            margin-bottom: 20px;
+        }
+
+        /* =========================================
+           WHY US SECTION
+           ========================================= */
+        .why-us {
+            background-color: var(--color-deep-charcoal);
+            color: var(--color-pure-white);
+        }
+
+        .why-us .section-header h2 {
+            color: var(--color-pure-white);
+        }
+
+        .why-us .section-header p {
+            color: var(--color-mist-grey);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .why-icon {
+            min-width: 48px;
+            height: 48px;
+            background-color: rgba(232, 135, 53, 0.15);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-safety-orange);
+            font-size: 1.2rem;
+        }
+
+        .why-text h3 {
+            color: var(--color-pure-white);
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+
+        .why-text p {
+            color: var(--color-mist-grey);
+            font-size: 0.95rem;
+        }
+
+        /* =========================================
+           PROJECT GALLERY
+           ========================================= */
+        .projects {
+            background-color: var(--color-industrial-white);
+        }
+
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 24px;
+            background-color: transparent;
+            border: 1px solid var(--color-mist-grey);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-weight: 500;
+            color: var(--color-graphite);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--color-deep-charcoal);
+            color: var(--color-pure-white);
+            border-color: var(--color-deep-charcoal);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(41, 47, 50, 0.8), transparent);
+            display: flex;
+            align-items: flex-end;
+            padding: 24px;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h4 {
+            color: var(--color-pure-white);
+            font-size: 1.1rem;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(41, 47, 50, 0.95);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 4px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            color: var(--color-pure-white);
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* =========================================
+           ENQUIRY SECTION
+           ========================================= */
+        .enquiry {
+            background-color: var(--color-concrete-grey);
+        }
+
+        .enquiry-wrapper {
+            background-color: var(--color-pure-white);
+            border-radius: 8px;
+            box-shadow: var(--shadow-subtle);
+            padding: 60px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: var(--color-deep-charcoal);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 14px 16px;
+            border: 1px solid var(--color-mist-grey);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: var(--transition);
+            background-color: var(--color-industrial-white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-safety-orange);
+            box-shadow: 0 0 0 3px rgba(232, 135, 53, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            margin-top: 16px;
+            width: 100%;
+        }
+
+        .form-message {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            display: block;
+        }
+
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+
+        /* =========================================
+           CONTACT SECTION
+           ========================================= */
+        .contact {
+            background-color: var(--color-pure-white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            min-width: 40px;
+            height: 40px;
+            background-color: var(--color-concrete-grey);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-safety-orange);
+        }
+
+        .contact-item h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .contact-item p, .contact-item a {
+            color: var(--color-steel-blue);
+            font-size: 0.95rem;
+        }
+
+        .contact-item a:hover {
+            color: var(--color-safety-orange);
+        }
+
+        .map-container {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-subtle);
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        .footer {
+            background-color: var(--color-deep-charcoal);
+            color: var(--color-mist-grey);
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand .logo {
+            color: var(--color-pure-white);
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .footer h4 {
+            color: var(--color-pure-white);
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-safety-orange);
+            padding-left: 4px;
+        }
+
+        .footer-contact p {
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        /* =========================================
+           BACK TO TOP
+           ========================================= */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 48px;
+            height: 48px;
+            background-color: var(--color-safety-orange);
+            color: var(--color-pure-white);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: #d17528;
+            transform: translateY(-3px);
+        }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 2.8rem; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .enquiry-wrapper { padding: 40px; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle { display: flex; }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 320px;
+                height: 100vh;
+                background-color: var(--color-deep-charcoal);
+                flex-direction: column;
+                justify-content: center;
+                gap: 24px;
+                transition: var(--transition);
+                box-shadow: -10px 0 30px rgba(0,0,0,0.2);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                color: var(--color-pure-white) !important;
+                font-size: 1.1rem;
+            }
+
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
+            .section-header h2 { font-size: 2rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .enquiry-wrapper { padding: 24px; }
+            .gallery-filters { gap: 8px; }
+            .filter-btn { padding: 8px 16px; font-size: 0.85rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons { flex-direction: column; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                Safety Barriers <span>WA</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#solutions">Solutions</a>
+                <a href="#products">Products</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="#enquiry" class="btn btn-primary nav-cta">Request a Quote</a>
+            </nav>
+            <div class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-content reveal">
+                    <h1>Safer Infrastructure Starts with the Right Protection.</h1>
+                    <p>Explore professional safety barrier and infrastructure solutions for commercial, civil and road-related projects across Western Australia.</p>
+                    <div class="hero-buttons">
+                        <a href="#enquiry" class="btn btn-primary">Request a Quote</a>
+                        <a href="#solutions" class="btn btn-secondary">Explore Our Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section-padding about" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content reveal">
+                        <h2>Committed to Safer Infrastructure.</h2>
+                        <p>Safety Barriers WA (Yarnell Pty Ltd T/as) is a dedicated provider of professional safety barrier and commercial construction solutions. Based in Toodyay, Western Australia, we serve the infrastructure sector with a focus on dependable, high-quality project support.</p>
+                        <p>Our approach is rooted in safety-first thinking and practical engineering solutions. We understand that protecting road users, workers, and critical infrastructure requires meticulous planning, quality workmanship, and reliable communication. We partner with commercial construction companies, civil contractors, infrastructure developers, and local authorities to deliver solutions that meet the rigorous demands of Western Australian projects.</p>
+                        <a href="#contact" class="btn btn-outline" style="margin-top: 16px;">Get in Touch</a>
+                    </div>
+                    <div class="about-image reveal">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop" alt="Professional roadside safety infrastructure and barrier installation in Western Australia">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Section -->
+        <section class="section-padding solutions" id="solutions">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Our Solutions & Services</h2>
+                    <p>Comprehensive safety infrastructure support tailored to the unique demands of civil, commercial, and road-related projects.</p>
+                </div>
+                <div class="solutions-grid">
+                    <article class="solution-card reveal">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&auto=format&fit=crop" alt="Road Safety Barrier Solutions">
+                        <div class="solution-content">
+                            <h3>Road Safety Barrier Solutions</h3>
+                            <p>Engineered protection systems designed to mitigate risk and enhance safety for road users and workers on highways and local roads.</p>
+                            <a href="#enquiry" class="solution-link">Enquire Now →</a>
+                        </div>
+                    </article>
+                    <article class="solution-card reveal">
+                        <img src="https://images.unsplash.com/photo-1590486803833-1c5dc8ce2ac3?q=80&w=600&auto=format&fit=crop" alt="Guardrail Installation">
+                        <div class="solution-content">
+                            <h3>Guardrail Installation</h3>
+                            <p>Professional installation of robust guardrail systems to secure road edges, medians, and hazardous roadside environments.</p>
+                            <a href="#enquiry" class="solution-link">Enquire Now →</a>
+                        </div>
+                    </article>
+                    <article class="solution-card reveal">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356f0e?q=80&w=600&auto=format&fit=crop" alt="Commercial Safety Infrastructure">
+                        <div class="solution-content">
+                            <h3>Commercial Safety Infrastructure</h3>
+                            <p>Customised safety barrier solutions for commercial construction sites, industrial facilities, and private developments.</p>
+                            <a href="#enquiry" class="solution-link">Enquire Now →</a>
+                        </div>
+                    </article>
+                    <article class="solution-card reveal">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format&fit=crop" alt="Barrier Maintenance and Repairs">
+                        <div class="solution-content">
+                            <h3>Barrier Maintenance & Repairs</h3>
+                            <p>Responsive maintenance and repair services to ensure existing safety infrastructure remains compliant and fully functional.</p>
+                            <a href="#enquiry" class="solution-link">Enquire Now →</a>
+                        </div>
+                    </article>
+                    <article class="solution-card reveal">
+                        <img src="https://images.unsplash.com/photo-1535732759880-bbd5c7265e3f?q=80&w=600&auto=format&fit=crop" alt="Construction Site Safety Barriers">
+                        <div class="solution-content">
+                            <h3>Construction Site Safety Barriers</h3>
+                            <p>Temporary and permanent barrier systems to protect workers, equipment, and the public in active construction zones.</p>
+                            <a href="#enquiry" class="solution-link">Enquire Now →</a>
+                        </div>
+                    </article>
+                    <article class="solution-card reveal">
+                        <img src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?q=80&w=600&auto=format&fit=crop" alt="Infrastructure Project Support">
+                        <div class="solution-content">
+                            <h3>Infrastructure Project Support</h3>
+                            <p>End-to-end logistical and installation support for large-scale civil and infrastructure development projects.</p>
+                            <a href="#enquiry" class="solution-link">Enquire Now →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="section-padding products" id="products">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Products & Barrier Systems</h2>
+                    <p>Reliable, industry-standard safety barrier systems suited for diverse environmental and structural requirements.</p>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card reveal">
+                        <div class="product-icon">W</div>
+                        <h3>W-Beam Guardrails</h3>
+                        <p>Standard roadside protection offering excellent energy absorption and vehicle redirection.</p>
+                        <a href="#enquiry" class="solution-link">Enquire Now →</a>
+                    </div>
+                    <div class="product-card reveal">
+                        <div class="product-icon">T</div>
+                        <h3>Thrie-Beam Barriers</h3>
+                        <p>Enhanced containment for high-risk areas, bridges, and steep embankments.</p>
+                        <a href="#enquiry" class="solution-link">Enquire Now →</a>
+                    </div>
+                    <div class="product-card reveal">
+                        <div class="product-icon">R</div>
+                        <h3>Wire Rope Safety Barriers</h3>
+                        <p>Flexible, cost-effective median and roadside barrier systems for wide clear zones.</p>
+                        <a href="#enquiry" class="solution-link">Enquire Now →</a>
+                    </div>
+                    <div class="product-card reveal">
+                        <div class="product-icon">B</div>
+                        <h3>Bridge Safety Barriers</h3>
+                        <p>Heavy-duty containment systems engineered specifically for bridge and overpass applications.</p>
+                        <a href="#enquiry" class="solution-link">Enquire Now →</a>
+                    </div>
+                    <div class="product-card reveal">
+                        <div class="product-icon">C</div>
+                        <h3>Concrete Barriers</h3>
+                        <p>Rigid, high-mass barriers for maximum containment in permanent and temporary setups.</p>
+                        <a href="#enquiry" class="solution-link">Enquire Now →</a>
+                    </div>
+                    <div class="product-card reveal">
+                        <div class="product-icon">F</div>
+                        <h3>Water-Filled Temporary Barriers</h3>
+                        <p>Deployable, impact-attenuating barriers for short-term worksite protection.</p>
+                        <a href="#enquiry" class="solution-link">Enquire Now →</a>
+                    </div>
+                    <div class="product-card reveal">
+                        <div class="product-icon">E</div>
+                        <h3>End Treatments</h3>
+                        <p>Crash-worthy terminal systems designed to safely absorb impact at barrier ends.</p>
+                        <a href="#enquiry" class="solution-link">Enquire Now →</a>
+                    </div>
+                    <div class="product-card reveal">
+                        <div class="product-icon">S</div>
+                        <h3>Safety Bollards</h3>
+                        <p>Impact-resistant posts for pedestrian protection, asset shielding, and traffic management.</p>
+                        <a href="#enquiry" class="solution-link">Enquire Now →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Work With Us Section -->
+        <section class="section-padding why-us" id="why-us">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Why Work With Safety Barriers WA?</h2>
+                    <p>We build our reputation on consistent, professional delivery and an unwavering commitment to safety.</p>
+                </div>
+                <div class="why-grid">
+                    <div class="why-item reveal">
+                        <div class="why-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <div class="why-text">
+                            <h3>Safety-Focused Approach</h3>
+                            <p>Every project is planned and executed with the highest regard for the safety of workers, road users, and the public.</p>
+                        </div>
+                    </div>
+                    <div class="why-item reveal">
+                        <div class="why-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12l5-5m-5 5l5 5"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                        </div>
+                        <div class="why-text">
+                            <h3>Professional Project Support</h3>
+                            <p>Dedicated coordination from initial enquiry through to project completion, ensuring seamless execution.</p>
+                        </div>
+                    </div>
+                    <div class="why-item reveal">
+                        <div class="why-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <div class="why-text">
+                            <h3>Reliable Communication</h3>
+                            <p>Transparent, timely updates and clear lines of communication with our clients and site stakeholders.</p>
+                        </div>
+                    </div>
+                    <div class="why-item reveal">
+                        <div class="why-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        </div>
+                        <div class="why-text">
+                            <h3>Quality-Oriented Workmanship</h3>
+                            <p>Skilled installation teams committed to precision, durability, and adherence to industry best practices.</p>
+                        </div>
+                    </div>
+                    <div class="why-item reveal">
+                        <div class="why-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                        </div>
+                        <div class="why-text">
+                            <h3>Practical Infrastructure Solutions</h3>
+                            <p>We provide realistic, engineered solutions that address the specific challenges of your site and environment.</p>
+                        </div>
+                    </div>
+                    <div class="why-item reveal">
+                        <div class="why-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <div class="why-text">
+                            <h3>Commitment to Customer Requirements</h3>
+                            <p>We listen carefully to your project specifications and tailor our approach to meet your exact needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Gallery Section -->
+        <section class="section-padding projects" id="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Project Gallery</h2>
+                    <p>A selection of our safety barrier and infrastructure work across Western Australia.</p>
+                </div>
+                
+                <div class="gallery-filters reveal">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="roadside">Roadside Barriers</button>
+                    <button class="filter-btn" data-filter="highway">Highway Infrastructure</button>
+                    <button class="filter-btn" data-filter="commercial">Commercial Construction</button>
+                    <button class="filter-btn" data-filter="maintenance">Maintenance</button>
+                </div>
+
+                <div class="gallery-grid" id="galleryGrid">
+                    <div class="gallery-item reveal" data-category="roadside" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1596739322994-8b2c6b4c8c6f?q=80&w=600&auto=format&fit=crop" alt="Roadside barrier installation">
+                        <div class="gallery-overlay">
+                            <h4>Roadside Barrier Installation</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal" data-category="highway" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1465447142348-e9952c393450?q=80&w=600&auto=format&fit=crop" alt="Highway safety infrastructure">
+                        <div class="gallery-overlay">
+                            <h4>Highway Infrastructure</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal" data-category="commercial" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356f0e?q=80&w=600&auto=format&fit=crop" alt="Commercial construction safety">
+                        <div class="gallery-overlay">
+                            <h4>Commercial Construction</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal" data-category="maintenance" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600&auto=format&fit=crop" alt="Barrier maintenance and repair">
+                        <div class="gallery-overlay">
+                            <h4>Barrier Maintenance</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal" data-category="roadside" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&auto=format&fit=crop" alt="Steel guardrail installation">
+                        <div class="gallery-overlay">
+                            <h4>Steel Guardrail Systems</h4>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal" data-category="highway" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1590486803833-1c5dc8ce2ac3?q=80&w=600&auto=format&fit=crop" alt="Roadwork protection systems">
+                        <div class="gallery-overlay">
+                            <h4>Roadwork Protection</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enquiry Section -->
+        <section class="section-padding enquiry" id="enquiry">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Planning an Infrastructure or Safety Barrier Project?</h2>
+                    <p>Tell us about your project requirements and get in touch with the Safety Barriers WA team.</p>
+                </div>
+                <div class="enquiry-wrapper reveal">
+                    <form id="enquiryForm" class="form-grid" novalidate>
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company / Organisation *</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Project Location *</label>
+                            <input type="text" id="location" name="location" placeholder="e.g., Toodyay, WA" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="requirement">Type of Requirement *</label>
+                            <select id="requirement" name="requirement" required>
+                                <option value="" disabled selected>Select a requirement</option>
+                                <option value="Road Safety Barriers">Road Safety Barriers</option>
+                                <option value="Guardrail Solutions">Guardrail Solutions</option>
+                                <option value="Commercial Construction">Commercial Construction</option>
+                                <option value="Barrier Installation">Barrier Installation</option>
+                                <option value="Maintenance or Repairs">Maintenance or Repairs</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="details">Project Details *</label>
+                            <textarea id="details" name="details" placeholder="Please describe your project requirements, timeline, and any specific barrier systems needed." required></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-primary form-submit">Submit Project Enquiry</button>
+                            <div id="formMessage" class="form-message"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section-padding contact" id="contact">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Contact Us</h2>
+                    <p>Reach out to discuss your project requirements or to request a detailed quote.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info reveal">
+                        <h3>Safety Barriers WA<br><span style="font-size: 1rem; font-weight: 400; color: var(--color-steel-blue);">(Yarnell Pty Ltd T/as)</span></h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Lot 1 Julimar Road<br>Toodyay WA 6566<br>Western Australia, Australia</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:0895744448">(08) 9574 4448</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:ray@safetybarrier.com.au">ray@safetybarrier.com.au</a>
+                            </div>
+                        </div>
+
+                        <a href="#enquiry" class="btn btn-primary" style="margin-top: 16px;">Discuss Your Project</a>
+                    </div>
+                    
+                    <div class="map-container reveal">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108303.8998425847!2d116.3833!3d-31.5500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a10e3c0c3c3c3c3%3A0x1234567890abcdef!2sToodyay%20WA%206566%2C%20Australia!5e0!3m2!1sen!2sau!4v1690000000000!5m2!1sen!2sau" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Safety Barriers WA Location Map">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Safety Barriers <span>WA</span></a>
+                    <p>Professional safety barrier and infrastructure solutions designed to support safer roads, worksites and commercial projects across Western Australia. Building Safer Roads. Protecting Every Journey.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#solutions">Guardrail Installation</a></li>
+                        <li><a href="#solutions">Commercial Safety</a></li>
+                        <li><a href="#solutions">Barrier Maintenance</a></li>
+                        <li><a href="#products">Barrier Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Lot 1 Julimar Road, Toodyay WA 6566
+                    </p>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <a href="tel:0895744448" style="color: var(--color-mist-grey);">(08) 9574 4448</a>
+                    </p>
+                    <p>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <a href="mailto:ray@safetybarrier.com.au" style="color: var(--color-mist-grey);">ray@safetybarrier.com.au</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Safety Barriers WA (Yarnell Pty Ltd T/as). All rights reserved.</p>
+                <p>ABN: [Insert ABN Here] | Designed for Western Australian Infrastructure</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <img id="lightboxImage" src="" alt="Enlarged project image">
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <script>
+        // =========================================
+        // NAVIGATION & SCROLL EFFECTS
+        // =========================================
+        const navbar = document.getElementById('navbar');
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        const backToTop = document.getElementById('backToTop');
+
+        // Sticky header background
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Back to top visibility
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Mobile menu toggle
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Back to top functionality
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // =========================================
+        // SCROLL ANIMATIONS (Intersection Observer)
+        // =========================================
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // =========================================
+        // GALLERY FILTERING
+        // =========================================
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.9)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // =========================================
+        // LIGHTBOX FUNCTIONALITY
+        // =========================================
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            // Use a higher resolution version for lightbox if available, otherwise same src
+            const highResSrc = img.src.replace('w=600', 'w=1200');
+            lightboxImage.src = highResSrc;
+            lightboxImage.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+
+        // =========================================
+        // FORM VALIDATION & SUBMISSION
+        // =========================================
+        const enquiryForm = document.getElementById('enquiryForm');
+        const formMessage = document.getElementById('formMessage');
+
+        enquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Basic validation
+            const formData = new FormData(enquiryForm);
+            let isValid = true;
+            let errorMessage = '';
+
+            // Check required fields
+            for (let [key, value] of formData.entries()) {
+                if (!value.trim()) {
+                    isValid = false;
+                    errorMessage = 'Please fill in all required fields.';
+                    break;
+                }
+            }
+
+            // Email validation regex
+            const email = formData.get('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (isValid && !emailRegex.test(email)) {
+                isValid = false;
+                errorMessage = 'Please enter a valid email address.';
+            }
+
+            if (isValid) {
+                // Simulate successful submission
+                formMessage.className = 'form-message success';
+                formMessage.textContent = 'Thank you for your enquiry. The Safety Barriers WA team will review your requirements and contact you shortly.';
+                enquiryForm.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            } else {
+                formMessage.className = 'form-message error';
+                formMessage.textContent = errorMessage || 'There was an error submitting your form. Please check your details and try again.';
+            }
+            
+            formMessage.style.display = 'block';
+        });
+
+        // =========================================
+        // SMOOTH SCROLL FOR ANCHOR LINKS
+        // =========================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
