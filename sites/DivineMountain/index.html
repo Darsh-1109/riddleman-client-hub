@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Divine Mountain Tours and Travels (DMTT) - Mumbai-based travel agency established in 2014. Specializing in Kailash Mansarovar Yatra, Amarnath Yatra, Char Dham, Himalayan treks, and personalised domestic and international holidays.">
+    <meta name="keywords" content="Divine Mountain Tours and Travels, Kailash Mansarovar Yatra Mumbai, Amarnath Yatra, Char Dham Yatra, Himalayan Trekking Tours, Personalised Travel Services Mumbai">
+    <meta property="og:title" content="Divine Mountain Tours and Travels | Rediscover. Reconnect. Explore Beyond.">
+    <meta property="og:description" content="From sacred Himalayan pilgrimages to unforgettable international escapes, discover thoughtfully planned journeys with Divine Mountain Tours and Travels.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dmtt.in/">
+    
+    <title>Divine Mountain Tours and Travels | Premium Pilgrimage & Holiday Experiences</title>
+
+    <!-- Premium Editorial Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           1. CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --cloud-white: #FAFAF7;
+            --warm-ivory: #F4F0E8;
+            --mist-grey: #E7E9E6;
+            --himalayan-sage: #9AAE9B;
+            --mountain-teal: #527D79;
+            --deep-forest: #304B43;
+            --muted-gold: #C6A66B;
+            --earth-brown: #77634E;
+            --deep-charcoal: #292E2D;
+
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Manrope', sans-serif;
+
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --shadow-soft: 0 10px 40px rgba(41, 46, 45, 0.08);
+            --shadow-hover: 0 20px 50px rgba(41, 46, 45, 0.15);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--cloud-white);
+            color: var(--deep-charcoal);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--deep-forest);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* =========================================
+           2. UTILITY CLASSES & ANIMATIONS
+           ========================================= */
+        .container {
+            width: 90%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        .bg-ivory { background-color: var(--warm-ivory); }
+        .bg-white { background-color: var(--cloud-white); }
+        .bg-forest { background-color: var(--deep-forest); color: var(--cloud-white); }
+        .bg-forest h2, .bg-forest h3, .bg-forest p { color: var(--cloud-white); }
+
+        .text-center { text-align: center; }
+        .text-gold { color: var(--muted-gold); }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--mountain-teal);
+            color: var(--cloud-white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--deep-forest);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border-color: var(--cloud-white);
+            color: var(--cloud-white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--cloud-white);
+            color: var(--deep-forest);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--deep-forest);
+            color: var(--deep-forest);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--deep-forest);
+            color: var(--cloud-white);
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           3. NAVIGATION
+           ========================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(250, 250, 247, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--mist-grey);
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            box-shadow: var(--shadow-soft);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--deep-forest);
+            letter-spacing: 0.05em;
+        }
+
+        .logo span {
+            color: var(--muted-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--deep-charcoal);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--muted-gold);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--deep-forest);
+            cursor: pointer;
+        }
+
+        /* =========================================
+           4. HERO SECTION
+           ========================================= */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--cloud-white);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(48, 75, 67, 0.4), rgba(41, 46, 45, 0.6)), url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            transform: scale(1.05);
+            animation: slowZoom 20s infinite alternate;
+        }
+
+        @keyframes slowZoom {
+            from { transform: scale(1.05); }
+            to { transform: scale(1.15); }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 0 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: var(--cloud-white);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* =========================================
+           5. ABOUT SECTION
+           ========================================= */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: var(--earth-brown);
+            font-size: 1.1rem;
+        }
+
+        .highlight-box {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--mist-grey);
+        }
+
+        .highlight-item h4 {
+            font-size: 2rem;
+            color: var(--muted-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-item p {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--deep-forest);
+            margin: 0;
+        }
+
+        /* =========================================
+           6. SIGNATURE EXPERIENCES (Grid)
+           ========================================= */
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--earth-brown);
+            font-size: 1.1rem;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 400px;
+            gap: 1.5rem;
+        }
+
+        .exp-card {
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .exp-card.large {
+            grid-column: span 2;
+        }
+
+        .exp-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .exp-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .exp-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(41, 46, 45, 0.9), transparent);
+            color: var(--cloud-white);
+            transition: var(--transition);
+        }
+
+        .exp-overlay h3 {
+            color: var(--cloud-white);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .exp-overlay p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .exp-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted-gold);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* =========================================
+           7. FEATURED: KAILASH MANSAROVAR
+           ========================================= */
+        .kailash-feature {
+            background-color: var(--deep-forest);
+            color: var(--cloud-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kailash-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .kailash-content h2 {
+            color: var(--cloud-white);
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .kailash-content h2 span {
+            color: var(--muted-gold);
+            font-style: italic;
+        }
+
+        .kailash-content p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .kailash-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .detail-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-left: 3px solid var(--muted-gold);
+        }
+
+        .detail-item h4 {
+            color: var(--muted-gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            font-family: var(--font-body);
+        }
+
+        .detail-item p {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .disclaimer {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 1.5rem;
+            font-style: italic;
+        }
+
+        .kailash-image {
+            position: relative;
+            height: 600px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .kailash-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* =========================================
+           8. PILGRIMAGE & DESTINATIONS
+           ========================================= */
+        .destination-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .dest-card {
+            background: var(--cloud-white);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+
+        .dest-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .dest-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .dest-content {
+            padding: 2rem;
+        }
+
+        .dest-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .dest-content p {
+            color: var(--earth-brown);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* =========================================
+           9. WHY TRAVEL WITH US
+           ========================================= */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .feature-item {
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--muted-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-item p {
+            color: var(--earth-brown);
+            font-size: 0.95rem;
+        }
+
+        /* =========================================
+           10. TESTIMONIALS
+           ========================================= */
+        .testimonial-card {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 3rem;
+            background: var(--cloud-white);
+            border-radius: 4px;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-family: var(--font-heading);
+            font-size: 6rem;
+            color: var(--muted-gold);
+            opacity: 0.3;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--deep-forest);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--deep-charcoal);
+        }
+
+        .testimonial-role {
+            font-size: 0.9rem;
+            color: var(--earth-brown);
+        }
+
+        /* =========================================
+           11. ENQUIRY FORM
+           ========================================= */
+        .enquiry-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            background: var(--cloud-white);
+            padding: 4rem;
+            border-radius: 4px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .enquiry-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .enquiry-info p {
+            color: var(--earth-brown);
+            margin-bottom: 2rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-detail strong {
+            display: block;
+            color: var(--deep-forest);
+            margin-bottom: 0.25rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--deep-forest);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 1rem;
+            border: 1px solid var(--mist-grey);
+            border-radius: 2px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            background: var(--cloud-white);
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--mountain-teal);
+            box-shadow: 0 0 0 3px rgba(82, 125, 121, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* =========================================
+           12. FOOTER
+           ========================================= */
+        footer {
+            background-color: var(--deep-charcoal);
+            color: var(--mist-grey);
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand .logo {
+            color: var(--cloud-white);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .footer-brand p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            opacity: 0.8;
+        }
+
+        .footer-col h4 {
+            color: var(--muted-gold);
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col ul li a {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        .footer-col ul li a:hover {
+            opacity: 1;
+            color: var(--muted-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+
+        /* =========================================
+           13. RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 1024px) {
+            .experience-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .exp-card.large {
+                grid-column: span 2;
+            }
+            .kailash-grid, .about-grid, .enquiry-wrapper {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .kailash-image {
+                height: 400px;
+                order: -1;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--cloud-white);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                border-bottom: 1px solid var(--mist-grey);
+                transform: translateY(-150%);
+                transition: var(--transition);
+                box-shadow: var(--shadow-soft);
+            }
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+            .exp-card.large {
+                grid-column: span 1;
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            .highlight-box {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">DIVINE MOUNTAIN <span>TOURS</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation">☰</button>
+            <nav class="nav-links" id="navLinks">
+                <a href="#about">About Us</a>
+                <a href="#pilgrimage">Pilgrimage</a>
+                <a href="#explore-india">Domestic Tours</a>
+                <a href="#international">International</a>
+                <a href="#treks-safari">Treks & Safaris</a>
+                <a href="#personalised">Personalised Travel</a>
+                <a href="#contact">Contact</a>
+                <a href="#enquiry" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.85rem;">Plan Your Journey</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-content fade-in">
+                <h1>Discover the World.<br>Rediscover Yourself.</h1>
+                <p>From spiritually enriching pilgrimages to breathtaking mountain escapes and international holidays, let us help you create journeys worth remembering.</p>
+                <div class="hero-buttons">
+                    <a href="#signature" class="btn btn-primary">Explore Destinations</a>
+                    <a href="#enquiry" class="btn btn-secondary">Plan Your Journey</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section-padding bg-white" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image fade-in">
+                        <img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=2070&auto=format&fit=crop" alt="Scenic mountain landscape representing Divine Mountain Tours" loading="lazy">
+                    </div>
+                    <div class="about-content fade-in">
+                        <h2>Great Journeys.<br>Fascinating Places.</h2>
+                        <p>Founded in 2014, Divine Mountain Tours and Travels is based in Mumbai and helps travellers discover meaningful journeys across India and international destinations.</p>
+                        <p>Whether you are planning a spiritual pilgrimage, a family holiday, an adventure through the Himalayas, or a customised international trip, our focus is on understanding your preferences and helping you plan your journey with thoughtful care and personal assistance.</p>
+                        
+                        <div class="highlight-box">
+                            <div class="highlight-item">
+                                <h4>2014</h4>
+                                <p>Year Established</p>
+                            </div>
+                            <div class="highlight-item">
+                                <h4>Mumbai</h4>
+                                <p>Head Office</p>
+                            </div>
+                            <div class="highlight-item">
+                                <h4>100%</h4>
+                                <p>Personalised Planning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Experiences -->
+        <section class="section-padding bg-ivory" id="signature">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Find the Journey That Speaks to You</h2>
+                    <p>Curated travel experiences designed for meaning, adventure, and discovery.</p>
+                </div>
+                
+                <div class="experience-grid">
+                    <div class="exp-card large fade-in">
+                        <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=2070&auto=format&fit=crop" alt="Himalayan Pilgrimage" loading="lazy">
+                        <div class="exp-overlay">
+                            <h3>Pilgrimage Journeys</h3>
+                            <p>Kailash Mansarovar, Amarnath, and Char Dham Yatra.</p>
+                            <span class="exp-link">Explore Pilgrimage Tours →</span>
+                        </div>
+                    </div>
+                    <div class="exp-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=2076&auto=format&fit=crop" alt="Domestic Holidays India" loading="lazy">
+                        <div class="exp-overlay">
+                            <h3>Domestic Holidays</h3>
+                            <p>North & South India heritage and nature.</p>
+                            <span class="exp-link">Explore India →</span>
+                        </div>
+                    </div>
+                    <div class="exp-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=2070&auto=format&fit=crop" alt="Himalayan Treks" loading="lazy">
+                        <div class="exp-overlay">
+                            <h3>Himalayan Treks</h3>
+                            <p>Scenic mountain trails and passes.</p>
+                            <span class="exp-link">Explore Treks →</span>
+                        </div>
+                    </div>
+                    <div class="exp-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=2068&auto=format&fit=crop" alt="Wildlife Safari" loading="lazy">
+                        <div class="exp-overlay">
+                            <h3>Wildlife & Safari</h3>
+                            <p>Immersive nature and forest exploration.</p>
+                            <span class="exp-link">Explore Safaris →</span>
+                        </div>
+                    </div>
+                    <div class="exp-card large fade-in">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop" alt="International Travel" loading="lazy">
+                        <div class="exp-overlay">
+                            <h3>International Holidays</h3>
+                            <p>New Zealand, Bali, Singapore, Sri Lanka, Dubai, Nepal, Thailand.</p>
+                            <span class="exp-link">Explore International →</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured: Kailash Mansarovar -->
+        <section class="section-padding kailash-feature" id="kailash">
+            <div class="container">
+                <div class="kailash-grid">
+                    <div class="kailash-content fade-in">
+                        <h2>A Sacred Journey <span>Beyond Ordinary Travel.</span></h2>
+                        <p>Discover the spiritual significance and extraordinary landscapes of the Kailash Mansarovar region through a thoughtfully planned pilgrimage experience. We handle the complexities of permits, logistics, and acclimatisation, allowing you to focus on the spiritual essence of the journey.</p>
+                        
+                        <div class="kailash-details">
+                            <div class="detail-item">
+                                <h4>Journey Highlights</h4>
+                                <p>Mount Kailash Parikrama, Lake Mansarovar sacred dip, ancient monasteries.</p>
+                            </div>
+                            <div class="detail-item">
+                                <h4>Planning Support</h4>
+                                <p>Assistance with permits, travel requirements, and itinerary customisation.</p>
+                            </div>
+                        </div>
+
+                        <a href="#enquiry" class="btn btn-primary" style="background-color: var(--muted-gold); color: var(--deep-charcoal);">Enquire About Kailash Yatra</a>
+                        <p class="disclaimer">* Specific itineraries, departure dates, pricing, and medical requirements are subject to current regulations and will be provided upon direct enquiry.</p>
+                    </div>
+                    <div class="kailash-image fade-in">
+                        <img src="https://images.unsplash.com/photo-1572099606223-6e29045d7de3?q=80&w=2070&auto=format&fit=crop" alt="Mount Kailash and Himalayan landscape" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pilgrimage Collection -->
+        <section class="section-padding bg-white" id="pilgrimage">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Sacred Pilgrimage Collections</h2>
+                    <p>Spiritually enriching travel experiences curated with respect and meticulous planning.</p>
+                </div>
+                <div class="destination-grid">
+                    <article class="dest-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=2070&auto=format&fit=crop" alt="Kailash Mansarovar" loading="lazy">
+                        <div class="dest-content">
+                            <h3>Kailash Mansarovar Yatra</h3>
+                            <p>The ultimate spiritual expedition to the abode of Lord Shiva. Comprehensive logistical and spiritual support for this life-changing journey.</p>
+                            <a href="#enquiry" class="exp-link" style="color: var(--mountain-teal);">Request Itinerary Details →</a>
+                        </div>
+                    </article>
+                    <article class="dest-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1626014903700-1c5c0663471e?q=80&w=2070&auto=format&fit=crop" alt="Amarnath Yatra" loading="lazy">
+                        <div class="dest-content">
+                            <h3>Amarnath Yatra</h3>
+                            <p>A revered Hindu pilgrimage to the holy cave shrine. We assist with registration, travel arrangements, and comfortable stay planning.</p>
+                            <a href="#enquiry" class="exp-link" style="color: var(--mountain-teal);">Request Itinerary Details →</a>
+                        </div>
+                    </article>
+                    <article class="dest-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?q=80&w=2070&auto=format&fit=crop" alt="Char Dham Yatra" loading="lazy">
+                        <div class="dest-content">
+                            <h3>Char Dham Yatra</h3>
+                            <p>Journey through the sacred Himalayan temples of Yamunotri, Gangotri, Kedarnath, and Badrinath with expertly planned routes.</p>
+                            <a href="#enquiry" class="exp-link" style="color: var(--mountain-teal);">Request Itinerary Details →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore India & International (Combined for brevity in single file, scalable to separate pages) -->
+        <section class="section-padding bg-ivory" id="explore-india">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>India, Through a Thousand Experiences</h2>
+                    <p>From the snow-capped peaks of the North to the serene backwaters and temples of the South.</p>
+                </div>
+                <div class="destination-grid">
+                    <div class="dest-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=2070&auto=format&fit=crop" alt="North India Himalayas" loading="lazy">
+                        <div class="dest-content">
+                            <h3>North India</h3>
+                            <p>Himalayan valleys, heritage architecture, and cultural heartlands.</p>
+                        </div>
+                    </div>
+                    <div class="dest-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=2070&auto=format&fit=crop" alt="South India Temples" loading="lazy">
+                        <div class="dest-content">
+                            <h3>South India</h3>
+                            <p>Ancient temples, scenic coastlines, and tranquil nature retreats.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white" id="international">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>International Destinations</h2>
+                    <p>Thoughtfully planned escapes to the world's most captivating locations.</p>
+                </div>
+                <div class="destination-grid">
+                    <!-- Using a compact list for international to avoid excessive length, representing the required destinations -->
+                    <div class="dest-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?q=80&w=2070&auto=format&fit=crop" alt="New Zealand" loading="lazy">
+                        <div class="dest-content"><h3>New Zealand</h3></div>
+                    </div>
+                    <div class="dest-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=2038&auto=format&fit=crop" alt="Bali" loading="lazy">
+                        <div class="dest-content"><h3>Bali</h3></div>
+                    </div>
+                    <div class="dest-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?q=80&w=2052&auto=format&fit=crop" alt="Singapore" loading="lazy">
+                        <div class="dest-content"><h3>Singapore</h3></div>
+                    </div>
+                    <div class="dest-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1586861244438-1d60d2b7a7f3?q=80&w=2070&auto=format&fit=crop" alt="Sri Lanka" loading="lazy">
+                        <div class="dest-content"><h3>Sri Lanka</h3></div>
+                    </div>
+                    <div class="dest-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop" alt="Dubai" loading="lazy">
+                        <div class="dest-content"><h3>Dubai</h3></div>
+                    </div>
+                    <div class="dest-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=2070&auto=format&fit=crop" alt="Nepal" loading="lazy">
+                        <div class="dest-content"><h3>Nepal</h3></div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 3rem;">
+                    <p style="color: var(--earth-brown); margin-bottom: 1.5rem;">* Custom itineraries and pricing for international destinations are provided upon request based on current availability.</p>
+                    <a href="#enquiry" class="btn btn-outline">Enquire About International Travel</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personalised Travel -->
+        <section class="section-padding bg-ivory" id="personalised">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content fade-in">
+                        <h2>Your Journey. Your Preferences. Your Way.</h2>
+                        <p>Every traveller has a different idea of the perfect journey. Share your interests, preferred destinations, and travel requirements, and let Divine Mountain Tours and Travels help you plan a trip entirely around your needs.</p>
+                        <ul style="margin: 2rem 0; color: var(--deep-forest);">
+                            <li style="margin-bottom: 1rem;">✓ Bespoke destination selection & customised itineraries</li>
+                            <li style="margin-bottom: 1rem;">✓ Domestic and international travel planning</li>
+                            <li style="margin-bottom: 1rem;">✓ Accommodation and travel arrangement assistance</li>
+                            <li style="margin-bottom: 1rem;">✓ Dedicated personalised trip support</li>
+                        </ul>
+                        <a href="#enquiry" class="btn btn-primary">Start Planning Your Trip</a>
+                    </div>
+                    <div class="about-image fade-in">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021&auto=format&fit=crop" alt="Personalised travel planning" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Travel With Us -->
+        <section class="section-padding bg-white" id="why-us">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Why Travel With Divine Mountain?</h2>
+                </div>
+                <div class="features-grid fade-in">
+                    <div class="feature-item">
+                        <div class="feature-icon">✦</div>
+                        <h3>Established Expertise</h3>
+                        <p>Trusted travel planning since 2014, with deep knowledge of Himalayan and pilgrimage routes.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">◈</div>
+                        <h3>Personalised Planning</h3>
+                        <p>We listen first. Every itinerary is tailored to your specific preferences, pace, and requirements.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">◎</div>
+                        <h3>End-to-End Assistance</h3>
+                        <p>From initial enquiry and permit assistance to on-ground support, we are with you at every step.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✧</div>
+                        <h3>Diverse Offerings</h3>
+                        <p>Seamlessly bridging sacred spiritual journeys, adventurous treks, and relaxing international holidays.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section-padding bg-ivory" id="testimonials">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Travel Stories</h2>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">I started by searching for tickets to Nepal and called a few of the best travel agents. But they were just not able to answer my queries. A few of them were even too busy to listen to their customers. Then I came across DMTT and gave a call. In my very first call, I was impressed by the way I was treated. Daksha answered all my questions politely and offered to help me anytime. Good customer service is all about sending customers happy and then bringing them back! Hats off to your team.</p>
+                    <div class="testimonial-author">Arun Sable</div>
+                    <div class="testimonial-role">Traveller to Nepal</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enquiry & Contact Section -->
+        <section class="section-padding bg-white" id="enquiry">
+            <div class="container">
+                <div class="enquiry-wrapper fade-in">
+                    <div class="enquiry-info" id="contact">
+                        <h2>Where Would You Like to Go Next?</h2>
+                        <p>Tell us a little about your travel plans. Whether it is a pilgrimage, a mountain adventure, or an international holiday, let's start planning your next journey.</p>
+                        
+                        <div class="contact-detail">
+                            <div>
+                                <strong>Head Office</strong>
+                                <p>38-A Laxmi Bhuvan, Opposite Thakkar Shopping Centre,<br>SV Road, Datta Park, Borivali West,<br>Mumbai, Maharashtra 400092, India.</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div>
+                                <strong>Contact</strong>
+                                <p>
+                                    <a href="tel:+919819513060" style="color: var(--mountain-teal); font-weight: 600;">+91 98195 13060</a><br>
+                                    <a href="mailto:info@dmtt.in" style="color: var(--mountain-teal);">info@dmtt.in</a><br>
+                                    <a href="mailto:dakshadmtt@gmail.com" style="color: var(--mountain-teal);">dakshadmtt@gmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div>
+                                <strong>Quick Enquiry</strong>
+                                <a href="https://wa.me/919819513060" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="margin-top: 0.5rem; background-color: #25D366; border-color: #25D366;">Chat on WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="enquiry-form" id="travelEnquiryForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Preferred Destination</label>
+                                <input type="text" id="destination" name="destination" placeholder="e.g., Kailash, Bali, North India">
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Travel Category *</label>
+                                <select id="category" name="category" required>
+                                    <option value="" disabled selected>Select a category</option>
+                                    <option value="Kailash Mansarovar Yatra">Kailash Mansarovar Yatra</option>
+                                    <option value="Amarnath Yatra">Amarnath Yatra</option>
+                                    <option value="Char Dham Yatra">Char Dham Yatra</option>
+                                    <option value="Domestic Holidays">Domestic Holidays</option>
+                                    <option value="International Holidays">International Holidays</option>
+                                    <option value="Treks">Treks</option>
+                                    <option value="Safari">Safari</option>
+                                    <option value="Personalised Travel">Personalised Travel</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Tentative Travel Date</label>
+                                <input type="date" id="date" name="date">
+                            </div>
+                            <div class="form-group">
+                                <label for="travellers">Number of Travellers</label>
+                                <input type="number" id="travellers" name="travellers" min="1" placeholder="1">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="requirements">Additional Requirements</label>
+                                <textarea id="requirements" name="requirements" placeholder="Tell us about any specific preferences, dietary needs, or questions..."></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <button type="submit" class="btn btn-primary" style="width: 100%; border: none;">Submit Travel Enquiry</button>
+                                <p style="font-size: 0.8rem; color: var(--earth-brown); margin-top: 1rem; text-align: center;">* This is a demonstration form. In production, this will connect to a secure backend or form service (e.g., Formspree, custom PHP).</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">DIVINE MOUNTAIN <span>TOURS</span></a>
+                    <p>Rediscover. Reconnect. Explore Beyond.<br>Thoughtfully planned journeys from sacred Himalayan pilgrimages to unforgettable international escapes, based in Mumbai since 2014.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#pilgrimage">Pilgrimage Tours</a></li>
+                        <li><a href="#explore-india">Domestic Travel</a></li>
+                        <li><a href="#international">International Destinations</a></li>
+                        <li><a href="#treks-safari">Treks & Safaris</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#personalised">Personalised Travel</a></li>
+                        <li><a href="#kailash">Kailash Mansarovar</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>38-A Laxmi Bhuvan, Opp. Thakkar Shopping Centre, SV Rd, Borivali West, Mumbai 400092</li>
+                        <li><a href="tel:+919819513060">+91 98195 13060</a></li>
+                        <li><a href="mailto:info@dmtt.in">info@dmtt.in</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Divine Mountain Tours and Travels. All rights reserved.</p>
+                <p>Designed with thoughtful planning.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919819513060" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Sticky Navigation & Scroll Effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // 2. Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileMenuBtn.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            });
+
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.textContent = '☰';
+                });
+            });
+
+            // 3. Scroll Animations (Intersection Observer)
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // 4. Form Handling (Demonstration)
+            const form = document.getElementById('travelEnquiryForm');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Gather form data (in production, send to backend/API)
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData);
+                
+                // Simulate submission
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+
+                setTimeout(() => {
+                    alert(`Thank you, ${data.fullName}! Your enquiry for ${data.category} has been received. Our team will contact you shortly at ${data.phone} or ${data.email}.`);
+                    form.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 1500);
+            });
+
+            // 5. Smooth Scroll for Anchor Links (Polyfill-like behavior for older browsers)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerOffset = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
