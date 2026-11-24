@@ -1,0 +1,1444 @@
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium residential construction, home extensions, loft conversions, and refurbishments in London and Surrey. Established in 2005, delivering quality workmanship and thoughtful design.">
+    <meta name="keywords" content="Ashdene Construction, Construction Company London, Home Extensions London, Loft Conversions London, Home Refurbishments London, Kitchen Renovations London, Bathroom Renovations London, Home Extensions Surrey, Building Contractors Surrey">
+    <meta name="author" content="Ashdene Construction Ltd">
+    <meta name="robots" content="index, follow">
+    
+    <title>Ashdene Construction | Home Extensions & Renovations in London and Surrey</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --color-bg: #F9F8F4;
+            --color-bg-alt: #F0EEE9;
+            --color-text: #4A4A48;
+            --color-heading: #2C2C2C;
+            --color-accent: #6B705C;
+            --color-bronze: #B08D55;
+            --color-bronze-hover: #967845;
+            --color-white: #FFFFFF;
+            --color-border: #DQDQDQ;
+            
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Inter', sans-serif;
+            
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+            
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            font-weight: 300;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            color: var(--color-heading);
+            line-height: 1.2;
+            font-weight: 400;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: var(--spacing-md); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: var(--spacing-sm); }
+        
+        p { margin-bottom: var(--spacing-sm); max-width: 65ch; }
+        
+        a { text-decoration: none; color: inherit; transition: var(--transition-smooth); }
+        
+        img { max-width: 100%; height: auto; display: block; object-fit: cover; }
+
+        /* =========================================
+           UTILITIES & ANIMATIONS
+           ========================================= */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-sm);
+        }
+
+        .section-padding {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .text-center { text-align: center; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-primary {
+            background-color: var(--color-bronze);
+            color: var(--color-white);
+            border-color: var(--color-bronze);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-bronze-hover);
+            border-color: var(--color-bronze-hover);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-heading);
+            border-color: var(--color-heading);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-heading);
+            color: var(--color-white);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           HEADER & NAVIGATION
+           ========================================= */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 0;
+            transition: var(--transition-smooth);
+            background-color: transparent;
+        }
+
+        header.scrolled {
+            background-color: rgba(249, 248, 244, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-heading);
+            letter-spacing: 0.02em;
+        }
+
+        .logo span {
+            color: var(--color-bronze);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--color-bronze);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--color-heading);
+            margin: 5px 0;
+            transition: var(--transition-smooth);
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: var(--color-bg-alt);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(249, 248, 244, 0.9) 0%, rgba(249, 248, 244, 0.4) 50%, rgba(249, 248, 244, 0.1) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            padding-top: var(--spacing-xl);
+        }
+
+        .hero-content h1 {
+            margin-bottom: var(--spacing-md);
+            font-style: italic;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-text);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+
+        /* =========================================
+           INTRODUCTION SECTION
+           ========================================= */
+        .intro {
+            background-color: var(--color-bg);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .intro-image {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 100%;
+            transition: transform 1.2s ease;
+        }
+
+        .intro-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .intro-text h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .intro-features {
+            list-style: none;
+            margin-top: var(--spacing-md);
+        }
+
+        .intro-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .intro-features li::before {
+            content: '—';
+            color: var(--color-bronze);
+            font-weight: 600;
+        }
+
+        /* =========================================
+           SERVICES SECTION
+           ========================================= */
+        .services {
+            background-color: var(--color-bg-alt);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .service-card {
+            background-color: var(--color-bg);
+            padding: 0;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .service-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: var(--spacing-md);
+        }
+
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .service-content p {
+            font-size: 0.95rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .service-link {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-bronze);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-link:hover {
+            color: var(--color-bronze-hover);
+            gap: 0.8rem;
+        }
+
+        /* =========================================
+           PROJECTS SECTION
+           ========================================= */
+        .projects {
+            background-color: var(--color-bg);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .project-card:nth-child(1) { grid-column: span 7; }
+        .project-card:nth-child(2) { grid-column: span 5; }
+        .project-card:nth-child(3) { grid-column: span 5; }
+        .project-card:nth-child(4) { grid-column: span 7; }
+
+        .project-image {
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: var(--spacing-md);
+            background: linear-gradient(to top, rgba(44, 44, 44, 0.9), transparent);
+            color: var(--color-white);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .project-card:hover .project-info {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .project-info h4 {
+            color: var(--color-white);
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .project-info p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.8);
+            margin: 0;
+        }
+
+        /* =========================================
+           WHY CHOOSE US
+           ========================================= */
+        .why-us {
+            background-color: var(--color-heading);
+            color: var(--color-bg);
+        }
+
+        .why-us h2 {
+            color: var(--color-bg);
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .why-us-item {
+            padding: var(--spacing-md);
+            border-left: 1px solid var(--color-bronze);
+        }
+
+        .why-us-item h4 {
+            color: var(--color-bronze);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .why-us-item p {
+            color: rgba(249, 248, 244, 0.8);
+            font-size: 0.95rem;
+        }
+
+        /* =========================================
+           PROCESS SECTION
+           ========================================= */
+        .process {
+            background-color: var(--color-bg-alt);
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: var(--spacing-lg);
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            left: 10%;
+            width: 80%;
+            height: 1px;
+            background-color: var(--color-bronze);
+            opacity: 0.3;
+        }
+
+        .process-step {
+            flex: 1;
+            text-align: center;
+            padding: 0 var(--spacing-sm);
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-number {
+            width: 4rem;
+            height: 4rem;
+            background-color: var(--color-bg);
+            border: 1px solid var(--color-bronze);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-md);
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--color-bronze);
+        }
+
+        .process-step h4 {
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            margin: 0 auto;
+        }
+
+        /* =========================================
+           ABOUT SECTION
+           ========================================= */
+        .about {
+            background-color: var(--color-bg);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .about-text h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .about-stats {
+            display: flex;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .stat-item h3 {
+            color: var(--color-bronze);
+            font-size: 2.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+        }
+
+        /* =========================================
+           TESTIMONIALS / REPUTATION
+           ========================================= */
+        .reputation {
+            background-color: var(--color-bg-alt);
+            text-align: center;
+        }
+
+        .reputation-block {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-lg);
+            background-color: var(--color-bg);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .reputation-block blockquote {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--color-heading);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.4;
+        }
+
+        .reputation-block cite {
+            font-style: normal;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-bronze);
+        }
+
+        /* =========================================
+           CONTACT SECTION
+           ========================================= */
+        .contact {
+            background-color: var(--color-bg);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: var(--spacing-lg);
+        }
+
+        .contact-info h3 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .contact-detail {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .contact-detail h4 {
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-bronze);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-detail p, .contact-detail a {
+            font-size: 1.1rem;
+            color: var(--color-heading);
+        }
+
+        .contact-detail a:hover {
+            color: var(--color-bronze);
+        }
+
+        .contact-form {
+            background-color: var(--color-bg-alt);
+            padding: var(--spacing-lg);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            color: var(--color-heading);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid rgba(0,0,0,0.1);
+            background-color: var(--color-bg);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            color: var(--color-heading);
+            transition: var(--transition-smooth);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-bronze);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-top: 0.5rem;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: none;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        .form-success {
+            display: none;
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            padding: var(--spacing-md);
+            text-align: center;
+            margin-top: var(--spacing-md);
+        }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        footer {
+            background-color: var(--color-heading);
+            color: rgba(249, 248, 244, 0.7);
+            padding: var(--spacing-xl) 0 var(--spacing-md);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .footer-brand .logo {
+            color: var(--color-bg);
+            margin-bottom: var(--spacing-md);
+            display: inline-block;
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-links h4 {
+            color: var(--color-bg);
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-bronze);
+        }
+
+        .footer-contact p {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-contact a {
+            color: var(--color-bronze);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(249, 248, 244, 0.1);
+            padding-top: var(--spacing-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .project-card:nth-child(1),
+            .project-card:nth-child(2),
+            .project-card:nth-child(3),
+            .project-card:nth-child(4) {
+                grid-column: span 1;
+            }
+
+            .why-us-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1001;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 400px;
+                height: 100vh;
+                background-color: var(--color-bg);
+                flex-direction: column;
+                padding: 6rem 2rem 2rem;
+                gap: 1.5rem;
+                transition: var(--transition-smooth);
+                box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hero-content {
+                padding: 0 var(--spacing-md);
+            }
+
+            .intro-grid,
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-image {
+                height: 400px;
+                order: -1;
+            }
+
+            .process-steps {
+                flex-direction: column;
+                gap: var(--spacing-lg);
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .why-us-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Ashdene <span>Construction</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000" alt="Beautifully completed residential extension in London" class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <h1>Thoughtfully Built.<br>Beautifully Finished.</h1>
+                    <p>Quality residential construction and home improvements across London and Surrey, bringing your vision to life through considered design and skilled craftsmanship.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Discuss Your Project</a>
+                        <a href="#projects" class="btn btn-secondary">Explore Our Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduction" class="section-padding intro">
+            <div class="container">
+                <div class="intro-grid">
+                    <div class="intro-text fade-in">
+                        <h2>Creating Better Spaces to Live In.</h2>
+                        <p>Ashdene Construction is a residential construction company focused on transforming and improving homes. From a new space to a fresh start, we bring experienced builders and skilled trades together to work with care on your home.</p>
+                        <p>We specialise in residential construction expertise, home improvement, and renovation work, with an unwavering attention to detail and quality workmanship across London and Surrey.</p>
+                        <ul class="intro-features">
+                            <li>Residential construction expertise</li>
+                            <li>Home improvement and renovation work</li>
+                            <li>Meticulous attention to detail</li>
+                            <li>Quality workmanship and tidy sites</li>
+                            <li>Serving London and Surrey</li>
+                        </ul>
+                    </div>
+                    <div class="intro-image fade-in">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1000" alt="Contemporary interior renovation showcasing quality craftsmanship">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section-padding services">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>A Better Way to Make Room for Life</h2>
+                    <p class="mx-auto">From a new space to a fresh start. Experienced builders and skilled trades, working together on your home.</p>
+                </div>
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <article class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=800" alt="Modern home extension with garden connection">
+                        </div>
+                        <div class="service-content">
+                            <h3>Extensions</h3>
+                            <p>Open up your ground floor, connect your home to the garden and create space that works for everyday living. We handle design considerations and the full construction process.</p>
+                            <a href="#contact" class="service-link">Discuss an extension <span>→</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Service 2 -->
+                    <article class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=800" alt="Bright and spacious loft conversion bedroom">
+                        </div>
+                        <div class="service-content">
+                            <h3>Loft Conversions</h3>
+                            <p>Turn unused roof space into a bedroom, a workspace or somewhere to unwind, with a finish that feels part of your home. Maximising space utilisation with thoughtful design.</p>
+                            <a href="#contact" class="service-link">Discuss a loft conversion <span>→</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Service 3 -->
+                    <article class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&q=80&w=800" alt="Luxury refurbished kitchen with premium finishes">
+                        </div>
+                        <div class="service-content">
+                            <h3>Refurbishments</h3>
+                            <p>Thoughtful improvements, from kitchens and bathrooms to a complete home renovation. Practical solutions, carefully finished to elevate your entire property.</p>
+                            <a href="#contact" class="service-link">Discuss a refurbishment <span>→</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="section-padding projects">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>Selected Projects</h2>
+                    <p class="mx-auto">Photographs from our existing project collection. The details make the difference.</p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&q=80&w=1000" alt="Residential extension project in Surrey">
+                        </div>
+                        <div class="project-info">
+                            <h4>Residential Extension</h4>
+                            <p>Surrey · Extensions</p>
+                        </div>
+                    </article>
+                    <article class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1000" alt="Loft conversion project in London">
+                        </div>
+                        <div class="project-info">
+                            <h4>Loft Conversion</h4>
+                            <p>London · Loft Conversions</p>
+                        </div>
+                    </article>
+                    <article class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=1000" alt="Bathroom renovation with premium detailing">
+                        </div>
+                        <div class="project-info">
+                            <h4>Complete Refurbishment</h4>
+                            <p>London · Refurbishments</p>
+                        </div>
+                    </article>
+                    <article class="project-card fade-in">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?auto=format&fit=crop&q=80&w=1000" alt="Kitchen renovation showcasing crafted details">
+                        </div>
+                        <div class="project-info">
+                            <h4>Kitchen Renovation</h4>
+                            <p>Surrey · Kitchens</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="text-center" style="margin-top: 3rem;">
+                    <p style="font-style: italic; color: var(--color-accent);">Our project gallery is being updated. More recent projects and detailed case studies coming soon.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="section-padding why-us">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>Good Building Starts with Trust</h2>
+                    <p class="mx-auto" style="color: rgba(249, 248, 244, 0.8);">Ashdene Construction has grown through recommendations since 2005. We bring experience, imagination and attention to detail to the homes we work on.</p>
+                </div>
+                <div class="why-us-grid">
+                    <div class="why-us-item fade-in">
+                        <h4>Trust & Honesty</h4>
+                        <p>Transparent communication from the initial enquiry through to the final handover. No hidden surprises.</p>
+                    </div>
+                    <div class="why-us-item fade-in">
+                        <h4>Quality Workmanship</h4>
+                        <p>Skilled tradespeople dedicated to delivering a high standard of finish that stands the test of time.</p>
+                    </div>
+                    <div class="why-us-item fade-in">
+                        <h4>Attention to Detail</h4>
+                        <p>Thoughtful solutions for challenging access, unusual layouts, or complex briefs. We enjoy finding practical ways forward.</p>
+                    </div>
+                    <div class="why-us-item fade-in">
+                        <h4>Care for Your Home</h4>
+                        <p>We maintain a tidy, respected, and carefully managed site throughout the duration of the build.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Process Section -->
+        <section id="process" class="section-padding process">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>From First Idea to Final Detail</h2>
+                    <p class="mx-auto">A clear, collaborative approach to bringing your project to life.</p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step fade-in">
+                        <div class="step-number">01</div>
+                        <h4>Tell Us Your Plans</h4>
+                        <p>Share what you have in mind, where your property is, and any drawings you already have.</p>
+                    </div>
+                    <div class="process-step fade-in">
+                        <div class="step-number">02</div>
+                        <h4>Work Through Details</h4>
+                        <p>We discuss the scope, site conditions, and practicalities so you understand the next steps.</p>
+                    </div>
+                    <div class="process-step fade-in">
+                        <div class="step-number">03</div>
+                        <h4>Bring It to Life</h4>
+                        <p>With the work agreed, our team gets to work, keeping you involved through to the finishing touches.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text fade-in">
+                        <h2>The People Behind the Build</h2>
+                        <p>Established in 2005, Ashdene Construction Ltd has built a reputation for reliability and excellence in residential construction across London and Surrey.</p>
+                        <p>We work closely with you and your design team to turn your plans into a home you can enjoy. Whether it is a simple refurbishment or a complex structural extension, our philosophy remains the same: deliver well-finished spaces with integrity and skill.</p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <h3>2005</h3>
+                                <p>Established</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>100%</h3>
+                                <p>Residential Focus</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>2</h3>
+                                <p>Core Counties</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro-image fade-in">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=1000" alt="Professional construction team reviewing architectural plans">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reputation / Testimonials Section -->
+        <section id="testimonials" class="section-padding reputation">
+            <div class="container">
+                <div class="reputation-block fade-in">
+                    <blockquote>
+                        "Ashdene Construction has grown primarily through client recommendations since 2005. We are proud to share detailed references, case studies, and verified client feedback with prospective clients upon request."
+                    </blockquote>
+                    <cite>— The Ashdene Construction Team</cite>
+                    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--color-text);">
+                        We welcome the opportunity to connect you with past clients who have entrusted us with their home extensions, loft conversions, and refurbishments.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding contact">
+            <div class="container">
+                <div class="text-center fade-in" style="margin-bottom: var(--spacing-lg);">
+                    <h2>Have Something in Mind?</h2>
+                    <p class="mx-auto">Tell us about your home and what you would like to change. Let's start with a conversation.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info fade-in">
+                        <h3>Contact Details</h3>
+                        <div class="contact-detail">
+                            <h4>Phone</h4>
+                            <p><a href="tel:+447525941849">07525 941849</a></p>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>Email</h4>
+                            <p><a href="mailto:office@ashdeneconstruction.co.uk">office@ashdeneconstruction.co.uk</a></p>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/447525941849" target="_blank" rel="noopener noreferrer">Message Jakub on WhatsApp ↗</a></p>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>Service Area</h4>
+                            <p>London and Surrey, United Kingdom</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form fade-in">
+                        <form id="enquiryForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name *</label>
+                                    <input type="text" id="fullName" name="fullName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="postcode">Property Postcode / Location *</label>
+                                    <input type="text" id="postcode" name="postcode" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="projectType">Type of Project *</label>
+                                <select id="projectType" name="projectType" required>
+                                    <option value="" disabled selected>Select a project type</option>
+                                    <option value="extension">Home Extension</option>
+                                    <option value="loft">Loft Conversion</option>
+                                    <option value="refurbishment">Home Refurbishment</option>
+                                    <option value="kitchen">Kitchen Renovation</option>
+                                    <option value="bathroom">Bathroom Renovation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Brief Project Description</label>
+                                <textarea id="description" name="description" rows="4" placeholder="Tell us a little about what you would like to achieve..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Preferred Contact Method</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="contactMethod" value="phone" checked> Phone</label>
+                                    <label><input type="radio" name="contactMethod" value="email"> Email</label>
+                                    <label><input type="radio" name="contactMethod" value="whatsapp"> WhatsApp</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="fileUpload">Optional: Photograph or Document Upload</label>
+                                <input type="file" id="fileUpload" name="fileUpload" accept="image/*,.pdf,.doc,.docx">
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Let's Talk About Your Project</button>
+                        </form>
+                        <div id="formSuccess" class="form-success">
+                            Thank you for your enquiry. We have received your details and will be in touch shortly to discuss your project.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Ashdene <span>Construction</span></a>
+                    <p>Quality residential construction and home improvements across London and Surrey. Established in 2005, bringing your vision to life through considered design and skilled craftsmanship.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Home Extensions</a></li>
+                        <li><a href="#services">Loft Conversions</a></li>
+                        <li><a href="#services">Refurbishments</a></li>
+                        <li><a href="#services">Kitchen Renovations</a></li>
+                        <li><a href="#services">Bathroom Renovations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><strong>Ashdene Construction Ltd</strong></p>
+                    <p>Phone: <a href="tel:+447525941849">07525 941849</a></p>
+                    <p>Email: <a href="mailto:office@ashdeneconstruction.co.uk">office@ashdeneconstruction.co.uk</a></p>
+                    <p>Service Area: London & Surrey, UK</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ashdene Construction Ltd. All rights reserved.</p>
+                <p><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                
+                // Animate hamburger to X
+                const spans = mobileMenuBtn.querySelectorAll('span');
+                if (navLinks.classList.contains('active')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    const spans = mobileMenuBtn.querySelectorAll('span');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                });
+            });
+
+            // 2. Sticky Header on Scroll
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // 3. Intersection Observer for Fade-in Animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // 4. Form Handling (Client-side validation and success message)
+            const enquiryForm = document.getElementById('enquiryForm');
+            const formSuccess = document.getElementById('formSuccess');
+
+            enquiryForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Basic validation check
+                const fullName = document.getElementById('fullName').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                
+                if (fullName && email && phone) {
+                    // Simulate form submission
+                    const submitBtn = enquiryForm.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+
+                    setTimeout(() => {
+                        enquiryForm.style.display = 'none';
+                        formSuccess.style.display = 'block';
+                        
+                        // Scroll to success message
+                        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 1500);
+                } else {
+                    alert('Please fill in all required fields.');
+                }
+            });
+
+            // 5. Smooth Scroll for Anchor Links (Fallback for older browsers)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+Displaying index.html.
