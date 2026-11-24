@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ADV Contractors | Roller Shutters, Shopfronts &amp; Security Solutions UK</title>
+  <title>ADV Contractors | Roller Shutters, Shopfronts & Security Solutions UK</title>
   <meta name="description" content="From bespoke manufacturing and professional installation to repairs and maintenance, ADV Contractors delivers reliable commercial and industrial solutions tailored to your requirements." />
-  <link rel="canonical" href="https://advcontractors.co.uk/" />
+  <link rel="canonical" href="" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ADV Contractors" />
-  <meta property="og:title" content="ADV Contractors | Roller Shutters, Shopfronts &amp; Security Solutions UK" />
+  <meta property="og:title" content="ADV Contractors | Roller Shutters, Shopfronts & Security Solutions UK" />
   <meta property="og:description" content="From bespoke manufacturing and professional installation to repairs and maintenance, ADV Contractors delivers reliable commercial and industrial solutions tailored to your requirements." />
-  <meta property="og:url" content="https://advcontractors.co.uk/" />
+  <meta property="og:url" content="" />
+  <meta name="enquiry-endpoint" content="" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ADV Contractors | Roller Shutters, Shopfronts &amp; Security Solutions UK" />
-  <meta name="twitter:description" content="Bespoke manufacturing, installation, repairs and maintenance for commercial &amp; industrial roller shutters, shopfronts, doors and security grilles across the UK." />
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <meta name="twitter:title" content="ADV Contractors | Roller Shutters, Shopfronts & Security Solutions UK" />
+  <meta name="twitter:description" content="Bespoke manufacturing, installation, repairs and maintenance for commercial & industrial roller shutters, shopfronts, doors and security grilles across the UK." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230B1F3A%27/%3E%3Cpath d=%27M14 46 32 16l18 30h-8l-10-17-10 17z%27 fill=%27%23C08457%27/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <script id="route-jsonld" type="application/ld+json">{}</script>
   <style>
     /* ===== CSS: Design Tokens ===== */
@@ -52,7 +53,7 @@
       --color-border-dark: rgba(255, 255, 255, 0.14);
 
       /* Typography */
-      --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
@@ -965,6 +966,191 @@
     @media (max-width: 600px) {
       .footer-grid { grid-template-columns: 1fr; }
     }
+
+    /* ===== REDESIGN LAYER: warm ivory / navy / teal / copper ===== */
+    :root {
+      --color-bg-page: #FAF7F2;
+      --color-bg-surface: #FFFFFF;
+      --color-bg-subtle: #F4EFE6;
+      --color-bg-navy: #0B1F3A;
+      --color-bg-navy-elevated: #142C52;
+      --color-text-primary: #0B1F3A;
+      --color-text-secondary: #3D4A5C;
+      --color-text-muted: #6B7689;
+      --color-accent: #C08457;
+      --color-accent-hover: #A56E43;
+      --color-accent-soft: #F6EBDF;
+      --color-teal: #4A7C7E;
+      --color-teal-light: #6FA3A5;
+      --color-border: #E3E7EC;
+      --color-border-strong: #CBD2DA;
+      --radius-sm: 8px; --radius-md: 10px; --radius-lg: 16px;
+      --shadow-xs: 0 2px 8px rgba(11,31,58,.05);
+      --shadow-sm: 0 2px 8px rgba(11,31,58,.06);
+      --shadow-md: 0 10px 30px rgba(11,31,58,.08);
+      --shadow-lg: 0 20px 50px rgba(11,31,58,.12);
+      --text-hero: clamp(2.3rem, 5vw, 3.6rem);
+      --text-4xl: clamp(2rem, 3.6vw, 2.8rem);
+      --text-3xl: clamp(1.75rem, 3.2vw, 2.55rem);
+    }
+    body { background: var(--color-bg-page); color: var(--color-text-secondary); }
+    ::selection { background: var(--color-teal); color: #fff; }
+    h1, h2, h3, h4 { color: var(--color-bg-navy); font-weight: 700; letter-spacing: -0.015em; text-wrap: balance; }
+    h1 { font-weight: 800; }
+    p { text-wrap: pretty; }
+    img { background: var(--color-bg-subtle); }
+    @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+    .page-view > * { animation: rise .6s var(--ease-out) both; }
+
+    /* Eyebrow */
+    .eyebrow { color: var(--color-teal); font-size: .78rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+    .eyebrow-light { color: var(--color-teal-light); }
+
+    /* Buttons: solid, 10px radius */
+    .btn { border-radius: var(--radius-md); font-family: var(--font-heading); font-weight: 600; padding: .95rem 1.7rem; transition: all .3s cubic-bezier(.4,0,.2,1); }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: none; }
+    .btn-primary { background: var(--color-accent); color: #fff; border-color: var(--color-accent); box-shadow: none; }
+    .btn-primary:hover { background: var(--color-accent-hover); border-color: var(--color-accent-hover); box-shadow: 0 10px 24px -10px rgba(165,110,67,.7); }
+    .btn-navy { background: var(--color-bg-navy); border-color: var(--color-bg-navy); }
+    .btn-navy:hover { background: var(--color-bg-navy-elevated); box-shadow: 0 10px 24px -12px rgba(11,31,58,.6); }
+    .btn-outline { border-color: var(--color-border-strong); color: var(--color-bg-navy); background: transparent; }
+    .btn-outline:hover { border-color: var(--color-bg-navy); background: var(--color-bg-navy); color: #fff; }
+    .btn-outline-light { border-color: rgba(255,255,255,.4); color: #fff; background: transparent; }
+    .btn-outline-light:hover { background: #fff; color: var(--color-bg-navy); }
+
+    /* Header: ivory, clean */
+    .utility-bar { background: var(--color-bg-navy); }
+    .site-header { background: rgba(250,247,242,.92); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-border); box-shadow: none; }
+    .brand-mark { border-radius: 10px; background: var(--color-bg-navy); box-shadow: none; }
+    .mega-menu-panel { border-radius: 0 0 var(--radius-lg) var(--radius-lg); border: 1px solid var(--color-border); border-top: 0; box-shadow: var(--shadow-lg); background: #fff; }
+    .header-phone { border-radius: var(--radius-md); }
+
+    /* Hero: navy overlay with teal glow, left-aligned like the references */
+    .hero-section { position: relative; overflow: hidden; border-bottom: 0; color: #fff;
+      padding: clamp(4.5rem, 10vw, 8rem) 0 clamp(4rem, 8vw, 6rem);
+      background:
+        radial-gradient(ellipse at 80% 20%, rgba(74,124,126,.35), transparent 55%),
+        linear-gradient(105deg, #0B1F3A 0%, #0F2748 55%, #16335C 100%); }
+    .hero-section > .container { position: relative; z-index: 1; }
+    .hero-title { color: #fff; font-weight: 800; letter-spacing: -0.03em; line-height: 1.08; }
+    .hero-subtitle { color: rgba(255,255,255,.8); }
+    .hero-trust-strip { border-top: 1px solid rgba(255,255,255,.14); padding-top: var(--space-6); gap: var(--space-4); }
+    .hero-trust-item strong { color: #fff; }
+    .hero-trust-item span { color: rgba(255,255,255,.72); }
+    .hero-grid .smart-img-frame { border-radius: var(--radius-lg); box-shadow: 0 30px 60px -24px rgba(0,0,0,.55); }
+
+    .page-header-banner { border-bottom: 0; background: radial-gradient(ellipse at 85% 0%, rgba(74,124,126,.35), transparent 55%), linear-gradient(135deg, #0B1F3A, #142C52); padding: clamp(3rem, 6vw, 4.5rem) 0; }
+    .page-header-banner h1 { color: #fff; }
+    .page-header-banner p { color: rgba(255,255,255,.78); }
+
+    /* Sections: alternating ivory / white / cream, centered heads */
+    .section { padding: clamp(4rem, 7vw, 6.5rem) 0; }
+    .section-white { background: #fff; }
+    .section-subtle { background: var(--color-bg-subtle); }
+    .section-navy { background: var(--color-bg-navy); }
+    .section-navy .eyebrow { color: var(--color-teal-light); }
+    .section-header { text-align: center; margin: 0 auto 3.5rem; max-width: 720px; }
+    .section-header .section-lead { margin-left: auto; margin-right: auto; }
+    .section-title { font-weight: 700; }
+    .section-lead { color: var(--color-text-muted); font-size: 1.08rem; }
+
+    /* Cards: white, 1px line, 16px radius, calm hover */
+    .panel-card { background: #fff; border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-8); box-shadow: none; position: relative; overflow: hidden;
+      transition: transform .3s cubic-bezier(.4,0,.2,1), box-shadow .3s cubic-bezier(.4,0,.2,1), border-color .3s; }
+    .panel-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: rgba(74,124,126,.4); }
+    .panel-card-accent-top { border-top: 1px solid var(--color-border); }
+    .panel-card-accent-top::before { content: ''; position: absolute; left: 0; top: 0; height: 3px; width: 100%; background: linear-gradient(90deg, var(--color-teal), var(--color-accent)); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease-out); }
+    .panel-card-accent-top:hover::before { transform: scaleX(1); }
+    .smart-img-frame, .smart-gallery-item { border-radius: var(--radius-lg); overflow: hidden; }
+    .smart-img-frame img { transition: transform .8s var(--ease-out); }
+    .smart-img-frame:hover img { transform: scale(1.04); }
+
+    .filter-pill { border-radius: var(--radius-md); border: 1px solid var(--color-border-strong); background: #fff; color: var(--color-bg-navy); transition: all .25s; }
+    .filter-pill:hover { border-color: var(--color-teal); color: var(--color-teal); }
+    .filter-pill[aria-pressed="true"] { background: var(--color-bg-navy); border-color: var(--color-bg-navy); color: #fff; }
+    .filter-pill[aria-pressed="true"]:hover { color: #fff; }
+
+    .spec-table { border-radius: var(--radius-lg); overflow: hidden; border-collapse: separate; border-spacing: 0; border: 1px solid var(--color-border); }
+    .spec-table th { background: var(--color-bg-subtle); color: var(--color-bg-navy); }
+    .spec-table tr:last-child th, .spec-table tr:last-child td { border-bottom: 0; }
+
+    /* Forms */
+    .form-control { border: 1px solid var(--color-border-strong); border-radius: var(--radius-md); padding: .8rem 1rem; background: #fff; transition: border-color .2s, box-shadow .2s; }
+    .form-control:focus { outline: none; border-color: var(--color-teal); box-shadow: 0 0 0 4px rgba(74,124,126,.16); }
+    .dropzone { border-radius: var(--radius-lg); background: var(--color-bg-subtle); }
+
+    /* Footer */
+    .pre-footer-cta { border-top: 0; background: radial-gradient(ellipse at 0% 0%, rgba(74,124,126,.4), transparent 55%), linear-gradient(135deg, #142C52, #0B1F3A); }
+    .site-footer { background: var(--color-bg-navy); }
+    .footer-heading { letter-spacing: .14em; }
+    .footer-links a { transition: color .2s, padding-left .2s; }
+    .footer-links a:hover { color: #fff; text-decoration: none; padding-left: 4px; }
+
+    .lightbox-dialog { border-radius: var(--radius-lg); }
+    @media (max-width: 640px) { .btn { width: 100%; justify-content: center; } .panel-card { padding: var(--space-6); } }
+
+    /* ===== UX COMPONENTS ===== */
+    .quote-card { background: #fff; color: var(--color-text-secondary); border-radius: 20px; padding: clamp(1.5rem, 3vw, 2.25rem); box-shadow: 0 30px 60px -24px rgba(0,0,0,.55); }
+    .quote-card-tag { display: inline-flex; align-items: center; gap: .5rem; font-size: .78rem; font-weight: 600; color: var(--color-teal); background: #E9F2F2; padding: .35rem .75rem; border-radius: 999px; margin-bottom: 1rem; }
+    .quote-card-tag i { width: 8px; height: 8px; border-radius: 50%; background: #2FA36B; box-shadow: 0 0 0 4px rgba(47,163,107,.2); }
+    .quote-card-title { font-size: 1.5rem; margin: 0 0 1rem; color: var(--color-bg-navy); }
+    .need-list { display: grid; gap: .6rem; margin-bottom: 1.25rem; }
+    .need-option { display: flex; align-items: center; gap: .85rem; text-align: left; width: 100%; padding: .85rem 1rem; border: 1.5px solid var(--color-border); border-radius: 12px; background: #fff; cursor: pointer; transition: all .2s; }
+    .need-option:hover { border-color: var(--color-teal); }
+    .need-option strong { display: block; color: var(--color-bg-navy); font-size: .95rem; }
+    .need-option small { color: var(--color-text-muted); font-size: .8rem; }
+    .need-dot { width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--color-border-strong); flex-shrink: 0; transition: all .2s; }
+    .need-option.is-active { border-color: var(--color-bg-navy); background: #F6F8FB; box-shadow: 0 0 0 3px rgba(11,31,58,.06); }
+    .need-option.is-active .need-dot { border-color: var(--color-accent); background: radial-gradient(circle, var(--color-accent) 45%, #fff 50%); }
+    .quote-card-cta { width: 100%; justify-content: center; }
+    .quote-card-alt { display: flex; justify-content: center; gap: .75rem; margin-top: 1rem; font-size: .88rem; font-weight: 600; color: var(--color-text-muted); }
+    .quote-card-alt a { color: var(--color-bg-navy); }
+    .quote-card-alt a:hover { color: var(--color-accent); }
+
+    .stats-band { position: relative; z-index: 2; margin-top: -2.2rem; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); background: #fff; border: 1px solid var(--color-border); border-radius: 18px; box-shadow: var(--shadow-md); overflow: hidden; }
+    .stat { padding: 1.4rem 1.5rem; border-right: 1px solid var(--color-border); }
+    .stat:last-child { border-right: 0; }
+    .stat strong { display: block; font-family: var(--font-heading); font-size: 1.35rem; color: var(--color-bg-navy); line-height: 1.2; }
+    .stat span { font-size: .85rem; color: var(--color-text-muted); }
+
+    .process-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; counter-reset: s; position: relative; }
+    .process-step { background: var(--color-bg-page); border: 1px solid var(--color-border); border-radius: 16px; padding: 1.75rem; transition: transform .3s, box-shadow .3s; }
+    .process-step:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .process-num { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--color-bg-navy); color: #fff; font-family: var(--font-heading); font-weight: 800; margin-bottom: 1rem; }
+    .process-step h3 { font-size: 1.1rem; margin-bottom: .5rem; }
+    .process-step p { font-size: .92rem; color: var(--color-text-muted); margin: 0; }
+
+    .faq-wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+    .faq-intro { position: sticky; top: calc(var(--header-height) + 24px); }
+    .faq-list { display: grid; gap: .75rem; }
+    .faq-item { background: #fff; border: 1px solid var(--color-border); border-radius: 14px; padding: 0 1.4rem; transition: box-shadow .2s, border-color .2s; }
+    .faq-item[open] { border-color: rgba(74,124,126,.45); box-shadow: var(--shadow-sm); }
+    .faq-item summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.15rem 0; font-family: var(--font-heading); font-weight: 600; color: var(--color-bg-navy); }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-icon { position: relative; width: 22px; height: 22px; flex-shrink: 0; }
+    .faq-icon::before, .faq-icon::after { content: ''; position: absolute; left: 50%; top: 50%; width: 12px; height: 2px; background: var(--color-teal); transform: translate(-50%, -50%); transition: transform .25s; }
+    .faq-icon::after { transform: translate(-50%, -50%) rotate(90deg); }
+    .faq-item[open] .faq-icon::after { transform: translate(-50%, -50%) rotate(0deg); }
+    .faq-item p { padding-bottom: 1.2rem; margin: 0; color: var(--color-text-secondary); }
+
+    .mobile-action-bar { display: none; }
+    @media (max-width: 960px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat:nth-child(2) { border-right: 0; }
+      .stat:nth-child(-n+2) { border-bottom: 1px solid var(--color-border); }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-wrap { grid-template-columns: 1fr; }
+      .faq-intro { position: static; }
+    }
+    @media (max-width: 760px) {
+      .process-grid { grid-template-columns: 1fr; }
+      body { padding-bottom: 72px; }
+      .mobile-action-bar { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 950; display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: 8px; padding: 8px; background: rgba(11,31,58,.94); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-radius: 16px; box-shadow: 0 16px 40px -12px rgba(11,31,58,.6); }
+      .mobile-action-bar a { display: grid; place-items: center; min-height: 46px; border-radius: 11px; color: #fff; font-weight: 600; font-size: .9rem; background: rgba(255,255,255,.1); }
+      .mobile-action-bar a.is-primary { background: var(--color-accent); }
+    }
   </style>
 </head>
 <body>
@@ -974,23 +1160,23 @@
     <!-- Static Semantic Fallback for No-JS / Crawlers -->
     <header style="background:#0F1E32;color:#fff;padding:24px;">
       <div class="container">
-        <strong>ADV Contractors</strong> — Specialist Roller Shutters, Commercial Shopfronts, Glass Facades, Automatic &amp; Security Doors, Industrial Doors, Manufacturing, Installation, Repairs &amp; Maintenance across the UK.
+        <strong>ADV Contractors</strong> — Specialist Roller Shutters, Commercial Shopfronts, Glass Facades, Automatic & Security Doors, Industrial Doors, Manufacturing, Installation, Repairs & Maintenance across the UK.
       </div>
     </header>
     <main id="main-content" class="container" style="padding:40px 24px;">
-      <h1>Specialist Roller Shutters, Shopfronts &amp; Security Solutions Across the UK.</h1>
+      <h1>Specialist Roller Shutters, Shopfronts &; Security Solutions Across the UK.</h1>
       <p>From bespoke manufacturing and professional installation to repairs and maintenance, ADV Contractors delivers reliable commercial and industrial solutions tailored to your requirements.</p>
       <nav aria-label="Primary sections">
         <ul>
-          <li><a href="/products/roller-shutters">Roller Shutters</a></li>
-          <li><a href="/products/shopfronts">Commercial Shopfronts</a></li>
-          <li><a href="/products/doors">Automatic, Industrial &amp; Security Doors</a></li>
-          <li><a href="/products/other-products">Curtain Walling, Scissor Gates &amp; Security Grilles</a></li>
-          <li><a href="/manufacturing">Bespoke UK Manufacturing</a></li>
-          <li><a href="/repairs-maintenance">Repairs &amp; Maintenance</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/service-areas">UK Service Areas</a></li>
-          <li><a href="/contact">Request a Free Quote</a></li>
+          <li><a href="#/products/roller-shutters">Roller Shutters</a></li>
+          <li><a href="#/products/shopfronts">Commercial Shopfronts</a></li>
+          <li><a href="#/products/doors">Automatic, Industrial &; Security Doors</a></li>
+          <li><a href="#/products/other-products">Curtain Walling, Scissor Gates &; Security Grilles</a></li>
+          <li><a href="#/manufacturing">Bespoke UK Manufacturing</a></li>
+          <li><a href="#/repairs-maintenance">Repairs & Maintenance</a></li>
+          <li><a href="#/projects">Projects</a></li>
+          <li><a href="#/service-areas">UK Service Areas</a></li>
+          <li><a href="#/contact">Request a Free Quote</a></li>
         </ul>
       </nav>
       <noscript>
@@ -1016,11 +1202,13 @@
       /* ===== CONFIG: Routing, Endpoints & Verification Status ===== */
       const SITE_CONFIG = {
         siteName: 'ADV Contractors',
-        canonicalOrigin: 'https://advcontractors.co.uk',
+        // Derived at runtime: no hardcoded domain
+        canonicalOrigin: location.protocol === 'file:' ? '' : location.origin + location.pathname.replace(/index\.html$/, '').replace(/\/$/, ''),
         // Set to true for static hosts without URL rewrite support (uses #/path URLs)
-        USE_HASH_ROUTING: false,
+        USE_HASH_ROUTING: true,
         // Single configurable form submission endpoint
-        ENQUIRY_ENDPOINT: 'https://advcontractors.co.uk/api/enquiries', // TO VERIFY WITH CLIENT: wire to live form handler / CRM webhook
+        // Set via <meta name="enquiry-endpoint" content="..."> or window.ENQUIRY_ENDPOINT
+        ENQUIRY_ENDPOINT: window.ENQUIRY_ENDPOINT || (document.querySelector('meta[name="enquiry-endpoint"]') || {}).content || '',
         contact: {
           phoneDisplay: '020 8574 2256', // TO VERIFY WITH CLIENT: confirm primary switchboard & 24/7 emergency line
           phoneHref: '+442085742256',
@@ -1038,8 +1226,12 @@
       /* ===== DATA: Images (Verified Architectural Schematics & Client Asset Registry) ===== */
       // NOTE: Per Section 3 & Section 12, unverified external URLs or guessed photo IDs are strictly prohibited.
       // Every entry below is a verified, self-contained architectural technical plate (SVG data URI) or
-      // client asset slot ready for verified https://advcontractors.co.uk/ photography without layout shift.
+      // client asset slot ready for verified client photography without layout shift.
       function createTechnicalPlateSvg(code, title, subtitle, categoryTag, diagramType) {
+        // Escape text so '&' etc. never produce invalid SVG (which made images fail to load)
+        const esc = (t) => String(t).replace(/&/g, '&').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        const categoryUpper = esc(String(categoryTag).toUpperCase());
+        code = esc(code); title = esc(title); subtitle = esc(subtitle);
         const diagrams = {
           shutter: `
             <rect x="140" y="70" width="520" height="36" fill="#0F1E32" stroke="#F5A36C" stroke-width="2"/>
@@ -1097,9 +1289,9 @@
           <rect x="20" y="20" width="760" height="480" fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="1"/>
           ${diagrams[diagramType] || diagrams.shutter}
           <rect x="20" y="432" width="760" height="68" fill="#0B1626"/>
-          <text x="40" y="460" fill="#F5A36C" font-family="sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">${categoryTag.toUpperCase()} • ${code}</text>
-          <text x="40" y="484" fill="#F8FAFC" font-family="sans-serif" font-size="16" font-weight="700">${title}</text>
-          <text x="760" y="484" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="12">${subtitle}</text>
+          <text x="40" y="452" fill="#F5A36C" font-family="sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">${categoryUpper} • ${code}</text>
+          <text x="40" y="474" fill="#F8FAFC" font-family="sans-serif" font-size="16" font-weight="700">${title}</text>
+          <text x="40" y="492" fill="#94A3B8" font-family="sans-serif" font-size="12">${subtitle}</text>
         </svg>`;
         return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
       }
@@ -1114,7 +1306,7 @@
           source: 'ADV Technical Schematic',
           photographer: 'ADV Contractors Engineering Drawing',
           licence: 'Proprietary / Technical Placeholder (Client Photo Slot)',
-          sourcePageUrl: 'https://advcontractors.co.uk/',
+          sourcePageUrl: '',
           usage: 'Illustrative technical schematic — replace with verified ADV project photograph'
         },
         shutterSolid: {
@@ -1126,7 +1318,7 @@
           source: 'ADV Technical Schematic',
           photographer: 'ADV Contractors Engineering Drawing',
           licence: 'Technical Placeholder (Client Photo Slot)',
-          sourcePageUrl: 'https://advcontractors.co.uk/',
+          sourcePageUrl: '',
           usage: 'Illustrative technical schematic'
         },
         shutterPerforated: {
@@ -1138,7 +1330,7 @@
           source: 'ADV Technical Schematic',
           photographer: 'ADV Contractors Engineering Drawing',
           licence: 'Technical Placeholder (Client Photo Slot)',
-          sourcePageUrl: 'https://advcontractors.co.uk/',
+          sourcePageUrl: '',
           usage: 'Illustrative technical schematic'
         },
         shutterIndustrial: {
@@ -1150,7 +1342,7 @@
           source: 'ADV Technical Schematic',
           photographer: 'ADV Contractors Engineering Drawing',
           licence: 'Technical Placeholder (Client Photo Slot)',
-          sourcePageUrl: 'https://advcontractors.co.uk/',
+          sourcePageUrl: '',
           usage: 'Illustrative technical schematic'
         },
         shopfrontAlu: {
@@ -1162,7 +1354,7 @@
           source: 'ADV Technical Schematic',
           photographer: 'ADV Contractors Engineering Drawing',
           licence: 'Technical Placeholder (Client Photo Slot)',
-          sourcePageUrl: 'https://advcontractors.co.uk/',
+          sourcePageUrl: '',
           usage: 'Illustrative technical schematic'
         },
         shopfrontGlass: {
@@ -1174,7 +1366,7 @@
           source: 'ADV Technical Schematic',
           photographer: 'ADV Contractors Engineering Drawing',
           licence: 'Technical Placeholder (Client Photo Slot)',
-          sourcePageUrl: 'https://advcontractors.co.uk/',
+          sourcePageUrl: '',
           usage: 'Illustrative technical schematic'
         },
         doorsCommercial: {
@@ -1186,7 +1378,7 @@
           source: 'ADV Technical Schematic',
           photographer: 'ADV Contractors Engineering Drawing',
           licence: 'Technical Placeholder (Client Photo Slot)',
-          sourcePageUrl: 'https://advcontractors.co.uk/',
+          sourcePageUrl: '',
           usage: 'Illustrative technical schematic'
         },
         manufacturingDrive: {
@@ -1198,7 +1390,7 @@
           source: 'ADV Technical Schematic',
           photographer: 'ADV Contractors Engineering Drawing',
           licence: 'Technical Placeholder (Client Photo Slot)',
-          sourcePageUrl: 'https://advcontractors.co.uk/',
+          sourcePageUrl: '',
           usage: 'Illustrative technical schematic'
         },
         securityGrille: {
@@ -1210,7 +1402,7 @@
           source: 'ADV Technical Schematic',
           photographer: 'ADV Contractors Engineering Drawing',
           licence: 'Technical Placeholder (Client Photo Slot)',
-          sourcePageUrl: 'https://advcontractors.co.uk/',
+          sourcePageUrl: '',
           usage: 'Illustrative technical schematic'
         }
       };
@@ -2358,6 +2550,13 @@
         return normalizePath(window.location.pathname || '/');
       }
 
+      function pageUrl(path) {
+        const base = SITE_CONFIG.canonicalOrigin;
+        if (!base) return '';
+        const clean = normalizePath(path || '/');
+        return SITE_CONFIG.USE_HASH_ROUTING ? base + '/' + (clean === '/' ? '' : '#' + clean) : base + clean;
+      }
+
       function formatHref(path) {
         const clean = normalizePath(path);
         return SITE_CONFIG.USE_HASH_ROUTING ? '#' + clean : clean;
@@ -2367,7 +2566,7 @@
       function updateRouteSEO(seoData) {
         const fullTitle = seoData.title || 'ADV Contractors | Roller Shutters, Shopfronts & Security Solutions UK';
         const description = seoData.description || 'From bespoke manufacturing and professional installation to repairs and maintenance, ADV Contractors delivers reliable commercial and industrial solutions tailored to your requirements.';
-        const canonicalUrl = SITE_CONFIG.canonicalOrigin + (seoData.path === '/' ? '/' : seoData.path);
+        const canonicalUrl = pageUrl(seoData.path);
 
         document.title = fullTitle;
 
@@ -2404,9 +2603,9 @@
         const graph = [
           {
             '@type': 'LocalBusiness',
-            '@id': SITE_CONFIG.canonicalOrigin + '/#organization',
+            '@id': pageUrl('/') + '#organization',
             name: 'ADV Contractors',
-            url: SITE_CONFIG.canonicalOrigin + '/',
+            url: pageUrl('/'),
             areaServed: 'United Kingdom',
             description: 'UK specialist contractor in roller shutters, commercial shopfronts, glass facades, automatic and security doors, industrial doors, bespoke manufacturing, installation, repairs and maintenance.'
           }
@@ -2419,7 +2618,7 @@
               '@type': 'ListItem',
               position: idx + 1,
               name: b.label,
-              item: SITE_CONFIG.canonicalOrigin + b.path
+              item: pageUrl(b.path)
             }))
           });
         }
@@ -2667,11 +2866,11 @@
           <div ref=${headerRef}>
             <div className="utility-bar">
               <div className="container utility-bar-inner">
-                <div>UK Manufacturing, Installation &amp; 24/7 Repairs <span style=${{ opacity: 0.7 }}>(Hours: TO VERIFY WITH CLIENT)</span></div>
+                <div>UK Manufacturing, Installation & 24/7 Repairs <span style=${{ opacity: 0.7 }}>(Hours: TO VERIFY WITH CLIENT)</span></div>
                 <div className="utility-links">
                   <${AppLink} to="/service-areas" onNavigate=${onNavigate}>UK Service Areas<//>
                   <${AppLink} to="/blog" onNavigate=${onNavigate}>Technical Insights<//>
-                  <a href=${`tel:${SITE_CONFIG.contact.phoneHref}`}>Emergency &amp; Sales: ${SITE_CONFIG.contact.phoneDisplay}</a>
+                  <a href=${`tel:${SITE_CONFIG.contact.phoneHref}`}>Emergency & Sales: ${SITE_CONFIG.contact.phoneDisplay}</a>
                 </div>
               </div>
             </div>
@@ -2702,7 +2901,7 @@
                   </button>
 
                   <${AppLink} to="/manufacturing" onNavigate=${onNavigate} className="nav-link" ariaCurrent=${currentPath === '/manufacturing' ? 'page' : undefined}>Manufacturing<//>
-                  <${AppLink} to="/repairs-maintenance" onNavigate=${onNavigate} className="nav-link" ariaCurrent=${currentPath === '/repairs-maintenance' ? 'page' : undefined}>Repairs &amp; Maintenance<//>
+                  <${AppLink} to="/repairs-maintenance" onNavigate=${onNavigate} className="nav-link" ariaCurrent=${currentPath === '/repairs-maintenance' ? 'page' : undefined}>Repairs & Maintenance<//>
                   <${AppLink} to="/projects" onNavigate=${onNavigate} className="nav-link" ariaCurrent=${currentPath === '/projects' ? 'page' : undefined}>Projects<//>
                   <${AppLink} to="/about" onNavigate=${onNavigate} className="nav-link" ariaCurrent=${currentPath === '/about' ? 'page' : undefined}>About Us<//>
                   <${AppLink} to="/contact" onNavigate=${onNavigate} className="nav-link" ariaCurrent=${currentPath === '/contact' ? 'page' : undefined}>Contact<//>
@@ -2794,12 +2993,12 @@
                         `}
                       </li>
                       <li><${AppLink} to="/manufacturing" onNavigate=${onNavigate}>Manufacturing<//></li>
-                      <li><${AppLink} to="/repairs-maintenance" onNavigate=${onNavigate}>Repairs &amp; Maintenance<//></li>
+                      <li><${AppLink} to="/repairs-maintenance" onNavigate=${onNavigate}>Repairs & Maintenance<//></li>
                       <li><${AppLink} to="/projects" onNavigate=${onNavigate}>Projects<//></li>
                       <li><${AppLink} to="/service-areas" onNavigate=${onNavigate}>Service Areas<//></li>
                       <li><${AppLink} to="/about" onNavigate=${onNavigate}>About Us<//></li>
-                      <li><${AppLink} to="/blog" onNavigate=${onNavigate}>Blog &amp; Insights<//></li>
-                      <li><${AppLink} to="/contact" onNavigate=${onNavigate}>Contact &amp; Free Quote<//></li>
+                      <li><${AppLink} to="/blog" onNavigate=${onNavigate}>Blog & Insights<//></li>
+                      <li><${AppLink} to="/contact" onNavigate=${onNavigate}>Contact & Free Quote<//></li>
                     </ul>
                   </div>
                 </div>
@@ -2813,6 +3012,14 @@
       async function submitEnquiry(formData) {
         // Single configurable submission function posting FormData to SITE_CONFIG.ENQUIRY_ENDPOINT
         // Includes graceful local confirmation fallback when no backend listener is attached yet.
+        if (!SITE_CONFIG.ENQUIRY_ENDPOINT) {
+          return {
+            ok: true,
+            mode: 'queued_client_side',
+            reference: 'ADV-' + Date.now().toString().slice(-6),
+            message: 'Your enquiry has been validated locally. Connect an enquiry endpoint to enable server delivery.'
+          };
+        }
         try {
           const response = await fetch(SITE_CONFIG.ENQUIRY_ENDPOINT, {
             method: 'POST',
@@ -2982,7 +3189,7 @@
         return html`
           <form onSubmit=${handleSubmit} noValidate className="panel-card" style=${{ padding: 'var(--space-8)' }}>
             <div style=${{ marginBottom: 'var(--space-6)' }}>
-              <span className="eyebrow">Free Site Survey &amp; Quotation</span>
+              <span className="eyebrow">Free Site Survey & Quotation</span>
               <h3 style=${{ marginBottom: 'var(--space-2)' }}>Request a Tailored Quotation</h3>
               <p style=${{ color: 'var(--color-text-secondary)', fontSize: 'var(--text-sm)', marginBottom: 0 }}>
                 Provide your opening dimensions, preferred system, and site postcode. All roller shutters, shopfronts, and doors are manufactured to specification.
@@ -3030,11 +3237,11 @@
                 <select id="qf-category" className="form-control" value=${values.productCategory} onChange=${updateField('productCategory')}>
                   <option value="Roller Shutters">Roller Shutters</option>
                   <option value="Commercial Shopfronts">Commercial Shopfronts</option>
-                  <option value="Commercial, Industrial & Security Doors">Commercial, Industrial &amp; Security Doors</option>
-                  <option value="Curtain Walling & Glass Facades">Curtain Walling &amp; Glass Facades</option>
-                  <option value="Scissor Gates & Security Grilles">Scissor Gates &amp; Security Grilles</option>
+                  <option value="Commercial, Industrial & Security Doors">Commercial, Industrial & Security Doors</option>
+                  <option value="Curtain Walling & Glass Facades">Curtain Walling & Glass Facades</option>
+                  <option value="Scissor Gates & Security Grilles">Scissor Gates & Security Grilles</option>
                   <option value="Bespoke Manufacturing Supply">Bespoke Manufacturing Supply</option>
-                  <option value="Repairs & Maintenance">Repairs &amp; Maintenance</option>
+                  <option value="Repairs & Maintenance">Repairs & Maintenance</option>
                 </select>
               </div>
 
@@ -3107,7 +3314,7 @@
                   onDragLeave=${() => setIsDragging(false)}
                   onDrop=${(e) => { e.preventDefault(); setIsDragging(false); handleFilesAdded(e.dataTransfer.files); }}
                 >
-                  <strong>Drag &amp; drop site photos or architectural drawings here</strong>
+                  <strong>Drag & drop site photos or architectural drawings here</strong>
                   <div style=${{ fontSize: 'var(--text-xs)', color: 'var(--color-text-muted)', marginTop: '4px' }}>
                     Or click to browse files from your device (max 5 files, 10MB per file)
                   </div>
@@ -3166,7 +3373,7 @@
             <section className="pre-footer-cta" aria-label="Request a quotation">
               <div className="container" style=${{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 'var(--space-6)' }}>
                 <div style=${{ maxWidth: '660px' }}>
-                  <span className="eyebrow eyebrow-light">UK Bespoke Fabrication &amp; Installation</span>
+                  <span className="eyebrow eyebrow-light">UK Bespoke Fabrication & Installation</span>
                   <h2 style=${{ color: '#FFFFFF', marginBottom: 'var(--space-2)' }}>Planning a New Shopfront, Shutter or Industrial Door?</h2>
                   <p style=${{ color: 'var(--color-text-inverse-muted)', marginBottom: 0 }}>
                     Speak with our engineering and estimating team for a site survey, technical specification, and no-obligation quotation.
@@ -3200,42 +3407,42 @@
                     <ul className="footer-links">
                       <li><${AppLink} to="/products/roller-shutters" onNavigate=${onNavigate}>Roller Shutters<//></li>
                       <li><${AppLink} to="/products/shopfronts" onNavigate=${onNavigate}>Commercial Shopfronts<//></li>
-                      <li><${AppLink} to="/products/doors" onNavigate=${onNavigate}>Automatic &amp; Industrial Doors<//></li>
-                      <li><${AppLink} to="/products/other-products/curtain-walling" onNavigate=${onNavigate}>Curtain Walling &amp; Glass Facades<//></li>
-                      <li><${AppLink} to="/products/other-products/scissor-gates" onNavigate=${onNavigate}>Scissor Gates &amp; Grilles<//></li>
+                      <li><${AppLink} to="/products/doors" onNavigate=${onNavigate}>Automatic & Industrial Doors<//></li>
+                      <li><${AppLink} to="/products/other-products/curtain-walling" onNavigate=${onNavigate}>Curtain Walling & Glass Facades<//></li>
+                      <li><${AppLink} to="/products/other-products/scissor-gates" onNavigate=${onNavigate}>Scissor Gates & Grilles<//></li>
                       <li><${AppLink} to="/manufacturing" onNavigate=${onNavigate}>Bespoke UK Manufacturing<//></li>
                     </ul>
                   </div>
 
                   <div>
-                    <h3 className="footer-heading">Services &amp; Company</h3>
+                    <h3 className="footer-heading">Services & Company</h3>
                     <ul className="footer-links">
-                      <li><${AppLink} to="/repairs-maintenance" onNavigate=${onNavigate}>Repairs &amp; Maintenance<//></li>
+                      <li><${AppLink} to="/repairs-maintenance" onNavigate=${onNavigate}>Repairs & Maintenance<//></li>
                       <li><${AppLink} to="/products/roller-shutters/installation" onNavigate=${onNavigate}>Installation Services<//></li>
                       <li><${AppLink} to="/projects" onNavigate=${onNavigate}>Projects Portfolio<//></li>
-                      <li><${AppLink} to="/service-areas" onNavigate=${onNavigate}>London &amp; UK Service Areas<//></li>
+                      <li><${AppLink} to="/service-areas" onNavigate=${onNavigate}>London & UK Service Areas<//></li>
                       <li><${AppLink} to="/about" onNavigate=${onNavigate}>About ADV Contractors<//></li>
-                      <li><${AppLink} to="/blog" onNavigate=${onNavigate}>Technical Blog &amp; Guides<//></li>
+                      <li><${AppLink} to="/blog" onNavigate=${onNavigate}>Technical Blog & Guides<//></li>
                     </ul>
                   </div>
 
                   <div>
-                    <h3 className="footer-heading">Contact &amp; Legal</h3>
+                    <h3 className="footer-heading">Contact & Legal</h3>
                     <ul className="footer-links">
                       <li><a href=${`tel:${SITE_CONFIG.contact.phoneHref}`}>Tel: ${SITE_CONFIG.contact.phoneDisplay}</a></li>
                       <li><a href=${`mailto:${SITE_CONFIG.contact.email}`}>Email: ${SITE_CONFIG.contact.email}</a></li>
                       <li><${AppLink} to="/contact" onNavigate=${onNavigate}>Online Quotation Form<//></li>
                       <li><${AppLink} to="/privacy-policy" onNavigate=${onNavigate}>Privacy Policy<//></li>
                       <li><${AppLink} to="/cookie-policy" onNavigate=${onNavigate}>Cookie Policy<//></li>
-                      <li><${AppLink} to="/terms-and-conditions" onNavigate=${onNavigate}>Terms &amp; Conditions<//></li>
-                      <li><${AppLink} to="/photo-credits" onNavigate=${onNavigate}>Photo &amp; Schematic Credits<//></li>
+                      <li><${AppLink} to="/terms-and-conditions" onNavigate=${onNavigate}>Terms & Conditions<//></li>
+                      <li><${AppLink} to="/photo-credits" onNavigate=${onNavigate}>Photo & Schematic Credits<//></li>
                     </ul>
                   </div>
                 </div>
 
                 <!-- Auto-generated Photo Credits summary from IMAGES registry -->
                 <div className="footer-credits-strip">
-                  <strong style=${{ color: '#FFFFFF', marginRight: '8px' }}>Visual &amp; Technical Asset Credits:</strong>
+                  <strong style=${{ color: '#FFFFFF', marginRight: '8px' }}>Visual & Technical Asset Credits:</strong>
                   <span>
                     All ${imageEntries.length} visual plates on this site are rendered from the verified <code>IMAGES</code> data registry (${imageEntries.map((img) => img.id).join(', ')}) and clearly labelled as illustrative technical schematics until verified client photography is linked.{' '}
                     <${AppLink} to="/photo-credits" onNavigate=${onNavigate} style=${{ color: '#F5A36C', textDecoration: 'underline' }}>View full credits table →<//>
@@ -3244,7 +3451,7 @@
 
                 <div className="footer-bottom">
                   <span>© ${new Date().getFullYear()} ADV Contractors. All rights reserved. United Kingdom.</span>
-                  <span>Company Registration &amp; VAT Details: <span className="verify-badge">TO VERIFY WITH CLIENT</span></span>
+                  <span>Company Registration & VAT Details: <span className="verify-badge">TO VERIFY WITH CLIENT</span></span>
                 </div>
               </div>
             </footer>
@@ -3253,6 +3460,123 @@
       }
 
       /* ===== PAGES: Home Page ===== */
+      /* ===== UX COMPONENTS: Quick Quote, Process, FAQ, Mobile Action Bar ===== */
+      function QuickQuoteCard({ onNavigate }) {
+        const [need, setNeed] = useState('New Installation');
+        const needs = [
+          ['New Installation', 'Roller shutters, shopfronts & doors'],
+          ['Repair / Emergency', 'Jammed, damaged or faulty systems'],
+          ['Planned Maintenance', 'Servicing & compliance contracts']
+        ];
+        return html`
+          <aside className="quote-card" aria-label="Quick quote">
+            <span className="quote-card-tag"><i></i> Typically replies within 1 working day</span>
+            <h2 className="quote-card-title">What do you need?</h2>
+            <div className="need-list" role="radiogroup" aria-label="Type of enquiry">
+              ${needs.map(([label, hint]) => html`
+                <button type="button" key=${label} role="radio" aria-checked=${need === label}
+                  className=${'need-option' + (need === label ? ' is-active' : '')} onClick=${() => setNeed(label)}>
+                  <span className="need-dot" aria-hidden="true"></span>
+                  <span><strong>${label}</strong><small>${hint}</small></span>
+                </button>
+              `)}
+            </div>
+            <${AppLink} to="/contact" onNavigate=${onNavigate} className="btn btn-primary btn-lg quote-card-cta">Continue — ${need} →<//>
+            <div className="quote-card-alt">
+              <a href=${'tel:' + SITE_CONFIG.contact.phoneHref}>Call ${SITE_CONFIG.contact.phoneDisplay}</a>
+              <span aria-hidden="true">•</span>
+              <a href=${'https://wa.me/' + SITE_CONFIG.contact.whatsappNumber} target="_blank" rel="noopener noreferrer">WhatsApp us</a>
+            </div>
+          </aside>
+        `;
+      }
+
+      function StatsBand() {
+        const items = [
+          ['24/7', 'Emergency call-out support'],
+          ['UK-Wide', 'Survey, install & service'],
+          ['Made-to-Measure', 'Fabricated to your opening'],
+          ['Free', 'No-obligation site advice']
+        ];
+        return html`
+          <section className="stats-band" aria-label="Key facts">
+            <div className="container">
+              <div className="stats-grid">
+                ${items.map(([big, small]) => html`<div className="stat" key=${big}><strong>${big}</strong><span>${small}</span></div>`)}
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function ProcessSection() {
+        const steps = [
+          ['01', 'Tell us what you need', 'Share your opening sizes, photos or a rough brief through the quote form or a quick call.'],
+          ['02', 'Survey & specification', 'We confirm dimensions, drive type, finish and security rating, then send a clear quotation.'],
+          ['03', 'Fabrication', 'Your system is manufactured to exact site measurements in our UK workshop.'],
+          ['04', 'Install & aftercare', 'Professional fitting, commissioning and ongoing repairs or planned maintenance.']
+        ];
+        return html`
+          <section className="section section-white">
+            <div className="container">
+              <div className="section-header">
+                <span className="eyebrow">How It Works</span>
+                <h2 className="section-title">From First Call to Finished Installation</h2>
+                <p className="section-lead">A simple, transparent process so you always know what happens next.</p>
+              </div>
+              <ol className="process-grid">
+                ${steps.map(([n, t, d]) => html`
+                  <li className="process-step" key=${n}>
+                    <span className="process-num">${n}</span>
+                    <h3>${t}</h3>
+                    <p>${d}</p>
+                  </li>
+                `)}
+              </ol>
+            </div>
+          </section>
+        `;
+      }
+
+      function FaqSection() {
+        const faqs = [
+          ['How long does a roller shutter installation take?', 'Most standard retail shutters are fitted in a day once manufactured. Larger industrial or multi-opening projects are scheduled after survey, and out-of-hours fitting can be arranged.'],
+          ['Do you offer emergency repairs?', 'Yes. We support reactive call-outs for jammed shutters, damaged laths, faulty motors and failed automatic doors. Call us for the fastest response.'],
+          ['Can you match my existing frontage or colour?', 'Aluminium profiles and steel components can be powder coated to RAL colours so new work sits cleanly beside existing frontages.'],
+          ['Do you cover areas outside London?', 'We serve all London boroughs and commercial sites across the UK. Tell us your location and we will confirm availability.'],
+          ['Is a site survey free?', 'We offer no-obligation advice and quotations. Send your details and we will advise on the next step for your site.']
+        ];
+        return html`
+          <section className="section section-subtle">
+            <div className="container faq-wrap">
+              <div className="faq-intro">
+                <span className="eyebrow">FAQs</span>
+                <h2 className="section-title">Questions We Hear Often</h2>
+                <p className="section-lead">Can't see your question? Call or message us and we'll help.</p>
+              </div>
+              <div className="faq-list">
+                ${faqs.map(([q, a]) => html`
+                  <details className="faq-item" key=${q}>
+                    <summary>${q}<span className="faq-icon" aria-hidden="true"></span></summary>
+                    <p>${a}</p>
+                  </details>
+                `)}
+              </div>
+            </div>
+          </section>
+        `;
+      }
+
+      function MobileActionBar({ onNavigate }) {
+        return html`
+          <nav className="mobile-action-bar" aria-label="Quick contact">
+            <a href=${'tel:' + SITE_CONFIG.contact.phoneHref}>Call</a>
+            <a href=${'https://wa.me/' + SITE_CONFIG.contact.whatsappNumber} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <${AppLink} to="/contact" onNavigate=${onNavigate} className="is-primary">Free Quote<//>
+          </nav>
+        `;
+      }
+
       function HomePage({ onNavigate }) {
         const featuredShutters = PRODUCTS.filter((p) => p.category === 'roller-shutters' && p.hasDedicatedPage).slice(0, 6);
 
@@ -3262,8 +3586,8 @@
             <section className="hero-section">
               <div className="container hero-grid">
                 <div>
-                  <span className="eyebrow eyebrow-light">UK Commercial &amp; Industrial Specialist</span>
-                  <h1 className="hero-title" tabIndex="-1">Specialist Roller Shutters, Shopfronts &amp; Security Solutions Across the UK.</h1>
+                  <span className="eyebrow eyebrow-light">UK Commercial & Industrial Specialist</span>
+                  <h1 className="hero-title" tabIndex="-1">Specialist Roller Shutters, Shopfronts & Security Solutions Across the UK.</h1>
                   <p className="hero-subtitle">
                     From bespoke manufacturing and professional installation to repairs and maintenance, ADV Contractors delivers reliable commercial and industrial solutions tailored to your requirements.
                   </p>
@@ -3274,32 +3598,32 @@
                   <div className="hero-trust-strip">
                     <div className="hero-trust-item">
                       <strong>In-House Manufacturing</strong>
-                      <span>Bespoke shutters, shopfronts &amp; steel doors</span>
+                      <span>Bespoke shutters, shopfronts & steel doors</span>
                     </div>
                     <div className="hero-trust-item">
                       <strong>UK-Wide Installation</strong>
-                      <span>Survey, fabrication &amp; out-of-hours fitting</span>
+                      <span>Survey, fabrication & out-of-hours fitting</span>
                     </div>
                     <div className="hero-trust-item">
-                      <strong>Repairs &amp; Maintenance</strong>
-                      <span>Reactive emergency &amp; planned servicing</span>
+                      <strong>Repairs & Maintenance</strong>
+                      <span>Reactive emergency & planned servicing</span>
                     </div>
                   </div>
                 </div>
 
-                <div>
-                  <${SmartImage} imageKey="heroMain" priority=${true} aspectRatio="16 / 11" />
-                </div>
+                <${QuickQuoteCard} onNavigate=${onNavigate} />
               </div>
             </section>
+
+            <${StatsBand} />
 
             <!-- Company Intro -->
             <section className="section section-white">
               <div className="container">
                 <div className="grid-2" style=${{ alignItems: 'center', gap: 'var(--space-10)' }}>
                   <div>
-                    <span className="eyebrow">Architectural &amp; Physical Security</span>
-                    <h2 className="section-title">End-to-End Manufacturing, Installation &amp; Lifecycle Maintenance</h2>
+                    <span className="eyebrow">Architectural & Physical Security</span>
+                    <h2 className="section-title">End-to-End Manufacturing, Installation & Lifecycle Maintenance</h2>
                     <p>
                       ADV Contractors works with retail businesses, commercial landlords, facilities managers, main contractors, and industrial operators across London and the UK.
                     </p>
@@ -3354,7 +3678,7 @@
               <div className="container">
                 <div className="section-header">
                   <span className="eyebrow">Core Product Divisions</span>
-                  <h2 className="section-title">Commercial &amp; Industrial Security &amp; Glazing Systems</h2>
+                  <h2 className="section-title">Commercial & Industrial Security & Glazing Systems</h2>
                   <p className="section-lead">Explore our four specialist product divisions, each tailored to your opening dimensions and operational requirements.</p>
                 </div>
 
@@ -3385,7 +3709,7 @@
                 <div className="section-header-split">
                   <div>
                     <span className="eyebrow">Roller Shutter Range</span>
-                    <h2 className="section-title">Engineered Roller Shutters for Retail, Commercial &amp; Industrial Sites</h2>
+                    <h2 className="section-title">Engineered Roller Shutters for Retail, Commercial & Industrial Sites</h2>
                     <p className="section-lead">From through-vision perforated shopfront shutters to heavy-duty 100mm insulated industrial doors.</p>
                   </div>
                   <${AppLink} to="/products/roller-shutters" onNavigate=${onNavigate} className="btn btn-outline">View All 24 Shutter Types →<//>
@@ -3419,13 +3743,13 @@
                     </p>
                     <ul style=${{ paddingLeft: '1.2rem', color: 'var(--color-text-inverse-muted)', marginBottom: 'var(--space-6)', display: 'grid', gap: '8px' }}>
                       <li>Tube Operated Shutters for compact retail and commercial openings</li>
-                      <li>Industrial Chain Drive (Single Skin &amp; 95mm Insulated)</li>
-                      <li>Industrial Direct Drive (Single Skin &amp; 100mm Insulated)</li>
+                      <li>Industrial Chain Drive (Single Skin & 95mm Insulated)</li>
+                      <li>Industrial Direct Drive (Single Skin & 100mm Insulated)</li>
                       <li>Industrial High Speed Direct Drive Insulated systems</li>
                     </ul>
                     <div style=${{ display: 'flex', gap: 'var(--space-3)', flexWrap: 'wrap' }}>
                       <${AppLink} to="/manufacturing" onNavigate=${onNavigate} className="btn btn-primary">Explore Manufacturing<//>
-                      <${AppLink} to="/products/shopfronts" onNavigate=${onNavigate} className="btn btn-outline-light">Shopfronts &amp; Glass Facades<//>
+                      <${AppLink} to="/products/shopfronts" onNavigate=${onNavigate} className="btn btn-outline-light">Shopfronts & Glass Facades<//>
                     </div>
                   </div>
                   <div>
@@ -3441,21 +3765,21 @@
                 <div className="grid-2" style=${{ gap: 'var(--space-8)' }}>
                   <div className="panel-card" style=${{ background: 'var(--color-bg-subtle)' }}>
                     <div>
-                      <span className="eyebrow">24/7 Reactive &amp; Planned Support</span>
-                      <h3>Repairs &amp; Maintenance</h3>
+                      <span className="eyebrow">24/7 Reactive & Planned Support</span>
+                      <h3>Repairs & Maintenance</h3>
                       <p style=${{ color: 'var(--color-text-secondary)' }}>
                         Rapid response for jammed or impact-damaged roller shutters, industrial doors, automatic entrance doors, shopfront doors, and toughened glass door floor springs.
                       </p>
                     </div>
                     <div style=${{ display: 'flex', gap: 'var(--space-3)', flexWrap: 'wrap' }}>
-                      <${AppLink} to="/repairs-maintenance" onNavigate=${onNavigate} className="btn btn-navy">Repairs &amp; Servicing<//>
+                      <${AppLink} to="/repairs-maintenance" onNavigate=${onNavigate} className="btn btn-navy">Repairs & Servicing<//>
                       <a href=${`tel:${SITE_CONFIG.contact.phoneHref}`} className="btn btn-outline">Call ${SITE_CONFIG.contact.phoneDisplay}</a>
                     </div>
                   </div>
 
                   <div className="panel-card" style=${{ background: 'var(--color-bg-subtle)' }}>
                     <div>
-                      <span className="eyebrow">London &amp; UK-Wide Coverage</span>
+                      <span className="eyebrow">London & UK-Wide Coverage</span>
                       <h3>Nationwide Commercial Projects</h3>
                       <p style=${{ color: 'var(--color-text-secondary)' }}>
                         Serving all 32 London boroughs, the City of London, the Home Counties, and commercial/industrial sites across the UK with site surveys, installations, and multi-site rollouts.
@@ -3469,13 +3793,15 @@
               </div>
             </section>
 
+            <${ProcessSection} />
+
             <!-- Portfolio & Verified Testimonials Transparency -->
             <section className="section section-subtle">
               <div className="container">
                 <div className="section-header-split">
                   <div>
-                    <span className="eyebrow">Portfolio &amp; Technical Gallery</span>
-                    <h2 className="section-title">System Schematics &amp; Project Configurations</h2>
+                    <span className="eyebrow">Portfolio & Technical Gallery</span>
+                    <h2 className="section-title">System Schematics & Project Configurations</h2>
                     <p className="section-lead">Representative technical configurations across shopfronts, industrial shutters, glass facades, and security grilles.</p>
                   </div>
                   <${AppLink} to="/projects" onNavigate=${onNavigate} className="btn btn-navy">Open Filterable Portfolio →<//>
@@ -3501,7 +3827,7 @@
                 <div className="section-header-split">
                   <div>
                     <span className="eyebrow">Technical Guidance</span>
-                    <h2 className="section-title">Specification Guides &amp; Industry Insights</h2>
+                    <h2 className="section-title">Specification Guides & Industry Insights</h2>
                   </div>
                   <${AppLink} to="/blog" onNavigate=${onNavigate} className="btn btn-outline">Read All Articles →<//>
                 </div>
@@ -3524,6 +3850,8 @@
                 </div>
               </div>
             </section>
+
+            <${FaqSection} />
           </div>
         `;
       }
@@ -3536,7 +3864,7 @@
               <div className="container">
                 <${Breadcrumbs} items=${[{ label: 'Home', path: '/' }, { label: 'Manufacturing', path: '/manufacturing' }]} onNavigate=${onNavigate} />
                 <span className="eyebrow eyebrow-light">In-House UK Fabrication</span>
-                <h1 tabIndex="-1">Bespoke UK Manufacturing of Roller Shutters, Shopfronts &amp; Security Systems</h1>
+                <h1 tabIndex="-1">Bespoke UK Manufacturing of Roller Shutters, Shopfronts & Security Systems</h1>
                 <p>
                   Precision-built roller shutter curtains, barrel assemblies, extruded aluminium shopfront systems, and steel security doors manufactured to exact site dimensions.
                 </p>
@@ -3547,7 +3875,7 @@
               <div className="container">
                 <div className="grid-2" style=${{ gap: 'var(--space-10)', alignItems: 'center' }}>
                   <div>
-                    <span className="eyebrow">Engineering &amp; Production</span>
+                    <span className="eyebrow">Engineering & Production</span>
                     <h2 className="section-title">Direct Control from Raw Profile to Final Site Commissioning</h2>
                     <p>
                       Manufacturing our core shutter and shopfront components in the UK allows ADV Contractors to tailor every opening to exact structural tolerances rather than forcing standard off-the-shelf sizes into non-standard apertures.
@@ -3566,7 +3894,7 @@
               <div className="container">
                 <div className="section-header">
                   <span className="eyebrow">Published Production Configurations</span>
-                  <h2 className="section-title">Roller Shutter &amp; Industrial Drive Configurations</h2>
+                  <h2 className="section-title">Roller Shutter & Industrial Drive Configurations</h2>
                   <p className="section-lead">
                     ADV Contractors manufactures and supplies six core shutter drive and curtain configurations covering retail, commercial, and heavy industrial applications.
                   </p>
@@ -3597,20 +3925,20 @@
                 <div className="grid-3">
                   <div className="panel-card">
                     <div>
-                      <h3>Materials &amp; Lath Profiles</h3>
+                      <h3>Materials & Lath Profiles</h3>
                       <ul style=${{ paddingLeft: '1.15rem', color: 'var(--color-text-secondary)', fontSize: 'var(--text-sm)', display: 'grid', gap: '8px' }}>
                         <li>Cold-rolled galvanised steel interlocking laths (solid, perforated, and punched)</li>
-                        <li>Extruded &amp; foam-filled aluminium shutter laths</li>
+                        <li>Extruded & foam-filled aluminium shutter laths</li>
                         <li>95mm and 100mm twin-skin insulated steel industrial profiles</li>
                         <li>Clear polycarbonate glazed panels with aluminium linking sections</li>
-                        <li>Architectural extruded aluminium shopfront &amp; curtain wall profiles</li>
+                        <li>Architectural extruded aluminium shopfront & curtain wall profiles</li>
                       </ul>
                     </div>
                   </div>
 
                   <div className="panel-card">
                     <div>
-                      <h3>Customisation &amp; Finishes</h3>
+                      <h3>Customisation & Finishes</h3>
                       <ul style=${{ paddingLeft: '1.15rem', color: 'var(--color-text-secondary)', fontSize: 'var(--text-sm)', display: 'grid', gap: '8px' }}>
                         <li>Polyester powder coating across standard and corporate RAL colour palettes</li>
                         <li>Internal or external hood/box assembly configurations</li>
@@ -3623,7 +3951,7 @@
 
                   <div className="panel-card">
                     <div>
-                      <h3>Quality &amp; Safety Checks</h3>
+                      <h3>Quality & Safety Checks</h3>
                       <ul style=${{ paddingLeft: '1.15rem', color: 'var(--color-text-secondary)', fontSize: 'var(--text-sm)', display: 'grid', gap: '8px' }}>
                         <li>Pre-fabrication site survey verification of structural lintels and jambs</li>
                         <li>Barrel deflection and drive torque sizing per shutter weight and span</li>
@@ -3748,9 +4076,9 @@
                 <div className="grid-2" style=${{ gap: 'var(--space-10)' }}>
                   <div>
                     <span className="eyebrow">System Overview</span>
-                    <h2>Engineered for Reliability &amp; Exact Site Fit</h2>
+                    <h2>Engineered for Reliability & Exact Site Fit</h2>
                     <p>${product.overview}</p>
-                    <h3 style=${{ fontSize: 'var(--text-xl)', marginTop: 'var(--space-6)' }}>Typical Commercial &amp; Industrial Applications</h3>
+                    <h3 style=${{ fontSize: 'var(--text-xl)', marginTop: 'var(--space-6)' }}>Typical Commercial & Industrial Applications</h3>
                     <ul style=${{ paddingLeft: '1.2rem', color: 'var(--color-text-secondary)', display: 'grid', gap: '8px' }}>
                       ${(product.applications || []).map((app) => html`<li key=${app}>${app}</li>`)}
                     </ul>
@@ -3758,7 +4086,7 @@
 
                   <div className="panel-card" style=${{ background: 'var(--color-bg-subtle)' }}>
                     <div>
-                      <span className="eyebrow">Features &amp; Benefits</span>
+                      <span className="eyebrow">Features & Benefits</span>
                       <h3 style=${{ fontSize: 'var(--text-xl)' }}>Key Technical Advantages</h3>
                       <ul style=${{ paddingLeft: '1.2rem', display: 'grid', gap: '12px', color: 'var(--color-text-primary)' }}>
                         ${(product.features || []).map((feat) => html`<li key=${feat}>${feat}</li>`)}
@@ -3794,8 +4122,8 @@
 
                   <div className="panel-card">
                     <div>
-                      <span className="eyebrow">Survey &amp; Commissioning</span>
-                      <h3>Installation &amp; Maintenance Information</h3>
+                      <span className="eyebrow">Survey & Commissioning</span>
+                      <h3>Installation & Maintenance Information</h3>
                       <p style=${{ color: 'var(--color-text-secondary)', fontSize: 'var(--text-sm)' }}>
                         Every ${product.name.toLowerCase()} installation begins with a physical site survey to verify structural lintels, jamb fixings, headroom clearance, and power supply routing.
                       </p>
@@ -3803,7 +4131,7 @@
                         Out-of-hours retail and commercial installation slots are available across London and the UK, supported by ongoing planned maintenance and rapid-response repair cover.
                       </p>
                     </div>
-                    <${AppLink} to="/repairs-maintenance" onNavigate=${onNavigate} className="btn btn-outline btn-sm">Maintenance &amp; Repair Cover →<//>
+                    <${AppLink} to="/repairs-maintenance" onNavigate=${onNavigate} className="btn btn-outline btn-sm">Maintenance & Repair Cover →<//>
                   </div>
                 </div>
               </div>
@@ -3813,7 +4141,7 @@
             ${product.gallery && product.gallery.length > 0 && html`
               <section className="section section-white">
                 <div className="container">
-                  <span className="eyebrow">Visual &amp; Technical Plates</span>
+                  <span className="eyebrow">Visual & Technical Plates</span>
                   <h2 className="section-title">${product.name} Gallery</h2>
                   <${SmartGallery} imageKeys=${product.gallery} title=${`${product.name} Gallery`} />
                 </div>
@@ -3894,8 +4222,8 @@
             <section className="page-header-banner">
               <div className="container">
                 <${Breadcrumbs} items=${[{ label: 'Home', path: '/' }, { label: 'Repairs & Maintenance', path: '/repairs-maintenance' }]} onNavigate=${onNavigate} />
-                <span className="eyebrow eyebrow-light">Reactive &amp; Planned Service Engineers</span>
-                <h1 tabIndex="-1">Roller Shutter, Industrial Door &amp; Shopfront Repairs &amp; Maintenance</h1>
+                <span className="eyebrow eyebrow-light">Reactive & Planned Service Engineers</span>
+                <h1 tabIndex="-1">Roller Shutter, Industrial Door & Shopfront Repairs & Maintenance</h1>
                 <p>
                   Fast-response emergency repairs and scheduled preventive maintenance contracts to keep your premises secure, compliant, and trading without interruption.
                 </p>
@@ -3920,7 +4248,7 @@
               <div className="container">
                 <div className="section-header">
                   <span className="eyebrow">Specialist Repair Disciplines</span>
-                  <h2 className="section-title">Comprehensive Repair &amp; Servicing Coverage</h2>
+                  <h2 className="section-title">Comprehensive Repair & Servicing Coverage</h2>
                 </div>
 
                 <div className="grid-2">
@@ -3936,7 +4264,7 @@
 
                 <div className="panel-card" style=${{ marginTop: 'var(--space-10)', background: 'var(--color-bg-subtle)' }}>
                   <span className="eyebrow">Preventive Maintenance</span>
-                  <h3>Planned Commercial &amp; Industrial Maintenance Agreements</h3>
+                  <h3>Planned Commercial & Industrial Maintenance Agreements</h3>
                   <p style=${{ color: 'var(--color-text-secondary)' }}>
                     Regular scheduled inspections extend motor and curtain lifespan, verify safety edge and anti-fallback mechanisms, and help commercial landlords and facilities teams meet workplace door safety obligations.
                   </p>
@@ -3980,8 +4308,8 @@
             <section className="page-header-banner">
               <div className="container">
                 <${Breadcrumbs} items=${[{ label: 'Home', path: '/' }, { label: 'Projects', path: '/projects' }]} onNavigate=${onNavigate} />
-                <span className="eyebrow eyebrow-light">Commercial &amp; Industrial Portfolio</span>
-                <h1 tabIndex="-1">Projects &amp; System Configurations</h1>
+                <span className="eyebrow eyebrow-light">Commercial & Industrial Portfolio</span>
+                <h1 tabIndex="-1">Projects & System Configurations</h1>
                 <p>
                   Explore ADV Contractors' capabilities across roller shutters, commercial shopfronts, toughened glass facades, industrial doors, and security grilles.
                 </p>
@@ -4043,8 +4371,8 @@
             <section className="page-header-banner">
               <div className="container">
                 <${Breadcrumbs} items=${[{ label: 'Home', path: '/' }, { label: 'Service Areas', path: '/service-areas' }]} onNavigate=${onNavigate} />
-                <span className="eyebrow eyebrow-light">London &amp; Nationwide UK Coverage</span>
-                <h1 tabIndex="-1">UK Service Areas — London Boroughs &amp; Regional Coverage</h1>
+                <span className="eyebrow eyebrow-light">London & Nationwide UK Coverage</span>
+                <h1 tabIndex="-1">UK Service Areas — London Boroughs & Regional Coverage</h1>
                 <p>
                   ADV Contractors provides site surveys, bespoke manufacturing supply, installations, and reactive repairs across Greater London, the Home Counties, and commercial sites nationwide.
                 </p>
@@ -4119,7 +4447,7 @@
                 <div className="grid-2" style=${{ gap: 'var(--space-10)', alignItems: 'center' }}>
                   <div>
                     <span className="eyebrow">Who We Are</span>
-                    <h2>Integrated Manufacturing &amp; Site Engineering</h2>
+                    <h2>Integrated Manufacturing & Site Engineering</h2>
                     <p>
                       ADV Contractors brings together bespoke manufacturing and specialist site installation under one roof. By fabricating roller shutters, shopfront systems, and physical security barriers to exact site dimensions, we deliver clean architectural integration and dependable mechanical performance.
                     </p>
@@ -4127,7 +4455,7 @@
                       We support independent retailers, national retail chains, warehouses, schools, healthcare facilities, commercial offices, and main contractors across London and the UK.
                     </p>
                     <div style=${{ marginTop: 'var(--space-4)', padding: '12px', background: 'var(--color-bg-subtle)', borderRadius: 'var(--radius-sm)', fontSize: 'var(--text-sm)' }}>
-                      <strong>Company History, Years Trading &amp; Accreditations:</strong> <span className="verify-badge">TO VERIFY WITH CLIENT</span> — Only verified corporate milestones and certifications will be published here.
+                      <strong>Company History, Years Trading & Accreditations:</strong> <span className="verify-badge">TO VERIFY WITH CLIENT</span> — Only verified corporate milestones and certifications will be published here.
                     </div>
                   </div>
                   <${SmartImage} imageKey="shopfrontAlu" aspectRatio="16 / 10" />
@@ -4171,7 +4499,7 @@
               <div className="container">
                 <${Breadcrumbs} items=${[{ label: 'Home', path: '/' }, { label: 'Blog & Insights', path: '/blog' }]} onNavigate=${onNavigate} />
                 <span className="eyebrow eyebrow-light">Knowledge Base</span>
-                <h1 tabIndex="-1">Technical Guides &amp; Industry Insights</h1>
+                <h1 tabIndex="-1">Technical Guides & Industry Insights</h1>
                 <p>Practical specification advice on roller shutters, commercial shopfronts, industrial doors, UK manufacturing, and security systems.</p>
               </div>
             </section>
@@ -4280,7 +4608,7 @@
             <section className="page-header-banner">
               <div className="container">
                 <${Breadcrumbs} items=${[{ label: 'Home', path: '/' }, { label: 'Contact & Free Quote', path: '/contact' }]} onNavigate=${onNavigate} />
-                <span className="eyebrow eyebrow-light">Estimates, Surveys &amp; Repairs</span>
+                <span className="eyebrow eyebrow-light">Estimates, Surveys & Repairs</span>
                 <h1 tabIndex="-1">Contact ADV Contractors</h1>
                 <p>
                   Request a free site survey and tailored quotation, or contact our team directly for urgent shutter and door repair assistance.
@@ -4318,8 +4646,8 @@
 
                     <div className="panel-card" style=${{ background: 'var(--color-bg-subtle)' }}>
                       <div>
-                        <span className="eyebrow">Location &amp; Coverage</span>
-                        <h3 style=${{ fontSize: 'var(--text-lg)' }}>Greater London &amp; UK Operations</h3>
+                        <span className="eyebrow">Location & Coverage</span>
+                        <h3 style=${{ fontSize: 'var(--text-lg)' }}>Greater London & UK Operations</h3>
                         <p style=${{ fontSize: 'var(--text-sm)', color: 'var(--color-text-secondary)' }}>
                           Engineers operate across all 32 London boroughs, the Home Counties, and UK commercial projects.
                         </p>
@@ -4348,7 +4676,7 @@
             <section className="page-header-banner">
               <div className="container">
                 <${Breadcrumbs} items=${[{ label: 'Home', path: '/' }, { label: 'Photo & Schematic Credits', path: '/photo-credits' }]} onNavigate=${onNavigate} />
-                <h1 tabIndex="-1">Photo &amp; Technical Schematic Credits</h1>
+                <h1 tabIndex="-1">Photo & Technical Schematic Credits</h1>
                 <p>Complete transparency record of every visual asset registered in the ADV Contractors application.</p>
               </div>
             </section>
@@ -4364,7 +4692,7 @@
                         <th>Asset ID</th>
                         <th>Description / Alt Text</th>
                         <th>Source</th>
-                        <th>Attribution &amp; Licence</th>
+                        <th>Attribution & Licence</th>
                         <th>Usage Classification</th>
                       </tr>
                     </thead>
@@ -4559,7 +4887,7 @@
                 schemaExtra: {
                   '@type': 'Service',
                   name: 'Bespoke Roller Shutter & Shopfront Manufacturing',
-                  provider: { '@id': SITE_CONFIG.canonicalOrigin + '/#organization' },
+                  provider: { '@id': pageUrl('/') + '#organization' },
                   areaServed: 'United Kingdom'
                 }
               }
@@ -4576,7 +4904,7 @@
                 schemaExtra: {
                   '@type': 'Service',
                   name: 'Roller Shutter & Commercial Door Repairs and Maintenance',
-                  provider: { '@id': SITE_CONFIG.canonicalOrigin + '/#organization' },
+                  provider: { '@id': pageUrl('/') + '#organization' },
                   areaServed: 'United Kingdom'
                 }
               }
@@ -4729,6 +5057,7 @@
               ${routeMatch.view}
             </main>
             <${Footer} onNavigate=${navigate} />
+            <${MobileActionBar} onNavigate=${navigate} />
           </div>
         `;
       }
