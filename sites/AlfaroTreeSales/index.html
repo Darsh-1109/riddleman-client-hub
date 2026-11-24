@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfaro Tree Sales Inc. | Premium Tree Farm & Nursery in Atascosa, Texas</title>
+    <meta name="description" content="Alfaro Tree Sales Inc. is a family-owned tree farm and nursery in Atascosa, TX, specializing in quality shade, ornamental, and mature trees for residential and wholesale landscaping projects across Texas.">
+    <meta name="keywords" content="Tree Farm Texas, Tree Nursery Atascosa TX, Tree Sales San Antonio, Mature Trees for Sale Texas, Shade Trees for Sale Texas, Live Oak Trees Texas, Tree Delivery San Antonio, Tree Planting Services Texas, Mature Tree Relocation Texas, Wholesale Trees Texas">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Alfaro Tree Sales Inc. | Rooted in Texas. Growing for Generations.">
+    <meta property="og:description" content="Quality trees, thoughtful selection and professional planting — backed by decades of experience growing trees for Texas landscapes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.alfarotrees.com/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Local Business Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Alfaro Tree Sales Inc.",
+      "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10835 Pearsall Road",
+        "addressLocality": "Atascosa",
+        "addressRegion": "TX",
+        "postalCode": "78002",
+        "addressCountry": "US"
+      },
+      "email": "ej_alfaro@hotmail.com",
+      "url": "https://www.alfarotrees.com/",
+      "foundingDate": "1977",
+      "description": "Family-owned tree farm and nursery in Atascosa, Texas, specializing in quality field-grown and mature trees, professional tree delivery, planting, and relocation services."
+    }
+    </script>
+
+    <style>
+        /* =========================================
+           CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --warm-ivory: #FAF9F3;
+            --soft-cream: #F2EFE5;
+            --pale-sage: #DCE5D5;
+            --natural-sage: #91A486;
+            --leaf-green: #6F8B54;
+            --deep-forest: #244633;
+            --earth-brown: #795B42;
+            --bark-brown: #A17A59;
+            --charcoal: #303831;
+            --white: #FFFFFF;
+            
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --transition: all 0.3s ease;
+            --shadow-sm: 0 2px 8px rgba(36, 70, 51, 0.06);
+            --shadow-md: 0 8px 24px rgba(36, 70, 51, 0.1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--warm-ivory);
+            color: var(--charcoal);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--deep-forest);
+            line-height: 1.2;
+            font-weight: 600;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        
+        p { margin-bottom: 1.25rem; color: #4a5550; }
+        
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* =========================================
+           UTILITIES & LAYOUT
+           ========================================= */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        .bg-cream { background-color: var(--soft-cream); }
+        .bg-sage { background-color: var(--pale-sage); }
+        .bg-forest { background-color: var(--deep-forest); color: var(--warm-ivory); }
+        .bg-forest h2, .bg-forest h3, .bg-forest p { color: var(--warm-ivory); }
+        .bg-forest p { opacity: 0.9; }
+
+        .text-center { text-align: center; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--deep-forest);
+            color: var(--white);
+            border-color: var(--deep-forest);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--leaf-green);
+            border-color: var(--leaf-green);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--deep-forest);
+            border-color: var(--deep-forest);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--deep-forest);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .btn-light {
+            background-color: var(--warm-ivory);
+            color: var(--deep-forest);
+            border-color: var(--warm-ivory);
+        }
+
+        .btn-light:hover {
+            background-color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(250, 249, 243, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--deep-forest);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--leaf-green);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--charcoal);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--leaf-green);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--deep-forest);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background-color: var(--deep-forest);
+            transition: var(--transition);
+        }
+
+        .hamburger::before { top: -8px; }
+        .hamburger::after { top: 8px; }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(rgba(36, 70, 51, 0.4), rgba(36, 70, 51, 0.5)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* =========================================
+           SECTIONS: ABOUT, SERVICES, ETC.
+           ========================================= */
+        .section-header {
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+            text-align: center;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--earth-brown);
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-content h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--charcoal);
+        }
+
+        .highlight-list li::before {
+            content: '🌿';
+            position: absolute;
+            left: 0;
+            font-size: 1rem;
+        }
+
+        /* Tree Collection */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            background-color: transparent;
+            border: 1px solid var(--natural-sage);
+            color: var(--deep-forest);
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: var(--font-body);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--deep-forest);
+            color: var(--white);
+            border-color: var(--deep-forest);
+        }
+
+        .tree-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .tree-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tree-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .tree-card-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .tree-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .tree-card:hover .tree-card-image img {
+            transform: scale(1.05);
+        }
+
+        .tree-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tree-card-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tree-card-content .botanical {
+            font-style: italic;
+            color: var(--earth-brown);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .tree-card-content p {
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .tree-card-footer {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--pale-sage);
+        }
+
+        .inventory-note {
+            text-align: center;
+            margin-top: 3rem;
+            font-style: italic;
+            color: var(--earth-brown);
+            font-size: 0.9rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border-top: 4px solid var(--leaf-green);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--deep-forest);
+        }
+
+        /* Why Choose Us */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .why-item h4 {
+            color: var(--deep-forest);
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 250px;
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+        .gallery-item:nth-child(4) { grid-column: span 2; }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(36, 70, 51, 0.4);
+            opacity: 0;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Service Area */
+        .area-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .area-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .area-list li {
+            list-style: none;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--pale-sage);
+            color: var(--charcoal);
+        }
+
+        /* Forms */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--deep-forest);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.85rem;
+            border: 1px solid var(--pale-sage);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            background-color: var(--white);
+            transition: var(--transition);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--leaf-green);
+            box-shadow: 0 0 0 3px rgba(111, 139, 84, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--charcoal);
+            color: var(--soft-cream);
+            padding: 4rem 0 2rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col p {
+            color: rgba(242, 239, 229, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(242, 239, 229, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--natural-sage);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(242, 239, 229, 0.5);
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            background-color: var(--deep-forest);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: var(--shadow-md);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--leaf-green);
+            transform: translateY(-3px);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 4px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 992px) {
+            .about-grid, .area-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 200px;
+            }
+            
+            .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+            .gallery-item:nth-child(4) { grid-column: span 1; }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1001;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: var(--warm-ivory);
+                flex-direction: column;
+                padding: 6rem 2rem 2rem 2rem;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                transition: right 0.3s ease;
+                align-items: flex-start;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hamburger.active {
+                background-color: transparent;
+            }
+
+            .hamburger.active::before {
+                transform: rotate(45deg);
+                top: 0;
+            }
+
+            .hamburger.active::after {
+                transform: rotate(-45deg);
+                top: 0;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                🌳 Alfaro <span>Tree Sales</span>
+            </a>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#inventory">Tree Inventory</a></li>
+                <li><a href="#services">Tree Planting</a></li>
+                <li><a href="#relocation">Tree Relocation</a></li>
+                <li><a href="#wholesale">Wholesale</a></li>
+                <li><a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Get a Tree Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Rooted in Texas. Growing for Generations.</h1>
+            <p>Quality trees, thoughtful selection and professional planting — backed by decades of experience growing trees for Texas landscapes.</p>
+            <div class="hero-buttons">
+                <a href="#inventory" class="btn btn-light">Explore Our Trees</a>
+                <a href="#contact" class="btn btn-primary" style="background-color: var(--leaf-green); border-color: var(--leaf-green);">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Introduction -->
+    <section id="about" class="section-padding bg-cream">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80" alt="Alfaro Tree Sales nursery and tree farm operations in Texas">
+                </div>
+                <div class="about-content fade-in-up">
+                    <h2>Decades of Growing. Generations of Experience.</h2>
+                    <p>Since 1977, Alfaro Tree Sales has been dedicated to growing and supplying quality trees. Founded by Erasmo Alfaro and his family, the business has developed through years of hands-on experience, a commitment to tree growing, and a passion for helping customers bring lasting greenery to their properties.</p>
+                    <p>From our South Texas roots, we have grown into a comprehensive tree supply business, serving homeowners, landscaping professionals, contractors, and larger property projects across the region.</p>
+                    <ul class="highlight-list">
+                        <li>Family-owned heritage since 1977</li>
+                        <li>Extensive tree farm and nursery operations</li>
+                        <li>Specialized knowledge of Texas-adapted species</li>
+                        <li>Dedicated support for residential and professional buyers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tree Collection -->
+    <section id="inventory" class="section-padding">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Find the Right Tree for Your Landscape</h2>
+                <p>Explore our curated selection of field-grown and nursery-cultivated trees, chosen for their resilience and beauty in Texas conditions.</p>
+            </div>
+
+            <div class="filter-buttons fade-in-up">
+                <button class="filter-btn active" data-filter="all">All Trees</button>
+                <button class="filter-btn" data-filter="shade">Shade Trees</button>
+                <button class="filter-btn" data-filter="ornamental">Ornamental</button>
+                <button class="filter-btn" data-filter="privacy">Privacy</button>
+                <button class="filter-btn" data-filter="palm">Palm Trees</button>
+                <button class="filter-btn" data-filter="native">Native & Adapted</button>
+            </div>
+
+            <div class="tree-grid" id="treeGrid">
+                <!-- Shade Trees -->
+                <div class="tree-card fade-in-up" data-category="shade native">
+                    <div class="tree-card-image">
+                        <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae68?auto=format&fit=crop&w=600&q=80" alt="Live Oak Tree">
+                    </div>
+                    <div class="tree-card-content">
+                        <h3>Live Oak</h3>
+                        <p class="botanical">Quercus virginiana</p>
+                        <p>A majestic, long-lasting shade tree iconic to Texas landscapes. Drought-tolerant once established, providing broad, dense canopy coverage.</p>
+                        <div class="tree-card-footer">
+                            <a href="#contact" class="btn btn-secondary" style="width: 100%; padding: 0.6rem;">Enquire About Availability</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tree-card fade-in-up" data-category="shade">
+                    <div class="tree-card-image">
+                        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=600&q=80" alt="Texas Red Oak">
+                    </div>
+                    <div class="tree-card-content">
+                        <h3>Texas Red Oak</h3>
+                        <p class="botanical">Quercus buckleyi</p>
+                        <p>Known for its brilliant fall color and strong structure. An excellent choice for residential shade and street planting.</p>
+                        <div class="tree-card-footer">
+                            <a href="#contact" class="btn btn-secondary" style="width: 100%; padding: 0.6rem;">Enquire About Availability</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tree-card fade-in-up" data-category="shade native">
+                    <div class="tree-card-image">
+                        <img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?auto=format&fit=crop&w=600&q=80" alt="Cedar Elm">
+                    </div>
+                    <div class="tree-card-content">
+                        <h3>Cedar Elm</h3>
+                        <p class="botanical">Ulmus crassifolia</p>
+                        <p>A tough, native Texas tree with a distinctive upright, vase-shaped habit. Highly adaptable to various soil conditions.</p>
+                        <div class="tree-card-footer">
+                            <a href="#contact" class="btn btn-secondary" style="width: 100%; padding: 0.6rem;">Enquire About Availability</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ornamental -->
+                <div class="tree-card fade-in-up" data-category="ornamental">
+                    <div class="tree-card-image">
+                        <img src="https://images.unsplash.com/photo-1596329705869-135c132a46c8?auto=format&fit=crop&w=600&q=80" alt="Crape Myrtle">
+                    </div>
+                    <div class="tree-card-content">
+                        <h3>Crape Myrtle</h3>
+                        <p class="botanical">Lagerstroemia indica</p>
+                        <p>Provides stunning summer blooms, attractive bark, and vibrant fall foliage. Available in various sizes and flower colors.</p>
+                        <div class="tree-card-footer">
+                            <a href="#contact" class="btn btn-secondary" style="width: 100%; padding: 0.6rem;">Enquire About Availability</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tree-card fade-in-up" data-category="ornamental native">
+                    <div class="tree-card-image">
+                        <img src="https://images.unsplash.com/photo-1598902104334-17d8a44a61c6?auto=format&fit=crop&w=600&q=80" alt="Texas Mountain Laurel">
+                    </div>
+                    <div class="tree-card-content">
+                        <h3>Texas Mountain Laurel</h3>
+                        <p class="botanical">Dermatophyllum secundiflorum</p>
+                        <p>A slow-growing, evergreen shrub or small tree famous for its fragrant, grape-scented purple flowers in early spring.</p>
+                        <div class="tree-card-footer">
+                            <a href="#contact" class="btn btn-secondary" style="width: 100%; padding: 0.6rem;">Enquire About Availability</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Privacy -->
+                <div class="tree-card fade-in-up" data-category="privacy">
+                    <div class="tree-card-image">
+                        <img src="https://images.unsplash.com/photo-1516205651411-a427963b6516?auto=format&fit=crop&w=600&q=80" alt="Privacy Screening Trees">
+                    </div>
+                    <div class="tree-card-content">
+                        <h3>Evergreen Privacy Varieties</h3>
+                        <p class="botanical">Various species</p>
+                        <p>Dense, year-round foliage varieties ideal for creating natural property boundaries, windbreaks, and privacy screens.</p>
+                        <div class="tree-card-footer">
+                            <a href="#contact" class="btn btn-secondary" style="width: 100%; padding: 0.6rem;">Enquire About Availability</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="inventory-note">* Tree availability, sizes, and specific varieties change seasonally. Please contact us to verify current inventory and pricing for your specific project needs.</p>
+        </div>
+    </section>
+
+    <!-- Tree Selection Assistance -->
+    <section class="section-padding bg-sage">
+        <div class="container text-center fade-in-up">
+            <h2>Not Sure Which Tree Is Right for Your Property?</h2>
+            <p style="max-width: 700px; margin: 0 auto 2rem auto;">Every property is different. Our team can help you explore tree options based on your location, landscape goals, soil conditions, sun exposure, and available space.</p>
+            <a href="#contact" class="btn btn-primary">Get Help Choosing a Tree</a>
+        </div>
+    </section>
+
+    <!-- Tree Sales, Delivery & Planting -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>From the Tree Farm to Your Property</h2>
+                <p>We provide a complete purchase and planting solution, ensuring your trees are handled with care from selection to establishment.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">🌱</div>
+                    <h3>Tree Sales</h3>
+                    <p>Retail and bulk tree sales featuring mature and field-grown selections. We provide expert assistance in choosing the right varieties for your specific site conditions.</p>
+                </div>
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">🚛</div>
+                    <h3>Tree Delivery</h3>
+                    <p>Coordinated transport for residential and larger commercial projects. We plan delivery logistics carefully according to tree size, access, and location requirements.</p>
+                </div>
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Professional Planting</h3>
+                    <p>Expert tree installation including site preparation, appropriate planting depth, soil amendment, staking where required, and post-planting watering guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mature Tree Relocation -->
+    <section id="relocation" class="section-padding bg-forest">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content fade-in-up">
+                    <h2>Moving Mature Trees Requires Experience</h2>
+                    <p>Sometimes an established tree needs a new location. Alfaro Tree Sales provides tree relocation services for customers looking to move mature trees as part of property improvements, landscaping projects, or site changes.</p>
+                    <ul class="highlight-list" style="color: var(--warm-ivory);">
+                        <li style="color: var(--warm-ivory);">Careful handling and root system preservation</li>
+                        <li style="color: var(--warm-ivory);">Comprehensive site assessment and relocation planning</li>
+                        <li style="color: var(--warm-ivory);">Suitable for residential and larger property applications</li>
+                    </ul>
+                    <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.8;">* Relocation success depends on species, tree health, and site conditions. We assess each project individually.</p>
+                </div>
+                <div class="about-image fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1611735341450-74d61e66eead?auto=format&fit=crop&w=800&q=80" alt="Professional mature tree relocation and planting services">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wholesale Tree Supply -->
+    <section id="wholesale" class="section-padding bg-cream">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Quality Tree Supply for Landscaping Professionals</h2>
+                <p>Whether you're sourcing trees for a residential landscape or coordinating a larger development, Alfaro Tree Sales can help you explore tree availability and supply requirements.</p>
+            </div>
+            <div class="services-grid" style="margin-bottom: 3rem;">
+                <div class="service-card fade-in-up">
+                    <h3>For Contractors & Designers</h3>
+                    <p>Reliable sourcing of specific varieties and sizes to meet your project specifications and timelines.</p>
+                </div>
+                <div class="service-card fade-in-up">
+                    <h3>For Developers & Builders</h3>
+                    <p>Large-quantity order coordination, project-specific selection, and scheduled delivery to keep your development on track.</p>
+                </div>
+                <div class="service-card fade-in-up">
+                    <h3>Professional Accounts</h3>
+                    <p>Dedicated support for commercial property managers and recurring wholesale buyers.</p>
+                </div>
+            </div>
+            <div class="text-center fade-in-up">
+                <a href="#contact" class="btn btn-primary">Enquire About Wholesale Supply</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Why Choose Alfaro Tree Sales?</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-item fade-in-up">
+                    <h4>Family-Owned Heritage</h4>
+                    <p>A business built on generations of hands-on tree-growing experience since 1977.</p>
+                </div>
+                <div class="why-item fade-in-up">
+                    <h4>Tree Farm Selection</h4>
+                    <p>Direct access to a broad selection of nursery-grown and mature, field-grown trees.</p>
+                </div>
+                <div class="why-item fade-in-up">
+                    <h4>Expert Tree Knowledge</h4>
+                    <p>Guidance on selecting trees specifically suited to your property's regional growing conditions.</p>
+                </div>
+                <div class="why-item fade-in-up">
+                    <h4>Delivery & Planting</h4>
+                    <p>Comprehensive options for customers who want their trees professionally delivered and planted.</p>
+                </div>
+                <div class="why-item fade-in-up">
+                    <h4>Mature Tree Relocation</h4>
+                    <p>Specialised, careful support for projects requiring the movement of established trees.</p>
+                </div>
+                <div class="why-item fade-in-up">
+                    <h4>Residential & Professional</h4>
+                    <p>Tailored solutions for individual homeowners and large-scale landscaping requirements alike.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Tree Farm Gallery -->
+    <section class="section-padding bg-sage">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Where Every Tree Begins</h2>
+                <p>A glimpse into our nursery operations, tree preparation, and the scale of our Texas tree farm.</p>
+            </div>
+            <div class="gallery-grid fade-in-up">
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Rows of mature trees growing in the nursery">
+                    <div class="gallery-overlay">View</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80" alt="Tree farm inventory and preparation">
+                    <div class="gallery-overlay">View</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=600&q=80" alt="Mature specimen tree in field">
+                    <div class="gallery-overlay">View</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1611735341450-74d61e66eead?auto=format&fit=crop&w=800&q=80" alt="Professional tree loading and delivery operations">
+                    <div class="gallery-overlay">View</div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae68?auto=format&fit=crop&w=600&q=80" alt="Established oak tree landscape">
+                    <div class="gallery-overlay">View</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="area-content">
+                <div class="fade-in-up">
+                    <h2>Serving Customers Across Texas</h2>
+                    <p>From our base in Atascosa, we proudly supply and deliver quality trees to a wide network of residential and commercial clients. We also coordinate shipping across the southern United States for specific project requirements.</p>
+                    <ul class="area-list">
+                        <li>South Texas</li>
+                        <li>Central Texas</li>
+                        <li>Texas Hill Country</li>
+                        <li>San Antonio</li>
+                        <li>Austin</li>
+                        <li>Houston</li>
+                        <li>Dallas–Fort Worth</li>
+                        <li>Wider Southern US (by arrangement)</li>
+                    </ul>
+                    <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--earth-brown);">* Delivery availability, tree sizes, and shipping arrangements vary. Please contact us to confirm service to your specific location.</p>
+                </div>
+                <div class="fade-in-up" style="background-color: var(--pale-sage); height: 400px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--deep-forest); font-family: var(--font-heading); font-size: 1.5rem; text-align: center; padding: 2rem;">
+                    [Service Area Map Graphic]<br>
+                    <span style="font-size: 1rem; font-family: var(--font-body); margin-top: 1rem; display: block;">Centered in Atascosa, TX<br>Reaching across the Lone Star State</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Heritage Fallback -->
+    <section class="section-padding bg-forest text-center">
+        <div class="container fade-in-up">
+            <h2>Helping Landscapes Grow for Generations</h2>
+            <p style="max-width: 700px; margin: 0 auto 2rem auto; font-size: 1.1rem;">"Our greatest reward is seeing the trees we've nurtured become the centerpiece of our customers' properties, providing shade, beauty, and value for decades to come."</p>
+            <p style="font-style: italic; opacity: 0.8;">— The Alfaro Family</p>
+        </div>
+    </section>
+
+    <!-- Contact & Request a Tree Quote -->
+    <section id="contact" class="section-padding bg-cream">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Let's Find the Right Trees for Your Property</h2>
+                <p>Tell us what you're looking for, where your project is located, and whether you need delivery or planting. Our team can help you explore suitable options and current availability.</p>
+            </div>
+            
+            <div class="fade-in-up" style="max-width: 800px; margin: 0 auto; background: var(--white); padding: 3rem; border-radius: 8px; box-shadow: var(--shadow-md);">
+                <form id="quoteForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zipCode">ZIP Code *</label>
+                            <input type="text" id="zipCode" name="zipCode" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Property / Project Location</label>
+                            <input type="text" id="location" name="location" placeholder="City, TX">
+                        </div>
+                        <div class="form-group">
+                            <label for="customerType">Customer Type *</label>
+                            <select id="customerType" name="customerType" required>
+                                <option value="">Select an option...</option>
+                                <option value="homeowner">Homeowner</option>
+                                <option value="landscape">Landscape Professional</option>
+                                <option value="contractor">Contractor / Builder</option>
+                                <option value="commercial">Commercial Property</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="treeVarieties">Tree Varieties Interested In</label>
+                            <input type="text" id="treeVarieties" name="treeVarieties" placeholder="e.g., Live Oak, Crape Myrtle">
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">Quantity Required</label>
+                            <input type="text" id="quantity" name="quantity" placeholder="e.g., 5-10 trees">
+                        </div>
+                        <div class="form-group">
+                            <label for="treeSize">Tree Size Preference</label>
+                            <select id="treeSize" name="treeSize">
+                                <option value="">Select preferred size...</option>
+                                <option value="small">Small / Young</option>
+                                <option value="medium">Medium / Established</option>
+                                <option value="large">Large / Mature Specimen</option>
+                                <option value="unsure">Not Sure (Need Guidance)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="services">Additional Services Needed</label>
+                            <select id="services" name="services">
+                                <option value="none">Tree Purchase Only</option>
+                                <option value="delivery">Delivery Required</option>
+                                <option value="delivery-planting">Delivery & Professional Planting</option>
+                                <option value="relocation">Mature Tree Relocation</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="description">Project Description</label>
+                            <textarea id="description" name="description" placeholder="Please describe your project, site conditions, or any specific questions you have..."></textarea>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top: 2rem;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 300px;">Request My Tree Quote</button>
+                    </div>
+                </form>
+                <div id="formSuccess" style="display: none; text-align: center; padding: 2rem; color: var(--deep-forest);">
+                    <h3>Thank You for Your Enquiry</h3>
+                    <p>We have received your request. A member of the Alfaro Tree Sales team will review your details and contact you shortly to discuss availability and next steps.</p>
+                </div>
+            </div>
+
+            <div class="text-center fade-in-up" style="margin-top: 3rem;">
+                <p><strong>Direct Contact:</strong></p>
+                <p>Email: <a href="mailto:ej_alfaro@hotmail.com" style="color: var(--leaf-green); font-weight: 600;">ej_alfaro@hotmail.com</a></p>
+                <p>Address: 10835 Pearsall Road, Atascosa, TX 78002, United States</p>
+                <p style="font-size: 0.85rem; color: var(--earth-brown); margin-top: 1rem;">* Please verify current contact details and operating hours directly with the business.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Alfaro Tree Sales Inc.</h4>
+                    <p>Rooted in Texas since 1977. We are a family-owned tree farm and nursery dedicated to growing quality trees and providing professional selection, delivery, and planting services for residential and commercial landscapes.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#inventory">Tree Inventory</a></li>
+                        <li><a href="#services">Tree Planting</a></li>
+                        <li><a href="#relocation">Tree Relocation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#wholesale">Wholesale Supply</a></li>
+                        <li><a href="#contact">Request a Quote</a></li>
+                        <li><a href="#contact">Service Area</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>10835 Pearsall Road<br>Atascosa, TX 78002<br>United States</p>
+                    <p style="margin-top: 1rem;">
+                        <a href="mailto:ej_alfaro@hotmail.com" style="color: var(--natural-sage);">ej_alfaro@hotmail.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Alfaro Tree Sales Inc. All rights reserved. | Designed with care for Texas landscapes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <img id="lightboxImage" src="" alt="Enlarged gallery image">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Sticky Navbar Shadow on Scroll
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 4px 12px rgba(36, 70, 51, 0.1)';
+            } else {
+                navbar.style.boxShadow = '0 2px 8px rgba(36, 70, 51, 0.06)';
+            }
+        });
+
+        // Tree Category Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const treeCards = document.querySelectorAll('.tree-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                treeCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category').includes(filterValue)) {
+                        card.style.display = 'flex';
+                        // Small timeout to allow display:flex to apply before opacity transition
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Scroll-triggered Animations (Intersection Observer)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Lightbox Functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            lightboxImage.src = img.src;
+            lightboxImage.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restore background scrolling
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+
+        // Form Submission Handler (Frontend simulation)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // In a real implementation, this would send data to a backend or email service
+            // For now, we simulate a successful submission as per requirements
+            
+            const form = document.getElementById('quoteForm');
+            const successMessage = document.getElementById('formSuccess');
+            
+            // Simple validation check (HTML5 'required' attributes handle most of this)
+            const formData = new FormData(form);
+            let isValid = true;
+            
+            // Simulate processing delay
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                form.style.display = 'none';
+                successMessage.style.display = 'block';
+                
+                // Reset form for potential future use (though hidden)
+                form.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 1500);
+        }
+
+        // Smooth Scroll for Anchor Links (Polyfill-like behavior for older browsers)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const navHeight = navbar.offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
