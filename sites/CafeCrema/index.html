@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#FAF7F1" />
+
+<title>Cafe Crema | Premium Multi-Cuisine Restaurant in Sakinaka, Mumbai</title>
+<meta name="description" content="Cafe Crema – a premium multi-cuisine restaurant on the 1st Floor of Hotel Peninsula Grand, Sakinaka, Mumbai. Enjoy buffet dining, à la carte favourites, pizzas, Asian cuisine, desserts and more in an elegant hotel ambience." />
+<meta name="keywords" content="Cafe Crema, Peninsula Grand, Sakinaka restaurant, Andheri East dining, Mumbai hotel restaurant, multi cuisine Mumbai, buffet restaurant Sakinaka, fine dining Andheri" />
+<meta name="author" content="Cafe Crema – Hotel Peninsula Grand" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://cafecrema.example/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="restaurant.restaurant" />
+<meta property="og:site_name" content="Cafe Crema" />
+<meta property="og:title" content="Cafe Crema – Restaurant at Peninsula Grand Hotel, Sakinaka, Mumbai" />
+<meta property="og:description" content="A premium multi-cuisine restaurant offering buffet dining, à la carte favourites, pizzas, Asian cuisine and desserts in an elegant hotel ambience." />
+<meta property="og:locale" content="en_IN" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cafe Crema – Premium Restaurant at Peninsula Grand, Mumbai" />
+<meta name="twitter:description" content="Discover elegant multi-cuisine dining at Cafe Crema, Sakinaka, Mumbai." />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2335251F'/%3E%3Ctext x='50%25' y='55%25' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23B99A68' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Cafe Crema",
+  "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200",
+  "priceRange": "₹₹ – ₹₹₹",
+  "servesCuisine": ["Indian", "Asian", "Continental", "Italian", "Chinese"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1st Floor, Hotel Peninsula Grand, Sakinaka Junction, Lokmanya Tilak Nagar, Andheri East",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "postalCode": "400072",
+    "addressCountry": "IN"
+  },
+  "telephone": "+91-99302-71349",
+  "url": "https://cafecrema.example/",
+  "acceptsReservations": "True"
+}
+</script>
+
+<style>
+/* =========================================================
+   CAFE CREMA – Premium Restaurant Website
+   ========================================================= */
+
+:root{
+  --ivory:#FAF7F1;
+  --cream:#F3EDE3;
+  --beige:#E9DDCC;
+  --espresso:#35251F;
+  --mocha:#705044;
+  --gold:#B99A68;
+  --gold-soft:#d4bc8b;
+  --charcoal:#292725;
+  --line:rgba(53,37,31,.12);
+  --line-strong:rgba(53,37,31,.22);
+  --shadow-sm:0 6px 20px rgba(53,37,31,.06);
+  --shadow-md:0 14px 40px rgba(53,37,31,.10);
+  --shadow-lg:0 30px 80px rgba(53,37,31,.16);
+  --radius:14px;
+  --radius-lg:22px;
+  --serif:'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --sans:'Manrope','Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --max:1280px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);
+  color:var(--espresso);
+  background:var(--ivory);
+  line-height:1.65;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none;transition:color .3s var(--ease)}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;color:var(--espresso);letter-spacing:.2px;line-height:1.15}
+
+::selection{background:var(--gold);color:var(--ivory)}
+
+.container{max-width:var(--max);margin:0 auto;padding:0 28px}
+.eyebrow{
+  font-family:var(--sans);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:var(--gold);
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+}
+.eyebrow::before,.eyebrow::after{
+  content:"";width:32px;height:1px;background:var(--gold);opacity:.7;
+}
+.section-title{
+  font-size:clamp(36px,5vw,60px);
+  font-weight:500;
+  letter-spacing:-.5px;
+  margin:18px 0 18px;
+}
+.section-title em{font-style:italic;color:var(--mocha)}
+.section-sub{
+  max-width:640px;
+  color:var(--mocha);
+  font-size:17px;
+  line-height:1.75;
+}
+.divider{
+  width:60px;height:1px;background:var(--gold);margin:22px auto;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:15px 30px;
+  font-family:var(--sans);
+  font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+  border-radius:2px;
+  transition:all .4s var(--ease);
+  position:relative;
+  cursor:pointer;
+}
+.btn-primary{
+  background:var(--espresso);color:var(--ivory);
+  border:1px solid var(--espresso);
+}
+.btn-primary:hover{background:var(--gold);border-color:var(--gold);color:var(--ivory)}
+.btn-outline{
+  background:transparent;color:var(--ivory);
+  border:1px solid rgba(250,247,241,.55);
+}
+.btn-outline:hover{background:var(--ivory);color:var(--espresso);border-color:var(--ivory)}
+.btn-gold{
+  background:var(--gold);color:var(--ivory);
+  border:1px solid var(--gold);
+}
+.btn-gold:hover{background:var(--espresso);border-color:var(--espresso);color:var(--ivory)}
+.btn-ghost{
+  background:transparent;color:var(--espresso);
+  border:1px solid var(--line-strong);
+}
+.btn-ghost:hover{background:var(--espresso);color:var(--ivory);border-color:var(--espresso)}
+.btn svg{width:14px;height:14px;transition:transform .4s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:22px 0;
+  transition:all .5s var(--ease);
+  background:transparent;
+}
+.nav.scrolled{
+  background:rgba(250,247,241,.96);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  padding:14px 0;
+  box-shadow:0 1px 0 var(--line);
+}
+.nav-inner{
+  max-width:var(--max);margin:0 auto;padding:0 28px;
+  display:flex;align-items:center;justify-content:space-between;gap:30px;
+}
+.logo{
+  display:flex;align-items:center;gap:12px;
+  color:var(--ivory);
+  transition:color .5s var(--ease);
+}
+.nav.scrolled .logo{color:var(--espresso)}
+.logo-mark{
+  width:42px;height:42px;border-radius:50%;
+  background:var(--gold);
+  display:grid;place-items:center;
+  font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ivory);
+  box-shadow:0 4px 14px rgba(185,154,104,.35);
+}
+.logo-text{
+  font-family:var(--serif);
+  font-size:22px;font-weight:500;letter-spacing:.08em;
+}
+.logo-text small{
+  display:block;font-family:var(--sans);font-size:9px;
+  letter-spacing:.3em;text-transform:uppercase;opacity:.75;margin-top:2px;
+}
+.nav-links{
+  display:flex;align-items:center;gap:38px;
+}
+.nav-links a{
+  font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ivory);
+  position:relative;
+  padding:6px 0;
+}
+.nav.scrolled .nav-links a{color:var(--espresso)}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:0;
+  width:0;height:1px;background:var(--gold);
+  transition:width .4s var(--ease);
+}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{
+  padding:13px 24px;
+  background:var(--gold);color:var(--ivory);
+  font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+  border-radius:2px;
+  transition:all .4s var(--ease);
+}
+.nav-cta:hover{background:var(--espresso);color:var(--ivory)}
+.nav-toggle{
+  display:none;width:42px;height:42px;
+  border:1px solid rgba(250,247,241,.4);
+  border-radius:50%;
+  display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+}
+.nav.scrolled .nav-toggle{border-color:var(--line-strong)}
+.nav-toggle span{
+  width:18px;height:1px;background:var(--ivory);transition:all .4s var(--ease);
+}
+.nav.scrolled .nav-toggle span{background:var(--espresso)}
+.nav-toggle.open span:nth-child(1){transform:translateY(3px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-3px) rotate(-45deg)}
+
+/* Mobile menu: hidden on desktop, slide-down panel on small screens */
+.mobile-menu{display:none}
+@media (max-width:960px){
+  .nav-links,.nav-cta{display:none}
+  .nav-toggle{display:flex}
+  .mobile-menu{
+    position:fixed;inset:0;z-index:99;
+    visibility:hidden;
+    background:var(--ivory);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;
+    transform:translateY(-100%);transition:transform .5s var(--ease);
+    padding:100px 30px;
+  }
+  .mobile-menu.open{transform:translateY(0);visibility:visible}
+  .mobile-menu a{
+    font-family:var(--serif);font-size:32px;color:var(--espresso);
+  }
+  .mobile-menu .btn{margin-top:20px}
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+  position:relative;
+  height:100vh;min-height:680px;
+  display:grid;place-items:center;
+  color:var(--ivory);
+  text-align:center;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-color:var(--espresso);
+  background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=2000&q=85');
+  background-size:cover;background-position:center;
+  transform:scale(1.05);
+  animation:heroZoom 18s var(--ease) infinite alternate;
+}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(41,39,37,.55) 0%,rgba(41,39,37,.45) 40%,rgba(41,39,37,.75) 100%);
+}
+@keyframes heroZoom{from{transform:scale(1.05)}to{transform:scale(1.15)}}
+.hero-content{position:relative;z-index:2;padding:0 24px;max-width:920px}
+.hero-eyebrow{
+  font-size:11px;font-weight:600;letter-spacing:.4em;text-transform:uppercase;
+  color:var(--gold-soft);
+  margin-bottom:28px;
+  display:inline-flex;align-items:center;gap:16px;
+  opacity:0;animation:fadeUp 1s var(--ease) .3s forwards;
+}
+.hero-eyebrow::before,.hero-eyebrow::after{content:"";width:40px;height:1px;background:var(--gold-soft)}
+.hero-title{
+  font-family:var(--serif);
+  font-size:clamp(44px,7vw,92px);
+  font-weight:500;
+  line-height:1.05;
+  letter-spacing:-1px;
+  color:var(--ivory);
+  margin-bottom:24px;
+  opacity:0;animation:fadeUp 1.2s var(--ease) .5s forwards;
+}
+.hero-title em{font-style:italic;color:var(--gold-soft);font-weight:400}
+.hero-sub{
+  font-size:clamp(15px,1.6vw,18px);
+  max-width:620px;margin:0 auto 40px;
+  line-height:1.8;
+  color:rgba(250,247,241,.88);
+  opacity:0;animation:fadeUp 1.2s var(--ease) .7s forwards;
+}
+.hero-ctas{
+  display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+  opacity:0;animation:fadeUp 1.2s var(--ease) .9s forwards;
+}
+.hero-brand{
+  position:absolute;bottom:110px;left:0;right:0;
+  z-index:2;
+  text-align:center;
+  opacity:0;animation:fadeUp 1.2s var(--ease) 1.1s forwards;
+}
+.hero-brand .mark{
+  font-family:var(--serif);font-size:14px;letter-spacing:.5em;
+  color:var(--gold-soft);font-weight:500;
+}
+.scroll-indicator{
+  position:absolute;bottom:30px;left:0;right:0;
+  z-index:2;
+  font-size:10px;letter-spacing:.3em;text-transform:uppercase;
+  color:rgba(250,247,241,.7);
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  opacity:0;animation:fadeUp 1.2s var(--ease) 1.3s forwards;
+}
+.scroll-indicator::after{
+  content:"";width:1px;height:30px;background:var(--gold-soft);
+  animation:scrollLine 2s ease-in-out infinite;
+}
+@keyframes scrollLine{
+  0%{transform:scaleY(0);transform-origin:top}
+  50%{transform:scaleY(1);transform-origin:top}
+  51%{transform:scaleY(1);transform-origin:bottom}
+  100%{transform:scaleY(0);transform-origin:bottom}
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+.about{padding:140px 0;background:var(--ivory)}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+}
+.about-visual{position:relative}
+.about-img-main{
+  width:100%;aspect-ratio:4/5;
+  background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=85');
+  background-size:cover;background-position:center;
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);
+}
+.about-img-accent{
+  position:absolute;bottom:-40px;right:-24px;
+  width:55%;aspect-ratio:1/1;
+  background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=85');
+  background-size:cover;background-position:center;
+  border-radius:var(--radius);
+  border:8px solid var(--ivory);
+  box-shadow:var(--shadow-md);
+}
+.about-text h2{margin-top:18px}
+.about-lead{
+  font-family:var(--serif);
+  font-size:22px;font-style:italic;
+  color:var(--mocha);line-height:1.6;
+  margin:26px 0 30px;
+}
+.about-features{
+  display:grid;grid-template-columns:1fr 1fr;gap:20px 30px;
+  margin-top:34px;
+}
+.about-feature{
+  display:flex;align-items:flex-start;gap:12px;
+  font-size:14px;color:var(--espresso);
+}
+.about-feature::before{
+  content:"";flex-shrink:0;
+  width:14px;height:14px;margin-top:4px;
+  border:1px solid var(--gold);
+  transform:rotate(45deg);
+}
+@media (max-width:900px){
+  .about-grid{grid-template-columns:1fr;gap:60px}
+  .about-img-accent{right:20px;bottom:-30px;width:45%}
+}
+
+/* =========================================================
+   MENU
+   ========================================================= */
+.menu{padding:140px 0;background:var(--cream)}
+.menu-head{text-align:center;margin-bottom:60px}
+.menu-controls{
+  display:flex;flex-direction:column;gap:24px;
+  margin-bottom:50px;
+}
+.menu-search{
+  max-width:520px;margin:0 auto;
+  position:relative;
+}
+.menu-search input{
+  width:100%;
+  padding:16px 22px 16px 52px;
+  background:var(--ivory);
+  border:1px solid var(--line);
+  border-radius:50px;
+  font-family:var(--sans);font-size:14px;color:var(--espresso);
+  transition:all .3s var(--ease);
+}
+.menu-search input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(185,154,104,.15)}
+.menu-search svg{
+  position:absolute;left:20px;top:50%;transform:translateY(-50%);
+  width:18px;height:18px;color:var(--mocha);
+}
+.menu-filters{
+  display:flex;justify-content:center;gap:14px;flex-wrap:wrap;
+}
+.filter-chip{
+  padding:10px 22px;
+  background:transparent;
+  border:1px solid var(--line-strong);
+  border-radius:50px;
+  font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--espresso);
+  transition:all .3s var(--ease);
+}
+.filter-chip:hover{border-color:var(--gold);color:var(--gold)}
+.filter-chip.active{background:var(--espresso);color:var(--ivory);border-color:var(--espresso)}
+
+.menu-categories{
+  display:flex;gap:6px;justify-content:center;flex-wrap:wrap;
+  margin-bottom:50px;
+  padding-bottom:30px;border-bottom:1px solid var(--line);
+}
+.cat-btn{
+  padding:12px 22px;
+  font-family:var(--serif);font-size:17px;
+  color:var(--mocha);
+  border-radius:4px;
+  transition:all .3s var(--ease);
+  position:relative;
+}
+.cat-btn:hover{color:var(--espresso)}
+.cat-btn.active{color:var(--espresso);font-weight:600}
+.cat-btn.active::after{
+  content:"";position:absolute;left:50%;bottom:-32px;transform:translateX(-50%);
+  width:24px;height:2px;background:var(--gold);
+}
+
+.menu-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:24px;
+}
+.menu-item{
+  background:var(--ivory);
+  border-radius:var(--radius);
+  overflow:hidden;
+  transition:all .4s var(--ease);
+  display:flex;flex-direction:column;
+  border:1px solid transparent;
+}
+.menu-item:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-md);
+  border-color:var(--line);
+}
+.menu-item-img{
+  aspect-ratio:16/10;
+  background-size:cover;background-position:center;
+  background-color:var(--beige);
+  position:relative;
+}
+.menu-item-badge{
+  position:absolute;top:14px;left:14px;
+  padding:5px 12px;
+  background:var(--ivory);
+  border-radius:50px;
+  font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--espresso);
+}
+.menu-item-body{padding:22px 24px 26px;flex:1;display:flex;flex-direction:column}
+.menu-item-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:10px}
+.menu-item-name{
+  font-family:var(--serif);font-size:22px;font-weight:500;
+  color:var(--espresso);line-height:1.25;
+  display:flex;align-items:center;gap:10px;
+}
+.diet-dot{
+  width:14px;height:14px;border:1.5px solid;
+  display:inline-grid;place-items:center;flex-shrink:0;
+}
+.diet-dot.veg{border-color:#2d7a3e}
+.diet-dot.veg::after{content:"";width:6px;height:6px;background:#2d7a3e;border-radius:50%}
+.diet-dot.nonveg{border-color:#8b2a2a}
+.diet-dot.nonveg::after{content:"";width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:7px solid #8b2a2a}
+.menu-item-price{
+  font-family:var(--serif);font-size:20px;font-weight:600;
+  color:var(--gold);white-space:nowrap;
+}
+.menu-item-desc{
+  font-size:13.5px;color:var(--mocha);line-height:1.65;flex:1;
+}
+.menu-empty{
+  grid-column:1/-1;text-align:center;padding:60px 20px;
+  color:var(--mocha);font-family:var(--serif);font-size:22px;
+}
+.menu-note{
+  text-align:center;margin-top:50px;
+  font-size:13px;color:var(--mocha);
+  font-style:italic;
+}
+.menu-download{
+  text-align:center;margin-top:30px;
+}
+
+/* =========================================================
+   BUFFET
+   ========================================================= */
+.buffet{padding:140px 0;background:var(--ivory)}
+.buffet-head{text-align:center;margin-bottom:70px}
+.buffet-grid{
+  display:grid;grid-template-columns:repeat(12,1fr);gap:24px;
+}
+.buffet-card{
+  position:relative;overflow:hidden;
+  border-radius:var(--radius-lg);
+  min-height:380px;
+  background-size:cover;background-position:center;
+  display:flex;align-items:flex-end;
+  padding:36px;
+  color:var(--ivory);
+  transition:transform .6s var(--ease);
+}
+.buffet-card::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(41,39,37,.1) 0%,rgba(41,39,37,.85) 100%);
+  transition:opacity .5s var(--ease);
+}
+.buffet-card:hover{transform:translateY(-6px)}
+.buffet-card:hover::before{opacity:.95}
+.buffet-card-content{position:relative;z-index:2;max-width:420px}
+.buffet-card h3{
+  font-family:var(--serif);font-size:32px;font-weight:500;
+  color:var(--ivory);margin-bottom:10px;
+}
+.buffet-card p{font-size:14.5px;line-height:1.7;opacity:.92;margin-bottom:18px}
+.buffet-card .meta{
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold-soft);margin-bottom:10px;
+}
+.buffet-card:nth-child(1){grid-column:span 7;background-image:url('https://images.unsplash.com/photo-1533777324565-a049ebd72e56?w=1400&q=85')}
+.buffet-card:nth-child(2){grid-column:span 5;background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=85')}
+.buffet-card:nth-child(3){grid-column:span 5;background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=85')}
+.buffet-card:nth-child(4){grid-column:span 7;background-image:url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1400&q=85')}
+.buffet-card:nth-child(5){grid-column:span 12;background-image:url('https://images.unsplash.com/photo-1555244162-803834f70033?w=1800&q=85');min-height:320px}
+@media (max-width:900px){
+  .buffet-card{grid-column:span 12 !important;min-height:320px}
+}
+
+/* =========================================================
+   SIGNATURE HIGHLIGHTS
+   ========================================================= */
+.signature{padding:140px 0;background:var(--espresso);color:var(--ivory)}
+.signature .section-title{color:var(--ivory)}
+.signature .section-sub{color:rgba(250,247,241,.75)}
+.signature .eyebrow{color:var(--gold-soft)}
+.signature .eyebrow::before,.signature .eyebrow::after{background:var(--gold-soft)}
+.signature-head{text-align:center;margin-bottom:70px}
+.signature-grid{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:20px;
+}
+.sig-item{
+  position:relative;overflow:hidden;
+  border-radius:var(--radius);
+  aspect-ratio:1/1.2;
+  background-size:cover;background-position:center;
+  cursor:pointer;
+}
+.sig-item::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 50%,rgba(41,39,37,.9) 100%);
+  transition:opacity .5s var(--ease);
+}
+.sig-item:hover::after{opacity:.8}
+.sig-label{
+  position:absolute;bottom:20px;left:22px;right:22px;z-index:2;
+  color:var(--ivory);
+}
+.sig-label small{
+  display:block;font-size:10px;letter-spacing:.25em;text-transform:uppercase;
+  color:var(--gold-soft);margin-bottom:6px;
+}
+.sig-label strong{
+  font-family:var(--serif);font-size:22px;font-weight:500;
+  display:block;line-height:1.25;
+}
+.sig-item:nth-child(1){grid-column:span 2;background-image:url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=800&q=85')}
+.sig-item:nth-child(2){grid-column:span 2;background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=85')}
+.sig-item:nth-child(3){grid-column:span 2;background-image:url('https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=800&q=85')}
+.sig-item:nth-child(4){grid-column:span 3;background-image:url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=1000&q=85');aspect-ratio:1.5/1}
+.sig-item:nth-child(5){grid-column:span 3;background-image:url('https://images.unsplash.com/photo-1551024506-0bccd828d307?w=1000&q=85');aspect-ratio:1.5/1}
+@media (max-width:900px){
+  .sig-item{grid-column:span 6 !important;aspect-ratio:1/1 !important}
+}
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+.gallery{padding:140px 0;background:var(--cream)}
+.gallery-head{text-align:center;margin-bottom:70px}
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(12,1fr);gap:16px;
+  grid-auto-rows:120px;
+}
+.g-item{
+  overflow:hidden;border-radius:var(--radius);
+  background-size:cover;background-position:center;
+  cursor:pointer;
+  position:relative;
+  transition:transform .5s var(--ease);
+}
+.g-item::after{
+  content:"";position:absolute;inset:0;
+  background:rgba(41,39,37,0);transition:background .4s var(--ease);
+}
+.g-item:hover{transform:scale(.98)}
+.g-item:hover::after{background:rgba(41,39,37,.25)}
+.g-item:nth-child(1){grid-column:1 / span 5;grid-row:1 / span 3;background-image:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1200&q=85')}
+.g-item:nth-child(2){grid-column:6 / span 4;grid-row:1 / span 3;background-image:url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900&q=85')}
+.g-item:nth-child(3){grid-column:10 / span 3;grid-row:1 / span 3;background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=85')}
+.g-item:nth-child(4){grid-column:1 / span 3;grid-row:4 / span 3;background-image:url('https://images.unsplash.com/photo-1592861956120-e524fc739696?w=800&q=85')}
+.g-item:nth-child(5){grid-column:4 / span 4;grid-row:4 / span 3;background-image:url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1000&q=85')}
+.g-item:nth-child(6){grid-column:8 / span 5;grid-row:4 / span 3;background-image:url('https://images.unsplash.com/photo-1555992336-03a23c7b20ee?w=1200&q=85')}
+.g-item:nth-child(7){grid-column:1 / span 4;grid-row:7 / span 2;background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?w=1000&q=85')}
+.g-item:nth-child(8){grid-column:5 / span 4;grid-row:7 / span 2;background-image:url('https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1000&q=85')}
+.g-item:nth-child(9){grid-column:9 / span 4;grid-row:7 / span 2;background-image:url('https://images.unsplash.com/photo-1559847844-5315695dadae?w=1000&q=85')}
+@media (max-width:900px){
+  .gallery-grid{grid-auto-rows:160px}
+  .g-item{grid-column:span 12 !important;grid-row:span 2 !important}
+}
+
+.about-img-main,.about-img-accent,.buffet-card,.sig-item,.g-item,.insta-item{background-color:var(--mocha)}
+.menu-item-img.no-img{
+  background:linear-gradient(135deg,var(--beige),var(--cream));
+  display:grid;place-items:center;
+}
+.menu-item-img.no-img::before{content:"\2615";font-size:38px;color:var(--gold);opacity:.7}
+
+/* Lightbox */
+.lightbox{
+  position:fixed;inset:0;z-index:200;
+  background:rgba(41,39,37,.95);
+  display:none;align-items:center;justify-content:center;
+  padding:40px;
+  backdrop-filter:blur(10px);
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90%;max-height:90vh;border-radius:var(--radius);box-shadow:var(--shadow-lg)}
+.lightbox-close{
+  position:absolute;top:30px;right:30px;
+  width:48px;height:48px;border-radius:50%;
+  background:rgba(250,247,241,.15);color:var(--ivory);
+  display:grid;place-items:center;
+  transition:all .3s var(--ease);
+}
+.lightbox-close:hover{background:var(--gold)}
+
+/* =========================================================
+   OCCASIONS
+   ========================================================= */
+.occasions{padding:140px 0;background:var(--ivory)}
+.occasions-head{text-align:center;margin-bottom:70px}
+.occ-grid{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:20px;
+}
+.occ-card{
+  text-align:center;padding:40px 24px;
+  background:var(--cream);
+  border-radius:var(--radius);
+  transition:all .4s var(--ease);
+  border:1px solid transparent;
+}
+.occ-card:hover{
+  background:var(--ivory);
+  border-color:var(--gold);
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-md);
+}
+.occ-icon{
+  width:60px;height:60px;margin:0 auto 20px;
+  border:1px solid var(--gold);border-radius:50%;
+  display:grid;place-items:center;
+  color:var(--gold);
+  transition:all .4s var(--ease);
+}
+.occ-card:hover .occ-icon{background:var(--gold);color:var(--ivory)}
+.occ-icon svg{width:24px;height:24px}
+.occ-card h3{
+  font-family:var(--serif);font-size:22px;font-weight:500;
+  margin-bottom:10px;
+}
+.occ-card p{font-size:14px;color:var(--mocha);line-height:1.65}
+@media (max-width:1000px){.occ-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.occ-grid{grid-template-columns:1fr}}
+
+/* =========================================================
+   WHY VISIT
+   ========================================================= */
+.why{padding:140px 0;background:var(--beige)}
+.why-head{text-align:center;margin-bottom:70px}
+.why-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:40px 30px;
+}
+.why-item{text-align:center}
+.why-icon{
+  width:56px;height:56px;margin:0 auto 20px;
+  color:var(--gold);
+}
+.why-icon svg{width:100%;height:100%;stroke-width:1.2}
+.why-item h3{
+  font-family:var(--serif);font-size:20px;font-weight:500;
+  margin-bottom:10px;
+}
+.why-item p{font-size:14px;color:var(--mocha);line-height:1.65}
+@media (max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:500px){.why-grid{grid-template-columns:1fr}}
+
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+.testimonials{padding:140px 0;background:var(--ivory)}
+.testimonials-head{text-align:center;margin-bottom:70px}
+.test-carousel{
+  position:relative;max-width:860px;margin:0 auto;
+}
+.test-track{overflow:hidden}
+.test-slides{display:flex;transition:transform .7s var(--ease)}
+.test-slide{
+  min-width:100%;padding:0 20px;
+  text-align:center;
+}
+.test-quote{
+  font-family:var(--serif);font-size:clamp(22px,2.6vw,30px);
+  font-style:italic;font-weight:400;
+  line-height:1.55;color:var(--espresso);
+  margin-bottom:30px;
+  position:relative;
+}
+.test-quote::before{
+  content:"“";position:absolute;top:-40px;left:50%;transform:translateX(-50%);
+  font-family:var(--serif);font-size:100px;color:var(--gold);
+  line-height:1;opacity:.3;
+}
+.test-author{
+  font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--espresso);
+}
+.test-author small{
+  display:block;margin-top:6px;
+  font-weight:400;letter-spacing:.15em;color:var(--mocha);
+}
+.test-dots{
+  display:flex;justify-content:center;gap:10px;margin-top:40px;
+}
+.test-dot{
+  width:30px;height:2px;background:var(--line-strong);
+  transition:all .4s var(--ease);
+}
+.test-dot.active{background:var(--gold);width:50px}
+
+/* =========================================================
+   RESERVATION
+   ========================================================= */
+.reservation{
+  padding:140px 0;
+  background:linear-gradient(rgba(41,39,37,.85),rgba(41,39,37,.85)),url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1800&q=85') center/cover fixed;
+  color:var(--ivory);
+}
+.res-grid{
+  display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center;
+}
+.res-text h2{color:var(--ivory);margin-top:18px}
+.res-text .eyebrow{color:var(--gold-soft)}
+.res-text .eyebrow::before,.res-text .eyebrow::after{background:var(--gold-soft)}
+.res-text p{color:rgba(250,247,241,.85);font-size:16px;line-height:1.8;margin:24px 0 34px}
+.res-contact{display:flex;flex-direction:column;gap:16px}
+.res-contact a{
+  display:inline-flex;align-items:center;gap:14px;
+  padding:14px 22px;
+  background:rgba(250,247,241,.08);
+  border:1px solid rgba(250,247,241,.18);
+  border-radius:4px;
+  font-size:14px;color:var(--ivory);
+  transition:all .3s var(--ease);
+}
+.res-contact a:hover{background:var(--gold);border-color:var(--gold)}
+.res-contact svg{width:18px;height:18px;color:var(--gold-soft)}
+.res-contact a:hover svg{color:var(--ivory)}
+
+.res-form{
+  background:var(--ivory);
+  padding:50px 46px;
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);
+  color:var(--espresso);
+}
+.res-form h3{
+  font-family:var(--serif);font-size:28px;font-weight:500;
+  margin-bottom:8px;
+}
+.res-form .sub{font-size:14px;color:var(--mocha);margin-bottom:30px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+.form-field{display:flex;flex-direction:column;gap:8px}
+.form-field label{
+  font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--mocha);
+}
+.form-field input,.form-field select,.form-field textarea{
+  padding:13px 16px;
+  background:var(--cream);
+  border:1px solid transparent;
+  border-radius:4px;
+  font-family:var(--sans);font-size:14px;color:var(--espresso);
+  transition:all .3s var(--ease);
+}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{
+  outline:none;border-color:var(--gold);background:var(--ivory);
+}
+.form-field textarea{resize:vertical;min-height:90px;font-family:var(--sans)}
+.form-full{grid-column:1/-1}
+.form-submit{
+  width:100%;margin-top:10px;justify-content:center;
+  background:var(--espresso);color:var(--ivory);
+  padding:17px 30px;
+  border-radius:4px;
+  font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+  transition:all .4s var(--ease);
+}
+.form-submit:hover{background:var(--gold)}
+.form-note{
+  margin-top:16px;font-size:12px;color:var(--mocha);text-align:center;
+}
+.form-success{
+  display:none;padding:20px;
+  background:rgba(45,122,62,.1);
+  border:1px solid rgba(45,122,62,.3);
+  border-radius:4px;
+  color:#2d7a3e;font-size:14px;text-align:center;
+  margin-bottom:20px;
+}
+.form-success.show{display:block}
+@media (max-width:900px){
+  .res-grid{grid-template-columns:1fr;gap:50px}
+  .res-form{padding:36px 28px}
+  .form-row{grid-template-columns:1fr}
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+.contact{padding:140px 0;background:var(--cream)}
+.contact-head{text-align:center;margin-bottom:70px}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:50px;
+}
+.contact-info{
+  background:var(--ivory);
+  padding:50px 44px;
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-sm);
+}
+.contact-info h3{
+  font-family:var(--serif);font-size:28px;font-weight:500;
+  margin-bottom:30px;
+}
+.contact-item{
+  display:flex;gap:18px;padding:20px 0;
+  border-bottom:1px solid var(--line);
+}
+.contact-item:last-child{border-bottom:none}
+.contact-icon{
+  width:44px;height:44px;flex-shrink:0;
+  background:var(--beige);border-radius:50%;
+  display:grid;place-items:center;color:var(--gold);
+}
+.contact-icon svg{width:18px;height:18px}
+.contact-item h4{
+  font-family:var(--sans);font-size:12px;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--mocha);
+  margin-bottom:6px;
+}
+.contact-item p,.contact-item a{font-size:15px;color:var(--espresso);line-height:1.6}
+.contact-item a:hover{color:var(--gold)}
+.contact-actions{
+  display:flex;gap:10px;margin-top:26px;flex-wrap:wrap;
+}
+.map-wrap{
+  border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow-sm);
+  min-height:500px;
+  position:relative;
+  background:var(--beige);
+}
+.map-wrap iframe{width:100%;height:100%;min-height:500px;border:0;display:block;filter:grayscale(.2) contrast(1.05)}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+
+/* =========================================================
+   INSTAGRAM
+   ========================================================= */
+.instagram{padding:140px 0;background:var(--ivory)}
+.instagram-head{text-align:center;margin-bottom:60px}
+.insta-grid{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:8px;
+}
+.insta-item{
+  aspect-ratio:1/1;overflow:hidden;
+  background-size:cover;background-position:center;
+  cursor:pointer;position:relative;
+  transition:transform .5s var(--ease);
+}
+.insta-item::after{
+  content:"";position:absolute;inset:0;
+  background:rgba(41,39,37,0);transition:background .4s var(--ease);
+}
+.insta-item:hover::after{background:rgba(41,39,37,.4)}
+.insta-item:hover{transform:scale(.96)}
+.insta-item:nth-child(1){background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=85')}
+.insta-item:nth-child(2){background-image:url('https://images.unsplash.com/photo-1551218808-94e220e084d2?w=600&q=85')}
+.insta-item:nth-child(3){background-image:url('https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=85')}
+.insta-item:nth-child(4){background-image:url('https://images.unsplash.com/photo-1559847844-5315695dadae?w=600&q=85')}
+.insta-item:nth-child(5){background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=85')}
+.insta-item:nth-child(6){background-image:url('https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&q=85')}
+.insta-cta{text-align:center;margin-top:50px}
+@media (max-width:700px){.insta-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer{
+  background:var(--charcoal);color:rgba(250,247,241,.75);
+  padding:90px 0 30px;
+}
+.foot-grid{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:50px;
+  margin-bottom:60px;
+}
+.foot-brand .logo{color:var(--ivory);margin-bottom:20px}
+.foot-brand p{font-size:14px;line-height:1.75;max-width:320px}
+.foot-col h4{
+  font-family:var(--sans);font-size:12px;font-weight:600;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--gold);
+  margin-bottom:22px;
+}
+.foot-col ul{display:flex;flex-direction:column;gap:12px}
+.foot-col a{font-size:14px;color:rgba(250,247,241,.7);transition:color .3s var(--ease)}
+.foot-col a:hover{color:var(--gold)}
+.foot-contact p{font-size:14px;line-height:1.75;margin-bottom:8px}
+.foot-social{
+  display:flex;gap:10px;margin-top:20px;
+}
+.foot-social a{
+  width:38px;height:38px;border-radius:50%;
+  border:1px solid rgba(250,247,241,.2);
+  display:grid;place-items:center;color:rgba(250,247,241,.7);
+  transition:all .3s var(--ease);
+}
+.foot-social a:hover{background:var(--gold);border-color:var(--gold);color:var(--ivory)}
+.foot-social svg{width:16px;height:16px}
+.foot-bottom{
+  padding-top:30px;border-top:1px solid rgba(250,247,241,.1);
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  font-size:12px;color:rgba(250,247,241,.5);
+}
+.foot-bottom a:hover{color:var(--gold)}
+@media (max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:40px}}
+@media (max-width:560px){.foot-grid{grid-template-columns:1fr}}
+
+/* =========================================================
+   WHATSAPP FLOAT
+   ========================================================= */
+.whatsapp-float{
+  position:fixed;bottom:26px;right:26px;z-index:90;
+  width:58px;height:58px;border-radius:50%;
+  background:#25D366;color:#fff;
+  display:grid;place-items:center;
+  box-shadow:0 10px 30px rgba(37,211,102,.4);
+  transition:all .3s var(--ease);
+  animation:pulse 2.5s ease-in-out infinite;
+}
+.whatsapp-float:hover{transform:scale(1.08)}
+.whatsapp-float svg{width:28px;height:28px}
+@keyframes pulse{
+  0%,100%{box-shadow:0 10px 30px rgba(37,211,102,.4)}
+  50%{box-shadow:0 10px 30px rgba(37,211,102,.7),0 0 0 12px rgba(37,211,102,0)}
+}
+
+/* =========================================================
+   REVEAL ANIMATIONS
+   ========================================================= */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--ivory)}
+::-webkit-scrollbar-thumb{background:var(--beige);border-radius:10px}
+::-webkit-scrollbar-thumb:hover{background:var(--gold)}
+</style>
+</head>
+<body>
+
+<!-- ============== NAVIGATION ============== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo" aria-label="Cafe Crema home">
+      <span class="logo-mark">C</span>
+      <span class="logo-text">Cafe Crema<small>Peninsula Grand · Mumbai</small></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#buffet">Buffet</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#reservation" class="nav-cta">Reserve a Table</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#menu">Menu</a>
+  <a href="#buffet">Buffet</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+  <a href="#reservation" class="btn btn-primary">Reserve a Table</a>
+</div>
+
+<!-- ============== HERO ============== -->
+<header class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Peninsula Grand · Sakinaka, Mumbai</div>
+    <h1 class="hero-title">A Taste of <em>Elegance.</em><br/>A World of <em>Flavours.</em></h1>
+    <p class="hero-sub">Discover an inviting dining experience with diverse cuisines, thoughtfully prepared dishes and the warmth of exceptional hospitality.</p>
+    <div class="hero-ctas">
+      <a href="#menu" class="btn btn-outline">Explore Our Menu
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#reservation" class="btn btn-gold">Reserve Your Table</a>
+    </div>
+  </div>
+  <div class="hero-brand">
+    <div class="mark">— CAFE CREMA —</div>
+  </div>
+  <div class="scroll-indicator">Scroll</div>
+</header>
+
+<!-- ============== ABOUT ============== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-img-main" role="img" aria-label="Elegant dining at Cafe Crema"></div>
+        <div class="about-img-accent" role="img" aria-label="Food presentation at Cafe Crema"></div>
+      </div>
+      <div class="about-text reveal">
+        <span class="eyebrow">About Cafe Crema</span>
+        <h2 class="section-title">Where Every Meal Becomes <em>an Experience.</em></h2>
+        <p class="about-lead">Located at Peninsula Grand Hotel, Cafe Crema brings together an inviting atmosphere and a diverse dining experience — from relaxed meals and delightful desserts to elaborate buffet experiences.</p>
+        <p class="section-sub">Discover a place to enjoy good food and meaningful moments, whether you are stopping by for a quiet breakfast, a family lunch, a business dinner or a celebratory gathering.</p>
+        <div class="about-features">
+          <div class="about-feature">Comfortable hotel dining ambience</div>
+          <div class="about-feature">Multi-cuisine food selection</div>
+          <div class="about-feature">Buffet & à la carte experiences</div>
+          <div class="about-feature">Vegetarian & non-vegetarian choices</div>
+          <div class="about-feature">Family & group dining</div>
+          <div class="about-feature">Thoughtful food & beverage variety</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== MENU ============== -->
+<section class="menu" id="menu">
+  <div class="container">
+    <div class="menu-head reveal">
+      <span class="eyebrow">Our Menu</span>
+      <h2 class="section-title">A Culinary <em>Journey.</em></h2>
+      <p class="section-sub" style="margin:0 auto">Explore our carefully curated selection of dishes — from comforting Indian classics and vibrant Asian flavours to continental favourites and indulgent desserts.</p>
+    </div>
+
+    <div class="menu-controls reveal">
+      <div class="menu-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="menuSearch" placeholder="Search for a dish, ingredient or cuisine…" aria-label="Search menu" />
+      </div>
+      <div class="menu-filters">
+        <button class="filter-chip active" data-diet="all">All Dishes</button>
+        <button class="filter-chip" data-diet="veg">Vegetarian</button>
+        <button class="filter-chip" data-diet="nonveg">Non-Vegetarian</button>
+      </div>
+    </div>
+
+    <div class="menu-categories reveal" id="menuCategories"></div>
+
+    <div class="menu-grid" id="menuGrid"></div>
+
+    <p class="menu-note reveal">Menu items and prices are indicative. Please confirm availability and current pricing with the restaurant.</p>
+    <div class="menu-download reveal">
+      <a href="#" class="btn btn-ghost" onclick="alert('Menu PDF download will be available shortly. Please contact the restaurant for the latest menu.');return false;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Full Menu (PDF)
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== BUFFET ============== -->
+<section class="buffet" id="buffet">
+  <div class="container">
+    <div class="buffet-head reveal">
+      <span class="eyebrow">Buffet & Dining</span>
+      <h2 class="section-title">A Celebration of <em>Flavours.</em></h2>
+      <p class="section-sub" style="margin:0 auto">From leisurely breakfasts to indulgent Sunday brunches and expansive dinner buffets — every meal at Cafe Crema is a celebration of variety and flavour.</p>
+    </div>
+
+    <div class="buffet-grid">
+      <article class="buffet-card reveal">
+        <div class="buffet-card-content">
+          <div class="meta">Morning</div>
+          <h3>Breakfast Buffet</h3>
+          <p>Begin your day with a thoughtfully arranged breakfast spread — fresh bakes, continental classics, Indian favourites, eggs to order, juices and more.</p>
+        </div>
+      </article>
+      <article class="buffet-card reveal">
+        <div class="buffet-card-content">
+          <div class="meta">Midday & Evening</div>
+          <h3>Lunch & Dinner Buffet</h3>
+          <p>A generous selection of starters, mains, breads, rice, accompaniments and desserts — crafted to satisfy every palate.</p>
+        </div>
+      </article>
+      <article class="buffet-card reveal">
+        <div class="buffet-card-content">
+          <div class="meta">Weekend</div>
+          <h3>Sunday Brunch</h3>
+          <p>A leisurely weekend affair with an extended spread, live counters and a relaxed atmosphere — ideal for family gatherings.</p>
+        </div>
+      </article>
+      <article class="buffet-card reveal">
+        <div class="buffet-card-content">
+          <div class="meta">Flexible Dining</div>
+          <h3>À La Carte</h3>
+          <p>Prefer to order individually? Our à la carte menu offers the full range of our culinary selections — from soups and salads to desserts and beverages.</p>
+        </div>
+      </article>
+      <article class="buffet-card reveal">
+        <div class="buffet-card-content">
+          <div class="meta">Interactive</div>
+          <h3>Live Food Counters</h3>
+          <p>Watch your favourites being prepared fresh — from sizzling tandoor selections to pasta and regional specialties, crafted before your eyes.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SIGNATURE HIGHLIGHTS ============== -->
+<section class="signature">
+  <div class="container">
+    <div class="signature-head reveal">
+      <span class="eyebrow">From Our Kitchen</span>
+      <h2 class="section-title">Culinary <em>Highlights.</em></h2>
+      <p class="section-sub" style="margin:0 auto">A glimpse into the dishes that define our kitchen — crafted with care, presented with elegance.</p>
+    </div>
+    <div class="signature-grid">
+      <div class="sig-item reveal"><div class="sig-label"><small>Indian</small><strong>Tandoor & Curries</strong></div></div>
+      <div class="sig-item reveal"><div class="sig-label"><small>Italian</small><strong>Artisan Pizzas</strong></div></div>
+      <div class="sig-item reveal"><div class="sig-label"><small>Asian</small><strong>Dim Sums & Sushi</strong></div></div>
+      <div class="sig-item reveal"><div class="sig-label"><small>Continental</small><strong>Pasta & Grills</strong></div></div>
+      <div class="sig-item reveal"><div class="sig-label"><small>Patisserie</small><strong>Cakes & Cheesecakes</strong></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GALLERY ============== -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="gallery-head reveal">
+      <span class="eyebrow">Gallery</span>
+      <h2 class="section-title">An Ambience Made for <em>Every Occasion.</em></h2>
+      <p class="section-sub" style="margin:0 auto">Step inside Cafe Crema — where warm lighting, thoughtful interiors and elegant table settings come together to create the perfect backdrop for every meal.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item reveal" data-src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1800&q=90"></div>
+      <div class="g-item reveal" data-src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1400&q=90"></div>
+      <div class="g-item reveal" data-src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=90"></div>
+      <div class="g-item reveal" data-src="https://images.unsplash.com/photo-1592861956120-e524fc739696?w=1200&q=90"></div>
+      <div class="g-item reveal" data-src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1400&q=90"></div>
+      <div class="g-item reveal" data-src="https://images.unsplash.com/photo-1555992336-03a23c7b20ee?w=1400&q=90"></div>
+      <div class="g-item reveal" data-src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1200&q=90"></div>
+      <div class="g-item reveal" data-src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1200&q=90"></div>
+      <div class="g-item reveal" data-src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=1200&q=90"></div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <img id="lightboxImg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" />
+</div>
+
+<!-- ============== OCCASIONS ============== -->
+<section class="occasions">
+  <div class="container">
+    <div class="occasions-head reveal">
+      <span class="eyebrow">For Every Occasion</span>
+      <h2 class="section-title">Dining for <em>Every Moment.</em></h2>
+    </div>
+    <div class="occ-grid">
+      <div class="occ-card reveal">
+        <div class="occ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Family Dining</h3>
+        <p>A comfortable setting for relaxed meals and family get-togethers.</p>
+      </div>
+      <div class="occ-card reveal">
+        <div class="occ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Friends & Gatherings</h3>
+        <p>An inviting place to catch up over food and beverages.</p>
+      </div>
+      <div class="occ-card reveal">
+        <div class="occ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>Business Dining</h3>
+        <p>A convenient hotel setting for professional meetings and conversations.</p>
+      </div>
+      <div class="occ-card reveal">
+        <div class="occ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"/><path d="M4 6v12c0 1.1.9 2 2 2h14v-4"/><path d="M18 12a2 2 0 0 0 0 4h4v-4z"/></svg></div>
+        <h3>Celebrations</h3>
+        <p>Dining experiences for birthdays and special group gatherings.</p>
+      </div>
+      <div class="occ-card reveal">
+        <div class="occ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+        <p style="display:none"></p>
+        <h3>Buffet Experiences</h3>
+        <p>A variety of dishes and dining choices for groups with different preferences.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WHY VISIT ============== -->
+<section class="why">
+  <div class="container">
+    <div class="why-head reveal">
+      <span class="eyebrow">Why Cafe Crema</span>
+      <h2 class="section-title">The Cafe Crema <em>Difference.</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/><path d="M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg></div>
+        <h3>Premium Hotel Dining</h3>
+        <p>Enjoy a refined ambience within the comfort of Peninsula Grand Hotel.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+        <h3>Diverse Multi-Cuisine</h3>
+        <p>Indian, Asian, Continental, Italian and more — all under one roof.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>Buffet & À La Carte</h3>
+        <p>Choose between expansive buffets or a relaxed à la carte experience.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h3>Veg & Non-Veg</h3>
+        <p>Thoughtful vegetarian and non-vegetarian selections across every category.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Comfortable Seating</h3>
+        <p>Spacious, well-designed interiors for relaxed conversations and meals.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Convenient Location</h3>
+        <p>Centrally located in Sakinaka, near the metro station and major business hubs.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8zM6 2v4M10 2v4M14 2v4"/></svg></div>
+        <h3>Beverage Variety</h3>
+        <p>From artisan coffees to refreshing mocktails and signature beverages.</p>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>Warm Hospitality</h3>
+        <p>Attentive service and a welcoming team committed to your comfort.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TESTIMONIALS ============== -->
+<section class="testimonials">
+  <div class="container">
+    <div class="testimonials-head reveal">
+      <span class="eyebrow">Guest Experiences</span>
+      <h2 class="section-title">Words from <em>Our Guests.</em></h2>
+    </div>
+    <div class="test-carousel reveal">
+      <div class="test-track">
+        <div class="test-slides" id="testSlides">
+          <div class="test-slide">
+            <p class="test-quote">A lovely multi-cuisine restaurant with a warm ambience. The buffet spread offered great variety and the service was attentive throughout our meal.</p>
+            <div class="test-author">A Guest Diner<small>Family Lunch</small></div>
+          </div>
+          <div class="test-slide">
+            <p class="test-quote">Comfortable hotel dining with a thoughtful menu. We enjoyed the Indian starters and the dessert selection was a pleasant surprise.</p>
+            <div class="test-author">A Weekend Visitor<small>Dinner Experience</small></div>
+          </div>
+          <div class="test-slide">
+            <p class="test-quote">A convenient and pleasant place for business meals in Sakinaka. The à la carte options are well-curated and the staff is courteous.</p>
+            <div class="test-author">A Corporate Guest<small>Business Lunch</small></div>
+          </div>
+          <div class="test-slide">
+            <p class="test-quote">We celebrated a family gathering here and the team made it memorable. The food variety kept everyone at the table happy.</p>
+            <div class="test-author">A Regular Guest<small>Celebration Dinner</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="test-dots" id="testDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== RESERVATION ============== -->
+<section class="reservation" id="reservation">
+  <div class="container">
+    <div class="res-grid">
+      <div class="res-text reveal">
+        <span class="eyebrow">Reservations</span>
+        <h2 class="section-title">Your Table <em>Awaits.</em></h2>
+        <p>Planning a meal, a family gathering or a special occasion? Get in touch with Cafe Crema to plan your dining experience. Our team will be delighted to assist you.</p>
+        <div class="res-contact">
+          <a href="tel:+919930271349">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +91 99302 71349
+          </a>
+          <a href="https://wa.me/919930271349" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+            WhatsApp Enquiry
+          </a>
+        </div>
+      </div>
+
+      <form class="res-form reveal" id="resForm" novalidate>
+        <h3>Request a Reservation</h3>
+        <p class="sub">Fill in the details below and our team will confirm your booking.</p>
+        <div class="form-success" id="formSuccess">Thank you. Your reservation request has been received. Our team will contact you shortly to confirm.</div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="rName">Full Name</label>
+            <input type="text" id="rName" name="name" required />
+          </div>
+          <div class="form-field">
+            <label for="rPhone">Mobile Number</label>
+            <input type="tel" id="rPhone" name="phone" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="rEmail">Email Address</label>
+            <input type="email" id="rEmail" name="email" required />
+          </div>
+          <div class="form-field">
+            <label for="rGuests">Number of Guests</label>
+            <input type="number" id="rGuests" name="guests" min="1" max="30" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="rDate">Preferred Date</label>
+            <input type="date" id="rDate" name="date" required />
+          </div>
+          <div class="form-field">
+            <label for="rTime">Preferred Time</label>
+            <input type="time" id="rTime" name="time" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field form-full">
+            <label for="rPref">Dining Preference</label>
+            <select id="rPref" name="preference">
+              <option value="">Select an option</option>
+              <option>À La Carte</option>
+              <option>Breakfast Buffet</option>
+              <option>Lunch Buffet</option>
+              <option>Dinner Buffet</option>
+              <option>Sunday Brunch</option>
+              <option>Special Occasion</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field form-full">
+            <label for="rNotes">Special Requests</label>
+            <textarea id="rNotes" name="notes" placeholder="Dietary requirements, seating preferences, celebrations…"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="form-submit">Request a Reservation</button>
+        <p class="form-note">Your table is confirmed only once the restaurant approves your booking.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CONTACT ============== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-head reveal">
+      <span class="eyebrow">Visit Us</span>
+      <h2 class="section-title">Find <em>Cafe Crema.</em></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Cafe Crema — Peninsula Grand Hotel</h3>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <h4>Address</h4>
+            <p>1st Floor, Hotel Peninsula Grand,<br/>Sakinaka Junction, Lokmanya Tilak Nagar,<br/>Andheri East, Mumbai, Maharashtra 400072, India</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div>
+            <h4>Phone</h4>
+            <a href="tel:+919930271349">+91 99302 71349</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></div>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:dining@cafecrema.example">dining@cafecrema.example</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div>
+            <h4>Hours</h4>
+            <p>Please contact us for current operating hours — timings may vary on weekends and public holidays.</p>
+          </div>
+        </div>
+        <div class="contact-actions">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Peninsula+Grand+Hotel+Sakinaka+Mumbai" target="_blank" rel="noopener" class="btn btn-primary">
+            Get Directions
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="tel:+919930271349" class="btn btn-ghost">Call Now</a>
+        </div>
+      </div>
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8!2d72.87!3d19.105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPeninsula%20Grand%20Hotel%20Sakinaka!5e0!3m2!1sen!2sin!4v1700000000000"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Cafe Crema location on Google Maps"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== INSTAGRAM ============== -->
+<section class="instagram">
+  <div class="container">
+    <div class="instagram-head reveal">
+      <span class="eyebrow">Follow Us</span>
+      <h2 class="section-title">A Little Taste of <em>Cafe Crema.</em></h2>
+      <p class="section-sub" style="margin:0 auto">Follow our journey on social media for the latest dishes, ambience and dining moments.</p>
+    </div>
+    <div class="insta-grid">
+      <a class="insta-item" href="#" aria-label="Instagram post"></a>
+      <a class="insta-item" href="#" aria-label="Instagram post"></a>
+      <a class="insta-item" href="#" aria-label="Instagram post"></a>
+      <a class="insta-item" href="#" aria-label="Instagram post"></a>
+      <a class="insta-item" href="#" aria-label="Instagram post"></a>
+      <a class="insta-item" href="#" aria-label="Instagram post"></a>
+    </div>
+    <div class="insta-cta reveal">
+      <a href="#" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        Follow @cafecrema
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#home" class="logo">
+          <span class="logo-mark">C</span>
+          <span class="logo-text">Cafe Crema<small>Peninsula Grand · Mumbai</small></span>
+        </a>
+        <p>A premium multi-cuisine restaurant at Hotel Peninsula Grand, Sakinaka — offering buffet dining, à la carte favourites and warm hospitality in an elegant hotel ambience.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://wa.me/919930271349" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Our Menu</a></li>
+          <li><a href="#buffet">Buffet & Dining</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Dining</h4>
+        <ul>
+          <li><a href="#buffet">Breakfast Buffet</a></li>
+          <li><a href="#buffet">Lunch & Dinner</a></li>
+          <li><a href="#buffet">Sunday Brunch</a></li>
+          <li><a href="#buffet">À La Carte</a></li>
+          <li><a href="#reservation">Reservations</a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-contact">
+        <h4>Contact</h4>
+        <p>1st Floor, Hotel Peninsula Grand,<br/>Sakinaka Junction, Andheri East,<br/>Mumbai 400072, India</p>
+        <p><a href="tel:+919930271349">+91 99302 71349</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Cafe Crema · Hotel Peninsula Grand. All rights reserved.</div>
+      <div><a href="#">Privacy Policy</a> · <a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============== WHATSAPP FLOAT ============== -->
+<a href="https://wa.me/919930271349" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+</a>
+
+<script>
+/* =========================================================
+   MENU DATA
+   ========================================================= */
+const MENU = [
+  // Soups & Salads
+  {cat:"Soups & Salads",sub:"Vegetarian Soups",name:"Sweet Corn Veg Soup",desc:"Creamy sweet corn broth with garden vegetables and fresh herbs.",price:280,veg:true,img:"https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=85"},
+  {cat:"Soups & Salads",sub:"Vegetarian Soups",name:"Tomato Basil Shorba",desc:"Slow-cooked tomatoes with fresh basil and a hint of garlic.",price:260,veg:true,img:"https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&q=85"},
+  {cat:"Soups & Salads",sub:"Vegetarian Soups",name:"Hot & Sour Veg",desc:"A tangy Asian-inspired soup with mushrooms and bamboo shoots.",price:290,veg:true,img:"https://images.unsplash.com/photo-1604152135912-04a022e29b9e?w=600&q=85"},
+  {cat:"Soups & Salads",sub:"Non-Vegetarian Soups",name:"Chicken Clear Soup",desc:"Light, aromatic chicken broth with ginger and spring onions.",price:320,veg:false,img:"https://images.unsplash.com/photo-1603105037880-880cd4f4cfda?w=600&q=85"},
+  {cat:"Soups & Salads",sub:"Non-Vegetarian Soups",name:"Sweet Corn Chicken",desc:"Sweet corn velouté with shredded chicken and a touch of pepper.",price:340,veg:false,img:"https://images.unsplash.com/photo-1604152135912-04a022e29b9e?w=600&q=85"},
+  {cat:"Soups & Salads",sub:"Non-Vegetarian Soups",name:"Chicken Manchow",desc:"Indo-Chinese favourite with crispy noodles and tender chicken.",price:350,veg:false,img:"https://images.unsplash.com/photo-1603105037880-880cd4f4cfda?w=600&q=85"},
+  {cat:"Soups & Salads",sub:"Fresh Salads",name:"Caesar Salad",desc:"Crisp romaine, parmesan, croutons and classic Caesar dressing.",price:340,veg:true,img:"https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=600&q=85"},
+  {cat:"Soups & Salads",sub:"Fresh Salads",name:"Greek Salad",desc:"Tomatoes, cucumber, olives, feta and oregano vinaigrette.",price:360,veg:true,img:"https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=85"},
+  {cat:"Soups & Salads",sub:"Fresh Salads",name:"Garden Fresh Salad",desc:"Seasonal greens, cherry tomatoes and a light citrus dressing.",price:280,veg:true,img:"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=85"},
+
+  // Starters
+  {cat:"Starters",sub:"Vegetarian Starters",name:"Paneer Tikka",desc:"Cottage cheese marinated in yoghurt and spices, grilled in the tandoor.",price:420,veg:true,img:"https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&q=85"},
+  {cat:"Starters",sub:"Vegetarian Starters",name:"Hara Bhara Kabab",desc:"Spinach, peas and potato patties with aromatic herbs.",price:360,veg:true,img:"https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=600&q=85"},
+  {cat:"Starters",sub:"Vegetarian Starters",name:"Crispy Corn",desc:"Golden fried corn kernels tossed with spices and herbs.",price:340,veg:true,img:"https://images.unsplash.com/photo-1598515213692-5f25b457e46e?w=600&q=85"},
+  {cat:"Starters",sub:"Vegetarian Starters",name:"Mushroom Pepper Fry",desc:"Button mushrooms sautéed with cracked pepper and garlic.",price:380,veg:true,img:"https://images.unsplash.com/photo-1608039755401-7c72d8b8b0db?w=600&q=85"},
+  {cat:"Starters",sub:"Non-Vegetarian Starters",name:"Chicken Tikka",desc:"Tender chicken pieces marinated and cooked in the tandoor.",price:460,veg:false,img:"https://images.unsplash.com/photo-1599487488170-d114c9b7e54b?w=600&q=85"},
+  {cat:"Starters",sub:"Non-Vegetarian Starters",name:"Tandoori Chicken",desc:"Classic whole-leg preparation with traditional tandoori spices.",price:520,veg:false,img:"https://images.unsplash.com/photo-1599487488170-d114c9b7e54b?w=600&q=85"},
+  {cat:"Starters",sub:"Non-Vegetarian Starters",name:"Malai Chicken Tikka",desc:"Creamy, mildly spiced chicken tikka with cashew and cream.",price:520,veg:false,img:"https://images.unsplash.com/photo-1610057099443-fde8c4d50f8c?w=600&q=85"},
+  {cat:"Starters",sub:"Non-Vegetarian Starters",name:"Fish Amritsari",desc:"Crispy battered fish fillets with ajwain and lemon.",price:540,veg:false,img:"https://images.unsplash.com/photo-1580959375944-abd749b55a5e?w=600&q=85"},
+  {cat:"Starters",sub:"Asian Appetisers",name:"Veg Manchurian Dry",desc:"Vegetable dumplings tossed in a tangy Indo-Chinese sauce.",price:360,veg:true,img:"https://images.unsplash.com/photo-1626777553635-3a44f5e8b0b4?w=600&q=85"},
+  {cat:"Starters",sub:"Asian Appetisers",name:"Chilli Paneer",desc:"Crispy paneer cubes in a spicy bell pepper sauce.",price:400,veg:true,img:"https://images.unsplash.com/photo-1626777553635-3a44f5e8b0b4?w=600&q=85"},
+  {cat:"Starters",sub:"Asian Appetisers",name:"Spring Rolls",desc:"Crispy rolls filled with seasonal vegetables, served with dip.",price:320,veg:true,img:"https://images.unsplash.com/photo-1606502281004-f0a1ddd34b44?w=600&q=85"},
+  {cat:"Starters",sub:"Asian Appetisers",name:"Chicken Manchurian",desc:"Tender chicken in a savoury, spicy Manchurian sauce.",price:440,veg:false,img:"https://images.unsplash.com/photo-1626777553635-3a44f5e8b0b4?w=600&q=85"},
+  {cat:"Starters",sub:"Asian Appetisers",name:"Chilli Chicken",desc:"Wok-tossed chicken with chillies, onions and peppers.",price:460,veg:false,img:"https://images.unsplash.com/photo-1626777553635-3a44f5e8b0b4?w=600&q=85"},
+  {cat:"Starters",sub:"Tandoori",name:"Tandoori Platter",desc:"A selection of tandoor-grilled vegetarian and non-vegetarian specialties.",price:780,veg:false,img:"https://images.unsplash.com/photo-1599487488170-d114c9b7e54b?w=600&q=85"},
+
+  // Main Course
+  {cat:"Main Course",sub:"North Indian · Vegetarian",name:"Paneer Butter Masala",desc:"Cottage cheese in a rich, creamy tomato-cashew gravy.",price:440,veg:true,img:"https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&q=85"},
+  {cat:"Main Course",sub:"North Indian · Vegetarian",name:"Dal Makhani",desc:"Slow-cooked black lentils finished with cream and butter.",price:380,veg:true,img:"https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=85"},
+  {cat:"Main Course",sub:"North Indian · Vegetarian",name:"Kadai Veg",desc:"Seasonal vegetables tossed in a spicy kadai masala.",price:400,veg:true,img:"https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=85"},
+  {cat:"Main Course",sub:"North Indian · Vegetarian",name:"Shahi Paneer",desc:"Paneer in a mild, aromatic cashew and cream gravy.",price:440,veg:true,img:"https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&q=85"},
+  {cat:"Main Course",sub:"North Indian · Non-Vegetarian",name:"Butter Chicken",desc:"Tender chicken in a velvety tomato-butter sauce.",price:520,veg:false,img:"https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&q=85"},
+  {cat:"Main Course",sub:"North Indian · Non-Vegetarian",name:"Chicken Tikka Masala",desc:"Tandoor-grilled chicken tikka in a spiced tomato gravy.",price:540,veg:false,img:"https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600&q=85"},
+  {cat:"Main Course",sub:"North Indian · Non-Vegetarian",name:"Kadai Chicken",desc:"Chicken cooked with capsicum in a robust kadai masala.",price:520,veg:false,img:"https://images.unsplash.com/photo-1626777553635-3a44f5e8b0b4?w=600&q=85"},
+  {cat:"Main Course",sub:"Asian & Continental",name:"Hakka Noodles",desc:"Stir-fried noodles with vegetables and soy.",price:360,veg:true,img:"https://images.unsplash.com/photo-1585032226651-759a36c2b484?w=600&q=85"},
+  {cat:"Main Course",sub:"Asian & Continental",name:"Schezwan Fried Rice",desc:"Wok-tossed rice with Schezwan sauce and vegetables.",price:380,veg:true,img:"https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=85"},
+  {cat:"Main Course",sub:"Asian & Continental",name:"Pasta Alfredo",desc:"Creamy white sauce pasta with mushrooms and parmesan.",price:420,veg:true,img:"https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=600&q=85"},
+  {cat:"Main Course",sub:"Asian & Continental",name:"Pasta Arrabiata",desc:"Penne in a spicy tomato sauce with garlic and chilli.",price:400,veg:true,img:"https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=85"},
+
+  // Breads & Accompaniments
+  {cat:"Breads & Rice",sub:"Indian Breads",name:"Butter Naan",desc:"Soft leavened bread brushed with butter.",price:80,veg:true,img:"https://images.unsplash.com/photo-1626777553635-3a44f5e8b0b4?w=600&q=85"},
+  {cat:"Breads & Rice",sub:"Indian Breads",name:"Garlic Naan",desc:"Naan topped with fresh garlic and coriander.",price:100,veg:true,img:"https://images.unsplash.com/photo-1626777553635-3a44f5e8b0b4?w=600&q=85"},
+  {cat:"Breads & Rice",sub:"Indian Breads",name:"Tandoori Roti",desc:"Whole-wheat bread baked in the tandoor.",price:60,veg:true,img:"https://images.unsplash.com/photo-1626777553635-3a44f5e8b0b4?w=600&q=85"},
+  {cat:"Breads & Rice",sub:"Indian Breads",name:"Laccha Paratha",desc:"Layered, flaky whole-wheat paratha.",price:110,veg:true,img:"https://images.unsplash.com/photo-1626777553635-3a44f5e8b0b4?w=600&q=85"},
+  {cat:"Breads & Rice",sub:"Rice Preparations",name:"Jeera Rice",desc:"Fragrant basmati rice tempered with cumin.",price:220,veg:true,img:"https://images.unsplash.com/photo-1596560548464-f010549b84d7?w=600&q=85"},
+  {cat:"Breads & Rice",sub:"Rice Preparations",name:"Veg Biryani",desc:"Aromatic basmati rice layered with vegetables and spices.",price:380,veg:true,img:"https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&q=85"},
+  {cat:"Breads & Rice",sub:"Rice Preparations",name:"Chicken Biryani",desc:"Fragrant basmati with tender chicken and biryani masala.",price:460,veg:false,img:"https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600&q=85"},
+  {cat:"Breads & Rice",sub:"Accompaniments",name:"Mixed Raita",desc:"Yoghurt with seasonal vegetables and roasted cumin.",price:140,veg:true,img:""},
+  {cat:"Breads & Rice",sub:"Accompaniments",name:"Pickle & Papad",desc:"Assorted Indian pickles with crisp papad.",price:120,veg:true,img:""},
+
+  // Pizza & Pasta
+  {cat:"Pizza & Pasta",sub:"Pizzas",name:"Margherita",desc:"Classic pizza with fresh mozzarella, tomato and basil.",price:420,veg:true,img:"https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=85"},
+  {cat:"Pizza & Pasta",sub:"Pizzas",name:"Farmhouse Pizza",desc:"Onion, capsicum, tomato, mushroom and sweet corn.",price:480,veg:true,img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=85"},
+  {cat:"Pizza & Pasta",sub:"Pizzas",name:"Paneer Tikka Pizza",desc:"Tandoori paneer, onions and peppers on a cheesy base.",price:520,veg:true,img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=85"},
+  {cat:"Pizza & Pasta",sub:"Pizzas",name:"Chicken Tikka Pizza",desc:"Tandoori chicken tikka with onions and mozzarella.",price:560,veg:false,img:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=85"},
+  {cat:"Pizza & Pasta",sub:"Pastas",name:"Penne Alfredo",desc:"Penne in a creamy white sauce with mushrooms.",price:420,veg:true,img:"https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=600&q=85"},
+  {cat:"Pizza & Pasta",sub:"Pastas",name:"Spaghetti Bolognese",desc:"Classic meat ragu with slow-cooked tomatoes.",price:480,veg:false,img:"https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=85"},
+  {cat:"Pizza & Pasta",sub:"Pastas",name:"Mac & Cheese",desc:"Creamy three-cheese pasta baked to golden perfection.",price:440,veg:true,img:"https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=600&q=85"},
+
+  // Asian Cuisine
+  {cat:"Asian Cuisine",sub:"Chinese",name:"Veg Hakka Noodles",desc:"Stir-fried noodles with fresh vegetables and soy.",price:360,veg:true,img:"https://images.unsplash.com/photo-1585032226651-759a36c2b484?w=600&q=85"},
+  {cat:"Asian Cuisine",sub:"Chinese",name:"Schezwan Noodles",desc:"Noodles tossed in a spicy Schezwan sauce.",price:380,veg:true,img:"https://images.unsplash.com/photo-1585032226651-759a36c2b484?w=600&q=85"},
+  {cat:"Asian Cuisine",sub:"Chinese",name:"Veg Fried Rice",desc:"Wok-tossed rice with vegetables and soy.",price:340,veg:true,img:"https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=85"},
+  {cat:"Asian Cuisine",sub:"Chinese",name:"Chicken Fried Rice",desc:"Fried rice with shredded chicken and aromatics.",price:400,veg:false,img:"https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=85"},
+  {cat:"Asian Cuisine",sub:"Dumplings & Dim Sums",name:"Veg Steamed Momos",desc:"Delicate dumplings filled with seasonal vegetables.",price:280,veg:true,img:"https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&q=85"},
+  {cat:"Asian Cuisine",sub:"Dumplings & Dim Sums",name:"Chicken Steamed Momos",desc:"Juicy chicken-filled momos served with red chutney.",price:320,veg:false,img:"https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&q=85"},
+  {cat:"Asian Cuisine",sub:"Dumplings & Dim Sums",name:"Pan-Fried Dim Sums",desc:"Crispy-bottomed dim sums with a savoury filling.",price:340,veg:true,img:"https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&q=85"},
+  {cat:"Asian Cuisine",sub:"Sushi",name:"California Roll",desc:"Crab stick, avocado and cucumber in seasoned rice.",price:520,veg:false,img:"https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=600&q=85"},
+  {cat:"Asian Cuisine",sub:"Sushi",name:"Veg Avocado Roll",desc:"Fresh avocado, cucumber and pickled radish.",price:480,veg:true,img:"https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=600&q=85"},
+
+  // Burgers, Sandwiches & Snacks
+  {cat:"Burgers & Sandwiches",sub:"Burgers",name:"Classic Veg Burger",desc:"Crisp veg patty, fresh lettuce, cheese and house sauce.",price:320,veg:true,img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=85"},
+  {cat:"Burgers & Sandwiches",sub:"Burgers",name:"Chicken Burger",desc:"Grilled chicken patty with lettuce, tomato and aioli.",price:380,veg:false,img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=85"},
+  {cat:"Burgers & Sandwiches",sub:"Burgers",name:"Cheese Burst Burger",desc:"Double cheese, caramelised onions and smoky sauce.",price:400,veg:true,img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=85"},
+  {cat:"Burgers & Sandwiches",sub:"Sandwiches",name:"Club Sandwich",desc:"Triple-deck sandwich with chicken, egg and vegetables.",price:360,veg:false,img:"https://images.unsplash.com/photo-1528735602780-25575b71e41b?w=600&q=85"},
+  {cat:"Burgers & Sandwiches",sub:"Sandwiches",name:"Grilled Vegetable Sandwich",desc:"Grilled seasonal vegetables with herb mayo.",price:300,veg:true,img:"https://images.unsplash.com/photo-1528735602780-25575b71e41b?w=600&q=85"},
+  {cat:"Burgers & Sandwiches",sub:"Wraps & Rolls",name:"Paneer Tikka Wrap",desc:"Tandoori paneer with peppers in a soft tortilla.",price:320,veg:true,img:"https://images.unsplash.com/photo-1551881192-0066b06f4c6e?w=600&q=85"},
+  {cat:"Burgers & Sandwiches",sub:"Wraps & Rolls",name:"Chicken Seekh Wrap",desc:"Spiced chicken seekh with onions and mint chutney.",price:360,veg:false,img:"https://images.unsplash.com/photo-1551881192-0066b06f4c6e?w=600&q=85"},
+
+  // Desserts
+  {cat:"Desserts",sub:"Cakes",name:"Chocolate Truffle",desc:"Rich dark chocolate truffle with ganache layers.",price:280,veg:true,img:"https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=85"},
+  {cat:"Desserts",sub:"Cakes",name:"Black Forest",desc:"Classic chocolate sponge with cherries and cream.",price:260,veg:true,img:"https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=85"},
+  {cat:"Desserts",sub:"Cakes",name:"Red Velvet",name:"Red Velvet Cake",desc:"Signature red velvet with cream cheese frosting.",price:300,veg:true,img:"https://images.unsplash.com/photo-1586985289688-ca3cf47d8e6e?w=600&q=85"},
+  {cat:"Desserts",sub:"Cheesecakes",name:"New York Cheesecake",desc:"Creamy classic cheesecake with berry compote.",price:320,veg:true,img:"https://images.unsplash.com/photo-1533134242443-d4fd2153059d?w=600&q=85"},
+  {cat:"Desserts",sub:"Cheesecakes",name:"Blueberry Cheesecake",desc:"Silky cheesecake topped with blueberry coulis.",price:320,veg:true,img:"https://images.unsplash.com/photo-1533134242443-d4fd2153059d?w=600&q=85"},
+  {cat:"Desserts",sub:"Indian Desserts",name:"Gulab Jamun",desc:"Warm milk dumplings in cardamom-infused syrup.",price:180,veg:true,img:"https://images.unsplash.com/photo-1601303516361-f4c6e14a26b3?w=600&q=85"},
+  {cat:"Desserts",sub:"Indian Desserts",name:"Rasmalai",desc:"Soft cottage cheese discs in saffron-cardamom milk.",price:220,veg:true,img:"https://images.unsplash.com/photo-1601303516361-f4c6e14a26b3?w=600&q=85"},
+  {cat:"Desserts",sub:"Puddings",name:"Chocolate Brownie",desc:"Warm chocolate brownie with vanilla ice cream.",price:280,veg:true,img:"https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=85"},
+  {cat:"Desserts",sub:"Puddings",name:"Classic Custard Pudding",desc:"Silky vanilla custard with caramel drizzle.",price:220,veg:true,img:"https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=85"},
+
+  // Beverages
+  {cat:"Beverages",sub:"Hot Beverages",name:"Cappuccino",desc:"Classic espresso with steamed milk and foam.",price:180,veg:true,img:"https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=85"},
+  {cat:"Beverages",sub:"Hot Beverages",name:"Cafe Latte",desc:"Smooth espresso with velvety steamed milk.",price:200,veg:true,img:"https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=85"},
+  {cat:"Beverages",sub:"Hot Beverages",name:"Hot Chocolate",desc:"Rich cocoa with steamed milk and whipped cream.",price:220,veg:true,img:"https://images.unsplash.com/photo-1542990253-0b8be7b2e1e3?w=600&q=85"},
+  {cat:"Beverages",sub:"Hot Beverages",name:"Fresh Lime Soda",desc:"Zesty lime with soda, sweet or salted.",price:140,veg:true,img:"https://images.unsplash.com/photo-1556881286-fc6915169721?w=600&q=85"},
+  {cat:"Beverages",sub:"Cold Beverages",name:"Cold Coffee",desc:"Chilled coffee blended with ice cream.",price:220,veg:true,img:"https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=85"},
+  {cat:"Beverages",sub:"Cold Beverages",name:"Iced Tea — Peach",desc:"Refreshing peach iced tea with fresh mint.",price:200,veg:true,img:"https://images.unsplash.com/photo-1556881286-fc6915169721?w=600&q=85"},
+  {cat:"Beverages",sub:"Mocktails",name:"Virgin Mojito",desc:"Fresh mint, lime and soda — a classic refresher.",price:260,veg:true,img:"https://images.unsplash.com/photo-1551538811-6a1019020a76?w=600&q=85"},
+  {cat:"Beverages",sub:"Mocktails",name:"Blue Lagoon",desc:"A vibrant blue curacao-style mocktail with citrus.",price:280,veg:true,img:"https://images.unsplash.com/photo-1551538811-6a1019020a76?w=600&q=85"},
+  {cat:"Beverages",sub:"Mocktails",name:"Fruit Punch",desc:"A tropical blend of seasonal fruits and juices.",price:260,veg:true,img:"https://images.unsplash.com/photo-1551538811-6a1019020a76?w=600&q=85"}
+];
+
+// Fix a broken image URL above
+MENU.forEach(m=>{
+  if(m.img && m.img.includes('+')) m.img = "https://images.unsplash.com/photo-1551881192-0066b06f4c6e?w=600&q=85";
+});
+
+/* =========================================================
+   MENU RENDERING
+   ========================================================= */
+const categories = ["All", ...Array.from(new Set(MENU.map(m=>m.cat)))];
+let activeCat = "All";
+let activeDiet = "all";
+let searchTerm = "";
+
+function renderCategories(){
+  const wrap = document.getElementById('menuCategories');
+  wrap.innerHTML = categories.map(c=>`
+    <button class="cat-btn ${c===activeCat?'active':''}" data-cat="${c}">${c}</button>
+  `).join('');
+  wrap.querySelectorAll('.cat-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      activeCat = btn.dataset.cat;
+      renderCategories();
+      renderMenu();
+    });
+  });
+}
+
+function renderMenu(){
+  const grid = document.getElementById('menuGrid');
+  let items = MENU.filter(m=>{
+    const catOk = activeCat==="All" || m.cat===activeCat;
+    const dietOk = activeDiet==="all" || (activeDiet==="veg"?m.veg:!m.veg);
+    const searchOk = !searchTerm ||
+      m.name.toLowerCase().includes(searchTerm) ||
+      m.desc.toLowerCase().includes(searchTerm) ||
+      m.cat.toLowerCase().includes(searchTerm) ||
+      m.sub.toLowerCase().includes(searchTerm);
+    return catOk && dietOk && searchOk;
+  });
+
+  if(items.length===0){
+    grid.innerHTML = `<div class="menu-empty">No dishes match your search. Try a different keyword or filter.</div>`;
+    return;
+  }
+
+  grid.innerHTML = items.map(m=>`
+    <article class="menu-item">
+      <div class="menu-item-img${m.img?'':' no-img'}"${m.img?` style="background-image:url('${m.img}')"`:''}>
+        ${m.sub?`<span class="menu-item-badge">${m.sub}</span>`:''}
+      </div>
+      <div class="menu-item-body">
+        <div class="menu-item-head">
+          <h3 class="menu-item-name">
+            <span class="diet-dot ${m.veg?'veg':'nonveg'}" title="${m.veg?'Vegetarian':'Non-Vegetarian'}"></span>
+            ${m.name}
+          </h3>
+          <div class="menu-item-price">₹${m.price}</div>
+        </div>
+        <p class="menu-item-desc">${m.desc}</p>
+      </div>
+    </article>
+  `).join('');
+}
+
+renderCategories();
+renderMenu();
+
+// Search
+document.getElementById('menuSearch').addEventListener('input',e=>{
+  searchTerm = e.target.value.trim().toLowerCase();
+  renderMenu();
+});
+
+// Diet filters
+document.querySelectorAll('.filter-chip').forEach(chip=>{
+  chip.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
+    chip.classList.add('active');
+    activeDiet = chip.dataset.diet;
+    renderMenu();
+  });
+});
+
+/* =========================================================
+   NAV SCROLL
+   ========================================================= */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY>60) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// Mobile menu
+const navToggle = document.getElementById('navToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+navToggle.addEventListener('click',()=>{
+  navToggle.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+});
+mobileMenu.querySelectorAll('a').forEach(a=>{
+  a.addEventListener('click',()=>{
+    navToggle.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+// Active nav link on scroll
+const sections = document.querySelectorAll('section[id], header[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  let current = '';
+  sections.forEach(s=>{
+    const top = s.offsetTop - 120;
+    if(window.scrollY >= top) current = s.id;
+  });
+  navLinks.forEach(l=>{
+    l.classList.remove('active');
+    if(l.getAttribute('href') === '#'+current) l.classList.add('active');
+  });
+});
+
+/* =========================================================
+   REVEAL ANIMATIONS
+   ========================================================= */
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.12,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* =========================================================
+   GALLERY LIGHTBOX
+   ========================================================= */
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+document.querySelectorAll('.g-item').forEach(item=>{
+  item.addEventListener('click',()=>{
+    lightboxImg.src = item.dataset.src;
+    lightboxImg.alt = 'Cafe Crema gallery image';
+    lightbox.classList.add('open');
+  });
+});
+document.getElementById('lightboxClose').addEventListener('click',()=>lightbox.classList.remove('open'));
+lightbox.addEventListener('click',e=>{if(e.target===lightbox) lightbox.classList.remove('open')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape') lightbox.classList.remove('open')});
+
+/* =========================================================
+   TESTIMONIAL CAROUSEL
+   ========================================================= */
+const slides = document.getElementById('testSlides');
+const totalSlides = slides.children.length;
+const dotsWrap = document.getElementById('testDots');
+let currentSlide = 0;
+
+for(let i=0;i<totalSlides;i++){
+  const d = document.createElement('button');
+  d.className = 'test-dot' + (i===0?' active':'');
+  d.addEventListener('click',()=>goToSlide(i));
+  dotsWrap.appendChild(d);
+}
+
+function goToSlide(i){
+  currentSlide = i;
+  slides.style.transform = `translateX(-${i*100}%)`;
+  dotsWrap.querySelectorAll('.test-dot').forEach((d,idx)=>d.classList.toggle('active',idx===i));
+}
+
+setInterval(()=>goToSlide((currentSlide+1)%totalSlides),6000);
+
+/* =========================================================
+   RESERVATION FORM
+   ========================================================= */
+const resForm = document.getElementById('resForm');
+const formSuccess = document.getElementById('formSuccess');
+resForm.addEventListener('submit',e=>{
+  e.preventDefault();
+  // Basic validation
+  const required = resForm.querySelectorAll('[required]');
+  let valid = true;
+  required.forEach(f=>{
+    if(!f.value.trim()){
+      f.style.borderColor = '#c0392b';
+      valid = false;
+    } else {
+      f.style.borderColor = '';
+    }
+  });
+  if(!valid) return;
+
+  // In production: send to backend endpoint
+  // fetch('/api/reservations', { method:'POST', body: new FormData(resForm) })
+  formSuccess.classList.add('show');
+  resForm.reset();
+  setTimeout(()=>formSuccess.classList.remove('show'),8000);
+  formSuccess.scrollIntoView({behavior:'smooth',block:'center'});
+});
+
+// Set min date to today
+const dateInput = document.getElementById('rDate');
+const today = new Date().toISOString().split('T')[0];
+dateInput.setAttribute('min',today);
+
+</script>
+</body>
+</html>
+Displaying index.html. 
