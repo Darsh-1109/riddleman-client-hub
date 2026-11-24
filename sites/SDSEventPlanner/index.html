@@ -1,0 +1,2227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDS Event Planner | Event Management, Theme Parties & Celebrations in Mumbai</title>
+    <meta name="description" content="SDS Event Planner creates memorable birthday parties, theme parties, society functions, corporate events and wedding celebrations across Mumbai and Navi Mumbai. Contact us to plan your event.">
+    <meta name="keywords" content="Event Planner in Navi Mumbai, Event Management Company in Mumbai, Birthday Party Planner in Navi Mumbai, Kids Birthday Party Organiser, Theme Party Planner, Society Event Organiser, Corporate Event Planner in Mumbai, Wedding Function Planner">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="SDS Event Planner | You Dream It, We Create It.">
+    <meta property="og:description" content="Premium event planning and management for birthdays, society functions, corporate events, and weddings in Mumbai, Navi Mumbai, Lonavala, and Pune.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sdseventplanner.com/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SDS Event Planner",
+      "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80",
+      "founder": {
+        "@type": "Person",
+        "name": "Deepika Gupta"
+      },
+      "foundingDate": "2020",
+      "telephone": "+919819871522",
+      "email": "sdseventplanner@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Haware Fantasia, Sector 30A, Vashi",
+        "addressLocality": "Navi Mumbai",
+        "addressRegion": "Maharashtra",
+        "postalCode": "400703",
+        "addressCountry": "IN"
+      },
+      "areaServed": ["Mumbai", "Navi Mumbai", "Lonavala", "Pune"],
+      "url": "https://www.sdseventplanner.com/",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "500"
+      }
+    }
+    </script>
+
+    <style>
+        /* =========================================
+           CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --color-ivory: #FBF8F4;
+            --color-champagne: #F1E5D6;
+            --color-dusty-rose: #D9A7A2;
+            --color-blush: #EBCBC6;
+            --color-mauve: #B9A3B8;
+            --color-plum: #493747;
+            --color-gold: #C5A36A;
+            --color-charcoal: #343139;
+            --color-white: #FFFFFF;
+            
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --shadow-soft: 0 10px 40px -10px rgba(73, 55, 71, 0.08);
+            --shadow-hover: 0 20px 50px -10px rgba(73, 55, 71, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-charcoal);
+            background-color: var(--color-ivory);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--color-plum);
+            line-height: 1.2;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        /* =========================================
+           TYPOGRAPHY & UTILITIES
+           ========================================= */
+        .text-center { text-align: center; }
+        .text-gold { color: var(--color-gold); }
+        .bg-champagne { background-color: var(--color-champagne); }
+        .bg-white { background-color: var(--color-white); }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: var(--color-gold);
+            margin: 1rem auto 0;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: #6b6570;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--color-plum);
+            color: var(--color-white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-gold);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-plum);
+            border-color: var(--color-plum);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-plum);
+            color: var(--color-white);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+        }
+
+        /* =========================================
+           ANIMATIONS
+           ========================================= */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(251, 248, 244, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(197, 163, 106, 0.2);
+            transition: var(--transition-smooth);
+            padding: 1rem 0;
+        }
+
+        .navbar.scrolled {
+            padding: 0.75rem 0;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-plum);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--color-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-charcoal);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--color-gold);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--color-plum);
+            cursor: pointer;
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--color-white);
+            overflow: hidden;
+            margin-top: 0;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+            animation: slowZoom 20s infinite alternate;
+        }
+
+        @keyframes slowZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(73, 55, 71, 0.4), rgba(73, 55, 71, 0.7));
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 1.5rem;
+            z-index: 1;
+        }
+
+        .hero-tagline {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-footer {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            opacity: 0.8;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 1.5rem;
+            display: inline-block;
+        }
+
+        /* =========================================
+           ABOUT SECTION
+           ========================================= */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            border-radius: 4px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--color-gold);
+            border-radius: 4px;
+            z-index: -1;
+        }
+
+        .since-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background-color: var(--color-plum);
+            color: var(--color-white);
+            padding: 1.5rem;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .since-badge span {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .since-badge strong {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: #5a555e;
+        }
+
+        /* =========================================
+           SPECIALITIES SECTION
+           ========================================= */
+        .specialities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .speciality-card {
+            position: relative;
+            height: 400px;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            group: true;
+        }
+
+        .speciality-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .speciality-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .speciality-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(73, 55, 71, 0.9), transparent);
+            color: var(--color-white);
+            transition: var(--transition-smooth);
+        }
+
+        .speciality-overlay h3 {
+            color: var(--color-white);
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .speciality-overlay p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .speciality-card:hover .speciality-overlay p {
+            transform: translateY(0);
+            opacity: 0.9;
+        }
+
+        .explore-link {
+            color: var(--color-gold);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* =========================================
+           SERVICES SECTION
+           ========================================= */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--color-white);
+            padding: 2.5rem;
+            border-radius: 4px;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition-smooth);
+            border-top: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-top-color: var(--color-gold);
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #6b6570;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            font-size: 0.9rem;
+            color: #5a555e;
+        }
+
+        .service-features li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-features li::before {
+            content: '•';
+            color: var(--color-dusty-rose);
+            font-size: 1.2rem;
+        }
+
+        /* =========================================
+           KIDS BIRTHDAY SECTION
+           ========================================= */
+        .kids-section {
+            background-color: var(--color-champagne);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kids-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .kids-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .kids-content p {
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .kids-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .kids-gallery img {
+            border-radius: 4px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .kids-gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .kids-gallery img:first-child {
+            grid-column: span 2;
+            height: 250px;
+        }
+
+        /* =========================================
+           APPROACH SECTION
+           ========================================= */
+        .approach-timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .approach-timeline::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-blush);
+            z-index: 0;
+        }
+
+        .approach-step {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            width: 22%;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--color-white);
+            border: 2px solid var(--color-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--color-plum);
+            margin: 0 auto 1.5rem;
+            font-weight: 700;
+        }
+
+        .approach-step h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .approach-step p {
+            font-size: 0.9rem;
+            color: #6b6570;
+        }
+
+        /* =========================================
+           GALLERY SECTION
+           ========================================= */
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            background: none;
+            border: 1px solid var(--color-blush);
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--color-charcoal);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--color-plum);
+            color: var(--color-white);
+            border-color: var(--color-plum);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 300px;
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .gallery-item.tall {
+            grid-row: span 2;
+        }
+
+        .gallery-item.wide {
+            grid-column: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(73, 55, 71, 0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition-smooth);
+            color: var(--color-white);
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h4 {
+            color: var(--color-white);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-overlay span {
+            font-size: 0.85rem;
+            color: var(--color-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 4px;
+            box-shadow: 0 0 40px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .lightbox-close:hover {
+            color: var(--color-gold);
+        }
+
+        /* =========================================
+           WHY CHOOSE US & REVIEWS
+           ========================================= */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            color: var(--color-gold);
+            background: var(--color-champagne);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .feature-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-text p {
+            font-size: 0.9rem;
+            color: #6b6570;
+        }
+
+        .reviews-section {
+            background-color: var(--color-plum);
+            color: var(--color-white);
+        }
+
+        .reviews-section .section-header h2 {
+            color: var(--color-white);
+        }
+
+        .reviews-section .section-header p {
+            color: var(--color-blush);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .review-card::before {
+            content: '"';
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            color: var(--color-gold);
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            opacity: 0.5;
+            line-height: 1;
+        }
+
+        .review-text {
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+            padding-top: 1rem;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-info h5 {
+            color: var(--color-white);
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info span {
+            font-size: 0.85rem;
+            color: var(--color-gold);
+        }
+
+        .stars {
+            color: var(--color-gold);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .review-stats {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .review-stats h3 {
+            color: var(--color-white);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* =========================================
+           SERVICE AREA & FAQ
+           ========================================= */
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .area-card {
+            padding: 2rem;
+            background: var(--color-white);
+            border-radius: 4px;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition-smooth);
+        }
+
+        .area-card:hover {
+            transform: translateY(-5px);
+            border-bottom: 3px solid var(--color-gold);
+        }
+
+        .area-card i {
+            font-size: 2rem;
+            color: var(--color-dusty-rose);
+            margin-bottom: 1rem;
+        }
+
+        .area-card h4 {
+            font-size: 1.2rem;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--color-white);
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--color-plum);
+            font-weight: 600;
+            transition: var(--transition-smooth);
+        }
+
+        .faq-question:hover {
+            background-color: var(--color-ivory);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+            color: var(--color-gold);
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 1.5rem;
+            color: #6b6570;
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        /* =========================================
+           CONTACT & FINAL CTA
+           ========================================= */
+        .final-cta {
+            position: relative;
+            padding: 8rem 0;
+            text-align: center;
+            color: var(--color-white);
+            background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(73, 55, 71, 0.85);
+        }
+
+        .final-cta .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .final-cta h2 {
+            color: var(--color-white);
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-section {
+            background-color: var(--color-white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .contact-detail i {
+            color: var(--color-gold);
+            font-size: 1.2rem;
+            margin-top: 0.3rem;
+        }
+
+        .contact-detail h4 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+        }
+
+        .contact-detail p, .contact-detail a {
+            font-size: 0.95rem;
+            color: #6b6570;
+        }
+
+        .contact-detail a:hover {
+            color: var(--color-plum);
+        }
+
+        .enquiry-form {
+            background: var(--color-ivory);
+            padding: 2.5rem;
+            border-radius: 4px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-plum);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            border: 1px solid #e0d8d0;
+            border-radius: 2px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            background: var(--color-white);
+            transition: var(--transition-smooth);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-gold);
+            box-shadow: 0 0 0 3px rgba(197, 163, 106, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-success {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        footer {
+            background-color: var(--color-plum);
+            color: var(--color-white);
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand .logo {
+            color: var(--color-white);
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .footer-brand p {
+            color: var(--color-blush);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .footer-col h4 {
+            color: var(--color-white);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--color-blush);
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-gold);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            color: var(--color-blush);
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .footer-contact i {
+            color: var(--color-gold);
+            width: 20px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            font-size: 0.85rem;
+            color: var(--color-blush);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            transition: var(--transition-smooth);
+        }
+
+        .social-links a:hover {
+            background-color: var(--color-gold);
+            border-color: var(--color-gold);
+            color: var(--color-plum);
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--transition-smooth);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 1024px) {
+            .specialities-grid {
+                grid-template-columns: 1fr;
+            }
+            .speciality-card {
+                height: 300px;
+            }
+            .areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: var(--color-ivory);
+                flex-direction: column;
+                padding: 5rem 2rem 2rem;
+                box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+                transition: right 0.4s ease;
+                gap: 1.5rem;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid,
+            .kids-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image::before {
+                display: none;
+            }
+
+            .approach-timeline {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .approach-timeline::before {
+                width: 2px;
+                height: 100%;
+                left: 30px;
+                top: 0;
+            }
+
+            .approach-step {
+                width: 100%;
+                text-align: left;
+                display: flex;
+                gap: 1.5rem;
+                align-items: flex-start;
+            }
+
+            .step-number {
+                margin: 0;
+                flex-shrink: 0;
+                width: 60px;
+                height: 60px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 250px;
+            }
+
+            .gallery-item.wide, .gallery-item.tall {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">SDS <span>Event Planner</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">Plan Your Event</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in-up">
+            <span class="hero-tagline">Every Celebration Deserves a Beautiful Story</span>
+            <h1>You Dream It.<br>We Create It.</h1>
+            <p>From intimate celebrations to grand events, SDS Event Planner brings your ideas to life with creative concepts, beautiful décor, engaging entertainment and seamless coordination.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Plan Your Event</a>
+                <a href="#gallery" class="btn btn-secondary" style="color: white; border-color: white;">Explore Our Work</a>
+            </div>
+            <div class="hero-footer">
+                Creating memorable celebrations since 2020.
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-padding bg-white" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Elegant event setup by SDS Event Planner">
+                    <div class="since-badge">
+                        <span>Since</span>
+                        <strong>2020</strong>
+                    </div>
+                </div>
+                <div class="about-content fade-in-up">
+                    <span class="text-gold" style="font-weight: 600; letter-spacing: 1px; text-transform: uppercase; font-size: 0.85rem;">Our Story</span>
+                    <h2>Celebrations Designed Around You.</h2>
+                    <p>Established in 2020 by Deepika Gupta, SDS Event Planner was built around a simple idea: every celebration should feel special, personal and memorable.</p>
+                    <p>From the first idea to the final moments of an event, our team brings together creativity, coordination and attention to detail to create experiences worth remembering. We take care of the planning, coordination, entertainment and visual details, allowing you to enjoy your occasion without having to manage everything yourself.</p>
+                    <a href="#contact" class="btn btn-secondary">Discover Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Specialities -->
+    <section class="section-padding" id="events" style="background-color: var(--color-ivory);">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Every Occasion. A Different Kind of Magic.</h2>
+                <p>We craft bespoke experiences tailored to the unique rhythm of your celebration.</p>
+            </div>
+            <div class="specialities-grid">
+                <div class="speciality-card fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Theme Party Decoration">
+                    <div class="speciality-overlay">
+                        <h3>01. Theme Parties</h3>
+                        <p>Memorable themed celebrations with coordinated décor, entertainment and engaging activities for all ages.</p>
+                        <span class="explore-link">Explore More <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="speciality-card fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" alt="Society Function Event">
+                    <div class="speciality-overlay">
+                        <h3>02. Society Functions</h3>
+                        <p>Engaging events for residential communities, featuring seamless coordination and entertainment for all guests.</p>
+                        <span class="explore-link">Explore More <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="speciality-card fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Corporate Event Planning">
+                    <div class="speciality-overlay">
+                        <h3>03. Corporate Events</h3>
+                        <p>Professional event planning, stage arrangements, and hosting for impactful corporate occasions.</p>
+                        <span class="explore-link">Explore More <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="speciality-card fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Wedding Function Decoration">
+                    <div class="speciality-overlay">
+                        <h3>04. Wedding Functions</h3>
+                        <p>Thoughtful event styling, elegant decoration, and flawless coordination for your family celebrations.</p>
+                        <span class="explore-link">Explore More <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-padding bg-white" id="services">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Everything That Brings an Event Together.</h2>
+                <p>Comprehensive event solutions tailored to your vision.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in-up">
+                    <div class="service-icon"><i class="fas fa-microphone-alt"></i></div>
+                    <h3>Anchoring & Emcee</h3>
+                    <p>Bring energy, personality and engagement to your event with professional anchoring and hosting.</p>
+                    <ul class="service-features">
+                        <li>Professional Hosts</li>
+                        <li>Audience Engagement</li>
+                        <li>Script Customization</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-in-up">
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Decoration & Artists</h3>
+                    <p>Transform your venue with thoughtful decoration, creative themes and entertainment artists.</p>
+                    <ul class="service-features">
+                        <li>Themed Décor & Stage Setup</li>
+                        <li>Birthday & Wedding Setups</li>
+                        <li>Live Entertainment Artists</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-in-up">
+                    <div class="service-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Catering & Gifting</h3>
+                    <p>Add thoughtful details to your celebration through curated catering arrangements and gifting options.</p>
+                    <ul class="service-features">
+                        <li>Food Presentation & Setup</li>
+                        <li>Curated Gift Hampers</li>
+                        <li>Event Gifting Displays</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-in-up">
+                    <div class="service-icon"><i class="fas fa-magic"></i></div>
+                    <h3>Entertainment & Activities</h3>
+                    <p>Interactive experiences that keep your guests engaged and create lasting memories.</p>
+                    <ul class="service-features">
+                        <li>Magic & Illusion Acts</li>
+                        <li>Character Appearances</li>
+                        <li>Tattoo & Nail-Art Stations</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="#contact" class="btn btn-primary">Explore All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kids Birthday Focus -->
+    <section class="section-padding kids-section">
+        <div class="container">
+            <div class="kids-grid">
+                <div class="kids-content fade-in-up">
+                    <span class="text-gold" style="font-weight: 600; letter-spacing: 1px; text-transform: uppercase; font-size: 0.85rem;">Special Focus</span>
+                    <h2>Little Celebrations.<br>Big Memories.</h2>
+                    <p>From colourful themes and creative decoration to interactive games and exciting entertainment, make your child's special day an experience everyone remembers.</p>
+                    <ul class="service-features" style="margin-bottom: 2rem;">
+                        <li><i class="fas fa-check" style="color: var(--color-gold); margin-right: 8px;"></i> Themed Birthday Decoration & Backdrops</li>
+                        <li><i class="fas fa-check" style="color: var(--color-gold); margin-right: 8px;"></i> Character Entertainment & Magic Shows</li>
+                        <li><i class="fas fa-check" style="color: var(--color-gold); margin-right: 8px;"></i> Interactive Games & Activity Stations</li>
+                        <li><i class="fas fa-check" style="color: var(--color-gold); margin-right: 8px;"></i> Dedicated Birthday Hosting & Coordination</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Plan a Birthday Celebration</a>
+                </div>
+                <div class="kids-gallery fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80" alt="Kids Birthday Theme Party">
+                    <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?auto=format&fit=crop&w=400&q=80" alt="Birthday Cake and Decoration">
+                    <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=400&q=80" alt="Party Entertainment Activities">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>From Your First Idea to the Final Celebration.</h2>
+                <p>Our streamlined process ensures a stress-free planning journey.</p>
+            </div>
+            <div class="approach-timeline fade-in-up">
+                <div class="approach-step">
+                    <div class="step-number">01</div>
+                    <div>
+                        <h4>Share Your Vision</h4>
+                        <p>Tell us about your occasion, ideas, theme, audience and requirements.</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">02</div>
+                    <div>
+                        <h4>Explore Ideas</h4>
+                        <p>Discuss concepts, decoration styles, entertainment and arrangements.</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">03</div>
+                    <div>
+                        <h4>Plan & Coordinate</h4>
+                        <p>We organise all requirements and coordinate arrangements leading up to the day.</p>
+                    </div>
+                </div>
+                <div class="approach-step">
+                    <div class="step-number">04</div>
+                    <div>
+                        <h4>Celebrate the Moment</h4>
+                        <p>Enjoy your event while our team manages the on-ground execution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section-padding" id="gallery" style="background-color: var(--color-ivory);">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>A Glimpse Into Our Celebrations.</h2>
+                <p>Browse our portfolio of thoughtfully designed events.</p>
+            </div>
+            
+            <div class="gallery-filters fade-in-up">
+                <button class="filter-btn active" data-filter="all">All Events</button>
+                <button class="filter-btn" data-filter="birthday">Birthday Celebrations</button>
+                <button class="filter-btn" data-filter="theme">Theme Parties</button>
+                <button class="filter-btn" data-filter="society">Society Functions</button>
+                <button class="filter-btn" data-filter="corporate">Corporate Events</button>
+                <button class="filter-btn" data-filter="wedding">Wedding Functions</button>
+            </div>
+
+            <div class="gallery-grid fade-in-up">
+                <div class="gallery-item tall" data-category="birthday">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=80" alt="Birthday Celebration">
+                    <div class="gallery-overlay">
+                        <h4>Magical Birthday Setup</h4>
+                        <span>Birthday Celebrations</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="theme">
+                    <img src="https://images.unsplash.com/photo-1496337589254-7e19d01cec44?auto=format&fit=crop&w=600&q=80" alt="Theme Party">
+                    <div class="gallery-overlay">
+                        <h4>Elegant Theme Party</h4>
+                        <span>Theme Parties</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="wedding">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Wedding Function">
+                    <div class="gallery-overlay">
+                        <h4>Family Wedding Function</h4>
+                        <span>Wedding Functions</span>
+                    </div>
+                </div>
+                <div class="gallery-item wide" data-category="corporate">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Corporate Event">
+                    <div class="gallery-overlay">
+                        <h4>Annual Corporate Gathering</h4>
+                        <span>Corporate Events</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="society">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80" alt="Society Function">
+                    <div class="gallery-overlay">
+                        <h4>Community Festival</h4>
+                        <span>Society Functions</span>
+                    </div>
+                </div>
+                <div class="gallery-item tall" data-category="theme">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80" alt="Decoration Detail">
+                    <div class="gallery-overlay">
+                        <h4>Creative Stage Decoration</h4>
+                        <span>Theme Parties</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img src="" alt="Gallery Preview" id="lightboxImg">
+    </div>
+
+    <!-- Why Choose Us -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Thoughtful Planning. Memorable Experiences.</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item fade-in-up">
+                    <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+                    <div class="feature-text">
+                        <h4>Personalised Concepts</h4>
+                        <p>Every event is uniquely tailored to reflect your personality and vision.</p>
+                    </div>
+                </div>
+                <div class="feature-item fade-in-up">
+                    <div class="feature-icon"><i class="fas fa-paint-brush"></i></div>
+                    <div class="feature-text">
+                        <h4>Creative Themed Decoration</h4>
+                        <p>Attention to visual detail that transforms ordinary venues into extraordinary spaces.</p>
+                    </div>
+                </div>
+                <div class="feature-item fade-in-up">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <div class="feature-text">
+                        <h4>Engaging Entertainment</h4>
+                        <p>Carefully curated activities and artists to keep your guests delighted.</p>
+                    </div>
+                </div>
+                <div class="feature-item fade-in-up">
+                    <div class="feature-icon"><i class="fas fa-tasks"></i></div>
+                    <div class="feature-text">
+                        <h4>Seamless Coordination</h4>
+                        <p>End-to-end management so you can be a guest at your own event.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section-padding reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Celebrations That Speak for Themselves.</h2>
+                <p>Trusted by hundreds of families and organizations across the region.</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card fade-in-up">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">Deepika and her team made my son's birthday absolutely magical. The theme decoration was exactly what we imagined, and the anchoring kept everyone entertained. Highly recommended!</p>
+                    <div class="review-author">
+                        <div class="author-info">
+                            <h5>Priya S.</h5>
+                            <span>Kids Birthday Party, Vashi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card fade-in-up">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">SDS Event Planner handled our society's annual festival with incredible professionalism. The stage setup, coordination, and entertainment were flawless. Great value for money.</p>
+                    <div class="review-author">
+                        <div class="author-info">
+                            <h5>Rajesh M.</h5>
+                            <span>Society Function, Navi Mumbai</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card fade-in-up">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">We hired them for a corporate gathering, and the attention to detail was impressive. From the emcee to the decoration, everything was executed seamlessly and on time.</p>
+                    <div class="review-author">
+                        <div class="author-info">
+                            <h5>Amit K.</h5>
+                            <span>Corporate Event, Mumbai</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-stats fade-in-up">
+                <h3>500+ Reviews</h3>
+                <p style="color: var(--color-blush);">Maintaining a 99%+ 5-star rating across platforms</p>
+                <a href="https://www.google.com/search?q=SDS+Event+Planner+Vashi+Navi+Mumbai+reviews" target="_blank" class="btn btn-secondary" style="color: white; border-color: white; margin-top: 1.5rem;">Read More Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Bringing Celebrations to Life Across the Region.</h2>
+                <p>Subject to availability and prior confirmation.</p>
+            </div>
+            <div class="areas-grid fade-in-up">
+                <div class="area-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Mumbai</h4>
+                </div>
+                <div class="area-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Navi Mumbai</h4>
+                </div>
+                <div class="area-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Lonavala</h4>
+                </div>
+                <div class="area-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Pune</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding" style="background-color: var(--color-ivory);">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Planning an Event? Let's Answer a Few Questions.</h2>
+            </div>
+            <div class="faq-container fade-in-up">
+                <div class="faq-item">
+                    <div class="faq-question">What types of events does SDS Event Planner organise? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">We organise a wide range of events including kids' birthday parties, theme parties, society functions, corporate events, and wedding-related celebrations.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you provide theme-based decoration and entertainment? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Yes, we specialise in creative themed decoration and can arrange various entertainment options such as anchors, magicians, character appearances, and interactive activity stations, subject to availability.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you handle catering and gifting arrangements? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">Yes, we can coordinate catering setups and curate gifting options for your guests. We work with trusted partners to ensure quality presentation and delivery.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Which locations do you serve? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">We primarily serve Mumbai, Navi Mumbai, Lonavala, and Pune. Events in other locations can be discussed based on availability and requirements.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How early should I contact you to plan an event? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">We recommend reaching out at least 3–4 weeks in advance for standard events, and 2–3 months in advance for large-scale weddings or corporate gatherings to ensure the best availability of venues and artists.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How can I request an event quotation? <i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer">You can fill out the enquiry form below, WhatsApp us directly, or call us. We will discuss your requirements and provide a customized proposal.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container fade-in-up">
+            <h2>Let's Make Your Next Celebration Unforgettable.</h2>
+            <p>Tell us what you're planning. We'll help turn your ideas into a celebration worth remembering.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary" style="background-color: var(--color-gold); color: var(--color-plum);">Plan Your Event</a>
+                <a href="https://wa.me/919819871522?text=Hello%20SDS%20Event%20Planner,%20I%20would%20like%20to%20discuss%20planning%20an%20event.%20Please%20share%20more%20details." target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp" style="margin-right: 8px;"></i> WhatsApp Us</a>
+            </div>
+            <p style="margin-top: 2rem; font-family: var(--font-heading); font-style: italic; font-size: 1.3rem; color: var(--color-gold);">"You Dream It, We Create It."</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding contact-section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info fade-in-up">
+                    <h3>Get in Touch</h3>
+                    <p style="margin-bottom: 2rem; color: #6b6570;">Ready to start planning? Reach out to us via phone, email, or visit our office. We're here to help you create something beautiful.</p>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone / WhatsApp</h4>
+                            <a href="tel:+919819871522">+91 98198 71522</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:sdseventplanner@gmail.com">sdseventplanner@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Haware Fantasia, Sector 30A, Vashi,<br>Navi Mumbai, Maharashtra 400703, India.</p>
+                            <a href="https://maps.google.com/?q=Haware+Fantasia+Sector+30A+Vashi+Navi+Mumbai" target="_blank" style="color: var(--color-gold); font-size: 0.85rem; margin-top: 0.5rem; display: inline-block;">Get Directions <i class="fas fa-external-link-alt" style="font-size: 0.7rem;"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="enquiry-form fade-in-up">
+                    <div class="form-success" id="formSuccess">
+                        Thank you! Your enquiry has been submitted. We will contact you shortly.
+                    </div>
+                    <!-- Note: For production, replace the action URL with a real form backend like Formspree -->
+                    <form id="eventEnquiryForm" action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="eventType">Event Type *</label>
+                                <select id="eventType" name="eventType" required>
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="Birthday Party">Birthday Party</option>
+                                    <option value="Theme Party">Theme Party</option>
+                                    <option value="Society Function">Society Function</option>
+                                    <option value="Corporate Event">Corporate Event</option>
+                                    <option value="Wedding Function">Wedding Function</option>
+                                    <option value="Family Celebration">Family Celebration</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="eventDate">Event Date *</label>
+                                <input type="date" id="eventDate" name="eventDate" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="location">Event Location</label>
+                                <input type="text" id="location" name="location" placeholder="e.g., Vashi, Navi Mumbai">
+                            </div>
+                            <div class="form-group">
+                                <label for="guestCount">Approx. Guest Count</label>
+                                <input type="number" id="guestCount" name="guestCount" placeholder="e.g., 50">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Event Requirements & Additional Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your vision, theme ideas, or specific services needed..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Request an Event Consultation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">SDS <span>Event Planner</span></a>
+                    <p>"You Dream It, We Create It."</p>
+                    <p style="font-size: 0.85rem; opacity: 0.8;">Established in 2020 by Deepika Gupta. Creating memorable, personalised, and seamless celebrations across Mumbai and beyond.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#contact">Enquiry Form</a></li>
+                        <li><a href="https://wa.me/919819871522" target="_blank">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone-alt"></i> +91 98198 71522</p>
+                    <p><i class="fas fa-envelope"></i> sdseventplanner@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Haware Fantasia, Sector 30A, Vashi, Navi Mumbai, 400703</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2020–2026 SDS Event Planner. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/sds_event_planner/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SDSEventPlanner/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919819871522?text=Hello%20SDS%20Event%20Planner,%20I%20would%20like%20to%20discuss%20planning%20an%20event.%20Please%20share%20more%20details." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                    mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                });
+            });
+
+            // 2. Sticky Navbar Effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // 3. Scroll Animations (Intersection Observer)
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(el => {
+                observer.observe(el);
+            });
+
+            // 4. Gallery Filtering
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 50);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 400);
+                        }
+                    });
+                });
+            });
+
+            // 5. Lightbox Functionality
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const lightboxClose = document.getElementById('lightboxClose');
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const imgSrc = item.querySelector('img').src;
+                    // Get higher resolution for lightbox
+                    const highResSrc = imgSrc.replace('&w=600', '&w=1200').replace('&w=400', '&w=1200').replace('&w=800', '&w=1200');
+                    lightboxImg.src = highResSrc;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                });
+            });
+
+            lightboxClose.addEventListener('click', () => {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // 6. FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // 7. Form Validation and Submission Simulation
+            const enquiryForm = document.getElementById('eventEnquiryForm');
+            const formSuccess = document.getElementById('formSuccess');
+
+            enquiryForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Basic validation check (HTML5 handles most, but we add a safety check)
+                const name = document.getElementById('name').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const email = document.getElementById('email').value.trim();
+                
+                if (name && phone && email) {
+                    // Simulate API call / form submission
+                    const submitBtn = enquiryForm.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerText;
+                    submitBtn.innerText = 'Sending...';
+                    submitBtn.disabled = true;
+
+                    setTimeout(() => {
+                        formSuccess.style.display = 'block';
+                        enquiryForm.reset();
+                        submitBtn.innerText = originalText;
+                        submitBtn.disabled = false;
+                        
+                        // Hide success message after 5 seconds
+                        setTimeout(() => {
+                            formSuccess.style.display = 'none';
+                        }, 5000);
+                        
+                        // Scroll to top of form
+                        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 1500);
+                }
+            });
+
+            // Set minimum date for event date to today
+            const dateInput = document.getElementById('eventDate');
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+        });
+    </script>
+</body>
+</html>
