@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AJAX Builders | London Construction, Renovation &amp; Design-and-Build</title>
   <meta name="description" content="AJAX Construction Ltd (AJAX Builders) is a London-based construction, renovation and design-and-build company delivering residential and commercial spaces.">
-  <link rel="canonical" href="https://www.ajaxbuilders.co.uk/">
+  <link rel="canonical" href="">
   <meta property="og:title" content="AJAX Builders | London Construction, Renovation &amp; Design-and-Build">
   <meta property="og:description" content="From thoughtful architectural design to exceptional construction and renovation, AJAX Builders delivers considered spaces for modern living and working.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.ajaxbuilders.co.uk/">
+  <meta property="og:url" content="">
+  <meta name="enquiry-endpoint" content="">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AJAX Builders | London Construction, Renovation &amp; Design-and-Build">
   <meta name="twitter:description" content="London construction, renovation and design-and-build specialists.">
@@ -22,7 +23,6 @@
     "@type": "LocalBusiness",
     "name": "AJAX Construction Ltd",
     "alternateName": "AJAX Builders",
-    "url": "https://www.ajaxbuilders.co.uk/",
     "telephone": ["+442082013626", "+447886227480"],
     "email": "info@ajaxbuilders.co.uk",
     "address": {
@@ -1411,6 +1411,62 @@
       font-size: 0.85rem;
       color: var(--text-secondary);
     }
+  
+    /* ==========================================================================
+       UI REFINEMENTS
+       ========================================================================== */
+    ::selection { background: var(--accent-bronze); color: #fff; }
+
+    .site-header.is-scrolled {
+      background: rgba(247, 246, 242, 0.82);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      backdrop-filter: saturate(160%) blur(14px);
+      box-shadow: 0 1px 0 rgba(32, 32, 30, 0.08), 0 8px 24px -12px rgba(32, 32, 30, 0.18);
+    }
+
+    .btn { border-radius: 2px; letter-spacing: 0.02em; transition: transform var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast); }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary:hover { box-shadow: 0 10px 22px -10px rgba(94, 77, 60, 0.6); }
+
+    .hero-scrim { background: linear-gradient(180deg, rgba(20,20,18,0.55) 0%, rgba(20,20,18,0.25) 45%, rgba(20,20,18,0.72) 100%); }
+    .hero-title { text-wrap: balance; text-shadow: 0 2px 30px rgba(0,0,0,0.25); }
+    h1, h2, h3 { text-wrap: balance; }
+    p { text-wrap: pretty; }
+
+    .service-card, .project-card, .testimonial-card, .capability-box {
+      transition: transform var(--transition-med), box-shadow var(--transition-med), border-color var(--transition-med);
+    }
+    .service-card:hover, .testimonial-card:hover, .capability-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 40px -24px rgba(32, 32, 30, 0.35);
+      border-color: var(--accent-bronze);
+    }
+    .image-frame, .service-card-media, .project-card-media, .gallery-tile { overflow: hidden; border-radius: 2px; }
+
+    .section-head h2, .page-header h1 { position: relative; }
+    .filter-btn { border-radius: 999px; padding-inline: 1.2rem; }
+    .filter-btn.is-active { box-shadow: 0 6px 16px -8px rgba(32,32,30,0.5); }
+
+    input, select, textarea {
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent-bronze);
+      box-shadow: 0 0 0 3px rgba(122, 102, 82, 0.18);
+      background-color: var(--bg-white);
+    }
+
+    .reveal { transition-duration: 760ms; }
+
+    img { background: var(--bg-secondary); }
+
+    .lightbox { -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+
+    @media (max-width: 900px) {
+      .btn { width: auto; }
+      .hero-actions { gap: 0.75rem; }
+    }
   </style>
 </head>
 <body>
@@ -1421,7 +1477,7 @@
        ======================================================================== -->
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a href="/" data-route="/" class="brand-logo" aria-label="AJAX Builders Home">
+      <a href="#/" data-route="/" class="brand-logo" aria-label="AJAX Builders Home">
         <span class="wordmark">AJAX BUILDERS</span>
         <span class="submark">AJAX Construction Ltd</span>
       </a>
@@ -1432,28 +1488,28 @@
 
       <nav class="primary-nav" id="primary-nav" aria-label="Primary Navigation">
         <ul class="nav-list">
-          <li class="nav-item"><a href="/about" data-route="/about" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="/design-and-build" data-route="/design-and-build" class="nav-link">Design &amp; Build</a></li>
+          <li class="nav-item"><a href="#/about" data-route="/about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#/design-and-build" data-route="/design-and-build" class="nav-link">Design &amp; Build</a></li>
           <li class="nav-item has-dropdown">
-            <a href="/services" data-route="/services" class="nav-link">Services <span aria-hidden="true">▾</span></a>
+            <a href="#/services" data-route="/services" class="nav-link">Services <span aria-hidden="true">▾</span></a>
             <ul class="dropdown-menu" aria-label="Services submenu">
-              <li><a href="/services" data-route="/services" class="dropdown-link">All Services Overview</a></li>
+              <li><a href="#/services" data-route="/services" class="dropdown-link">All Services Overview</a></li>
               <li class="dropdown-divider" role="separator"></li>
-              <li><a href="/services/full-refurbishment" data-route="/services/full-refurbishment" class="dropdown-link">Full Refurbishments</a></li>
-              <li><a href="/services/house-extensions" data-route="/services/house-extensions" class="dropdown-link">House Extensions</a></li>
-              <li><a href="/services/loft-conversions" data-route="/services/loft-conversions" class="dropdown-link">Loft Conversions</a></li>
-              <li><a href="/services/bathrooms" data-route="/services/bathrooms" class="dropdown-link">Bathroom Design &amp; Installation</a></li>
-              <li><a href="/services/kitchens" data-route="/services/kitchens" class="dropdown-link">Kitchen Design &amp; Installation</a></li>
-              <li><a href="/services/basement-conversions" data-route="/services/basement-conversions" class="dropdown-link">Basement Conversions</a></li>
-              <li><a href="/services/carpentry-and-joinery" data-route="/services/carpentry-and-joinery" class="dropdown-link">Carpentry &amp; Bespoke Joinery</a></li>
-              <li><a href="/services/commercial-refurbishment" data-route="/services/commercial-refurbishment" class="dropdown-link">Commercial Refurbishment</a></li>
+              <li><a href="#/services/full-refurbishment" data-route="/services/full-refurbishment" class="dropdown-link">Full Refurbishments</a></li>
+              <li><a href="#/services/house-extensions" data-route="/services/house-extensions" class="dropdown-link">House Extensions</a></li>
+              <li><a href="#/services/loft-conversions" data-route="/services/loft-conversions" class="dropdown-link">Loft Conversions</a></li>
+              <li><a href="#/services/bathrooms" data-route="/services/bathrooms" class="dropdown-link">Bathroom Design &amp; Installation</a></li>
+              <li><a href="#/services/kitchens" data-route="/services/kitchens" class="dropdown-link">Kitchen Design &amp; Installation</a></li>
+              <li><a href="#/services/basement-conversions" data-route="/services/basement-conversions" class="dropdown-link">Basement Conversions</a></li>
+              <li><a href="#/services/carpentry-and-joinery" data-route="/services/carpentry-and-joinery" class="dropdown-link">Carpentry &amp; Bespoke Joinery</a></li>
+              <li><a href="#/services/commercial-refurbishment" data-route="/services/commercial-refurbishment" class="dropdown-link">Commercial Refurbishment</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a href="/portfolio" data-route="/portfolio" class="nav-link">Portfolio</a></li>
-          <li class="nav-item"><a href="/testimonials" data-route="/testimonials" class="nav-link">Testimonials</a></li>
-          <li class="nav-item"><a href="/service-areas" data-route="/service-areas" class="nav-link">Service Areas</a></li>
+          <li class="nav-item"><a href="#/portfolio" data-route="/portfolio" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="#/testimonials" data-route="/testimonials" class="nav-link">Testimonials</a></li>
+          <li class="nav-item"><a href="#/service-areas" data-route="/service-areas" class="nav-link">Service Areas</a></li>
         </ul>
-        <a href="/contact" data-route="/contact" class="btn btn-primary header-cta">Discuss Your Project</a>
+        <a href="#/contact" data-route="/contact" class="btn btn-primary header-cta">Discuss Your Project</a>
       </nav>
     </div>
   </header>
@@ -1499,12 +1555,12 @@
           <span class="eyebrow" style="color: var(--muted-stone);">Start a Conversation</span>
           <h2>Planning Your Next Project?</h2>
         </div>
-        <a href="/contact" data-route="/contact" class="btn btn-light">Start Your Enquiry <span class="arrow" aria-hidden="true">→</span></a>
+        <a href="#/contact" data-route="/contact" class="btn btn-light">Start Your Enquiry <span class="arrow" aria-hidden="true">→</span></a>
       </div>
 
       <div class="footer-grid">
         <div>
-          <a href="/" data-route="/" class="brand-logo" style="margin-bottom: 1.15rem;">
+          <a href="#/" data-route="/" class="brand-logo" style="margin-bottom: 1.15rem;">
             <span class="wordmark">AJAX BUILDERS</span>
             <span class="submark">AJAX Construction Ltd</span>
           </a>
@@ -1519,27 +1575,27 @@
         <div>
           <h3 class="footer-heading">Services</h3>
           <ul class="footer-links">
-            <li><a href="/services/full-refurbishment" data-route="/services/full-refurbishment">Full Refurbishments</a></li>
-            <li><a href="/services/house-extensions" data-route="/services/house-extensions">House Extensions</a></li>
-            <li><a href="/services/loft-conversions" data-route="/services/loft-conversions">Loft Conversions</a></li>
-            <li><a href="/services/bathrooms" data-route="/services/bathrooms">Bathrooms</a></li>
-            <li><a href="/services/kitchens" data-route="/services/kitchens">Kitchens</a></li>
-            <li><a href="/services/basement-conversions" data-route="/services/basement-conversions">Basement Conversions</a></li>
-            <li><a href="/services/carpentry-and-joinery" data-route="/services/carpentry-and-joinery">Carpentry &amp; Joinery</a></li>
-            <li><a href="/services/commercial-refurbishment" data-route="/services/commercial-refurbishment">Commercial Refurbishment</a></li>
+            <li><a href="#/services/full-refurbishment" data-route="/services/full-refurbishment">Full Refurbishments</a></li>
+            <li><a href="#/services/house-extensions" data-route="/services/house-extensions">House Extensions</a></li>
+            <li><a href="#/services/loft-conversions" data-route="/services/loft-conversions">Loft Conversions</a></li>
+            <li><a href="#/services/bathrooms" data-route="/services/bathrooms">Bathrooms</a></li>
+            <li><a href="#/services/kitchens" data-route="/services/kitchens">Kitchens</a></li>
+            <li><a href="#/services/basement-conversions" data-route="/services/basement-conversions">Basement Conversions</a></li>
+            <li><a href="#/services/carpentry-and-joinery" data-route="/services/carpentry-and-joinery">Carpentry &amp; Joinery</a></li>
+            <li><a href="#/services/commercial-refurbishment" data-route="/services/commercial-refurbishment">Commercial Refurbishment</a></li>
           </ul>
         </div>
 
         <div>
           <h3 class="footer-heading">Company</h3>
           <ul class="footer-links">
-            <li><a href="/" data-route="/">Home</a></li>
-            <li><a href="/about" data-route="/about">About</a></li>
-            <li><a href="/design-and-build" data-route="/design-and-build">Design &amp; Build</a></li>
-            <li><a href="/portfolio" data-route="/portfolio">Portfolio</a></li>
-            <li><a href="/testimonials" data-route="/testimonials">Testimonials</a></li>
-            <li><a href="/service-areas" data-route="/service-areas">London Service Areas</a></li>
-            <li><a href="/contact" data-route="/contact">Contact</a></li>
+            <li><a href="#/" data-route="/">Home</a></li>
+            <li><a href="#/about" data-route="/about">About</a></li>
+            <li><a href="#/design-and-build" data-route="/design-and-build">Design &amp; Build</a></li>
+            <li><a href="#/portfolio" data-route="/portfolio">Portfolio</a></li>
+            <li><a href="#/testimonials" data-route="/testimonials">Testimonials</a></li>
+            <li><a href="#/service-areas" data-route="/service-areas">London Service Areas</a></li>
+            <li><a href="#/contact" data-route="/contact">Contact</a></li>
           </ul>
         </div>
 
@@ -1559,9 +1615,9 @@
       <div class="footer-bottom">
         <p>© <span id="copyright-year">2026</span> AJAX Construction Ltd (AJAX Builders). All rights reserved.</p>
         <div class="footer-legal-links">
-          <a href="/photo-credits" data-route="/photo-credits">Photo Credits</a>
-          <a href="/privacy-policy" data-route="/privacy-policy">Privacy Policy</a>
-          <a href="/terms-and-conditions" data-route="/terms-and-conditions">Terms &amp; Conditions</a>
+          <a href="#/photo-credits" data-route="/photo-credits">Photo Credits</a>
+          <a href="#/privacy-policy" data-route="/privacy-policy">Privacy Policy</a>
+          <a href="#/terms-and-conditions" data-route="/terms-and-conditions">Terms &amp; Conditions</a>
         </div>
       </div>
     </div>
@@ -1699,7 +1755,7 @@
     const COMPANY = {
       name: 'AJAX Construction Ltd',
       tradingName: 'AJAX Builders',
-      website: 'https://www.ajaxbuilders.co.uk/',
+      website: (location.protocol === 'file:' ? '' : location.origin + location.pathname),
       address: 'Office 4, 219 Kensington High Street, London W8 6BD, United Kingdom',
       phoneLandline: '0208 201 3626',
       phoneLandlineHref: 'tel:+442082013626',
@@ -2288,7 +2344,7 @@
         if (isLast) {
           return `<span aria-current="page">${escapeHtml(item.label)}</span>`;
         }
-        return `<a href="${item.path}" data-route="${item.path}">${escapeHtml(item.label)}</a><span aria-hidden="true">/</span>`;
+        return `<a href="#${item.path}" data-route="${item.path}">${escapeHtml(item.label)}</a><span aria-hidden="true">/</span>`;
       }).join('');
       return `<nav class="breadcrumbs" aria-label="Breadcrumb">${trail}</nav>`;
     }
@@ -2317,12 +2373,17 @@
       `;
     }
 
+    function siteUrl(path) {
+      if (location.protocol === 'file:') return '';
+      return location.origin + location.pathname + (path && path !== '/' ? '#' + path : '');
+    }
+
     function updateMetadata({ title, description, path, breadcrumbs }) {
       document.title = title;
       const descTag = document.querySelector('meta[name="description"]');
       if (descTag) descTag.setAttribute('content', description);
 
-      const canonicalUrl = `https://www.ajaxbuilders.co.uk${path === '/' ? '/' : path}`;
+      const canonicalUrl = siteUrl(path);
       const canonicalTag = document.querySelector('link[rel="canonical"]');
       if (canonicalTag) canonicalTag.setAttribute('href', canonicalUrl);
 
@@ -2362,7 +2423,7 @@
               '@type': 'ListItem',
               position: i + 1,
               name: b.label,
-              item: `https://www.ajaxbuilders.co.uk${b.path}`
+              item: siteUrl(b.path)
             }))
           });
         }
@@ -2380,14 +2441,14 @@
 
       const serviceCards = SERVICES.map(s => `
         <article class="service-card reveal">
-          <a href="/services/${s.slug}" data-route="/services/${s.slug}" class="service-card-media">
+          <a href="#/services/${s.slug}" data-route="/services/${s.slug}" class="service-card-media">
             ${renderImg(s.heroImage)}
           </a>
           <div class="service-card-body">
             <span class="service-card-num">${s.number}</span>
-            <h3 class="service-card-title"><a href="/services/${s.slug}" data-route="/services/${s.slug}">${escapeHtml(s.title)}</a></h3>
+            <h3 class="service-card-title"><a href="#/services/${s.slug}" data-route="/services/${s.slug}">${escapeHtml(s.title)}</a></h3>
             <p class="service-card-desc">${escapeHtml(s.shortDesc)}</p>
-            <a href="/services/${s.slug}" data-route="/services/${s.slug}" class="text-link">Discover More <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="#/services/${s.slug}" data-route="/services/${s.slug}" class="text-link">Discover More <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </article>
       `).join('');
@@ -2395,14 +2456,14 @@
       // 9th service tile linking to Design & Planning
       const designServiceCard = `
         <article class="service-card reveal">
-          <a href="/design-and-build" data-route="/design-and-build" class="service-card-media">
+          <a href="#/design-and-build" data-route="/design-and-build" class="service-card-media">
             ${renderImg('designPlanning')}
           </a>
           <div class="service-card-body">
             <span class="service-card-num">09</span>
-            <h3 class="service-card-title"><a href="/design-and-build" data-route="/design-and-build">Design &amp; Planning</a></h3>
+            <h3 class="service-card-title"><a href="#/design-and-build" data-route="/design-and-build">Design &amp; Planning</a></h3>
             <p class="service-card-desc">Architectural drawings, building plans, planning assistance, structural calculations and detailed construction documentation.</p>
-            <a href="/design-and-build" data-route="/design-and-build" class="text-link">Discover More <span class="arrow" aria-hidden="true">→</span></a>
+            <a href="#/design-and-build" data-route="/design-and-build" class="text-link">Discover More <span class="arrow" aria-hidden="true">→</span></a>
           </div>
         </article>
       `;
@@ -2420,8 +2481,8 @@
               <h1 id="hero-heading" class="hero-title" tabindex="-1">Building Better Spaces. Designed Around You.</h1>
               <p class="hero-subtitle">From thoughtful architectural design to exceptional construction and renovation, AJAX Builders delivers considered spaces for modern living and working.</p>
               <div class="hero-actions">
-                <a href="/portfolio" data-route="/portfolio" class="btn btn-light">Explore Our Work <span class="arrow" aria-hidden="true">→</span></a>
-                <a href="/contact" data-route="/contact" class="btn btn-light-outline">Discuss Your Project</a>
+                <a href="#/portfolio" data-route="/portfolio" class="btn btn-light">Explore Our Work <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="#/contact" data-route="/contact" class="btn btn-light-outline">Discuss Your Project</a>
               </div>
             </div>
           </section>
@@ -2439,8 +2500,8 @@
                   Whether working from existing architectural drawings or supporting clients through early spatial planning, building control documentation and construction, we coordinate every stage with clarity and attention to detail.
                 </p>
                 <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center;">
-                  <a href="/about" data-route="/about" class="btn btn-outline">About AJAX Builders <span class="arrow" aria-hidden="true">→</span></a>
-                  <a href="/design-and-build" data-route="/design-and-build" class="text-link">Our Design &amp; Build Process <span class="arrow" aria-hidden="true">→</span></a>
+                  <a href="#/about" data-route="/about" class="btn btn-outline">About AJAX Builders <span class="arrow" aria-hidden="true">→</span></a>
+                  <a href="#/design-and-build" data-route="/design-and-build" class="text-link">Our Design &amp; Build Process <span class="arrow" aria-hidden="true">→</span></a>
                 </div>
               </div>
               <div class="editorial-media image-frame reveal" style="aspect-ratio: 4 / 3;">
@@ -2458,7 +2519,7 @@
                   <span class="eyebrow">Capabilities</span>
                   <h2 id="home-services-heading">Construction, Renovation &amp; Design Services</h2>
                 </div>
-                <a href="/services" data-route="/services" class="text-link">View All Services <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="#/services" data-route="/services" class="text-link">View All Services <span class="arrow" aria-hidden="true">→</span></a>
               </div>
               <div class="services-grid">
                 ${serviceCards}
@@ -2475,12 +2536,12 @@
                   <span class="eyebrow">Selected Projects</span>
                   <h2 id="home-projects-heading">Completed Work Across London</h2>
                 </div>
-                <a href="/portfolio" data-route="/portfolio" class="btn btn-outline">View All Nine Case Studies <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="#/portfolio" data-route="/portfolio" class="btn btn-outline">View All Nine Case Studies <span class="arrow" aria-hidden="true">→</span></a>
               </div>
 
               <div class="featured-layout">
                 <article class="project-card reveal">
-                  <a href="/projects/${featuredMain.slug}" data-route="/projects/${featuredMain.slug}">
+                  <a href="#/projects/${featuredMain.slug}" data-route="/projects/${featuredMain.slug}">
                     <div class="project-card-media ratio-hero">
                       ${renderImg(featuredMain.heroImage)}
                       <span class="image-caption-badge">Illustrative Reference — Client Photos To Verify</span>
@@ -2498,7 +2559,7 @@
                 <div class="featured-stack">
                   ${[featuredSide1, featuredSide2].map(p => `
                     <article class="project-card reveal">
-                      <a href="/projects/${p.slug}" data-route="/projects/${p.slug}">
+                      <a href="#/projects/${p.slug}" data-route="/projects/${p.slug}">
                         <div class="project-card-media ratio-wide">
                           ${renderImg(p.heroImage)}
                           <span class="image-caption-badge">Illustrative Reference — Client Photos To Verify</span>
@@ -2532,7 +2593,7 @@
                   <li style="color: rgba(247,246,242,0.85);">Clear technical documentation before construction commences</li>
                   <li style="color: rgba(247,246,242,0.85);">Tailored interior space planning, loft and extension design</li>
                 </ul>
-                <a href="/design-and-build" data-route="/design-and-build" class="btn btn-light">Explore Design &amp; Build <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="#/design-and-build" data-route="/design-and-build" class="btn btn-light">Explore Design &amp; Build <span class="arrow" aria-hidden="true">→</span></a>
               </div>
               <div class="editorial-media image-frame reveal" style="aspect-ratio: 4 / 3; border-color: rgba(255,255,255,0.2);">
                 ${renderImg('designPlanning')}
@@ -2586,7 +2647,7 @@
                   <span class="eyebrow">Client Feedback</span>
                   <h2 id="home-testimonials-heading">Words From Our Clients</h2>
                 </div>
-                <a href="/testimonials" data-route="/testimonials" class="text-link">Read All Client Testimonials <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="#/testimonials" data-route="/testimonials" class="text-link">Read All Client Testimonials <span class="arrow" aria-hidden="true">→</span></a>
               </div>
               <div class="testimonials-grid">
                 ${TESTIMONIALS.slice(0, 4).map(t => `
@@ -2611,7 +2672,7 @@
                 <p style="color: var(--text-secondary); margin-bottom: 1.75rem;">
                   From Kensington, Chelsea and Belsize Park to Islington, Wimbledon and Pinner, our teams work across established London residential neighbourhoods and commercial districts.
                 </p>
-                <a href="/service-areas" data-route="/service-areas" class="btn btn-outline">Explore London Service Areas <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="#/service-areas" data-route="/service-areas" class="btn btn-outline">Explore London Service Areas <span class="arrow" aria-hidden="true">→</span></a>
               </div>
               <div class="capabilities-grid" style="grid-template-columns: repeat(2, 1fr); gap: 1rem;">
                 ${SERVICE_AREAS.map(a => `
@@ -2763,7 +2824,7 @@
                 `).join('')}
               </div>
               <div style="margin-top: 3rem;">
-                <a href="/contact" data-route="/contact" class="btn btn-primary">Book a Design &amp; Build Consultation <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="#/contact" data-route="/contact" class="btn btn-primary">Book a Design &amp; Build Consultation <span class="arrow" aria-hidden="true">→</span></a>
               </div>
             </div>
           </section>
@@ -2793,26 +2854,26 @@
               <div class="services-grid">
                 ${SERVICES.map(s => `
                   <article class="service-card reveal">
-                    <a href="/services/${s.slug}" data-route="/services/${s.slug}" class="service-card-media">
+                    <a href="#/services/${s.slug}" data-route="/services/${s.slug}" class="service-card-media">
                       ${renderImg(s.heroImage)}
                     </a>
                     <div class="service-card-body">
                       <span class="service-card-num">${s.number}</span>
-                      <h2 class="service-card-title"><a href="/services/${s.slug}" data-route="/services/${s.slug}">${escapeHtml(s.title)}</a></h2>
+                      <h2 class="service-card-title"><a href="#/services/${s.slug}" data-route="/services/${s.slug}">${escapeHtml(s.title)}</a></h2>
                       <p class="service-card-desc">${escapeHtml(s.shortDesc)}</p>
-                      <a href="/services/${s.slug}" data-route="/services/${s.slug}" class="text-link">Explore Service <span class="arrow" aria-hidden="true">→</span></a>
+                      <a href="#/services/${s.slug}" data-route="/services/${s.slug}" class="text-link">Explore Service <span class="arrow" aria-hidden="true">→</span></a>
                     </div>
                   </article>
                 `).join('')}
                 <article class="service-card reveal">
-                  <a href="/design-and-build" data-route="/design-and-build" class="service-card-media">
+                  <a href="#/design-and-build" data-route="/design-and-build" class="service-card-media">
                     ${renderImg('designPlanning')}
                   </a>
                   <div class="service-card-body">
                     <span class="service-card-num">09</span>
-                    <h2 class="service-card-title"><a href="/design-and-build" data-route="/design-and-build">Design &amp; Planning</a></h2>
+                    <h2 class="service-card-title"><a href="#/design-and-build" data-route="/design-and-build">Design &amp; Planning</a></h2>
                     <p class="service-card-desc">Architectural drawings, building plans, planning permission support, structural calculations and full Design &amp; Build delivery.</p>
-                    <a href="/design-and-build" data-route="/design-and-build" class="text-link">Explore Design &amp; Build <span class="arrow" aria-hidden="true">→</span></a>
+                    <a href="#/design-and-build" data-route="/design-and-build" class="text-link">Explore Design &amp; Build <span class="arrow" aria-hidden="true">→</span></a>
                   </div>
                 </article>
               </div>
@@ -2882,7 +2943,7 @@
                     <span class="eyebrow">Execution</span>
                     <h3 style="margin-bottom: 0.65rem;">Delivery Approach</h3>
                     <p style="margin-bottom: 1.5rem;">${escapeHtml(service.delivery)}</p>
-                    <a href="/contact" data-route="/contact" class="btn btn-primary">Discuss ${escapeHtml(service.title)} <span class="arrow" aria-hidden="true">→</span></a>
+                    <a href="#/contact" data-route="/contact" class="btn btn-primary">Discuss ${escapeHtml(service.title)} <span class="arrow" aria-hidden="true">→</span></a>
                   </div>
                 </div>
               </div>
@@ -2897,12 +2958,12 @@
                     <span class="eyebrow">Case Studies</span>
                     <h2>Related Projects</h2>
                   </div>
-                  <a href="/portfolio" data-route="/portfolio" class="text-link">Full Portfolio <span class="arrow" aria-hidden="true">→</span></a>
+                  <a href="#/portfolio" data-route="/portfolio" class="text-link">Full Portfolio <span class="arrow" aria-hidden="true">→</span></a>
                 </div>
                 <div class="portfolio-grid">
                   ${relatedProjects.map(p => `
                     <article class="project-card">
-                      <a href="/projects/${p.slug}" data-route="/projects/${p.slug}">
+                      <a href="#/projects/${p.slug}" data-route="/projects/${p.slug}">
                         <div class="project-card-media ratio-wide">
                           ${renderImg(p.heroImage)}
                           <span class="image-caption-badge">Illustrative Reference</span>
@@ -2931,9 +2992,9 @@
                   <article class="service-card">
                     <div class="service-card-body">
                       <span class="service-card-num">${s.number}</span>
-                      <h3 class="service-card-title"><a href="/services/${s.slug}" data-route="/services/${s.slug}">${escapeHtml(s.title)}</a></h3>
+                      <h3 class="service-card-title"><a href="#/services/${s.slug}" data-route="/services/${s.slug}">${escapeHtml(s.title)}</a></h3>
                       <p class="service-card-desc">${escapeHtml(s.shortDesc)}</p>
-                      <a href="/services/${s.slug}" data-route="/services/${s.slug}" class="text-link">Discover More <span class="arrow" aria-hidden="true">→</span></a>
+                      <a href="#/services/${s.slug}" data-route="/services/${s.slug}" class="text-link">Discover More <span class="arrow" aria-hidden="true">→</span></a>
                     </div>
                   </article>
                 `).join('')}
@@ -2996,7 +3057,7 @@
               <div class="portfolio-grid" id="portfolio-results">
                 ${filtered.map(p => `
                   <article class="project-card">
-                    <a href="/projects/${p.slug}" data-route="/projects/${p.slug}">
+                    <a href="#/projects/${p.slug}" data-route="/projects/${p.slug}">
                       <div class="project-card-media ratio-wide">
                         ${renderImg(p.heroImage)}
                         <span class="image-caption-badge">Illustrative Reference — Client Photos To Verify</span>
@@ -3075,7 +3136,7 @@
                       </li>
                     </ul>
                     <div style="margin-top: 1.75rem;">
-                      <a href="/contact" data-route="/contact" class="btn btn-primary" style="width: 100%;">Enquire About a Similar Project <span class="arrow" aria-hidden="true">→</span></a>
+                      <a href="#/contact" data-route="/contact" class="btn btn-primary" style="width: 100%;">Enquire About a Similar Project <span class="arrow" aria-hidden="true">→</span></a>
                     </div>
                   </div>
                 </div>
@@ -3090,12 +3151,12 @@
                   <span class="eyebrow">Continue Exploring</span>
                   <h2>More Completed Projects</h2>
                 </div>
-                <a href="/portfolio" data-route="/portfolio" class="text-link">All Projects <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="#/portfolio" data-route="/portfolio" class="text-link">All Projects <span class="arrow" aria-hidden="true">→</span></a>
               </div>
               <div class="portfolio-grid">
                 ${related.map(p => `
                   <article class="project-card">
-                    <a href="/projects/${p.slug}" data-route="/projects/${p.slug}">
+                    <a href="#/projects/${p.slug}" data-route="/projects/${p.slug}">
                       <div class="project-card-media ratio-wide">
                         ${renderImg(p.heroImage)}
                         <span class="image-caption-badge">Illustrative Reference</span>
@@ -3496,9 +3557,9 @@
               <h1 tabindex="-1" style="margin-bottom: 1rem;">Page Not Found</h1>
               <p class="lead" style="margin-bottom: 2rem;">The page <code>${escapeHtml(badPath)}</code> could not be found. It may have moved or the address may have been entered incorrectly.</p>
               <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-                <a href="/" data-route="/" class="btn btn-primary">Return to Homepage <span class="arrow" aria-hidden="true">→</span></a>
-                <a href="/portfolio" data-route="/portfolio" class="btn btn-outline">Explore Portfolio</a>
-                <a href="/services" data-route="/services" class="btn btn-outline">View Services</a>
+                <a href="#/" data-route="/" class="btn btn-primary">Return to Homepage <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="#/portfolio" data-route="/portfolio" class="btn btn-outline">Explore Portfolio</a>
+                <a href="#/services" data-route="/services" class="btn btn-outline">View Services</a>
               </div>
             </div>
           </header>
@@ -3521,16 +3582,10 @@
     };
 
     function getNormalizedPath() {
-      // Support hash-routing fallback (#/about) on static hosts without rewrites
-      if (window.location.hash && window.location.hash.startsWith('#/')) {
-        return window.location.hash.slice(1);
-      }
-      let pathname = window.location.pathname || '/';
-      if (pathname.length > 1 && pathname.endsWith('/')) {
-        pathname = pathname.slice(0, -1);
-      }
-      if (pathname === '/index.html') return '/';
-      return pathname;
+      let p = window.location.hash.startsWith('#/') ? window.location.hash.slice(1) : '/';
+      p = p.split('?')[0];
+      if (p.length > 1 && p.endsWith('/')) p = p.slice(0, -1);
+      return p || '/';
     }
 
     function navigateTo(targetPath, options = {}) {
@@ -3543,12 +3598,9 @@
         cleanPath = LEGACY_REDIRECTS[cleanPath];
       }
 
-      if (!options.skipHistory) {
-        if (window.location.protocol === 'file:' || window.location.hash.startsWith('#/')) {
-          window.location.hash = `#${cleanPath}`;
-        } else {
-          window.history.pushState({ path: cleanPath }, '', cleanPath);
-        }
+      if (!options.skipHistory && getNormalizedPath() !== cleanPath) {
+        window.location.hash = '#' + cleanPath;
+        return; // hashchange listener renders the route
       }
 
       renderRoute(cleanPath);
@@ -3754,9 +3806,10 @@
     /* ========================================================================
        SECTION G: CONFIGURABLE ENQUIRY SUBMISSION & VALIDATION
        ======================================================================== */
-    // Configure your live API endpoint here (e.g. 'https://api.ajaxbuilders.co.uk/enquiries')
-    // Leave empty string '' when no backend endpoint is connected yet.
-    const ENQUIRY_ENDPOINT = '';
+    // Set via <meta name="enquiry-endpoint" content="..."> or window.ENQUIRY_ENDPOINT.
+    // When empty, the form falls back to a prefilled email.
+    const ENQUIRY_ENDPOINT = window.ENQUIRY_ENDPOINT ||
+      (document.querySelector('meta[name="enquiry-endpoint"]') || {}).content || '';
 
     async function submitEnquiry(payload) {
       if (!ENQUIRY_ENDPOINT) {
@@ -4051,13 +4104,8 @@ ${payload.projectDescription}`
       });
 
       // Browser Back / Forward & Hash fallback support
-      window.addEventListener('popstate', () => {
-        navigateTo(getNormalizedPath(), { skipHistory: true });
-      });
       window.addEventListener('hashchange', () => {
-        if (window.location.hash.startsWith('#/')) {
-          navigateTo(window.location.hash.slice(1), { skipHistory: true });
-        }
+        navigateTo(getNormalizedPath(), { skipHistory: true });
       });
 
       // Initial Route Render
