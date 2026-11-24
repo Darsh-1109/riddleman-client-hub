@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brothers Garden Center, LLC | Plants & Landscaping in Aubrey, TX</title>
+    <meta name="description" content="Visit Brothers Garden Center in Aubrey, Texas for annuals, shrubs, trees, organic and inorganic garden products, handmade gifts, and landscape design and installation.">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Brothers Garden Center, LLC | Plants & Landscaping in Aubrey, TX">
+    <meta property="og:description" content="Discover beautiful plants, thoughtful gardening essentials, handmade gifts, and professional landscape design in Aubrey, Texas.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GardenStore",
+      "name": "Brothers Garden Center, LLC",
+      "description": "Retail garden center offering annuals, shrubs, trees, organic and inorganic garden products, handmade gift items, and landscape design and installation.",
+      "email": "brothersgardencenter@juno.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "26748 Hwy 380 E, P.O. Box 2757",
+        "addressLocality": "Aubrey",
+        "addressRegion": "TX",
+        "postalCode": "76227",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Aubrey"
+      }
+    }
+    </script>
+
+    <style>
+        /* =========================================
+           CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --color-ivory: #FAF8F1;
+            --color-sage: #DCE7D6;
+            --color-botanical: #A8BE99;
+            --color-olive: #84966A;
+            --color-forest: #304B37;
+            --color-beige: #EDE3D2;
+            --color-terracotta: #C58D70;
+            --color-charcoal: #343A33;
+            --color-white: #FFFFFF;
+            
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --shadow-soft: 0 4px 20px rgba(48, 75, 55, 0.06);
+            --shadow-medium: 0 8px 30px rgba(48, 75, 55, 0.1);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --transition: all 0.3s ease;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-charcoal);
+            background-color: var(--color-ivory);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--color-forest);
+            line-height: 1.2;
+            font-weight: 600;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+        
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            color: var(--color-charcoal);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: var(--radius-sm);
+        }
+
+        /* =========================================
+           UTILITY CLASSES
+           ========================================= */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        .text-center { text-align: center; }
+        .bg-ivory { background-color: var(--color-ivory); }
+        .bg-sage { background-color: var(--color-sage); }
+        .bg-beige { background-color: var(--color-beige); }
+        .bg-white { background-color: var(--color-white); }
+
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            font-family: var(--font-body);
+        }
+
+        .btn-primary {
+            background-color: var(--color-olive);
+            color: var(--color-white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-forest);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-forest);
+            border-color: var(--color-forest);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-forest);
+            color: var(--color-white);
+        }
+
+        .btn-terracotta {
+            background-color: var(--color-terracotta);
+            color: var(--color-white);
+        }
+
+        .btn-terracotta:hover {
+            background-color: #b07d60;
+            transform: translateY(-2px);
+        }
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(250, 248, 241, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(48, 75, 55, 0.08);
+            transition: var(--transition);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-forest);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--color-olive);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--color-charcoal);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-olive);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--color-forest);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 3px;
+            background-color: var(--color-forest);
+            transition: var(--transition);
+        }
+
+        .hamburger::before { top: -8px; }
+        .hamburger::after { top: 8px; }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            margin-top: 70px;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(48, 75, 55, 0.3), rgba(48, 75, 55, 0.4)), 
+                        url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat;
+            color: var(--color-white);
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            padding: 2rem;
+            background: rgba(250, 248, 241, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero h1 {
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero .btn-secondary {
+            color: var(--color-white);
+            border-color: var(--color-white);
+        }
+
+        .hero .btn-secondary:hover {
+            background-color: var(--color-white);
+            color: var(--color-forest);
+        }
+
+        /* =========================================
+           INTRODUCTION SECTION
+           ========================================= */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .intro-image {
+            position: relative;
+        }
+
+        .intro-image img {
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-medium);
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .intro-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--color-botanical);
+            border-radius: var(--radius-lg);
+            z-index: -1;
+        }
+
+        /* =========================================
+           EXPLORE SECTION
+           ========================================= */
+        .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .explore-card {
+            background-color: var(--color-white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .explore-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .explore-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 0;
+        }
+
+        .explore-card-content {
+            padding: 1.5rem;
+        }
+
+        .explore-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-forest);
+        }
+
+        .explore-card p {
+            font-size: 0.95rem;
+            color: var(--color-charcoal);
+            margin-bottom: 0;
+        }
+
+        /* =========================================
+           GARDEN PRODUCTS SECTION
+           ========================================= */
+        .products-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .product-category {
+            background-color: var(--color-white);
+            padding: 2.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .product-category h3 {
+            color: var(--color-olive);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .product-placeholder {
+            background-color: var(--color-ivory);
+            border: 2px dashed var(--color-botanical);
+            border-radius: var(--radius-sm);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--color-forest);
+        }
+
+        /* =========================================
+           HANDMADE GIFTS SECTION
+           ========================================= */
+        .gifts-section {
+            background-color: var(--color-beige);
+        }
+
+        .gifts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .gift-item {
+            background-color: var(--color-white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+
+        .gift-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gift-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .gift-item-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        /* =========================================
+           LANDSCAPING SECTION
+           ========================================= */
+        .landscaping-hero {
+            background: linear-gradient(rgba(48, 75, 55, 0.7), rgba(48, 75, 55, 0.7)),
+                        url('https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat;
+            color: var(--color-white);
+            padding: 4rem 2rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .landscaping-hero h2 {
+            color: var(--color-white);
+            margin-bottom: 1rem;
+        }
+
+        .landscaping-hero p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            background-color: var(--color-white);
+            padding: 2.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-sage);
+            color: var(--color-forest);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* =========================================
+           GALLERY SECTION
+           ========================================= */
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            border: 1px solid var(--color-botanical);
+            background-color: transparent;
+            color: var(--color-forest);
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background-color: var(--color-olive);
+            color: var(--color-white);
+            border-color: var(--color-olive);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(48, 75, 55, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay span {
+            color: var(--color-white);
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            border: 1px solid var(--color-white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: var(--radius-sm);
+            box-shadow: 0 0 40px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: var(--color-white);
+            font-size: 2.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-family: var(--font-body);
+        }
+
+        /* =========================================
+           WHY VISIT SECTION
+           ========================================= */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--color-sage);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            color: var(--color-forest);
+        }
+
+        .feature h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature p {
+            font-size: 0.95rem;
+            color: var(--color-charcoal);
+        }
+
+        /* =========================================
+           LOCATION & CONTACT SECTION
+           ========================================= */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-block h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-olive);
+        }
+
+        .info-block p, .info-block a {
+            font-size: 1rem;
+            color: var(--color-charcoal);
+        }
+
+        .info-block a:hover {
+            color: var(--color-olive);
+        }
+
+        .map-container {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Form Styles */
+        .contact-form {
+            background-color: var(--color-white);
+            padding: 2.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-soft);
+            margin-top: 3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--color-forest);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border: 1px solid var(--color-sage);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            background-color: var(--color-ivory);
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-olive);
+            box-shadow: 0 0 0 3px rgba(132, 150, 106, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* =========================================
+           FINAL CTA SECTION
+           ========================================= */
+        .final-cta {
+            background: linear-gradient(rgba(48, 75, 55, 0.8), rgba(48, 75, 55, 0.8)),
+                        url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat;
+            color: var(--color-white);
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+
+        .final-cta h2 {
+            color: var(--color-white);
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .final-cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        footer {
+            background-color: var(--color-forest);
+            color: var(--color-ivory);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            color: var(--color-white);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: rgba(250, 248, 241, 0.8);
+            font-size: 0.95rem;
+            max-width: 350px;
+        }
+
+        .footer-links h4,
+        .footer-contact h4 {
+            color: var(--color-botanical);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(250, 248, 241, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-white);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            color: rgba(250, 248, 241, 0.8);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-contact a {
+            color: var(--color-botanical);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(250, 248, 241, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(250, 248, 241, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 968px) {
+            .intro-grid,
+            .products-split,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .intro-image::before {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1001;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: var(--color-ivory);
+                flex-direction: column;
+                padding: 5rem 2rem 2rem;
+                box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+                transition: right 0.3s ease;
+                align-items: flex-start;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hamburger.active {
+                background-color: transparent;
+            }
+
+            .hamburger.active::before {
+                transform: rotate(45deg);
+                top: 0;
+            }
+
+            .hamburger.active::after {
+                transform: rotate(-45deg);
+                top: 0;
+            }
+
+            .hero-content {
+                padding: 1.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo">Brothers <span>Garden Center</span></a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#plants">Plants & Nursery</a></li>
+                    <li><a href="#products">Garden Products</a></li>
+                    <li><a href="#gifts">Handmade Gifts</a></li>
+                    <li><a href="#landscaping">Landscaping</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">Contact Us</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                    <span class="hamburger"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section A: Hero -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <h1>Bring Nature Home.</h1>
+                    <p>Discover beautiful plants, thoughtful gardening essentials and landscape inspiration at Brothers Garden Center in Aubrey, Texas.</p>
+                    <div class="hero-buttons">
+                        <a href="#plants" class="btn btn-primary">Explore Our Garden Center</a>
+                        <a href="#landscaping" class="btn btn-secondary">Discover Landscaping</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section B: Introduction -->
+        <section id="about" class="section-padding bg-ivory">
+            <div class="container">
+                <div class="intro-grid">
+                    <div class="intro-text fade-in">
+                        <h2>Everything Begins With a Little Green.</h2>
+                        <p style="margin-top: 1.5rem;">Whether you're refreshing a garden bed, selecting a new tree, searching for gardening essentials or looking for a unique handmade gift, Brothers Garden Center brings together a variety of products and inspiration for your next idea.</p>
+                        <p>We are a retail garden center offering annuals, shrubs and trees. We also have garden products, both organic and inorganic. And we carry some hand-made gift items. We design and install landscape.</p>
+                        <a href="#contact" class="btn btn-secondary" style="margin-top: 1rem;">Get in Touch</a>
+                    </div>
+                    <div class="intro-image fade-in">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=800" alt="Lush green plants and nursery display at Brothers Garden Center" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section C: Explore Our Garden Center -->
+        <section id="plants" class="section-padding bg-sage">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>Find Something to Grow.</h2>
+                    <p>Explore our carefully curated selection of plants for every season and space.</p>
+                </div>
+                <div class="explore-grid">
+                    <div class="explore-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&q=80&w=600" alt="Colorful annual flowering plants" loading="lazy">
+                        <div class="explore-card-content">
+                            <h3>Annuals</h3>
+                            <p>Add colour and seasonal beauty to your outdoor spaces with a selection of annual flowering plants.</p>
+                        </div>
+                    </div>
+                    <div class="explore-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1598902106373-3b48d8ed4c64?auto=format&fit=crop&q=80&w=600" alt="Healthy green shrubs for garden texture" loading="lazy">
+                        <div class="explore-card-content">
+                            <h3>Shrubs</h3>
+                            <p>Discover shrubs to add greenery, texture and character to your garden.</p>
+                        </div>
+                    </div>
+                    <div class="explore-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1542361345-89e58247f2d5?auto=format&fit=crop&q=80&w=600" alt="Mature trees providing shade and structure" loading="lazy">
+                        <div class="explore-card-content">
+                            <h3>Trees</h3>
+                            <p>Explore trees that bring structure, shade and natural beauty to your landscape.</p>
+                        </div>
+                    </div>
+                    <div class="explore-card fade-in">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=600" alt="Gardening tools and organic products" loading="lazy">
+                        <div class="explore-card-content">
+                            <h3>Garden Products</h3>
+                            <p>Find organic and inorganic garden products to support your planting and gardening needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="#contact" class="btn btn-primary">Explore Our Plants</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section D: Garden Products -->
+        <section id="products" class="section-padding bg-white">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>Give Your Garden the Care It Deserves.</h2>
+                    <p>Quality products to nurture your plants and maintain your outdoor spaces.</p>
+                </div>
+                <div class="products-split">
+                    <div class="product-category fade-in">
+                        <h3>🌿 Organic Garden Products</h3>
+                        <p>Nourish your garden naturally. Our organic selection supports healthy soil, safe planting, and sustainable gardening practices.</p>
+                        <div class="product-placeholder">
+                            <p><strong>Product Placeholder</strong></p>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Add product photographs, names, and availability details here.</p>
+                        </div>
+                    </div>
+                    <div class="product-category fade-in">
+                        <h3>🪨 Inorganic Garden Products</h3>
+                        <p>Practical solutions for garden maintenance, structure, and long-term care. Reliable products for every gardening task.</p>
+                        <div class="product-placeholder">
+                            <p><strong>Product Placeholder</strong></p>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Add product photographs, names, and availability details here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="#contact" class="btn btn-secondary">Enquire About Garden Products</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section E: Handmade Gifts -->
+        <section id="gifts" class="section-padding gifts-section">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>Little Finds. Special Moments.</h2>
+                    <p>Explore our selection of handmade gift items and discover something thoughtful, distinctive and special.</p>
+                </div>
+                <div class="gifts-grid">
+                    <div class="gift-item fade-in">
+                        <img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&q=80&w=600" alt="Handmade ceramic garden decor" loading="lazy">
+                        <div class="gift-item-content">
+                            <h4>Handcrafted Decor</h4>
+                            <p style="font-size: 0.9rem;">Unique pieces to add character to any home or garden.</p>
+                        </div>
+                    </div>
+                    <div class="gift-item fade-in">
+                        <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&q=80&w=600" alt="Thoughtful handmade gift wrapping" loading="lazy">
+                        <div class="gift-item-content">
+                            <h4>Thoughtful Gifts</h4>
+                            <p style="font-size: 0.9rem;">Perfect for gardeners, hosts, and loved ones.</p>
+                        </div>
+                    </div>
+                    <div class="gift-item fade-in">
+                        <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&q=80&w=600" alt="Artisanal garden accessories" loading="lazy">
+                        <div class="gift-item-content">
+                            <h4>Artisanal Accessories</h4>
+                            <p style="font-size: 0.9rem;">Beautifully crafted items for everyday inspiration.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="#contact" class="btn btn-terracotta">Explore Handmade Gifts</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section F: Landscape Design & Installation -->
+        <section id="landscaping" class="section-padding bg-ivory">
+            <div class="container">
+                <div class="landscaping-hero fade-in">
+                    <h2>Let's Create an Outdoor Space You'll Love.</h2>
+                    <p>From the first idea to the finished outdoor space, Brothers Garden Center offers landscape design and installation to help bring your garden vision to life.</p>
+                    <a href="#contact" class="btn btn-primary">Enquire About Landscape Design</a>
+                </div>
+                <div class="process-steps">
+                    <div class="step fade-in">
+                        <div class="step-number">1</div>
+                        <h3>Share Your Vision</h3>
+                        <p>Understand the customer's outdoor space, preferences and landscaping goals.</p>
+                    </div>
+                    <div class="step fade-in">
+                        <div class="step-number">2</div>
+                        <h3>Landscape Design</h3>
+                        <p>Develop a landscape concept suited to the property and the customer's requirements.</p>
+                    </div>
+                    <div class="step fade-in">
+                        <div class="step-number">3</div>
+                        <h3>Installation</h3>
+                        <p>Bring the planned landscape to life through the professional installation process.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section G: Garden Inspiration Gallery -->
+        <section id="gallery" class="section-padding bg-white">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>Spaces That Inspire.</h2>
+                    <p>A glimpse into the beauty of our plants, products, and landscape projects.</p>
+                </div>
+                <div class="gallery-filters fade-in">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="plants">Plants</button>
+                    <button class="filter-btn" data-filter="products">Products</button>
+                    <button class="filter-btn" data-filter="gifts">Gifts</button>
+                    <button class="filter-btn" data-filter="landscaping">Landscaping</button>
+                </div>
+                <div class="gallery-grid" id="galleryGrid">
+                    <div class="gallery-item fade-in" data-category="plants" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&q=80&w=600" alt="Vibrant annual flowers in nursery display" loading="lazy">
+                        <div class="gallery-overlay"><span>View</span></div>
+                    </div>
+                    <div class="gallery-item fade-in" data-category="landscaping" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&q=80&w=600" alt="Completed landscape design project" loading="lazy">
+                        <div class="gallery-overlay"><span>View</span></div>
+                    </div>
+                    <div class="gallery-item fade-in" data-category="gifts" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&q=80&w=600" alt="Handmade garden gift items" loading="lazy">
+                        <div class="gallery-overlay"><span>View</span></div>
+                    </div>
+                    <div class="gallery-item fade-in" data-category="products" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=600" alt="Organic garden products and tools" loading="lazy">
+                        <div class="gallery-overlay"><span>View</span></div>
+                    </div>
+                    <div class="gallery-item fade-in" data-category="plants" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1598902106373-3b48d8ed4c64?auto=format&fit=crop&q=80&w=600" alt="Healthy shrubs and greenery" loading="lazy">
+                        <div class="gallery-overlay"><span>View</span></div>
+                    </div>
+                    <div class="gallery-item fade-in" data-category="landscaping" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1584479898061-15742e14f50d?auto=format&fit=crop&q=80&w=600" alt="Garden pathway and landscape installation" loading="lazy">
+                        <div class="gallery-overlay"><span>View</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+            <img id="lightboxImg" src="" alt="Enlarged gallery image">
+        </div>
+
+        <!-- Section H: Why Visit -->
+        <section class="section-padding bg-sage">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>More Than a Garden Center.</h2>
+                    <p>Your local destination for everything green and growing in Aubrey, Texas.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature fade-in">
+                        <div class="feature-icon">🌸</div>
+                        <h4>Curated Plants</h4>
+                        <p>A thoughtful selection of annuals, shrubs and trees for every season.</p>
+                    </div>
+                    <div class="feature fade-in">
+                        <div class="feature-icon">🌱</div>
+                        <h4>Quality Products</h4>
+                        <p>Both organic and inorganic garden products to support your gardening needs.</p>
+                    </div>
+                    <div class="feature fade-in">
+                        <div class="feature-icon">🎁</div>
+                        <h4>Handmade Gifts</h4>
+                        <p>Distinctive, thoughtful items that make every visit feel special.</p>
+                    </div>
+                    <div class="feature fade-in">
+                        <div class="feature-icon">🏡</div>
+                        <h4>Landscape Services</h4>
+                        <p>Professional design and installation to transform your outdoor space.</p>
+                    </div>
+                    <div class="feature fade-in">
+                        <div class="feature-icon">📍</div>
+                        <h4>Local Destination</h4>
+                        <p>Conveniently located in Aubrey, Texas, serving our wonderful community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section I: Location and Visit Us -->
+        <section id="contact" class="section-padding bg-ivory">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>Come Visit Us in Aubrey.</h2>
+                    <p>We'd love to welcome you to our garden center.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info fade-in">
+                        <div class="info-block">
+                            <h4>Address</h4>
+                            <p>Brothers Garden Center, LLC<br>
+                            26748 Hwy 380 E<br>
+                            P.O. Box 2757<br>
+                            Aubrey, TX 76227<br>
+                            United States</p>
+                            <a href="https://www.google.com/maps/dir//26748+Hwy+380+E,+Aubrey,+TX+76227" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin-top: 1rem; padding: 0.6rem 1.5rem; font-size: 0.9rem;">Get Directions</a>
+                        </div>
+                        <div class="info-block">
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:brothersgardencenter@juno.com">brothersgardencenter@juno.com</a></p>
+                        </div>
+                    </div>
+                    <div class="map-container fade-in">
+                        <iframe src="https://www.google.com/maps?q=26748+Hwy+380+E,+Aubrey,+TX+76227&output=embed" allowfullscreen="" loading="lazy" title="Brothers Garden Center Location Map"></iframe>
+                    </div>
+                </div>
+
+                <!-- Enquiry Form -->
+                <div class="contact-form fade-in" style="max-width: 800px; margin: 4rem auto 0;">
+                    <h3 class="text-center" style="margin-bottom: 2rem;">Send Us an Enquiry</h3>
+                    <!-- 
+                        IMPORTANT: To make this form functional, replace the action URL with your actual Formspree form ID 
+                        (e.g., https://formspree.io/f/your_form_id) or configure for Netlify Forms. 
+                        Currently set to a mailto fallback for immediate basic functionality.
+                    -->
+                    <form action="mailto:brothersgardencenter@juno.com" method="POST" enctype="text/plain" id="enquiryForm">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="enquiryType">Enquiry Type *</label>
+                                <select id="enquiryType" name="enquiryType" required>
+                                    <option value="">Select an option...</option>
+                                    <option value="Plant Availability">Plant Availability</option>
+                                    <option value="Trees & Shrubs">Trees & Shrubs</option>
+                                    <option value="Garden Products">Garden Products</option>
+                                    <option value="Handmade Gifts">Handmade Gifts</option>
+                                    <option value="Landscape Design">Landscape Design</option>
+                                    <option value="Landscape Installation">Landscape Installation</option>
+                                    <option value="General Enquiry">General Enquiry</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Please describe how we can help you..."></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Send Enquiry</button>
+                        </div>
+                        <p class="text-center" style="font-size: 0.85rem; color: var(--color-olive); margin-top: 1rem;">
+                            * Note: This form will open your default email client. For seamless submission, please configure a form service like Formspree.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section K: Final CTA -->
+        <section class="final-cta">
+            <div class="container fade-in">
+                <h2>Your Next Garden Idea Starts Here.</h2>
+                <p>Discover plants, find garden essentials, explore handmade gifts or get in touch about transforming your outdoor space.</p>
+                <div class="final-cta-buttons">
+                    <a href="#plants" class="btn btn-primary">Explore Our Garden Center</a>
+                    <a href="#landscaping" class="btn btn-secondary">Enquire About Landscaping</a>
+                    <a href="#contact" class="btn btn-terracotta">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Brothers Garden Center, LLC</h3>
+                    <p>Plants, garden products, handmade gifts and landscape design in Aubrey, Texas. Grow beautiful spaces and find something special.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#plants">Plants & Nursery</a></li>
+                        <li><a href="#products">Garden Products</a></li>
+                        <li><a href="#gifts">Handmade Gifts</a></li>
+                        <li><a href="#landscaping">Landscaping</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>26748 Hwy 380 E<br>P.O. Box 2757<br>Aubrey, TX 76227, USA</p>
+                    <p><a href="mailto:brothersgardencenter@juno.com">brothersgardencenter@juno.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Brothers Garden Center, LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        const hamburger = document.querySelector('.hamburger');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Scroll Animation (Intersection Observer)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Gallery Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Lightbox Functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+
+        // Form Validation Enhancement
+        const enquiryForm = document.getElementById('enquiryForm');
+        enquiryForm.addEventListener('submit', (e) => {
+            const email = document.getElementById('email').value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!emailRegex.test(email)) {
+                e.preventDefault();
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Note: The form uses mailto: as a fallback. 
+            // For production, replace the form action with a Formspree or Netlify Forms endpoint.
+            alert('Thank you for your enquiry. Your email client will open to send this message to brothersgardencenter@juno.com. (Note: For automatic submission, please configure a form service like Formspree in the HTML code).');
+        });
+
+        // Header background on scroll
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 2px 20px rgba(48, 75, 55, 0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
