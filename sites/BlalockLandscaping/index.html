@@ -1,0 +1,1655 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blalock Landscaping & Drainage, Inc. is a family-owned Houston landscaping and drainage specialist. We solve standing water problems and create beautiful, functional outdoor spaces.">
+    <meta name="keywords" content="Drainage contractor Houston TX, Yard drainage Houston, Underground drainage Houston TX, Landscaping Houston TX, Blalock Landscaping and Drainage, Gutter installation Houston TX, Yard grading Houston">
+    <title>Blalock Landscaping & Drainage, Inc. | Houston Drainage & Landscaping Specialists</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Blalock Landscaping & Drainage, Inc.",
+      "image": "https://www.blalockdrainage.com/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5120 Milwee St",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "postalCode": "77092",
+        "addressCountry": "US"
+      },
+      "telephone": "+17139771964",
+      "email": "office@blalockdrainage.com",
+      "url": "https://www.blalockdrainage.com/",
+      "openingHours": "Mo-Sa 08:00-17:00",
+      "foundingDate": "1996",
+      "founder": {
+        "@type": "Person",
+        "name": "Johnny Blalock"
+      },
+      "areaServed": ["Houston", "Oak Forest", "Garden Oaks", "North Houston", "Spring Branch", "Jersey Village", "Cypress", "Spring", "Bellaire", "Memorial"]
+    }
+    </script>
+
+    <style>
+        /* =========================================
+           CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --warm-ivory: #FAFAF6;
+            --pure-white: #FFFFFF;
+            --soft-sage: #E8EFE7;
+            --botanical-green: #70876A;
+            --deep-forest-green: #294637;
+            --water-blue: #7EB9C9;
+            --pale-blue: #EAF4F6;
+            --warm-stone: #D9D0C2;
+            --charcoal: #343B37;
+            
+            --font-heading: 'Manrope', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --transition: all 0.3s ease;
+            --shadow-sm: 0 2px 8px rgba(41, 70, 55, 0.06);
+            --shadow-md: 0 8px 24px rgba(41, 70, 55, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--charcoal);
+            background-color: var(--warm-ivory);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--deep-forest-green);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        /* =========================================
+           UTILITY CLASSES
+           ========================================= */
+        .text-center { text-align: center; }
+        .bg-white { background-color: var(--pure-white); }
+        .bg-sage { background-color: var(--soft-sage); }
+        .bg-pale-blue { background-color: var(--pale-blue); }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--botanical-green);
+            color: var(--pure-white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--deep-forest-green);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--deep-forest-green);
+            border-color: var(--deep-forest-green);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--deep-forest-green);
+            color: var(--pure-white);
+        }
+
+        .btn-water {
+            background-color: var(--water-blue);
+            color: var(--deep-forest-green);
+        }
+
+        .btn-water:hover {
+            background-color: #6aa3b3;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--charcoal);
+            opacity: 0.85;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+        }
+
+        /* =========================================
+           NAVIGATION (IMPROVED)
+           ========================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(250, 250, 246, 0.98);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(41, 70, 55, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            color: var(--deep-forest-green);
+            line-height: 1.1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-sub {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--botanical-green);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--charcoal);
+            position: relative;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--botanical-green);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--deep-forest-green);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-left: 16px;
+            padding-left: 16px;
+            border-left: 1px solid rgba(41, 70, 55, 0.15);
+        }
+
+        .nav-cta .btn {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            gap: 6px;
+            background: transparent;
+            border: none;
+            z-index: 1002;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--deep-forest-green);
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        .nav-overlay {
+            display: none;
+        }
+
+        /* Responsive Navigation */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                max-width: 320px;
+                height: 100vh;
+                background: var(--pure-white);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 100px 32px 40px;
+                gap: 0;
+                transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: -4px 0 24px rgba(0, 0, 0, 0.1);
+                z-index: 1001;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-link {
+                font-size: 1.1rem;
+                padding: 16px 0;
+                width: 100%;
+                border-bottom: 1px solid rgba(41, 70, 55, 0.08);
+            }
+
+            .nav-link::after {
+                display: none;
+            }
+
+            .nav-cta {
+                flex-direction: column;
+                width: 100%;
+                margin-left: 0;
+                padding-left: 0;
+                border-left: none;
+                margin-top: 32px;
+                gap: 16px;
+            }
+
+            .nav-cta .btn {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 20px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-overlay {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(41, 70, 55, 0.4);
+                backdrop-filter: blur(4px);
+                z-index: 999;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s ease;
+            }
+            
+            .nav-overlay.active {
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-main { font-size: 1.3rem; }
+            .logo-sub { font-size: 0.7rem; }
+            .nav-container { height: 70px; }
+            .nav-menu { padding-top: 90px; }
+            .hero h1 { font-size: 2rem; }
+            .section-title { font-size: 2rem; }
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(41, 70, 55, 0.5), rgba(41, 70, 55, 0.6)), 
+                        url('https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+            color: var(--pure-white);
+            margin-top: 0;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--pure-white);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero .btn-secondary {
+            color: var(--pure-white);
+            border-color: var(--pure-white);
+        }
+
+        .hero .btn-secondary:hover {
+            background-color: var(--pure-white);
+            color: var(--deep-forest-green);
+        }
+
+        /* =========================================
+           PROBLEM SECTION
+           ========================================= */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .problem-card {
+            background: var(--pure-white);
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--water-blue);
+            transition: var(--transition);
+        }
+
+        .problem-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .problem-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: var(--deep-forest-green);
+        }
+
+        /* =========================================
+           SERVICES SECTIONS
+           ========================================= */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .service-card {
+            background: var(--pure-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-card-img {
+            height: 220px;
+            background-color: var(--warm-stone);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-card-content {
+            padding: 28px;
+        }
+
+        .service-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            opacity: 0.85;
+            margin-bottom: 20px;
+        }
+
+        /* =========================================
+           WHY BLALOCK / OUR STORY
+           ========================================= */
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .story-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 24px;
+            background: var(--pure-white);
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .team-member h4 {
+            margin-top: 16px;
+            margin-bottom: 4px;
+        }
+
+        .team-member p {
+            color: var(--botanical-green);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* =========================================
+           BEFORE & AFTER SLIDER
+           ========================================= */
+        .ba-slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            cursor: col-resize;
+        }
+
+        .ba-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .ba-image-before {
+            background-image: url('https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&q=80&w=800');
+            z-index: 1;
+            width: 50%;
+            border-right: 3px solid var(--pure-white);
+        }
+
+        .ba-image-after {
+            background-image: url('https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&q=80&w=800');
+            z-index: 0;
+        }
+
+        .ba-handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: var(--pure-white);
+            border-radius: 50%;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            pointer-events: none;
+        }
+
+        .ba-handle::before {
+            content: '↔';
+            font-size: 20px;
+            color: var(--deep-forest-green);
+            font-weight: bold;
+        }
+
+        .ba-label {
+            position: absolute;
+            top: 20px;
+            padding: 6px 12px;
+            background: rgba(41, 70, 55, 0.8);
+            color: var(--pure-white);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            z-index: 3;
+        }
+
+        .ba-label-before { left: 20px; }
+        .ba-label-after { right: 20px; }
+
+        /* =========================================
+           TESTIMONIALS
+           ========================================= */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: var(--pure-white);
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            color: var(--soft-sage);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--deep-forest-green);
+        }
+
+        .testimonial-location {
+            font-size: 0.85rem;
+            color: var(--botanical-green);
+        }
+
+        /* =========================================
+           HOW IT WORKS
+           ========================================= */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+            counter-reset: step;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 24px;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--soft-sage);
+            color: var(--deep-forest-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin: 0 auto 20px auto;
+        }
+
+        /* =========================================
+           FAQ ACCORDION
+           ========================================= */
+        .faq-item {
+            background: var(--pure-white);
+            border-radius: 8px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 24px;
+            text-align: left;
+            background: none;
+            border: none;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--deep-forest-green);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--botanical-green);
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 24px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 24px;
+        }
+
+        /* =========================================
+           CONTACT FORM
+           ========================================= */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 48px;
+        }
+
+        .contact-info-box {
+            background: var(--deep-forest-green);
+            color: var(--pure-white);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .contact-info-box h3 {
+            color: var(--pure-white);
+            margin-bottom: 24px;
+        }
+
+        .contact-detail {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .contact-detail strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--water-blue);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--warm-stone);
+            border-radius: 6px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--pure-white);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--botanical-green);
+            box-shadow: 0 0 0 3px rgba(112, 135, 106, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-status {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .form-status.success {
+            background: var(--soft-sage);
+            color: var(--deep-forest-green);
+            display: block;
+        }
+
+        .form-status.error {
+            background: #fde8e8;
+            color: #9b1c1c;
+            display: block;
+        }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        footer {
+            background: var(--deep-forest-green);
+            color: var(--pure-white);
+            padding: 60px 0 24px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--pure-white);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .footer-col a:hover {
+            color: var(--water-blue);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* =========================================
+           ANIMATIONS & UTILITIES
+           ========================================= */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--botanical-green);
+            color: var(--pure-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+            z-index: 999;
+            border: none;
+            font-size: 1.5rem;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .back-to-top:hover {
+            background: var(--deep-forest-green);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-main">Blalock</span>
+                <span class="logo-sub">Landscaping & Drainage</span>
+            </a>
+            
+            <div class="nav-overlay" id="navOverlay"></div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#drainage" class="nav-link">Drainage</a></li>
+                <li><a href="#landscaping" class="nav-link">Landscaping</a></li>
+                <li><a href="#gutters" class="nav-link">Gutters</a></li>
+                <li><a href="#work" class="nav-link">Our Work</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-cta">
+                    <a href="tel:7139771964" class="btn btn-secondary">Call (713) 977-1964</a>
+                    <a href="#contact" class="btn btn-primary">Request Estimate</a>
+                </li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- A. Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Beautiful Landscapes. Smarter Drainage.</h1>
+                    <p>From custom drainage solutions to thoughtful landscape improvements, Blalock Landscaping & Drainage helps Houston homeowners create outdoor spaces that look beautiful and work better.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Request an Estimate</a>
+                        <a href="#drainage" class="btn btn-secondary">Explore Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- B. The Problem We Solve -->
+        <section class="section-padding bg-white" id="problem">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2 class="section-title">When Water Becomes a Problem, the Right Solution Matters.</h2>
+                    <p class="section-subtitle">Houston's heavy rainfall exposes weaknesses in property drainage. We don't apply temporary cosmetic fixes; we solve the root cause at the property level.</p>
+                </div>
+                
+                <div class="problem-grid fade-in">
+                    <div class="problem-card">
+                        <h3>Standing Water</h3>
+                        <p>Puddles and saturated soil that linger for days after heavy rainfall, damaging grass and creating mosquito habitats.</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>Foundation Threats</h3>
+                        <p>Water collecting near the home's foundation, leading to potential structural issues and slab leaks.</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>Runoff & Erosion</h3>
+                        <p>Uncontrolled water flow washing away topsoil, mulch, and newly planted landscapes.</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>Gutter Discharge Issues</h3>
+                        <p>Downspouts emptying directly next to the foundation or into already saturated yard areas.</p>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="#contact" class="btn btn-water">Discuss Your Drainage Problem</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- C. Drainage Solutions -->
+        <section class="section-padding bg-sage" id="drainage">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2 class="section-title">Effective Drainage Starts With Understanding How Water Moves.</h2>
+                    <p class="section-subtitle">Our signature service. We assess your property's unique topography and design systems that protect your investment.</p>
+                </div>
+
+                <div class="service-grid fade-in">
+                    <div class="service-card">
+                        <div class="service-card-img" style="background-image: url('https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="service-card-content">
+                            <h3>Underground Drainage Systems</h3>
+                            <p>Professional installation of corrugated or PVC piping to discreetly direct unwanted water away from problem areas and toward safe discharge points.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card-img" style="background-image: url('https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="service-card-content">
+                            <h3>Yard Drainage Solutions</h3>
+                            <p>Targeted interventions including French drains, channel drains, and catch basins for areas where rainwater consistently accumulates.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card-img" style="background-image: url('https://images.unsplash.com/photo-1584467342884-02f7a84134b2?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="service-card-content">
+                            <h3>Stormwater Management</h3>
+                            <p>Comprehensive planning to manage water movement across your entire residential property, preventing neighborhood runoff issues.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card-img" style="background-image: url('https://images.unsplash.com/photo-1621262331672-022e2f7a9b3c?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="service-card-content">
+                            <h3>Grading & Leveling</h3>
+                            <p>Strategic reshaping of the ground's slope and contours to encourage natural water flow away from structures and improve landscape usability.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card-img" style="background-image: url('https://images.unsplash.com/photo-1592722212356-6a80ea819536?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="service-card-content">
+                            <h3>Drainage Improvements</h3>
+                            <p>Upgrading or repairing existing, failing outdoor drainage systems to restore proper water management to your property.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="#contact" class="btn btn-primary">Request a Drainage Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- D. Gutter Solutions -->
+        <section class="section-padding bg-pale-blue" id="gutters">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="fade-in">
+                        <h2 class="section-title">A Better Way to Manage Roof Runoff.</h2>
+                        <p style="margin-bottom: 20px;">Gutters are a critical, often overlooked component of your property's overall drainage system. Uncontrolled roof discharge can undermine foundations and saturate yards.</p>
+                        <ul style="list-style: none; margin-bottom: 30px;">
+                            <li style="margin-bottom: 12px;">✓ Professional gutter installation and improvements</li>
+                            <li style="margin-bottom: 12px;">✓ Gutter-related drainage planning</li>
+                            <li style="margin-bottom: 12px;">✓ Connecting roof runoff to suitable underground drainage solutions</li>
+                            <li style="margin-bottom: 12px;">✓ Protection against uncontrolled water discharge</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary">Discuss Gutter Solutions</a>
+                    </div>
+                    <div class="story-image fade-in">
+                        <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&q=80&w=800" alt="Professional gutter installation and drainage connection">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- E & F. Landscaping & Hardscaping -->
+        <section class="section-padding bg-white" id="landscaping">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2 class="section-title">Outdoor Spaces That Look Good and Work Better.</h2>
+                    <p class="section-subtitle">Landscaping and drainage aren't mutually exclusive. We design beautiful outdoor environments that actively manage water.</p>
+                </div>
+
+                <div class="service-grid fade-in">
+                    <div class="service-card">
+                        <div class="service-card-img" style="background-image: url('https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="service-card-content">
+                            <h3>Landscape Design & Renovation</h3>
+                            <p>Custom landscape beds, thoughtful plant selection, and complete garden improvements that thrive in the Houston climate.</p>
+                        </div>
+                    </div>
+                    <div class="service-card" id="hardscaping">
+                        <div class="service-card-img" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="service-card-content">
+                            <h3>Hardscaping & Patios</h3>
+                            <p>Bring structure and character to your space with professional paver installation, stone pathways, walkways, and landscape borders.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-card-img" style="background-image: url('https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&q=80&w=600');"></div>
+                        <div class="service-card-content">
+                            <h3>Outdoor Property Enhancements</h3>
+                            <p>Holistic improvements that combine aesthetic upgrades with practical grading and water management solutions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="#contact" class="btn btn-primary">Discuss Your Outdoor Project</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- G & H. Why Blalock / Our Story -->
+        <section class="section-padding bg-sage" id="about">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-image fade-in">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800" alt="Blalock Landscaping team assessing a property">
+                    </div>
+                    <div class="fade-in">
+                        <h2 class="section-title">A Landscaping Background. A Mission to Solve Drainage Problems.</h2>
+                        <p style="margin-bottom: 20px;">Blalock Landscaping & Drainage, Inc. was founded in 1996 by Johnny Blalock. Starting in general landscaping, Johnny repeatedly noticed a frustrating pattern: beautiful properties were being undermined by standing rainwater and poor drainage.</p>
+                        <p style="margin-bottom: 20px;">Instead of just replanting failing landscapes, he developed a specialized expertise in drainage-system design and installation. Today, we combine deep landscaping knowledge with practical water management to deliver solutions that last.</p>
+                        
+                        <div class="team-grid">
+                            <div class="team-member">
+                                <h4>Johnny Blalock</h4>
+                                <p>Founder & Estimator</p>
+                            </div>
+                            <div class="team-member">
+                                <h4>Ashley Blalock Davey</h4>
+                                <p>Office Manager & Customer Relations</p>
+                            </div>
+                            <div class="team-member">
+                                <h4>Joe Davey</h4>
+                                <p>Estimator & Foreman</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- I. Before & After Project Gallery -->
+        <section class="section-padding bg-white" id="work">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2 class="section-title">Real Problems. Thoughtful Solutions. Visible Improvements.</h2>
+                    <p class="section-subtitle">Drag the slider to see how we transform waterlogged, problematic yards into functional, beautiful outdoor spaces.</p>
+                </div>
+
+                <div class="ba-slider-container fade-in" id="baSlider">
+                    <div class="ba-image ba-image-after"></div>
+                    <div class="ba-image ba-image-before" id="baBefore"></div>
+                    <div class="ba-handle" id="baHandle"></div>
+                    <span class="ba-label ba-label-before">Before</span>
+                    <span class="ba-label ba-label-after">After</span>
+                </div>
+                
+                <div class="text-center" style="margin-top: 20px; font-size: 0.9rem; color: var(--charcoal); opacity: 0.7;">
+                    <em>*Representative imagery. Actual project photos will be displayed on the live site upon client approval.</em>
+                </div>
+            </div>
+        </section>
+
+        <!-- J. Customer Testimonials -->
+        <section class="section-padding bg-pale-blue">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2 class="section-title">Trusted by Houston Homeowners</h2>
+                </div>
+                <div class="testimonial-grid fade-in">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">We had standing water in our backyard after every heavy rain. Blalock installed an underground drainage system and completely regraded the area. The yard is finally usable, and the new landscaping looks fantastic.</p>
+                        <div class="testimonial-author">Sarah M.</div>
+                        <div class="testimonial-location">Oak Forest, Houston</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Professional from the initial estimate to the final cleanup. Johnny and Joe took the time to explain exactly where the water was coming from and how the new gutter and drain system would fix it. Highly recommend.</p>
+                        <div class="testimonial-author">David R.</div>
+                        <div class="testimonial-location">Garden Oaks, Houston</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">They didn't just try to sell us the most expensive option. They assessed our property, found a practical solution for our runoff issue, and installed beautiful pavers that tie the whole yard together.</p>
+                        <div class="testimonial-author">Jennifer L.</div>
+                        <div class="testimonial-location">Memorial, Houston</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- K. Service Areas -->
+        <section class="section-padding bg-white">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2 class="section-title">Proudly Serving Houston and Surrounding Communities</h2>
+                    <p class="section-subtitle">We bring our drainage and landscaping expertise to neighborhoods across the Greater Houston area.</p>
+                </div>
+                <div class="text-center fade-in" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 800px; margin: 0 auto;">
+                    <span style="background: var(--soft-sage); padding: 8px 16px; border-radius: 20px; font-weight: 500;">Houston</span>
+                    <span style="background: var(--soft-sage); padding: 8px 16px; border-radius: 20px; font-weight: 500;">Oak Forest</span>
+                    <span style="background: var(--soft-sage); padding: 8px 16px; border-radius: 20px; font-weight: 500;">Garden Oaks</span>
+                    <span style="background: var(--soft-sage); padding: 8px 16px; border-radius: 20px; font-weight: 500;">North Houston</span>
+                    <span style="background: var(--soft-sage); padding: 8px 16px; border-radius: 20px; font-weight: 500;">Spring Branch</span>
+                    <span style="background: var(--soft-sage); padding: 8px 16px; border-radius: 20px; font-weight: 500;">Jersey Village</span>
+                    <span style="background: var(--soft-sage); padding: 8px 16px; border-radius: 20px; font-weight: 500;">Cypress</span>
+                    <span style="background: var(--soft-sage); padding: 8px 16px; border-radius: 20px; font-weight: 500;">Spring</span>
+                    <span style="background: var(--soft-sage); padding: 8px 16px; border-radius: 20px; font-weight: 500;">Bellaire</span>
+                    <span style="background: var(--soft-sage); padding: 8px 16px; border-radius: 20px; font-weight: 500;">Memorial</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- L. How It Works -->
+        <section class="section-padding bg-sage">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-subtitle">A straightforward, transparent process from your first call to project completion.</p>
+                </div>
+                <div class="steps-grid fade-in">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <h3>Tell Us About the Problem</h3>
+                        <p>Contact us to explain your drainage challenges or landscaping goals.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <h3>Property Assessment</h3>
+                        <p>We visit your property to understand the topography, water flow, and your objectives.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <h3>Recommended Solution</h3>
+                        <p>We discuss the appropriate project scope, options, and proposed improvements.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">04</div>
+                        <h3>Project Execution</h3>
+                        <p>Our experienced team completes the agreed work, leaving your outdoor environment improved and functional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- M. FAQ Section -->
+        <section class="section-padding bg-white">
+            <div class="container" style="max-width: 800px;">
+                <div class="text-center fade-in">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+                <div class="fade-in">
+                    <div class="faq-item">
+                        <button class="faq-question">What causes standing water in a residential yard?</button>
+                        <div class="faq-answer">
+                            <p>Standing water is typically caused by poor soil composition (like Houston's heavy clay), inadequate yard slope (grading), clogged or misdirected gutter downspouts, or a lack of proper drainage infrastructure to handle heavy rainfall.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">How do underground drainage systems work?</button>
+                        <div class="faq-answer">
+                            <p>Underground systems use a network of perforated or solid pipes buried beneath the surface. They collect excess water from problem areas (via catch basins or French drains) and safely channel it away from your home to a street curb, drainage ditch, or other approved discharge point.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What is the difference between storm drainage and a French drain?</button>
+                        <div class="faq-answer">
+                            <p>A French drain is a specific type of drainage system consisting of a trench filled with gravel and a perforated pipe, designed to intercept and redirect groundwater. "Storm drainage" is a broader term that encompasses all systems designed to manage rainwater runoff.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can gutter systems be connected to a drainage solution?</button>
+                        <div class="faq-answer">
+                            <p>Absolutely. In fact, we highly recommend it. Connecting your gutter downspouts to an underground drainage system prevents roof runoff from pooling near your foundation or washing away your landscaping.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Do you provide landscaping and drainage together?</button>
+                        <div class="faq-answer">
+                            <p>Yes. This is our core specialty. We believe that effective drainage and beautiful landscaping should be designed together. We can install a drainage system and seamlessly restore or upgrade your landscape.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">How do I request an estimate?</button>
+                        <div class="faq-answer">
+                            <p>You can fill out the contact form below, call us directly at (713) 977-1964, or email us at office@blalockdrainage.com. We will schedule a time to assess your property and provide a detailed recommendation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- N. Final CTA & Contact Form -->
+        <section class="section-padding bg-sage" id="contact">
+            <div class="container">
+                <div class="text-center fade-in" style="margin-bottom: 48px;">
+                    <h2 class="section-title">Let's Make Your Outdoor Space Beautiful and Functional.</h2>
+                    <p class="section-subtitle">Whether you're dealing with drainage problems or planning an outdoor improvement project, get in touch with Blalock Landscaping & Drainage.</p>
+                </div>
+
+                <div class="contact-grid fade-in">
+                    <div class="contact-info-box">
+                        <h3>Contact Information</h3>
+                        <div class="contact-detail">
+                            <div>
+                                <strong>Phone</strong>
+                                <a href="tel:7139771964" style="color: white; text-decoration: underline;">(713) 977-1964</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:office@blalockdrainage.com" style="color: white; text-decoration: underline;">office@blalockdrainage.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div>
+                                <strong>Address</strong>
+                                5120 Milwee St<br>Houston, TX 77092
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div>
+                                <strong>Business Hours</strong>
+                                Mon - Sat: 8:00 AM - 5:00 PM<br>Sunday: Closed
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="contactForm" class="bg-white" style="padding: 40px; border-radius: 8px; box-shadow: var(--shadow-md);">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">ZIP Code *</label>
+                                <input type="text" id="zip" name="zip" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Property Address *</label>
+                            <input type="text" id="address" name="address" class="form-control" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="service">Type of Service *</label>
+                                <select id="service" name="service" class="form-control" required>
+                                    <option value="">Select a service...</option>
+                                    <option value="Drainage">Drainage</option>
+                                    <option value="Gutters">Gutters</option>
+                                    <option value="Landscaping">Landscaping</option>
+                                    <option value="Grading/Leveling">Grading / Leveling</option>
+                                    <option value="Hardscaping/Patios">Hardscaping / Patios</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMethod">Preferred Contact Method *</label>
+                                <select id="contactMethod" name="contactMethod" class="form-control" required>
+                                    <option value="Call">Call</option>
+                                    <option value="Text">Text</option>
+                                    <option value="Email">Email</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Description of the Problem or Project *</label>
+                            <textarea id="description" name="description" rows="4" class="form-control" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="photoUpload">Optional: Upload Property Photograph</label>
+                            <input type="file" id="photoUpload" name="photoUpload" class="form-control" accept="image/*">
+                            <small style="color: var(--charcoal); opacity: 0.7;">Helps us understand your project before we arrive.</small>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" id="submitBtn">Request an Appointment</button>
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Blalock Landscaping & Drainage, Inc.</h4>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 20px;">Family-owned since 1996. Combining thoughtful landscaping with practical drainage solutions to help Houston homeowners create beautiful, functional outdoor spaces.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#drainage">Drainage Solutions</a></li>
+                        <li><a href="#landscaping">Landscaping</a></li>
+                        <li><a href="#work">Our Work</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#drainage">Underground Drainage</a></li>
+                        <li><a href="#drainage">Yard Drainage</a></li>
+                        <li><a href="#gutters">Gutter Installation</a></li>
+                        <li><a href="#landscaping">Grading & Leveling</a></li>
+                        <li><a href="#hardscaping">Hardscaping & Patios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>5120 Milwee St, Houston, TX 77092</li>
+                        <li><a href="tel:7139771964">(713) 977-1964</a></li>
+                        <li><a href="mailto:office@blalockdrainage.com">office@blalockdrainage.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Blalock Landscaping & Drainage, Inc. | All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Mobile Menu Toggle (Improved)
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('navMenu');
+            const navOverlay = document.getElementById('navOverlay');
+            const navLinks = document.querySelectorAll('.nav-link, .nav-cta .btn');
+
+            const toggleMenu = () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                navOverlay.classList.toggle('active');
+                document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+            };
+
+            hamburger.addEventListener('click', toggleMenu);
+            navOverlay.addEventListener('click', toggleMenu);
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // 2. Scroll Animations (Intersection Observer)
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // 3. Before & After Slider Logic
+            const slider = document.getElementById('baSlider');
+            const beforeImg = document.getElementById('baBefore');
+            const handle = document.getElementById('baHandle');
+            let isDragging = false;
+
+            const updateSlider = (x) => {
+                const rect = slider.getBoundingClientRect();
+                let position = ((x - rect.left) / rect.width) * 100;
+                
+                position = Math.max(0, Math.min(100, position));
+                
+                beforeImg.style.width = `${position}%`;
+                handle.style.left = `${position}%`;
+            };
+
+            slider.addEventListener('mousedown', () => isDragging = true);
+            slider.addEventListener('touchstart', () => isDragging = true);
+
+            window.addEventListener('mouseup', () => isDragging = false);
+            window.addEventListener('touchend', () => isDragging = false);
+
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                updateSlider(e.clientX);
+            });
+
+            window.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                updateSlider(e.touches[0].clientX);
+            });
+
+            slider.addEventListener('click', (e) => {
+                updateSlider(e.clientX);
+            });
+
+            // 4. FAQ Accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const item = question.parentElement;
+                    const isActive = item.classList.contains('active');
+                    
+                    document.querySelectorAll('.faq-item').forEach(i => {
+                        i.classList.remove('active');
+                    });
+
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // 5. Contact Form Validation & Mock Submission
+            const contactForm = document.getElementById('contactForm');
+            const formStatus = document.getElementById('formStatus');
+            const submitBtn = document.getElementById('submitBtn');
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const formData = new FormData(contactForm);
+                let isValid = true;
+                
+                for (let [key, value] of formData.entries()) {
+                    if (key !== 'photoUpload' && !value.trim()) {
+                        isValid = false;
+                    }
+                }
+
+                if (isValid) {
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+
+                    setTimeout(() => {
+                        formStatus.className = 'form-status success';
+                        formStatus.textContent = 'Thank you! Your request has been received. A member of the Blalock team will contact you shortly.';
+                        contactForm.reset();
+                        submitBtn.textContent = 'Request an Appointment';
+                        submitBtn.disabled = false;
+                    }, 1500);
+                } else {
+                    formStatus.className = 'form-status error';
+                    formStatus.textContent = 'Please fill out all required fields.';
+                }
+            });
+
+            // 6. Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // 7. Navbar background on scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.style.boxShadow = '0 4px 12px rgba(41, 70, 55, 0.1)';
+                } else {
+                    navbar.style.boxShadow = '0 2px 8px rgba(41, 70, 55, 0.06)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
