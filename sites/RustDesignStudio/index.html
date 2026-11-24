@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUST The Design Studio | Architecture & Interior Design in Rajkot</title>
+    <meta name="description" content="RUST The Design Studio, established by Mitesh Antala in Rajkot, creates distinctive architectural and interior experiences with a thoughtful approach to design, materials and sustainability.">
+    <meta name="keywords" content="RUST The Design Studio, Architects in Rajkot, Interior Designers in Rajkot, Architecture and Interior Design Studio, Residential Interior Design Rajkot, Commercial Interior Design Rajkot, Sustainable Interior Design">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "RUST The Design Studio",
+      "founder": {
+        "@type": "Person",
+        "name": "Mitesh Antala"
+      },
+      "foundingDate": "2005",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rajkot",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN"
+      },
+      "url": "https://rustdesign.in/",
+      "description": "Distinctive architectural and interior experiences balancing functionality, visual character and environmental sensitivity."
+    }
+    </script>
+
+    <style>
+        /* =========================================
+           1. CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --bg-primary: #F9F7F4;
+            --bg-secondary: #F0EDE8;
+            --bg-dark: #1A1A1A;
+            --text-primary: #2C2C2C;
+            --text-secondary: #5A5A5A;
+            --text-light: #F9F7F4;
+            --accent-rust: #A0522D;
+            --accent-terracotta: #C77D63;
+            --accent-olive: #6B705C;
+            --border-light: #E0DCD5;
+            
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+            
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 8rem;
+            
+            --transition-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s var(--transition-smooth);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* =========================================
+           2. TYPOGRAPHY
+           ========================================= */
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: var(--spacing-md);
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 2vw, 1.75rem);
+        }
+
+        .text-serif-italic {
+            font-family: var(--font-serif);
+            font-style: italic;
+        }
+
+        .micro-label {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-rust);
+            font-weight: 500;
+            margin-bottom: var(--spacing-sm);
+            display: block;
+        }
+
+        /* =========================================
+           3. UTILITIES & ANIMATIONS
+           ========================================= */
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-padding {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s var(--transition-smooth), transform 0.8s var(--transition-smooth);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+            border: 1px solid var(--text-primary);
+            background: transparent;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.4s var(--transition-smooth);
+        }
+
+        .btn:hover {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+        }
+
+        .btn-primary {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            border-color: var(--text-primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-rust);
+            border-color: var(--accent-rust);
+        }
+
+        /* =========================================
+           4. NAVIGATION
+           ========================================= */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            z-index: 1000;
+            background: rgba(249, 247, 244, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid transparent;
+            transition: all 0.4s var(--transition-smooth);
+        }
+
+        .nav.scrolled {
+            padding: 1rem 0;
+            border-bottom-color: var(--border-light);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: var(--font-sans);
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .nav-logo span {
+            color: var(--accent-rust);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent-rust);
+            transition: width 0.3s var(--transition-smooth);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.75rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 1px;
+            background: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        /* =========================================
+           5. HERO SECTION
+           ========================================= */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            overflow: hidden;
+            padding-bottom: var(--spacing-lg);
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.85);
+            transform: scale(1.05);
+            animation: slowZoom 20s infinite alternate;
+        }
+
+        @keyframes slowZoom {
+            from { transform: scale(1.05); }
+            to { transform: scale(1.15); }
+        }
+
+        .hero-content {
+            color: var(--text-light);
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero-content p {
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin-bottom: var(--spacing-md);
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+        }
+
+        .hero-buttons .btn {
+            border-color: var(--text-light);
+            color: var(--text-light);
+        }
+
+        .hero-buttons .btn:hover {
+            background: var(--text-light);
+            color: var(--text-primary);
+        }
+
+        .hero-buttons .btn-primary {
+            background: var(--text-light);
+            color: var(--text-primary);
+            border-color: var(--text-light);
+        }
+
+        .hero-buttons .btn-primary:hover {
+            background: var(--accent-rust);
+            border-color: var(--accent-rust);
+            color: var(--text-light);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            right: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* =========================================
+           6. ABOUT SECTION
+           ========================================= */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            transition: transform 0.6s var(--transition-smooth);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-text p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.8;
+        }
+
+        .founder-info {
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--border-light);
+        }
+
+        .founder-info h4 {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .founder-info span {
+            font-size: 0.875rem;
+            color: var(--accent-rust);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* =========================================
+           7. DISCIPLINES SECTION
+           ========================================= */
+        .disciplines {
+            background-color: var(--bg-secondary);
+        }
+
+        .disciplines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2px;
+            background-color: var(--border-light);
+            border: 1px solid var(--border-light);
+        }
+
+        .discipline-card {
+            background-color: var(--bg-secondary);
+            padding: var(--spacing-lg) var(--spacing-md);
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.4s ease;
+            cursor: pointer;
+        }
+
+        .discipline-card:hover {
+            background-color: var(--bg-primary);
+        }
+
+        .discipline-card h3 {
+            margin-bottom: var(--spacing-sm);
+            position: relative;
+            z-index: 2;
+        }
+
+        .discipline-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-md);
+            position: relative;
+            z-index: 2;
+            max-width: 80%;
+        }
+
+        .discipline-link {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-rust);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .discipline-link::after {
+            content: '→';
+            transition: transform 0.3s ease;
+        }
+
+        .discipline-card:hover .discipline-link::after {
+            transform: translateX(5px);
+        }
+
+        /* =========================================
+           8. PROJECTS SECTION (CENTREPIECE)
+           ========================================= */
+        .projects-filter {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: none;
+            border: none;
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            color: var(--text-primary);
+        }
+
+        .filter-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--accent-rust);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: var(--spacing-md);
+        }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            group: true;
+        }
+
+        .project-card:nth-child(1) { grid-column: span 7; }
+        .project-card:nth-child(2) { grid-column: span 5; margin-top: var(--spacing-lg); }
+        .project-card:nth-child(3) { grid-column: span 5; }
+        .project-card:nth-child(4) { grid-column: span 7; margin-top: calc(var(--spacing-lg) * -1); }
+        .project-card:nth-child(5) { grid-column: span 6; }
+        .project-card:nth-child(6) { grid-column: span 6; }
+
+        .project-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .project-card:nth-child(2) .project-image,
+        .project-card:nth-child(3) .project-image {
+            aspect-ratio: 3/4;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s var(--transition-smooth);
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: var(--spacing-md);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* =========================================
+           9. PHILOSOPHY SECTION
+           ========================================= */
+        .philosophy {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        .philosophy-text h2 {
+            color: var(--text-light);
+        }
+
+        .philosophy-text p {
+            font-size: 1.125rem;
+            color: rgba(249, 247, 244, 0.7);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.8;
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-sm);
+        }
+
+        .material-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+
+        .material-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: opacity 0.4s ease, transform 0.6s ease;
+        }
+
+        .material-item:hover img {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .material-label {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+            background: rgba(0,0,0,0.5);
+            padding: 0.25rem 0.75rem;
+        }
+
+        /* =========================================
+           10. STUDIO / TEAM SECTION
+           ========================================= */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-photo {
+            width: 100%;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            margin-bottom: var(--spacing-sm);
+            background-color: var(--bg-secondary);
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.4s ease, transform 0.4s ease;
+        }
+
+        .team-member:hover .team-photo img {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+        }
+
+        .team-member h4 {
+            font-family: var(--font-sans);
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .team-member span {
+            font-size: 0.875rem;
+            color: var(--accent-rust);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* =========================================
+           11. AWARDS SECTION
+           ========================================= */
+        .awards {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .awards-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .award-item {
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .award-item:last-child {
+            border-bottom: none;
+        }
+
+        .award-year {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--accent-rust);
+            margin-bottom: 0.5rem;
+        }
+
+        .award-title {
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .award-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* =========================================
+           12. CONTACT SECTION
+           ========================================= */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: var(--spacing-xl);
+        }
+
+        .contact-info h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .contact-info p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.8;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .contact-details div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-details label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-rust);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-details span {
+            font-size: 1.125rem;
+            font-family: var(--font-serif);
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 1rem;
+            border: 1px solid var(--border-light);
+            background: var(--bg-primary);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            color: var(--text-primary);
+            transition: border-color 0.3s ease;
+            border-radius: 0;
+            -webkit-appearance: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-rust);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-submit {
+            grid-column: span 2;
+            margin-top: var(--spacing-sm);
+        }
+
+        /* =========================================
+           13. FOOTER
+           ========================================= */
+        .footer {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            padding: var(--spacing-lg) 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-brand p {
+            color: rgba(249, 247, 244, 0.6);
+            max-width: 300px;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-rust);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-col ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-col a {
+            color: rgba(249, 247, 244, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--text-light);
+        }
+
+        .footer-bottom {
+            margin-top: var(--spacing-lg);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid rgba(249, 247, 244, 0.1);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.875rem;
+            color: rgba(249, 247, 244, 0.5);
+        }
+
+        /* =========================================
+           14. RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 1024px) {
+            .project-card:nth-child(n) {
+                grid-column: span 6;
+                margin-top: 0;
+            }
+            
+            .about-grid,
+            .philosophy-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+
+            .about-image img {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: var(--bg-primary);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: var(--spacing-md);
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 1.5rem;
+                font-family: var(--font-serif);
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+                z-index: 1001;
+            }
+
+            .mobile-menu-btn.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .mobile-menu-btn.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .mobile-menu-btn.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card:nth-child(n) {
+                grid-column: span 1;
+            }
+
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group, .form-group.full-width, .form-submit {
+                grid-column: span 1;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+        }
+
+        /* Custom Cursor (Desktop Only) */
+        @media (hover: hover) {
+            .custom-cursor {
+                position: fixed;
+                width: 20px;
+                height: 20px;
+                border: 1px solid var(--accent-rust);
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 9999;
+                transform: translate(-50%, -50%);
+                transition: width 0.3s, height 0.3s, background-color 0.3s;
+                mix-blend-mode: difference;
+            }
+
+            .custom-cursor.hover {
+                width: 50px;
+                height: 50px;
+                background-color: rgba(160, 82, 45, 0.2);
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo">RUST <span>.</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="#projects">Projects</a>
+                <a href="#studio">Studio</a>
+                <a href="#disciplines">Disciplines</a>
+                <a href="#journal">Journal</a>
+                <a href="#contact" class="btn btn-primary nav-cta">Start a Project</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <!-- Using a high-quality architectural placeholder. Replace with actual RUST studio image -->
+            <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2400&auto=format&fit=crop" alt="RUST The Design Studio Architectural Interior">
+        </div>
+        <div class="container hero-content reveal">
+            <span class="micro-label" style="color: var(--text-light);">Established 2005 · Rajkot, Gujarat</span>
+            <h1>Designing Spaces<br>That Stay With You.</h1>
+            <p>Architecture and interiors shaped by thoughtful design, material exploration and a lasting connection between people and their spaces.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Explore Projects</a>
+                <a href="#studio" class="btn">About RUST</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-padding" id="studio">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop" alt="RUST Design Studio Office Rajkot">
+                </div>
+                <div class="about-text reveal">
+                    <span class="micro-label">About The Studio</span>
+                    <h2>Design Is More Than<br>What You See.</h2>
+                    <p>At RUST, we explore the relationship between people, spaces and materials to create distinctive architectural and interior experiences that balance functionality, visual character and environmental sensitivity.</p>
+                    <p>Established in Rajkot in 2005, our practice is rooted in the belief that meaningful design emerges from a deep understanding of context, craft, and the everyday rituals of those who inhabit the spaces we create.</p>
+                    
+                    <div class="founder-info">
+                        <h4>Mitesh Antala</h4>
+                        <span>Principal Designer & Creative Director</span>
+                    </div>
+                    <br>
+                    <a href="#contact" class="btn">Discover Our Philosophy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disciplines Section -->
+    <section class="section-padding disciplines" id="disciplines">
+        <div class="container">
+            <span class="micro-label reveal">What We Do</span>
+            <h2 class="reveal">Design Disciplines</h2>
+            <br>
+            <div class="disciplines-grid reveal">
+                <div class="discipline-card">
+                    <h3>Residential Design</h3>
+                    <p>Homes, villas, apartments and residential interiors crafted for enduring comfort and character.</p>
+                    <span class="discipline-link">View Projects</span>
+                </div>
+                <div class="discipline-card">
+                    <h3>Commercial Design</h3>
+                    <p>Offices, retail environments, workplaces and commercial interiors that elevate brand identity.</p>
+                    <span class="discipline-link">View Projects</span>
+                </div>
+                <div class="discipline-card">
+                    <h3>Institutional Design</h3>
+                    <p>Spaces designed around institutional functions, user requirements and community impact.</p>
+                    <span class="discipline-link">View Projects</span>
+                </div>
+                <div class="discipline-card">
+                    <h3>Industrial Design</h3>
+                    <p>Industrial environments and related architectural and interior consultancy.</p>
+                    <span class="discipline-link">View Projects</span>
+                </div>
+                <div class="discipline-card">
+                    <h3>Exhibition & Display</h3>
+                    <p>Exhibition stalls, display centres and branded spatial experiences.</p>
+                    <span class="discipline-link">View Projects</span>
+                </div>
+                <div class="discipline-card">
+                    <h3>Landscape Design</h3>
+                    <p>Outdoor spatial design and landscape projects that connect architecture to nature.</p>
+                    <span class="discipline-link">View Projects</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section-padding" id="projects">
+        <div class="container">
+            <span class="micro-label reveal">Portfolio</span>
+            <h2 class="reveal">Selected Projects</h2>
+            <br>
+            <div class="projects-filter reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="hospitality">Hospitality</button>
+                <button class="filter-btn" data-filter="exhibition">Exhibition</button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects injected via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="section-padding philosophy" id="journal">
+        <div class="container">
+            <div class="philosophy-grid">
+                <div class="philosophy-text reveal">
+                    <span class="micro-label" style="color: var(--accent-terracotta);">Our Approach</span>
+                    <h2>Thoughtful Design.<br>Respect for Materials.<br>Spaces with Meaning.</h2>
+                    <p>We believe that architecture and interiors should age gracefully. Our material palette favours natural stone, honest concrete, warm wood, and reclaimed elements that tell a story over time.</p>
+                    <p>Every design decision is weighed against its environmental impact and functional longevity. We do not chase fleeting trends; we design for the decades ahead.</p>
+                    <a href="#contact" class="btn" style="border-color: var(--text-light); color: var(--text-light);">Discuss Your Project</a>
+                </div>
+                <div class="materials-grid reveal">
+                    <div class="material-item">
+                        <img src="https://images.unsplash.com/photo-1518005068251-37900150dfca?q=80&w=800&auto=format&fit=crop" alt="Natural Stone Texture">
+                        <span class="material-label">Natural Stone</span>
+                    </div>
+                    <div class="material-item">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop" alt="Concrete Finish">
+                        <span class="material-label">Raw Concrete</span>
+                    </div>
+                    <div class="material-item">
+                        <img src="https://images.unsplash.com/photo-1541123603104-512919d6a96c?q=80&w=800&auto=format&fit=crop" alt="Wood Veneer">
+                        <span class="material-label">Warm Wood</span>
+                    </div>
+                    <div class="material-item">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop" alt="Earthy Textures">
+                        <span class="material-label">Earthy Textures</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;" class="reveal">
+                <span class="micro-label">The People</span>
+                <h2>Meet The Studio</h2>
+                <p style="color: var(--text-secondary); margin-top: 1rem;">A collaborative collective of architects, interior designers, and engineers united by a shared commitment to design excellence.</p>
+            </div>
+            
+            <div class="team-grid reveal" id="teamGrid">
+                <!-- Team injected via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section class="section-padding awards">
+        <div class="container">
+            <div style="text-align: center;" class="reveal">
+                <span class="micro-label">Recognition</span>
+                <h2>Awards & Publications</h2>
+            </div>
+            <br><br>
+            <div class="awards-list reveal">
+                <div class="award-item">
+                    <div class="award-year">2016</div>
+                    <div class="award-title">IIID Design Excellence Award</div>
+                    <div class="award-desc">Commendation in the Small Commercial Space category by Anchor.</div>
+                </div>
+                <div class="award-item">
+                    <div class="award-year">2015</div>
+                    <div class="award-title">ACETECH Bengaluru</div>
+                    <div class="award-desc">Platinum A-category recognition for exhibition stall design for Granicer Tiles.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <span class="micro-label">Get in Touch</span>
+                    <h2>Have a Space in Mind?<br>Let's Create Something Meaningful.</h2>
+                    <p>Whether you are envisioning a new residence, a commercial workspace, or an institutional facility, we would love to hear about your project.</p>
+                    
+                    <div class="contact-details">
+                        <div>
+                            <label>Studio</label>
+                            <span>RUST The Design Studio</span>
+                        </div>
+                        <div>
+                            <label>Location</label>
+                            <span>Rajkot, Gujarat, India</span>
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <span>hello@rustdesign.in</span>
+                        </div>
+                        <div>
+                            <label>Phone</label>
+                            <span>+91 98765 43210</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="enquiryForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Project Location</label>
+                        <input type="text" id="location" name="location">
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Project Type</label>
+                        <select id="type" name="type" required>
+                            <option value="">Select a type</option>
+                            <option value="residential">Residential</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="institutional">Institutional</option>
+                            <option value="industrial">Industrial</option>
+                            <option value="exhibition">Exhibition / Display</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="area">Approximate Area (sq.ft)</label>
+                        <input type="text" id="area" name="area">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="description">Project Description</label>
+                        <textarea id="description" name="description" placeholder="Tell us about your vision, timeline, and any specific requirements..."></textarea>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Project Enquiry</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <h3>RUST <span style="color: var(--accent-rust);">.</span></h3>
+                    <p>Spaces with Character. Design with Purpose. Creating distinctive architectural and interior experiences since 2005.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#studio">Studio</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Disciplines</h4>
+                        <ul>
+                            <li><a href="#disciplines">Residential</a></li>
+                            <li><a href="#disciplines">Commercial</a></li>
+                            <li><a href="#disciplines">Institutional</a></li>
+                            <li><a href="#disciplines">Exhibition</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Social</h4>
+                        <ul>
+                            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+                            <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2005–2026 RUST The Design Studio. All rights reserved.</span>
+                <span>Designed with purpose in Rajkot, Gujarat.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // =========================================
+        // 1. CMS DATA STORE (Easy to update)
+        // =========================================
+        const portfolioData = [
+            {
+                id: 1,
+                title: "Rotolam Laminates Display Centre",
+                category: "commercial",
+                location: "Rajkot, Gujarat",
+                year: "2018",
+                image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1200&auto=format&fit=crop"
+            },
+            {
+                id: 2,
+                title: "Office for RUST The Design Studio",
+                category: "commercial",
+                location: "Rajkot, Gujarat",
+                year: "2020",
+                image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                id: 3,
+                title: "Hotel The Grand Daksh",
+                category: "hospitality",
+                location: "Rajkot, Gujarat",
+                year: "2019",
+                image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                id: 4,
+                title: "Office for Shree Mahavir Industries",
+                category: "commercial",
+                location: "Jamnagar, Gujarat",
+                year: "2017",
+                image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop"
+            },
+            {
+                id: 5,
+                title: "Weekend Villa Interior",
+                category: "residential",
+                location: "Saputara, Gujarat",
+                year: "2021",
+                image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&auto=format&fit=crop"
+            },
+            {
+                id: 6,
+                title: "Tea Villa Cafe",
+                category: "hospitality",
+                location: "Rajkot, Gujarat",
+                year: "2019",
+                image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop"
+            }
+        ];
+
+        const teamData = [
+            { name: "Mitesh Antala", role: "Creative Director", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop" },
+            { name: "Ravi Vadgama", role: "Interior Designer", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop" },
+            { name: "Ravin Bhanderi", role: "Interior Designer", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop" },
+            { name: "Jay Makvana", role: "Civil Engineer", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop" },
+            { name: "Rahul", role: "Architect", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop" }
+        ];
+
+        // =========================================
+        // 2. RENDER FUNCTIONS
+        // =========================================
+        function renderProjects(filter = 'all') {
+            const grid = document.getElementById('projectsGrid');
+            grid.innerHTML = '';
+            
+            const filtered = filter === 'all' 
+                ? portfolioData 
+                : portfolioData.filter(p => p.category === filter);
+
+            filtered.forEach((project, index) => {
+                const card = document.createElement('div');
+                card.className = 'project-card reveal';
+                card.style.animationDelay = `${index * 0.1}s`;
+                card.innerHTML = `
+                    <div class="project-image">
+                        <img src="${project.image}" alt="${project.title}" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <h3>${project.title}</h3>
+                        <div class="project-meta">
+                            <span>${project.category}</span>
+                            <span>${project.location}</span>
+                            <span>${project.year}</span>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            
+            // Re-trigger observer for new elements
+            observeElements();
+        }
+
+        function renderTeam() {
+            const grid = document.getElementById('teamGrid');
+            teamData.forEach(member => {
+                const card = document.createElement('div');
+                card.className = 'team-member';
+                card.innerHTML = `
+                    <div class="team-photo">
+                        <img src="${member.image}" alt="${member.name}" loading="lazy">
+                    </div>
+                    <h4>${member.name}</h4>
+                    <span>${member.role}</span>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // =========================================
+        // 3. INTERACTIONS & ANIMATIONS
+        // =========================================
+        
+        // Intersection Observer for scroll reveals
+        function observeElements() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Project filtering
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                renderProjects(e.target.dataset.filter);
+            });
+        });
+
+        // Custom cursor (desktop only)
+        const cursor = document.getElementById('cursor');
+        if (window.matchMedia("(hover: hover)").matches) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+
+            document.querySelectorAll('a, button, .project-card, .discipline-card').forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+            });
+        } else {
+            cursor.style.display = 'none';
+        }
+
+        // Form submission handling
+        document.getElementById('enquiryForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                btn.innerText = 'Enquiry Sent Successfully';
+                btn.style.backgroundColor = 'var(--accent-olive)';
+                btn.style.borderColor = 'var(--accent-olive)';
+                e.target.reset();
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                    btn.style.backgroundColor = '';
+                    btn.style.borderColor = '';
+                }, 3000);
+            }, 1500);
+        });
+
+        // =========================================
+        // 4. INITIALIZATION
+        // =========================================
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProjects();
+            renderTeam();
+            observeElements();
+        });
+    </script>
+</body>
+</html>
+Displaying index.html.
