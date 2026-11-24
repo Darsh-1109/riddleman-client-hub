@@ -1,0 +1,1907 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Photos: Wikimedia Commons (CC BY-SA / free licences). Replace with your own portfolio shots before launch. -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Weavers India – Luxury Wedding Planners in Udaipur</title>
+  <meta name="description" content="Event Weavers India creates beautifully designed weddings and destination celebrations in Udaipur, combining customised planning, wedding décor and seamless event coordination." />
+  <meta name="keywords" content="Wedding Planners in Udaipur, Destination Wedding Planners, Luxury Wedding Planners, Udaipur Wedding Management, Wedding Décor in Udaipur" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Event Weavers India – Luxury Wedding Planners in Udaipur" />
+  <meta property="og:description" content="Crafting Celebrations. Weaving Unforgettable Stories. Destination weddings, bespoke décor and seamless coordination across India." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Italiana&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Event Weavers India",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_view_of_City_Palace_(Udaipur),_Rajasthan,_India_-2.jpg?width=1200",
+    "description": "Luxury wedding planners and destination wedding designers based in Udaipur, Rajasthan.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Udaipur",
+      "addressRegion": "Rajasthan",
+      "addressCountry": "IN"
+    },
+    "priceRange": "$$$$",
+    "areaServed": "India"
+  }
+  </script>
+
+  <style>
+/* =========================================================
+   EVENT WEAVERS INDIA — Design System
+   Luxury Wedding Planning | Udaipur, Rajasthan
+   ========================================================= */
+
+:root {
+  /* Brand Palette */
+  --ivory:        #FAF6F0;
+  --pearl:        #FDFBF7;
+  --champagne:    #C9A96E;
+  --champagne-soft: #D9BE8A;
+  --gold-deep:    #A8874C;
+  --dusty-rose:   #D4A5A5;
+  --blush:        #E8D5D0;
+  --burgundy:     #6B2737;
+  --burgundy-deep:#4A1A25;
+  --taupe:        #B8A89A;
+  --taupe-light:  #D8CFC4;
+  --charcoal:     #2C2826;
+  --charcoal-soft:#4A4441;
+  --line:         rgba(201, 169, 110, 0.25);
+  --line-soft:    rgba(44, 40, 38, 0.08);
+
+  /* Typography */
+  --serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --sans:  'Inter', 'Helvetica Neue', system-ui, sans-serif;
+  --display: 'Italiana', 'Cormorant Garamond', serif;
+
+  /* Spacing */
+  --section-pad: clamp(5rem, 10vw, 9rem);
+  --container: 1400px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--charcoal);
+  background: var(--pearl);
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; transition: color .4s var(--ease); }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+::selection { background: var(--champagne); color: var(--pearl); }
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4, h5 { font-family: var(--serif); font-weight: 400; letter-spacing: 0.01em; line-height: 1.15; color: var(--charcoal); }
+h1 { font-size: clamp(2.75rem, 6.5vw, 5.75rem); font-weight: 300; letter-spacing: -0.01em; }
+h2 { font-size: clamp(2.25rem, 4.5vw, 3.75rem); font-weight: 300; }
+h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+.eyebrow::before, .eyebrow::after {
+  content: '';
+  width: 28px; height: 1px;
+  background: var(--champagne);
+}
+.lede {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--charcoal-soft);
+  line-height: 1.6;
+}
+
+/* ---------- Layout ---------- */
+.container { max-width: var(--container); margin: 0 auto; padding: 0 clamp(1.5rem, 4vw, 3rem); }
+.section { padding: var(--section-pad) 0; position: relative; }
+.section-dark { background: var(--charcoal); color: var(--ivory); }
+.section-dark h1, .section-dark h2, .section-dark h3 { color: var(--ivory); }
+.section-dark .eyebrow { color: var(--champagne-soft); }
+.section-dark .eyebrow::before, .section-dark .eyebrow::after { background: var(--champagne-soft); }
+
+/* ---------- Ornamental Divider ---------- */
+.ornament {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.25rem; margin: 2rem 0;
+}
+.ornament .line { flex: 1; max-width: 80px; height: 1px; background: var(--line); }
+.ornament svg { width: 22px; height: 22px; fill: var(--champagne); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  padding: 1rem 2rem;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border: 1px solid var(--charcoal);
+  color: var(--charcoal);
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: color .5s var(--ease);
+}
+.btn::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: var(--charcoal);
+  transform: translateY(100%);
+  transition: transform .5s var(--ease);
+  z-index: 0;
+}
+.btn span { position: relative; z-index: 1; }
+.btn:hover { color: var(--ivory); }
+.btn:hover::before { transform: translateY(0); }
+.btn-primary { background: var(--charcoal); color: var(--ivory); }
+.btn-primary::before { background: var(--burgundy); }
+.btn-primary:hover { color: var(--ivory); }
+.btn-gold { border-color: var(--champagne); color: var(--champagne); }
+.btn-gold::before { background: var(--champagne); }
+.btn-gold:hover { color: var(--charcoal); }
+.btn-light { border-color: var(--ivory); color: var(--ivory); }
+.btn-light::before { background: var(--ivory); }
+.btn-light:hover { color: var(--charcoal); }
+.btn .arrow { transition: transform .4s var(--ease); }
+.btn:hover .arrow { transform: translateX(4px); }
+
+/* ---------- Navigation ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.5rem 0;
+  transition: all .5s var(--ease);
+}
+.nav.scrolled {
+  padding: 1rem 0;
+  background: rgba(253, 251, 247, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line-soft);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: var(--container); margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+}
+.nav-logo {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  color: var(--ivory);
+  transition: color .5s var(--ease);
+}
+.nav.scrolled .nav-logo { color: var(--charcoal); }
+.nav-logo em { font-style: italic; color: var(--champagne); font-family: var(--serif); font-weight: 400; }
+.nav-menu { display: flex; gap: 2.5rem; list-style: none; }
+.nav-menu a {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color .5s var(--ease);
+}
+.nav.scrolled .nav-menu a { color: var(--charcoal); }
+.nav-menu a::after {
+  content: ''; position: absolute; bottom: 0; left: 0;
+  width: 0; height: 1px; background: var(--champagne);
+  transition: width .4s var(--ease);
+}
+.nav-menu a:hover::after, .nav-menu a.active::after { width: 100%; }
+.nav-cta {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--ivory);
+  color: var(--ivory);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  transition: all .4s var(--ease);
+}
+.nav.scrolled .nav-cta { border-color: var(--charcoal); color: var(--charcoal); }
+.nav-cta:hover { background: var(--champagne); border-color: var(--champagne); color: var(--charcoal); }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.nav-toggle span { width: 24px; height: 1px; background: var(--ivory); transition: all .4s var(--ease); }
+.nav.scrolled .nav-toggle span { background: var(--charcoal); }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  height: 100vh; min-height: 700px;
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ivory);
+  text-align: center;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background-image: url('https://commons.wikimedia.org/wiki/Special:FilePath/Lake_view_of_City_Palace_(Udaipur),_Rajasthan,_India_-2.jpg?width=2000');
+  background-size: cover; background-position: center;
+  transform: scale(1.08);
+  animation: heroZoom 18s var(--ease-out) forwards;
+}
+@keyframes heroZoom { to { transform: scale(1); } }
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(44,40,38,0.35) 0%, rgba(44,40,38,0.55) 60%, rgba(44,40,38,0.8) 100%);
+}
+.hero-content { position: relative; z-index: 2; max-width: 900px; padding: 0 2rem; }
+.hero .eyebrow { color: var(--champagne-soft); margin-bottom: 2rem; opacity: 0; animation: fadeUp 1.2s var(--ease-out) 0.3s forwards; }
+.hero .eyebrow::before, .hero .eyebrow::after { background: var(--champagne-soft); }
+.hero h1 {
+  color: var(--ivory);
+  font-weight: 300;
+  margin-bottom: 1.75rem;
+  opacity: 0;
+  animation: fadeUp 1.4s var(--ease-out) 0.5s forwards;
+}
+.hero h1 em { font-style: italic; color: var(--champagne-soft); font-weight: 300; }
+.hero p {
+  font-family: var(--serif);
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  font-weight: 300;
+  font-style: italic;
+  max-width: 640px; margin: 0 auto 2.5rem;
+  line-height: 1.7;
+  opacity: 0;
+  animation: fadeUp 1.4s var(--ease-out) 0.8s forwards;
+}
+.hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; opacity: 0; animation: fadeUp 1.4s var(--ease-out) 1.1s forwards; }
+.scroll-indicator {
+  position: absolute; bottom: 2.5rem; left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 0.75rem;
+  color: var(--ivory);
+  opacity: 0;
+  animation: fadeUp 1.4s var(--ease-out) 1.4s forwards;
+}
+.scroll-indicator span { font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase; }
+.scroll-line { width: 1px; height: 40px; background: var(--champagne-soft); position: relative; overflow: hidden; }
+.scroll-line::after {
+  content: ''; position: absolute; top: -40px; left: 0;
+  width: 1px; height: 40px; background: var(--ivory);
+  animation: scrollLine 2.5s var(--ease) infinite;
+}
+@keyframes scrollLine { 0% { top: -40px; } 100% { top: 40px; } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ---------- Intro / Art of Celebration ---------- */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+.intro-image {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+.intro-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.intro-image:hover img { transform: scale(1.04); }
+.intro-image::after {
+  content: ''; position: absolute; inset: 20px;
+  border: 1px solid var(--champagne);
+  pointer-events: none;
+  opacity: 0.5;
+}
+.intro-text h2 { margin-bottom: 1.5rem; }
+.intro-text h2 em { font-style: italic; color: var(--burgundy); }
+.intro-text .lede { margin-bottom: 2rem; }
+.intro-text p { margin-bottom: 1.25rem; color: var(--charcoal-soft); }
+.intro-signature {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--gold-deep);
+}
+
+/* ---------- Services ---------- */
+.services-head { text-align: center; max-width: 720px; margin: 0 auto 4rem; }
+.services-head h2 { margin-bottom: 1.5rem; }
+.services-head h2 em { font-style: italic; color: var(--burgundy); }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.service-card {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--charcoal);
+}
+.service-card img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1s var(--ease), opacity .6s var(--ease);
+  opacity: 0.85;
+}
+.service-card:hover img { transform: scale(1.08); opacity: 0.5; }
+.service-card::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(44,40,38,0.9) 100%);
+}
+.service-content {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 2rem 1.5rem;
+  z-index: 2;
+  color: var(--ivory);
+  transform: translateY(20px);
+  transition: transform .6s var(--ease);
+}
+.service-card:hover .service-content { transform: translateY(0); }
+.service-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--champagne-soft);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+.service-content h3 {
+  color: var(--ivory);
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+.service-content p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  opacity: 0;
+  max-height: 0;
+  transition: all .6s var(--ease);
+  color: rgba(250, 246, 240, 0.85);
+}
+.service-card:hover .service-content p { opacity: 1; max-height: 120px; margin-bottom: 1rem; }
+.service-link {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--champagne-soft);
+  opacity: 0;
+  transition: opacity .6s var(--ease) .1s;
+}
+.service-card:hover .service-link { opacity: 1; }
+
+/* ---------- Portfolio ---------- */
+.portfolio-head { text-align: center; max-width: 720px; margin: 0 auto 4rem; }
+.portfolio-head h2 em { font-style: italic; color: var(--champagne-soft); }
+.portfolio-masonry {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  grid-auto-rows: 80px;
+}
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--charcoal);
+}
+.portfolio-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1.2s var(--ease);
+}
+.portfolio-item:hover img { transform: scale(1.06); }
+.portfolio-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(44,40,38,0.85) 100%);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 2rem;
+  color: var(--ivory);
+  opacity: 0;
+  transition: opacity .5s var(--ease);
+}
+.portfolio-item:hover .portfolio-overlay { opacity: 1; }
+.portfolio-overlay .loc {
+  font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--champagne-soft); margin-bottom: 0.5rem;
+}
+.portfolio-overlay h3 { color: var(--ivory); font-size: 1.5rem; font-weight: 300; }
+.portfolio-overlay h3 em { font-style: italic; color: var(--champagne-soft); }
+
+/* Masonry layout */
+.p-1 { grid-column: span 7; grid-row: span 6; }
+.p-2 { grid-column: span 5; grid-row: span 4; }
+.p-3 { grid-column: span 4; grid-row: span 5; }
+.p-4 { grid-column: span 4; grid-row: span 5; }
+.p-5 { grid-column: span 4; grid-row: span 5; }
+
+/* ---------- Destination ---------- */
+.dest-wrap {
+  position: relative;
+  padding: var(--section-pad) 0;
+  color: var(--ivory);
+  overflow: hidden;
+}
+.dest-bg {
+  position: absolute; inset: 0;
+  background-image: url('https://commons.wikimedia.org/wiki/Special:FilePath/Lily_Pond_at_the_Lake_Palace,_Udaipur.jpg?width=2000');
+  background-size: cover; background-position: center 40%;
+}
+.dest-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(74,26,37,0.62) 0%, rgba(44,40,38,0.38) 100%);
+}
+.dest-content { position: relative; z-index: 2; max-width: 780px; text-shadow: 0 1px 14px rgba(0,0,0,0.45); }
+.dest-content h2 { color: var(--ivory); margin-bottom: 1.5rem; }
+.dest-content h2 em { font-style: italic; color: var(--champagne-soft); }
+.dest-content .lede { color: rgba(250,246,240,0.9); margin-bottom: 2rem; }
+.dest-content p { color: rgba(250,246,240,0.85); margin-bottom: 1.25rem; }
+.dest-features {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; margin: 3rem 0;
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(201,169,110,0.3);
+  border-bottom: 1px solid rgba(201,169,110,0.3);
+}
+.dest-feature { text-align: left; }
+.dest-feature .num {
+  font-family: var(--serif); font-style: italic;
+  color: var(--champagne-soft); font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.dest-feature h4 { color: var(--ivory); font-size: 1.15rem; margin-bottom: 0.5rem; }
+.dest-feature p { font-size: 0.88rem; margin: 0; color: rgba(250,246,240,0.75); }
+
+/* ---------- Approach / Timeline ---------- */
+.approach-head { text-align: center; max-width: 720px; margin: 0 auto 5rem; }
+.approach-head h2 em { font-style: italic; color: var(--burgundy); }
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+}
+.timeline::before {
+  content: ''; position: absolute;
+  top: 38px; left: 12.5%; right: 12.5%;
+  height: 1px; background: var(--line);
+}
+.timeline-step { text-align: center; position: relative; }
+.step-num {
+  width: 76px; height: 76px;
+  margin: 0 auto 2rem;
+  border: 1px solid var(--champagne);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--gold-deep);
+  background: var(--pearl);
+  position: relative; z-index: 2;
+  transition: all .5s var(--ease);
+}
+.timeline-step:hover .step-num {
+  background: var(--champagne);
+  color: var(--pearl);
+  transform: scale(1.08);
+}
+.timeline-step h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+.timeline-step h3 em { font-style: italic; color: var(--burgundy); }
+.timeline-step p { color: var(--charcoal-soft); font-size: 0.95rem; }
+
+/* ---------- Functions / More Than One Celebration ---------- */
+.functions-head { text-align: center; max-width: 720px; margin: 0 auto 4rem; }
+.functions-head h2 em { font-style: italic; color: var(--champagne-soft); }
+.functions-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+.function-card {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  cursor: pointer;
+}
+.function-card img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1s var(--ease), filter .6s var(--ease);
+  filter: saturate(0.85);
+}
+.function-card:hover img { transform: scale(1.08); filter: saturate(1); }
+.function-card::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(44,40,38,0.85) 100%);
+}
+.function-label {
+  position: absolute; bottom: 1.25rem; left: 0; right: 0;
+  text-align: center;
+  z-index: 2;
+  color: var(--ivory);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+}
+.function-label span {
+  display: block;
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--champagne-soft);
+  margin-bottom: 0.35rem;
+}
+
+/* ---------- Why Us ---------- */
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+.why-text h2 { margin-bottom: 1.5rem; }
+.why-text h2 em { font-style: italic; color: var(--burgundy); }
+.why-list { list-style: none; margin-top: 2.5rem; }
+.why-list li {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line-soft);
+  align-items: start;
+}
+.why-list li:first-child { border-top: 1px solid var(--line-soft); }
+.why-num {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--gold-deep);
+  font-size: 1.1rem;
+  padding-top: 0.2rem;
+}
+.why-list h4 { font-size: 1.2rem; margin-bottom: 0.35rem; }
+.why-list p { font-size: 0.92rem; color: var(--charcoal-soft); margin: 0; }
+.why-image {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+.why-image img { width: 100%; height: 100%; object-fit: cover; }
+.why-image::before {
+  content: ''; position: absolute;
+  top: -20px; left: -20px;
+  width: 100px; height: 100px;
+  border-top: 1px solid var(--champagne);
+  border-left: 1px solid var(--champagne);
+  z-index: 2;
+}
+.why-image::after {
+  content: ''; position: absolute;
+  bottom: -20px; right: -20px;
+  width: 100px; height: 100px;
+  border-bottom: 1px solid var(--champagne);
+  border-right: 1px solid var(--champagne);
+  z-index: 2;
+}
+
+/* ---------- Testimonials ---------- */
+.testimonials-head { text-align: center; max-width: 720px; margin: 0 auto 4rem; }
+.testimonials-head h2 em { font-style: italic; color: var(--champagne-soft); }
+.testimonial-carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.testimonial-track {
+  display: flex;
+  transition: transform .8s var(--ease);
+}
+.testimonial {
+  min-width: 100%;
+  text-align: center;
+  padding: 0 2rem;
+}
+.testimonial-mark {
+  font-family: var(--serif);
+  font-size: 5rem;
+  color: var(--champagne-soft);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.testimonial blockquote {
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ivory);
+  margin-bottom: 2rem;
+}
+.testimonial cite {
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--champagne-soft);
+}
+.testimonial cite strong { display: block; color: var(--ivory); font-weight: 500; margin-bottom: 0.25rem; }
+.carousel-controls {
+  display: flex; justify-content: center; align-items: center;
+  gap: 2rem; margin-top: 3rem;
+}
+.carousel-btn {
+  width: 48px; height: 48px;
+  border: 1px solid rgba(201,169,110,0.4);
+  border-radius: 50%;
+  color: var(--champagne-soft);
+  display: flex; align-items: center; justify-content: center;
+  transition: all .4s var(--ease);
+}
+.carousel-btn:hover { background: var(--champagne); color: var(--charcoal); border-color: var(--champagne); }
+.carousel-dots { display: flex; gap: 0.5rem; }
+.carousel-dots span {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: rgba(201,169,110,0.3);
+  transition: all .4s var(--ease);
+  cursor: pointer;
+}
+.carousel-dots span.active { background: var(--champagne); width: 24px; border-radius: 3px; }
+
+/* ---------- Enquiry Form ---------- */
+.enquiry-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: start;
+}
+.enquiry-text h2 { margin-bottom: 1.5rem; }
+.enquiry-text h2 em { font-style: italic; color: var(--burgundy); }
+.enquiry-text .lede { margin-bottom: 2rem; }
+.enquiry-contact {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+.enquiry-contact h4 {
+  font-size: 0.75rem;
+  font-family: var(--sans);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 1rem;
+}
+.enquiry-contact p { margin-bottom: 0.75rem; color: var(--charcoal-soft); font-size: 0.95rem; }
+.enquiry-contact a:hover { color: var(--burgundy); }
+.whatsapp-btn {
+  display: inline-flex; align-items: center; gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 1rem 1.75rem;
+  background: #25D366;
+  color: white;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all .4s var(--ease);
+}
+.whatsapp-btn:hover { background: #128C7E; transform: translateY(-2px); }
+
+.enquiry-form {
+  background: var(--ivory);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  border: 1px solid var(--line-soft);
+  box-shadow: 0 30px 60px -30px rgba(44,40,38,0.15);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+.form-group { display: flex; flex-direction: column; }
+.form-group.full { grid-column: span 2; }
+.form-group label {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--charcoal-soft);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  padding: 0.85rem 0;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--charcoal);
+  transition: border-color .4s var(--ease);
+  outline: none;
+}
+.form-group textarea { resize: vertical; min-height: 80px; }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-bottom-color: var(--champagne); }
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--taupe); }
+.form-submit { margin-top: 2rem; text-align: right; }
+.form-note { font-size: 0.8rem; color: var(--charcoal-soft); margin-top: 1rem; font-style: italic; }
+.form-success {
+  display: none;
+  padding: 2rem;
+  background: rgba(201,169,110,0.08);
+  border: 1px solid var(--champagne);
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.form-success.show { display: block; animation: fadeUp .6s var(--ease-out); }
+.form-success h4 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--burgundy); }
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--charcoal);
+  color: var(--ivory);
+  padding: 5rem 0 2rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+.footer-brand .nav-logo { color: var(--ivory); font-size: 1.75rem; display: inline-block; margin-bottom: 1.5rem; }
+.footer-brand p { color: rgba(250,246,240,0.7); font-size: 0.92rem; max-width: 340px; line-height: 1.7; }
+.footer-col h5 {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--champagne-soft);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.75rem; }
+.footer-col a {
+  color: rgba(250,246,240,0.75);
+  font-size: 0.9rem;
+  transition: color .4s var(--ease);
+}
+.footer-col a:hover { color: var(--champagne); }
+.footer-contact p { color: rgba(250,246,240,0.75); font-size: 0.9rem; margin-bottom: 0.5rem; }
+.footer-social { display: flex; gap: 1rem; margin-top: 1.5rem; }
+.footer-social a {
+  width: 40px; height: 40px;
+  border: 1px solid rgba(201,169,110,0.3);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--champagne-soft);
+  transition: all .4s var(--ease);
+}
+.footer-social a:hover { background: var(--champagne); color: var(--charcoal); border-color: var(--champagne); }
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(201,169,110,0.15);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem;
+  font-size: 0.8rem;
+  color: rgba(250,246,240,0.5);
+}
+.footer-bottom a:hover { color: var(--champagne); }
+
+/* ---------- Reveal Animations ---------- */
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s var(--ease-out), transform 1s var(--ease-out); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-stagger > * { opacity: 0; transform: translateY(30px); transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); }
+.reveal-stagger.in > *:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(2) { transition-delay: .1s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(3) { transition-delay: .2s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(4) { transition-delay: .3s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(5) { transition-delay: .4s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(6) { transition-delay: .5s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(7) { transition-delay: .6s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.in > *:nth-child(8) { transition-delay: .7s; opacity: 1; transform: translateY(0); }
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed; inset: 0;
+  background: rgba(44,40,38,0.95);
+  z-index: 200;
+  display: none;
+  align-items: center; justify-content: center;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+.lightbox.open { display: flex; animation: fadeIn .4s var(--ease); }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.lightbox img { max-width: 90%; max-height: 90vh; object-fit: contain; }
+.lightbox-close {
+  position: absolute; top: 2rem; right: 2rem;
+  width: 48px; height: 48px;
+  border: 1px solid var(--champagne);
+  border-radius: 50%;
+  color: var(--ivory);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .timeline { grid-template-columns: repeat(2, 1fr); gap: 3rem; }
+  .timeline::before { display: none; }
+  .functions-grid { grid-template-columns: repeat(4, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 860px) {
+  .nav-menu, .nav-cta { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-menu.open {
+    display: flex; flex-direction: column;
+    position: fixed; top: 0; right: 0;
+    width: 85%; max-width: 380px; height: 100vh;
+    background: var(--pearl);
+    padding: 6rem 2.5rem 2rem;
+    gap: 1.5rem;
+    box-shadow: -20px 0 60px rgba(44,40,38,0.15);
+  }
+  .nav-menu.open a { color: var(--charcoal); font-size: 0.9rem; }
+  .intro-grid, .why-grid, .enquiry-wrap { grid-template-columns: 1fr; gap: 3rem; }
+  .portfolio-masonry { grid-template-columns: repeat(6, 1fr); }
+  .p-1, .p-2, .p-3, .p-4, .p-5 { grid-column: span 6; grid-row: span 4; }
+  .dest-features { grid-template-columns: 1fr; gap: 2rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .form-group.full { grid-column: span 1; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .functions-grid { grid-template-columns: repeat(2, 1fr); }
+  .timeline { grid-template-columns: 1fr; }
+  .hero-ctas { flex-direction: column; width: 100%; }
+  .hero-ctas .btn { width: 100%; justify-content: center; }
+}
+
+/* ---------- Single-file additions ---------- */
+.page { display: none; }
+.page.active { display: block; }
+#enquirySection.contact-mode { padding-top: 10rem; }
+.principles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 4rem; }
+.principle-num { font-family: var(--serif); font-style: italic; color: var(--gold-deep); font-size: 1.5rem; margin-bottom: 1rem; }
+.principles-grid h3 { font-size: 1.35rem; margin-bottom: 1rem; }
+.principles-grid p { color: var(--charcoal-soft); }
+.filter-bar { display: flex; justify-content: center; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap; }
+.filter-btn {
+  font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500;
+  color: var(--charcoal-soft); padding: 0.5rem 0; border-bottom: 1px solid transparent;
+  transition: color .4s var(--ease), border-color .4s var(--ease);
+}
+.filter-btn:hover, .filter-btn.active { color: var(--burgundy); border-bottom-color: var(--champagne); }
+.portfolio-masonry { grid-auto-flow: dense; }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+.gallery-item { aspect-ratio: 1; overflow: hidden; cursor: pointer; background: var(--charcoal); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.gallery-item:hover img { transform: scale(1.06); }
+@media (max-width: 860px) {
+  .principles-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  </style>
+</head>
+<body>
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">Event Weavers <em>India</em></a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#destination">Destination</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Plan Your Wedding</a>
+      <div class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+<main class="page active" data-page="home">
+<!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="eyebrow">Luxury Wedding Design · Udaipur</div>
+      <h1>Luxury Weddings,<br/><em>Thoughtfully Woven.</em></h1>
+      <p>From the first vision to the final celebration, we bring your dream wedding to life through thoughtful planning, beautiful design and seamless execution.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-light"><span>Plan Your Wedding</span><span class="arrow">→</span></a>
+        <a href="#portfolio" class="btn btn-gold"><span>Explore Our Weddings</span></a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== INTRO — THE ART OF CELEBRATION ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-image reveal">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Saat_phere.jpg?width=1200" data-key="phere" alt="Elegant Indian wedding ceremony" loading="lazy" />
+        </div>
+        <div class="intro-text reveal">
+          <div class="eyebrow">The Art of Celebration</div>
+          <div class="ornament">
+            <span class="line"></span>
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-1.01L12 2z"/></svg>
+            <span class="line"></span>
+          </div>
+          <h2>Where tradition meets <em>timeless design.</em></h2>
+          <p class="lede">Event Weavers India is a Udaipur-based wedding planning studio devoted to crafting celebrations that feel as personal as they are extraordinary.</p>
+          <p>We begin by listening — to your story, your families, your dreams. From there, we shape a celebration that is entirely yours: a considered concept, a carefully chosen palette, a choreography of moments that unfolds with grace.</p>
+          <p>Every detail is attended to. Every vendor, every guest, every transition — held together by a team that believes a wedding should feel effortless for the couple celebrating it.</p>
+          <div class="intro-signature">— The Event Weavers Studio</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="section" style="background: var(--ivory);">
+    <div class="container">
+      <div class="services-head reveal">
+        <div class="eyebrow">Our Wedding Services</div>
+        <div class="ornament">
+          <span class="line"></span>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-1.01L12 2z"/></svg>
+          <span class="line"></span>
+        </div>
+        <h2>A complete studio for <em>every chapter</em> of your celebration.</h2>
+      </div>
+
+      <div class="services-grid reveal-stagger">
+        <div class="service-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lake_view_of_City_Palace_(Udaipur),_Rajasthan,_India_-2.jpg?width=800" data-key="lake" alt="Destination wedding planning" loading="lazy" />
+          <div class="service-content">
+            <div class="service-num">— 01</div>
+            <h3>Destination Wedding Planning</h3>
+            <p>End-to-end planning for destination celebrations across Udaipur, Rajasthan and beyond — from concept to final farewell.</p>
+            <a href="#services" class="service-link">Explore Service <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flower_decorations_at_a_wedding_in_India_04.jpg?width=800" data-key="flowers" alt="Wedding décor and design" loading="lazy" />
+          <div class="service-content">
+            <div class="service-num">— 02</div>
+            <h3>Wedding Décor & Design</h3>
+            <p>Bespoke décor direction — mandaps, stage designs, floral installations and table styling shaped around your vision.</p>
+            <a href="#services" class="service-link">Explore Service <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Udaipur,_Dharohar_(9710299363).jpg?width=800" data-key="dharohar" alt="Entertainment and choreography" loading="lazy" />
+          <div class="service-content">
+            <div class="service-num">— 03</div>
+            <h3>Entertainment & Choreography</h3>
+            <p>Curated performances, sangeet choreography, live artists and entertainment design that bring each evening to life.</p>
+            <a href="#services" class="service-link">Explore Service <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Traditional_Wedding_Images_(40).jpg?width=800" data-key="trad" alt="Vendor management" loading="lazy" />
+          <div class="service-content">
+            <div class="service-num">— 04</div>
+            <h3>Vendor Management</h3>
+            <p>A trusted network of photographers, caterers, stylists and artisans — carefully selected and seamlessly coordinated.</p>
+            <a href="#services" class="service-link">Explore Service <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lily_Pond_at_the_Lake_Palace,_Udaipur.jpg?width=800" data-key="lily" alt="Guest hospitality" loading="lazy" />
+          <div class="service-content">
+            <div class="service-num">— 05</div>
+            <h3>Guest Management & Hospitality</h3>
+            <p>Travel, accommodation, welcome kits and on-ground hospitality — so every guest feels considered from arrival to departure.</p>
+            <a href="#services" class="service-link">Explore Service <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian_wedding_moment.jpeg?width=800" data-key="moment" alt="Food and beverage" loading="lazy" />
+          <div class="service-content">
+            <div class="service-num">— 06</div>
+            <h3>Food & Beverage Coordination</h3>
+            <p>Menu curation, chef briefings and dining experiences designed to complement the mood of each celebration.</p>
+            <a href="#services" class="service-link">Explore Service <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Udaipur-citypalace.jpg?width=800" data-key="palace" alt="Transport and logistics" loading="lazy" />
+          <div class="service-content">
+            <div class="service-num">— 07</div>
+            <h3>Transport & Logistics</h3>
+            <p>Seamless movement of guests, families and teams across venues, airports and celebrations — handled with precision.</p>
+            <a href="#services" class="service-link">Explore Service <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Moti_Chowk_mjural_-_Udaipur_City_Palace.jpg?width=800" data-key="moti" alt="Event coordination" loading="lazy" />
+          <div class="service-content">
+            <div class="service-num">— 08</div>
+            <h3>Event Flow & Coordination</h3>
+            <p>On-site direction of every moment — from baraat entry to final goodbye — so the celebration unfolds exactly as imagined.</p>
+            <a href="#services" class="service-link">Explore Service <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED PORTFOLIO ========== -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="portfolio-head reveal">
+        <div class="eyebrow">Featured Weddings</div>
+        <div class="ornament">
+          <span class="line"></span>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-1.01L12 2z"/></svg>
+          <span class="line"></span>
+        </div>
+        <h2>Celebrations we've had the honour of <em>weaving together.</em></h2>
+      </div>
+
+      <div class="portfolio-masonry reveal-stagger">
+        <div class="portfolio-item p-1" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Lake_view_of_City_Palace_(Udaipur),_Rajasthan,_India_-2.jpg?width=1800">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lake_view_of_City_Palace_(Udaipur),_Rajasthan,_India_-2.jpg?width=1200" data-key="lake" alt="Chanchal & Aditya Wedding" loading="lazy" />
+          <div class="portfolio-overlay">
+            <div class="loc">Udaipur, Rajasthan</div>
+            <h3>Chanchal <em>&</em> Aditya</h3>
+          </div>
+        </div>
+        <div class="portfolio-item p-2" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Lily_Pond_at_the_Lake_Palace,_Udaipur.jpg?width=1800">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lily_Pond_at_the_Lake_Palace,_Udaipur.jpg?width=1200" data-key="lily" alt="Dr. Priyal & Vikas Wedding" loading="lazy" />
+          <div class="portfolio-overlay">
+            <div class="loc">Udaipur, Rajasthan</div>
+            <h3>Dr. Priyal <em>&</em> Vikas</h3>
+          </div>
+        </div>
+        <div class="portfolio-item p-3" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Moti_Chowk_mjural_-_Udaipur_City_Palace.jpg?width=1800">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Moti_Chowk_mjural_-_Udaipur_City_Palace.jpg?width=1200" data-key="moti" alt="Shweta & Lakhan Wedding" loading="lazy" />
+          <div class="portfolio-overlay">
+            <div class="loc">Rajasthan</div>
+            <h3>Shweta <em>&</em> Lakhan</h3>
+          </div>
+        </div>
+        <div class="portfolio-item p-4" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Udaipur-citypalace.jpg?width=1800">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Udaipur-citypalace.jpg?width=1200" data-key="palace" alt="Gurmehar & Anirudh Wedding" loading="lazy" />
+          <div class="portfolio-overlay">
+            <div class="loc">Destination Wedding</div>
+            <h3>Gurmehar <em>&</em> Anirudh</h3>
+          </div>
+        </div>
+        <div class="portfolio-item p-5" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Flower_decorations_at_a_wedding_in_India_04.jpg?width=1800">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flower_decorations_at_a_wedding_in_India_04.jpg?width=1200" data-key="flowers" alt="Featured celebration" loading="lazy" />
+          <div class="portfolio-overlay">
+            <div class="loc">View Full Portfolio</div>
+            <h3>More <em>Celebrations</em></h3>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem;" class="reveal">
+        <a href="#portfolio" class="btn btn-gold"><span>View Full Portfolio</span><span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DESTINATION — UDAIPUR ========== -->
+  <section class="dest-wrap">
+    <div class="dest-bg"></div>
+    <div class="container">
+      <div class="dest-content reveal">
+        <div class="eyebrow">Destination Weddings</div>
+        <h2>Udaipur — <em>A Destination Worth Celebrating.</em></h2>
+        <p class="lede">A city of lakes, palaces and quiet grandeur — Udaipur is where many of our most cherished celebrations have taken place.</p>
+        <p>From heritage courtyards and lakeside lawns to grand palace halls, the city offers a backdrop that feels both royal and intimate. As a Udaipur-based studio, we know its venues, its rhythms and its seasonal beauty — and we bring that knowledge to every celebration we design here.</p>
+
+        <div class="dest-features">
+          <div class="dest-feature">
+            <div class="num">— I</div>
+            <h4>Heritage Venues</h4>
+            <p>Palaces, havelis and lakeside estates with centuries of stories held within their walls.</p>
+          </div>
+          <div class="dest-feature">
+            <div class="num">— II</div>
+            <h4>Local Expertise</h4>
+            <p>Deep relationships with the artisans, vendors and venues that shape a celebration here.</p>
+          </div>
+          <div class="dest-feature">
+            <div class="num">— III</div>
+            <h4>Year-Round Beauty</h4>
+            <p>Each season in Udaipur offers its own palette — from monsoon greens to winter gold.</p>
+          </div>
+        </div>
+
+        <a href="#destination" class="btn btn-light"><span>Discover Udaipur Weddings</span><span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== APPROACH / TIMELINE ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="approach-head reveal">
+        <div class="eyebrow">Our Planning Approach</div>
+        <div class="ornament">
+          <span class="line"></span>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-1.01L12 2z"/></svg>
+          <span class="line"></span>
+        </div>
+        <h2>A considered journey, <em>from vision to celebration.</em></h2>
+      </div>
+
+      <div class="timeline reveal-stagger">
+        <div class="timeline-step">
+          <div class="step-num">01</div>
+          <h3><em>Discover</em></h3>
+          <p>We begin by listening — to your story, your families, your preferences and the experience you wish to create.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="step-num">02</div>
+          <h3><em>Design</em></h3>
+          <p>Together we shape the concept — the mood, the palette, the décor direction and the flow of each celebration.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="step-num">03</div>
+          <h3><em>Coordinate</em></h3>
+          <p>Vendors, hospitality, logistics and schedules are organised with care, so every detail is held in place.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="step-num">04</div>
+          <h3><em>Execute</em></h3>
+          <p>On the days themselves, our team manages every moment — so you and your family can simply be present.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MORE THAN ONE CELEBRATION ========== -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="functions-head reveal">
+        <div class="eyebrow">More Than One Celebration</div>
+        <div class="ornament">
+          <span class="line"></span>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-1.01L12 2z"/></svg>
+          <span class="line"></span>
+        </div>
+        <h2>Every function, <em>thoughtfully designed.</em></h2>
+      </div>
+
+      <div class="functions-grid reveal-stagger">
+        <div class="function-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Folk_Mehndi_Ceremony_(3).jpg?width=600" data-key="mehndi" alt="Mehendi celebration" loading="lazy" />
+          <div class="function-label"><span>Function 01</span>Mehendi</div>
+        </div>
+        <div class="function-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Haldi_Ceremony.jpg?width=600" data-key="haldi" alt="Haldi ceremony" loading="lazy" />
+          <div class="function-label"><span>Function 02</span>Haldi</div>
+        </div>
+        <div class="function-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Udaipur,_Dharohar_(9710299363).jpg?width=600" data-key="dharohar" alt="Sangeet evening" loading="lazy" />
+          <div class="function-label"><span>Function 03</span>Sangeet</div>
+        </div>
+        <div class="function-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Saat_phere.jpg?width=600" data-key="phere" alt="Wedding ceremony" loading="lazy" />
+          <div class="function-label"><span>Function 04</span>Wedding</div>
+        </div>
+        <div class="function-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flower_decorations_at_a_wedding_in_India_04.jpg?width=600" data-key="flowers" alt="Reception" loading="lazy" />
+          <div class="function-label"><span>Function 05</span>Reception</div>
+        </div>
+        <div class="function-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lily_Pond_at_the_Lake_Palace,_Udaipur.jpg?width=600" data-key="lily" alt="Cocktail evening" loading="lazy" />
+          <div class="function-label"><span>Function 06</span>Cocktail</div>
+        </div>
+        <div class="function-card">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bridal_mehndi_(henna)_is_a_central_wedding_tradition_01.jpg?width=600" data-key="bridal" alt="Pre-wedding celebrations" loading="lazy" />
+          <div class="function-label"><span>Function 07</span>Pre-Wedding</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY EVENT WEAVERS INDIA ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-text reveal">
+          <div class="eyebrow">Why Event Weavers India</div>
+          <div class="ornament">
+            <span class="line"></span>
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-1.01L12 2z"/></svg>
+            <span class="line"></span>
+          </div>
+          <h2>Planning that feels <em>considered, creative and calm.</em></h2>
+          <p class="lede">We approach every wedding as a unique story — never a template.</p>
+
+          <ul class="why-list">
+            <li>
+              <div class="why-num">— 01</div>
+              <div>
+                <h4>Customised Concepts</h4>
+                <p>Every celebration is built around your story, your families and the mood you wish to create.</p>
+              </div>
+            </li>
+            <li>
+              <div class="why-num">— 02</div>
+              <div>
+                <h4>Décor-Led Creative Direction</h4>
+                <p>Design is at the heart of what we do — from palettes and florals to mandaps and stage styling.</p>
+              </div>
+            </li>
+            <li>
+              <div class="why-num">— 03</div>
+              <div>
+                <h4>Attention to Every Function</h4>
+                <p>Each celebration — mehendi, sangeet, ceremony, reception — is given its own considered design.</p>
+              </div>
+            </li>
+            <li>
+              <div class="why-num">— 04</div>
+              <div>
+                <h4>Vendor & Guest Coordination</h4>
+                <p>A carefully curated network of partners and a hospitality approach that makes every guest feel considered.</p>
+              </div>
+            </li>
+            <li>
+              <div class="why-num">— 05</div>
+              <div>
+                <h4>Event-Flow Management</h4>
+                <p>Moments are choreographed — from entry to exit — so the celebration unfolds with grace.</p>
+              </div>
+            </li>
+            <li>
+              <div class="why-num">— 06</div>
+              <div>
+                <h4>On-Site Planning Support</h4>
+                <p>Our team is present throughout, managing every detail so you can simply enjoy the days themselves.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="why-image reveal">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/A_traditional_bride.jpg?width=1200" data-key="bride" alt="Luxury wedding details" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="testimonials-head reveal">
+        <div class="eyebrow">Client Experiences</div>
+        <div class="ornament">
+          <span class="line"></span>
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-1.01L12 2z"/></svg>
+          <span class="line"></span>
+        </div>
+        <h2>Words from the families <em>we've celebrated with.</em></h2>
+      </div>
+
+      <div class="testimonial-carousel reveal">
+        <div class="testimonial-track" id="testimonialTrack">
+          <div class="testimonial">
+            <div class="testimonial-mark">"</div>
+            <blockquote>The team understood our vision from the very first conversation. Every detail, every function, every guest — it all came together more beautifully than we could have imagined.</blockquote>
+            <cite><strong>A Celebrated Couple</strong>Udaipur Wedding</cite>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-mark">"</div>
+            <blockquote>Planning a destination wedding felt overwhelming until we worked with Event Weavers India. Their calm, considered approach made the entire journey feel effortless.</blockquote>
+            <cite><strong>A Destination Wedding Family</strong>Rajasthan Celebration</cite>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-mark">"</div>
+            <blockquote>The décor, the flow, the attention to our families — everything felt personal. It was the wedding we had dreamed of, brought to life with real care.</blockquote>
+            <cite><strong>A Recent Wedding Couple</strong>Heritage Venue, Udaipur</cite>
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prevBtn" aria-label="Previous">←</button>
+          <div class="carousel-dots" id="carouselDots">
+            <span class="active" data-index="0"></span>
+            <span data-index="1"></span>
+            <span data-index="2"></span>
+          </div>
+          <button class="carousel-btn" id="nextBtn" aria-label="Next">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+</main>
+<main class="page" data-page="about">
+<section class="section" style="padding-top: 10rem;"><div class="container">
+<div style="max-width: 820px; margin: 0 auto; text-align: center;" class="reveal">
+<div class="eyebrow">About Event Weavers India</div><div class="ornament"><span class="line"></span><svg viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-1.01L12 2z"/></svg><span class="line"></span></div>
+<h1 style="margin: 2rem 0;">A studio devoted to <em style="font-style: italic; color: var(--burgundy);">the art of celebration.</em></h1>
+<p class="lede">Based in Udaipur, we plan and design weddings that feel personal, considered and quietly extraordinary.</p>
+</div></div></section>
+<section class="section" style="background: var(--ivory);"><div class="container"><div class="intro-grid">
+<div class="intro-image reveal"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Moti_Chowk_mjural_-_Udaipur_City_Palace.jpg?width=1200" data-key="moti" alt="Our studio" loading="lazy" /></div>
+<div class="intro-text reveal"><h2>Our <em>philosophy.</em></h2>
+<p>We believe a wedding is more than an event — it is a gathering of the people who matter most, held in a place that feels meaningful, shaped by details that reflect a couple's story.</p>
+<p>Our approach is rooted in listening first. We take the time to understand your vision, your families and the experience you wish to create. From there, we shape a concept that is entirely yours — and we hold every detail in place so the celebration unfolds with ease.</p>
+<p>We work with a carefully chosen network of artisans, designers and vendors across India — and we bring the same care to a 200-guest destination wedding as we do to an intimate ceremony.</p>
+</div></div></div></section>
+<section class="section"><div class="container" style="max-width: 900px; text-align: center;">
+<div class="reveal"><div class="eyebrow">What Guides Us</div>
+<h2 style="margin: 2rem 0;">Three principles at the heart of <em style="font-style: italic; color: var(--burgundy);">everything we do.</em></h2></div>
+<div class="principles-grid reveal-stagger">
+<div><div class="principle-num">— I</div><h3>Considered Design</h3><p>Every palette, every floral, every detail is chosen with intention — never by template.</p></div>
+<div><div class="principle-num">— II</div><h3>Personal Attention</h3><p>We work with a small number of weddings each year so every couple receives our full focus.</p></div>
+<div><div class="principle-num">— III</div><h3>Seamless Execution</h3><p>Our on-site team manages every moment so families can simply be present for the celebration.</p></div>
+</div></div></section>
+</main>
+<main class="page" data-page="services">
+<section class="section" style="padding-top: 10rem;"><div class="container">
+<div style="max-width: 820px; margin: 0 auto; text-align: center;" class="reveal">
+<div class="eyebrow">Our Services</div><div class="ornament"><span class="line"></span><svg viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-1.01L12 2z"/></svg><span class="line"></span></div>
+<h1 style="margin: 2rem 0;">A complete studio for <em style="font-style: italic; color: var(--burgundy);">every chapter</em> of your celebration.</h1>
+<p class="lede">From the first concept to the final farewell — we bring together planning, design and coordination so your wedding unfolds with grace.</p>
+</div></div></section>
+<section class="section" id="destination-planning"><div class="container"><div class="intro-grid"><div class="intro-image reveal"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lake_view_of_City_Palace_(Udaipur),_Rajasthan,_India_-2.jpg?width=1200" data-key="lake" alt="Destination wedding planning" loading="lazy" /></div><div class="intro-text reveal"><div class="eyebrow">Service 01</div><h2>Destination <em>Wedding Planning</em></h2><p>End-to-end planning for destination celebrations — from venue selection and concept design to vendor curation and on-ground coordination.</p><p>We manage the entire journey: travel logistics, accommodation, welcome experiences, multi-day itineraries and the celebrations themselves. Every detail is held in place so you and your family can be fully present.</p></div></div></div></section>
+<section class="section" style="background: var(--ivory);" id="decor-design"><div class="container"><div class="intro-grid"><div class="intro-text reveal"><div class="eyebrow">Service 02</div><h2>Wedding <em>Décor & Design</em></h2><p>Bespoke décor direction shaped around your vision — mandaps, stage designs, floral installations, table styling and ambient lighting.</p><p>Our design team works with trusted artisans and florists to realise concepts that feel considered, personal and true to the venue and the season.</p></div><div class="intro-image reveal"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flower_decorations_at_a_wedding_in_India_04.jpg?width=1200" data-key="flowers" alt="Wedding décor" loading="lazy" /></div></div></div></section>
+<section class="section" id="entertainment"><div class="container"><div class="intro-grid"><div class="intro-image reveal"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Udaipur,_Dharohar_(9710299363).jpg?width=1200" data-key="dharohar" alt="Entertainment and choreography" loading="lazy" /></div><div class="intro-text reveal"><div class="eyebrow">Service 03</div><h2>Entertainment & <em>Choreography</em></h2><p>Curated performances, sangeet choreography, live artists and entertainment design that bring each evening to life.</p><p>From family performances to headline artists, we shape the programme so every evening has its own rhythm and its own memorable moments.</p></div></div></div></section>
+<section class="section" style="background: var(--ivory);" id="vendor-management"><div class="container"><div class="intro-grid"><div class="intro-text reveal"><div class="eyebrow">Service 04</div><h2>Vendor <em>Management</em></h2><p>A trusted network of photographers, caterers, stylists and artisans — carefully selected and seamlessly coordinated.</p><p>We brief, schedule and manage every partner, so the people behind your celebration work together as one team.</p></div><div class="intro-image reveal"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Traditional_Wedding_Images_(40).jpg?width=1200" data-key="trad" alt="Vendor management" loading="lazy" /></div></div></div></section>
+<section class="section" id="guest-hospitality"><div class="container"><div class="intro-grid"><div class="intro-image reveal"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lily_Pond_at_the_Lake_Palace,_Udaipur.jpg?width=1200" data-key="lily" alt="Guest hospitality" loading="lazy" /></div><div class="intro-text reveal"><div class="eyebrow">Service 05</div><h2>Guest Management & <em>Hospitality</em></h2><p>Travel, accommodation, welcome kits and on-ground hospitality — so every guest feels considered from arrival to departure.</p><p>Our hospitality team looks after the families and guests throughout, anticipating needs before they arise.</p></div></div></div></section>
+<section class="section" style="background: var(--ivory);" id="food-beverage"><div class="container"><div class="intro-grid"><div class="intro-text reveal"><div class="eyebrow">Service 06</div><h2>Food & Beverage <em>Coordination</em></h2><p>Menu curation, chef briefings and dining experiences designed to complement the mood of each celebration.</p><p>From intimate family meals to grand banquets, we coordinate tastings, service flow and presentation with care.</p></div><div class="intro-image reveal"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian_wedding_moment.jpeg?width=1200" data-key="moment" alt="Food and beverage" loading="lazy" /></div></div></div></section>
+<section class="section" id="transport-logistics"><div class="container"><div class="intro-grid"><div class="intro-image reveal"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Udaipur-citypalace.jpg?width=1200" data-key="palace" alt="Transport and logistics" loading="lazy" /></div><div class="intro-text reveal"><div class="eyebrow">Service 07</div><h2>Transport & <em>Logistics</em></h2><p>Seamless movement of guests, families and teams across venues, airports and celebrations — handled with precision.</p><p>Fleet planning, arrival schedules and venue transfers are managed end to end, so nobody is left wondering where to be.</p></div></div></div></section>
+<section class="section" style="background: var(--ivory);" id="event-flow"><div class="container"><div class="intro-grid"><div class="intro-text reveal"><div class="eyebrow">Service 08</div><h2>Event Flow & <em>Coordination</em></h2><p>On-site direction of every moment — from baraat entry to final goodbye — so the celebration unfolds exactly as imagined.</p><p>Our team runs detailed run-of-show schedules and is present throughout, managing every transition behind the scenes.</p></div><div class="intro-image reveal"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Moti_Chowk_mjural_-_Udaipur_City_Palace.jpg?width=1200" data-key="moti" alt="Event coordination" loading="lazy" /></div></div></div></section>
+<section class="section" style="text-align: center;"><div class="container"><div class="reveal">
+<h2>Ready to begin <em style="font-style: italic; color: var(--burgundy);">your celebration?</em></h2>
+<p class="lede" style="margin: 1.5rem auto 2.5rem; max-width: 600px;">Tell us a little about your wedding. We'd love to start the conversation.</p>
+<a href="#contact" class="btn btn-primary"><span>Plan Your Wedding</span><span class="arrow">→</span></a>
+</div></div></section>
+</main>
+<main class="page" data-page="destination">
+<!-- ========== DESTINATION — UDAIPUR ========== -->
+  <section class="dest-wrap" style="padding-top: 10rem;">
+    <div class="dest-bg"></div>
+    <div class="container">
+      <div class="dest-content reveal">
+        <div class="eyebrow">Destination Weddings</div>
+        <h2>Udaipur — <em>A Destination Worth Celebrating.</em></h2>
+        <p class="lede">A city of lakes, palaces and quiet grandeur — Udaipur is where many of our most cherished celebrations have taken place.</p>
+        <p>From heritage courtyards and lakeside lawns to grand palace halls, the city offers a backdrop that feels both royal and intimate. As a Udaipur-based studio, we know its venues, its rhythms and its seasonal beauty — and we bring that knowledge to every celebration we design here.</p>
+
+        <div class="dest-features">
+          <div class="dest-feature">
+            <div class="num">— I</div>
+            <h4>Heritage Venues</h4>
+            <p>Palaces, havelis and lakeside estates with centuries of stories held within their walls.</p>
+          </div>
+          <div class="dest-feature">
+            <div class="num">— II</div>
+            <h4>Local Expertise</h4>
+            <p>Deep relationships with the artisans, vendors and venues that shape a celebration here.</p>
+          </div>
+          <div class="dest-feature">
+            <div class="num">— III</div>
+            <h4>Year-Round Beauty</h4>
+            <p>Each season in Udaipur offers its own palette — from monsoon greens to winter gold.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<section class="section" style="text-align: center;"><div class="container"><div class="reveal">
+<h2>Planning a wedding in <em style="font-style: italic; color: var(--burgundy);">Udaipur?</em></h2>
+<p class="lede" style="margin: 1.5rem auto 2.5rem; max-width: 600px;">Tell us about your dates and guests — we'll help you find the venues and the rhythm that suit your celebration.</p>
+<a href="#contact" class="btn btn-primary"><span>Plan Your Wedding</span><span class="arrow">→</span></a>
+</div></div></section>
+</main>
+<main class="page" data-page="portfolio">
+<section class="section" style="padding-top: 10rem;"><div class="container">
+<div style="text-align: center; max-width: 820px; margin: 0 auto 3rem;" class="reveal">
+<div class="eyebrow">Our Portfolio</div>
+<h1 style="margin: 2rem 0;">Celebrations we've had the honour of <em style="font-style: italic; color: var(--burgundy);">weaving together.</em></h1></div>
+<div class="filter-bar reveal">
+<button class="filter-btn active" data-filter="all">All Weddings</button>
+<button class="filter-btn" data-filter="udaipur">Udaipur</button>
+<button class="filter-btn" data-filter="destination">Destination</button>
+<button class="filter-btn" data-filter="heritage">Heritage</button></div>
+<div class="portfolio-masonry reveal-stagger" id="portfolioGrid">
+<div class="portfolio-item p-1" data-category="udaipur heritage" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Lake_view_of_City_Palace_(Udaipur),_Rajasthan,_India_-2.jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lake_view_of_City_Palace_(Udaipur),_Rajasthan,_India_-2.jpg?width=1200" data-key="lake" alt="Chanchal & Aditya Wedding" loading="lazy" /><div class="portfolio-overlay"><div class="loc">Udaipur, Rajasthan</div><h3>Chanchal <em>&</em> Aditya</h3></div></div>
+<div class="portfolio-item p-2" data-category="udaipur" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Lily_Pond_at_the_Lake_Palace,_Udaipur.jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lily_Pond_at_the_Lake_Palace,_Udaipur.jpg?width=1200" data-key="lily" alt="Dr. Priyal & Vikas Wedding" loading="lazy" /><div class="portfolio-overlay"><div class="loc">Udaipur, Rajasthan</div><h3>Dr. Priyal <em>&</em> Vikas</h3></div></div>
+<div class="portfolio-item p-3" data-category="heritage" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Moti_Chowk_mjural_-_Udaipur_City_Palace.jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Moti_Chowk_mjural_-_Udaipur_City_Palace.jpg?width=1200" data-key="moti" alt="Shweta & Lakhan Wedding" loading="lazy" /><div class="portfolio-overlay"><div class="loc">Rajasthan</div><h3>Shweta <em>&</em> Lakhan</h3></div></div>
+<div class="portfolio-item p-4" data-category="destination" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Udaipur-citypalace.jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Udaipur-citypalace.jpg?width=1200" data-key="palace" alt="Gurmehar & Anirudh Wedding" loading="lazy" /><div class="portfolio-overlay"><div class="loc">Destination Wedding</div><h3>Gurmehar <em>&</em> Anirudh</h3></div></div>
+<div class="portfolio-item p-5" data-category="destination" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Flower_decorations_at_a_wedding_in_India_04.jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flower_decorations_at_a_wedding_in_India_04.jpg?width=1200" data-key="flowers" alt="Featured celebration" loading="lazy" /><div class="portfolio-overlay"><div class="loc">Destination Wedding</div><h3>More <em>Celebrations</em></h3></div></div>
+</div></div></section>
+</main>
+<main class="page" data-page="gallery">
+<section class="section" style="padding-top: 10rem;"><div class="container">
+<div style="text-align: center; max-width: 820px; margin: 0 auto 3rem;" class="reveal">
+<div class="eyebrow">Gallery</div>
+<h1 style="margin: 2rem 0;">Moments, details and <em style="font-style: italic; color: var(--burgundy);">celebrations.</em></h1></div>
+<div class="gallery-grid reveal-stagger" id="galleryGrid">
+<div class="gallery-item" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Lake_view_of_City_Palace_(Udaipur),_Rajasthan,_India_-2.jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lake_view_of_City_Palace_(Udaipur),_Rajasthan,_India_-2.jpg?width=600" data-key="lake" alt="Wedding moment" loading="lazy" /></div>
+<div class="gallery-item" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Folk_Mehndi_Ceremony_(3).jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Indian_Folk_Mehndi_Ceremony_(3).jpg?width=600" data-key="mehndi" alt="Wedding moment" loading="lazy" /></div>
+<div class="gallery-item" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Haldi_Ceremony.jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Haldi_Ceremony.jpg?width=600" data-key="haldi" alt="Wedding moment" loading="lazy" /></div>
+<div class="gallery-item" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Udaipur,_Dharohar_(9710299363).jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Udaipur,_Dharohar_(9710299363).jpg?width=600" data-key="dharohar" alt="Wedding moment" loading="lazy" /></div>
+<div class="gallery-item" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Saat_phere.jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Saat_phere.jpg?width=600" data-key="phere" alt="Wedding moment" loading="lazy" /></div>
+<div class="gallery-item" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Flower_decorations_at_a_wedding_in_India_04.jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flower_decorations_at_a_wedding_in_India_04.jpg?width=600" data-key="flowers" alt="Wedding moment" loading="lazy" /></div>
+<div class="gallery-item" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Lily_Pond_at_the_Lake_Palace,_Udaipur.jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lily_Pond_at_the_Lake_Palace,_Udaipur.jpg?width=600" data-key="lily" alt="Wedding moment" loading="lazy" /></div>
+<div class="gallery-item" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/20191207_Brzeg_jeziora_Pichola_w_Udajpurze_1416_7173.jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/20191207_Brzeg_jeziora_Pichola_w_Udajpurze_1416_7173.jpg?width=600" data-key="pichola" alt="Wedding moment" loading="lazy" /></div>
+<div class="gallery-item" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Bridal_mehndi_(henna)_is_a_central_wedding_tradition_01.jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bridal_mehndi_(henna)_is_a_central_wedding_tradition_01.jpg?width=600" data-key="bridal" alt="Wedding moment" loading="lazy" /></div>
+<div class="gallery-item" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Moti_Chowk_mjural_-_Udaipur_City_Palace.jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Moti_Chowk_mjural_-_Udaipur_City_Palace.jpg?width=600" data-key="moti" alt="Wedding moment" loading="lazy" /></div>
+<div class="gallery-item" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Haldi_-_wedding_ceremony.jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Haldi_-_wedding_ceremony.jpg?width=600" data-key="haldi2" alt="Wedding moment" loading="lazy" /></div>
+<div class="gallery-item" data-src="https://commons.wikimedia.org/wiki/Special:FilePath/Udaipur-citypalace.jpg?width=1800"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Udaipur-citypalace.jpg?width=600" data-key="palace" alt="Wedding moment" loading="lazy" /></div>
+</div></div></section>
+</main>
+<!-- ========== ENQUIRY ========== -->
+  <section class="section" id="enquirySection">
+    <div class="container">
+      <div class="enquiry-wrap">
+        <div class="enquiry-text reveal">
+          <div class="eyebrow">Begin Your Celebration</div>
+          <div class="ornament">
+            <span class="line"></span>
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-1.01L12 2z"/></svg>
+            <span class="line"></span>
+          </div>
+          <h2>Let's begin planning <em>your celebration.</em></h2>
+          <p class="lede">Tell us a little about your wedding. We'll be in touch to arrange a conversation.</p>
+          <p>Whether you're at the very beginning of your planning or you already have a clear vision, we'd love to hear from you. Every celebration starts with a conversation.</p>
+
+          <div class="enquiry-contact">
+            <h4>Get in Touch</h4>
+            <p>📍 Udaipur, Rajasthan, India</p>
+            <p>📧 <a href="mailto:hello@eventweaversindia.com">hello@eventweaversindia.com</a></p>
+            <p>📱 <a href="tel:+910000000000">+91 (Verify number)</a></p>
+            <a href="https://wa.me/910000000000" class="whatsapp-btn" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span>Chat on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="enquiry-form reveal" id="enquiryForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" required placeholder="Your name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+91 ..." />
+            </div>
+            <div class="form-group">
+              <label for="weddingDate">Wedding Date</label>
+              <input type="date" id="weddingDate" name="weddingDate" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="location">Wedding Location</label>
+              <input type="text" id="location" name="location" placeholder="Udaipur, Jaipur, etc." />
+            </div>
+            <div class="form-group">
+              <label for="guests">Expected Guest Count</label>
+              <input type="number" id="guests" name="guests" min="0" placeholder="Approx. number" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="functions">Number of Functions</label>
+              <select id="functions" name="functions">
+                <option value="">Select</option>
+                <option>1 – 2</option>
+                <option>3 – 4</option>
+                <option>5 – 6</option>
+                <option>7+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="budget">Estimated Budget</label>
+              <select id="budget" name="budget">
+                <option value="">Select a range</option>
+                <option>₹25L – ₹50L</option>
+                <option>₹50L – ₹1Cr</option>
+                <option>₹1Cr – ₹2Cr</option>
+                <option>₹2Cr+</option>
+                <option>Prefer to discuss</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full">
+              <label for="requirements">Additional Requirements</label>
+              <textarea id="requirements" name="requirements" rows="3" placeholder="Tell us about your vision, any special requests, or questions..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary"><span>Submit Wedding Enquiry</span><span class="arrow">→</span></button>
+          </div>
+          <p class="form-note">We typically respond within 24–48 hours. Your details are kept confidential.</p>
+
+          <div class="form-success" id="formSuccess">
+            <h4>Thank you for reaching out.</h4>
+            <p>Your enquiry has been received. We'll be in touch shortly to begin the conversation.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">Event Weavers <em>India</em></a>
+          <p>Crafting Celebrations. Weaving Unforgettable Stories. A Udaipur-based luxury wedding planning studio devoted to thoughtful design and seamless execution.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://wa.me/910000000000" aria-label="WhatsApp" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#destination">Destination Weddings</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#services">Destination Planning</a></li>
+            <li><a href="#services">Wedding Décor</a></li>
+            <li><a href="#services">Entertainment</a></li>
+            <li><a href="#services">Vendor Management</a></li>
+            <li><a href="#services">Guest Hospitality</a></li>
+            <li><a href="#services">Event Coordination</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-contact">
+          <h5>Get in Touch</h5>
+          <p>📍 Udaipur, Rajasthan, India</p>
+          <p>📧 <a href="mailto:hello@eventweaversindia.com">hello@eventweaversindia.com</a></p>
+          <p>📱 <a href="tel:+910000000000">+91 (Verify number)</a></p>
+          <p style="margin-top: 1rem;"><a href="#contact" style="color: var(--champagne);">Plan Your Wedding →</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Event Weavers India. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
+  
+  <script>
+/* =========================================================
+   EVENT WEAVERS INDIA — Interactions
+   ========================================================= */
+
+(function () {
+  'use strict';
+
+  /* ---------- Navigation ---------- */
+  const nav = document.getElementById('nav');
+  let currentPage = 'home';
+  function updateNav() {
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 60 || currentPage !== 'home');
+  }
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  if (nav) {
+    window.addEventListener('scroll', updateNav);
+  }
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+    });
+    navMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => navMenu.classList.remove('open'));
+    });
+  }
+
+  /* ---------- Reveal on Scroll ---------- */
+  const reveals = document.querySelectorAll('.reveal, .reveal-stagger');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => io.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('in'));
+  }
+
+  /* ---------- Testimonial Carousel ---------- */
+  const track = document.getElementById('testimonialTrack');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const dots = document.querySelectorAll('#carouselDots span');
+  let current = 0;
+  const total = track ? track.children.length : 0;
+
+  function goTo(i) {
+    if (!track) return;
+    current = (i + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, idx) => d.classList.toggle('active', idx === current));
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', () => goTo(current - 1));
+  if (nextBtn) nextBtn.addEventListener('click', () => goTo(current + 1));
+  dots.forEach((d, idx) => d.addEventListener('click', () => goTo(idx)));
+
+  // Auto-advance
+  if (track && total > 1) {
+    let auto = setInterval(() => goTo(current + 1), 7000);
+    const carousel = track.parentElement;
+    carousel.addEventListener('mouseenter', () => clearInterval(auto));
+    carousel.addEventListener('mouseleave', () => {
+      auto = setInterval(() => goTo(current + 1), 7000);
+    });
+  }
+
+  /* ---------- Lightbox ---------- */
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  document.querySelectorAll('.portfolio-item, .gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const src = item.dataset.src || item.querySelector('img').src;
+      if (lightbox && lightboxImg) {
+        lightboxImg.src = src;
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  function closeLightbox() {
+    if (lightbox) {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightbox) lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  /* ---------- Enquiry Form ---------- */
+  const form = document.getElementById('enquiryForm');
+  const success = document.getElementById('formSuccess');
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Basic validation
+      const required = form.querySelectorAll('[required]');
+      let valid = true;
+      required.forEach(input => {
+        if (!input.value.trim()) {
+          valid = false;
+          input.style.borderBottomColor = '#6B2737';
+          setTimeout(() => { input.style.borderBottomColor = ''; }, 2500);
+        }
+      });
+
+      const email = form.querySelector('#email');
+      if (email && email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+        valid = false;
+        email.style.borderBottomColor = '#6B2737';
+      }
+
+      if (!valid) return;
+
+      // Collect data
+      const data = Object.fromEntries(new FormData(form).entries());
+      console.log('Wedding enquiry submitted:', data);
+
+      /* ---------------------------------------------------------
+         TODO: Connect to a real backend here. Options:
+         - Formspree:    fetch('https://formspree.io/f/YOUR_ID', {...})
+         - Web3Forms:    fetch('https://api.web3forms.com/submit', {...})
+         - Your own API: fetch('/api/enquiry', {...})
+         --------------------------------------------------------- */
+
+      // Show success
+      form.reset();
+      if (success) success.classList.add('show');
+      setTimeout(() => success.classList.remove('show'), 8000);
+    });
+  }
+
+
+  /* ---------- Page Router (hash-based) ---------- */
+  const PAGES = ['home', 'about', 'services', 'destination', 'portfolio', 'gallery', 'contact'];
+  const TITLES = {
+    home: 'Event Weavers India – Luxury Wedding Planners in Udaipur',
+    about: 'About – Event Weavers India',
+    services: 'Services – Event Weavers India',
+    destination: 'Destination Weddings in Udaipur – Event Weavers India',
+    portfolio: 'Portfolio – Event Weavers India',
+    gallery: 'Gallery – Event Weavers India',
+    contact: 'Contact – Event Weavers India'
+  };
+  const enquirySection = document.getElementById('enquirySection');
+
+  function showPage(name, scrollTop) {
+    currentPage = name;
+    document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.dataset.page === name));
+    if (enquirySection) {
+      enquirySection.style.display = (name === 'home' || name === 'contact') ? '' : 'none';
+      enquirySection.classList.toggle('contact-mode', name === 'contact');
+    }
+    document.querySelectorAll('#navMenu a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + name);
+    });
+    document.title = TITLES[name];
+    if (scrollTop) window.scrollTo({ top: 0, behavior: 'instant' });
+    updateNav();
+  }
+  function onRoute(scrollTop) {
+    const h = location.hash.replace('#', '');
+    if (PAGES.includes(h)) showPage(h, scrollTop);
+    else if (!document.querySelector('.page.active')) showPage('home', false);
+  }
+  window.addEventListener('hashchange', () => onRoute(true));
+  onRoute(false);
+
+  /* ---------- Smooth scroll for in-page anchors ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (id.length > 1 && !PAGES.includes(id.slice(1))) {
+        const target = document.querySelector(id);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+
+
+/* ---------- Portfolio Filter ---------- */
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+      const cats = item.dataset.category || '';
+      item.style.display = (filter === 'all' || cats.includes(filter)) ? '' : 'none';
+    });
+  });
+});
+
+})();
+  </script>
+
+  <script>
+  /* Image fallbacks: if a Commons URL fails, retry en.wikipedia, then show a soft placeholder */
+  (function(){
+    document.addEventListener('error',function(e){
+      var el=e.target; if(!el||el.tagName!=='IMG') return;
+      if(el.dataset.fb!=='1' && el.src.indexOf('commons.wikimedia.org')>-1){
+        el.dataset.fb='1'; el.src=el.src.replace('commons.wikimedia.org','en.wikipedia.org'); return;
+      }
+      el.style.visibility='hidden';
+      if(el.parentElement) el.parentElement.style.background='linear-gradient(135deg,#6B2737,#C9A96E)';
+    },true);
+    [['.hero-bg'],['.dest-bg']].forEach(function(p){
+      var n=document.querySelector(p[0]); if(!n) return;
+      var u=getComputedStyle(n).backgroundImage.replace(/^url\(["']?|["']?\)$/g,'');
+      var im=new Image(); im.onerror=function(){ n.style.backgroundImage="url('"+u.replace('commons.wikimedia.org','en.wikipedia.org')+"')"; };
+      im.src=u;
+    });
+  })();
+  </script>
+</body>
+</html>
