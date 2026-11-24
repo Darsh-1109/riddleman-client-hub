@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bright Landscape Designs, Inc. is an owner-operated, full-service landscape design-build company in Houston, TX. We create beautiful, functional outdoor spaces tailored to your lifestyle.">
+    <meta name="keywords" content="Landscape design Houston TX, Landscape designers Houston, Landscape installation Houston TX, Custom landscape design Greater Houston, Residential landscaping Houston, Irrigation systems Houston TX, Landscape drainage Houston, Hardscaping Houston TX, Stonework landscaping Houston, Outdoor landscape lighting Houston">
+    <title>Bright Landscape Designs, Inc. | Custom Landscape Design & Installation in Houston, TX</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- LocalBusiness Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LandscapeArchitecture",
+      "name": "Bright Landscape Designs, Inc.",
+      "image": "https://www.brightlandscapedesigns.com/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9302 Reid Lake Dr",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "postalCode": "77064",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-281-496-3576",
+      "email": "carol@brightlandscapedesigns.com",
+      "url": "https://www.brightlandscapedesigns.com/",
+      "foundingDate": "1982",
+      "areaServed": "Greater Houston area, including Conroe, The Woodlands, Spring, Cypress, Katy, Sugar Land, Pearland, Friendswood, League City, La Porte, Galveston, and Schulenburg",
+      "description": "Owner-operated, full-service design-build landscape company serving the Greater Houston area since 1982."
+    }
+    </script>
+
+    <style>
+        /* =========================================
+           CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --color-warm-ivory: #FAF9F5;
+            --color-pure-white: #FFFFFF;
+            --color-soft-sage: #E8EFE5;
+            --color-botanical-green: #74896B;
+            --color-deep-forest-green: #304A39;
+            --color-muted-olive: #A4A783;
+            --color-warm-sand: #EDE4D7;
+            --color-natural-stone: #C9BBA7;
+            --color-charcoal: #343A35;
+            
+            --font-heading: 'Cormorant Garamond', serif;
+            --font-body: 'Manrope', sans-serif;
+            
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+            
+            --transition: all 0.3s ease;
+            --shadow-soft: 0 4px 20px rgba(48, 74, 57, 0.08);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-charcoal);
+            background-color: var(--color-warm-ivory);
+            line-height: 1.7;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--color-deep-forest-green);
+            line-height: 1.2;
+            font-weight: 600;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--spacing-md); }
+        h3 { font-size: 1.75rem; margin-bottom: var(--spacing-sm); }
+        
+        p { margin-bottom: var(--spacing-sm); }
+        
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* =========================================
+           UTILITIES & COMPONENTS
+           ========================================= */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-sm);
+        }
+
+        .section-padding {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .bg-white { background-color: var(--color-pure-white); }
+        .bg-sage { background-color: var(--color-soft-sage); }
+        .bg-sand { background-color: var(--color-warm-sand); }
+
+        .text-center { text-align: center; }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .btn-primary {
+            background-color: var(--color-botanical-green);
+            color: var(--color-pure-white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-deep-forest-green);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-deep-forest-green);
+            border-color: var(--color-deep-forest-green);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-deep-forest-green);
+            color: var(--color-pure-white);
+        }
+
+        .btn-white {
+            background-color: var(--color-pure-white);
+            color: var(--color-deep-forest-green);
+        }
+
+        .btn-white:hover {
+            background-color: var(--color-warm-sand);
+        }
+
+        .section-subtitle {
+            font-family: var(--font-body);
+            color: var(--color-muted-olive);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            display: block;
+        }
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(250, 249, 245, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: var(--spacing-sm) 0;
+            transition: var(--transition);
+            border-bottom: 1px solid transparent;
+        }
+
+        .navbar.scrolled {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--color-natural-stone);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-deep-forest-green);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-md);
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-charcoal);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-botanical-green);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: var(--spacing-sm);
+            align-items: center;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--color-deep-forest-green);
+            transition: var(--transition);
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(48, 74, 57, 0.4), rgba(48, 74, 57, 0.5)), 
+                        url('https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+            color: var(--color-pure-white);
+            margin-top: 0;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            color: var(--color-pure-white);
+            margin-bottom: var(--spacing-md);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-md);
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+
+        /* =========================================
+           INTRODUCTION SECTION
+           ========================================= */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .intro-image {
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .intro-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* =========================================
+           SERVICES OVERVIEW (Design, Install, Irrigation, etc.)
+           ========================================= */
+        .service-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .service-block.reverse {
+            direction: rtl;
+        }
+
+        .service-block.reverse > * {
+            direction: ltr;
+        }
+
+        .service-content h2 {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .service-content ul {
+            list-style: none;
+            margin: var(--spacing-md) 0;
+        }
+
+        .service-content ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .service-content ul li::before {
+            content: '•';
+            color: var(--color-botanical-green);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .service-image {
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* =========================================
+           PORTFOLIO SECTION
+           ========================================= */
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .filter-btn {
+            background: none;
+            border: 1px solid var(--color-natural-stone);
+            padding: 0.5rem 1.5rem;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--color-charcoal);
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--color-botanical-green);
+            color: var(--color-pure-white);
+            border-color: var(--color-botanical-green);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(48, 74, 57, 0.9), transparent);
+            padding: var(--spacing-md);
+            color: var(--color-pure-white);
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        .portfolio-overlay h3 {
+            color: var(--color-pure-white);
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .portfolio-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .portfolio-disclaimer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--color-muted-olive);
+            margin-top: var(--spacing-md);
+            font-style: italic;
+        }
+
+        /* =========================================
+           APPROACH SECTION
+           ========================================= */
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .approach-card {
+            background-color: var(--color-pure-white);
+            padding: var(--spacing-md);
+            border-radius: 4px;
+            border-top: 3px solid var(--color-botanical-green);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+
+        .approach-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .approach-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        /* =========================================
+           ABOUT SECTION
+           ========================================= */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* =========================================
+           SERVICE AREAS
+           ========================================= */
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-md);
+        }
+
+        .area-item {
+            background-color: var(--color-pure-white);
+            padding: var(--spacing-sm);
+            text-align: center;
+            border-radius: 4px;
+            font-weight: 500;
+            color: var(--color-deep-forest-green);
+            border: 1px solid var(--color-soft-sage);
+            transition: var(--transition);
+        }
+
+        .area-item:hover {
+            background-color: var(--color-botanical-green);
+            color: var(--color-pure-white);
+            border-color: var(--color-botanical-green);
+        }
+
+        /* =========================================
+           TESTIMONIALS
+           ========================================= */
+        .testimonial-placeholder {
+            background-color: var(--color-pure-white);
+            padding: var(--spacing-lg);
+            border-radius: 4px;
+            text-align: center;
+            border: 2px dashed var(--color-natural-stone);
+        }
+
+        /* =========================================
+           FAQ SECTION
+           ========================================= */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--color-pure-white);
+            margin-bottom: var(--spacing-sm);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: var(--spacing-md);
+            text-align: left;
+            background: none;
+            border: none;
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--color-deep-forest-green);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background-color: var(--color-soft-sage);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--color-botanical-green);
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 var(--spacing-md);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-bottom: var(--spacing-md);
+        }
+
+        /* =========================================
+           CONTACT FORM
+           ========================================= */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        .contact-info h3 {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .contact-detail {
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+        }
+
+        .contact-detail strong {
+            display: block;
+            color: var(--color-deep-forest-green);
+            margin-bottom: 0.25rem;
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--color-natural-stone);
+            border-radius: 2px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            background-color: var(--color-pure-white);
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-botanical-green);
+            box-shadow: 0 0 0 3px rgba(116, 137, 107, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-sm);
+        }
+
+        .form-message {
+            padding: var(--spacing-sm);
+            border-radius: 4px;
+            margin-bottom: var(--spacing-sm);
+            display: none;
+        }
+
+        .form-message.success {
+            background-color: var(--color-soft-sage);
+            color: var(--color-deep-forest-green);
+            display: block;
+        }
+
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        .footer {
+            background-color: var(--color-deep-forest-green);
+            color: var(--color-pure-white);
+            padding: var(--spacing-xl) 0 var(--spacing-md);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .footer h4 {
+            color: var(--color-pure-white);
+            font-size: 1.3rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer p, .footer a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .footer a:hover {
+            color: var(--color-pure-white);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--spacing-md);
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* =========================================
+           BACK TO TOP
+           ========================================= */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--color-botanical-green);
+            color: var(--color-pure-white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            border: none;
+            box-shadow: var(--shadow-soft);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--color-deep-forest-green);
+        }
+
+        /* =========================================
+           ANIMATIONS
+           ========================================= */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 968px) {
+            .intro-grid, .service-block, .contact-grid, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-block.reverse {
+                direction: ltr;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: var(--color-warm-ivory);
+                flex-direction: column;
+                padding: var(--spacing-md);
+                transition: var(--transition);
+                gap: var(--spacing-md);
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Bright Landscape Designs</a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#introduction">About</a></li>
+                    <li><a href="#design-consultation">Landscape Design</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Our Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="tel:2814963576" class="btn btn-secondary" style="padding: 0.75rem 1rem; font-size: 0.85rem;">Call (281) 496-3576</a>
+                <a href="#contact" class="btn btn-primary" style="padding: 0.75rem 1rem; font-size: 0.85rem;">Schedule a Consultation</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="section-subtitle" style="color: var(--color-pure-white); opacity: 0.9;">Beautiful Landscapes. Thoughtfully Designed Around You.</span>
+                    <h1>A Beautiful Landscape Begins With a Thoughtful Design.</h1>
+                    <p>From personalised landscape planning to professional installation, Bright Landscape Designs creates outdoor spaces that reflect your lifestyle, property and vision.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+                        <a href="#portfolio" class="btn btn-white">Explore Our Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="section-padding bg-white" id="introduction">
+            <div class="container">
+                <div class="intro-grid fade-in">
+                    <div class="intro-image">
+                        <img src="https://images.unsplash.com/photo-1598902108854-d1446b05c446?auto=format&fit=crop&q=80&w=800" alt="Elegant residential garden with mature greenery and stone pathways" loading="lazy">
+                    </div>
+                    <div class="intro-content">
+                        <span class="section-subtitle">Who We Are</span>
+                        <h2>Landscapes Designed Around the Way You Live.</h2>
+                        <p>Bright Landscape Designs, Inc. is an owner-operated, full-service design-build landscape company. We specialise in transforming ordinary or neglected outdoor spaces into beautiful, functional, and personalised landscapes.</p>
+                        <p>Every property has different requirements. A successful landscape balances aesthetics, functionality, careful plant selection, and the way you actually use your outdoor space. Since 1982, we have been serving the Greater Houston area with a commitment to creative thinking and thoughtful execution.</p>
+                        <a href="#contact" class="btn btn-primary" style="margin-top: var(--spacing-sm);">Discuss Your Vision</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Landscape Design & Consultation -->
+        <section class="section-padding bg-sage" id="design-consultation">
+            <div class="container">
+                <div class="service-block fade-in">
+                    <div class="service-content">
+                        <span class="section-subtitle">Design & Consultation</span>
+                        <h2>Your Vision. Your Property. A Landscape Designed for You.</h2>
+                        <p>A personalised landscape design process ensures your outdoor space is both beautiful and practical. We take the time to understand your preferences, assess your property, and develop a custom plan.</p>
+                        <ul>
+                            <li>Initial landscape consultation and property assessment</li>
+                            <li>Understanding your lifestyle and outdoor-space requirements</li>
+                            <li>Custom landscape layout planning</li>
+                            <li>Careful plant and material selection</li>
+                            <li>Planning for long-term functionality and maintenance</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Discuss Your Landscape Design</a>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=800" alt="Landscape design planning and garden layout" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="section-padding bg-white" id="services">
+            <div class="container">
+                <div class="text-center fade-in" style="margin-bottom: var(--spacing-lg);">
+                    <span class="section-subtitle">Comprehensive Services</span>
+                    <h2>From Concept to Living Outdoor Space</h2>
+                </div>
+
+                <!-- Installation -->
+                <div class="service-block fade-in">
+                    <div class="service-content">
+                        <h3>Landscape Installation & Planting</h3>
+                        <p>We bring landscape concepts to life through meticulous professional installation. Our team handles garden bed installation, landscape renovation, outdoor planting arrangements, and lawn improvements, ensuring every plant is selected and placed for optimal growth and visual harmony.</p>
+                        <a href="#contact" class="btn btn-secondary">Explore Landscape Installation</a>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1557429287-b2e26467fc2b?auto=format&fit=crop&q=80&w=800" alt="Professional landscape planting and garden installation" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Irrigation -->
+                <div class="service-block reverse fade-in">
+                    <div class="service-content">
+                        <h3>Irrigation Solutions</h3>
+                        <p>Healthy landscapes need thoughtful watering. We provide comprehensive irrigation system planning, sprinkler system installation, and irrigation improvements. We carefully consider water distribution to ensure your landscape thrives efficiently, without overwatering or waste.</p>
+                        <a href="#contact" class="btn btn-secondary">Enquire About Irrigation</a>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=800" alt="Thoughtful irrigation system in a lush garden" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Drainage -->
+                <div class="service-block fade-in">
+                    <div class="service-content">
+                        <h3>Drainage Solutions</h3>
+                        <p>A beautiful landscape starts with a functional foundation. Proper drainage is critical in the Houston region. We address water collecting in garden areas, poor yard drainage, runoff affecting landscape beds, and saturated planting areas by incorporating smart drainage considerations directly into your landscape plan.</p>
+                        <a href="#contact" class="btn btn-secondary">Discuss Drainage Requirements</a>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1621262332679-4e08e0e6f5e4?auto=format&fit=crop&q=80&w=800" alt="Professional landscape drainage solution integrated into garden design" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Hardscaping -->
+                <div class="service-block reverse fade-in">
+                    <div class="service-content">
+                        <h3>Hardscaping & Stonework</h3>
+                        <p>Natural materials, beautifully integrated. We enhance outdoor spaces with carefully crafted stone pathways, garden edging, hardscape elements, and decorative stone features. Our stonework is designed to complement the planting and create seamless, functional outdoor surfaces.</p>
+                        <a href="#contact" class="btn btn-secondary">Explore Hardscaping</a>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=800" alt="Natural stone pathway and hardscaping in residential garden" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Lighting -->
+                <div class="service-block fade-in">
+                    <div class="service-content">
+                        <h3>Outdoor Landscape Lighting</h3>
+                        <p>Let your landscape shine after sunset. Strategic garden lighting, pathway illumination, and landscape accent lighting enhance both the safety and the evening beauty of your outdoor space, highlighting your planting areas and architectural features.</p>
+                        <a href="#contact" class="btn btn-secondary">Enquire About Landscape Lighting</a>
+                    </div>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1599423423923-95e06c3b8c2d?auto=format&fit=crop&q=80&w=800" alt="Warm outdoor landscape lighting illuminating a garden pathway at dusk" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="section-padding bg-sand" id="portfolio">
+            <div class="container">
+                <div class="text-center fade-in" style="margin-bottom: var(--spacing-md);">
+                    <span class="section-subtitle">Our Work</span>
+                    <h2>Outdoor Spaces, Thoughtfully Transformed</h2>
+                </div>
+
+                <div class="portfolio-filters fade-in">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="design">Landscape Design</button>
+                    <button class="filter-btn" data-filter="planting">Planting</button>
+                    <button class="filter-btn" data-filter="hardscaping">Hardscaping</button>
+                    <button class="filter-btn" data-filter="lighting">Lighting</button>
+                </div>
+
+                <div class="portfolio-grid fade-in">
+                    <div class="portfolio-item" data-category="design">
+                        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&q=80&w=600" alt="Residential landscape design project" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Residential Landscape Design</h3>
+                            <p>Complete property transformation</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="planting">
+                        <img src="https://images.unsplash.com/photo-1598902108854-d1446b05c446?auto=format&fit=crop&q=80&w=600" alt="Garden planting and installation" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Garden Transformation</h3>
+                            <p>Custom planting and garden bed installation</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="hardscaping">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=600" alt="Stone pathway hardscaping" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Stonework & Pathways</h3>
+                            <p>Natural stone integration</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="lighting">
+                        <img src="https://images.unsplash.com/photo-1599423423923-95e06c3b8c2d?auto=format&fit=crop&q=80&w=600" alt="Outdoor landscape lighting at dusk" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Evening Illumination</h3>
+                            <p>Pathway and accent lighting</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="design">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=600" alt="Custom landscape layout" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Custom Landscape Planning</h3>
+                            <p>Functional and aesthetic layout</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="planting">
+                        <img src="https://images.unsplash.com/photo-1557429287-b2e26467fc2b?auto=format&fit=crop&q=80&w=600" alt="Landscape renovation and planting" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Landscape Renovation</h3>
+                            <p>Revitalising neglected outdoor spaces</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="portfolio-disclaimer">Note: Photography shown is illustrative. Genuine project photography will be supplied by Bright Landscape Designs, Inc. upon request.</p>
+                
+                <div class="text-center" style="margin-top: var(--spacing-md);">
+                    <a href="#contact" class="btn btn-primary">View Full Portfolio & Enquire</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Approach -->
+        <section class="section-padding bg-white" id="approach">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <span class="section-subtitle">Our Philosophy</span>
+                    <h2>Personal Attention. Creative Thinking. Thoughtful Execution.</h2>
+                </div>
+                <div class="approach-grid fade-in">
+                    <div class="approach-card">
+                        <h3>Understanding Your Vision</h3>
+                        <p>We start every project by listening. We learn about your preferences, lifestyle, and how you want to use your outdoor space.</p>
+                    </div>
+                    <div class="approach-card">
+                        <h3>Custom Landscape Planning</h3>
+                        <p>We develop a design approach uniquely suited to your property's conditions, rather than forcing a generic, one-size-fits-all layout.</p>
+                    </div>
+                    <div class="approach-card">
+                        <h3>Considering Every Detail</h3>
+                        <p>We bring planting, irrigation, drainage, hardscaping, and lighting together into a cohesive, functional, and beautiful whole.</p>
+                    </div>
+                    <div class="approach-card">
+                        <h3>Bringing the Design to Life</h3>
+                        <p>We translate the approved concept into a finished landscape through meticulous, professional installation and care.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section-padding bg-sage" id="about">
+            <div class="container">
+                <div class="about-content fade-in">
+                    <span class="section-subtitle">About Us</span>
+                    <h2>A Passion for Creating Beautiful Outdoor Spaces</h2>
+                    <p>Bright Landscape Designs, Inc. is an owner-operated business dedicated to personalised landscape consultation, design, and installation. We believe that whether your project is large or small, formal or informal, it deserves creative attention and professional execution.</p>
+                    <p><strong>Serving the Greater Houston area since 1982.</strong></p>
+                    <a href="#contact" class="btn btn-primary">Meet With Our Team</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Areas -->
+        <section class="section-padding bg-white" id="service-areas">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <span class="section-subtitle">Where We Work</span>
+                    <h2>Serving Greater Houston and Surrounding Communities</h2>
+                    <p style="max-width: 700px; margin: 0 auto var(--spacing-md);">We proudly provide our design-build services across a broad region of Southeast Texas.</p>
+                </div>
+                <div class="areas-grid fade-in">
+                    <div class="area-item">Houston</div>
+                    <div class="area-item">Conroe</div>
+                    <div class="area-item">The Woodlands</div>
+                    <div class="area-item">Spring</div>
+                    <div class="area-item">Cypress</div>
+                    <div class="area-item">Katy</div>
+                    <div class="area-item">Sugar Land</div>
+                    <div class="area-item">Pearland</div>
+                    <div class="area-item">Friendswood</div>
+                    <div class="area-item">League City</div>
+                    <div class="area-item">La Porte</div>
+                    <div class="area-item">Galveston</div>
+                    <div class="area-item">Schulenburg</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section-padding bg-sand" id="testimonials">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <span class="section-subtitle">Client Feedback</span>
+                    <h2>What Our Clients Say</h2>
+                </div>
+                <div class="testimonial-placeholder fade-in">
+                    <p style="font-style: italic; color: var(--color-muted-olive);">Genuine customer testimonials and approved project photographs will be displayed here upon client authorization. Bright Landscape Designs, Inc. does not fabricate reviews or customer satisfaction statistics.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section-padding bg-white" id="faq">
+            <div class="container">
+                <div class="text-center fade-in" style="margin-bottom: var(--spacing-md);">
+                    <span class="section-subtitle">Common Questions</span>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-container fade-in">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">What is included in a landscape consultation?</button>
+                        <div class="faq-answer">
+                            <p>A consultation includes an initial meeting to discuss your vision, an assessment of your property's conditions (sun, soil, drainage), and a discussion of your lifestyle needs. This helps us determine the scope of work and provide an accurate proposal for custom landscape planning.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">Can you design a landscape for a small or large property?</button>
+                        <div class="faq-answer">
+                            <p>Yes. Our published philosophy emphasises designing landscapes around individual lifestyles and needs, whether the project is large or small, formal or informal. We tailor our approach to the specific scale and style of your property.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">Do you provide both landscape design and installation?</button>
+                        <div class="faq-answer">
+                            <p>Absolutely. Bright Landscape Designs, Inc. is a full-service design-build company. We handle the entire process from the initial creative design and planning through to the professional installation and completion of your outdoor space.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">Can irrigation and drainage be incorporated into a landscape project?</button>
+                        <div class="faq-answer">
+                            <p>Yes, and they should be. Thoughtful water management is critical, especially in the Houston region. We integrate irrigation planning and drainage solutions directly into the landscape design to ensure your plants thrive and your property remains functional.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">Can stonework, hardscaping, and outdoor lighting be included?</button>
+                        <div class="faq-answer">
+                            <p>Yes. We offer complementary services including stone pathways, garden edging, hardscape elements, and outdoor landscape lighting to create a cohesive, beautiful, and usable outdoor environment.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">Which areas of Greater Houston do you serve?</button>
+                        <div class="faq-answer">
+                            <p>We serve the Greater Houston area, with a broad geographical range extending from Schulenburg to La Porte, and Conroe to Galveston, including communities like Katy, Sugar Land, The Woodlands, and Pearland.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">How can I schedule a consultation?</button>
+                        <div class="faq-answer">
+                            <p>You can schedule a consultation by filling out the contact form below, calling us directly at (281) 496-3576, or emailing carol@brightlandscapedesigns.com. We look forward to hearing about your vision.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA & Contact Form -->
+        <section class="section-padding bg-sage" id="contact">
+            <div class="container">
+                <div class="text-center fade-in" style="margin-bottom: var(--spacing-lg);">
+                    <span class="section-subtitle">Get Started</span>
+                    <h2>Let's Create an Outdoor Space You'll Love.</h2>
+                    <p style="max-width: 600px; margin: 0 auto;">Whether you're planning a complete landscape transformation or looking to improve an existing outdoor space, Bright Landscape Designs would love to hear about your vision.</p>
+                </div>
+
+                <div class="contact-grid fade-in">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-detail">
+                            <div>
+                                <strong>Address</strong>
+                                <p>9302 Reid Lake Drive<br>Houston, TX 77064, USA</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div>
+                                <strong>Phone</strong>
+                                <p><a href="tel:2814963576" style="color: var(--color-botanical-green); font-weight: 600;">(281) 496-3576</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div>
+                                <strong>Email</strong>
+                                <p><a href="mailto:carol@brightlandscapedesigns.com" style="color: var(--color-botanical-green); font-weight: 600;">carol@brightlandscapedesigns.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div>
+                                <strong>Business Hours</strong>
+                                <p>Monday – Friday: 8:00 AM – 4:30 PM<br>Saturday – Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form id="consultationForm" novalidate>
+                            <div id="formMessage" class="form-message"></div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name *</label>
+                                    <input type="text" id="fullName" name="fullName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zipCode">ZIP Code *</label>
+                                    <input type="text" id="zipCode" name="zipCode" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="propertyAddress">Property Address *</label>
+                                <input type="text" id="propertyAddress" name="propertyAddress" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="projectType">Project Type *</label>
+                                    <select id="projectType" name="projectType" required>
+                                        <option value="">Select a project type...</option>
+                                        <option value="Landscape Design">Landscape Design</option>
+                                        <option value="Landscape Installation">Landscape Installation</option>
+                                        <option value="Planting & Garden Improvements">Planting & Garden Improvements</option>
+                                        <option value="Irrigation">Irrigation</option>
+                                        <option value="Drainage">Drainage</option>
+                                        <option value="Hardscaping / Stonework">Hardscaping / Stonework</option>
+                                        <option value="Outdoor Lighting">Outdoor Lighting</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectSize">Approximate Project Size (Optional)</label>
+                                    <select id="projectSize" name="projectSize">
+                                        <option value="">Select size...</option>
+                                        <option value="Small (e.g., single garden bed)">Small</option>
+                                        <option value="Medium (e.g., front or back yard)">Medium</option>
+                                        <option value="Large (e.g., full property)">Large</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactMethod">Preferred Contact Method</label>
+                                <select id="contactMethod" name="contactMethod">
+                                    <option value="Email">Email</option>
+                                    <option value="Phone">Phone</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">Project Description *</label>
+                                <textarea id="description" name="description" rows="4" required placeholder="Tell us about your vision, current challenges, or specific requirements..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="photoUpload">Optional Property Photograph Upload</label>
+                                <input type="file" id="photoUpload" name="photoUpload" accept="image/*">
+                                <small style="color: var(--color-muted-olive);">This form is integration-ready. File upload requires backend configuration.</small>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--spacing-sm);">Request a Consultation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Bright Landscape Designs, Inc.</h4>
+                    <p>An owner-operated, full-service design-build landscape company creating beautiful, functional outdoor environments through personalised landscape design, thoughtful planning, and professional installation.</p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem;">Serving the Greater Houston area since 1982.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#introduction">About Us</a></li>
+                        <li><a href="#design-consultation">Landscape Design</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>9302 Reid Lake Dr</li>
+                        <li>Houston, TX 77064</li>
+                        <li><a href="tel:2814963576">(281) 496-3576</a></li>
+                        <li><a href="mailto:carol@brightlandscapedesigns.com">carol@brightlandscapedesigns.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bright Landscape Designs, Inc. All rights reserved. | <a href="#" style="color: rgba(255,255,255,0.6);">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // 1. Sticky Navigation
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // 2. Mobile Hamburger Menu
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const isExpanded = navLinks.classList.contains('active');
+                hamburger.setAttribute('aria-expanded', isExpanded);
+            });
+
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // 3. Smooth Scrolling for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerOffset = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // 4. Portfolio Filtering
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    const filterValue = btn.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 50);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+
+            // 5. FAQ Accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const item = question.parentElement;
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other items
+                    document.querySelectorAll('.faq-item').forEach(faq => {
+                        faq.classList.remove('active');
+                        faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    });
+                    
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                        question.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            });
+
+            // 6. Contact Form Validation & Handling
+            const form = document.getElementById('consultationForm');
+            const formMessage = document.getElementById('formMessage');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Basic validation
+                const fullName = document.getElementById('fullName').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const zipCode = document.getElementById('zipCode').value.trim();
+                const propertyAddress = document.getElementById('propertyAddress').value.trim();
+                const projectType = document.getElementById('projectType').value;
+                const description = document.getElementById('description').value.trim();
+
+                if (!fullName || !phone || !email || !zipCode || !propertyAddress || !projectType || !description) {
+                    formMessage.textContent = 'Please fill in all required fields.';
+                    formMessage.className = 'form-message error';
+                    return;
+                }
+
+                // Email validation regex
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    formMessage.textContent = 'Please enter a valid email address.';
+                    formMessage.className = 'form-message error';
+                    return;
+                }
+
+                // Simulate successful submission (Integration-ready)
+                formMessage.textContent = 'Thank you for your enquiry. We have received your request and will contact you shortly to discuss your landscape vision.';
+                formMessage.className = 'form-message success';
+                form.reset();
+                
+                // Scroll to message
+                formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+
+            // 7. Back to Top Button
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 500) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // 8. Scroll Animations (Intersection Observer)
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
