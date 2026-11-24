@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flying Feathers Holidays - Premium travel management and holiday experiences in Pune. Domestic and international holidays, corporate travel, group tours, and customised travel experiences.">
+    <meta name="keywords" content="Flying Feathers Holidays, Travel Agency in Pune, International Tour Packages Pune, Corporate Travel Management Pune, Kashmir Tour Packages, Group Tour Packages India">
+    <meta name="author" content="Flying Feathers Holidays">
+    <meta property="og:title" content="Flying Feathers Holidays | Travel Beyond Ordinary">
+    <meta property="og:description" content="Discover extraordinary destinations, unforgettable experiences and thoughtfully planned journeys with Flying Feathers Holidays.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.flyingfeatherholidays.com/">
+    <title>Flying Feathers Holidays | Premium Travel Management & Holiday Experiences Pune</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* =========================================
+           CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --cloud-white: #FAFBFC;
+            --warm-ivory: #F7F4EE;
+            --mist-blue: #DCE9F1;
+            --sky-blue: #A9C7DA;
+            --ocean-teal: #4F8990;
+            --deep-navy: #263F55;
+            --muted-gold: #C7A46B;
+            --soft-sand: #DCCBB4;
+            --charcoal: #30373B;
+            
+            --font-heading: 'DM Serif Display', serif;
+            --font-body: 'Manrope', sans-serif;
+            
+            --transition: all 0.3s ease;
+            --shadow-sm: 0 2px 8px rgba(38, 63, 85, 0.06);
+            --shadow-md: 0 8px 24px rgba(38, 63, 85, 0.1);
+            --shadow-lg: 0 16px 48px rgba(38, 63, 85, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--charcoal);
+            background-color: var(--cloud-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--deep-navy);
+            line-height: 1.2;
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* =========================================
+           UTILITY CLASSES
+           ========================================= */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .bg-ivory { background-color: var(--warm-ivory); }
+        .bg-white { background-color: var(--cloud-white); }
+        .bg-navy { background-color: var(--deep-navy); color: var(--cloud-white); }
+        .bg-navy h2, .bg-navy h3, .bg-navy p { color: var(--cloud-white); }
+
+        .text-center { text-align: center; }
+        .text-gold { color: var(--muted-gold); }
+        .text-teal { color: var(--ocean-teal); }
+
+        .section-header {
+            max-width: 700px;
+            margin: 0 auto 60px;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: var(--charcoal);
+            opacity: 0.8;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background-color: var(--deep-navy);
+            color: var(--cloud-white);
+            border-color: var(--deep-navy);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--muted-gold);
+            border-color: var(--muted-gold);
+            color: var(--deep-navy);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--deep-navy);
+            border-color: var(--deep-navy);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--deep-navy);
+            color: var(--cloud-white);
+        }
+
+        .btn-gold {
+            background-color: var(--muted-gold);
+            color: var(--deep-navy);
+            border-color: var(--muted-gold);
+        }
+
+        .btn-gold:hover {
+            background-color: var(--deep-navy);
+            color: var(--muted-gold);
+            border-color: var(--deep-navy);
+        }
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+            background-color: transparent;
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(250, 251, 252, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--deep-navy);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--muted-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--deep-navy);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--muted-gold);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--deep-navy);
+            margin: 6px 0;
+            transition: var(--transition);
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(38, 63, 85, 0.3), rgba(38, 63, 85, 0.4)), 
+                        url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+            color: var(--cloud-white);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 0 24px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: var(--cloud-white);
+            margin-bottom: 24px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            margin-bottom: 40px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .hero .btn-secondary {
+            color: var(--cloud-white);
+            border-color: var(--cloud-white);
+        }
+
+        .hero .btn-secondary:hover {
+            background-color: var(--cloud-white);
+            color: var(--deep-navy);
+        }
+
+        /* Search Panel */
+        .search-panel {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 24px 32px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) auto;
+            gap: 16px;
+            align-items: end;
+            max-width: 1000px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out 0.3s backwards;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--deep-navy);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group select, .form-group input {
+            padding: 12px;
+            border: 1px solid var(--mist-blue);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            background-color: var(--cloud-white);
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-group select:focus, .form-group input:focus {
+            border-color: var(--ocean-teal);
+        }
+
+        /* =========================================
+           ABOUT SECTION
+           ========================================= */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--muted-gold);
+            border-radius: 8px;
+            z-index: -1;
+        }
+
+        .about-content h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            margin-bottom: 24px;
+        }
+
+        .about-content p {
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+            color: var(--charcoal);
+            opacity: 0.85;
+        }
+
+        .highlight-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+            color: var(--deep-navy);
+        }
+
+        .highlight-item::before {
+            content: '✦';
+            color: var(--muted-gold);
+            font-size: 1.2rem;
+        }
+
+        /* =========================================
+           SIGNATURE EXPERIENCES
+           ========================================= */
+        .experiences-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .experience-card {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 400px;
+            cursor: pointer;
+            group: true;
+        }
+
+        .experience-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .experience-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .experience-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 32px;
+            background: linear-gradient(transparent, rgba(38, 63, 85, 0.9));
+            color: var(--cloud-white);
+        }
+
+        .experience-overlay h3 {
+            color: var(--cloud-white);
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .experience-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 16px;
+        }
+
+        .experience-link {
+            color: var(--muted-gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* =========================================
+           FEATURED KASHMIR
+           ========================================= */
+        .kashmir-section {
+            background-color: var(--warm-ivory);
+        }
+
+        .kashmir-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .kashmir-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .kashmir-images img {
+            border-radius: 8px;
+            height: 250px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .kashmir-images img:first-child {
+            grid-column: 1 / -1;
+            height: 300px;
+        }
+
+        .kashmir-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 24px;
+        }
+
+        .kashmir-content p {
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+
+        .kashmir-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .tag {
+            padding: 8px 16px;
+            background-color: var(--cloud-white);
+            border: 1px solid var(--mist-blue);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--deep-navy);
+            font-weight: 500;
+        }
+
+        /* =========================================
+           INTERNATIONAL DESTINATIONS
+           ========================================= */
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .destination-card {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 320px;
+        }
+
+        .destination-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .destination-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .destination-name {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: var(--cloud-white);
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        /* =========================================
+           CORPORATE TRAVEL
+           ========================================= */
+        .corporate-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .corporate-card {
+            background-color: var(--cloud-white);
+            padding: 40px 32px;
+            border-radius: 8px;
+            border: 1px solid var(--mist-blue);
+            transition: var(--transition);
+        }
+
+        .corporate-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--muted-gold);
+        }
+
+        .corporate-icon {
+            width: 56px;
+            height: 56px;
+            background-color: var(--warm-ivory);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--ocean-teal);
+            font-size: 1.5rem;
+        }
+
+        .corporate-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 16px;
+        }
+
+        .corporate-card ul {
+            margin-top: 16px;
+        }
+
+        .corporate-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--mist-blue);
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            opacity: 0.85;
+        }
+
+        .corporate-card li:last-child {
+            border-bottom: none;
+        }
+
+        /* =========================================
+           WHY FLY WITH US
+           ========================================= */
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+
+        .why-us-item {
+            padding: 24px;
+        }
+
+        .why-us-icon {
+            font-size: 2.5rem;
+            color: var(--muted-gold);
+            margin-bottom: 20px;
+        }
+
+        .why-us-item h4 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+        }
+
+        .why-us-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* =========================================
+           ENQUIRY FORM
+           ========================================= */
+        .enquiry-section {
+            background-color: var(--deep-navy);
+            color: var(--cloud-white);
+        }
+
+        .enquiry-section h2, .enquiry-section p {
+            color: var(--cloud-white);
+        }
+
+        .enquiry-form {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--cloud-white);
+            padding: 48px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .form-row.full {
+            grid-template-columns: 1fr;
+        }
+
+        .enquiry-form label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--deep-navy);
+            margin-bottom: 8px;
+        }
+
+        .enquiry-form input,
+        .enquiry-form select,
+        .enquiry-form textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid var(--mist-blue);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            background-color: var(--cloud-white);
+            transition: var(--transition);
+        }
+
+        .enquiry-form input:focus,
+        .enquiry-form select:focus,
+        .enquiry-form textarea:focus {
+            outline: none;
+            border-color: var(--ocean-teal);
+            box-shadow: 0 0 0 3px rgba(79, 137, 144, 0.1);
+        }
+
+        .enquiry-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            text-align: center;
+            margin-top: 32px;
+        }
+
+        .whatsapp-note {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 0.9rem;
+            color: var(--deep-navy);
+            opacity: 0.8;
+        }
+
+        .whatsapp-note a {
+            color: var(--ocean-teal);
+            font-weight: 600;
+        }
+
+        /* =========================================
+           CONTACT SECTION
+           ========================================= */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.75rem;
+            margin-bottom: 24px;
+        }
+
+        .contact-detail {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background-color: var(--warm-ivory);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--ocean-teal);
+            flex-shrink: 0;
+        }
+
+        .contact-detail h4 {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .contact-detail p, .contact-detail a {
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            opacity: 0.85;
+        }
+
+        .contact-detail a:hover {
+            color: var(--ocean-teal);
+        }
+
+        .map-container {
+            border-radius: 8px;
+            overflow: hidden;
+            height: 100%;
+            min-height: 400px;
+            background-color: var(--mist-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--mist-blue);
+        }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        .footer {
+            background-color: var(--deep-navy);
+            color: var(--cloud-white);
+            padding: 80px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-brand .logo {
+            color: var(--cloud-white);
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .footer h4 {
+            color: var(--muted-gold);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--muted-gold);
+            padding-left: 4px;
+        }
+
+        .footer-bottom {
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* =========================================
+           FLOATING WHATSAPP
+           ========================================= */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            box-shadow: var(--shadow-md);
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+
+        /* =========================================
+           ANIMATIONS
+           ========================================= */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 1024px) {
+            .experiences-grid, .corporate-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .destinations-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .why-us-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1001;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 400px;
+                height: 100vh;
+                background-color: var(--cloud-white);
+                flex-direction: column;
+                padding: 100px 40px;
+                gap: 24px;
+                box-shadow: var(--shadow-lg);
+                transition: var(--transition);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .search-panel {
+                grid-template-columns: 1fr;
+                position: relative;
+                margin-top: 40px;
+            }
+
+            .about-grid, .kashmir-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image::before {
+                display: none;
+            }
+
+            .experiences-grid, .corporate-grid, .destinations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .enquiry-form {
+                padding: 24px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                Flying Feathers <span>Holidays</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#experiences">Holidays</a></li>
+                <li><a href="#corporate">Corporate Travel</a></li>
+                <li><a href="#group-tours">Group Tours</a></li>
+                <li><a href="#services">Travel Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#enquiry" class="btn btn-primary" style="padding: 10px 24px;">Plan Your Trip</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>Your World. Your Journey. Your Story.</h1>
+            <p>Discover extraordinary destinations, unforgettable experiences and thoughtfully planned journeys with Flying Feathers Holidays.</p>
+            <div class="hero-buttons">
+                <a href="#experiences" class="btn btn-primary">Explore Holidays</a>
+                <a href="#enquiry" class="btn btn-secondary">Plan Your Journey</a>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="search-panel">
+                <div class="form-group">
+                    <label for="search-destination">Destination</label>
+                    <select id="search-destination">
+                        <option value="">Where to?</option>
+                        <option value="kashmir">Kashmir</option>
+                        <option value="dubai">Dubai</option>
+                        <option value="malaysia">Malaysia</option>
+                        <option value="bali">Bali</option>
+                        <option value="maldives">Maldives</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="search-month">Travel Month</label>
+                    <select id="search-month">
+                        <option value="">Select Month</option>
+                        <option value="jan">January</option>
+                        <option value="feb">February</option>
+                        <option value="mar">March</option>
+                        <option value="apr">April</option>
+                        <option value="may">May</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="search-travellers">Travellers</label>
+                    <select id="search-travellers">
+                        <option value="1">1 Person</option>
+                        <option value="2">2 People</option>
+                        <option value="3-5">3-5 People</option>
+                        <option value="6+">6+ People</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="search-type">Travel Type</label>
+                    <select id="search-type">
+                        <option value="">Select Type</option>
+                        <option value="leisure">Leisure Holiday</option>
+                        <option value="corporate">Corporate</option>
+                        <option value="group">Group Tour</option>
+                        <option value="cruise">Cruise</option>
+                    </select>
+                </div>
+                <button class="btn btn-gold" style="height: 46px;">Find Your Holiday</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section-padding bg-white" id="about">
+        <div class="container">
+            <div class="about-grid fade-in">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1935&auto=format&fit=crop" alt="Travel planning and exploration">
+                </div>
+                <div class="about-content">
+                    <p class="text-teal" style="font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;">About Flying Feathers Holidays</p>
+                    <h2>Taking Your Fun Seriously.</h2>
+                    <p>Founded in 2016, Flying Feathers Holidays brings together a passion for travel and professional expertise in creating memorable journeys. From personalised holidays and international adventures to corporate travel management, cruises and group experiences, we work to make travel planning smoother and more meaningful.</p>
+                    <p>Based in Pune, Maharashtra, we are your trusted partners in discovering the world, experiencing new cultures, and creating meaningful memories that last a lifetime.</p>
+                    
+                    <div class="highlight-list">
+                        <div class="highlight-item">Established in 2016</div>
+                        <div class="highlight-item">Pune-based Expertise</div>
+                        <div class="highlight-item">Domestic & International</div>
+                        <div class="highlight-item">Corporate & Group Travel</div>
+                    </div>
+                    
+                    <a href="#enquiry" class="btn btn-primary" style="margin-top: 32px;">Start Planning</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Experiences -->
+    <section class="section-padding bg-ivory" id="experiences">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="text-teal" style="font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;">Our Expertise</p>
+                <h2>Discover the Way You Love to Travel</h2>
+                <p>Curated experiences designed for every type of traveller, from serene getaways to adventurous group journeys.</p>
+            </div>
+            
+            <div class="experiences-grid fade-in">
+                <div class="experience-card">
+                    <img src="https://images.unsplash.com/photo-1595867362945-8c4c4c4c4c4c?q=80&w=800&auto=format&fit=crop" alt="Domestic Holidays India">
+                    <div class="experience-overlay">
+                        <h3>Domestic Holidays</h3>
+                        <p>Himalayan escapes, Kerala backwaters, and cultural journeys across India.</p>
+                        <span class="experience-link">Explore Domestic →</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=800&auto=format&fit=crop" alt="International Holidays">
+                    <div class="experience-overlay">
+                        <h3>International Holidays</h3>
+                        <p>Dubai, Malaysia, Bali, Maldives, and beyond.</p>
+                        <span class="experience-link">Explore International →</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop" alt="Group Tours">
+                    <div class="experience-overlay">
+                        <h3>Group Tours</h3>
+                        <p>Organised sightseeing and special-interest group experiences.</p>
+                        <span class="experience-link">Explore Group Tours →</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800&auto=format&fit=crop" alt="Religious Tours">
+                    <div class="experience-overlay">
+                        <h3>Religious Tours</h3>
+                        <p>Meaningful spiritual journeys and cultural pilgrimages.</p>
+                        <span class="experience-link">Explore Spiritual Journeys →</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <img src="https://images.unsplash.com/photo-1548574505-5e239809ee19?q=80&w=800&auto=format&fit=crop" alt="Cruise Holidays">
+                    <div class="experience-overlay">
+                        <h3>Cruise Holidays</h3>
+                        <p>Elegant ocean voyages and coastal destination experiences.</p>
+                        <span class="experience-link">Explore Cruises →</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop" alt="Student Travel">
+                    <div class="experience-overlay">
+                        <h3>Student & Special Interest</h3>
+                        <p>Educational exploration and interest-based group travel.</p>
+                        <span class="experience-link">Explore Student Travel →</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Kashmir -->
+    <section class="section-padding kashmir-section" id="kashmir">
+        <div class="container">
+            <div class="kashmir-grid fade-in">
+                <div class="kashmir-images">
+                    <img src="https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=800&auto=format&fit=crop" alt="Gulmarg Kashmir snow mountains">
+                    <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=800&auto=format&fit=crop" alt="Dal Lake Srinagar">
+                    <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800&auto=format&fit=crop" alt="Kashmir valley landscape">
+                </div>
+                <div class="kashmir-content">
+                    <p class="text-teal" style="font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;">Featured Destination</p>
+                    <h2>Discover the Magic of Kashmir</h2>
+                    <p>Experience the breathtaking beauty of the Kashmir Valley. From the snow-covered peaks of Gulmarg and the serene waters of Dal Lake to traditional mountain gondola experiences, we craft immersive journeys into India's paradise on earth.</p>
+                    
+                    <div class="kashmir-tags">
+                        <span class="tag">Gulmarg</span>
+                        <span class="tag">Dal Lake</span>
+                        <span class="tag">Pahalgam</span>
+                        <span class="tag">Sonamarg</span>
+                        <span class="tag">Gondola Rides</span>
+                    </div>
+                    
+                    <a href="#enquiry" class="btn btn-primary">Enquire About Kashmir</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- International Destinations -->
+    <section class="section-padding bg-white" id="international">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="text-teal" style="font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;">Global Experiences</p>
+                <h2>Featured International Experiences</h2>
+                <p>Thoughtfully curated global destinations for your next unforgettable adventure.</p>
+            </div>
+            
+            <div class="destinations-grid fade-in">
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=800&auto=format&fit=crop" alt="Malaysia Kuala Lumpur">
+                    <span class="destination-name">Malaysia</span>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=800&auto=format&fit=crop" alt="Dubai architecture">
+                    <span class="destination-name">Dubai</span>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=800&auto=format&fit=crop" alt="Bali temples">
+                    <span class="destination-name">Bali</span>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=800&auto=format&fit=crop" alt="Thailand islands">
+                    <span class="destination-name">Thailand</span>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=800&auto=format&fit=crop" alt="Vietnam landscapes">
+                    <span class="destination-name">Vietnam</span>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=800&auto=format&fit=crop" alt="Maldives ocean">
+                    <span class="destination-name">Maldives</span>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1507699622177-388898d9903e?q=80&w=800&auto=format&fit=crop" alt="New Zealand nature">
+                    <span class="destination-name">New Zealand</span>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?q=80&w=800&auto=format&fit=crop" alt="Europe travel">
+                    <span class="destination-name">Europe</span>
+                </div>
+            </div>
+            <p class="text-center" style="margin-top: 32px; font-size: 0.9rem; opacity: 0.7;">* Destinations presented as travel inspiration. Contact us for current package availability.</p>
+        </div>
+    </section>
+
+    <!-- Corporate Travel -->
+    <section class="section-padding bg-ivory" id="corporate">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="text-teal" style="font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;">Business Solutions</p>
+                <h2>Corporate Travel. Thoughtfully Managed.</h2>
+                <p>From business travel arrangements to company getaways and incentive experiences, Flying Feathers Holidays helps organisations coordinate their travel requirements seamlessly.</p>
+            </div>
+            
+            <div class="corporate-grid fade-in">
+                <div class="corporate-card">
+                    <div class="corporate-icon">💼</div>
+                    <h3>Business Travel Management</h3>
+                    <p>End-to-end coordination for your corporate travel needs.</p>
+                    <ul>
+                        <li>Business travel coordination</li>
+                        <li>Air travel arrangements</li>
+                        <li>Hotel arrangements</li>
+                        <li>24/7 Corporate travel support</li>
+                    </ul>
+                </div>
+                <div class="corporate-card">
+                    <div class="corporate-icon">🏢</div>
+                    <h3>Corporate Getaways</h3>
+                    <p>Rejuvenate your team with purposeful destination experiences.</p>
+                    <ul>
+                        <li>Company retreats</li>
+                        <li>Corporate group travel</li>
+                        <li>Destination-based employee experiences</li>
+                        <li>Team building activities</li>
+                    </ul>
+                </div>
+                <div class="corporate-card">
+                    <div class="corporate-icon">🏆</div>
+                    <h3>Incentive Travel</h3>
+                    <p>Reward top performers with memorable leisure experiences.</p>
+                    <ul>
+                        <li>Team incentive trips</li>
+                        <li>Corporate leisure experiences</li>
+                        <li>Organised group itineraries</li>
+                        <li>Premium hospitality management</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 48px;">
+                <a href="#enquiry" class="btn btn-primary">Plan Corporate Travel</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Group Tours -->
+    <section class="section-padding bg-white" id="group-tours">
+        <div class="container">
+            <div class="about-grid fade-in">
+                <div class="about-content">
+                    <p class="text-teal" style="font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;">Group Experiences</p>
+                    <h2>Better Together. Wherever You Go.</h2>
+                    <p>Whether it's a family reunion, a friends' getaway, or a special-interest group journey, we handle the logistics so you can focus on the shared experience.</p>
+                    <ul style="margin-top: 24px; margin-bottom: 32px;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid var(--mist-blue);">✓ Domestic and International group journeys</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid var(--mist-blue);">✓ Special-interest and student group travel</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid var(--mist-blue);">✓ Organised sightseeing and guided experiences</li>
+                        <li style="padding: 8px 0;">✓ Dedicated group coordinators</li>
+                    </ul>
+                    <a href="#enquiry" class="btn btn-secondary">Enquire About Group Tours</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?q=80&w=800&auto=format&fit=crop" alt="Group of friends traveling together">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section-padding bg-ivory" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Comprehensive Travel Services</h2>
+                <p>Beyond holidays, we offer a full suite of travel management solutions.</p>
+            </div>
+            <div class="why-us-grid fade-in">
+                <div class="why-us-item">
+                    <div class="why-us-icon">✈️</div>
+                    <h4>Air Consolidation</h4>
+                    <p>Air travel arrangements, flight coordination, and dedicated booking assistance for optimal routing and value.</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">🎫</div>
+                    <h4>Retail Travel Services</h4>
+                    <p>Individual travel planning, holiday arrangements, and personalised travel assistance for independent travellers.</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">🚢</div>
+                    <h4>Cruise Travel</h4>
+                    <p>Expert cruise holiday planning and comprehensive cruise-related arrangements for seamless ocean voyages.</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">🧳</div>
+                    <h4>Packaged Holidays</h4>
+                    <p>Curated domestic and international packages, alongside fully customised holiday experiences tailored to you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Fly With Us -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Why Fly With Flying Feathers?</h2>
+            </div>
+            <div class="why-us-grid fade-in">
+                <div class="why-us-item">
+                    <div class="why-us-icon">★</div>
+                    <h4>Expertise Since 2016</h4>
+                    <p>Years of dedicated experience in crafting memorable journeys.</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">🌍</div>
+                    <h4>Global & Local Reach</h4>
+                    <p>Seamless planning for both domestic escapes and international adventures.</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">🤝</div>
+                    <h4>Personalised Service</h4>
+                    <p>Every itinerary is tailored to your specific interests and preferences.</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">🛡️</div>
+                    <h4>Professional Management</h4>
+                    <p>Reliable coordination for corporate, group, and individual travel needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Stories / Blog Placeholder -->
+    <section class="section-padding bg-ivory" id="blog">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="text-teal" style="font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;">Travel Inspiration</p>
+                <h2>Stories from the Journey</h2>
+                <p>Insights, guides, and inspiration for your next adventure.</p>
+            </div>
+            <div class="experiences-grid fade-in">
+                <article class="experience-card" style="height: 350px;">
+                    <img src="https://images.unsplash.com/photo-1595867362945-8c4c4c4c4c4c?q=80&w=800&auto=format&fit=crop" alt="Kashmir travel guide">
+                    <div class="experience-overlay">
+                        <h3>Exploring the Beauty of Kashmir</h3>
+                        <p>A guide to Gulmarg, Dal Lake, and beyond.</p>
+                    </div>
+                </article>
+                <article class="experience-card" style="height: 350px;">
+                    <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=800&auto=format&fit=crop" alt="Malaysia travel guide">
+                    <div class="experience-overlay">
+                        <h3>Malaysia: A Journey Through KL</h3>
+                        <p>Discovering Kuala Lumpur, Genting Highlands, and Malacca.</p>
+                    </div>
+                </article>
+                <article class="experience-card" style="height: 350px;">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop" alt="Corporate getaway planning">
+                    <div class="experience-overlay">
+                        <h3>Planning a Memorable Corporate Getaway</h3>
+                        <p>Key considerations for successful team retreats.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Section -->
+    <section class="section-padding enquiry-section" id="enquiry">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Where Will Your Next Journey Take You?</h2>
+                <p>Tell us about your travel plans, and let Flying Feathers Holidays help you explore the possibilities.</p>
+            </div>
+            
+            <form class="enquiry-form fade-in" id="travelEnquiryForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="departureCity">Departure City</label>
+                        <input type="text" id="departureCity" name="departureCity" value="Pune">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="destination">Preferred Destination *</label>
+                        <input type="text" id="destination" name="destination" required placeholder="e.g., Kashmir, Dubai, Malaysia">
+                    </div>
+                    <div class="form-group">
+                        <label for="travelCategory">Travel Category *</label>
+                        <select id="travelCategory" name="travelCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="domestic">Domestic Holiday</option>
+                            <option value="international">International Holiday</option>
+                            <option value="family">Family Vacation</option>
+                            <option value="honeymoon">Honeymoon</option>
+                            <option value="group">Group Tour</option>
+                            <option value="corporate">Corporate Travel</option>
+                            <option value="incentive">Incentive Travel</option>
+                            <option value="religious">Religious Tour</option>
+                            <option value="cruise">Cruise</option>
+                            <option value="student">Student Travel</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="travelDate">Tentative Travel Date</label>
+                        <input type="month" id="travelDate" name="travelDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="travellers">Number of Travellers</label>
+                        <select id="travellers" name="travellers">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3-5">3-5</option>
+                            <option value="6-10">6-10</option>
+                            <option value="10+">10+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="budget">Approximate Budget (INR)</label>
+                        <input type="text" id="budget" name="budget" placeholder="e.g., 50,000 per person">
+                    </div>
+                    <div class="form-group">
+                        <!-- Spacer for alignment -->
+                    </div>
+                </div>
+
+                <div class="form-row full">
+                    <div class="form-group">
+                        <label for="requirements">Additional Requirements</label>
+                        <textarea id="requirements" name="requirements" placeholder="Tell us about any specific preferences, dietary needs, or special occasions..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 400px; padding: 16px;">Submit Travel Enquiry</button>
+                </div>
+                
+                <p class="whatsapp-note">
+                    Prefer to chat? Reach us directly on WhatsApp at <a href="https://wa.me/918605543009" target="_blank">+91 86055 43009</a>
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding bg-white" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Get in Touch</h2>
+                <p>Visit us or reach out to start planning your next journey.</p>
+            </div>
+            
+            <div class="contact-grid fade-in">
+                <div class="contact-info">
+                    <h3>Flying Feathers Holidays</h3>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Our Office</h4>
+                            <p>Ganga Osian Square, B-310,<br>Kaspate Wasti Road, Wakad,<br>Pune, Maharashtra 411057, India.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+918605543009">+91 86055 43009</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:flyingfeathersindia@gmail.com">flyingfeathersindia@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon">💬</div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/918605543009" target="_blank">Chat with us on WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 32px;">
+                        <a href="#enquiry" class="btn btn-primary">Send an Enquiry</a>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <!-- Embedded Google Maps Placeholder -->
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.1234567890123!2d73.75912345678901!3d18.599123456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDM1JzU2LjgiTiA3M8KwNDUnMzIuOCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; min-height: 400px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Flying Feathers Holidays Location">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">Flying Feathers <span>Holidays</span></div>
+                    <p>Travel Beyond Ordinary. Experience Beyond Expectations. Your trusted partner for personalised holidays, corporate travel management, and memorable group journeys since 2016.</p>
+                </div>
+                
+                <div>
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#experiences">Holidays</a></li>
+                        <li><a href="#corporate">Corporate Travel</a></li>
+                        <li><a href="#group-tours">Group Tours</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Air Consolidation</a></li>
+                        <li><a href="#services">Cruise Holidays</a></li>
+                        <li><a href="#services">Religious Tours</a></li>
+                        <li><a href="#services">Student Travel</a></li>
+                        <li><a href="#blog">Travel Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4>Legal & Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms and Conditions</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2016 - 2026 Flying Feathers Holidays. All rights reserved.</p>
+                <p>Designed with passion for travel.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918605543009" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        💬
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Sticky Navbar Background Change
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for Fade-in Animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form Submission Handling (Frontend Demo)
+        const enquiryForm = document.getElementById('travelEnquiryForm');
+        enquiryForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a production environment, this would connect to a backend service or form handler (e.g., Formspree, EmailJS, or custom API)
+            // For this implementation, we provide user feedback without simulating a false backend success
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you for your enquiry! This is a frontend demonstration. In a live environment, this form would connect to our backend system to process your request. Please contact us directly via WhatsApp or phone for immediate assistance.');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                enquiryForm.reset();
+            }, 1500);
+        });
+
+        // Smooth Scroll for Anchor Links (Polyfill for older browsers)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
