@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warrington Renewsol | Solar Installation, O&M and AMC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0F172A;
+            --primary-light: #1E293B;
+            --accent: #F59E0B;
+            --accent-hover: #D97706;
+            --bg-light: #F8FAFC;
+            --bg-white: #FFFFFF;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --border: #E2E8F0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background: var(--bg-white);
+        }
+
+        /* Utilities */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 100px 0; }
+        .section-light { background: var(--bg-light); }
+        .section-dark { background: var(--primary); color: white; }
+        
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
+        .section-header h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 16px; letter-spacing: -0.02em; }
+        .section-header p { color: var(--text-muted); font-size: 1.125rem; }
+        .section-dark .section-header p { color: #94A3B8; }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 28px; border-radius: 8px; font-weight: 600;
+            text-decoration: none; transition: all 0.3s ease; border: none; cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: var(--primary); }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .btn-outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.3); }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+        .btn-dark { background: var(--primary); color: white; }
+        .btn-dark:hover { background: var(--primary-light); transform: translateY(-2px); }
+
+        /* Header */
+        header {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: white; text-decoration: none; display: flex; align-items: center; gap: 8px;}
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 32px; list-style: none; }
+        .nav-links a { color: #CBD5E1; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--accent); }
+        .mobile-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center;
+            background: linear-gradient(135deg, var(--primary) 0%, #1E293B 100%);
+            position: relative; overflow: hidden; padding-top: 80px;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%;
+            background: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1920&q=80') center/cover;
+            opacity: 0.15; mask-image: linear-gradient(to left, black, transparent);
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 700px; }
+        .hero-tag { display: inline-block; background: rgba(245, 158, 11, 0.15); color: var(--accent); padding: 6px 16px; border-radius: 20px; font-size: 0.875rem; font-weight: 600; margin-bottom: 24px; }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; color: white; line-height: 1.1; margin-bottom: 24px; letter-spacing: -0.03em; }
+        .hero h1 span { color: var(--accent); }
+        .hero p { font-size: 1.25rem; color: #94A3B8; margin-bottom: 40px; max-width: 600px; }
+        .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+
+        /* Capabilities */
+        .cap-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+        .cap-card {
+            background: white; padding: 32px; border-radius: var(--radius);
+            border: 1px solid var(--border); transition: all 0.3s ease;
+        }
+        .cap-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+        .cap-icon { width: 56px; height: 56px; background: rgba(245, 158, 11, 0.1); color: var(--accent); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px; }
+        .cap-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; }
+        .cap-card p { color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem; }
+        .cap-link { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px; }
+        .cap-link:hover { gap: 10px; }
+
+        /* Process Timeline */
+        .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+        .timeline::before { content: ''; position: absolute; left: 28px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+        .timeline-item { display: flex; gap: 24px; margin-bottom: 40px; position: relative; }
+        .timeline-marker { width: 56px; height: 56px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; flex-shrink: 0; z-index: 2; border: 4px solid var(--bg-light); }
+        .timeline-content { background: white; padding: 24px; border-radius: var(--radius); box-shadow: var(--shadow); flex: 1; }
+        .timeline-content h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+        .timeline-content p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* Why Us */
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
+        .why-item { display: flex; gap: 16px; }
+        .why-icon { width: 40px; height: 40px; background: rgba(245, 158, 11, 0.15); color: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .why-text h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+        .why-text p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* Projects */
+        .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+        .proj-card { background: white; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); transition: all 0.3s ease; }
+        .proj-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .proj-img { height: 200px; background: linear-gradient(135deg, #1E293B, #334155); display: flex; align-items: center; justify-content: center; color: #64748B; font-size: 3rem; }
+        .proj-body { padding: 24px; }
+        .proj-body h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; }
+        .proj-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .proj-meta div { font-size: 0.85rem; }
+        .proj-meta span { display: block; color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+
+        /* Contact */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; }
+        .contact-info h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 16px; }
+        .contact-info p { color: var(--text-muted); margin-bottom: 32px; }
+        .contact-detail { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; color: var(--text-main); }
+        .contact-detail i { color: var(--accent); width: 20px; }
+        .whatsapp-btn { display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 24px; transition: all 0.3s; }
+        .whatsapp-btn:hover { background: #1DA851; transform: translateY(-2px); }
+
+        .form-group { margin-bottom: 20px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        label { display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 6px; color: var(--text-main); }
+        input, select, textarea {
+            width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px;
+            font-family: inherit; font-size: 1rem; transition: border-color 0.2s; background: white;
+        }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1); }
+        textarea { resize: vertical; min-height: 120px; }
+
+        /* Footer */
+        footer { background: var(--primary); color: #94A3B8; padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-col h4 { color: white; font-size: 1rem; font-weight: 700; margin-bottom: 20px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col a { color: #94A3B8; text-decoration: none; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--accent); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 0.875rem; }
+
+        /* Animations */
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--primary); flex-direction: column; padding: 20px; gap: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+            .nav-links.active { display: flex; }
+            .mobile-toggle { display: block; }
+            .hero h1 { font-size: 2.5rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .section { padding: 60px 0; }
+            .hero h1 { font-size: 2rem; }
+            .section-header h2 { font-size: 1.8rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <a href="#top" class="logo">Warrington <span>Renewsol</span></a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">Company</a></li>
+                    <li><a href="#capabilities">Capabilities</a></li>
+                    <li><a href="#maintenance">Maintenance</a></li>
+                    <li><a href="#equipment">Equipment</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Enquire</a></li>
+                </ul>
+                <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tag"><i class="fas fa-solar-panel"></i> &nbsp;Navi Mumbai, Maharashtra</span>
+                <h1>Engineering. <span>Solar.</span><br>Delivering Performance.</h1>
+                <p>Solar installation, operations and maintenance solutions designed around the demands of residential, commercial and industrial energy infrastructure.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Discuss Your Project <i class="fas fa-arrow-right"></i></a>
+                    <a href="#capabilities" class="btn btn-outline">Explore Capabilities</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>More Than Installation. A Complete Solar Operations Approach.</h2>
+                <p>Warrington Renewsol Pvt. Ltd. operates in the solar energy sector, with Go Solar Solutions identified as an associated customer-facing brand. We work across solar project installation and the maintenance environment that follows it.</p>
+            </div>
+            <div class="cap-grid fade-in">
+                <div class="cap-card" style="text-align: center;">
+                    <div class="cap-icon" style="margin: 0 auto 20px;"><i class="fas fa-hard-hat"></i></div>
+                    <h3>Install</h3>
+                    <p>Solar installation and field operations</p>
+                </div>
+                <div class="cap-card" style="text-align: center;">
+                    <div class="cap-icon" style="margin: 0 auto 20px;"><i class="fas fa-tools"></i></div>
+                    <h3>Service</h3>
+                    <p>Solar AMC and site maintenance</p>
+                </div>
+                <div class="cap-card" style="text-align: center;">
+                    <div class="cap-icon" style="margin: 0 auto 20px;"><i class="fas fa-boxes"></i></div>
+                    <h3>Supply</h3>
+                    <p>Equipment coordination and dispatch</p>
+                </div>
+                <div class="cap-card" style="text-align: center;">
+                    <div class="cap-icon" style="margin: 0 auto 20px;"><i class="fas fa-building"></i></div>
+                    <h3>Sites</h3>
+                    <p>Residential, commercial, industrial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section class="section section-light" id="capabilities">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Four Disciplines. One Solar Lifecycle.</h2>
+                <p>From initial site requirements to long-term maintenance, we coordinate every stage of your solar infrastructure.</p>
+            </div>
+            <div class="cap-grid fade-in">
+                <div class="cap-card">
+                    <div class="cap-icon"><i class="fas fa-solar-panel"></i></div>
+                    <h3>Solar EPC & Installation</h3>
+                    <p>Installation of solar systems across residential, commercial and industrial sites, coordinated by field installation teams.</p>
+                    <a href="#contact" class="cap-link">Enquire about installation <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="cap-card">
+                    <div class="cap-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>Solar Operations & Maintenance</h3>
+                    <p>Plant maintenance and panel cleaning to keep installed systems working as intended.</p>
+                    <a href="#contact" class="cap-link">Enquire about maintenance <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="cap-card">
+                    <div class="cap-icon"><i class="fas fa-file-contract"></i></div>
+                    <h3>Solar AMC Management</h3>
+                    <p>Contract tracking, scheduled visits, service history and technician allocation, site by site.</p>
+                    <a href="#contact" class="cap-link">Enquire about AMC <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="cap-card">
+                    <div class="cap-icon"><i class="fas fa-cubes"></i></div>
+                    <h3>Equipment & Inventory</h3>
+                    <p>Visibility of modules, inverters, electrical and structural components, with site-wise dispatch.</p>
+                    <a href="#contact" class="cap-link">Enquire about equipment <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section" id="process">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Coordinating Every Stage of Solar Operations.</h2>
+                <p>The sequence shows how activities connect. Individual projects may differ based on site requirements.</p>
+            </div>
+            <div class="timeline fade-in">
+                <div class="timeline-item">
+                    <div class="timeline-marker">01</div>
+                    <div class="timeline-content">
+                        <h4>Customer and site requirements</h4>
+                        <p>Understanding the site type and what the customer needs.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">02</div>
+                    <div class="timeline-content">
+                        <h4>Project planning and installation</h4>
+                        <p>Planning the installation for the site.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">03</div>
+                    <div class="timeline-content">
+                        <h4>Equipment coordination</h4>
+                        <p>Site-wise equipment dispatch and inventory visibility.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">04</div>
+                    <div class="timeline-content">
+                        <h4>Field execution</h4>
+                        <p>Installation teams and technicians on site.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">05</div>
+                    <div class="timeline-content">
+                        <h4>Maintenance and AMC support</h4>
+                        <p>Scheduled visits, service history and contract tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="section section-light" id="why-us">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Built around how solar sites actually run.</h2>
+            </div>
+            <div class="why-grid fade-in">
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="why-text">
+                        <h4>Solar-focused operations</h4>
+                        <p>Installation, maintenance and AMC sit within one solar business.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-sitemap"></i></div>
+                    <div class="why-text">
+                        <h4>Structured site coordination</h4>
+                        <p>Equipment dispatch and field work are organised site by site.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="why-text">
+                        <h4>Maintenance-oriented approach</h4>
+                        <p>Scheduled visits and contract expiry tracking keep service on time.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-eye"></i></div>
+                    <div class="why-text">
+                        <h4>Equipment visibility</h4>
+                        <p>Inventory of modules, inverters and balance-of-system items is tracked.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-users-cog"></i></div>
+                    <div class="why-text">
+                        <h4>Field execution</h4>
+                        <p>Dedicated installation teams and technicians work on all site types.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Project Showcase</h2>
+                <p>Selected projects, coming soon. Project details and site photographs will be supplied by the company.</p>
+            </div>
+            <div class="proj-grid fade-in">
+                <div class="proj-card">
+                    <div class="proj-img"><i class="fas fa-image"></i></div>
+                    <div class="proj-body">
+                        <h3>Project Title</h3>
+                        <div class="proj-meta">
+                            <div><span>Location</span>To be supplied</div>
+                            <div><span>Type</span>Residential</div>
+                            <div><span>Capacity</span>To be supplied</div>
+                            <div><span>Scope</span>To be supplied</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proj-card">
+                    <div class="proj-img"><i class="fas fa-image"></i></div>
+                    <div class="proj-body">
+                        <h3>Project Title</h3>
+                        <div class="proj-meta">
+                            <div><span>Location</span>To be supplied</div>
+                            <div><span>Type</span>Commercial</div>
+                            <div><span>Capacity</span>To be supplied</div>
+                            <div><span>Scope</span>To be supplied</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proj-card">
+                    <div class="proj-img"><i class="fas fa-image"></i></div>
+                    <div class="proj-body">
+                        <h3>Project Title</h3>
+                        <div class="proj-meta">
+                            <div><span>Location</span>To be supplied</div>
+                            <div><span>Type</span>Industrial</div>
+                            <div><span>Capacity</span>To be supplied</div>
+                            <div><span>Scope</span>To be supplied</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-light" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Let's Discuss Your Solar Requirements.</h2>
+                <p>Tell us about your site and what you need. We will respond to your enquiry.</p>
+            </div>
+            <div class="contact-grid fade-in">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Navi Mumbai, Maharashtra, India. Phone and email details will be supplied directly.</p>
+                    <div class="contact-detail"><i class="fas fa-map-marker-alt"></i> Navi Mumbai, Maharashtra, India</div>
+                    <div class="contact-detail"><i class="fas fa-phone"></i> [To be supplied]</div>
+                    <div class="contact-detail"><i class="fas fa-envelope"></i> [To be supplied]</div>
+                    <a href="#" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Connect on WhatsApp</a>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 24px; font-style: italic;">*Frontend demonstration: with no endpoint set in CONFIG, enquiries are validated but not sent.</p>
+                </div>
+                <form id="enquiryForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="custType">Customer Type</label>
+                            <select id="custType" required>
+                                <option value="">Select</option>
+                                <option>Residential</option>
+                                <option>Commercial</option>
+                                <option>Industrial</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="req">Requirement</label>
+                            <select id="req" required>
+                                <option value="">Select</option>
+                                <option>Solar Installation EPC</option>
+                                <option>AMC / Maintenance</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="loc">Location</label>
+                            <input type="text" id="loc">
+                        </div>
+                        <div class="form-group">
+                            <label for="cap">Approx. System Capacity (optional)</label>
+                            <input type="text" id="cap" placeholder="e.g., 5 kW">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="msg">Message</label>
+                        <textarea id="msg"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark" style="width: 100%; justify-content: center;">Send Enquiry <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#top" class="logo" style="margin-bottom: 16px;">Warrington <span>Renewsol</span></a>
+                    <p style="margin-top: 16px; font-size: 0.9rem;">A solar energy business covering installation, operations, maintenance and AMC. Go Solar Solutions is identified as an associated customer-facing brand.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="#about">Company</a></li>
+                        <li><a href="#capabilities">Capabilities</a></li>
+                        <li><a href="#maintenance">Maintenance</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Capabilities</h4>
+                    <ul>
+                        <li><a href="#capabilities">Solar EPC & installation</a></li>
+                        <li><a href="#maintenance">Operations & maintenance</a></li>
+                        <li><a href="#capabilities">Solar AMC</a></li>
+                        <li><a href="#equipment">Equipment coordination</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Navi Mumbai, Maharashtra</li>
+                        <li>Phone: [to be supplied]</li>
+                        <li>Email: [to be supplied]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Warrington Renewsol Pvt. Ltd. All rights reserved.</span>
+                <a href="#contact">Privacy policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Form validation (Frontend demo)
+        document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Your enquiry has been validated. (Note: No backend endpoint is configured in this demo).');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
