@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Studio Wodehouse is a Mumbai-based luxury interior design and architecture practice founded by Shonali Mahajan. We create thoughtful, timeless spaces blending international sensibilities with Indian craftsmanship.">
+    <meta name="keywords" content="Luxury interior designers Mumbai, residential interior design, interior architecture, bespoke furniture design, Studio Wodehouse, Shonali Mahajan">
+    <meta name="author" content="Studio Wodehouse">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Studio Wodehouse | Luxury Interior Design & Architecture Mumbai">
+    <meta property="og:description" content="Spaces that reflect the way we live. A multidisciplinary interior design practice bringing together architecture, craftsmanship, and considered living.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.studiowodehouse.com/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200">
+    
+    <title>Studio Wodehouse | Luxury Interior Design & Architecture Mumbai</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 font-family=%22serif%22>W</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --warm-ivory: #F5F2EC;
+            --soft-chalk: #EAE6DE;
+            --limestone: #D7D0C4;
+            --taupe: #A99F91;
+            --walnut: #725C49;
+            --olive: #737867;
+            --charcoal: #292925;
+            --soft-black: #1D1D1B;
+            --white: #FFFFFF;
+            
+            --font-heading: 'Cormorant Garamond', serif;
+            --font-body: 'Manrope', sans-serif;
+            
+            --transition-smooth: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --container-max: 1400px;
+            --section-padding: clamp(4rem, 8vw, 8rem);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--warm-ivory);
+            color: var(--charcoal);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* =========================================
+           TYPOGRAPHY
+           ========================================= */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--soft-black);
+        }
+
+        h1 { font-size: clamp(2.5rem, 6vw, 5rem); letter-spacing: -0.02em; }
+        h2 { font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 1.5rem; }
+        h3 { font-size: clamp(1.5rem, 2.5vw, 2rem); margin-bottom: 1rem; }
+        
+        p {
+            font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .text-taupe { color: var(--taupe); }
+        .text-walnut { color: var(--walnut); }
+        .uppercase-label {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--taupe);
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 500;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        /* =========================================
+           UTILITY & LAYOUT
+           ========================================= */
+        .container {
+            width: 90%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: var(--section-padding) 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 900px) {
+            .grid-2 { grid-template-columns: 1fr 1fr; gap: 4rem; }
+        }
+
+        .grid-asymmetric {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 900px) {
+            .grid-asymmetric {
+                grid-template-columns: 1.2fr 0.8fr;
+                gap: 4rem;
+                align-items: center;
+            }
+        }
+
+        .image-wrapper {
+            position: relative;
+            overflow: hidden;
+            background-color: var(--limestone);
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: block;
+        }
+
+        .image-wrapper:hover img {
+            transform: scale(1.03);
+        }
+
+        /* =========================================
+           ANIMATIONS
+           ========================================= */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 0;
+            transition: var(--transition-smooth);
+        }
+
+        .header.scrolled {
+            background-color: rgba(245, 242, 236, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.03);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            color: var(--soft-black);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: none;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        @media (min-width: 900px) {
+            .nav-links { display: flex; }
+        }
+
+        .nav-links a {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--charcoal);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--walnut);
+            transition: width 0.4s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.8rem 1.5rem;
+            border: 1px solid var(--charcoal);
+            color: var(--charcoal);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-cta:hover {
+            background-color: var(--charcoal);
+            color: var(--warm-ivory);
+        }
+
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        @media (min-width: 900px) {
+            .mobile-menu-btn { display: none; }
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 1px;
+            background-color: var(--soft-black);
+            margin: 6px 0;
+            transition: var(--transition-smooth);
+        }
+
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--warm-ivory);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            transition: right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav a {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--soft-black);
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: clamp(3rem, 8vw, 6rem);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.85);
+        }
+
+        .hero-content {
+            width: 90%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            color: var(--white);
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: var(--white);
+            color: var(--soft-black);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+            border: 1px solid var(--white);
+            transition: var(--transition-smooth);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: transparent;
+            color: var(--white);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.5);
+            transition: var(--transition-smooth);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--white);
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* =========================================
+           SECTIONS SPECIFIC STYLES
+           ========================================= */
+        .intro-section {
+            background-color: var(--warm-ivory);
+        }
+
+        .project-card {
+            margin-bottom: 4rem;
+            cursor: pointer;
+        }
+
+        .project-card .image-wrapper {
+            aspect-ratio: 16 / 10;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-card.alt .image-wrapper {
+            aspect-ratio: 4 / 5;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-top: 1px solid var(--limestone);
+            padding-top: 1rem;
+        }
+
+        .project-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--soft-black);
+            margin-bottom: 0.25rem;
+        }
+
+        .project-location {
+            font-size: 0.85rem;
+            color: var(--taupe);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .explore-link {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--walnut);
+            border-bottom: 1px solid transparent;
+            transition: var(--transition-smooth);
+        }
+
+        .explore-link:hover {
+            border-bottom-color: var(--walnut);
+        }
+
+        /* Featured Project */
+        .featured-project {
+            background-color: var(--soft-chalk);
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 900px) {
+            .featured-grid {
+                grid-template-columns: 1.5fr 1fr;
+                gap: 5rem;
+                align-items: center;
+            }
+        }
+
+        .featured-image {
+            aspect-ratio: 16 / 10;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--limestone);
+        }
+
+        .detail-item h4 {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--taupe);
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-item p {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--soft-black);
+            margin: 0;
+        }
+
+        /* Approach */
+        .approach-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .approach-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        .approach-item {
+            padding: 2rem;
+            border-left: 1px solid var(--limestone);
+        }
+
+        .approach-number {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: var(--limestone);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        /* Capabilities */
+        .capabilities-section {
+            background-color: var(--soft-chalk);
+        }
+
+        .capability-list {
+            list-style: none;
+        }
+
+        .capability-item {
+            border-bottom: 1px solid var(--limestone);
+            padding: 2rem 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            transition: var(--transition-smooth);
+        }
+
+        @media (min-width: 768px) {
+            .capability-item {
+                grid-template-columns: 0.5fr 1.5fr 1fr;
+                align-items: baseline;
+            }
+        }
+
+        .capability-item:hover {
+            padding-left: 1rem;
+            background-color: rgba(255,255,255,0.3);
+        }
+
+        .capability-num {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--taupe);
+        }
+
+        .capability-name {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            color: var(--soft-black);
+        }
+
+        .capability-desc {
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            margin: 0;
+        }
+
+        /* Materials & Craft */
+        .craft-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .craft-gallery {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        .craft-item {
+            aspect-ratio: 3 / 4;
+        }
+
+        .craft-item:nth-child(2) {
+            margin-top: 3rem;
+        }
+
+        .craft-item:nth-child(3) {
+            margin-top: -2rem;
+        }
+
+        /* Founder */
+        .founder-section {
+            background-color: var(--soft-chalk);
+        }
+
+        .founder-image {
+            aspect-ratio: 4 / 5;
+            max-width: 500px;
+        }
+
+        .founder-quote {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            font-style: italic;
+            color: var(--walnut);
+            margin: 2rem 0;
+            padding-left: 2rem;
+            border-left: 2px solid var(--walnut);
+        }
+
+        /* Collaborations & Journal */
+        .journal-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 900px) {
+            .journal-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .journal-card .image-wrapper {
+            aspect-ratio: 16 / 10;
+            margin-bottom: 1.5rem;
+        }
+
+        .journal-date {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--taupe);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Recognition */
+        .recognition-section {
+            background-color: var(--soft-chalk);
+            text-align: center;
+        }
+
+        .recognition-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            opacity: 0.7;
+        }
+
+        .recognition-item {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--charcoal);
+            font-style: italic;
+        }
+
+        /* Contact & Form */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        @media (min-width: 900px) {
+            .contact-grid { grid-template-columns: 1fr 1.2fr; }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--taupe);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            background-color: transparent;
+            border: 1px solid var(--limestone);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--soft-black);
+            transition: var(--transition-smooth);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--walnut);
+            background-color: rgba(255,255,255,0.5);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .form-row { grid-template-columns: 1fr 1fr; }
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1.2rem;
+            background-color: var(--soft-black);
+            color: var(--warm-ivory);
+            border: 1px solid var(--soft-black);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            margin-top: 1rem;
+        }
+
+        .btn-submit:hover {
+            background-color: transparent;
+            color: var(--soft-black);
+        }
+
+        .contact-info-item {
+            margin-bottom: 2rem;
+        }
+
+        .contact-info-item h4 {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--taupe);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info-item p, .contact-info-item a {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--soft-black);
+            margin: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--soft-black);
+            color: var(--limestone);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--warm-ivory);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .footer p {
+            color: var(--taupe);
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer h4 {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--warm-ivory);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--taupe);
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--warm-ivory);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+            font-size: 0.8rem;
+            color: var(--taupe);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(29, 29, 27, 0.95);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: var(--warm-ivory);
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-family: var(--font-body);
+        }
+
+        /* Success Message */
+        .form-success {
+            display: none;
+            background-color: rgba(115, 120, 103, 0.1);
+            border: 1px solid var(--olive);
+            padding: 1.5rem;
+            margin-top: 1rem;
+            color: var(--olive);
+        }
+
+        .form-success.active {
+            display: block;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .craft-item:nth-child(2), .craft-item:nth-child(3) { margin-top: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">Studio Wodehouse</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#studio">Studio</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#journal">Journal</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#enquiry" class="nav-cta">Start a Conversation</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#studio" class="mobile-link">Studio</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#journal" class="mobile-link">Journal</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="#enquiry" class="mobile-link" style="color: var(--walnut);">Start a Conversation</a>
+    </div>
+
+    <!-- Section 01: Editorial Hero -->
+    <section class="hero">
+        <div class="hero-bg">
+            <!-- Representative high-end architectural interior image -->
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1920" alt="Luxury residential interior by Studio Wodehouse featuring natural light and thoughtful material combinations">
+        </div>
+        <div class="hero-content reveal">
+            <span class="uppercase-label" style="color: rgba(255,255,255,0.8);">Mumbai &middot; Since 2014</span>
+            <h1>Spaces That Reflect The Way We Live.</h1>
+            <p>An interior design practice bringing together architecture, craftsmanship, and considered living to create thoughtful, timeless environments.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">Explore Our Work</a>
+                <a href="#studio" class="btn-secondary">Discover The Studio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 02: Introducing Studio Wodehouse -->
+    <section class="section intro-section" id="studio">
+        <div class="container">
+            <div class="grid-asymmetric">
+                <div class="reveal">
+                    <span class="uppercase-label">The Studio</span>
+                    <h2>Thoughtful Design.<br>Timeless Spaces.</h2>
+                    <p>Studio Wodehouse is a multidisciplinary interior design and architecture practice based in Mumbai. Founded in 2014, the studio brings together international design sensibilities and Indian craftsmanship to create considered spaces that balance individuality, beauty, and functionality.</p>
+                    <p>We believe that true luxury lies in the details: the proportion of a room, the tactile quality of a material, the way natural light moves through a space, and the seamless integration of bespoke furniture. Our approach is holistic, guiding each project from initial conceptualisation through meticulous technical detailing and final execution.</p>
+                    <a href="#services" class="explore-link" style="margin-top: 1rem; display: inline-block;">Explore Our Capabilities</a>
+                </div>
+                <div class="image-wrapper reveal" style="aspect-ratio: 4/5;">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800" alt="Detail of bespoke furniture and natural materials in a Studio Wodehouse project">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 03: Selected Projects -->
+    <section class="section" id="projects" style="background-color: var(--soft-chalk);">
+        <div class="container">
+            <div class="reveal" style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+                <span class="uppercase-label">Portfolio</span>
+                <h2>Spaces. Stories. Perspectives.</h2>
+                <p>A curated selection of high-end residential projects, private residences, and bespoke design interventions across Mumbai, Pune, Coonoor, Alibag, and Goa.</p>
+            </div>
+
+            <div class="grid-2">
+                <!-- Project 1 -->
+                <div class="project-card reveal">
+                    <div class="image-wrapper" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800" alt="Art-centric gallery-like home in Mumbai by Studio Wodehouse" loading="lazy">
+                    </div>
+                    <div class="project-meta">
+                        <div>
+                            <h3 class="project-title">The Art-Centric Residence</h3>
+                            <span class="project-location">Mumbai, Maharashtra</span>
+                        </div>
+                        <a href="#" class="explore-link">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card alt reveal" style="margin-top: 4rem;">
+                    <div class="image-wrapper" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=800" alt="Earthy contemporary apartment interior design Mumbai" loading="lazy">
+                    </div>
+                    <div class="project-meta">
+                        <div>
+                            <h3 class="project-title">Earthy Contemporary Apartment</h3>
+                            <span class="project-location">Mumbai, Maharashtra</span>
+                        </div>
+                        <a href="#" class="explore-link">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card reveal">
+                    <div class="image-wrapper" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Mediterranean dream villa in Goa by Studio Wodehouse" loading="lazy">
+                    </div>
+                    <div class="project-meta">
+                        <div>
+                            <h3 class="project-title">Mediterranean Villa</h3>
+                            <span class="project-location">Goa, India</span>
+                        </div>
+                        <a href="#" class="explore-link">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card alt reveal" style="margin-top: 4rem;">
+                    <div class="image-wrapper" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&q=80&w=800" alt="Neutral decor archetype home in Pune" loading="lazy">
+                    </div>
+                    <div class="project-meta">
+                        <div>
+                            <h3 class="project-title">Neutral Luxe Residence</h3>
+                            <span class="project-location">Pune, Maharashtra</span>
+                        </div>
+                        <a href="#" class="explore-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 04: Featured Project Spotlight -->
+    <section class="section featured-project">
+        <div class="container">
+            <div class="featured-grid reveal">
+                <div class="image-wrapper featured-image" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&q=80&w=1000" alt="Featured project detail: sculptural surprises and transitional design">
+                </div>
+                <div>
+                    <span class="uppercase-label">Featured Project</span>
+                    <h2>A Closer Look at the Details.</h2>
+                    <p>This gallery-like residence in Mumbai infuses the vibe of an abstract art gallery into everyday living. Sculptural surprises emerge in unanticipated alcoves, while a muted palette of natural limestone, warm walnut, and soft chalk allows the client's art collection to take centre stage.</p>
+                    
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <h4>Location</h4>
+                            <p>South Mumbai</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Scope</h4>
+                            <p>Interior Architecture & Design</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Key Materials</h4>
+                            <p>Natural Stone, Walnut, Brass</p>
+                        </div>
+                        <div class="detail-item">
+                            <h4>Year</h4>
+                            <p>2022</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-primary" style="margin-top: 2rem; background-color: var(--soft-black); color: var(--warm-ivory); border-color: var(--soft-black);">View Full Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 05: Our Design Approach -->
+    <section class="section">
+        <div class="container">
+            <div class="reveal" style="max-width: 700px;">
+                <span class="uppercase-label">Philosophy</span>
+                <h2>Designed With Intention.<br>Created With Purpose.</h2>
+            </div>
+            <div class="approach-grid">
+                <div class="approach-item reveal">
+                    <div class="approach-number">01</div>
+                    <h3>Understanding How People Live</h3>
+                    <p>Every project begins with a deep understanding of the people, their routines, needs, aspirations, and relationship with the space. Design is not imposed; it is discovered.</p>
+                </div>
+                <div class="approach-item reveal">
+                    <div class="approach-number">02</div>
+                    <h3>Thoughtful Spatial Planning</h3>
+                    <p>We focus on proportion, circulation, functionality, and the interplay of natural light. The relationship between spaces is carefully choreographed to feel both expansive and intimate.</p>
+                </div>
+                <div class="approach-item reveal">
+                    <div class="approach-number">03</div>
+                    <h3>Materials and Craftsmanship</h3>
+                    <p>We bring together honest materials, refined finishes, bespoke furniture, and traditional Indian craftsmanship to create a cohesive, tactile environment that ages gracefully.</p>
+                </div>
+                <div class="approach-item reveal">
+                    <div class="approach-number">04</div>
+                    <h3>Design Through Execution</h3>
+                    <p>We maintain strict continuity between the original design vision, technical detailing, site coordination, and final execution, ensuring the completed space mirrors the initial intent.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 06: Our Capabilities -->
+    <section class="section capabilities-section" id="services">
+        <div class="container">
+            <div class="reveal" style="max-width: 700px; margin-bottom: 3rem;">
+                <span class="uppercase-label">Expertise</span>
+                <h2>A Complete Perspective on Design.</h2>
+                <p>Our multidisciplinary approach ensures that architecture, interiors, furniture, and styling work together to deliver a complete, cohesive design solution.</p>
+            </div>
+            <ul class="capability-list">
+                <li class="capability-item reveal">
+                    <span class="capability-num">01</span>
+                    <span class="capability-name">Interior Architecture</span>
+                    <p class="capability-desc">Spatial planning, layout development, and architectural detailing from the ground up.</p>
+                </li>
+                <li class="capability-item reveal">
+                    <span class="capability-num">02</span>
+                    <span class="capability-name">Interior Design</span>
+                    <p class="capability-desc">Luxury apartments, private residences, villas, and holiday homes tailored to individual lifestyles.</p>
+                </li>
+                <li class="capability-item reveal">
+                    <span class="capability-num">03</span>
+                    <span class="capability-name">Furniture Design</span>
+                    <p class="capability-desc">Bespoke furniture concepts, custom joinery, and spatially integrated pieces.</p>
+                </li>
+                <li class="capability-item reveal">
+                    <span class="capability-num">04</span>
+                    <span class="capability-name">Textiles & Product Design</span>
+                    <p class="capability-desc">Material explorations, surface patterns, and custom design elements.</p>
+                </li>
+                <li class="capability-item reveal">
+                    <span class="capability-num">05</span>
+                    <span class="capability-name">Art Direction & Styling</span>
+                    <p class="capability-desc">Curated art selection, object placement, and finishing details that bring a space to life.</p>
+                </li>
+                <li class="capability-item reveal">
+                    <span class="capability-num">06</span>
+                    <span class="capability-name">Turnkey & Project Management</span>
+                    <p class="capability-desc">End-to-end execution, technical coordination, and site management for seamless delivery.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 07: Furniture, Materials and Craft -->
+    <section class="section">
+        <div class="container">
+            <div class="reveal" style="text-align: center; max-width: 700px; margin: 0 auto 4rem;">
+                <span class="uppercase-label">Details</span>
+                <h2>An Appreciation for the Details.</h2>
+                <p>The dialogue between contemporary design and traditional Indian craftsmanship is expressed through material selection, bespoke joinery, and tactile surfaces.</p>
+            </div>
+            <div class="craft-gallery">
+                <div class="image-wrapper craft-item reveal" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80&w=600" alt="Bespoke wooden joinery and furniture detail" loading="lazy">
+                </div>
+                <div class="image-wrapper craft-item reveal" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=600" alt="Natural stone and material texture close-up" loading="lazy">
+                </div>
+                <div class="image-wrapper craft-item reveal" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=600" alt="Curated decorative objects and artisanal craft" loading="lazy">
+                </div>
+                <div class="image-wrapper craft-item reveal" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&q=80&w=600" alt="Textile patterns and soft furnishings detail" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 08: The Founder and Studio -->
+    <section class="section founder-section">
+        <div class="container">
+            <div class="grid-asymmetric">
+                <div class="image-wrapper founder-image reveal">
+                    <!-- Representative professional portrait placeholder -->
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" alt="Shonali Mahajan, Founder of Studio Wodehouse">
+                </div>
+                <div class="reveal">
+                    <span class="uppercase-label">Leadership</span>
+                    <h2>Meet the Vision Behind the Studio.</h2>
+                    <p>Shonali Mahajan is the Founder and Principal Designer of Studio Wodehouse. Holding a Master's in Interior Design from the prestigious Domus Academy in Milan, she brings a wealth of international experience from established architectural and product design practices in both India and Europe.</p>
+                    <p>Since founding the studio in 2014, Shonali has cultivated a practice renowned for its perfect blend of international design standards and authentic Indian craftsmanship. Her work has been featured in leading design publications, celebrated for its quiet luxury, spatial intelligence, and unwavering attention to detail.</p>
+                    <blockquote class="founder-quote">
+                        "Design is not just about how a space looks, but how it supports and elevates the way we live. Every material, every proportion, and every detail must serve a purpose."
+                    </blockquote>
+                    <p class="text-taupe" style="font-size: 0.9rem;">— Shonali Mahajan, Founder & Creative Director</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 09: Design Collaborations -->
+    <section class="section">
+        <div class="container">
+            <div class="reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <span class="uppercase-label">Partnerships</span>
+                <h2>Different Perspectives. Shared Design Thinking.</h2>
+                <p>Studio Wodehouse frequently collaborates with artisan workshops, material innovators, and design practices to push the boundaries of residential design. Notable collaborations include the "Modern Maharaja" installation exploring heritage and folklore, and joint ventures with architectural practices to deliver holistic, art-centric transitional homes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Design Journal / Perspectives -->
+    <section class="section" id="journal" style="background-color: var(--soft-chalk);">
+        <div class="container">
+            <div class="reveal" style="margin-bottom: 3rem;">
+                <span class="uppercase-label">Journal</span>
+                <h2>Beyond the Finished Space.</h2>
+            </div>
+            <div class="journal-grid">
+                <article class="journal-card reveal">
+                    <div class="image-wrapper" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&q=80&w=600" alt="Natural light in residential design" loading="lazy">
+                    </div>
+                    <span class="journal-date">October 2023</span>
+                    <h3>The Role of Natural Light in Mumbai Residences</h3>
+                    <p>Exploring how strategic spatial planning and material selection can maximise and soften natural light in dense urban environments.</p>
+                    <a href="#" class="explore-link">Read More</a>
+                </article>
+                <article class="journal-card reveal">
+                    <div class="image-wrapper" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=600" alt="Bespoke furniture design process" loading="lazy">
+                    </div>
+                    <span class="journal-date">August 2023</span>
+                    <h3>Bespoke Furniture: Designing for Context</h3>
+                    <p>Why custom-designed furniture is essential to achieving a truly cohesive and proportionally balanced interior environment.</p>
+                    <a href="#" class="explore-link">Read More</a>
+                </article>
+                <article class="journal-card reveal">
+                    <div class="image-wrapper" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80&w=600" alt="Indian craftsmanship in contemporary design" loading="lazy">
+                    </div>
+                    <span class="journal-date">May 2023</span>
+                    <h3>Bridging International Sensibilities and Indian Craft</h3>
+                    <p>A look into our material explorations and partnerships with local artisans to create timeless, culturally rooted spaces.</p>
+                    <a href="#" class="explore-link">Read More</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 11: Clients and Recognition -->
+    <section class="section recognition-section">
+        <div class="container reveal">
+            <span class="uppercase-label">Recognition</span>
+            <h2>Trusted by Discerning Clients.</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem;">Our work has been privileged to be featured in leading national and international design publications.</p>
+            <div class="recognition-list">
+                <span class="recognition-item">Architectural Digest India</span>
+                <span class="recognition-item">Elle Decor India</span>
+                <span class="recognition-item">Houzz India</span>
+                <span class="recognition-item">Good Homes</span>
+                <span class="recognition-item">The Architect's Diary</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 12 & 13: Project Enquiry & Contact -->
+    <section class="section" id="enquiry" style="background-color: var(--warm-ivory);">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="reveal">
+                    <span class="uppercase-label">Enquiry</span>
+                    <h2>Let's Create Something Thoughtful.</h2>
+                    <p>Whether you are planning a private residence, a new home, or a bespoke design project, we would love to understand what you have in mind.</p>
+                    
+                    <div style="margin-top: 3rem;">
+                        <div class="contact-info-item">
+                            <h4>Studio</h4>
+                            <p>Studio Wodehouse<br>Mumbai, Maharashtra, India</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <h4>Email</h4>
+                            <a href="mailto:hello@studiowodehouse.com">hello@studiowodehouse.com</a>
+                        </div>
+                        <div class="contact-info-item">
+                            <h4>Phone</h4>
+                            <a href="tel:+919876543210">+91 98765 43210</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <form id="enquiryForm" style="background-color: var(--soft-chalk); padding: 3rem; border: 1px solid var(--limestone);">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Project Location *</label>
+                                <input type="text" id="location" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="type">Project Type *</label>
+                                <select id="type" class="form-control" required>
+                                    <option value="">Select an option</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="villa">Villa</option>
+                                    <option value="private-residence">Private Residence</option>
+                                    <option value="holiday-home">Holiday Home</option>
+                                    <option value="developer">Developer / Show Apartment</option>
+                                    <option value="furniture">Furniture & Product Design</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="stage">Project Stage</label>
+                                <select id="stage" class="form-control">
+                                    <option value="">Select an option</option>
+                                    <option value="concept">Conceptualisation</option>
+                                    <option value="planning">Planning & Approvals</option>
+                                    <option value="execution">Ready for Execution</option>
+                                    <option value="renovation">Renovation</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="area">Approximate Project Area (sq. ft.)</label>
+                            <input type="text" id="area" class="form-control" placeholder="e.g., 2500">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Brief Description of Your Vision *</label>
+                            <textarea id="message" class="form-control" required placeholder="Tell us about your project, timeline, and any specific requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Submit Enquiry</button>
+                        <div class="form-success" id="formSuccess">
+                            Thank you for reaching out. We have received your enquiry and will be in touch shortly to discuss your project.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 14: Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <span class="footer-logo">Studio Wodehouse</span>
+                    <p>A multidisciplinary interior design and architecture practice creating thoughtful, timeless spaces that balance individuality, beauty, and functionality.</p>
+                </div>
+                <div>
+                    <h4>Navigate</h4>
+                    <ul class="footer-links">
+                        <li><a href="#studio">Studio</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#journal">Journal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Interior Architecture</a></li>
+                        <li><a href="#services">Interior Design</a></li>
+                        <li><a href="#services">Furniture Design</a></li>
+                        <li><a href="#services">Turnkey Execution</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://instagram.com/studiowodehouse" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://linkedin.com/company/studio-wodehouse" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="mailto:hello@studiowodehouse.com">hello@studiowodehouse.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2024 Studio Wodehouse. All rights reserved.</span>
+                <span>
+                    <a href="#" style="color: var(--taupe); margin-right: 1.5rem;">Privacy Policy</a>
+                    <a href="#" style="color: var(--taupe);">Terms of Use</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img src="" alt="Enlarged project view" id="lightbox-img">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            if (img) {
+                // Use higher resolution for lightbox if available, otherwise same src
+                lightboxImg.src = img.src.replace('w=600', 'w=1200').replace('w=800', 'w=1200');
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox on clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+
+        // Form validation and submission handling
+        const enquiryForm = document.getElementById('enquiryForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        enquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Basic validation check (HTML5 'required' handles most of it)
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name && email && message) {
+                // Simulate form submission
+                const submitBtn = enquiryForm.querySelector('.btn-submit');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+
+                setTimeout(() => {
+                    enquiryForm.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    formSuccess.classList.add('active');
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        formSuccess.classList.remove('active');
+                    }, 5000);
+                }, 1500);
+            }
+        });
+
+        // Smooth scroll for anchor links (fallback for older browsers)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
