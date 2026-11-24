@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Phoenix Solar Power Solutions LLP | Solar Company in Pune, Maharashtra</title>
+<meta name="description" content="Phoenix Solar Power Solutions LLP — a trusted solar company in Pune offering rooftop solar, solar power plants, solar water pumps, solar street lights, EPC installation and maintenance services across Maharashtra." />
+<meta name="keywords" content="Solar Company in Pune, Solar Panel Installation in Pune, Rooftop Solar Solutions, Solar Power Plant Installation, Solar Water Pump Solutions, Solar Street Lights, Solar EPC Services in Maharashtra, Solar Panel Maintenance" />
+<meta name="theme-color" content="#4F8755" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Phoenix Solar Power Solutions LLP | Solar Company in Pune" />
+<meta property="og:description" content="Powering a Brighter Tomorrow with Solar Energy. Rooftop solar, solar power plants, water pumps, street lights and EPC services in Pune, Maharashtra." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80" />
+<meta property="og:locale" content="en_IN" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Phoenix Solar Power Solutions LLP" />
+<meta name="twitter:description" content="Premium solar solutions in Pune — rooftop, commercial, industrial, power plants, pumps and street lights." />
+
+<!-- Favicon (inline SVG) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%234F8755'/%3E%3Cpath d='M32 12c-2 8-10 12-10 22a10 10 0 0020 0c0-10-8-14-10-22z' fill='%23E8BD62'/%3E%3C/svg%3E" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================
+   DESIGN TOKENS
+   ============================================ */
+:root{
+  --warm-white:#FAFBF8;
+  --solar-cream:#F4F5E9;
+  --soft-sage:#DCE8D6;
+  --fresh-leaf:#80A66A;
+  --solar-green:#4F8755;
+  --solar-green-dark:#3f6e45;
+  --muted-gold:#E8BD62;
+  --deep-forest:#263F32;
+  --charcoal:#343B36;
+  --pure-white:#FFFFFF;
+  --border-soft:rgba(38,63,50,0.08);
+  --border-medium:rgba(38,63,50,0.14);
+
+  --shadow-sm:0 2px 8px rgba(38,63,50,0.05);
+  --shadow-md:0 8px 24px rgba(38,63,50,0.08);
+  --shadow-lg:0 20px 50px rgba(38,63,50,0.12);
+
+  --radius-sm:8px;
+  --radius-md:14px;
+  --radius-lg:22px;
+  --radius-xl:32px;
+
+  --container:1240px;
+  --section-pad:120px;
+
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  color:var(--charcoal);
+  background:var(--warm-white);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none;transition:color .25s var(--ease)}
+button{font:inherit;cursor:pointer;border:none;background:none}
+ul{list-style:none}
+h1,h2,h3,h4,h5{font-family:'Manrope',sans-serif;color:var(--deep-forest);line-height:1.15;font-weight:700;letter-spacing:-.02em}
+h1{font-size:clamp(2.4rem,5vw,4rem);font-weight:800}
+h2{font-size:clamp(1.9rem,3.6vw,2.8rem)}
+h3{font-size:clamp(1.25rem,2vw,1.55rem)}
+p{color:#4a524d}
+
+.container{max-width:var(--container);margin:0 auto;padding:0 24px}
+.section{padding:var(--section-pad) 0}
+.section-sm{padding:80px 0}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 28px;
+  border-radius:999px;
+  font-weight:600;font-size:.95rem;
+  letter-spacing:.01em;
+  transition:all .3s var(--ease);
+  cursor:pointer;
+  border:1px solid transparent;
+  white-space:nowrap;
+}
+.btn-primary{background:var(--solar-green);color:#fff;box-shadow:0 6px 18px rgba(79,135,85,.25)}
+.btn-primary:hover{background:var(--solar-green-dark);transform:translateY(-2px);box-shadow:0 10px 24px rgba(79,135,85,.35)}
+.btn-secondary{background:var(--pure-white);color:var(--deep-forest);border-color:var(--border-medium)}
+.btn-secondary:hover{background:var(--solar-cream);border-color:var(--solar-green);color:var(--solar-green)}
+.btn-ghost{background:transparent;color:var(--deep-forest);border-color:var(--border-soft)}
+.btn-ghost:hover{background:var(--solar-cream)}
+.btn-dark{background:var(--deep-forest);color:#fff}
+.btn-dark:hover{background:#1d3126;transform:translateY(-2px)}
+.btn .arrow{transition:transform .3s var(--ease)}
+.btn:hover .arrow{transform:translateX(4px)}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(250,251,248,.85);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;
+  transition:all .3s var(--ease);
+}
+.nav.scrolled{background:rgba(255,255,255,.95);border-bottom-color:var(--border-soft);box-shadow:var(--shadow-sm)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{display:flex;align-items:center;gap:12px;font-family:'Manrope',sans-serif;font-weight:800;font-size:1.05rem;color:var(--deep-forest);letter-spacing:-.01em}
+.logo-mark{
+  width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(135deg,var(--solar-green) 0%,var(--fresh-leaf) 100%);
+  display:grid;place-items:center;color:#fff;position:relative;overflow:hidden;
+  box-shadow:0 4px 12px rgba(79,135,85,.3);
+}
+.logo-mark svg{width:22px;height:22px}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text small{font-size:.68rem;font-weight:500;color:var(--fresh-leaf);letter-spacing:.12em;text-transform:uppercase}
+
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{
+  padding:10px 16px;border-radius:999px;
+  font-size:.92rem;font-weight:500;color:var(--charcoal);
+  transition:all .25s var(--ease);
+}
+.nav-links a:hover{background:var(--solar-cream);color:var(--solar-green)}
+.nav-cta{margin-left:12px;padding:11px 22px;font-size:.9rem}
+
+.nav-toggle{display:none;width:44px;height:44px;border-radius:12px;background:var(--solar-cream);align-items:center;justify-content:center}
+.nav-toggle span{display:block;width:20px;height:2px;background:var(--deep-forest);position:relative;transition:.3s}
+.nav-toggle span::before,.nav-toggle span::after{content:'';position:absolute;width:20px;height:2px;background:var(--deep-forest);transition:.3s}
+.nav-toggle span::before{top:-6px}
+.nav-toggle span::after{top:6px}
+.nav-toggle.open span{background:transparent}
+.nav-toggle.open span::before{top:0;transform:rotate(45deg)}
+.nav-toggle.open span::after{top:0;transform:rotate(-45deg)}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero{
+  position:relative;
+  padding:140px 0 80px;
+  background:linear-gradient(180deg,var(--warm-white) 0%,var(--solar-cream) 100%);
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;
+  background:radial-gradient(circle,rgba(232,189,98,.15) 0%,transparent 70%);
+  border-radius:50%;pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:8px 18px;border-radius:999px;
+  background:var(--pure-white);border:1px solid var(--border-soft);
+  font-size:.82rem;font-weight:600;color:var(--solar-green);
+  letter-spacing:.04em;margin-bottom:28px;
+  box-shadow:var(--shadow-sm);
+}
+.hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--muted-gold);box-shadow:0 0 0 4px rgba(232,189,98,.25)}
+.hero h1{margin-bottom:24px}
+.hero h1 .accent{color:var(--solar-green);position:relative;display:inline-block}
+.hero h1 .accent::after{
+  content:'';position:absolute;left:0;right:0;bottom:6px;height:10px;
+  background:rgba(232,189,98,.35);border-radius:4px;z-index:-1;
+}
+.hero-sub{font-size:1.12rem;color:#555d58;max-width:540px;margin-bottom:36px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+.hero-stats{display:flex;gap:40px;padding-top:32px;border-top:1px solid var(--border-soft)}
+.hero-stat strong{display:block;font-family:'Manrope',sans-serif;font-size:1.6rem;font-weight:800;color:var(--deep-forest)}
+.hero-stat span{font-size:.82rem;color:#6b736e}
+
+.hero-visual{position:relative}
+.hero-img-main{
+  position:relative;border-radius:var(--radius-xl);overflow:hidden;
+  aspect-ratio:4/5;box-shadow:var(--shadow-lg);
+}
+.hero-img-main img{width:100%;height:100%;object-fit:cover}
+.hero-float{
+  position:absolute;background:var(--pure-white);border-radius:var(--radius-md);
+  padding:18px 20px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:14px;
+}
+.hero-float-1{bottom:30px;left:-30px;animation:floaty 5s ease-in-out infinite}
+.hero-float-2{top:30px;right:-20px;animation:floaty 5s ease-in-out infinite .8s}
+.hero-float .icon{
+  width:42px;height:42px;border-radius:10px;
+  background:var(--soft-sage);color:var(--solar-green);
+  display:grid;place-items:center;flex-shrink:0;
+}
+.hero-float strong{display:block;font-size:.95rem;color:var(--deep-forest);font-family:'Manrope',sans-serif}
+.hero-float span{font-size:.78rem;color:#6b736e}
+
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* ============================================
+   SECTION HEADERS
+   ============================================ */
+.section-head{text-align:center;max-width:720px;margin:0 auto 64px}
+.section-tag{
+  display:inline-block;padding:6px 16px;border-radius:999px;
+  background:var(--soft-sage);color:var(--solar-green);
+  font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:18px;
+}
+.section-head h2{margin-bottom:18px}
+.section-head p{font-size:1.05rem;color:#555d58}
+
+/* ============================================
+   ABOUT
+   ============================================ */
+.about{background:var(--pure-white)}
+.about-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:80px;align-items:center}
+.about-img{position:relative;border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:5/6;box-shadow:var(--shadow-lg)}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-badge{
+  position:absolute;bottom:24px;left:24px;right:24px;
+  background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
+  padding:20px 24px;border-radius:var(--radius-md);
+  display:flex;align-items:center;gap:16px;
+}
+.about-badge .icon{width:48px;height:48px;border-radius:12px;background:var(--solar-green);color:#fff;display:grid;place-items:center;flex-shrink:0}
+.about-badge strong{display:block;font-family:'Manrope',sans-serif;color:var(--deep-forest);font-size:1rem}
+.about-badge span{font-size:.82rem;color:#6b736e}
+
+.about-content .section-tag{margin-bottom:18px}
+.about-content h2{margin-bottom:22px}
+.about-content > p{margin-bottom:18px;font-size:1.02rem}
+.about-features{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0 36px}
+.about-feat{display:flex;gap:12px;align-items:flex-start}
+.about-feat .check{
+  width:26px;height:26px;border-radius:50%;background:var(--soft-sage);
+  color:var(--solar-green);display:grid;place-items:center;flex-shrink:0;margin-top:2px;
+}
+.about-feat strong{display:block;font-family:'Manrope',sans-serif;color:var(--deep-forest);font-size:.95rem;margin-bottom:2px}
+.about-feat span{font-size:.85rem;color:#6b736e}
+
+/* ============================================
+   SOLUTIONS
+   ============================================ */
+.solutions{background:var(--solar-cream)}
+.solutions-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.sol-card{
+  background:var(--pure-white);border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow-sm);transition:all .4s var(--ease);
+  display:flex;flex-direction:column;
+  border:1px solid var(--border-soft);
+}
+.sol-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
+.sol-card .img{aspect-ratio:16/10;overflow:hidden;position:relative}
+.sol-card .img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.sol-card:hover .img img{transform:scale(1.05)}
+.sol-card .body{padding:28px;display:flex;flex-direction:column;flex:1}
+.sol-card .tag{
+  display:inline-block;padding:4px 12px;border-radius:999px;
+  background:var(--soft-sage);color:var(--solar-green);
+  font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  margin-bottom:14px;width:fit-content;
+}
+.sol-card h3{margin-bottom:10px}
+.sol-card p{font-size:.93rem;color:#555d58;margin-bottom:20px;flex:1}
+.sol-link{
+  display:inline-flex;align-items:center;gap:8px;
+  color:var(--solar-green);font-weight:600;font-size:.9rem;
+  transition:gap .25s var(--ease);
+}
+.sol-link:hover{gap:14px}
+
+/* Varied layouts */
+.sol-card.wide{grid-column:span 7}
+.sol-card.tall{grid-column:span 5}
+.sol-card.tall .img{aspect-ratio:5/4}
+.sol-card.third{grid-column:span 4}
+.sol-card.third .img{aspect-ratio:4/3}
+
+/* ============================================
+   PRODUCTS
+   ============================================ */
+.products{background:var(--pure-white)}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.prod-card{
+  background:var(--warm-white);border-radius:var(--radius-lg);overflow:hidden;
+  border:1px solid var(--border-soft);transition:all .35s var(--ease);
+  display:flex;flex-direction:column;
+}
+.prod-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);background:var(--pure-white)}
+.prod-img{aspect-ratio:4/3;overflow:hidden;background:var(--solar-cream)}
+.prod-img img{width:100%;height:100%;object-fit:cover}
+.prod-body{padding:26px;display:flex;flex-direction:column;flex:1}
+.prod-body h3{margin-bottom:8px;font-size:1.2rem}
+.prod-body > p{font-size:.9rem;color:#555d58;margin-bottom:16px;flex:1}
+.prod-meta{display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border-soft);margin-top:auto}
+.prod-meta .app{font-size:.78rem;color:#6b736e;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.prod-meta .enquire{color:var(--solar-green);font-weight:600;font-size:.88rem;display:inline-flex;align-items:center;gap:6px}
+.prod-meta .enquire:hover{gap:10px}
+
+/* ============================================
+   WHY CHOOSE
+   ============================================ */
+.why{background:var(--solar-cream);position:relative;overflow:hidden}
+.why::before{
+  content:'';position:absolute;bottom:-200px;left:-200px;width:500px;height:500px;
+  background:radial-gradient(circle,rgba(128,166,106,.18) 0%,transparent 70%);
+  border-radius:50%;
+}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;position:relative}
+.why-card{
+  background:var(--pure-white);padding:36px 32px;border-radius:var(--radius-lg);
+  border:1px solid var(--border-soft);transition:all .35s var(--ease);
+}
+.why-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--soft-sage)}
+.why-icon{
+  width:56px;height:56px;border-radius:14px;
+  background:linear-gradient(135deg,var(--soft-sage),var(--solar-cream));
+  color:var(--solar-green);display:grid;place-items:center;margin-bottom:22px;
+}
+.why-card h3{margin-bottom:10px;font-size:1.15rem}
+.why-card p{font-size:.92rem;color:#555d58}
+
+/* ============================================
+   PROCESS
+   ============================================ */
+.process{background:var(--pure-white)}
+.process-timeline{
+  position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:20px;
+  padding-top:40px;
+}
+.process-timeline::before{
+  content:'';position:absolute;top:64px;left:5%;right:5%;height:2px;
+  background:linear-gradient(90deg,var(--soft-sage) 0%,var(--solar-green) 50%,var(--soft-sage) 100%);
+  border-radius:2px;
+}
+.proc-step{position:relative;text-align:center}
+.proc-num{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--pure-white);border:2px solid var(--soft-sage);
+  color:var(--solar-green);font-family:'Manrope',sans-serif;font-weight:700;
+  display:grid;place-items:center;margin:0 auto 20px;
+  position:relative;z-index:2;transition:all .3s var(--ease);
+}
+.proc-step:hover .proc-num{background:var(--solar-green);color:#fff;border-color:var(--solar-green);transform:scale(1.08)}
+.proc-step h4{font-family:'Manrope',sans-serif;font-size:1rem;color:var(--deep-forest);margin-bottom:6px;font-weight:700}
+.proc-step p{font-size:.82rem;color:#6b736e;line-height:1.5}
+.process-note{text-align:center;margin-top:48px;font-size:.88rem;color:#6b736e;font-style:italic}
+
+/* ============================================
+   PROJECTS
+   ============================================ */
+.projects{background:var(--warm-white)}
+.project-filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.filter-btn{
+  padding:9px 20px;border-radius:999px;font-size:.85rem;font-weight:500;
+  background:var(--pure-white);color:var(--charcoal);border:1px solid var(--border-soft);
+  transition:all .25s var(--ease);
+}
+.filter-btn:hover{border-color:var(--solar-green);color:var(--solar-green)}
+.filter-btn.active{background:var(--solar-green);color:#fff;border-color:var(--solar-green)}
+
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.project-item{
+  position:relative;border-radius:var(--radius-md);overflow:hidden;
+  aspect-ratio:4/3;cursor:pointer;
+  transition:transform .4s var(--ease);
+}
+.project-item:hover{transform:scale(1.02)}
+.project-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.project-item:hover img{transform:scale(1.08)}
+.project-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(38,63,50,.85) 100%);
+  display:flex;align-items:flex-end;padding:22px;
+  opacity:0;transition:opacity .35s var(--ease);
+}
+.project-item:hover .project-overlay{opacity:1}
+.project-overlay .info{color:#fff}
+.project-overlay .cat{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-gold);font-weight:600;margin-bottom:4px}
+.project-overlay h4{color:#fff;font-size:1.05rem;font-weight:600}
+.project-overlay .zoom{
+  position:absolute;top:18px;right:18px;
+  width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.9);
+  color:var(--deep-forest);display:grid;place-items:center;
+}
+
+/* Lightbox */
+.lightbox{
+  position:fixed;inset:0;background:rgba(20,30,25,.92);
+  display:none;align-items:center;justify-content:center;z-index:2000;
+  padding:40px 20px;backdrop-filter:blur(8px);
+}
+.lightbox.open{display:flex;animation:fadeIn .3s var(--ease)}
+.lightbox-content{max-width:1100px;width:100%;max-height:90vh;position:relative}
+.lightbox-content img{width:100%;height:100%;max-height:85vh;object-fit:contain;border-radius:var(--radius-md)}
+.lightbox-close{
+  position:absolute;top:-50px;right:0;
+  width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;
+  display:grid;place-items:center;transition:background .25s;
+}
+.lightbox-close:hover{background:rgba(255,255,255,.3)}
+.lightbox-caption{text-align:center;color:#fff;margin-top:18px;font-size:.95rem}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* ============================================
+   ENQUIRY
+   ============================================ */
+.enquiry{
+  background:linear-gradient(135deg,var(--deep-forest) 0%,#1d3126 100%);
+  color:#fff;position:relative;overflow:hidden;
+}
+.enquiry::before{
+  content:'';position:absolute;top:-150px;right:-150px;width:500px;height:500px;
+  background:radial-gradient(circle,rgba(232,189,98,.12) 0%,transparent 70%);
+  border-radius:50%;
+}
+.enquiry::after{
+  content:'';position:absolute;bottom:-200px;left:-100px;width:400px;height:400px;
+  background:radial-gradient(circle,rgba(128,166,106,.15) 0%,transparent 70%);
+  border-radius:50%;
+}
+.enquiry-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:70px;align-items:center;position:relative;z-index:1}
+.enquiry-content .section-tag{background:rgba(232,189,98,.15);color:var(--muted-gold)}
+.enquiry-content h2{color:#fff;margin-bottom:20px}
+.enquiry-content > p{color:rgba(255,255,255,.75);font-size:1.05rem;margin-bottom:36px}
+.enquiry-points{display:flex;flex-direction:column;gap:18px}
+.enquiry-point{display:flex;gap:14px;align-items:flex-start}
+.enquiry-point .icon{
+  width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);
+  color:var(--muted-gold);display:grid;place-items:center;flex-shrink:0;
+}
+.enquiry-point strong{display:block;color:#fff;font-family:'Manrope',sans-serif;font-size:.98rem;margin-bottom:2px}
+.enquiry-point span{font-size:.85rem;color:rgba(255,255,255,.65)}
+
+.enquiry-form{
+  background:var(--pure-white);border-radius:var(--radius-lg);padding:40px;
+  box-shadow:0 30px 60px rgba(0,0,0,.25);
+}
+.enquiry-form h3{color:var(--deep-forest);margin-bottom:8px;font-size:1.35rem}
+.enquiry-form > p{font-size:.88rem;color:#6b736e;margin-bottom:26px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-group{display:flex;flex-direction:column;margin-bottom:14px}
+.form-group label{font-size:.82rem;font-weight:600;color:var(--deep-forest);margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{
+  padding:12px 14px;border-radius:10px;
+  border:1px solid var(--border-medium);background:var(--warm-white);
+  font-family:inherit;font-size:.92rem;color:var(--charcoal);
+  transition:all .25s var(--ease);
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  outline:none;border-color:var(--solar-green);background:#fff;
+  box-shadow:0 0 0 3px rgba(79,135,85,.12);
+}
+.form-group textarea{resize:vertical;min-height:90px}
+.form-submit{width:100%;justify-content:center;margin-top:8px}
+.form-note{font-size:.78rem;color:#6b736e;margin-top:14px;text-align:center}
+.form-message{
+  padding:14px;border-radius:10px;margin-bottom:18px;font-size:.88rem;
+  display:none;
+}
+.form-message.success{display:block;background:var(--soft-sage);color:var(--solar-green-dark)}
+.form-message.error{display:block;background:#fde8e8;color:#a33}
+
+/* ============================================
+   CONTACT
+   ============================================ */
+.contact{background:var(--pure-white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:50px}
+.contact-info{display:flex;flex-direction:column;gap:22px}
+.contact-card{
+  background:var(--warm-white);padding:24px;border-radius:var(--radius-md);
+  border:1px solid var(--border-soft);display:flex;gap:16px;align-items:flex-start;
+  transition:all .3s var(--ease);
+}
+.contact-card:hover{border-color:var(--soft-sage);background:var(--solar-cream)}
+.contact-card .icon{
+  width:46px;height:46px;border-radius:12px;background:var(--soft-sage);
+  color:var(--solar-green);display:grid;place-items:center;flex-shrink:0;
+}
+.contact-card strong{display:block;font-family:'Manrope',sans-serif;color:var(--deep-forest);font-size:1rem;margin-bottom:4px}
+.contact-card a,.contact-card span{font-size:.9rem;color:#555d58;line-height:1.5}
+.contact-card a:hover{color:var(--solar-green)}
+.contact-card .edit-note{display:block;font-size:.72rem;color:#a33;font-style:italic;margin-top:6px}
+
+.contact-map{border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow-md);background:var(--solar-cream);position:relative}
+.contact-map iframe{width:100%;height:100%;border:0}
+.contact-map .placeholder{
+  position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:30px;
+  background:linear-gradient(135deg,var(--solar-cream),var(--soft-sage));
+  color:var(--deep-forest);
+}
+.contact-map .placeholder strong{font-family:'Manrope',sans-serif;font-size:1.1rem;display:block;margin-bottom:8px}
+.contact-map .placeholder span{font-size:.88rem;color:#555d58}
+
+.whatsapp-float{
+  position:fixed;bottom:24px;right:24px;z-index:900;
+  width:58px;height:58px;border-radius:50%;
+  background:#25D366;color:#fff;
+  display:grid;place-items:center;
+  box-shadow:0 8px 24px rgba(37,211,102,.4);
+  transition:all .3s var(--ease);
+}
+.whatsapp-float:hover{transform:scale(1.1);box-shadow:0 12px 30px rgba(37,211,102,.5)}
+.whatsapp-float::before{
+  content:'';position:absolute;inset:-6px;border-radius:50%;
+  border:2px solid #25D366;opacity:.4;animation:pulse 2s infinite;
+}
+@keyframes pulse{0%{transform:scale(1);opacity:.5}100%{transform:scale(1.4);opacity:0}}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer{background:var(--deep-forest);color:rgba(255,255,255,.75);padding:80px 0 30px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:50px;margin-bottom:50px}
+.footer-brand .logo{color:#fff;margin-bottom:20px}
+.footer-brand .logo-text small{color:var(--muted-gold)}
+.footer-brand p{font-size:.9rem;line-height:1.7;color:rgba(255,255,255,.65);margin-bottom:22px;max-width:320px}
+.footer-social{display:flex;gap:10px}
+.footer-social a{
+  width:38px;height:38px;border-radius:10px;
+  background:rgba(255,255,255,.06);color:#fff;
+  display:grid;place-items:center;transition:all .25s var(--ease);
+}
+.footer-social a:hover{background:var(--solar-green);transform:translateY(-2px)}
+
+.footer h4{color:#fff;font-size:.95rem;margin-bottom:20px;font-family:'Manrope',sans-serif;letter-spacing:.02em}
+.footer ul li{margin-bottom:10px}
+.footer ul a{font-size:.88rem;color:rgba(255,255,255,.65);transition:color .25s}
+.footer ul a:hover{color:var(--muted-gold)}
+.footer-contact li{display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;font-size:.88rem;color:rgba(255,255,255,.65)}
+.footer-contact svg{flex-shrink:0;margin-top:3px;color:var(--muted-gold)}
+
+.footer-bottom{
+  padding-top:28px;border-top:1px solid rgba(255,255,255,.08);
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  font-size:.82rem;color:rgba(255,255,255,.5);
+}
+
+/* ============================================
+   BACK TO TOP
+   ============================================ */
+.back-top{
+  position:fixed;bottom:24px;left:24px;z-index:900;
+  width:46px;height:46px;border-radius:50%;
+  background:var(--deep-forest);color:#fff;
+  display:grid;place-items:center;
+  opacity:0;visibility:hidden;transform:translateY(20px);
+  transition:all .3s var(--ease);
+  box-shadow:var(--shadow-md);
+}
+.back-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.back-top:hover{background:var(--solar-green)}
+
+/* ============================================
+   REVEAL ANIMATION
+   ============================================ */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width:1080px){
+  :root{--section-pad:90px}
+  .hero-grid,.about-grid,.enquiry-grid,.contact-grid{grid-template-columns:1fr;gap:50px}
+  .hero-visual{max-width:520px;margin:0 auto}
+  .solutions-grid{grid-template-columns:repeat(2,1fr)}
+  .sol-card.wide,.sol-card.tall,.sol-card.third{grid-column:span 1}
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .process-timeline{grid-template-columns:repeat(3,1fr);gap:30px}
+  .process-timeline::before{display:none}
+  .project-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+}
+
+@media (max-width:768px){
+  :root{--section-pad:70px}
+  .nav-links{
+    position:fixed;top:78px;left:0;right:0;
+    background:var(--pure-white);flex-direction:column;align-items:stretch;
+    padding:20px;gap:4px;
+    border-bottom:1px solid var(--border-soft);
+    transform:translateY(-120%);transition:transform .35s var(--ease);
+    box-shadow:var(--shadow-md);
+  }
+  .nav-links.open{transform:translateY(0)}
+  .nav-links a{padding:14px 18px;border-radius:10px}
+  .nav-cta{margin:10px 0 0;text-align:center;justify-content:center}
+  .nav-toggle{display:flex}
+  .hero{padding:110px 0 60px}
+  .hero-stats{gap:24px;flex-wrap:wrap}
+  .hero-float-1{left:10px;bottom:10px}
+  .hero-float-2{right:10px;top:10px}
+  .about-features{grid-template-columns:1fr}
+  .products-grid,.why-grid,.project-grid{grid-template-columns:1fr}
+  .process-timeline{grid-template-columns:1fr;gap:24px;padding-left:40px}
+  .process-timeline::before{display:block;top:0;bottom:0;left:20px;width:2px;height:auto;right:auto;background:linear-gradient(180deg,var(--soft-sage),var(--solar-green),var(--soft-sage))}
+  .proc-step{text-align:left;padding-left:20px}
+  .proc-num{margin:0 0 12px 0;position:absolute;left:-44px;top:0}
+  .form-row{grid-template-columns:1fr}
+  .enquiry-form{padding:28px 22px}
+  .footer-grid{grid-template-columns:1fr;gap:36px}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .section-head{margin-bottom:44px}
+}
+
+@media (max-width:480px){
+  .hero h1{font-size:2.1rem}
+  .btn{padding:12px 22px;font-size:.88rem}
+  .hero-ctas .btn{flex:1;justify-content:center}
+  .whatsapp-float{width:52px;height:52px;bottom:18px;right:18px}
+  .back-top{bottom:18px;left:18px;width:42px;height:42px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="logo" aria-label="Phoenix Solar Power Solutions home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </span>
+      <span class="logo-text">
+        Phoenix Solar
+        <small>Power Solutions LLP</small>
+      </span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#enquiry" class="btn btn-primary nav-cta">Get a Free Consultation</a></li>
+    </ul>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-text reveal">
+      <span class="hero-eyebrow"><span class="dot"></span> Solar Energy Solutions · Pune, Maharashtra</span>
+      <h1>Harness the Power of the Sun. Build a <span class="accent">Smarter Energy</span> Future.</h1>
+      <p class="hero-sub">Discover dependable solar power solutions designed to help homes and businesses make better use of clean, renewable energy — from rooftop systems to complete solar power plants.</p>
+      <div class="hero-ctas">
+        <a href="#solutions" class="btn btn-primary">Explore Solar Solutions <span class="arrow">→</span></a>
+        <a href="#enquiry" class="btn btn-secondary">Get a Quote</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>Residential</strong>
+          <span>Rooftop Solar Systems</span>
+        </div>
+        <div class="hero-stat">
+          <strong>Commercial</strong>
+          <span>Business Installations</span>
+        </div>
+        <div class="hero-stat">
+          <strong>Industrial</strong>
+          <span>Large-scale Projects</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="hero-img-main">
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=900&q=80" alt="Modern rooftop solar panel installation under bright sunlight" loading="eager" />
+      </div>
+      <div class="hero-float hero-float-1">
+        <span class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </span>
+        <div>
+          <strong>Clean Energy</strong>
+          <span>Renewable & Sustainable</span>
+        </div>
+      </div>
+      <div class="hero-float hero-float-2">
+        <span class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </span>
+        <div>
+          <strong>Solar Power</strong>
+          <span>End-to-end Solutions</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ABOUT
+     ============================================ -->
+<section class="section about" id="about">
+  <div class="container about-grid">
+    <div class="about-img reveal">
+      <img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=800&q=80" alt="Solar engineers inspecting a rooftop solar installation" loading="lazy" />
+      <div class="about-badge">
+        <span class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        </span>
+        <div>
+          <strong>Trusted Solar Partner</strong>
+          <span>Products · Installation · Maintenance</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-content reveal">
+      <span class="section-tag">About Phoenix Solar</span>
+      <h2>Building a More Sustainable Energy Future.</h2>
+      <p>Phoenix Solar Power Solutions LLP is a Pune-based solar energy company committed to making clean, reliable energy accessible to homes, businesses and industries across Maharashtra.</p>
+      <p>We bring together quality solar products, professional installation and ongoing maintenance to deliver complete solar solutions — from compact rooftop systems to larger solar power projects.</p>
+
+      <div class="about-features">
+        <div class="about-feat">
+          <span class="check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          <div><strong>Quality Solar Products</strong><span>Panels, modules & systems</span></div>
+        </div>
+        <div class="about-feat">
+          <span class="check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          <div><strong>Professional Installation</strong><span>Skilled execution on-site</span></div>
+        </div>
+        <div class="about-feat">
+          <span class="check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          <div><strong>Maintenance Support</strong><span>Long-term servicing</span></div>
+        </div>
+        <div class="about-feat">
+          <span class="check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          <div><strong>Customer Focused</strong><span>Solutions tailored to you</span></div>
+        </div>
+      </div>
+
+      <a href="#solutions" class="btn btn-primary">Know More About Us <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SOLUTIONS
+     ============================================ -->
+<section class="section solutions" id="solutions">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Our Solutions</span>
+      <h2>Complete Solar Solutions for Every Need</h2>
+      <p>From residential rooftops to industrial installations, we design and deliver solar systems that match your energy requirements and space.</p>
+    </div>
+
+    <div class="solutions-grid">
+      <article class="sol-card wide reveal">
+        <div class="img"><img src="https://images.unsplash.com/photo-1611365892117-00ac6ce02027?w=900&q=80" alt="Residential rooftop solar panels on a modern home" loading="lazy" /></div>
+        <div class="body">
+          <span class="tag">Residential</span>
+          <h3>Residential Rooftop Solar</h3>
+          <p>Reduce your electricity bills and dependence on the grid with a rooftop solar system designed for your home. A clean, long-term investment in energy independence.</p>
+          <a href="#enquiry" class="sol-link">Enquire Now <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="sol-card tall reveal">
+        <div class="img"><img src="https://images.unsplash.com/photo-1591512423045-cb4b96750706?w=800&q=80" alt="Commercial building with solar panel installation" loading="lazy" /></div>
+        <div class="body">
+          <span class="tag">Commercial</span>
+          <h3>Commercial Solar Solutions</h3>
+          <p>Lower operational costs and strengthen your sustainability profile with solar systems built for offices, retail spaces and commercial complexes.</p>
+          <a href="#enquiry" class="sol-link">Enquire Now <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="sol-card third reveal">
+        <div class="img"><img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=700&q=80" alt="Industrial facility with large solar installation" loading="lazy" /></div>
+        <div class="body">
+          <span class="tag">Industrial</span>
+          <h3>Industrial Solar Installations</h3>
+          <p>High-capacity solar systems for factories, warehouses and manufacturing units looking to manage energy costs efficiently.</p>
+          <a href="#enquiry" class="sol-link">Enquire Now <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="sol-card third reveal">
+        <div class="img"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=700&q=80" alt="Large scale solar power plant with rows of panels" loading="lazy" /></div>
+        <div class="body">
+          <span class="tag">Utility Scale</span>
+          <h3>Solar Power Plants</h3>
+          <p>End-to-end support for solar power plant projects — from system design and installation to execution and ongoing maintenance.</p>
+          <a href="#enquiry" class="sol-link">Enquire Now <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="sol-card third reveal">
+        <div class="img"><img src="https://images.unsplash.com/photo-1622313481804-7d0d69084617?w=700&q=80" alt="Solar water pump system in agricultural field" loading="lazy" /></div>
+        <div class="body">
+          <span class="tag">Agriculture</span>
+          <h3>Solar Water Pumping</h3>
+          <p>Reliable solar-powered water pumps for irrigation and rural applications — reducing fuel costs and supporting sustainable farming.</p>
+          <a href="#enquiry" class="sol-link">Enquire Now <span>→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PRODUCTS
+     ============================================ -->
+<section class="section products" id="products">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Products & Technology</span>
+      <h2>Quality Solar Products, Thoughtfully Delivered</h2>
+      <p>We supply and install a range of solar products suited to residential, commercial and agricultural applications. Specific product details and specifications are shared during consultation.</p>
+    </div>
+
+    <div class="products-grid">
+      <article class="prod-card reveal">
+        <div class="prod-img"><img src="https://images.unsplash.com/photo-1545209463-e28254974808?w=700&q=80" alt="High efficiency solar panels" loading="lazy" /></div>
+        <div class="prod-body">
+          <h3>Solar Panels</h3>
+          <p>Durable solar panels designed for long-term energy generation across diverse Indian climatic conditions.</p>
+          <div class="prod-meta">
+            <span class="app">Residential · Commercial</span>
+            <a href="#enquiry" class="enquire">Enquire <span>→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="prod-card reveal">
+        <div class="prod-img"><img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=700&q=80" alt="Photovoltaic modules arranged for installation" loading="lazy" /></div>
+        <div class="prod-body">
+          <h3>Photovoltaic Modules</h3>
+          <p>Photovoltaic modules engineered for reliable performance, suitable for rooftop and ground-mount applications.</p>
+          <div class="prod-meta">
+            <span class="app">Rooftop · Ground Mount</span>
+            <a href="#enquiry" class="enquire">Enquire <span>→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="prod-card reveal">
+        <div class="prod-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Complete rooftop solar system installation" loading="lazy" /></div>
+        <div class="prod-body">
+          <h3>Rooftop Solar Systems</h3>
+          <p>Complete rooftop solar systems including panels, inverters and mounting structures — tailored to your load requirements.</p>
+          <div class="prod-meta">
+            <span class="app">Homes · Offices</span>
+            <a href="#enquiry" class="enquire">Enquire <span>→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="prod-card reveal">
+        <div class="prod-img"><img src="https://images.unsplash.com/photo-1593642632823-8f785ba676fe?w=700&q=80" alt="Solar water pump system for irrigation" loading="lazy" /></div>
+        <div class="prod-body">
+          <h3>Solar Water Pumps</h3>
+          <p>Solar-powered pumping solutions for agricultural irrigation, helping reduce diesel dependency and running costs.</p>
+          <div class="prod-meta">
+            <span class="app">Agriculture · Rural</span>
+            <a href="#enquiry" class="enquire">Enquire <span>→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="prod-card reveal">
+        <div class="prod-img"><img src="https://images.unsplash.com/photo-1551742706-69c899a1567d?w=700&q=80" alt="Solar street light installation" loading="lazy" /></div>
+        <div class="prod-body">
+          <h3>Solar Street Lights</h3>
+          <p>Self-contained solar street lighting for roads, campuses, parks and residential layouts — no grid connection required.</p>
+          <div class="prod-meta">
+            <span class="app">Roads · Campuses</span>
+            <a href="#enquiry" class="enquire">Enquire <span>→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="prod-card reveal">
+        <div class="prod-img"><img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=700&q=80" alt="Solar installation and EPC services" loading="lazy" /></div>
+        <div class="prod-body">
+          <h3>EPC & Installation Services</h3>
+          <p>Complete engineering, procurement and construction services for solar projects — from design to commissioning.</p>
+          <div class="prod-meta">
+            <span class="app">All Applications</span>
+            <a href="#enquiry" class="enquire">Enquire <span>→</span></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     WHY CHOOSE
+     ============================================ -->
+<section class="section why">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Why Phoenix Solar</span>
+      <h2>A Partner You Can Trust for Solar</h2>
+      <p>We combine product expertise, installation capability and service support to deliver solar solutions that perform — today and for years to come.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <span class="why-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </span>
+        <h3>Comprehensive Solar Solutions</h3>
+        <p>From products and systems to full project execution — we handle every stage of your solar journey under one roof.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+        </span>
+        <h3>Installation & Project Support</h3>
+        <p>Professional on-site installation with attention to structural safety, electrical standards and long-term system performance.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </span>
+        <h3>Solar Product Expertise</h3>
+        <p>We help you choose the right solar products and system configurations based on your load, space and budget requirements.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </span>
+        <h3>Maintenance & Service</h3>
+        <p>Ongoing maintenance and servicing to keep your solar system performing at its best throughout its operational life.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M22 2L12 12"/></svg>
+        </span>
+        <h3>Focus on Renewable Energy</h3>
+        <p>We are committed to accelerating the adoption of clean, renewable energy across homes, businesses and communities.</p>
+      </div>
+      <div class="why-card reveal">
+        <span class="why-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <h3>Solutions for Every Application</h3>
+        <p>Whether you need rooftop solar, a water pump or a complete power plant — we offer solutions suited to your application.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PROCESS
+     ============================================ -->
+<section class="section process">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">How It Works</span>
+      <h2>Our Solar Installation Process</h2>
+      <p>A clear, structured approach from your first enquiry to long-term system support.</p>
+    </div>
+
+    <div class="process-timeline reveal">
+      <div class="proc-step">
+        <div class="proc-num">01</div>
+        <h4>Initial Enquiry</h4>
+        <p>Share your requirements through call, email or our enquiry form.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">02</div>
+        <h4>Requirement Assessment</h4>
+        <p>We study your energy needs, site conditions and available space.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">03</div>
+        <h4>System Recommendation</h4>
+        <p>A suitable solar system is proposed based on your requirements.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">04</div>
+        <h4>Installation & Execution</h4>
+        <p>Professional on-site installation by our technical team.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">05</div>
+        <h4>System Handover</h4>
+        <p>Testing, commissioning and handover with basic orientation.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">06</div>
+        <h4>Maintenance & Support</h4>
+        <p>Ongoing service and support to keep your system running well.</p>
+      </div>
+    </div>
+
+    <p class="process-note reveal">* The actual project process may vary based on your specific requirements and site conditions.</p>
+  </div>
+</section>
+
+<!-- ============================================
+     PROJECTS
+     ============================================ -->
+<section class="section projects" id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Our Work</span>
+      <h2>Solar Projects & Installations</h2>
+      <p>A glimpse of solar installations we have delivered — across rooftops, commercial spaces and open sites.</p>
+    </div>
+
+    <div class="project-filters reveal">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="rooftop">Rooftop Solar</button>
+      <button class="filter-btn" data-filter="commercial">Commercial</button>
+      <button class="filter-btn" data-filter="industrial">Industrial</button>
+      <button class="filter-btn" data-filter="plant">Power Plants</button>
+      <button class="filter-btn" data-filter="pump">Water Pumping</button>
+    </div>
+
+    <div class="project-grid" id="projectGrid">
+      <div class="project-item reveal" data-cat="rooftop" data-title="Residential Rooftop Installation" data-caption="Rooftop Solar · Pune">
+        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80" alt="Residential rooftop solar installation" loading="lazy" />
+        <div class="project-overlay">
+          <div class="info"><div class="cat">Rooftop Solar</div><h4>Residential Installation</h4></div>
+          <span class="zoom"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+        </div>
+      </div>
+      <div class="project-item reveal" data-cat="commercial" data-title="Commercial Rooftop System" data-caption="Commercial Solar · Maharashtra">
+        <img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=800&q=80" alt="Commercial building rooftop solar" loading="lazy" />
+        <div class="project-overlay">
+          <div class="info"><div class="cat">Commercial</div><h4>Commercial Rooftop System</h4></div>
+          <span class="zoom"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+        </div>
+      </div>
+      <div class="project-item reveal" data-cat="industrial" data-title="Industrial Solar Project" data-caption="Industrial Solar · Pune Region">
+        <img src="https://images.unsplash.com/photo-1591512423045-cb4b96750706?w=800&q=80" alt="Industrial solar installation" loading="lazy" />
+        <div class="project-overlay">
+          <div class="info"><div class="cat">Industrial</div><h4>Industrial Solar Project</h4></div>
+          <span class="zoom"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+        </div>
+      </div>
+      <div class="project-item reveal" data-cat="plant" data-title="Solar Power Plant" data-caption="Solar Power Plant · Maharashtra">
+        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&q=80" alt="Large solar power plant" loading="lazy" />
+        <div class="project-overlay">
+          <div class="info"><div class="cat">Power Plant</div><h4>Solar Power Plant</h4></div>
+          <span class="zoom"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+        </div>
+      </div>
+      <div class="project-item reveal" data-cat="pump" data-title="Solar Water Pumping System" data-caption="Solar Water Pump · Rural Application">
+        <img src="https://images.unsplash.com/photo-1622313481804-7d0d69084617?w=800&q=80" alt="Solar water pump installation" loading="lazy" />
+        <div class="project-overlay">
+          <div class="info"><div class="cat">Water Pumping</div><h4>Solar Water Pumping</h4></div>
+          <span class="zoom"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+        </div>
+      </div>
+      <div class="project-item reveal" data-cat="rooftop" data-title="Rooftop Solar Array" data-caption="Rooftop Solar · Residential">
+        <img src="https://images.unsplash.com/photo-1611365892117-00ac6ce02027?w=800&q=80" alt="Rooftop solar array" loading="lazy" />
+        <div class="project-overlay">
+          <div class="info"><div class="cat">Rooftop Solar</div><h4>Rooftop Solar Array</h4></div>
+          <span class="zoom"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+        </div>
+      </div>
+      <div class="project-item reveal" data-cat="commercial" data-title="Commercial Complex Installation" data-caption="Commercial Solar · Office Complex">
+        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&q=80" alt="Commercial complex solar installation" loading="lazy" />
+        <div class="project-overlay">
+          <div class="info"><div class="cat">Commercial</div><h4>Commercial Complex</h4></div>
+          <span class="zoom"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+        </div>
+      </div>
+      <div class="project-item reveal" data-cat="industrial" data-title="Industrial Facility Solar" data-caption="Industrial Solar · Manufacturing">
+        <img src="https://images.unsplash.com/photo-1545209463-e28254974808?w=800&q=80" alt="Industrial facility solar installation" loading="lazy" />
+        <div class="project-overlay">
+          <div class="info"><div class="cat">Industrial</div><h4>Industrial Facility</h4></div>
+          <span class="zoom"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+        </div>
+      </div>
+      <div class="project-item reveal" data-cat="plant" data-title="Ground Mount Solar Project" data-caption="Solar Power Plant · Ground Mount">
+        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80" alt="Ground mount solar project" loading="lazy" />
+        <div class="project-overlay">
+          <div class="info"><div class="cat">Power Plant</div><h4>Ground Mount Project</h4></div>
+          <span class="zoom"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project image viewer">
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <img id="lightboxImg" src="" alt="" />
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
+
+<!-- ============================================
+     ENQUIRY
+     ============================================ -->
+<section class="section enquiry" id="enquiry">
+  <div class="container enquiry-grid">
+    <div class="enquiry-content reveal">
+      <span class="section-tag">Get Started</span>
+      <h2>Ready to Make the Switch to Solar?</h2>
+      <p>Tell us about your energy requirements. Our team can help you explore suitable solar solutions for your home, business or project.</p>
+
+      <div class="enquiry-points">
+        <div class="enquiry-point">
+          <span class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <div><strong>Quick Response</strong><span>We get back to you promptly to understand your needs.</span></div>
+        </div>
+        <div class="enquiry-point">
+          <span class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </span>
+          <div><strong>Free Consultation</strong><span>Discuss your requirements with our team at no cost.</span></div>
+        </div>
+        <div class="enquiry-point">
+          <span class="icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </span>
+          <div><strong>Tailored Solutions</strong><span>Recommendations based on your specific site and load.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <form class="enquiry-form reveal" id="enquiryForm" novalidate>
+      <h3>Request a Consultation</h3>
+      <p>Fill in the details below and we'll reach out to you.</p>
+
+      <div class="form-message" id="formMessage"></div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" required />
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile Number *</label>
+          <input type="tel" id="mobile" name="mobile" required pattern="[0-9\s\+\-]{7,15}" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="city">City / Location</label>
+          <input type="text" id="city" name="city" placeholder="e.g. Pune" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="reqType">Requirement Type *</label>
+          <select id="reqType" name="reqType" required>
+            <option value="">Select requirement</option>
+            <option>Residential Rooftop Solar</option>
+            <option>Commercial Solar</option>
+            <option>Industrial Solar</option>
+            <option>Solar Power Plant</option>
+            <option>Solar Water Pump</option>
+            <option>Solar Street Light</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="projectReq">Approximate Project Requirement</label>
+          <input type="text" id="projectReq" name="projectReq" placeholder="e.g. 5 kW rooftop" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell us more about your requirement..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary form-submit">
+        Submit Enquiry
+        <span class="arrow">→</span>
+      </button>
+
+      <p class="form-note">By submitting, you agree to be contacted by our team regarding your enquiry.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================================
+     CONTACT
+     ============================================ -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-tag">Get in Touch</span>
+      <h2>Contact Phoenix Solar</h2>
+      <p>Have questions or ready to start your solar project? Reach out to us — we'd be happy to help.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-card">
+          <span class="icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div>
+            <strong>Office Address</strong>
+            <span>Chikhali, Pimpri-Chinchwad<br/>Pune, Maharashtra, India</span>
+            <span class="edit-note">[ Address subject to confirmation ]</span>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <span class="icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <div>
+            <strong>Phone</strong>
+            <a href="tel:+910000000000">+91 — ——— ————</a>
+            <span class="edit-note">[ Phone number to be confirmed ]</span>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <span class="icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          </span>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:info@phoenixsolar.example">info@phoenixsolar.example</a>
+            <span class="edit-note">[ Email to be confirmed ]</span>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <span class="icon" style="background:#25D366;color:#fff">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.04 0C5.5 0 .19 5.31.19 11.85c0 2.09.55 4.13 1.59 5.93L0 24l6.38-1.67a11.8 11.8 0 0 0 5.66 1.44h.01c6.54 0 11.85-5.31 11.85-11.85 0-3.17-1.23-6.15-3.38-8.44zM12.05 21.7h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.78.99 1.01-3.68-.23-.38a9.82 9.82 0 0 1-1.5-5.2c0-5.42 4.41-9.83 9.84-9.83 2.63 0 5.1 1.02 6.96 2.88a9.77 9.77 0 0 1 2.88 6.96c0 5.43-4.41 9.84-9.81 9.84zm5.4-7.37c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.35.19 1.86.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+          </span>
+          <div>
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/910000000000" target="_blank" rel="noopener">Chat with us on WhatsApp</a>
+            <span class="edit-note">[ WhatsApp number to be confirmed ]</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-map reveal">
+        <div class="placeholder">
+          <div>
+            <strong>Google Maps Integration</strong>
+            <span>Map will be embedded here once the verified office location is confirmed.<br/>Currently listed area: Chikhali / Pimpri-Chinchwad, Pune.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            </svg>
+          </span>
+          <span class="logo-text">
+            Phoenix Solar
+            <small>Power Solutions LLP</small>
+          </span>
+        </a>
+        <p>Powering a Brighter Tomorrow with Solar Energy. Trusted solar products, installation and maintenance services across Pune and Maharashtra.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05a3.75 3.75 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Solar Solutions</h4>
+        <ul>
+          <li><a href="#solutions">Residential Rooftop Solar</a></li>
+          <li><a href="#solutions">Commercial Solar</a></li>
+          <li><a href="#solutions">Industrial Solar</a></li>
+          <li><a href="#solutions">Solar Power Plants</a></li>
+          <li><a href="#solutions">Solar Water Pumps</a></li>
+          <li><a href="#solutions">Solar Street Lights</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact Info</h4>
+        <ul class="footer-contact">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Chikhali, Pimpri-Chinchwad, Pune, Maharashtra
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+910000000000">+91 — ——— ————</a>
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <a href="mailto:info@phoenixsolar.example">info@phoenixsolar.example</a>
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.04 0C5.5 0 .19 5.31.19 11.85c0 2.09.55 4.13 1.59 5.93L0 24l6.38-1.67a11.8 11.8 0 0 0 5.66 1.44h.01c6.54 0 11.85-5.31 11.85-11.85 0-3.17-1.23-6.15-3.38-8.44z"/></svg>
+            <a href="https://wa.me/910000000000" target="_blank" rel="noopener">WhatsApp Chat</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Phoenix Solar Power Solutions LLP. All rights reserved.</span>
+      <span>Powering a Brighter Tomorrow with Solar Energy.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/910000000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.04 0C5.5 0 .19 5.31.19 11.85c0 2.09.55 4.13 1.59 5.93L0 24l6.38-1.67a11.8 11.8 0 0 0 5.66 1.44h.01c6.54 0 11.85-5.31 11.85-11.85 0-3.17-1.23-6.15-3.38-8.44zM12.05 21.7h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.78.99 1.01-3.68-.23-.38a9.82 9.82 0 0 1-1.5-5.2c0-5.42 4.41-9.83 9.84-9.83 2.63 0 5.1 1.02 6.96 2.88a9.77 9.77 0 0 1 2.88 6.96c0 5.43-4.41 9.84-9.81 9.84zm5.4-7.37c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.35.19 1.86.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+</a>
+
+<!-- Back to top -->
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+/* ============================================
+   NAVIGATION
+   ============================================ */
+const nav = document.getElementById('nav');
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+  document.getElementById('backTop').classList.toggle('show', window.scrollY > 500);
+});
+
+navToggle.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  navToggle.classList.toggle('open', open);
+  navToggle.setAttribute('aria-expanded', open);
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+});
+
+/* ============================================
+   SCROLL REVEAL
+   ============================================ */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ============================================
+   PROJECT FILTERS
+   ============================================ */
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectItems = document.querySelectorAll('.project-item');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    projectItems.forEach(item => {
+      const show = filter === 'all' || item.dataset.cat === filter;
+      item.style.display = show ? '' : 'none';
+    });
+  });
+});
+
+/* ============================================
+   LIGHTBOX
+   ============================================ */
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCaption = document.getElementById('lightboxCaption');
+const lightboxClose = document.getElementById('lightboxClose');
+
+projectItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const img = item.querySelector('img');
+    lightboxImg.src = img.src.replace('w=800', 'w=1600');
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = (item.dataset.title || '') + (item.dataset.caption ? ' — ' + item.dataset.caption : '');
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+/* ============================================
+   ENQUIRY FORM
+   ============================================ */
+const form = document.getElementById('enquiryForm');
+const formMessage = document.getElementById('formMessage');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  formMessage.className = 'form-message';
+  formMessage.textContent = '';
+
+  const name = form.fullName.value.trim();
+  const mobile = form.mobile.value.trim();
+  const email = form.email.value.trim();
+  const reqType = form.reqType.value;
+
+  if (!name || !mobile || !email || !reqType) {
+    formMessage.className = 'form-message error';
+    formMessage.textContent = 'Please fill in all required fields.';
+    return;
+  }
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    formMessage.className = 'form-message error';
+    formMessage.textContent = 'Please enter a valid email address.';
+    return;
+  }
+
+  const mobilePattern = /^[0-9\s\+\-]{7,15}$/;
+  if (!mobilePattern.test(mobile)) {
+    formMessage.className = 'form-message error';
+    formMessage.textContent = 'Please enter a valid mobile number.';
+    return;
+  }
+
+  // NOTE: Form submission endpoint is not configured.
+  // When a backend or form service (Formspree, Netlify Forms, custom API) is connected,
+  // replace the block below with a real fetch() submission.
+  formMessage.className = 'form-message success';
+  formMessage.textContent = 'Thank you! Your enquiry has been received. Our team will contact you shortly.';
+  form.reset();
+
+  // Scroll message into view
+  formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+
+/* ============================================
+   BACK TO TOP
+   ============================================ */
+document.getElementById('backTop').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/* ============================================
+   FOOTER YEAR
+   ============================================ */
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
