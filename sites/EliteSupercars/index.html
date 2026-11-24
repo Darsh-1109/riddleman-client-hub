@@ -1,0 +1,2550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Elite Supercars India | Luxury & Exotic Cars</title>
+<meta name="description" content="Elite Supercars India – Premium Luxury & Supercar Dealer in Mumbai. Discover an exclusive world of luxury automobiles, exceptional design and extraordinary performance." />
+<meta name="keywords" content="luxury cars Mumbai, supercars India, exotic cars dealer, Lamborghini, Ferrari, McLaren, Rolls-Royce, Bentley, pre-owned luxury cars Mumbai" />
+<meta name="author" content="Elite Supercars India" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Elite Supercars India – Premium Luxury & Supercar Dealer in Mumbai" />
+<meta property="og:description" content="Discover an exclusive world of luxury automobiles, exceptional design and extraordinary performance." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_IN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#111111" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoDealer",
+  "name": "Elite Supercars India",
+  "image": "",
+  "url": "https://elitesupercarsindia.com",
+  "telephone": "+91-9876543210",
+  "priceRange": "₹₹₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Mahalaxmi",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "postalCode": "400034",
+    "addressCountry": "IN"
+  }
+}
+</script>
+
+<style>
+/* ============================================
+   ELITE SUPERCARS INDIA — Premium Stylesheet
+   ============================================ */
+
+:root {
+  --obsidian: #111111;
+  --graphite: #202020;
+  --graphite-2: #181818;
+  --gold: #C6A66B;
+  --gold-soft: #d4b985;
+  --gold-deep: #a88a52;
+  --ivory: #F7F5F0;
+  --ivory-2: #EFECE4;
+  --grey: #B8B8B8;
+  --grey-soft: #8a8a8a;
+  --white: #FFFFFF;
+  --line: rgba(198, 166, 107, 0.18);
+  --line-dark: rgba(255,255,255,0.08);
+
+  --ff-display: 'Playfair Display', Georgia, serif;
+  --ff-head: 'Manrope', 'Montserrat', sans-serif;
+  --ff-body: 'Inter', system-ui, sans-serif;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.7, 0, 0.3, 1);
+
+  --max: 1440px;
+  --pad: clamp(20px, 4vw, 56px);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--ff-body);
+  background: var(--obsidian);
+  color: var(--white);
+  overflow-x: hidden;
+  line-height: 1.6;
+  font-weight: 400;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+::selection { background: var(--gold); color: var(--obsidian); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--obsidian); }
+::-webkit-scrollbar-thumb { background: var(--graphite); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 24px var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s var(--ease);
+  background: transparent;
+}
+.nav.scrolled {
+  background: rgba(17, 17, 17, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 16px var(--pad);
+  border-bottom: 1px solid var(--line-dark);
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--ff-head);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.nav-logo-mark {
+  width: 38px; height: 38px;
+  display: grid; place-items: center;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 500;
+}
+.nav-logo small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+.nav-links a {
+  font-family: var(--ff-head);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.3s;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 0; height: 1px;
+  background: var(--gold);
+  transition: width 0.4s var(--ease);
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-cta {
+  font-family: var(--ff-head);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 14px 28px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  transition: all 0.4s var(--ease);
+  display: inline-block;
+}
+.nav-cta:hover {
+  background: var(--gold);
+  color: var(--obsidian);
+}
+
+.nav-burger {
+  display: none;
+  width: 30px; height: 22px;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nav-burger span {
+  display: block;
+  width: 100%; height: 1px;
+  background: var(--white);
+  transition: all 0.4s var(--ease);
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(10.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-10.5px) rotate(-45deg); }
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 720px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.hero-media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transform: scale(1.08);
+  animation: heroZoom 12s var(--ease-soft) forwards;
+  filter: brightness(0.72) contrast(1.05);
+}
+@keyframes heroZoom {
+  0% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(17,17,17,0.5) 0%, rgba(17,17,17,0.2) 40%, rgba(17,17,17,0.85) 100%),
+    radial-gradient(ellipse at center, transparent 0%, rgba(17,17,17,0.4) 100%);
+  z-index: 2;
+}
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 0 24px;
+  max-width: 1100px;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--ff-head);
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fadeUp 1s var(--ease) 0.3s forwards;
+}
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: '';
+  width: 40px; height: 1px;
+  background: var(--gold);
+}
+.hero-title {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-size: clamp(40px, 7vw, 96px);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeUp 1.2s var(--ease) 0.5s forwards;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--gold);
+  font-weight: 400;
+}
+.hero-sub {
+  font-family: var(--ff-body);
+  font-size: clamp(14px, 1.4vw, 17px);
+  color: rgba(255,255,255,0.78);
+  max-width: 640px;
+  margin: 0 auto 48px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  animation: fadeUp 1.2s var(--ease) 0.7s forwards;
+}
+.hero-ctas {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 1.2s var(--ease) 0.9s forwards;
+}
+.btn {
+  font-family: var(--ff-head);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 18px 36px;
+  transition: all 0.4s var(--ease);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--obsidian);
+}
+.btn-primary:hover {
+  background: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(198, 166, 107, 0.3);
+}
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.4);
+  color: var(--white);
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.btn-dark {
+  background: var(--obsidian);
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+.btn-dark:hover {
+  background: var(--gold);
+  color: var(--obsidian);
+}
+.btn svg { width: 14px; height: 14px; }
+
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  animation: fadeUp 1.2s var(--ease) 1.2s forwards;
+}
+.hero-scroll span {
+  font-family: var(--ff-head);
+  font-size: 9px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+.hero-scroll-line {
+  width: 1px; height: 50px;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  position: relative;
+  overflow: hidden;
+}
+.hero-scroll-line::after {
+  content: '';
+  position: absolute;
+  top: -50%; left: 0;
+  width: 100%; height: 50%;
+  background: var(--gold);
+  animation: scrollLine 2s var(--ease-soft) infinite;
+}
+@keyframes scrollLine {
+  0% { top: -50%; }
+  100% { top: 100%; }
+}
+
+.hero-meta {
+  position: absolute;
+  bottom: 40px;
+  right: var(--pad);
+  z-index: 3;
+  text-align: right;
+  font-family: var(--ff-head);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  opacity: 0;
+  animation: fadeUp 1.2s var(--ease) 1.4s forwards;
+}
+.hero-meta strong { color: var(--gold); display: block; margin-bottom: 4px; font-weight: 500; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   SECTION BASE
+   ============================================ */
+section { padding: clamp(80px, 10vw, 140px) var(--pad); position: relative; }
+.container { max-width: var(--max); margin: 0 auto; }
+
+.section-head {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto clamp(50px, 7vw, 90px);
+}
+.section-eyebrow {
+  font-family: var(--ff-head);
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+.section-eyebrow::before {
+  content: '';
+  width: 30px; height: 1px;
+  background: var(--gold);
+}
+.section-title {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-size: clamp(32px, 4.5vw, 60px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+.section-title em { font-style: italic; color: var(--gold); }
+.section-sub {
+  font-size: clamp(14px, 1.3vw, 16px);
+  color: var(--grey-soft);
+  font-weight: 300;
+  line-height: 1.7;
+}
+.dark .section-sub { color: rgba(255,255,255,0.6); }
+.light .section-sub { color: #5a5a5a; }
+
+.dark { background: var(--obsidian); color: var(--white); }
+.graphite { background: var(--graphite); color: var(--white); }
+.light { background: var(--ivory); color: var(--obsidian); }
+.light-2 { background: var(--ivory-2); color: var(--obsidian); }
+
+/* ============================================
+   FEATURED COLLECTION (Cinematic Carousel)
+   ============================================ */
+.featured {
+  padding-top: clamp(80px, 10vw, 140px);
+  padding-bottom: clamp(80px, 10vw, 140px);
+  background: var(--graphite-2);
+  overflow: hidden;
+}
+.featured-track {
+  display: flex;
+  gap: 28px;
+  padding: 0 var(--pad);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin: 0 calc(var(--pad) * -1);
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+}
+.featured-track::-webkit-scrollbar { display: none; }
+
+.featured-card {
+  flex: 0 0 min(640px, 80vw);
+  scroll-snap-align: start;
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--graphite);
+}
+.featured-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease);
+}
+.featured-card:hover img { transform: scale(1.06); }
+.featured-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(17,17,17,0.95) 100%);
+}
+.featured-info {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 40px;
+  z-index: 2;
+  color: var(--white);
+}
+.featured-info .tag {
+  font-family: var(--ff-head);
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.featured-info h3 {
+  font-family: var(--ff-display);
+  font-weight: 400;
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+.featured-info p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 18px;
+  max-width: 480px;
+}
+.featured-specs {
+  display: flex;
+  gap: 24px;
+  font-family: var(--ff-head);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 22px;
+}
+.featured-specs span strong { color: var(--gold); margin-right: 6px; font-weight: 500; }
+.featured-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--ff-head);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  transition: gap 0.3s var(--ease);
+}
+.featured-link:hover { gap: 18px; }
+.featured-link svg { width: 14px; height: 14px; }
+
+.featured-nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 50px;
+}
+.featured-nav button {
+  width: 54px; height: 54px;
+  border: 1px solid var(--line-dark);
+  color: var(--white);
+  display: grid; place-items: center;
+  transition: all 0.3s var(--ease);
+}
+.featured-nav button:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(198, 166, 107, 0.06);
+}
+.featured-nav svg { width: 18px; height: 18px; }
+
+/* ============================================
+   COLLECTION / INVENTORY
+   ============================================ */
+.collection {
+  background: var(--ivory);
+  color: var(--obsidian);
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 50px;
+  padding: 28px;
+  background: var(--white);
+  border: 1px solid rgba(17,17,17,0.06);
+  box-shadow: 0 1px 2px rgba(17,17,17,0.02);
+}
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 160px;
+}
+.filter-group label {
+  font-family: var(--ff-head);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--grey-soft);
+  font-weight: 600;
+}
+.filter-group select, .filter-group input {
+  padding: 10px 14px;
+  border: 1px solid rgba(17,17,17,0.12);
+  background: var(--ivory);
+  font-family: var(--ff-body);
+  font-size: 13px;
+  color: var(--obsidian);
+  outline: none;
+  transition: border 0.3s;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C6A66B' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px;
+  padding-right: 36px;
+}
+.filter-group select:focus, .filter-group input:focus { border-color: var(--gold); }
+
+.filter-reset {
+  align-self: flex-end;
+  padding: 10px 20px;
+  font-family: var(--ff-head);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--obsidian);
+  border-bottom: 1px solid var(--gold);
+  font-weight: 600;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 32px;
+}
+.vehicle-card {
+  background: var(--white);
+  overflow: hidden;
+  transition: all 0.5s var(--ease);
+  position: relative;
+  border: 1px solid rgba(17,17,17,0.05);
+}
+.vehicle-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px -20px rgba(17,17,17,0.2);
+}
+.vehicle-card-media {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: var(--graphite);
+}
+.vehicle-card-media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1s var(--ease);
+}
+.vehicle-card:hover .vehicle-card-media img { transform: scale(1.08); }
+.vehicle-status {
+  position: absolute;
+  top: 16px; left: 16px;
+  padding: 6px 12px;
+  font-family: var(--ff-head);
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: var(--gold);
+  color: var(--obsidian);
+}
+.vehicle-status.sold { background: var(--obsidian); color: var(--white); }
+.vehicle-status.new { background: var(--white); color: var(--obsidian); }
+
+.vehicle-card-body {
+  padding: 28px 28px 24px;
+}
+.vehicle-brand {
+  font-family: var(--ff-head);
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.vehicle-name {
+  font-family: var(--ff-display);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  color: var(--obsidian);
+}
+.vehicle-specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 16px;
+  padding: 18px 0;
+  border-top: 1px solid rgba(17,17,17,0.08);
+  border-bottom: 1px solid rgba(17,17,17,0.08);
+  margin-bottom: 20px;
+}
+.vehicle-spec {
+  font-size: 12px;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.vehicle-spec strong {
+  font-family: var(--ff-head);
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--grey-soft);
+  font-weight: 600;
+}
+.vehicle-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.vehicle-price .label {
+  font-family: var(--ff-head);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--grey-soft);
+  font-weight: 600;
+}
+.vehicle-price .amount {
+  font-family: var(--ff-display);
+  font-size: 22px;
+  color: var(--obsidian);
+  font-weight: 500;
+}
+.vehicle-price .amount.por { font-size: 16px; font-style: italic; }
+
+.vehicle-cta {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  background: var(--obsidian);
+  color: var(--white);
+  font-family: var(--ff-head);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s var(--ease);
+}
+.vehicle-cta:hover {
+  background: var(--gold);
+  color: var(--obsidian);
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--grey-soft);
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: 20px;
+}
+
+/* ============================================
+   ABOUT
+   ============================================ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: center;
+}
+.about-media {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+.about-media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s var(--ease);
+}
+.about-media:hover img { transform: scale(1.05); }
+.about-media::after {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  border: 1px solid var(--gold);
+  pointer-events: none;
+  opacity: 0.4;
+}
+.about-content .section-eyebrow { color: var(--gold); }
+.about-content .section-title { text-align: left; margin-bottom: 24px; }
+.about-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 36px;
+  font-weight: 300;
+}
+.about-features {
+  list-style: none;
+  display: grid;
+  gap: 16px;
+}
+.about-features li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line-dark);
+  font-family: var(--ff-head);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.9);
+}
+.about-features li::before {
+  content: '';
+  width: 30px; height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ============================================
+   EXPERIENCE (Journey)
+   ============================================ */
+.experience {
+  background: var(--ivory);
+  color: var(--obsidian);
+}
+.journey {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  position: relative;
+  margin-top: 60px;
+}
+.journey::before {
+  content: '';
+  position: absolute;
+  top: 40px; left: 10%; right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.3;
+}
+.journey-step {
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+.journey-num {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: 56px;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+.journey-num::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; left: 50%;
+  transform: translateX(-50%);
+  width: 20px; height: 1px;
+  background: var(--obsidian);
+}
+.journey-title {
+  font-family: var(--ff-head);
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: var(--obsidian);
+}
+.journey-desc {
+  font-size: 14px;
+  color: #5a5a5a;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* ============================================
+   WHY US
+   ============================================ */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px;
+  background: var(--line-dark);
+  border: 1px solid var(--line-dark);
+  margin-top: 40px;
+}
+.why-item {
+  background: var(--graphite);
+  padding: 50px 36px;
+  transition: all 0.5s var(--ease);
+  position: relative;
+}
+.why-item:hover {
+  background: var(--graphite-2);
+}
+.why-item:hover .why-icon { color: var(--gold); transform: translateY(-4px); }
+.why-icon {
+  width: 48px; height: 48px;
+  color: var(--gold);
+  margin-bottom: 24px;
+  transition: all 0.4s var(--ease);
+}
+.why-icon svg { width: 100%; height: 100%; stroke-width: 1; }
+.why-title {
+  font-family: var(--ff-head);
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--white);
+}
+.why-desc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ============================================
+   SELL YOUR CAR
+   ============================================ */
+.sell {
+  background: var(--obsidian);
+  position: relative;
+  overflow: hidden;
+}
+.sell::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 50%; height: 100%;
+  background: url('https://images.unsplash.com/photo-1503376780353-7e6694cfb55a?w=1200&q=80') center/cover;
+  opacity: 0.12;
+  mask-image: linear-gradient(90deg, transparent, black);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black);
+}
+.sell-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(40px, 6vw, 100px);
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+.sell-content .section-title { text-align: left; }
+.sell-content .section-eyebrow { color: var(--gold); }
+.sell-text {
+  font-size: 16px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+.sell-points {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+.sell-points li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--ff-head);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.85);
+}
+.sell-points li::before {
+  content: '→';
+  color: var(--gold);
+  font-size: 16px;
+}
+
+.sell-form {
+  background: var(--graphite);
+  padding: clamp(30px, 4vw, 50px);
+  border: 1px solid var(--line-dark);
+}
+.sell-form h3 {
+  font-family: var(--ff-display);
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+.sell-form .form-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 30px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line-dark);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-group.full { grid-column: 1 / -1; }
+.form-group label {
+  font-family: var(--ff-head);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+.form-group input, .form-group select, .form-group textarea {
+  padding: 14px 16px;
+  background: var(--obsidian);
+  border: 1px solid var(--line-dark);
+  color: var(--white);
+  font-family: var(--ff-body);
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: var(--gold);
+}
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-submit {
+  width: 100%;
+  margin-top: 10px;
+  padding: 18px;
+  background: var(--gold);
+  color: var(--obsidian);
+  font-family: var(--ff-head);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s var(--ease);
+}
+.form-submit:hover {
+  background: var(--white);
+}
+
+/* ============================================
+   GALLERY
+   ============================================ */
+.gallery {
+  background: var(--ivory);
+  color: var(--obsidian);
+}
+.gallery-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.gallery-tab {
+  padding: 10px 22px;
+  font-family: var(--ff-head);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--grey-soft);
+  border: 1px solid transparent;
+  transition: all 0.3s var(--ease);
+  font-weight: 600;
+}
+.gallery-tab:hover { color: var(--obsidian); }
+.gallery-tab.active {
+  color: var(--obsidian);
+  border-color: var(--obsidian);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: 12px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--graphite);
+}
+.gallery-item.tall { grid-row: span 2; }
+.gallery-item.wide { grid-column: span 2; }
+.gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 1s var(--ease);
+}
+.gallery-item:hover img { transform: scale(1.08); }
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(17,17,17,0.7) 100%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.gallery-item:hover::after { opacity: 1; }
+.gallery-item .caption {
+  position: absolute;
+  bottom: 20px; left: 20px;
+  color: var(--white);
+  font-family: var(--ff-head);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s var(--ease);
+  z-index: 2;
+}
+.gallery-item:hover .caption { opacity: 1; transform: translateY(0); }
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(17,17,17,0.96);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+.lightbox.open { display: flex; animation: fadeIn 0.4s var(--ease); }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.lightbox img {
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
+  animation: zoomIn 0.5s var(--ease);
+}
+@keyframes zoomIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.lightbox-close {
+  position: absolute;
+  top: 30px; right: 30px;
+  width: 50px; height: 50px;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  display: grid; place-items: center;
+  transition: all 0.3s;
+}
+.lightbox-close:hover { border-color: var(--gold); color: var(--gold); }
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px; height: 60px;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  display: grid; place-items: center;
+  transition: all 0.3s;
+}
+.lightbox-nav:hover { border-color: var(--gold); color: var(--gold); background: rgba(198,166,107,0.06); }
+.lightbox-prev { left: 30px; }
+.lightbox-next { right: 30px; }
+
+/* ============================================
+   CONTACT
+   ============================================ */
+.contact {
+  background: var(--obsidian);
+  position: relative;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(40px, 6vw, 80px);
+}
+.contact-info h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: var(--white);
+}
+.contact-info h2 em { font-style: italic; color: var(--gold); }
+.contact-info .lead {
+  font-size: 16px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+.contact-details {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.contact-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line-dark);
+}
+.contact-item-icon {
+  width: 44px; height: 44px;
+  border: 1px solid var(--gold);
+  display: grid; place-items: center;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.contact-item-icon svg { width: 18px; height: 18px; }
+.contact-item-label {
+  font-family: var(--ff-head);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.contact-item-value {
+  font-size: 15px;
+  color: var(--white);
+  line-height: 1.5;
+}
+.contact-item-value a { transition: color 0.3s; }
+.contact-item-value a:hover { color: var(--gold); }
+
+.contact-socials {
+  display: flex;
+  gap: 12px;
+}
+.contact-socials a {
+  width: 44px; height: 44px;
+  border: 1px solid var(--line-dark);
+  display: grid; place-items: center;
+  color: var(--white);
+  transition: all 0.3s var(--ease);
+}
+.contact-socials a:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-3px);
+}
+.contact-socials svg { width: 16px; height: 16px; }
+
+.contact-form {
+  background: var(--graphite);
+  padding: clamp(30px, 4vw, 50px);
+  border: 1px solid var(--line-dark);
+}
+.contact-form h3 {
+  font-family: var(--ff-display);
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+.contact-form .form-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 30px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.map {
+  margin-top: 80px;
+  aspect-ratio: 21/6;
+  background: var(--graphite);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line-dark);
+}
+.map iframe {
+  width: 100%; height: 100%;
+  border: 0;
+  filter: grayscale(1) invert(0.92) contrast(0.85);
+}
+.map-overlay {
+  position: absolute;
+  top: 30px; left: 30px;
+  background: var(--obsidian);
+  padding: 24px 28px;
+  border-left: 2px solid var(--gold);
+  max-width: 320px;
+}
+.map-overlay h4 {
+  font-family: var(--ff-head);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.map-overlay p {
+  font-size: 14px;
+  color: var(--white);
+  line-height: 1.6;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: var(--obsidian);
+  color: var(--white);
+  padding: 80px var(--pad) 30px;
+  border-top: 1px solid var(--line-dark);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 50px;
+  max-width: var(--max);
+  margin: 0 auto 60px;
+}
+.footer-brand .nav-logo { margin-bottom: 20px; }
+.footer-brand p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.7;
+  max-width: 340px;
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+.footer h5 {
+  font-family: var(--ff-head);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+.footer ul { list-style: none; display: grid; gap: 12px; }
+.footer ul a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.3s;
+  font-weight: 300;
+}
+.footer ul a:hover { color: var(--gold); }
+
+.footer-bottom {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding-top: 30px;
+  border-top: 1px solid var(--line-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  font-family: var(--ff-head);
+  letter-spacing: 0.1em;
+}
+.footer-bottom a { transition: color 0.3s; }
+.footer-bottom a:hover { color: var(--gold); }
+
+/* Floating WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px; right: 30px;
+  width: 58px; height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  z-index: 90;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s var(--ease);
+  animation: pulse 2.5s infinite;
+}
+.whatsapp-float:hover { transform: scale(1.1); }
+.whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.7), 0 0 0 10px rgba(37, 211, 102, 0); }
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s var(--ease), transform 1s var(--ease);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .about-grid, .sell-grid, .contact-grid { grid-template-columns: 1fr; }
+  .about-media { aspect-ratio: 16/10; }
+  .journey { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+  .journey::before { display: none; }
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { display: none; }
+  .nav-burger { display: flex; }
+  .nav.open .nav-links {
+    display: flex;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--obsidian);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 99;
+  }
+  .nav.open .nav-links a { font-size: 16px; }
+  .nav.open .nav-cta {
+    display: inline-block;
+    position: fixed;
+    bottom: 40px;
+    z-index: 100;
+  }
+  .hero-meta { display: none; }
+  .inventory-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+  .gallery-item.wide { grid-column: span 2; }
+  .form-row { grid-template-columns: 1fr; }
+  .journey { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+  .featured-card { flex: 0 0 85vw; }
+  .featured-info { padding: 24px; }
+  .featured-info h3 { font-size: 22px; }
+  .featured-specs { flex-wrap: wrap; gap: 12px; }
+  .map { aspect-ratio: 4/3; }
+  .map-overlay { position: static; max-width: 100%; border-left: none; border-top: 2px solid var(--gold); }
+  .whatsapp-float { width: 52px; height: 52px; bottom: 20px; right: 20px; }
+  .lightbox-nav { width: 44px; height: 44px; }
+  .lightbox-prev { left: 10px; }
+  .lightbox-next { right: 10px; }
+}
+@media (max-width: 480px) {
+  .hero-ctas { flex-direction: column; width: 100%; }
+  .hero-ctas .btn { width: 100%; justify-content: center; }
+  .filters { padding: 20px; }
+  .filter-group { min-width: 100%; }
+  .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
+  .gallery-item.wide, .gallery-item.tall { grid-column: span 1; grid-row: span 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav class="nav" id="nav">
+  <a href="#home" class="nav-logo" aria-label="Elite Supercars India home">
+    <span class="nav-logo-mark">E</span>
+    <span>Elite Supercars<small>India · Mumbai</small></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#collection">Our Collection</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#sell">Sell Your Car</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Enquire Now</a>
+  <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero" id="home">
+  <div class="hero-media">
+    <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=2400&q=85" alt="Luxury supercar in cinematic lighting" loading="eager" />
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Elite Supercars India</div>
+    <h1 class="hero-title">Beyond Driving.<br/>Into <em>Excellence.</em></h1>
+    <p class="hero-sub">Discover an exclusive world of luxury automobiles, exceptional design and extraordinary performance.</p>
+    <div class="hero-ctas">
+      <a href="#collection" class="btn btn-primary">
+        Explore Our Collection
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#contact" class="btn btn-outline">Enquire About a Car</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+  <div class="hero-meta">
+    <strong>Since Establishment</strong>
+    Mahalaxmi · Mumbai
+  </div>
+</section>
+
+<!-- ============================================
+     FEATURED COLLECTION
+     ============================================ -->
+<section class="featured dark" id="featured">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Featured Automobiles</div>
+      <h2 class="section-title">A Collection <em>Beyond Ordinary.</em></h2>
+      <p class="section-sub">A curated selection of the world's most distinguished automobiles, presented for the discerning collector.</p>
+    </div>
+  </div>
+
+  <div class="featured-track" id="featuredTrack">
+    <article class="featured-card">
+      <img src="https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=1400&q=85" alt="Lamborghini Huracán" loading="lazy" />
+      <div class="featured-info">
+        <div class="tag">Supercar · V10</div>
+        <h3>Lamborghini Huracán EVO</h3>
+        <p>A naturally aspirated V10 masterpiece, engineered for unfiltered performance and unmistakable presence.</p>
+        <div class="featured-specs">
+          <span><strong>640</strong>HP</span>
+          <span><strong>2.9s</strong> 0–100</span>
+          <span><strong>325</strong>km/h</span>
+        </div>
+        <a href="#collection" class="featured-link">
+          Explore Vehicle
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="featured-card">
+      <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=1400&q=85" alt="Ferrari F8 Tributo" loading="lazy" />
+      <div class="featured-info">
+        <div class="tag">Supercar · Twin-Turbo V8</div>
+        <h3>Ferrari F8 Tributo</h3>
+        <p>The ultimate tribute to Ferrari's most powerful V8 engine in history — a symphony of Italian engineering.</p>
+        <div class="featured-specs">
+          <span><strong>720</strong>HP</span>
+          <span><strong>2.9s</strong> 0–100</span>
+          <span><strong>340</strong>km/h</span>
+        </div>
+        <a href="#collection" class="featured-link">
+          Explore Vehicle
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="featured-card">
+      <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=1400&q=85" alt="Rolls-Royce Ghost" loading="lazy" />
+      <div class="featured-info">
+        <div class="tag">Luxury Sedan · V12</div>
+        <h3>Rolls-Royce Ghost</h3>
+        <p>Post-opulent luxury redefined. A sanctuary of calm, craftsmanship and effortless power.</p>
+        <div class="featured-specs">
+          <span><strong>571</strong>HP</span>
+          <span><strong>4.8s</strong> 0–100</span>
+          <span><strong>250</strong>km/h</span>
+        </div>
+        <a href="#collection" class="featured-link">
+          Explore Vehicle
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="featured-card">
+      <img src="https://images.unsplash.com/photo-1611821064430-0d40291d0f0b?w=1400&q=85" alt="McLaren 720S" loading="lazy" />
+      <div class="featured-info">
+        <div class="tag">Supercar · Twin-Turbo V8</div>
+        <h3>McLaren 720S</h3>
+        <p>Pure aerodynamic artistry — a carbon-fibre masterpiece that redefines the supercar experience.</p>
+        <div class="featured-specs">
+          <span><strong>720</strong>HP</span>
+          <span><strong>2.9s</strong> 0–100</span>
+          <span><strong>341</strong>km/h</span>
+        </div>
+        <a href="#collection" class="featured-link">
+          Explore Vehicle
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="featured-card">
+      <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=1400&q=85" alt="Porsche 911 Turbo S" loading="lazy" />
+      <div class="featured-info">
+        <div class="tag">Performance · Twin-Turbo Flat-6</div>
+        <h3>Porsche 911 Turbo S</h3>
+        <p>Decades of engineering distilled into the most accomplished sports car ever built.</p>
+        <div class="featured-specs">
+          <span><strong>650</strong>HP</span>
+          <span><strong>2.7s</strong> 0–100</span>
+          <span><strong>330</strong>km/h</span>
+        </div>
+        <a href="#collection" class="featured-link">
+          Explore Vehicle
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </article>
+  </div>
+
+  <div class="featured-nav">
+    <button id="featuredPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+    <button id="featuredNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+  </div>
+</section>
+
+<!-- ============================================
+     COLLECTION / INVENTORY
+     ============================================ -->
+<section class="collection light" id="collection">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Our Collection</div>
+      <h2 class="section-title">The <em>Inventory.</em></h2>
+      <p class="section-sub">Browse our curated selection of luxury and exotic automobiles currently available for enquiry.</p>
+    </div>
+
+    <div class="filters reveal" id="filters">
+      <div class="filter-group">
+        <label>Brand</label>
+        <select id="filterBrand">
+          <option value="">All Brands</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Category</label>
+        <select id="filterCategory">
+          <option value="">All Categories</option>
+          <option value="Supercar">Supercars</option>
+          <option value="Luxury Sedan">Luxury Sedans</option>
+          <option value="Luxury SUV">Luxury SUVs</option>
+          <option value="Performance">Performance Cars</option>
+          <option value="Exotic">Exotic Automobiles</option>
+          <option value="Pre-Owned">Pre-Owned Luxury</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Year</label>
+        <select id="filterYear">
+          <option value="">Any Year</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Transmission</label>
+        <select id="filterTrans">
+          <option value="">Any</option>
+          <option value="Automatic">Automatic</option>
+          <option value="Dual-Clutch">Dual-Clutch</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Fuel</label>
+        <select id="filterFuel">
+          <option value="">Any</option>
+          <option value="Petrol">Petrol</option>
+          <option value="Hybrid">Hybrid</option>
+          <option value="Diesel">Diesel</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Sort By</label>
+        <select id="filterSort">
+          <option value="newest">Newest Arrivals</option>
+          <option value="priceLow">Price: Low to High</option>
+          <option value="priceHigh">Price: High to Low</option>
+        </select>
+      </div>
+      <button class="filter-reset" id="filterReset">Reset Filters</button>
+    </div>
+
+    <div class="inventory-grid" id="inventoryGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================
+     ABOUT
+     ============================================ -->
+<section class="dark" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-media reveal">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6694cfb55a?w=1200&q=85" alt="Luxury automotive showroom" loading="lazy" />
+      </div>
+      <div class="about-content reveal">
+        <div class="section-eyebrow">About Elite Supercars India</div>
+        <h2 class="section-title">Where Extraordinary Automobiles Meet <em>Exceptional Experiences.</em></h2>
+        <p class="about-text">Elite Supercars India brings together the world of luxury and exotic automobiles for enthusiasts and discerning buyers. Discover remarkable vehicles through a personalised and professional automotive experience.</p>
+        <ul class="about-features">
+          <li>Exclusive focus on luxury and exotic automobiles</li>
+          <li>Curated selection of distinguished vehicles</li>
+          <li>Personalised customer enquiries and consultation</li>
+          <li>Private vehicle viewing coordination</li>
+          <li>Professional assistance throughout the buying journey</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     EXPERIENCE / JOURNEY
+     ============================================ -->
+<section class="experience light" id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">The Elite Experience</div>
+      <h2 class="section-title">Your Journey to <em>Ownership.</em></h2>
+      <p class="section-sub">A refined, five-step path from discovery to delivery — crafted for those who expect nothing less than exceptional.</p>
+    </div>
+
+    <div class="journey reveal">
+      <div class="journey-step">
+        <div class="journey-num">01</div>
+        <h3 class="journey-title">Discover</h3>
+        <p class="journey-desc">Explore the available luxury and exotic automobile collection curated for discerning buyers.</p>
+      </div>
+      <div class="journey-step">
+        <div class="journey-num">02</div>
+        <h3 class="journey-title">Connect</h3>
+        <p class="journey-desc">Discuss vehicle details and ownership requirements with our dedicated team.</p>
+      </div>
+      <div class="journey-step">
+        <div class="journey-num">03</div>
+        <h3 class="journey-title">Experience</h3>
+        <p class="journey-desc">Arrange a private vehicle viewing and inspect the automobile in person.</p>
+      </div>
+      <div class="journey-step">
+        <div class="journey-num">04</div>
+        <h3 class="journey-title">Purchase</h3>
+        <p class="journey-desc">Discuss the transaction, documentation and delivery process with clarity.</p>
+      </div>
+      <div class="journey-step">
+        <div class="journey-num">05</div>
+        <h3 class="journey-title">Drive</h3>
+        <p class="journey-desc">Experience the excitement of your chosen automobile on the open road.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     WHY US
+     ============================================ -->
+<section class="graphite" id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Why Elite Supercars India</div>
+      <h2 class="section-title">The <em>Distinction.</em></h2>
+      <p class="section-sub" style="color: rgba(255,255,255,0.6);">What sets our automotive experience apart from the ordinary.</p>
+    </div>
+
+    <div class="why-grid reveal">
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2L15 8l6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+        </div>
+        <h3 class="why-title">Luxury Automobile Focus</h3>
+        <p class="why-desc">A dedicated focus exclusively on luxury and exotic automobiles — nothing ordinary, nothing compromised.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
+        </div>
+        <h3 class="why-title">Personalised Interaction</h3>
+        <p class="why-desc">Every enquiry is handled personally. Your journey is unique, and our approach reflects that.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M9 9h6v6H9z"/></svg>
+        </div>
+        <h3 class="why-title">Curated Enquiries</h3>
+        <p class="why-desc">Each vehicle in our collection is carefully considered and presented with complete transparency.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg>
+        </div>
+        <h3 class="why-title">Premium Showroom</h3>
+        <p class="why-desc">Experience our automobiles in a refined, private environment designed for serious collectors.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h3 class="why-title">End-to-End Assistance</h3>
+        <p class="why-desc">From first enquiry to final delivery, our team supports you through every step of the process.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v20M2 12h20"/></svg>
+        </div>
+        <h3 class="why-title">Mumbai Presence</h3>
+        <p class="why-desc">Based in Mahalaxmi, Mumbai — at the heart of India's luxury automotive landscape.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SELL YOUR CAR
+     ============================================ -->
+<section class="sell" id="sell">
+  <div class="container">
+    <div class="sell-grid">
+      <div class="sell-content reveal">
+        <div class="section-eyebrow">Sell Your Luxury Car</div>
+        <h2 class="section-title">Thinking of Selling Your <em>Luxury Car?</em></h2>
+        <p class="sell-text">Connect with Elite Supercars India to discuss your vehicle and explore potential selling opportunities. We welcome enquiries from owners of distinguished automobiles.</p>
+        <ul class="sell-points">
+          <li>Discreet and professional handling of every enquiry</li>
+          <li>Focus on luxury and exotic automobile segments</li>
+          <li>Personalised consultation with our team</li>
+          <li>Based in Mumbai with a serious buyer network</li>
+        </ul>
+      </div>
+
+      <form class="sell-form reveal" id="sellForm" novalidate>
+        <h3>Submit Vehicle Details</h3>
+        <p class="form-sub">Share your vehicle information and our team will be in touch.</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="sellName">Full Name</label>
+            <input type="text" id="sellName" required />
+          </div>
+          <div class="form-group">
+            <label for="sellPhone">Phone Number</label>
+            <input type="tel" id="sellPhone" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="sellEmail">Email</label>
+            <input type="email" id="sellEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="sellBrand">Car Brand</label>
+            <input type="text" id="sellBrand" placeholder="e.g. Lamborghini" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="sellModel">Model</label>
+            <input type="text" id="sellModel" />
+          </div>
+          <div class="form-group">
+            <label for="sellYear">Manufacturing Year</label>
+            <input type="number" id="sellYear" min="1990" max="2026" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="sellMileage">Current Mileage (km)</label>
+            <input type="number" id="sellMileage" />
+          </div>
+          <div class="form-group">
+            <label for="sellPrice">Expected Price (₹)</label>
+            <input type="text" id="sellPrice" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="sellLocation">Vehicle Location</label>
+            <input type="text" id="sellLocation" placeholder="City, State" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="sellNotes">Additional Information</label>
+            <textarea id="sellNotes" rows="3"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="form-submit">Submit Vehicle Details</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     GALLERY
+     ============================================ -->
+<section class="gallery light" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-eyebrow">Luxury Automotive Gallery</div>
+      <h2 class="section-title">Moments of <em>Automotive Art.</em></h2>
+      <p class="section-sub">A visual journey through our collection, showroom and the world of luxury automobiles.</p>
+    </div>
+
+    <div class="gallery-tabs reveal" id="galleryTabs">
+      <button class="gallery-tab active" data-cat="all">All</button>
+      <button class="gallery-tab" data-cat="supercars">Supercars</button>
+      <button class="gallery-tab" data-cat="suv">Luxury SUVs</button>
+      <button class="gallery-tab" data-cat="performance">Performance</button>
+      <button class="gallery-tab" data-cat="showroom">Showroom</button>
+      <button class="gallery-tab" data-cat="details">Details</button>
+    </div>
+
+    <div class="gallery-grid reveal" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================
+     CONTACT
+     ============================================ -->
+<section class="contact dark" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="section-eyebrow">Get In Touch</div>
+        <h2>Your Next Extraordinary Drive <em>Begins Here.</em></h2>
+        <p class="lead">Interested in a particular automobile? Connect with our team for vehicle details, availability and viewing enquiries.</p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Showroom</div>
+              <div class="contact-item-value">Mahalaxmi, Mumbai,<br/>Maharashtra, India</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Telephone</div>
+              <div class="contact-item-value"><a href="tel:+919876543210">+91 98765 43210</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value"><a href="mailto:enquiry@elitesupercarsindia.com">enquiry@elitesupercarsindia.com</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Hours</div>
+              <div class="contact-item-value">Mon – Sat · 10:00 – 19:00<br/>Sunday by appointment</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <h3>Send an Enquiry</h3>
+        <p class="form-sub">We respond to all genuine enquiries within 24 hours.</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cName">Full Name</label>
+            <input type="text" id="cName" required />
+          </div>
+          <div class="form-group">
+            <label for="cPhone">Phone Number</label>
+            <input type="tel" id="cPhone" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="cEmail">Email</label>
+            <input type="email" id="cEmail" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cVehicle">Interested Vehicle</label>
+            <input type="text" id="cVehicle" placeholder="e.g. Ferrari F8 Tributo" />
+          </div>
+          <div class="form-group">
+            <label for="cType">Enquiry Type</label>
+            <select id="cType">
+              <option>Vehicle Purchase</option>
+              <option>Vehicle Viewing</option>
+              <option>General Enquiry</option>
+              <option>Selling My Car</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="cMessage">Message</label>
+            <textarea id="cMessage" rows="4"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="form-submit">Send Enquiry</button>
+      </form>
+    </div>
+
+    <div class="map reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.666!2d72.83!3d18.98!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zTWFoYWxheG1pLCBNdW1iYWk!5e0!3m2!1sen!2sin!4v1"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Elite Supercars India location"></iframe>
+      <div class="map-overlay">
+        <h4>Visit Our Showroom</h4>
+        <p>Mahalaxmi, Mumbai,<br/>Maharashtra, India<br/>Viewings by appointment</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo">
+        <span class="nav-logo-mark">E</span>
+        <span>Elite Supercars<small>India · Mumbai</small></span>
+      </a>
+      <p>An exclusive destination for luxury and exotic automobiles in Mumbai. Curated vehicles, personalised service, extraordinary experiences.</p>
+    </div>
+    <div>
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="#collection">Our Collection</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#sell">Sell Your Car</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#experience">The Experience</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Legal</h5>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Elite Supercars India. All rights reserved.</div>
+    <div>Mahalaxmi · Mumbai · Maharashtra</div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lbClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  <button class="lightbox-nav lightbox-prev" id="lbPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+  <img id="lbImg" src="" alt="" />
+  <button class="lightbox-nav lightbox-next" id="lbNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+</div>
+
+<script>
+/* ============================================
+   ELITE SUPERCARS INDIA — JavaScript
+   ============================================ */
+
+/* ---------- Inventory Data ---------- */
+const inventory = [
+  {
+    id: 'lambo-huracan',
+    brand: 'Lamborghini',
+    model: 'Huracán EVO',
+    year: 2023,
+    variant: 'V10 Coupe',
+    category: 'Supercar',
+    mileage: 4200,
+    fuel: 'Petrol',
+    transmission: 'Dual-Clutch',
+    price: 48500000,
+    status: 'available',
+    image: 'https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=1200&q=80',
+    desc: 'A naturally aspirated V10 masterpiece finished in Verde Mantis with full carbon ceramic brakes.'
+  },
+  {
+    id: 'ferrari-f8',
+    brand: 'Ferrari',
+    model: 'F8 Tributo',
+    year: 2022,
+    variant: 'Twin-Turbo V8',
+    category: 'Supercar',
+    mileage: 7800,
+    fuel: 'Petrol',
+    transmission: 'Dual-Clutch',
+    price: 42500000,
+    status: 'available',
+    image: 'https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=1200&q=80',
+    desc: 'The ultimate tribute to Ferrari\'s most powerful V8 — Rosso Corsa with Nero leather.'
+  },
+  {
+    id: 'rr-ghost',
+    brand: 'Rolls-Royce',
+    model: 'Ghost',
+    year: 2023,
+    variant: 'Extended Wheelbase',
+    category: 'Luxury Sedan',
+    mileage: 5400,
+    fuel: 'Petrol',
+    transmission: 'Automatic',
+    price: 79500000,
+    status: 'available',
+    image: 'https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=1200&q=80',
+    desc: 'Post-opulent luxury in Arctic White with a Bespoke Starlight Headliner.'
+  },
+  {
+    id: 'mclaren-720s',
+    brand: 'McLaren',
+    model: '720S',
+    year: 2022,
+    variant: 'Performance',
+    category: 'Supercar',
+    mileage: 6100,
+    fuel: 'Petrol',
+    transmission: 'Dual-Clutch',
+    price: 46500000,
+    status: 'available',
+    image: 'https://images.unsplash.com/photo-1611821064430-0d40291d0f0b?w=1200&q=80',
+    desc: 'Aerodynamic artistry in Aztec Orange with carbon fibre upgrades throughout.'
+  },
+  {
+    id: 'porsche-911',
+    brand: 'Porsche',
+    model: '911 Turbo S',
+    year: 2023,
+    variant: 'Coupe',
+    category: 'Performance',
+    mileage: 3200,
+    fuel: 'Petrol',
+    transmission: 'Dual-Clutch',
+    price: 32500000,
+    status: 'available',
+    image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=1200&q=80',
+    desc: 'The benchmark sports car — GT Silver Metallic with Extended Leather.'
+  },
+  {
+    id: 'bentley-continental',
+    brand: 'Bentley',
+    model: 'Continental GT',
+    year: 2022,
+    variant: 'Speed W12',
+    category: 'Luxury Sedan',
+    mileage: 8900,
+    fuel: 'Petrol',
+    transmission: 'Automatic',
+    price: 38500000,
+    status: 'available',
+    image: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1200&q=80',
+    desc: 'Grand touring excellence with W12 power and Mulliner specification.'
+  },
+  {
+    id: 'rr-cullinan',
+    brand: 'Rolls-Royce',
+    model: 'Cullinan',
+    year: 2023,
+    variant: 'Black Badge',
+    category: 'Luxury SUV',
+    mileage: 4800,
+    fuel: 'Petrol',
+    transmission: 'Automatic',
+    price: 95000000,
+    status: 'available',
+    image: 'https://images.unsplash.com/photo-1631295868223-63265b40d9e4?w=1200&q=80&sat=-50',
+    desc: 'The pinnacle of luxury SUVs — Black Badge in Midnight Sapphire.'
+  },
+  {
+    id: 'audi-r8',
+    brand: 'Audi',
+    model: 'R8 V10',
+    year: 2022,
+    variant: 'Performance',
+    category: 'Performance',
+    mileage: 9200,
+    fuel: 'Petrol',
+    transmission: 'Dual-Clutch',
+    price: 26500000,
+    status: 'available',
+    image: 'https://images.unsplash.com/photo-1607853202273-797f1c3fbba0?w=1200&q=80',
+    desc: 'Everyday supercar — Daytona Grey with full carbon package.'
+  },
+  {
+    id: 'mercedes-amg-gt',
+    brand: 'Mercedes-Benz',
+    model: 'AMG GT 63 S',
+    year: 2021,
+    variant: '4MATIC+',
+    category: 'Performance',
+    mileage: 14500,
+    fuel: 'Petrol',
+    transmission: 'Automatic',
+    price: 22500000,
+    status: 'available',
+    image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80',
+    desc: 'Four-door coupé performance — Cirrus White with Red Pepper accents.'
+  },
+  {
+    id: 'lambo-urus',
+    brand: 'Lamborghini',
+    model: 'Urus',
+    year: 2023,
+    variant: 'S',
+    category: 'Luxury SUV',
+    mileage: 5600,
+    fuel: 'Petrol',
+    transmission: 'Automatic',
+    price: 52500000,
+    status: 'available',
+    image: 'https://images.unsplash.com/photo-1669228233609-4c6c16e03933?w=1200&q=80',
+    desc: 'Super SUV in Grigio Titans with full carbon fibre exterior package.'
+  },
+  {
+    id: 'ferrari-roma',
+    brand: 'Ferrari',
+    model: 'Roma',
+    year: 2022,
+    variant: 'V8 GT',
+    category: 'Exotic',
+    mileage: 6700,
+    fuel: 'Petrol',
+    transmission: 'Dual-Clutch',
+    price: 44500000,
+    status: 'available',
+    image: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1200&q=80',
+    desc: 'Italian elegance — Blu Corsa with Crema leather interior.'
+  },
+  {
+    id: 'bentley-bentayga',
+    brand: 'Bentley',
+    model: 'Bentayga',
+    year: 2021,
+    variant: 'Hybrid',
+    category: 'Pre-Owned',
+    mileage: 18200,
+    fuel: 'Hybrid',
+    transmission: 'Automatic',
+    price: 28500000,
+    status: 'available',
+    image: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=1200&q=80',
+    desc: 'Luxury hybrid SUV in Sequin Blue with Linen interior.'
+  }
+];
+
+/* ---------- Gallery Data ---------- */
+const galleryItems = [
+  { src: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1200&q=80', cat: 'supercars', caption: 'Supercar · Studio', size: 'wide' },
+  { src: 'https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=1200&q=80', cat: 'supercars', caption: 'Lamborghini Huracán', size: 'tall' },
+  { src: 'https://images.unsplash.com/photo-1503376780353-7e6694cfb55a?w=1200&q=80', cat: 'showroom', caption: 'Showroom · Detail', size: '' },
+  { src: 'https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=1200&q=80', cat: 'supercars', caption: 'Ferrari F8 Tributo', size: '' },
+  { src: 'https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=1200&q=80', cat: 'suv', caption: 'Luxury SUV · Drive', size: '' },
+  { src: 'https://images.unsplash.com/photo-1611821064430-0d40291d0f0b?w=1200&q=80', cat: 'performance', caption: 'McLaren 720S', size: 'wide' },
+  { src: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=1200&q=80', cat: 'performance', caption: 'Porsche 911 Turbo S', size: '' },
+  { src: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1200&q=80', cat: 'details', caption: 'Automotive Detail', size: 'tall' },
+  { src: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80', cat: 'performance', caption: 'AMG GT', size: '' },
+  { src: 'https://images.unsplash.com/photo-1607853202273-797f1c3fbba0?w=1200&q=80', cat: 'supercars', caption: 'Audi R8', size: '' },
+  { src: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=1200&q=80', cat: 'suv', caption: 'Bentley Bentayga', size: '' },
+  { src: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1200&q=80', cat: 'showroom', caption: 'Showroom · Collection', size: 'wide' },
+  { src: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1200&q=80', cat: 'details', caption: 'Interior Craftsmanship', size: '' },
+  { src: 'https://images.unsplash.com/photo-1542362567-b07e54358753?w=1200&q=80', cat: 'details', caption: 'Wheel Detail', size: '' },
+  { src: 'https://images.unsplash.com/photo-1503376780353-7e6694cfb55a?w=1200&q=80&sat=-30', cat: 'showroom', caption: 'Showroom · Evening', size: 'tall' },
+  { src: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1200&q=80', cat: 'supercars', caption: 'Ferrari Roma', size: '' }
+];
+
+/* ---------- Navigation ---------- */
+const nav = document.getElementById('nav');
+const navBurger = document.getElementById('navBurger');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+navBurger.addEventListener('click', () => {
+  navBurger.classList.toggle('open');
+  nav.classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a, .nav-cta').forEach(a => {
+  a.addEventListener('click', () => {
+    navBurger.classList.remove('open');
+    nav.classList.remove('open');
+  });
+});
+
+/* ---------- Format Price ---------- */
+const formatPrice = (p) => {
+  if (!p) return 'Price on Request';
+  if (p >= 10000000) return '₹ ' + (p / 10000000).toFixed(2) + ' Cr';
+  if (p >= 100000) return '₹ ' + (p / 100000).toFixed(2) + ' L';
+  return '₹ ' + p.toLocaleString('en-IN');
+};
+const formatMileage = (m) => m ? m.toLocaleString('en-IN') + ' km' : '—';
+
+/* ---------- Render Inventory ---------- */
+const grid = document.getElementById('inventoryGrid');
+const brandSelect = document.getElementById('filterBrand');
+
+// Populate brand filter
+const brands = [...new Set(inventory.map(v => v.brand))].sort();
+brands.forEach(b => {
+  const opt = document.createElement('option');
+  opt.value = b; opt.textContent = b;
+  brandSelect.appendChild(opt);
+});
+
+const filters = {
+  brand: '', category: '', year: '', trans: '', fuel: '', sort: 'newest'
+};
+
+function renderInventory() {
+  let list = [...inventory];
+  if (filters.brand) list = list.filter(v => v.brand === filters.brand);
+  if (filters.category) list = list.filter(v => v.category === filters.category);
+  if (filters.year) list = list.filter(v => v.year === +filters.year);
+  if (filters.trans) list = list.filter(v => v.transmission === filters.trans);
+  if (filters.fuel) list = list.filter(v => v.fuel === filters.fuel);
+
+  if (filters.sort === 'priceLow') list.sort((a,b) => a.price - b.price);
+  else if (filters.sort === 'priceHigh') list.sort((a,b) => b.price - a.price);
+  else list.sort((a,b) => b.year - a.year);
+
+  if (list.length === 0) {
+    grid.innerHTML = '<div class="no-results">No automobiles match your current filters.</div>';
+    return;
+  }
+
+  grid.innerHTML = list.map(v => `
+    <article class="vehicle-card" data-id="${v.id}">
+      <div class="vehicle-card-media">
+        <img src="${v.image}" alt="${v.brand} ${v.model}" loading="lazy" />
+        <div class="vehicle-status ${v.status === 'sold' ? 'sold' : 'new'}">${v.status === 'sold' ? 'Sold' : 'Available'}</div>
+      </div>
+      <div class="vehicle-card-body">
+        <div class="vehicle-brand">${v.brand}</div>
+        <h3 class="vehicle-name">${v.model}</h3>
+        <div class="vehicle-specs">
+          <div class="vehicle-spec"><strong>Year</strong>${v.year}</div>
+          <div class="vehicle-spec"><strong>Variant</strong>${v.variant}</div>
+          <div class="vehicle-spec"><strong>Mileage</strong>${formatMileage(v.mileage)}</div>
+          <div class="vehicle-spec"><strong>Fuel</strong>${v.fuel}</div>
+          <div class="vehicle-spec"><strong>Transmission</strong>${v.transmission}</div>
+          <div class="vehicle-spec"><strong>Category</strong>${v.category}</div>
+        </div>
+        <div class="vehicle-price">
+          <span class="label">Price</span>
+          <span class="amount ${!v.price ? 'por' : ''}">${formatPrice(v.price)}</span>
+        </div>
+        <a href="#contact" class="vehicle-cta">View Details</a>
+      </div>
+    </article>
+  `).join('');
+}
+renderInventory();
+
+// Filter listeners
+['filterBrand','filterCategory','filterYear','filterTrans','filterFuel','filterSort'].forEach(id => {
+  const el = document.getElementById(id);
+  const key = id.replace('filter','').toLowerCase();
+  const map = { brand:'brand', category:'category', year:'year', trans:'trans', fuel:'fuel', sort:'sort' };
+  el.addEventListener('change', () => {
+    filters[map[key]] = el.value;
+    renderInventory();
+  });
+});
+document.getElementById('filterReset').addEventListener('click', () => {
+  Object.keys(filters).forEach(k => filters[k] = '');
+  document.querySelectorAll('#filters select').forEach(s => s.value = '');
+  renderInventory();
+});
+
+/* ---------- Featured Carousel ---------- */
+const track = document.getElementById('featuredTrack');
+document.getElementById('featuredPrev').addEventListener('click', () => {
+  track.scrollBy({ left: -track.offsetWidth * 0.8, behavior: 'smooth' });
+});
+document.getElementById('featuredNext').addEventListener('click', () => {
+  track.scrollBy({ left: track.offsetWidth * 0.8, behavior: 'smooth' });
+});
+
+/* ---------- Gallery ---------- */
+const galleryGrid = document.getElementById('galleryGrid');
+let currentGallery = [...galleryItems];
+let lbIndex = 0;
+
+function renderGallery(filter = 'all') {
+  currentGallery = filter === 'all' ? [...galleryItems] : galleryItems.filter(g => g.cat === filter);
+  galleryGrid.innerHTML = currentGallery.map((g, i) => `
+    <div class="gallery-item ${g.size}" data-idx="${i}">
+      <img src="${g.src}" alt="${g.caption}" loading="lazy" />
+      <div class="caption">${g.caption}</div>
+    </div>
+  `).join('');
+  document.querySelectorAll('.gallery-item').forEach(el => {
+    el.addEventListener('click', () => openLightbox(+el.dataset.idx));
+  });
+}
+renderGallery();
+
+document.querySelectorAll('.gallery-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.gallery-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    renderGallery(tab.dataset.cat);
+  });
+});
+
+/* ---------- Lightbox ---------- */
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+function openLightbox(i) {
+  lbIndex = i;
+  lbImg.src = currentGallery[i].src;
+  lbImg.alt = currentGallery[i].caption;
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+document.getElementById('lbPrev').addEventListener('click', () => {
+  lbIndex = (lbIndex - 1 + currentGallery.length) % currentGallery.length;
+  lbImg.src = currentGallery[lbIndex].src;
+});
+document.getElementById('lbNext').addEventListener('click', () => {
+  lbIndex = (lbIndex + 1) % currentGallery.length;
+  lbImg.src = currentGallery[lbIndex].src;
+});
+document.addEventListener('keydown', e => {
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') document.getElementById('lbPrev').click();
+  if (e.key === 'ArrowRight') document.getElementById('lbNext').click();
+});
+
+/* ---------- Reveal on Scroll ---------- */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ---------- Forms ---------- */
+function handleForm(formId, successMsg) {
+  const form = document.getElementById(formId);
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    const original = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = successMsg;
+      btn.style.background = '#25D366';
+      btn.style.color = 'white';
+      form.reset();
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.disabled = false;
+      }, 3000);
+    }, 900);
+  });
+}
+handleForm('sellForm', '✓ Enquiry Received');
+handleForm('contactForm', '✓ Enquiry Sent');
+
+/* ---------- Smooth anchor offset ---------- */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const href = a.getAttribute('href');
+    if (href.length > 1) {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const y = target.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+Displaying index.html.
