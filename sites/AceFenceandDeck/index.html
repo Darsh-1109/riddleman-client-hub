@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Fence and Deck | Premium Fencing & Custom Decks in Austin, TX</title>
+    <meta name="description" content="Ace Fence and Deck provides premium cedar wood fencing, iron fences, bull panel, chain link, and custom deck construction in Austin, Texas. Get a free estimate today.">
+    <meta name="keywords" content="Fence Installation Austin TX, Cedar Fence Austin, Wood Fence Installation Austin, Bull Panel Fence Austin, Iron Fence Installation Austin, Chain Link Fence Austin, Custom Deck Builders Austin, Fence and Deck Staining Austin, Fence and Gate Installation Austin">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Ace Fence and Deck | Premium Fencing & Custom Decks in Austin, TX">
+    <meta property="og:description" content="Quality fences. Beautiful decks. Built around your property. Professional fencing and deck construction in Austin, Texas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.acefenceaustin.com/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1621262846938-162a198203b9?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --warm-ivory: #FAF9F5;
+            --soft-sand: #EDE5D8;
+            --natural-cedar: #B77948;
+            --muted-terracotta: #C77B55;
+            --sage-green: #87977B;
+            --deep-forest: #354B3C;
+            --charcoal: #292D2B;
+            --white: #FFFFFF;
+            
+            --font-heading: 'DM Serif Display', serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-sm: 0 1px 2px 0 rgba(41, 45, 43, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(41, 45, 43, 0.1), 0 2px 4px -1px rgba(41, 45, 43, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(41, 45, 43, 0.1), 0 4px 6px -2px rgba(41, 45, 43, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--warm-ivory);
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--deep-forest);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        /* =========================================
+           UTILITIES & ANIMATIONS
+           ========================================= */
+        .text-center { text-align: center; }
+        .text-cedar { color: var(--natural-cedar); }
+        .bg-sand { background-color: var(--soft-sand); }
+        .bg-forest { background-color: var(--deep-forest); color: var(--warm-ivory); }
+        .bg-forest h2, .bg-forest h3 { color: var(--warm-ivory); }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--muted-terracotta);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--natural-cedar);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--deep-forest);
+            border-color: var(--deep-forest);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--deep-forest);
+            color: var(--white);
+        }
+
+        .btn-white {
+            background-color: var(--white);
+            color: var(--deep-forest);
+        }
+
+        .btn-white:hover {
+            background-color: var(--soft-sand);
+        }
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(250, 249, 245, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(41, 45, 43, 0.05);
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--deep-forest);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--natural-cedar);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--charcoal);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--natural-cedar);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--charcoal);
+            margin: 6px 0;
+            transition: var(--transition);
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            background-image: linear-gradient(rgba(41, 45, 43, 0.4), rgba(41, 45, 43, 0.5)), url('https://images.unsplash.com/photo-1621262846938-162a198203b9?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .hero-content {
+            color: var(--white);
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--white);
+            margin-bottom: 24px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* =========================================
+           SERVICES OVERVIEW
+           ========================================= */
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--sage-green);
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-image {
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 32px;
+        }
+
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: var(--deep-forest);
+        }
+
+        .service-content ul {
+            list-style: none;
+            color: var(--charcoal);
+            opacity: 0.85;
+        }
+
+        .service-content ul li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .service-content ul li::before {
+            content: '•';
+            color: var(--natural-cedar);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* =========================================
+           FENCING OPTIONS (Gallery Style)
+           ========================================= */
+        .fencing-options {
+            background-color: var(--soft-sand);
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 300px);
+            gap: 16px;
+        }
+
+        .option-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .option-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+        .option-item:nth-child(2) { grid-column: span 1; }
+        .option-item:nth-child(3) { grid-column: span 1; }
+        .option-item:nth-child(4) { grid-column: span 2; }
+
+        .option-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .option-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .option-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px;
+            background: linear-gradient(to top, rgba(41, 45, 43, 0.9), transparent);
+            color: var(--white);
+        }
+
+        .option-overlay h4 {
+            color: var(--white);
+            font-size: 1.25rem;
+            margin-bottom: 4px;
+        }
+
+        .option-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* =========================================
+           CUSTOM DECKS & PROTECTION
+           ========================================= */
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .split-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .split-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .split-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        .split-content p {
+            margin-bottom: 24px;
+            color: var(--charcoal);
+            opacity: 0.85;
+            font-size: 1.05rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--natural-cedar);
+            font-weight: bold;
+        }
+
+        /* =========================================
+           WHY CHOOSE US
+           ========================================= */
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .why-us-item {
+            text-align: center;
+            padding: 32px;
+        }
+
+        .why-us-icon {
+            width: 64px;
+            height: 64px;
+            background-color: var(--soft-sand);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            color: var(--deep-forest);
+            font-size: 1.5rem;
+        }
+
+        .why-us-item h4 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .why-us-item p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        /* =========================================
+           PROJECT GALLERY & LIGHTBOX
+           ========================================= */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px;
+            background: rgba(41, 45, 43, 0.8);
+            color: var(--white);
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(41, 45, 43, 0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 4px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* =========================================
+           WORK PROCESS
+           ========================================= */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-step::after {
+            content: '→';
+            position: absolute;
+            right: -24px;
+            top: 40px;
+            color: var(--natural-cedar);
+            font-size: 1.5rem;
+        }
+
+        .process-step:last-child::after {
+            display: none;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: var(--deep-forest);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin: 0 auto 24px;
+        }
+
+        .process-step h4 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .process-step p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        /* =========================================
+           SERVICE AREA & WHAT MATTERS
+           ========================================= */
+        .service-area-box {
+            background-color: var(--deep-forest);
+            color: var(--warm-ivory);
+            padding: 60px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .service-area-box h2 {
+            color: var(--warm-ivory);
+            margin-bottom: 16px;
+        }
+
+        .service-area-box p {
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .matters-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .matters-item {
+            background-color: var(--white);
+            padding: 40px 32px;
+            border-radius: 8px;
+            border-left: 4px solid var(--natural-cedar);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .matters-item h4 {
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+
+        /* =========================================
+           CONTACT FORM
+           ========================================= */
+        .contact-section {
+            background-color: var(--soft-sand);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        .contact-info p {
+            margin-bottom: 32px;
+            opacity: 0.85;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .contact-detail-icon {
+            color: var(--natural-cedar);
+            font-size: 1.25rem;
+            margin-top: 4px;
+        }
+
+        .contact-detail a {
+            color: var(--deep-forest);
+            font-weight: 500;
+        }
+
+        .contact-detail a:hover {
+            color: var(--natural-cedar);
+        }
+
+        .contact-form {
+            background-color: var(--white);
+            padding: 48px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--charcoal);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(41, 45, 43, 0.15);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            background-color: var(--warm-ivory);
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--natural-cedar);
+            background-color: var(--white);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .form-note {
+            font-size: 0.85rem;
+            color: var(--sage-green);
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        footer {
+            background-color: var(--charcoal);
+            color: var(--warm-ivory);
+            padding: 80px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        .footer-brand p {
+            opacity: 0.7;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+            font-family: var(--font-body);
+            font-weight: 600;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            opacity: 0.7;
+            font-size: 0.95rem;
+        }
+
+        .footer-col ul li a:hover {
+            opacity: 1;
+            color: var(--natural-cedar);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 48px;
+            height: 48px;
+            background-color: var(--natural-cedar);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 900;
+            box-shadow: var(--shadow-md);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--muted-terracotta);
+            transform: translateY(-4px);
+        }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 1024px) {
+            .options-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+            .option-item:nth-child(1) { grid-column: span 2; grid-row: span 1; height: 400px; }
+            .option-item { height: 300px; }
+            
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .process-step::after { display: none; }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--warm-ivory);
+                flex-direction: column;
+                padding: 32px 24px;
+                gap: 24px;
+                border-bottom: 1px solid rgba(41, 45, 43, 0.1);
+                transform: translateY(-150%);
+                transition: transform 0.3s ease;
+                box-shadow: var(--shadow-lg);
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                min-height: 600px;
+                background-attachment: scroll;
+            }
+
+            .split-section,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .split-section.reverse {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .matters-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+            
+            .contact-form {
+                padding: 32px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+            .option-item:nth-child(1) { grid-column: span 1; }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">ACE <span>FENCE & DECK</span></a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services">Fencing</a></li>
+                    <li><a href="#decks">Decks</a></li>
+                    <li><a href="#protection">Staining</a></li>
+                    <li><a href="#gallery">Our Work</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact" class="btn btn-primary">Get a Free Estimate</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <h1>Outdoor Spaces Built with Quality and Care.</h1>
+                    <p>From custom fencing and secure gates to beautifully crafted decks, we bring practical solutions and lasting character to your outdoor spaces in Austin, Texas.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Request a Free Estimate</a>
+                        <a href="#services" class="btn btn-white">Explore Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="section-padding" id="services">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Complete Fencing & Deck Solutions</h2>
+                    <p>Quality Fences. Beautiful Decks. Built Around Your Property.</p>
+                </div>
+                <div class="services-grid">
+                    <!-- Cedar -->
+                    <article class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1599619351208-3e6c839d6828?q=80&w=800&auto=format&fit=crop" alt="Cedar wood privacy fence in Austin backyard">
+                        </div>
+                        <div class="service-content">
+                            <h3>Cedar Wood Fencing</h3>
+                            <ul>
+                                <li>Cedar privacy fencing</li>
+                                <li>Traditional and contemporary designs</li>
+                                <li>Custom fence layouts</li>
+                                <li>Natural wood aesthetics</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Bull Panel -->
+                    <article class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop" alt="Bull panel and wood combination fence">
+                        </div>
+                        <div class="service-content">
+                            <h3>Bull Panel Fencing</h3>
+                            <ul>
+                                <li>Bull panel fence installations</li>
+                                <li>Steel-panel and wood combinations</li>
+                                <li>Functional outdoor boundary solutions</li>
+                                <li>Custom configurations</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Iron -->
+                    <article class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1599427303058-f04cbcf4756f?q=80&w=800&auto=format&fit=crop" alt="Ornamental iron fence and gate">
+                        </div>
+                        <div class="service-content">
+                            <h3>Iron Fencing & Gates</h3>
+                            <ul>
+                                <li>Decorative and ornamental iron fencing</li>
+                                <li>Custom iron gates</li>
+                                <li>Durable boundary solutions</li>
+                                <li>Secure access control</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Chain Link -->
+                    <article class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1591825729269-caeb344f6df2?q=80&w=800&auto=format&fit=crop" alt="Chain link fence installation">
+                        </div>
+                        <div class="service-content">
+                            <h3>Chain Link Fencing</h3>
+                            <ul>
+                                <li>Residential and property perimeter fencing</li>
+                                <li>Practical boundary solutions</li>
+                                <li>Custom installation to site requirements</li>
+                                <li>Durable and low-maintenance</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Barbed Wire -->
+                    <article class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop" alt="Barbed wire perimeter fencing">
+                        </div>
+                        <div class="service-content">
+                            <h3>Barbed Wire Fencing</h3>
+                            <ul>
+                                <li>Functional perimeter fencing</li>
+                                <li>Property boundary applications</li>
+                                <li>Suitable configurations per requirement</li>
+                                <li>High-security boundary options</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Decks -->
+                    <article class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1591825729269-caeb344f6df2?q=80&w=800&auto=format&fit=crop" alt="Custom wooden backyard deck">
+                        </div>
+                        <div class="service-content">
+                            <h3>Custom Deck Construction</h3>
+                            <ul>
+                                <li>Custom outdoor decks</li>
+                                <li>Backyard deck structures</li>
+                                <li>Outdoor space improvements</li>
+                                <li>Designs based on property layout</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fencing Solutions Gallery -->
+        <section class="section-padding fencing-options" id="fencing-options">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Explore Your Fencing Options</h2>
+                    <p>Discover the right boundary solution for your property's style and security needs.</p>
+                </div>
+                <div class="options-grid fade-in">
+                    <div class="option-item">
+                        <img src="https://images.unsplash.com/photo-1621262846938-162a198203b9?q=80&w=800&auto=format&fit=crop" alt="Cedar privacy fence">
+                        <div class="option-overlay">
+                            <h4>Cedar Privacy Fence</h4>
+                            <p>Classic, durable, and beautifully natural.</p>
+                        </div>
+                    </div>
+                    <div class="option-item">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop" alt="Horizontal wood fence">
+                        <div class="option-overlay">
+                            <h4>Horizontal Wood</h4>
+                            <p>Modern aesthetic with clean lines.</p>
+                        </div>
+                    </div>
+                    <div class="option-item">
+                        <img src="https://images.unsplash.com/photo-1599427303058-f04cbcf4756f?q=80&w=800&auto=format&fit=crop" alt="Ornamental iron fence">
+                        <div class="option-overlay">
+                            <h4>Ornamental Iron</h4>
+                            <p>Elegant, secure, and long-lasting.</p>
+                        </div>
+                    </div>
+                    <div class="option-item">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop" alt="Iron gate and chain link">
+                        <div class="option-overlay">
+                            <h4>Gates & Perimeter</h4>
+                            <p>Custom access and boundary control.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Deck Construction -->
+        <section class="section-padding" id="decks">
+            <div class="container">
+                <div class="split-section fade-in">
+                    <div class="split-image">
+                        <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?q=80&w=1000&auto=format&fit=crop" alt="Beautiful custom residential wooden deck">
+                    </div>
+                    <div class="split-content">
+                        <h2>Make More of Your Outdoor Space.</h2>
+                        <p>A custom deck transforms your backyard into a functional, inviting extension of your home. Whether you envision a cozy seating area or a spacious entertainment platform, we design and build decks tailored to your property's unique layout and your personal preferences.</p>
+                        <ul class="feature-list">
+                            <li>Custom deck construction tailored to your space</li>
+                            <li>Seamless integration with outdoor living areas</li>
+                            <li>Property-specific designs and layouts</li>
+                            <li>Professional wood finishing and staining</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Discuss Your Deck Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fence & Deck Protection -->
+        <section class="section-padding bg-sand" id="protection">
+            <div class="container">
+                <div class="split-section reverse fade-in">
+                    <div class="split-content">
+                        <h2>Protect the Wood. Preserve the Finish.</h2>
+                        <p>Texas weather demands robust protection for your outdoor investments. Our professional staining and weatherproofing services extend the life of your fence and deck, preserving their natural beauty and structural integrity against the elements.</p>
+                        <ul class="feature-list">
+                            <li>Professional fence and deck staining</li>
+                            <li>Advanced weatherproofing treatments</li>
+                            <li>Outdoor wood maintenance and restoration</li>
+                            <li>Enhanced grain appearance and UV protection</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-secondary">Request Staining Services</a>
+                    </div>
+                    <div class="split-image">
+                        <img src="https://images.unsplash.com/photo-1620626012053-1c1e17346311?q=80&w=1000&auto=format&fit=crop" alt="Close up of stained cedar wood deck">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="section-padding" id="about">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Why Choose Ace Fence and Deck?</h2>
+                    <p>Built for Privacy. Designed for Your Outdoors.</p>
+                </div>
+                <div class="why-us-grid fade-in">
+                    <div class="why-us-item">
+                        <div class="why-us-icon">◆</div>
+                        <h4>Multiple Fencing Styles</h4>
+                        <p>From cedar to iron, we offer diverse solutions to match your property's aesthetic and security needs.</p>
+                    </div>
+                    <div class="why-us-item">
+                        <div class="why-us-icon">◎</div>
+                        <h4>Customised Solutions</h4>
+                        <p>Every property is unique. We tailor our designs and layouts to your specific outdoor space.</p>
+                    </div>
+                    <div class="why-us-item">
+                        <div class="why-us-icon">▤</div>
+                        <h4>Fence & Deck Expertise</h4>
+                        <p>Specialised knowledge in both boundary structures and outdoor living constructions.</p>
+                    </div>
+                    <div class="why-us-item">
+                        <div class="why-us-icon">✓</div>
+                        <h4>Function & Appearance</h4>
+                        <p>We balance durable, practical construction with refined, attractive finishes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Gallery -->
+        <section class="section-padding bg-sand" id="gallery">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Our Project Gallery</h2>
+                    <p>See the quality and craftsmanship we bring to every Austin property.</p>
+                </div>
+                <div class="gallery-grid fade-in">
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1621262846938-162a198203b9?q=80&w=800&auto=format&fit=crop" alt="Wood fencing project">
+                        <div class="gallery-caption">Wood Fencing</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1599427303058-f04cbcf4756f?q=80&w=800&auto=format&fit=crop" alt="Iron fencing project">
+                        <div class="gallery-caption">Iron Fencing</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?q=80&w=800&auto=format&fit=crop" alt="Custom deck project">
+                        <div class="gallery-caption">Custom Decks</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop" alt="Bull panel fencing">
+                        <div class="gallery-caption">Bull Panel Fencing</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop" alt="Gate installation">
+                        <div class="gallery-caption">Gates</div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1620626012053-1c1e17346311?q=80&w=800&auto=format&fit=crop" alt="Staining and finishing">
+                        <div class="gallery-caption">Staining & Finishing</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Process -->
+        <section class="section-padding" id="process">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Our Work Process</h2>
+                    <p>A straightforward approach to building your outdoor space.</p>
+                </div>
+                <div class="process-steps fade-in">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h4>Tell Us About Your Project</h4>
+                        <p>Share your fencing or deck requirements through our easy contact form.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h4>Discuss Your Options</h4>
+                        <p>Explore suitable styles, materials, and solutions for your property.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h4>Get Your Estimate</h4>
+                        <p>Receive clear, project-specific pricing and detailed information.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h4>Build Your Outdoor Space</h4>
+                        <p>Proceed with the agreed project and enjoy your new outdoor structure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Area -->
+        <section class="section-padding bg-forest" id="service-area">
+            <div class="container">
+                <div class="service-area-box fade-in">
+                    <h2>Proudly Serving Austin, Texas</h2>
+                    <p>Ace Fence and Deck is based in Austin, TX, providing premium fencing and deck construction services to homeowners and property owners throughout the Austin area. We understand the local landscape and building requirements.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What Matters (Alternative to Testimonials) -->
+        <section class="section-padding" id="what-matters">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>What Matters in Every Project</h2>
+                    <p>We believe in letting our craftsmanship and attention to detail speak for itself.</p>
+                </div>
+                <div class="matters-grid fade-in">
+                    <div class="matters-item">
+                        <h4>Quality Materials</h4>
+                        <p>We source durable, weather-resistant materials designed to withstand the Texas climate and maintain their appearance over time.</p>
+                    </div>
+                    <div class="matters-item">
+                        <h4>Thoughtful Construction</h4>
+                        <p>Every post, panel, and plank is installed with precision, ensuring structural integrity and a clean, professional finish.</p>
+                    </div>
+                    <div class="matters-item">
+                        <h4>Clear Communication</h4>
+                        <p>From the initial estimate to the final walkthrough, we keep you informed and involved in every step of the process.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Estimate Request -->
+        <section class="section-padding contact-section" id="contact">
+            <div class="container">
+                <div class="contact-grid fade-in">
+                    <div class="contact-info">
+                        <h2>Let's Build Something Better Outdoors.</h2>
+                        <p>Planning a new fence, replacing an existing one, or building a custom deck? Tell us about your project and get in touch with Ace Fence and Deck.</p>
+                        
+                        <div class="contact-detail">
+                            <span class="contact-detail-icon">✉</span>
+                            <div>
+                                <strong>Email Us</strong><br>
+                                <a href="mailto:acefencecompany@yahoo.com">acefencecompany@yahoo.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <span class="contact-detail-icon">⌂</span>
+                            <div>
+                                <strong>Our Location</strong><br>
+                                2708 Nottingham Ln<br>
+                                Austin, TX 78704, United States
+                            </div>
+                        </div>
+
+                        <div class="contact-detail">
+                            <span class="contact-detail-icon">🌐</span>
+                            <div>
+                                <strong>Website</strong><br>
+                                <a href="http://www.acefenceaustin.com/">www.acefenceaustin.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="estimateForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Property Location *</label>
+                                <input type="text" id="location" name="location" placeholder="e.g., Austin, TX 78704" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="service">Service Required *</label>
+                                <select id="service" name="service" required>
+                                    <option value="" disabled selected>Select a service...</option>
+                                    <option value="Cedar Wood Fence">Cedar Wood Fence</option>
+                                    <option value="Bull Panel Fence">Bull Panel Fence</option>
+                                    <option value="Iron Fence / Gate">Iron Fence / Gate</option>
+                                    <option value="Chain Link Fence">Chain Link Fence</option>
+                                    <option value="Barbed Wire Fence">Barbed Wire Fence</option>
+                                    <option value="Custom Deck">Custom Deck</option>
+                                    <option value="Fence / Deck Staining">Fence / Deck Staining</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMethod">Preferred Contact Method</label>
+                                <select id="contactMethod" name="contactMethod">
+                                    <option value="Email">Email</option>
+                                    <option value="Phone">Phone</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Project Description</label>
+                            <textarea id="description" name="description" rows="4" placeholder="Tell us about your project, dimensions, or any specific requirements..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Enquiry</button>
+                        <p class="form-note">* Note: This is a demonstration form. Backend integration is required to transmit enquiries to the business email.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">ACE <span>FENCE & DECK</span></a>
+                    <p>Quality fences. Beautiful decks. Built around your property. Austin's trusted specialist in residential and commercial fencing and outdoor deck construction.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Our Work</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Cedar Wood Fencing</a></li>
+                        <li><a href="#services">Iron Fencing & Gates</a></li>
+                        <li><a href="#services">Custom Decks</a></li>
+                        <li><a href="#protection">Fence & Deck Staining</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>2708 Nottingham Ln</li>
+                        <li>Austin, TX 78704</li>
+                        <li>United States</li>
+                        <li style="margin-top: 12px;"><a href="mailto:acefencecompany@yahoo.com">acefencecompany@yahoo.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ace Fence and Deck. All rights reserved.</p>
+                <p><a href="#" style="color: inherit;">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" aria-label="Close lightbox">×</button>
+        <img id="lightbox-img" src="" alt="Enlarged project image">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Sticky Navbar & Back to Top Visibility
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to Top Functionality
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Scroll Animations (Intersection Observer)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Lightbox Functionality
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            // Use a higher resolution version for lightbox if available, otherwise same
+            lightboxImg.src = img.src.replace('w=800', 'w=1600');
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Form Submission Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Gather form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // In a real implementation, this would send data to a backend API or email service
+            // For demonstration, we show an alert and log to console
+            alert('Thank you for your enquiry! \n\nNote: This is a demonstration form. To make this functional, please integrate a backend service (e.g., Formspree, EmailJS, or a custom PHP/Node.js endpoint) to transmit the data to acefencecompany@yahoo.com');
+            
+            console.log('Form Data Submitted:', data);
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
