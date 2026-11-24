@@ -1,0 +1,2845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Baytown Landscaping provides professional landscaping, irrigation and outdoor property services for residential and commercial properties in Baytown, Crosby and Greater Houston, Texas.">
+    <meta name="keywords" content="Landscaping Baytown TX, Landscape design Baytown, Landscape installation Baytown, Residential landscaping Crosby TX, Commercial landscaping Baytown, Irrigation services Baytown TX, Tree services Baytown TX">
+    <title>Baytown Landscaping | Professional Landscaping & Outdoor Services in Baytown, TX</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Baytown Landscaping",
+        "description": "Professional landscaping, irrigation and outdoor property services for residential and commercial properties in Baytown and Greater Houston, Texas.",
+        "url": "https://www.baytownlandscaping.com/",
+        "telephone": "(281) 851-8684",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "20510 Live Oak Road",
+            "addressLocality": "Crosby",
+            "addressRegion": "TX",
+            "postalCode": "77532",
+            "addressCountry": "US"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Baytown"
+            },
+            {
+                "@type": "City",
+                "name": "Crosby"
+            }
+        ],
+        "serviceType": [
+            "Landscaping",
+            "Landscape Design",
+            "Landscape Installation",
+            "Irrigation Services",
+            "Tree Services",
+            "Residential Landscaping",
+            "Commercial Landscaping"
+        ],
+        "priceRange": "$$"
+    }
+    </script>
+
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --warm-ivory: #FAF9F5;
+            --pure-white: #FFFFFF;
+            --soft-sage: #E8EFE5;
+            --botanical-green: #718B64;
+            --deep-forest: #294735;
+            --muted-olive: #A1A77B;
+            --warm-sand: #E9DFCF;
+            --charcoal: #343B35;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-sm: 0 2px 8px rgba(41, 71, 53, 0.06);
+            --shadow-md: 0 4px 16px rgba(41, 71, 53, 0.1);
+            --shadow-lg: 0 8px 32px rgba(41, 71, 53, 0.12);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', 'Open Sans', sans-serif;
+            color: var(--charcoal);
+            background-color: var(--warm-ivory);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Manrope', 'DM Sans', sans-serif;
+            color: var(--deep-forest);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
+        h4 { font-size: 1.2rem; }
+
+        p {
+            color: var(--charcoal);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--botanical-green);
+            margin-bottom: 16px;
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .section-label::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 28px;
+            height: 2px;
+            background: var(--botanical-green);
+            transform: translateY(-50%);
+        }
+
+        .section-title {
+            margin-bottom: 24px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #5a6359;
+            max-width: 640px;
+            line-height: 1.8;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--botanical-green);
+            color: var(--pure-white);
+            box-shadow: 0 4px 16px rgba(113, 139, 100, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--deep-forest);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(41, 71, 53, 0.35);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--deep-forest);
+            border: 2px solid var(--deep-forest);
+        }
+
+        .btn-secondary:hover {
+            background: var(--deep-forest);
+            color: var(--pure-white);
+            transform: translateY(-2px);
+        }
+
+        .btn-white {
+            background: var(--pure-white);
+            color: var(--deep-forest);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            color: var(--pure-white);
+            border: 2px solid rgba(255, 255, 255, 0.7);
+        }
+
+        .btn-outline-white:hover {
+            background: var(--pure-white);
+            color: var(--deep-forest);
+            transform: translateY(-2px);
+        }
+
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(113, 139, 100, 0.1);
+            transition: var(--transition);
+            padding: 0;
+        }
+
+        .navbar.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--deep-forest);
+        }
+
+        .nav-logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--botanical-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-logo-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: white;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 500;
+            font-size: 0.92rem;
+            color: var(--charcoal);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--botanical-green);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--botanical-green);
+        }
+
+        .nav-cta {
+            padding: 12px 24px !important;
+            font-size: 0.88rem !important;
+        }
+
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--deep-forest);
+        }
+
+        .nav-phone svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--botanical-green);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2.5px;
+            background: var(--deep-forest);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--pure-white);
+            z-index: 999;
+            padding: 100px 32px 40px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: var(--transition);
+        }
+
+        .mobile-menu.active {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-menu a {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--deep-forest);
+            padding: 12px 0;
+        }
+
+        .mobile-menu .btn {
+            margin-top: 16px;
+        }
+
+        .mobile-phone {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--botanical-green);
+            margin-top: 12px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--deep-forest);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.55;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(41, 71, 53, 0.7) 0%, rgba(41, 71, 53, 0.3) 60%, rgba(41, 71, 53, 0.5) 100%);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 720px;
+            padding-top: 80px;
+        }
+
+        .hero h1 {
+            color: var(--pure-white);
+            margin-bottom: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 560px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-bottom: 28px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 500;
+        }
+
+        .hero-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--muted-olive);
+        }
+
+        /* ===== INTRO SECTION ===== */
+        .intro {
+            background: var(--pure-white);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .intro-image {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .intro-image-accent {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 160px;
+            height: 160px;
+            background: var(--soft-sage);
+            border-radius: var(--radius-lg);
+            z-index: -1;
+        }
+
+        .intro-content .section-subtitle {
+            margin-bottom: 32px;
+        }
+
+        .intro-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .intro-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--soft-sage);
+            border-radius: var(--radius-sm);
+        }
+
+        .intro-feature svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--botanical-green);
+            flex-shrink: 0;
+        }
+
+        .intro-feature span {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--deep-forest);
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            background: var(--warm-ivory);
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .services-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            gap: 32px;
+        }
+
+        .service-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: var(--pure-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .service-card:nth-child(even) {
+            direction: rtl;
+        }
+
+        .service-card:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .service-card-image {
+            position: relative;
+            overflow: hidden;
+            min-height: 360px;
+        }
+
+        .service-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .service-card:hover .service-card-image img {
+            transform: scale(1.05);
+        }
+
+        .service-card-content {
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .service-card-content h3 {
+            margin-bottom: 16px;
+        }
+
+        .service-card-content p {
+            margin-bottom: 24px;
+            color: #5a6359;
+        }
+
+        .service-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .service-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.92rem;
+            color: var(--charcoal);
+        }
+
+        .service-list li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--botanical-green);
+            flex-shrink: 0;
+        }
+
+        /* ===== RESIDENTIAL SECTION ===== */
+        .residential {
+            background: var(--soft-sage);
+        }
+
+        .residential-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .residential-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .residential-images img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+        }
+
+        .residential-images img:first-child {
+            grid-row: span 2;
+            height: 100%;
+        }
+
+        .residential-images img:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-md);
+        }
+
+        .residential-content h2 {
+            margin-bottom: 20px;
+        }
+
+        .residential-content p {
+            margin-bottom: 32px;
+            color: #4a5549;
+        }
+
+        .residential-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .residential-feat {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--deep-forest);
+            font-weight: 500;
+        }
+
+        .residential-feat svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--botanical-green);
+        }
+
+        /* ===== COMMERCIAL SECTION ===== */
+        .commercial {
+            background: var(--pure-white);
+        }
+
+        .commercial-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .commercial-content h2 {
+            margin-bottom: 20px;
+        }
+
+        .commercial-content p {
+            margin-bottom: 24px;
+            color: #5a6359;
+        }
+
+        .commercial-audiences {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 32px;
+        }
+
+        .commercial-tag {
+            padding: 8px 18px;
+            background: var(--warm-ivory);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--deep-forest);
+            border: 1px solid rgba(113, 139, 100, 0.2);
+        }
+
+        .commercial-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .commercial-image img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+        }
+
+        /* ===== GALLERY SECTION ===== */
+        .gallery {
+            background: var(--warm-ivory);
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            padding: 10px 24px;
+            border: 1px solid rgba(113, 139, 100, 0.3);
+            border-radius: 50px;
+            background: transparent;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 500;
+            font-size: 0.88rem;
+            color: var(--charcoal);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--botanical-green);
+            color: var(--pure-white);
+            border-color: var(--botanical-green);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-item-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(41, 71, 53, 0.8) 0%, transparent 60%);
+            opacity: 0;
+            transition: var(--transition);
+            display: flex;
+            align-items: flex-end;
+            padding: 24px;
+        }
+
+        .gallery-item:hover .gallery-item-overlay {
+            opacity: 1;
+        }
+
+        .gallery-item-overlay span {
+            color: var(--pure-white);
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .gallery-item.tall {
+            grid-row: span 2;
+        }
+
+        /* ===== LIGHTBOX ===== */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: var(--radius-sm);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .lightbox-close svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .lightbox-nav svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        .lightbox-prev { left: 24px; }
+        .lightbox-next { right: 24px; }
+
+        /* ===== WHY CHOOSE US ===== */
+        .why-choose {
+            background: var(--soft-sage);
+        }
+
+        .why-choose-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .why-choose-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .why-card {
+            background: var(--pure-white);
+            padding: 40px 32px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .why-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .why-card-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--soft-sage);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .why-card-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--botanical-green);
+        }
+
+        .why-card h4 {
+            margin-bottom: 12px;
+            font-size: 1.15rem;
+        }
+
+        .why-card p {
+            font-size: 0.92rem;
+            color: #5a6359;
+            line-height: 1.7;
+        }
+
+        /* ===== PROCESS SECTION ===== */
+        .process {
+            background: var(--pure-white);
+        }
+
+        .process-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 48px;
+            left: 12.5%;
+            right: 12.5%;
+            height: 2px;
+            background: linear-gradient(to right, var(--soft-sage), var(--botanical-green), var(--soft-sage));
+            z-index: 0;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-step-number {
+            width: 96px;
+            height: 96px;
+            background: var(--soft-sage);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--botanical-green);
+            border: 4px solid var(--pure-white);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .process-step:hover .process-step-number {
+            background: var(--botanical-green);
+            color: var(--pure-white);
+        }
+
+        .process-step h4 {
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: #5a6359;
+            line-height: 1.7;
+        }
+
+        /* ===== SERVICE AREA ===== */
+        .service-area {
+            background: var(--warm-sand);
+        }
+
+        .service-area-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .area-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .area-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 24px;
+            background: var(--pure-white);
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .area-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .area-item svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--botanical-green);
+            flex-shrink: 0;
+        }
+
+        .area-item span {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--deep-forest);
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq {
+            background: var(--pure-white);
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 1px solid rgba(113, 139, 100, 0.15);
+            border-radius: var(--radius-md);
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(113, 139, 100, 0.3);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 28px;
+            cursor: pointer;
+            background: var(--warm-ivory);
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: var(--soft-sage);
+        }
+
+        .faq-question h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            flex: 1;
+            padding-right: 16px;
+        }
+
+        .faq-toggle {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--pure-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .faq-toggle svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--botanical-green);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-toggle {
+            background: var(--botanical-green);
+        }
+
+        .faq-item.active .faq-toggle svg {
+            fill: white;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 28px 24px;
+        }
+
+        .faq-answer-content p {
+            color: #5a6359;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        /* ===== FINAL CTA ===== */
+        .final-cta {
+            position: relative;
+            padding: 120px 0;
+            overflow: hidden;
+        }
+
+        .final-cta-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .final-cta-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .final-cta-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(41, 71, 53, 0.88) 0%, rgba(41, 71, 53, 0.75) 100%);
+        }
+
+        .final-cta-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .final-cta-content h2 {
+            color: var(--pure-white);
+            margin-bottom: 20px;
+        }
+
+        .final-cta-content p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .final-cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            background: var(--warm-ivory);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info {
+            padding: 48px;
+            background: var(--deep-forest);
+            border-radius: var(--radius-lg);
+            color: var(--pure-white);
+        }
+
+        .contact-info h3 {
+            color: var(--pure-white);
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+        }
+
+        .contact-info > p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 36px;
+            font-size: 0.95rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .contact-detail-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-detail-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--muted-olive);
+        }
+
+        .contact-detail-text h5 {
+            color: var(--pure-white);
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .contact-detail-text p,
+        .contact-detail-text a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        .contact-detail-text a:hover {
+            color: var(--muted-olive);
+        }
+
+        .contact-form-wrapper {
+            background: var(--pure-white);
+            padding: 48px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-form-wrapper h3 {
+            margin-bottom: 8px;
+        }
+
+        .contact-form-wrapper > p {
+            color: #5a6359;
+            margin-bottom: 32px;
+            font-size: 0.95rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+            font-size: 0.88rem;
+            color: var(--deep-forest);
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 14px 18px;
+            border: 1.5px solid rgba(113, 139, 100, 0.2);
+            border-radius: var(--radius-sm);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            transition: var(--transition);
+            background: var(--warm-ivory);
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--botanical-green);
+            background: var(--pure-white);
+            box-shadow: 0 0 0 3px rgba(113, 139, 100, 0.1);
+        }
+
+        .form-group input.error,
+        .form-group select.error,
+        .form-group textarea.error {
+            border-color: #d94f4f;
+            box-shadow: 0 0 0 3px rgba(217, 79, 79, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-error {
+            font-size: 0.8rem;
+            color: #d94f4f;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .form-error.visible {
+            display: block;
+        }
+
+        .form-submit {
+            margin-top: 24px;
+        }
+
+        .form-submit .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 18px 32px;
+            font-size: 1rem;
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 48px;
+        }
+
+        .form-success.visible {
+            display: block;
+        }
+
+        .form-success-icon {
+            width: 72px;
+            height: 72px;
+            background: var(--soft-sage);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .form-success-icon svg {
+            width: 36px;
+            height: 36px;
+            fill: var(--botanical-green);
+        }
+
+        .form-success h3 {
+            margin-bottom: 12px;
+        }
+
+        .form-success p {
+            color: #5a6359;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--deep-forest);
+            color: var(--pure-white);
+            padding: 80px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 64px;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 16px;
+            font-size: 0.92rem;
+            line-height: 1.8;
+        }
+
+        .footer-col h4 {
+            color: var(--pure-white);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--muted-olive);
+            padding-left: 4px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+        }
+
+        .footer-logo {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--pure-white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--botanical-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-logo-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: white;
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 48px;
+            height: 48px;
+            background: var(--botanical-green);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 900;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: var(--transition);
+            box-shadow: 0 4px 16px rgba(113, 139, 100, 0.3);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--deep-forest);
+            transform: translateY(-3px);
+        }
+
+        .back-to-top svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .nav-links,
+            .nav-phone {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .intro-grid,
+            .residential-grid,
+            .commercial-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .service-card {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card:nth-child(even) {
+                direction: ltr;
+            }
+
+            .service-card-image {
+                min-height: 250px;
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .why-choose-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 64px 0;
+            }
+
+            .hero-content {
+                padding-top: 100px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .intro-features,
+            .residential-features {
+                grid-template-columns: 1fr;
+            }
+
+            .residential-images {
+                grid-template-columns: 1fr;
+            }
+
+            .residential-images img:first-child {
+                grid-row: auto;
+                height: 200px;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .gallery-item.tall {
+                grid-row: auto;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-wrapper {
+                padding: 32px 24px;
+            }
+
+            .contact-info {
+                padding: 36px 28px;
+            }
+
+            .service-card-content {
+                padding: 32px 24px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .area-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .final-cta {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-filters {
+                gap: 8px;
+            }
+
+            .filter-btn {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+            }
+
+            .area-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" aria-label="Baytown Landscaping Home">
+                <div class="nav-logo-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20c4 0 4-2 4-2s0 2 4 2a4.49 4.49 0 0 0 1.29-.3L18.3 22l1.89-.66C18.1 16.17 15.9 10 17 8m-5 2c1.28 0 2.39.42 3.22 1.06C13.56 9.65 12 9 12 9s-1.56.65-3.22 2.06C9.61 10.42 10.72 10 12 10z"/></svg>
+                </div>
+                Baytown Landscaping
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Our Work</a></li>
+                <li><a href="#residential">Residential</a></li>
+                <li><a href="#commercial">Commercial</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="tel:+12818518684" class="nav-phone" aria-label="Call Baytown Landscaping">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                (281) 851-8684
+            </a>
+            <a href="#contact" class="btn btn-primary nav-cta">Request a Free Estimate</a>
+            <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#gallery" class="mobile-link">Our Work</a>
+        <a href="#residential" class="mobile-link">Residential</a>
+        <a href="#commercial" class="mobile-link">Commercial</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <a href="#contact" class="btn btn-primary">Request a Free Estimate</a>
+        <a href="tel:+12818518684" class="mobile-phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#718B64"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            (281) 851-8684
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c81f82e?w=1920&q=80" alt="Beautifully landscaped residential property with manicured lawn and stone pathway in Baytown Texas">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Serving Baytown & Greater Houston, Texas
+            </div>
+            <h1>Transform Your Outdoor Space Into Something Beautiful.</h1>
+            <p>Thoughtful landscaping and outdoor improvement solutions for residential and commercial properties in the Baytown area.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Request an Estimate</a>
+                <a href="#services" class="btn btn-outline-white">Explore Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section intro" id="about">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-image animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80" alt="Professional landscape design with lush greenery and garden planting in Baytown">
+                    <div class="intro-image-accent"></div>
+                </div>
+                <div class="intro-content animate-on-scroll">
+                    <span class="section-label">About Us</span>
+                    <h2 class="section-title">Creating Outdoor Spaces That Make an Impression.</h2>
+                    <p class="section-subtitle">Baytown Landscaping is a local landscaping contractor offering outdoor improvement services for properties throughout the Baytown and Greater Houston area. We combine thoughtful planning, appropriate materials and professional execution to help transform the exterior of your property.</p>
+                    <p class="section-subtitle" style="margin-top: 16px;">Whether you're looking to enhance a residential garden, improve a commercial property's outdoor environment or address irrigation needs, our team approaches every project with attention to detail and a commitment to quality results.</p>
+                    <div class="intro-features">
+                        <div class="intro-feature">
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            <span>Professional Workmanship</span>
+                        </div>
+                        <div class="intro-feature">
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            <span>Beautiful Outdoor Spaces</span>
+                        </div>
+                        <div class="intro-feature">
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            <span>Local Service</span>
+                        </div>
+                        <div class="intro-feature">
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            <span>Attention to Detail</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="services-header animate-on-scroll">
+                <span class="section-label">Our Services</span>
+                <h2 class="section-title">Comprehensive Landscaping & Outdoor Services</h2>
+                <p class="section-subtitle">From initial design to final installation, we offer a range of services to improve and maintain the outdoor spaces of residential and commercial properties.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1: Landscape Design -->
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80" alt="Landscape design planning with garden layout and plant placement">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Landscape Design</h3>
+                        <p>A well-planned landscape is the foundation of a beautiful outdoor space. We work with you to develop a design that suits your property, preferences and practical requirements.</p>
+                        <ul class="service-list">
+                            <li>Outdoor space planning</li>
+                            <li>Garden and landscape concepts</li>
+                            <li>Plant and greenery placement</li>
+                            <li>Layout considerations</li>
+                            <li>Residential and commercial planning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2: Landscape Installation -->
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80" alt="Professional landscape installation with fresh planting and garden improvements">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Landscape Installation</h3>
+                        <p>Once a plan is in place, our team brings the vision to life. We handle landscape installation projects that enhance the appearance and functionality of your property.</p>
+                        <ul class="service-list">
+                            <li>Landscape installation</li>
+                            <li>Garden improvements</li>
+                            <li>Planting and greenery</li>
+                            <li>Outdoor area enhancements</li>
+                            <li>Property landscaping projects</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3: Irrigation Solutions -->
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1560749003-f4b1e17e2dfd?w=800&q=80" alt="Irrigation system installation for landscape watering in Texas">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Irrigation Solutions</h3>
+                        <p>Appropriate irrigation planning helps maintain healthy landscapes throughout the Texas climate. We offer irrigation services to keep your outdoor spaces properly watered and thriving.</p>
+                        <ul class="service-list">
+                            <li>Irrigation planning</li>
+                            <li>Irrigation installation</li>
+                            <li>Water distribution</li>
+                            <li>Landscape watering requirements</li>
+                            <li>Irrigation maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 4: Tree Services -->
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-image">
+                        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=80" alt="Professional tree services and tree care for property landscapes">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Tree Services</h3>
+                        <p>Trees are an essential part of any well-designed landscape. We offer tree-related services to help maintain and improve the health and appearance of trees on your property.</p>
+                        <ul class="service-list">
+                            <li>Tree care and maintenance</li>
+                            <li>Property tree work</li>
+                            <li>Landscape tree integration</li>
+                            <li>Outdoor tree management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Residential Section -->
+    <section class="section residential" id="residential">
+        <div class="container">
+            <div class="residential-grid">
+                <div class="residential-images animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Beautifully landscaped residential front yard in Baytown Texas">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Residential backyard garden improvements with green lawn">
+                    <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80" alt="Home garden with walkway and planted greenery">
+                </div>
+                <div class="residential-content animate-on-scroll">
+                    <span class="section-label">Residential</span>
+                    <h2>Beautiful Outdoor Spaces for Your Home.</h2>
+                    <p>Professional landscaping can dramatically improve the appearance and usability of your residential property. Whether you're looking to enhance your front yard, transform your backyard or create a cohesive garden design, we work with homeowners to deliver results that complement their property and lifestyle.</p>
+                    <div class="residential-features">
+                        <div class="residential-feat">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                            <span>Front yard landscaping</span>
+                        </div>
+                        <div class="residential-feat">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                            <span>Backyard improvements</span>
+                        </div>
+                        <div class="residential-feat">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                            <span>Garden arrangements</span>
+                        </div>
+                        <div class="residential-feat">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                            <span>Walkways & paths</span>
+                        </div>
+                        <div class="residential-feat">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                            <span>Planting & greenery</span>
+                        </div>
+                        <div class="residential-feat">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                            <span>Outdoor living spaces</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Discuss Your Residential Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commercial Section -->
+    <section class="section commercial" id="commercial">
+        <div class="container">
+            <div class="commercial-grid">
+                <div class="commercial-content animate-on-scroll">
+                    <span class="section-label">Commercial</span>
+                    <h2>Professional Outdoor Environments for Businesses.</h2>
+                    <p>Attractive, well-maintained outdoor spaces make a strong impression on clients, tenants and visitors. We work with commercial property owners and managers to create and improve landscaping that enhances the appearance of business premises.</p>
+                    <p>Our commercial landscaping services are tailored to the needs of each property, from office buildings and retail premises to other managed outdoor spaces throughout the Baytown area.</p>
+                    <div class="commercial-audiences">
+                        <span class="commercial-tag">Commercial Properties</span>
+                        <span class="commercial-tag">Office Buildings</span>
+                        <span class="commercial-tag">Retail Premises</span>
+                        <span class="commercial-tag">Property Managers</span>
+                        <span class="commercial-tag">Managed Outdoor Spaces</span>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Enquire About Commercial Landscaping</a>
+                </div>
+                <div class="commercial-image animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Commercial property landscaping with professional outdoor design">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery" id="gallery">
+        <div class="container">
+            <div class="gallery-header animate-on-scroll">
+                <span class="section-label">Our Work</span>
+                <h2 class="section-title">Project Gallery</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">Browse examples of landscaping and outdoor improvement projects. These illustrative images showcase the types of work we undertake.</p>
+            </div>
+            <div class="gallery-filters animate-on-scroll">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="installation">Installation</button>
+                <button class="filter-btn" data-filter="irrigation">Irrigation</button>
+                <button class="filter-btn" data-filter="tree">Tree Services</button>
+            </div>
+            <div class="gallery-grid animate-on-scroll">
+                <div class="gallery-item" data-category="residential" data-index="0">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Residential landscaping with manicured lawn and garden design">
+                    <div class="gallery-item-overlay"><span>Residential Landscaping</span></div>
+                </div>
+                <div class="gallery-item" data-category="installation" data-index="1">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80" alt="Landscape installation with fresh planting and outdoor improvements">
+                    <div class="gallery-item-overlay"><span>Landscape Installation</span></div>
+                </div>
+                <div class="gallery-item" data-category="residential" data-index="2">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Beautiful backyard garden with green lawn and walkway">
+                    <div class="gallery-item-overlay"><span>Backyard Improvement</span></div>
+                </div>
+                <div class="gallery-item" data-category="irrigation" data-index="3">
+                    <img src="https://images.unsplash.com/photo-1560749003-f4b1e17e2dfd?w=600&q=80" alt="Irrigation system and landscape watering installation">
+                    <div class="gallery-item-overlay"><span>Irrigation Project</span></div>
+                </div>
+                <div class="gallery-item" data-category="tree" data-index="4">
+                    <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=600&q=80" alt="Professional tree service and landscape tree maintenance">
+                    <div class="gallery-item-overlay"><span>Tree Services</span></div>
+                </div>
+                <div class="gallery-item" data-category="installation" data-index="5">
+                    <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80" alt="Outdoor improvement project with stone pathway and planted garden">
+                    <div class="gallery-item-overlay"><span>Outdoor Improvement</span></div>
+                </div>
+                <div class="gallery-item" data-category="residential" data-index="6">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c81f82e?w=600&q=80" alt="Residential front yard with professional landscaping design">
+                    <div class="gallery-item-overlay"><span>Front Yard Design</span></div>
+                </div>
+                <div class="gallery-item" data-category="installation" data-index="7">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80" alt="Garden planting and greenery installation for residential property">
+                    <div class="gallery-item-overlay"><span>Garden Planting</span></div>
+                </div>
+                <div class="gallery-item" data-category="residential" data-index="8">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab612e943810?w=600&q=80" alt="Landscaped outdoor living space with patio and garden">
+                    <div class="gallery-item-overlay"><span>Outdoor Living Space</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section why-choose" id="why">
+        <div class="container">
+            <div class="why-choose-header animate-on-scroll">
+                <span class="section-label">Why Choose Us</span>
+                <h2 class="section-title">What Sets Baytown Landscaping Apart</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">When selecting a landscaping contractor, consider these qualities that guide our approach to every project.</p>
+            </div>
+            <div class="why-choose-grid">
+                <div class="why-card animate-on-scroll">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
+                    <h4>Local Service</h4>
+                    <p>We're based in the Crosby/Baytown area and understand the local climate, soil conditions and landscaping needs of Texas properties.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                    </div>
+                    <h4>Multiple Service Categories</h4>
+                    <p>From landscape design and installation to irrigation and tree services, we offer a comprehensive range of outdoor improvement capabilities.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+                    </div>
+                    <h4>Residential & Commercial</h4>
+                    <p>We serve both residential homeowners and commercial properties, tailoring our approach to the specific requirements of each project.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    </div>
+                    <h4>Attention to Detail</h4>
+                    <p>We approach every project with care, from initial planning through to the finished result, ensuring quality workmanship throughout.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 11.24V7.5C9 6.12 10.12 5 11.5 5S14 6.12 14 7.5v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.71 4.47l-2.35-1.17c-.46-.23-1-.23-1.46 0l-2.35 1.17c-.26.13-.57.13-.84 0l-2.35-1.17c-.46-.23-1-.23-1.46 0l-2.35 1.17c-.26.13-.57.13-.84 0l-2.35-1.17c-.46-.23-1-.23-1.46 0l-2.35 1.17C5.27 16.14 4 17.44 4 19v2h16v-2c0-1.56-1.27-2.86-2.29-3.29z"/></svg>
+                    </div>
+                    <h4>Practical Solutions</h4>
+                    <p>We focus on practical landscaping solutions that work for your property, budget and long-term maintenance requirements.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.7 1.65h1.9c-.15-1.28-1.09-2.72-3.3-3.1V3h-2.5v2.5c-2.1.32-3.89 1.57-3.89 3.85 0 2.46 2.04 3.6 4.47 4.17 2.28.54 2.93 1.36 2.93 2.33 0 .82-.53 1.85-2.78 1.85-1.93 0-2.86-.81-3.17-1.95H6c.32 1.72 1.59 2.98 3.5 3.38V22h2.5v-2.86c2.07-.34 3.96-1.5 3.96-3.96 0-3.04-2.4-4.09-4.16-4.28z"/></svg>
+                    </div>
+                    <h4>Finished Appearance</h4>
+                    <p>We care about how your property looks when the work is complete. Every project is approached with the goal of delivering an attractive, well-executed result.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section process" id="process">
+        <div class="container">
+            <div class="process-header animate-on-scroll">
+                <span class="section-label">Our Process</span>
+                <h2 class="section-title">How We Work</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">A straightforward approach from initial enquiry to completed project.</p>
+            </div>
+            <div class="process-steps animate-on-scroll">
+                <div class="process-step">
+                    <div class="process-step-number">1</div>
+                    <h4>Initial Enquiry</h4>
+                    <p>Share your landscaping requirements and property details with our team.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">2</div>
+                    <h4>Project Discussion</h4>
+                    <p>We discuss your property, desired outcome and the scope of work needed.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">3</div>
+                    <h4>Project Planning</h4>
+                    <p>We develop a suitable landscaping approach with appropriate materials.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">4</div>
+                    <h4>Execution</h4>
+                    <p>We proceed with the agreed landscaping work to deliver the finished result.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Section -->
+    <section class="section service-area" id="areas">
+        <div class="container">
+            <div class="service-area-header animate-on-scroll">
+                <span class="section-label">Service Area</span>
+                <h2 class="section-title">Serving Baytown and the Surrounding Texas Communities.</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">Based in Crosby, TX, we provide landscaping and outdoor services to properties throughout the following communities.</p>
+            </div>
+            <div class="area-grid animate-on-scroll">
+                <div class="area-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <span>Baytown</span>
+                </div>
+                <div class="area-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <span>Crosby</span>
+                </div>
+                <div class="area-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <span>Highlands</span>
+                </div>
+                <div class="area-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <span>Channelview</span>
+                </div>
+                <div class="area-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <span>La Porte</span>
+                </div>
+                <div class="area-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <span>Deer Park</span>
+                </div>
+                <div class="area-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <span>Mont Belvieu</span>
+                </div>
+                <div class="area-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <span>Greater Houston</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <div class="faq-header animate-on-scroll">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">Find answers to common questions about our landscaping services.</p>
+            </div>
+            <div class="faq-container animate-on-scroll">
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                        <h4>What landscaping services does Baytown Landscaping offer?</h4>
+                        <div class="faq-toggle">
+                            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>We offer landscape design, landscape installation, irrigation solutions and tree services for residential and commercial properties. Contact us to discuss your specific project requirements.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                        <h4>Do you handle residential landscaping projects?</h4>
+                        <div class="faq-toggle">
+                            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Yes, we work with homeowners on a variety of residential landscaping projects including front yard improvements, backyard transformations, garden design and outdoor space enhancements.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                        <h4>Can commercial properties enquire about landscaping?</h4>
+                        <div class="faq-toggle">
+                            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Absolutely. We provide landscaping services for commercial properties including office buildings, retail premises and other managed outdoor spaces. Reach out to discuss your property's needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                        <h4>Can I request irrigation-related services?</h4>
+                        <div class="faq-toggle">
+                            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Yes, we offer irrigation planning, installation and maintenance services to help keep your landscape properly watered and healthy. Contact us to discuss your irrigation needs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                        <h4>How do I arrange a landscaping consultation?</h4>
+                        <div class="faq-toggle">
+                            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>You can request a consultation by filling out our online contact form or by calling us at (281) 851-8684. We'll discuss your project and arrange a suitable time to connect.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                        <h4>Which areas do you serve?</h4>
+                        <div class="faq-toggle">
+                            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>We serve Baytown, Crosby and surrounding communities including Highlands, Channelview, La Porte, Deer Park, Mont Belvieu and Greater Houston area. Contact us to confirm service availability for your location.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                        <h4>How can I request an estimate?</h4>
+                        <div class="faq-toggle">
+                            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>You can request an estimate by completing our online enquiry form or by calling (281) 851-8684. Provide your property details and project description, and we'll get back to you to discuss the scope of work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="final-cta-bg">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab612e943810?w=1920&q=80" alt="Beautiful outdoor living space with professional landscaping in Baytown Texas">
+        </div>
+        <div class="final-cta-overlay"></div>
+        <div class="container">
+            <div class="final-cta-content animate-on-scroll">
+                <h2>Ready to Improve Your Outdoor Space?</h2>
+                <p>Tell us about your landscaping project and connect with Baytown Landscaping to discuss your requirements.</p>
+                <div class="final-cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Request an Estimate</a>
+                    <a href="tel:+12818518684" class="btn btn-outline-white">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        Call (281) 851-8684
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Get in Touch</h3>
+                    <p>Have a landscaping project in mind? Reach out to discuss your requirements or request an estimate for your property.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h5>Phone</h5>
+                                <a href="tel:+12818518684">(281) 851-8684</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h5>Address</h5>
+                                <p>20510 Live Oak Road<br>Crosby, TX 77532</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h5>Service Area</h5>
+                                <p>Baytown, Crosby & Greater Houston, TX</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                            </div>
+                            <div class="contact-detail-text">
+                                <h5>Hours</h5>
+                                <p>Contact us for current availability</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <h3>Request a Project Estimate</h3>
+                    <p>Fill out the form below and we'll be in touch to discuss your landscaping project.</p>
+                    <form id="contactForm" novalidate>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required placeholder="Your full name">
+                                <span class="form-error" id="fullNameError">Please enter your full name.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="(xxx) xxx-xxxx">
+                                <span class="form-error" id="phoneError">Please enter a valid phone number.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                                <span class="form-error" id="emailError">Please enter a valid email address.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="propertyAddress">Property Address</label>
+                                <input type="text" id="propertyAddress" name="propertyAddress" placeholder="Your property address">
+                            </div>
+                            <div class="form-group">
+                                <label for="propertyType">Property Type *</label>
+                                <select id="propertyType" name="propertyType" required>
+                                    <option value="">Select property type</option>
+                                    <option value="residential">Residential</option>
+                                    <option value="commercial">Commercial</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="form-error" id="propertyTypeError">Please select a property type.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="serviceRequired">Service Required *</label>
+                                <select id="serviceRequired" name="serviceRequired" required>
+                                    <option value="">Select a service</option>
+                                    <option value="landscape-design">Landscape Design</option>
+                                    <option value="landscape-installation">Landscape Installation</option>
+                                    <option value="irrigation">Irrigation Solutions</option>
+                                    <option value="tree-services">Tree Services</option>
+                                    <option value="multiple">Multiple Services</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="form-error" id="serviceRequiredError">Please select a service.</span>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="projectDescription">Project Description</label>
+                                <textarea id="projectDescription" name="projectDescription" placeholder="Tell us about your landscaping project, requirements and any specific details..."></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="contactMethod">Preferred Contact Method</label>
+                                <select id="contactMethod" name="contactMethod">
+                                    <option value="">Select preference</option>
+                                    <option value="phone">Phone Call</option>
+                                    <option value="email">Email</option>
+                                    <option value="either">Either is Fine</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="projectPhotos">Project Photographs (Optional)</label>
+                                <input type="file" id="projectPhotos" name="projectPhotos" accept="image/*" multiple>
+                            </div>
+                            <div class="form-group full-width form-submit">
+                                <button type="submit" class="btn btn-primary">Submit Project Enquiry</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        <div class="form-success-icon">
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                        </div>
+                        <h3>Thank You!</h3>
+                        <p>Your enquiry has been received. We'll be in touch shortly to discuss your landscaping project. You can also reach us directly at <a href="tel:+12818518684" style="color: var(--botanical-green); font-weight: 600;">(281) 851-8684</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20c4 0 4-2 4-2s0 2 4 2a4.49 4.49 0 0 0 1.29-.3L18.3 22l1.89-.66C18.1 16.17 15.9 10 17 8m-5 2c1.28 0 2.39.42 3.22 1.06C13.56 9.65 12 9 12 9s-1.56.65-3.22 2.06C9.61 10.42 10.72 10 12 10z"/></svg>
+                        </div>
+                        Baytown Landscaping
+                    </div>
+                    <p>Professional landscaping and outdoor improvement services for residential and commercial properties in Baytown, Crosby and the Greater Houston area.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Our Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Landscape Design</a></li>
+                        <li><a href="#services">Landscape Installation</a></li>
+                        <li><a href="#services">Irrigation Solutions</a></li>
+                        <li><a href="#services">Tree Services</a></li>
+                        <li><a href="#residential">Residential Landscaping</a></li>
+                        <li><a href="#commercial">Commercial Landscaping</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+12818518684">(281) 851-8684</a></li>
+                        <li><a href="#contact">20510 Live Oak Road</a></li>
+                        <li><a href="#contact">Crosby, TX 77532</a></li>
+                        <li><a href="https://www.baytownlandscaping.com/" target="_blank" rel="noopener">baytownlandscaping.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Baytown Landscaping. All rights reserved.</p>
+                <p>Serving Baytown, Crosby & Greater Houston, Texas</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </button>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Image lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+            <svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+        <img id="lightboxImage" src="" alt="Gallery image enlarged view">
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+            <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+        </button>
+    </div>
+
+    <script>
+        // ===== NAVIGATION =====
+        const navbar = document.getElementById('navbar');
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const backToTop = document.getElementById('backToTop');
+
+        // Sticky navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Back to top button visibility
+            if (window.scrollY > 600) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Hamburger menu toggle
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu on link click
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Back to top
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ===== SCROLL ANIMATIONS =====
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        animateElements.forEach(el => observer.observe(el));
+
+        // ===== GALLERY FILTERS =====
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                galleryItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        item.style.display = 'block';
+                        item.style.opacity = '0';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                        }, 50);
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // ===== LIGHTBOX =====
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        let currentImageIndex = 0;
+        let visibleImages = [];
+
+        function updateVisibleImages() {
+            visibleImages = Array.from(galleryItems).filter(item => item.style.display !== 'none');
+        }
+
+        function openLightbox(index) {
+            updateVisibleImages();
+            currentImageIndex = index;
+            const img = visibleImages[currentImageIndex].querySelector('img');
+            lightboxImage.src = img.src.replace('w=600', 'w=1200');
+            lightboxImage.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function navigateLightbox(direction) {
+            updateVisibleImages();
+            currentImageIndex = (currentImageIndex + direction + visibleImages.length) % visibleImages.length;
+            const img = visibleImages[currentImageIndex].querySelector('img');
+            lightboxImage.style.opacity = '0';
+            setTimeout(() => {
+                lightboxImage.src = img.src.replace('w=600', 'w=1200');
+                lightboxImage.alt = img.alt;
+                lightboxImage.style.opacity = '1';
+            }, 200);
+        }
+
+        galleryItems.forEach((item, idx) => {
+            item.addEventListener('click', () => {
+                updateVisibleImages();
+                const visibleIndex = visibleImages.indexOf(item);
+                openLightbox(visibleIndex >= 0 ? visibleIndex : 0);
+            });
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', () => navigateLightbox(-1));
+        lightboxNext.addEventListener('click', () => navigateLightbox(1));
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            if (e.key === 'ArrowRight') navigateLightbox(1);
+        });
+
+        // ===== FAQ ACCORDION =====
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                faqItems.forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+
+                // Open clicked item if it wasn't already active
+                if (!isActive) {
+                    item.classList.add('active');
+                    question.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            // Keyboard accessibility
+            question.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    question.click();
+                }
+            });
+        });
+
+        // ===== CONTACT FORM VALIDATION =====
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        function validateField(field, errorId, validationFn) {
+            const error = document.getElementById(errorId);
+            if (!validationFn(field.value)) {
+                field.classList.add('error');
+                if (error) error.classList.add('visible');
+                return false;
+            } else {
+                field.classList.remove('error');
+                if (error) error.classList.remove('visible');
+                return true;
+            }
+        }
+
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function isValidPhone(phone) {
+            const cleaned = phone.replace(/[\s\-\(\)]/g, '');
+            return cleaned.length >= 7;
+        }
+
+        // Real-time validation
+        const fullNameInput = document.getElementById('fullName');
+        const phoneInput = document.getElementById('phone');
+        const emailInput = document.getElementById('email');
+        const propertyTypeInput = document.getElementById('propertyType');
+        const serviceRequiredInput = document.getElementById('serviceRequired');
+
+        fullNameInput.addEventListener('blur', () => {
+            validateField(fullNameInput, 'fullNameError', (val) => val.trim().length >= 2);
+        });
+
+        phoneInput.addEventListener('blur', () => {
+            validateField(phoneInput, 'phoneError', isValidPhone);
+        });
+
+        emailInput.addEventListener('blur', () => {
+            validateField(emailInput, 'emailError', isValidEmail);
+        });
+
+        propertyTypeInput.addEventListener('change', () => {
+            validateField(propertyTypeInput, 'propertyTypeError', (val) => val !== '');
+        });
+
+        serviceRequiredInput.addEventListener('change', () => {
+            validateField(serviceRequiredInput, 'serviceRequiredError', (val) => val !== '');
+        });
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let isValid = true;
+
+            isValid = validateField(fullNameInput, 'fullNameError', (val) => val.trim().length >= 2) && isValid;
+            isValid = validateField(phoneInput, 'phoneError', isValidPhone) && isValid;
+            isValid = validateField(emailInput, 'emailError', isValidEmail) && isValid;
+            isValid = validateField(propertyTypeInput, 'propertyTypeError', (val) => val !== '') && isValid;
+            isValid = validateField(serviceRequiredInput, 'serviceRequiredError', (val) => val !== '') && isValid;
+
+            if (isValid) {
+                // Show loading state
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Submitting...';
+                submitBtn.disabled = true;
+
+                // Simulate submission (no backend configured)
+                setTimeout(() => {
+                    contactForm.style.display = 'none';
+                    formSuccess.classList.add('visible');
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, 1500);
+            } else {
+                // Scroll to first error
+                const firstError = contactForm.querySelector('.error');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        });
+
+        // ===== SMOOTH SCROLL FOR NAV LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    const navHeight = navbar.offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ===== IMAGE TRANSITION FOR LIGHTBOX =====
+        lightboxImage.style.transition = 'opacity 0.2s ease';
+
+        // ===== GALLERY ITEM TRANSITION =====
+        galleryItems.forEach(item => {
+            item.style.transition = 'opacity 0.3s ease';
+        });
+    </script>
+</body>
+</html>
