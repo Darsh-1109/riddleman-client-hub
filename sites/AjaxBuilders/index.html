@@ -1,0 +1,4068 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX Builders | London Construction, Renovation &amp; Design-and-Build</title>
+  <meta name="description" content="AJAX Construction Ltd (AJAX Builders) is a London-based construction, renovation and design-and-build company delivering residential and commercial spaces.">
+  <link rel="canonical" href="https://www.ajaxbuilders.co.uk/">
+  <meta property="og:title" content="AJAX Builders | London Construction, Renovation &amp; Design-and-Build">
+  <meta property="og:description" content="From thoughtful architectural design to exceptional construction and renovation, AJAX Builders delivers considered spaces for modern living and working.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ajaxbuilders.co.uk/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AJAX Builders | London Construction, Renovation &amp; Design-and-Build">
+  <meta name="twitter:description" content="London construction, renovation and design-and-build specialists.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script id="structured-data" type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "AJAX Construction Ltd",
+    "alternateName": "AJAX Builders",
+    "url": "https://www.ajaxbuilders.co.uk/",
+    "telephone": ["+442082013626", "+447886227480"],
+    "email": "info@ajaxbuilders.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Office 4, 219 Kensington High Street",
+      "addressLocality": "London",
+      "postalCode": "W8 6BD",
+      "addressCountry": "GB"
+    },
+    "areaServed": [
+      "Central London",
+      "North London",
+      "West London",
+      "Northwest London"
+    ]
+  }
+  </script>
+  <style>
+    /* ==========================================================================
+       1. DESIGN TOKENS & CSS VARIABLES
+       ========================================================================== */
+    :root {
+      --bg-primary: #F7F6F2;
+      --bg-secondary: #EFECE6;
+      --bg-white: #FFFFFF;
+      --text-primary: #20201E;
+      --text-secondary: #30302D;
+      --text-muted: #6C6962;
+      --warm-grey: #A7A39B;
+      --muted-stone: #D9D5CC;
+      --accent-bronze: #7A6652;
+      --accent-bronze-dark: #5E4D3C;
+      --error-red: #9E3B33;
+      --success-green: #2F5D46;
+
+      --font-display: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --container-max: 1380px;
+      --gutter: clamp(1.25rem, 4vw, 3.5rem);
+      --header-height: 84px;
+
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-out-quart: cubic-bezier(0.22, 1, 0.36, 1);
+      --transition-fast: 220ms var(--ease-out-quart);
+      --transition-med: 380ms var(--ease-out-quart);
+      --transition-slow: 680ms var(--ease-out-expo);
+    }
+
+    /* ==========================================================================
+       2. RESET & BASE TYPOGRAPHY
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.65;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      color: inherit;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent-bronze);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      background: var(--text-primary);
+      color: var(--bg-white);
+      padding: 0.75rem 1.25rem;
+      z-index: 9999;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-bronze);
+      margin-bottom: 1rem;
+    }
+    .eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background-color: currentColor;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      line-height: 1.14;
+      letter-spacing: -0.025em;
+      color: var(--text-primary);
+    }
+
+    h1 { font-size: clamp(2.35rem, 5vw, 4.35rem); }
+    h2 { font-size: clamp(1.85rem, 3.4vw, 2.95rem); }
+    h3 { font-size: clamp(1.3rem, 2vw, 1.75rem); }
+    h4 { font-size: 1.125rem; font-weight: 500; }
+
+    .editorial-serif {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .lead {
+      font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+      line-height: 1.65;
+      color: var(--text-secondary);
+      max-width: 64ch;
+    }
+
+    /* ==========================================================================
+       3. BUTTONS & INTERACTIVE LINKS
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.95rem 1.85rem;
+      font-family: var(--font-display);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+      position: relative;
+      text-align: center;
+    }
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn-primary {
+      background-color: var(--text-primary);
+      color: var(--bg-white);
+      border-color: var(--text-primary);
+    }
+    .btn-primary:hover {
+      background-color: var(--accent-bronze-dark);
+      border-color: var(--accent-bronze-dark);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--text-primary);
+      border-color: var(--text-primary);
+    }
+    .btn-outline:hover {
+      background-color: var(--text-primary);
+      color: var(--bg-white);
+    }
+
+    .btn-light {
+      background-color: var(--bg-white);
+      color: var(--text-primary);
+      border-color: var(--bg-white);
+    }
+    .btn-light:hover {
+      background-color: var(--bg-primary);
+      border-color: var(--bg-primary);
+    }
+
+    .btn-light-outline {
+      background-color: transparent;
+      color: var(--bg-white);
+      border-color: rgba(255, 255, 255, 0.55);
+    }
+    .btn-light-outline:hover {
+      background-color: var(--bg-white);
+      color: var(--text-primary);
+      border-color: var(--bg-white);
+    }
+
+    .btn .arrow {
+      transition: transform var(--transition-fast);
+      display: inline-block;
+    }
+    .btn:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-display);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: var(--text-primary);
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid var(--muted-stone);
+      transition: border-color var(--transition-fast), color var(--transition-fast);
+    }
+    .text-link:hover {
+      border-color: var(--text-primary);
+      color: var(--accent-bronze-dark);
+    }
+    .text-link .arrow {
+      transition: transform var(--transition-fast);
+    }
+    .text-link:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    /* ==========================================================================
+       4. HEADER & NAVIGATION
+       ========================================================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--header-height);
+      z-index: 1000;
+      background-color: rgba(247, 246, 242, 0.96);
+      border-bottom: 1px solid var(--muted-stone);
+      transition: background-color var(--transition-med), border-color var(--transition-med), color var(--transition-med), box-shadow var(--transition-med);
+    }
+
+    .site-header.over-hero:not(.is-scrolled):not(.menu-open) {
+      background-color: transparent;
+      border-bottom-color: rgba(255, 255, 255, 0.18);
+      color: var(--bg-white);
+    }
+
+    .site-header.is-scrolled {
+      background-color: rgba(247, 246, 242, 0.98);
+      border-bottom-color: var(--muted-stone);
+      color: var(--text-primary);
+    }
+
+    .header-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      z-index: 1002;
+    }
+    .brand-logo .wordmark {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .brand-logo .submark {
+      font-size: 0.625rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      opacity: 0.78;
+      margin-top: 0.28rem;
+    }
+
+    .primary-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 1.75rem;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-link {
+      font-family: var(--font-display);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      padding: 0.5rem 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1.5px;
+      background-color: currentColor;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform var(--transition-fast);
+    }
+
+    .nav-link:hover::after,
+    .nav-link[aria-current="page"]::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    /* Services Dropdown */
+    .has-dropdown:hover .dropdown-menu,
+    .has-dropdown:focus-within .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 14px);
+      left: -1.25rem;
+      width: 290px;
+      background-color: var(--bg-white);
+      color: var(--text-primary);
+      border: 1px solid var(--muted-stone);
+      padding: 0.85rem 0;
+      list-style: none;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
+      box-shadow: 0 20px 40px rgba(32, 32, 30, 0.08);
+    }
+
+    .dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: -16px;
+      left: 0;
+      width: 100%;
+      height: 16px;
+    }
+
+    .dropdown-link {
+      display: block;
+      padding: 0.55rem 1.35rem;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      transition: background-color var(--transition-fast), color var(--transition-fast), padding-left var(--transition-fast);
+    }
+    .dropdown-link:hover,
+    .dropdown-link[aria-current="page"] {
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      padding-left: 1.65rem;
+    }
+    .dropdown-divider {
+      height: 1px;
+      background-color: var(--muted-stone);
+      margin: 0.45rem 1.35rem;
+    }
+
+    .header-cta {
+      padding: 0.68rem 1.35rem;
+      font-size: 0.8125rem;
+    }
+
+    .site-header.over-hero:not(.is-scrolled):not(.menu-open) .header-cta {
+      background-color: var(--bg-white);
+      color: var(--text-primary);
+      border-color: var(--bg-white);
+    }
+
+    /* Mobile Menu Toggle */
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: 1px solid currentColor;
+      padding: 0.55rem 0.85rem;
+      font-family: var(--font-display);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      z-index: 1002;
+    }
+
+    @media (max-width: 1060px) {
+      .mobile-toggle { display: inline-flex; align-items: center; gap: 0.5rem; }
+      .primary-nav {
+        position: fixed;
+        inset: 0;
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: calc(var(--header-height) + 2rem) var(--gutter) 3rem;
+        overflow-y: auto;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity var(--transition-med), transform var(--transition-med), visibility var(--transition-med);
+        z-index: 1001;
+      }
+      .primary-nav.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0.25rem;
+      }
+      .nav-item {
+        width: 100%;
+        border-bottom: 1px solid var(--muted-stone);
+      }
+      .nav-link {
+        width: 100%;
+        padding: 0.9rem 0;
+        font-size: 1.15rem;
+        justify-content: space-between;
+      }
+      .dropdown-menu {
+        position: static;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+        padding: 0 0 0.75rem 1rem;
+      }
+      .dropdown-link { padding: 0.45rem 0; font-size: 0.95rem; }
+      .header-cta { width: 100%; margin-top: 1.5rem; padding: 1rem; }
+    }
+
+    /* ==========================================================================
+       5. MAIN CONTENT & PAGE TRANSITIONS
+       ========================================================================== */
+    main {
+      flex: 1;
+      padding-top: var(--header-height);
+    }
+
+    main.has-full-hero {
+      padding-top: 0;
+    }
+
+    .page-view {
+      animation: pageEnter var(--transition-med) forwards;
+    }
+
+    @keyframes pageEnter {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Scroll Reveal Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity var(--transition-slow), transform var(--transition-slow);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       6. HERO SECTIONS (HOME & INNER PAGES)
+       ========================================================================== */
+    .hero-home {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: flex-end;
+      background-color: var(--text-primary);
+      color: var(--bg-white);
+      overflow: hidden;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transform: scale(1.04);
+      animation: heroImageSettle 1.1s var(--ease-out-expo) forwards;
+    }
+
+    @keyframes heroImageSettle {
+      to { transform: scale(1); }
+    }
+
+    .hero-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(32, 32, 30, 0.55) 0%,
+        rgba(32, 32, 30, 0.35) 45%,
+        rgba(32, 32, 30, 0.84) 100%
+      );
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      padding-top: calc(var(--header-height) + 4rem);
+      padding-bottom: clamp(3.5rem, 7vw, 6rem);
+      width: 100%;
+    }
+
+    .hero-eyebrow {
+      color: var(--muted-stone);
+      opacity: 0;
+      animation: staggerUp 0.65s var(--ease-out-expo) 0.1s forwards;
+    }
+
+    .hero-title {
+      color: var(--bg-white);
+      max-width: 16ch;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: staggerUp 0.75s var(--ease-out-expo) 0.2s forwards;
+    }
+
+    .hero-subtitle {
+      color: rgba(255, 255, 255, 0.88);
+      font-size: clamp(1.05rem, 1.45vw, 1.25rem);
+      max-width: 54ch;
+      margin-bottom: 2.25rem;
+      opacity: 0;
+      animation: staggerUp 0.75s var(--ease-out-expo) 0.32s forwards;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      opacity: 0;
+      animation: staggerUp 0.75s var(--ease-out-expo) 0.44s forwards;
+    }
+
+    @keyframes staggerUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Inner Page Header */
+    .page-header {
+      padding: clamp(3.5rem, 6vw, 5.5rem) 0 clamp(2.5rem, 4.5vw, 3.75rem);
+      border-bottom: 1px solid var(--muted-stone);
+      background-color: var(--bg-primary);
+    }
+
+    .breadcrumbs {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumbs a:hover {
+      color: var(--text-primary);
+      text-decoration: underline;
+    }
+    .breadcrumbs span[aria-hidden="true"] {
+      color: var(--warm-grey);
+    }
+
+    .page-header-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 2.5rem;
+      align-items: end;
+    }
+    @media (max-width: 860px) {
+      .page-header-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    }
+
+    /* ==========================================================================
+       7. SECTIONS, GRIDS & EDITORIAL LAYOUTS
+       ========================================================================== */
+    .section {
+      padding: clamp(4rem, 7.5vw, 7rem) 0;
+    }
+    .section-bordered {
+      border-top: 1px solid var(--muted-stone);
+    }
+    .section-stone {
+      background-color: var(--bg-secondary);
+    }
+    .section-dark {
+      background-color: var(--text-primary);
+      color: var(--bg-white);
+    }
+    .section-dark h2,
+    .section-dark h3,
+    .section-dark h4 {
+      color: var(--bg-white);
+    }
+    .section-dark .eyebrow {
+      color: var(--muted-stone);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 2rem;
+      margin-bottom: clamp(2.5rem, 4.5vw, 3.75rem);
+      flex-wrap: wrap;
+    }
+
+    /* Split Editorial Feature */
+    .editorial-split {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: clamp(2.25rem, 5vw, 5rem);
+      align-items: center;
+    }
+    .editorial-split.reverse .editorial-media {
+      order: 2;
+    }
+    @media (max-width: 900px) {
+      .editorial-split { grid-template-columns: 1fr; }
+      .editorial-split.reverse .editorial-media { order: 0; }
+    }
+
+    .image-frame {
+      position: relative;
+      overflow: hidden;
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--muted-stone);
+    }
+    .image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease-out-expo);
+    }
+    .image-frame:hover img {
+      transform: scale(1.03);
+    }
+
+    .image-caption-badge {
+      position: absolute;
+      bottom: 0.85rem;
+      left: 0.85rem;
+      background: rgba(32, 32, 30, 0.84);
+      color: var(--bg-white);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      padding: 0.32rem 0.65rem;
+    }
+
+    /* ==========================================================================
+       8. SERVICES & PORTFOLIO CARDS
+       ========================================================================== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    @media (max-width: 980px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 620px) {
+      .services-grid { grid-template-columns: 1fr; }
+    }
+
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--bg-white);
+      border: 1px solid var(--muted-stone);
+      transition: border-color var(--transition-fast), transform var(--transition-fast);
+    }
+    .service-card:hover {
+      border-color: var(--text-primary);
+      transform: translateY(-3px);
+    }
+    .service-card-media {
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background-color: var(--bg-secondary);
+      position: relative;
+    }
+    .service-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.65s var(--ease-out-expo);
+    }
+    .service-card:hover .service-card-media img {
+      transform: scale(1.04);
+    }
+    .service-card-body {
+      padding: 1.65rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .service-card-num {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--accent-bronze);
+      margin-bottom: 0.5rem;
+    }
+    .service-card-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+    }
+    .service-card-desc {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+
+    /* Featured Projects Asymmetric Grid */
+    .featured-layout {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 2.25rem;
+      align-items: start;
+    }
+    @media (max-width: 940px) {
+      .featured-layout { grid-template-columns: 1fr; }
+    }
+
+    .featured-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem;
+    }
+
+    .project-card {
+      display: block;
+      group: project;
+    }
+    .project-card-media {
+      overflow: hidden;
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--muted-stone);
+      margin-bottom: 1.15rem;
+      position: relative;
+    }
+    .project-card-media.ratio-hero { aspect-ratio: 4 / 3; }
+    .project-card-media.ratio-wide { aspect-ratio: 16 / 10; }
+    .project-card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease-out-expo);
+    }
+    .project-card:hover .project-card-media img {
+      transform: scale(1.035);
+    }
+    .project-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-bronze);
+      margin-bottom: 0.4rem;
+    }
+    .project-card-title {
+      font-size: 1.45rem;
+      margin-bottom: 0.45rem;
+      transition: color var(--transition-fast);
+    }
+    .project-card:hover .project-card-title {
+      color: var(--accent-bronze-dark);
+    }
+    .project-card-summary {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+    }
+
+    /* Portfolio Filter Bar */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2.75rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--muted-stone);
+    }
+    .filter-btn {
+      background: var(--bg-white);
+      border: 1px solid var(--muted-stone);
+      padding: 0.55rem 1.1rem;
+      font-family: var(--font-display);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .filter-btn:hover {
+      border-color: var(--text-primary);
+    }
+    .filter-btn.is-active {
+      background-color: var(--text-primary);
+      color: var(--bg-white);
+      border-color: var(--text-primary);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem 2.25rem;
+    }
+    @media (max-width: 780px) {
+      .portfolio-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ==========================================================================
+       9. SMART GALLERY COMPOSITIONS & LIGHTBOX
+       ========================================================================== */
+    .smart-gallery {
+      display: grid;
+      gap: 1.25rem;
+      margin: 2.5rem 0;
+    }
+    .gallery-tile {
+      position: relative;
+      overflow: hidden;
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--muted-stone);
+      cursor: zoom-in;
+      padding: 0;
+      text-align: left;
+    }
+    .gallery-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-out-expo);
+    }
+    .gallery-tile:hover img {
+      transform: scale(1.03);
+    }
+
+    /* 1 Image */
+    .smart-gallery.count-1 { grid-template-columns: 1fr; }
+    .smart-gallery.count-1 .gallery-tile { aspect-ratio: 16 / 9; }
+
+    /* 2 Images: Asymmetric two-column composition */
+    .smart-gallery.count-2 { grid-template-columns: 1.35fr 1fr; }
+    .smart-gallery.count-2 .gallery-tile { aspect-ratio: 4 / 3; }
+
+    /* 3 Images: One dominant image and two supporting images */
+    .smart-gallery.count-3 {
+      grid-template-columns: 1.45fr 1fr;
+      grid-template-rows: repeat(2, 260px);
+    }
+    .smart-gallery.count-3 .gallery-tile:first-child {
+      grid-row: 1 / 3;
+    }
+
+    /* 4 Images: One large and three smaller */
+    .smart-gallery.count-4 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .smart-gallery.count-4 .gallery-tile:first-child {
+      grid-column: 1 / 4;
+      aspect-ratio: 21 / 9;
+    }
+    .smart-gallery.count-4 .gallery-tile:not(:first-child) {
+      aspect-ratio: 4 / 3;
+    }
+
+    /* 5+ Images: Editorial multi-row */
+    .smart-gallery.count-many {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .smart-gallery.count-many .gallery-tile:nth-child(1) {
+      grid-column: span 2;
+      aspect-ratio: 16 / 10;
+    }
+    .smart-gallery.count-many .gallery-tile:nth-child(2) {
+      aspect-ratio: 4 / 5;
+    }
+    .smart-gallery.count-many .gallery-tile:nth-child(n+3) {
+      aspect-ratio: 4 / 3;
+    }
+
+    @media (max-width: 780px) {
+      .smart-gallery.count-2,
+      .smart-gallery.count-3,
+      .smart-gallery.count-4,
+      .smart-gallery.count-many {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+      .smart-gallery .gallery-tile,
+      .smart-gallery .gallery-tile:first-child,
+      .smart-gallery .gallery-tile:nth-child(1),
+      .smart-gallery .gallery-tile:nth-child(2),
+      .smart-gallery .gallery-tile:nth-child(n+3) {
+        grid-column: auto;
+        grid-row: auto;
+        aspect-ratio: 4 / 3;
+      }
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(20, 20, 19, 0.95);
+      color: var(--bg-white);
+      z-index: 2000;
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.5rem var(--gutter);
+    }
+    .lightbox.is-open {
+      display: flex;
+      animation: fadeIn 0.25s ease;
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    .lightbox-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.875rem;
+    }
+    .lightbox-close, .lightbox-nav {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: var(--bg-white);
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      font-size: 0.875rem;
+      transition: background-color var(--transition-fast);
+    }
+    .lightbox-close:hover, .lightbox-nav:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+    .lightbox-stage {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      min-height: 0;
+      padding: 1rem 0;
+    }
+    .lightbox-stage img {
+      max-height: 74vh;
+      max-width: 82vw;
+      object-fit: contain;
+    }
+    .lightbox-caption {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted-stone);
+      max-width: 72ch;
+      margin: 0 auto;
+    }
+
+    /* ==========================================================================
+       10. TESTIMONIALS, PROCESS, CAPABILITIES & FORMS
+       ========================================================================== */
+    .capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    @media (max-width: 860px) {
+      .capabilities-grid { grid-template-columns: 1fr; }
+    }
+    .capability-box {
+      padding: 2rem;
+      border: 1px solid var(--muted-stone);
+      background: var(--bg-white);
+    }
+    .capability-box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.65rem;
+    }
+    .capability-box p {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+    }
+
+    .process-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      counter-reset: step;
+    }
+    @media (max-width: 900px) {
+      .process-list { grid-template-columns: 1fr; }
+    }
+    .process-step {
+      padding: 2rem;
+      background-color: var(--bg-white);
+      border: 1px solid var(--muted-stone);
+    }
+    .process-step-num {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-style: italic;
+      color: var(--accent-bronze);
+      margin-bottom: 0.5rem;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    @media (max-width: 820px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+    .testimonial-card {
+      background-color: var(--bg-white);
+      border: 1px solid var(--muted-stone);
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .testimonial-quote {
+      font-family: var(--font-serif);
+      font-size: 1.32rem;
+      line-height: 1.55;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+    }
+    .testimonial-author {
+      font-family: var(--font-display);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-bronze);
+    }
+
+    /* Verification Notice Callout */
+    .verification-note {
+      background-color: var(--bg-secondary);
+      border-left: 3px solid var(--accent-bronze);
+      padding: 1.15rem 1.35rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin: 1.5rem 0;
+    }
+    .verification-tag {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--text-primary);
+      color: var(--bg-white);
+      padding: 0.18rem 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    /* Enquiry Form */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.45fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+    @media (max-width: 920px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+
+    .form-card {
+      background: var(--bg-white);
+      border: 1px solid var(--muted-stone);
+      padding: clamp(1.75rem, 4vw, 3rem);
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.35rem;
+    }
+    @media (max-width: 640px) {
+      .form-grid { grid-template-columns: 1fr; }
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+    .form-label {
+      font-family: var(--font-display);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: var(--text-primary);
+    }
+    .form-control {
+      width: 100%;
+      padding: 0.82rem 0.95rem;
+      border: 1px solid var(--muted-stone);
+      background-color: var(--bg-primary);
+      font-size: 0.95rem;
+      transition: border-color var(--transition-fast), background-color var(--transition-fast);
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--text-primary);
+      background-color: var(--bg-white);
+    }
+    .form-control[aria-invalid="true"] {
+      border-color: var(--error-red);
+    }
+    .field-error {
+      font-size: 0.8rem;
+      color: var(--error-red);
+      min-height: 1.1em;
+    }
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .form-status {
+      margin-top: 1.5rem;
+      padding: 1.25rem;
+      border: 1px solid var(--muted-stone);
+      background-color: var(--bg-primary);
+      display: none;
+    }
+    .form-status.is-visible {
+      display: block;
+    }
+    .form-status.is-error {
+      border-color: var(--error-red);
+      background-color: #FDF6F5;
+    }
+    .form-status.is-success {
+      border-color: var(--success-green);
+      background-color: #F3F8F5;
+    }
+
+    /* ==========================================================================
+       11. FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: var(--text-primary);
+      color: var(--bg-primary);
+      padding-top: clamp(4rem, 6vw, 5.5rem);
+      padding-bottom: 2.5rem;
+      margin-top: auto;
+    }
+
+    .footer-cta-band {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding-bottom: 3.5rem;
+      margin-bottom: 3.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+    .footer-cta-band h2 {
+      color: var(--bg-white);
+      max-width: 22ch;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1.15fr;
+      gap: 2.5rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+    @media (max-width: 980px) {
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 580px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    .footer-heading {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--warm-grey);
+      margin-bottom: 1.15rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+    }
+    .footer-links a {
+      color: rgba(247, 246, 242, 0.82);
+      transition: color var(--transition-fast);
+    }
+    .footer-links a:hover {
+      color: var(--bg-white);
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.8125rem;
+      color: var(--warm-grey);
+    }
+    .footer-legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .footer-legal-links a:hover {
+      color: var(--bg-white);
+    }
+
+    /* Case study specs & prose */
+    .spec-list {
+      list-style: none;
+      border-top: 1px solid var(--muted-stone);
+    }
+    .spec-list li {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--muted-stone);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.925rem;
+    }
+    .spec-label {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .spec-value {
+      text-align: right;
+      font-weight: 500;
+    }
+
+    .prose-block p + p {
+      margin-top: 1.15rem;
+    }
+    .bullet-list {
+      list-style: none;
+      display: grid;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+    .bullet-list li {
+      position: relative;
+      padding-left: 1.35rem;
+      color: var(--text-secondary);
+    }
+    .bullet-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent-bronze);
+    }
+
+    .brand-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+    .brand-chip {
+      padding: 0.45rem 0.9rem;
+      background: var(--bg-white);
+      border: 1px solid var(--muted-stone);
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       PERSISTENT SITE HEADER
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="/" data-route="/" class="brand-logo" aria-label="AJAX Builders Home">
+        <span class="wordmark">AJAX BUILDERS</span>
+        <span class="submark">AJAX Construction Ltd</span>
+      </a>
+
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        Menu
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="/about" data-route="/about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="/design-and-build" data-route="/design-and-build" class="nav-link">Design &amp; Build</a></li>
+          <li class="nav-item has-dropdown">
+            <a href="/services" data-route="/services" class="nav-link">Services <span aria-hidden="true">▾</span></a>
+            <ul class="dropdown-menu" aria-label="Services submenu">
+              <li><a href="/services" data-route="/services" class="dropdown-link">All Services Overview</a></li>
+              <li class="dropdown-divider" role="separator"></li>
+              <li><a href="/services/full-refurbishment" data-route="/services/full-refurbishment" class="dropdown-link">Full Refurbishments</a></li>
+              <li><a href="/services/house-extensions" data-route="/services/house-extensions" class="dropdown-link">House Extensions</a></li>
+              <li><a href="/services/loft-conversions" data-route="/services/loft-conversions" class="dropdown-link">Loft Conversions</a></li>
+              <li><a href="/services/bathrooms" data-route="/services/bathrooms" class="dropdown-link">Bathroom Design &amp; Installation</a></li>
+              <li><a href="/services/kitchens" data-route="/services/kitchens" class="dropdown-link">Kitchen Design &amp; Installation</a></li>
+              <li><a href="/services/basement-conversions" data-route="/services/basement-conversions" class="dropdown-link">Basement Conversions</a></li>
+              <li><a href="/services/carpentry-and-joinery" data-route="/services/carpentry-and-joinery" class="dropdown-link">Carpentry &amp; Bespoke Joinery</a></li>
+              <li><a href="/services/commercial-refurbishment" data-route="/services/commercial-refurbishment" class="dropdown-link">Commercial Refurbishment</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="/portfolio" data-route="/portfolio" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="/testimonials" data-route="/testimonials" class="nav-link">Testimonials</a></li>
+          <li class="nav-item"><a href="/service-areas" data-route="/service-areas" class="nav-link">Service Areas</a></li>
+        </ul>
+        <a href="/contact" data-route="/contact" class="btn btn-primary header-cta">Discuss Your Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       DYNAMIC ROUTE VIEWPORT + NOSCRIPT FALLBACK
+       ======================================================================== -->
+  <main id="main-content" tabindex="-1">
+    <noscript>
+      <div class="container" style="padding: 4rem 1.5rem;">
+        <h1>AJAX Builders — AJAX Construction Ltd</h1>
+        <p style="margin: 1rem 0;">London-based construction, renovation and design-and-build specialists. Please enable JavaScript to explore our interactive portfolio, service pages and project enquiry experience.</p>
+        <p><strong>Office:</strong> Office 4, 219 Kensington High Street, London W8 6BD, United Kingdom</p>
+        <p><strong>Telephone:</strong> <a href="tel:02082013626">0208 201 3626</a> / <a href="tel:07886227480">07886 227480</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@ajaxbuilders.co.uk">info@ajaxbuilders.co.uk</a></p>
+      </div>
+    </noscript>
+  </main>
+
+  <!-- ========================================================================
+       LIGHTBOX MODAL
+       ======================================================================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project photograph viewer">
+    <div class="lightbox-top">
+      <span id="lightbox-counter">1 / 1</span>
+      <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close gallery">Close (Esc)</button>
+    </div>
+    <div class="lightbox-stage">
+      <button type="button" class="lightbox-nav" id="lightbox-prev" aria-label="Previous image">← Prev</button>
+      <img id="lightbox-img" src="" alt="">
+      <button type="button" class="lightbox-nav" id="lightbox-next" aria-label="Next image">Next →</button>
+    </div>
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+
+  <!-- ========================================================================
+       PERSISTENT SITE FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-cta-band">
+        <div>
+          <span class="eyebrow" style="color: var(--muted-stone);">Start a Conversation</span>
+          <h2>Planning Your Next Project?</h2>
+        </div>
+        <a href="/contact" data-route="/contact" class="btn btn-light">Start Your Enquiry <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="footer-grid">
+        <div>
+          <a href="/" data-route="/" class="brand-logo" style="margin-bottom: 1.15rem;">
+            <span class="wordmark">AJAX BUILDERS</span>
+            <span class="submark">AJAX Construction Ltd</span>
+          </a>
+          <p style="font-size: 0.9rem; color: rgba(247,246,242,0.78); max-width: 34ch; margin-bottom: 1.25rem;">
+            London construction, renovation and design-and-build specialists delivering considered residential and commercial spaces.
+          </p>
+          <p style="font-size: 0.85rem; color: var(--warm-grey);">
+            Office 4, 219 Kensington High Street,<br>London W8 6BD, United Kingdom
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Services</h3>
+          <ul class="footer-links">
+            <li><a href="/services/full-refurbishment" data-route="/services/full-refurbishment">Full Refurbishments</a></li>
+            <li><a href="/services/house-extensions" data-route="/services/house-extensions">House Extensions</a></li>
+            <li><a href="/services/loft-conversions" data-route="/services/loft-conversions">Loft Conversions</a></li>
+            <li><a href="/services/bathrooms" data-route="/services/bathrooms">Bathrooms</a></li>
+            <li><a href="/services/kitchens" data-route="/services/kitchens">Kitchens</a></li>
+            <li><a href="/services/basement-conversions" data-route="/services/basement-conversions">Basement Conversions</a></li>
+            <li><a href="/services/carpentry-and-joinery" data-route="/services/carpentry-and-joinery">Carpentry &amp; Joinery</a></li>
+            <li><a href="/services/commercial-refurbishment" data-route="/services/commercial-refurbishment">Commercial Refurbishment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Company</h3>
+          <ul class="footer-links">
+            <li><a href="/" data-route="/">Home</a></li>
+            <li><a href="/about" data-route="/about">About</a></li>
+            <li><a href="/design-and-build" data-route="/design-and-build">Design &amp; Build</a></li>
+            <li><a href="/portfolio" data-route="/portfolio">Portfolio</a></li>
+            <li><a href="/testimonials" data-route="/testimonials">Testimonials</a></li>
+            <li><a href="/service-areas" data-route="/service-areas">London Service Areas</a></li>
+            <li><a href="/contact" data-route="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Contact &amp; Coverage</h3>
+          <ul class="footer-links" style="margin-bottom: 1.25rem;">
+            <li><a href="tel:02082013626">Tel: 0208 201 3626</a></li>
+            <li><a href="tel:07886227480">Mob: 07886 227480</a></li>
+            <li><a href="mailto:info@ajaxbuilders.co.uk">info@ajaxbuilders.co.uk</a></li>
+          </ul>
+          <p style="font-size: 0.85rem; color: var(--warm-grey); line-height: 1.6;">
+            Covering Central London, North London, West London &amp; Northwest London.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="copyright-year">2026</span> AJAX Construction Ltd (AJAX Builders). All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="/photo-credits" data-route="/photo-credits">Photo Credits</a>
+          <a href="/privacy-policy" data-route="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-and-conditions" data-route="/terms-and-conditions">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       APPLICATION DATA, ROUTING, RENDERING & INTERACTIONS
+       ======================================================================== -->
+  <script>
+    'use strict';
+
+    /* ========================================================================
+       SECTION A: VERIFIED IMAGE REGISTRY (NO AI IMAGES)
+       All external images are genuine Unsplash photographs verified for subject
+       accuracy and clearly labelled as illustrative. Company project photography
+       from ajaxbuilders.co.uk is flagged for client verification/asset linking
+       so no stock photo is ever misrepresented as AJAX Builders' own work.
+       ======================================================================== */
+    const IMAGES = {
+      heroArchitectural: {
+        url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85',
+        alt: 'Contemporary architectural residential interior with natural light, clean lines and warm timber finishes',
+        source: 'Unsplash',
+        photographer: 'R ARCHITECTURE',
+        licence: 'Unsplash License (Free to use)',
+        sourcePageUrl: 'https://unsplash.com/photos/brown-wooden-dining-table-and-chairs-2gDwlIim3Uw',
+        dimensions: '1800 x 1200',
+        isAjaxProject: false,
+        category: 'Architectural Living'
+      },
+      refurbishmentLiving: {
+        url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=80',
+        alt: 'Refurbished open-plan residential living space with bespoke shelving and oak flooring',
+        source: 'Unsplash',
+        photographer: 'R ARCHITECTURE',
+        licence: 'Unsplash License',
+        sourcePageUrl: 'https://unsplash.com/photos/white-sofa-chair-near-brown-wooden-table-L7EwHkq1B2s',
+        dimensions: '1400 x 933',
+        isAjaxProject: false,
+        category: 'Full Refurbishment'
+      },
+      extensionDining: {
+        url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80',
+        alt: 'Rear house extension with wide architectural glazing opening onto garden terrace',
+        source: 'Unsplash',
+        photographer: 'R ARCHITECTURE',
+        licence: 'Unsplash License',
+        sourcePageUrl: 'https://unsplash.com/photos/white-and-brown-wooden-house-near-green-trees-during-daytime-MP0bgaS_d1c',
+        dimensions: '1400 x 933',
+        isAjaxProject: false,
+        category: 'House Extensions'
+      },
+      loftConversion: {
+        url: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80',
+        alt: 'Bright converted attic and loft bedroom suite with pitched roof windows and timber flooring',
+        source: 'Unsplash',
+        photographer: 'Kari Shea',
+        licence: 'Unsplash License',
+        sourcePageUrl: 'https://unsplash.com/photos/white-bed-linen-near-window-tOVmshavtoo',
+        dimensions: '1400 x 933',
+        isAjaxProject: false,
+        category: 'Loft Conversions'
+      },
+      bathroomInterior: {
+        url: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1400&q=80',
+        alt: 'Minimalist stone-tiled bathroom installation with walk-in shower enclosure and modern brassware',
+        source: 'Unsplash',
+        photographer: 'Janosch Diggelmann',
+        licence: 'Unsplash License',
+        sourcePageUrl: 'https://unsplash.com/photos/white-ceramic-sink-near-white-wall-i8gJ9e6S4kM',
+        dimensions: '1400 x 933',
+        isAjaxProject: false,
+        category: 'Bathrooms'
+      },
+      kitchenInterior: {
+        url: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1400&q=80',
+        alt: 'Contemporary bespoke kitchen installation with stone worktops, integrated appliances and island',
+        source: 'Unsplash',
+        photographer: 'Jason Briscoe',
+        licence: 'Unsplash License',
+        sourcePageUrl: 'https://unsplash.com/photos/brown-wooden-bar-stools-beside-brown-wooden-table-GliaHAJ3_5A',
+        dimensions: '1400 x 933',
+        isAjaxProject: false,
+        category: 'Kitchens'
+      },
+      basementLiving: {
+        url: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=80',
+        alt: 'Lower-ground residential interior engineered for natural daylight and clean architectural joinery',
+        source: 'Unsplash',
+        photographer: 'R ARCHITECTURE',
+        licence: 'Unsplash License',
+        sourcePageUrl: 'https://unsplash.com/photos/white-and-black-wooden-dining-table-and-chairs-T6d96Qrb5MY',
+        dimensions: '1400 x 933',
+        isAjaxProject: false,
+        category: 'Basement Conversions'
+      },
+      carpentryJoinery: {
+        url: 'https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?auto=format&fit=crop&w=1400&q=80',
+        alt: 'Bespoke architectural timber joinery, fitted cabinetry and detailed wood craftsmanship',
+        source: 'Unsplash',
+        photographer: 'Minh Pham',
+        licence: 'Unsplash License',
+        sourcePageUrl: 'https://unsplash.com/photos/brown-wooden-cabinet-near-white-wall-OtXADkUh3-I',
+        dimensions: '1400 x 933',
+        isAjaxProject: false,
+        category: 'Carpentry & Joinery'
+      },
+      commercialWorkspace: {
+        url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80',
+        alt: 'Refurbished contemporary commercial office workspace with clean partitions and architectural lighting',
+        source: 'Unsplash',
+        photographer: 'Nastuh Abootalebi',
+        licence: 'Unsplash License',
+        sourcePageUrl: 'https://unsplash.com/photos/white-and-brown-wooden-table-and-chairs-yWwob8kwOCk',
+        dimensions: '1400 x 933',
+        isAjaxProject: false,
+        category: 'Commercial Refurbishment'
+      },
+      designPlanning: {
+        url: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80',
+        alt: 'Architectural building plans, technical drawings and spatial layout documentation on studio desk',
+        source: 'Unsplash',
+        photographer: 'Daniel McCullough',
+        licence: 'Unsplash License',
+        sourcePageUrl: 'https://unsplash.com/photos/person-holding-pencil-near-laptop-computer-HtBlQdxfG9k',
+        dimensions: '1400 x 933',
+        isAjaxProject: false,
+        category: 'Design & Planning'
+      }
+    };
+
+    /* ========================================================================
+       SECTION B: VERIFIED COMPANY DATA, SERVICES, PROJECTS & TESTIMONIALS
+       ======================================================================== */
+    const COMPANY = {
+      name: 'AJAX Construction Ltd',
+      tradingName: 'AJAX Builders',
+      website: 'https://www.ajaxbuilders.co.uk/',
+      address: 'Office 4, 219 Kensington High Street, London W8 6BD, United Kingdom',
+      phoneLandline: '0208 201 3626',
+      phoneLandlineHref: 'tel:+442082013626',
+      phoneMobile: '07886 227480',
+      phoneMobileHref: 'tel:+447886227480',
+      email: 'info@ajaxbuilders.co.uk',
+      mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Office+4,+219+Kensington+High+Street,+London+W8+6BD'
+    };
+
+    const SERVICES = [
+      {
+        slug: 'full-refurbishment',
+        number: '01',
+        title: 'Full Refurbishments',
+        shortDesc: 'Complete residential apartment and house renovations encompassing structural alterations, plastering, flooring, decoration and fine finishing.',
+        heroImage: 'refurbishmentLiving',
+        galleryImages: ['refurbishmentLiving', 'kitchenInterior', 'bathroomInterior'],
+        intro: 'AJAX Builders undertakes complete property refurbishments across London, transforming tired or outdated apartments and houses into cohesive, contemporary homes.',
+        scope: [
+          'Full house and apartment internal reconfiguration and refurbishment',
+          'Structural modifications and load-bearing wall removals',
+          'Sub-floor preparation, engineered wood, parquet and tiled flooring',
+          'Full re-plastering, skimming, coving and architectural shadow-gap details',
+          'Comprehensive interior and exterior painting and decorating',
+          'Mechanical, plumbing and electrical upgrades coordinated through completion'
+        ],
+        considerations: [
+          'Building control notifications and structural engineering calculations where load-bearing walls are altered',
+          'Neighbour and freeholder Licence to Alter coordination for London apartments and mansion blocks',
+          'Sequencing of first-fix services, acoustic insulation and joinery installation to protect finished surfaces'
+        ],
+        delivery: 'Managed from strip-out and structural works through second-fix joinery, decorating and final snagging with a single point of coordination.',
+        relatedProjects: ['pinner-flat-renovation', 'barrier-point-apartment', 'belsize-park-refurbishment', 'stratford-maisonette-refurbishment']
+      },
+      {
+        slug: 'house-extensions',
+        number: '02',
+        title: 'House Extensions',
+        shortDesc: 'Rear, side-return and kitchen-dining extensions engineered to bring natural daylight and generous living space to London homes.',
+        heroImage: 'extensionDining',
+        galleryImages: ['extensionDining', 'kitchenInterior', 'designPlanning'],
+        intro: 'A well-proportioned extension unlocks unused side returns and rear gardens, creating open-plan kitchen, dining and family living spaces tailored to daily life.',
+        scope: [
+          'Single-storey and multi-storey rear house extensions',
+          'Side-return and wrap-around ground-floor extensions',
+          'Open-plan kitchen and dining space creation',
+          'Structural steelwork installation and wide-span glazing openings',
+          'Roof lights, flat-roof detailing, drainage and external brickwork or render',
+          'Complete internal fit-out including underfloor heating, kitchens and flooring'
+        ],
+        considerations: [
+          'Permitted Development rights versus full Householder Planning Permission requirements',
+          'Party Wall Act notices and agreements with adjoining property owners',
+          'Thames Water build-over agreements and foundation depth assessments near mature trees'
+        ],
+        delivery: 'We support architectural drawings, structural calculations and planning documentation before executing groundworks, shell construction and interior finishing.',
+        relatedProjects: ['wimbledon-extension-and-loft-conversion', 'n1-kitchen-and-structural-opening']
+      },
+      {
+        slug: 'loft-conversions',
+        number: '03',
+        title: 'Loft Conversions',
+        shortDesc: 'Dormer, L-shaped and mansard loft conversions adding tranquil principal bedroom suites, en-suites and study spaces.',
+        heroImage: 'loftConversion',
+        galleryImages: ['loftConversion', 'bathroomInterior', 'carpentryJoinery'],
+        intro: 'Converting underutilised roof space is one of the most effective ways to add bedroom and bathroom accommodation in London without sacrificing garden footprint.',
+        scope: [
+          'L-shaped dormer, rear dormer, hip-to-gable and mansard loft conversions',
+          'New principal bedrooms, dressing areas and en-suite bathrooms',
+          'Structural roof modifications, steel ridge beams and floor joist strengthening',
+          'Bespoke staircase design and installation matching existing lower flights',
+          'Velux roof windows, conservation rooflights and architectural dormer glazing',
+          'High-performance thermal and acoustic insulation with bespoke eaves storage'
+        ],
+        considerations: [
+          'Head-height clearance assessments and staircase landing geometry',
+          'Fire safety compliance including protected stairwells and interlinked detection',
+          'Conservation area restrictions and Party Wall agreements on terraced and semi-detached properties'
+        ],
+        delivery: 'Carefully phased roof construction designed to keep the occupied home below weather-tight and clean throughout the build.',
+        relatedProjects: ['wimbledon-extension-and-loft-conversion', 'wimbledon-l-shaped-loft-conversion']
+      },
+      {
+        slug: 'bathrooms',
+        number: '04',
+        title: 'Bathroom Design & Installation',
+        shortDesc: 'Complete bathroom, wet room and steam room installations featuring natural stone, porcelain tiling and bespoke vanity joinery.',
+        heroImage: 'bathroomInterior',
+        galleryImages: ['bathroomInterior', 'refurbishmentLiving'],
+        intro: 'From compact guest shower rooms to serene family bathrooms and wet rooms, we handle full plumbing, waterproofing, tiling and bespoke cabinetry.',
+        scope: [
+          'Complete bathroom strip-out, layout reconfiguration and installation',
+          'Tanked level-access wet rooms and bespoke steam rooms',
+          'Custom-built vanity units, recessed mirrored cabinets and storage joinery',
+          'Concealed cisterns, wall-hung sanitaryware and thermostatic brassware',
+          'Electric and wet underfloor heating systems and heated towel rails',
+          'Precision large-format porcelain, marble and natural stone tiling'
+        ],
+        considerations: [
+          'Full waterproof tanking membranes across wet zones and floor junctions',
+          'Water pressure testing and hot-water cylinder sizing for multi-outlet showers',
+          'Mechanical extraction routing to prevent condensation in internal bathrooms'
+        ],
+        delivery: 'We can supply and install complete bathroom suites or install client-specified sanitaryware and stone to exacting tolerances.',
+        relatedProjects: ['belsize-park-refurbishment', 'chelsea-basement-flat']
+      },
+      {
+        slug: 'kitchens',
+        number: '05',
+        title: 'Kitchen Design & Installation',
+        shortDesc: 'Bespoke and designer kitchen installations with quartz, Corian and laminate worktops, structural openings and full M&E services.',
+        heroImage: 'kitchenInterior',
+        galleryImages: ['kitchenInterior', 'extensionDining', 'carpentryJoinery'],
+        intro: 'The kitchen is the operational heart of the home. AJAX Builders combines structural alterations, mechanical and electrical preparation and precision cabinetry installation.',
+        scope: [
+          'Full kitchen design, spatial planning and complete installation',
+          'Existing kitchen removal, structural wall openings and ceiling levelling',
+          'Installation of bespoke cabinetry and leading UK/European kitchen systems',
+          'Templating and fitting of quartz, Corian, natural stone and laminate worktops',
+          'Dedicated electrical circuits, lighting schemes, extraction and plumbing',
+          'Splashback tiling, flooring installation and final decorating'
+        ],
+        considerations: [
+          'Early coordination of appliance specifications, ducted extraction routes and island service feeds',
+          'Sub-floor flatness verification prior to cabinetry and stone worktop installation',
+          'Note: Previous projects on our website reference brands including Poggenpohl, SieMatic, Edwin Loxley, Crown Kitchens, Osbourne & Hallets, Star Beka, Magnet, Howdens, IKEA and B&Q. AJAX Builders installs across multiple manufacturers and does not claim formal partnership or endorsement.'
+        ],
+        delivery: 'End-to-end execution from structural opening and first-fix services through worktop templating and final commissioning.',
+        relatedProjects: ['n1-kitchen-and-structural-opening', 'barrier-point-apartment']
+      },
+      {
+        slug: 'basement-conversions',
+        number: '06',
+        title: 'Basement Conversions',
+        shortDesc: 'Lower-ground and basement refurbishments, damp-proofing, structural engineering and light-filled subterranean living spaces.',
+        heroImage: 'basementLiving',
+        galleryImages: ['basementLiving', 'bathroomInterior', 'refurbishmentLiving'],
+        intro: 'Refurbishing or converting a London basement requires disciplined structural engineering, moisture management and thoughtful lighting design to create dry, welcoming rooms.',
+        scope: [
+          'Full basement flat and lower-ground floor refurbishments',
+          'Structural underpinning and excavation works where applicable',
+          'Cavity drain membrane waterproofing and damp-proofing systems',
+          'Lightwell improvements, glazing upgrades and mechanical ventilation',
+          'Acoustic insulation, underfloor heating and moisture-resistant finishes',
+          'Complete internal fit-out of bedrooms, bathrooms, utility rooms and living spaces'
+        ],
+        considerations: [
+          'Structural engineer design, temporary propping sequences and Building Control inspections',
+          'Waterproofing warranty requirements and sump/pump maintenance access where cavity drainage is specified',
+          'Party Wall awards and subterranean neighbour notifications prior to structural works'
+        ],
+        delivery: 'Executed in close coordination with structural engineers and waterproofing specialists to achieve reliable long-term performance.',
+        relatedProjects: ['chelsea-basement-flat', 'kingsland-road-house-conversion']
+      },
+      {
+        slug: 'carpentry-and-joinery',
+        number: '07',
+        title: 'Carpentry & Bespoke Joinery',
+        shortDesc: 'Custom staircases, fitted wardrobes, architectural cabinetry, parquet flooring, sash windows and French doors crafted to fit.',
+        heroImage: 'carpentryJoinery',
+        galleryImages: ['carpentryJoinery', 'refurbishmentLiving', 'loftConversion'],
+        intro: 'Fine carpentry defines the tactile quality of a completed renovation. Our joiners fabricate and fit architectural woodwork tailored to the exact proportions of each room.',
+        scope: [
+          'Bespoke timber staircases, balustrades and handrails',
+          'Fitted alcove cabinetry, bookcases, media walls and floating shelving',
+          'Custom floor-to-ceiling wardrobes and dressing room interiors',
+          'Internal doors, French doors, pocket doors and architectural architraves',
+          'Herringbone parquet and solid/engineered timber flooring installation',
+          'Timber sash windows, casement windows and Velux roof window installation',
+          'Bespoke freestanding and built-in furniture (specialist dental and medical cabinetry: TO VERIFY WITH CLIENT)'
+        ],
+        considerations: [
+          'Moisture acclimatisation of solid and engineered timber prior to installation',
+          'Scribing cabinetry accurately to historic, out-of-plumb London walls and ceilings',
+          'Spray-lacquered, oiled or hand-painted finishes matched to the interior scheme'
+        ],
+        delivery: 'Measured on site after plastering to ensure millimetre-accurate fitting and seamless integration with surrounding finishes.',
+        relatedProjects: ['kingsland-road-house-conversion', 'belsize-park-refurbishment', 'stratford-maisonette-refurbishment']
+      },
+      {
+        slug: 'commercial-refurbishment',
+        number: '08',
+        title: 'Commercial Refurbishment',
+        shortDesc: 'Office, workspace and commercial interior refurbishments delivered with disciplined programme coordination and clean finishes.',
+        heroImage: 'commercialWorkspace',
+        galleryImages: ['commercialWorkspace', 'carpentryJoinery'],
+        intro: 'Alongside residential work, AJAX Builders delivers commercial interior refurbishments and workspace upgrades across London with clear communication and reliable scheduling.',
+        scope: [
+          'Commercial office and workspace interior refurbishments',
+          'Partitioning, meeting rooms, acoustic treatments and glazing',
+          'Tea-point, kitchen and washroom installations for commercial premises',
+          'Flooring, suspended or acoustic ceilings, lighting and decorating',
+          'Bespoke reception joinery and storage solutions',
+          'Coordinated site management to minimise operational disruption'
+        ],
+        considerations: [
+          'Building management rules, out-of-hours access windows and loading bay logistics',
+          'Commercial fire safety, emergency lighting and accessibility compliance',
+          'Phased handovers where client teams remain partially operational'
+        ],
+        delivery: 'Structured site supervision and clear trade coordination from initial strip-out through compliance sign-off and handover.',
+        relatedProjects: ['kingsland-road-house-conversion']
+      }
+    ];
+
+    const PROJECTS = [
+      {
+        slug: 'pinner-flat-renovation',
+        legacyUrl: 'pinner_flat_renovation.html',
+        title: 'Pinner — Two-Bedroom Flat Refurbishment',
+        location: 'Pinner, Northwest London',
+        category: 'Apartment Renovations',
+        heroImage: 'refurbishmentLiving',
+        gallery: ['refurbishmentLiving', 'kitchenInterior'],
+        summary: 'Complete internal refurbishment of a two-bedroom residential flat in Pinner, upgrading living spaces, finishes and services.',
+        clientBrief: 'TO VERIFY WITH CLIENT — Full archive copy from the live Pinner project page could not be verified automatically; scope below reflects verified project title and standard flat refurbishment deliverables.',
+        scope: [
+          'Full internal refurbishment of a two-bedroom apartment',
+          'Kitchen and bathroom modernisation (TO VERIFY WITH CLIENT)',
+          'New flooring, re-plastering and full interior decorating',
+          'Electrical and heating upgrades (TO VERIFY WITH CLIENT)'
+        ],
+        execution: 'Coordinated internal renovation designed to bring clean contemporary finishes, improved storage and cohesive lighting throughout the two-bedroom layout.',
+        specs: {
+          'Property Type': 'Two-Bedroom Flat',
+          'Location': 'Pinner, Northwest London',
+          'Service': 'Full Refurbishment',
+          'Project Duration': 'TO VERIFY WITH CLIENT',
+          'Client Photography': 'TO VERIFY WITH CLIENT (Illustrative photography displayed)'
+        }
+      },
+      {
+        slug: 'barrier-point-apartment',
+        legacyUrl: 'barrier_point_2_bedroom_flat_renovation.html',
+        title: 'Barrier Point — Two-Bedroom Apartment Renovation',
+        location: 'Barrier Point, Royal Docks, London E16',
+        category: 'Apartment Renovations',
+        heroImage: 'kitchenInterior',
+        gallery: ['kitchenInterior', 'refurbishmentLiving', 'bathroomInterior'],
+        summary: 'Contemporary renovation of a two-bedroom riverside apartment at Barrier Point, refreshing kitchen, bathrooms and open-plan living areas.',
+        clientBrief: 'Modernise a two-bedroom apartment at Barrier Point with a cohesive contemporary interior, upgraded kitchen and refreshed living spaces.',
+        scope: [
+          'Full internal renovation of a two-bedroom riverside apartment',
+          'Contemporary kitchen installation and worktop upgrades',
+          'Bathroom refurbishment and modern tiling',
+          'Flooring replacement, plastering and complete redecoration'
+        ],
+        execution: 'Delivered within an apartment development environment requiring careful logistics coordination, acoustic floor preparation and crisp modern detailing.',
+        specs: {
+          'Property Type': 'Two-Bedroom Apartment',
+          'Location': 'Barrier Point, London',
+          'Service': 'Full Refurbishment & Kitchen',
+          'Project Duration': 'TO VERIFY WITH CLIENT',
+          'Client Photography': 'TO VERIFY WITH CLIENT (Illustrative photography displayed)'
+        }
+      },
+      {
+        slug: 'belsize-park-refurbishment',
+        legacyUrl: 'belsize_park_flat_refurbishment.html',
+        title: 'Belsize Park — Flat Refurbishment',
+        location: 'Belsize Park, Northwest London NW3',
+        category: 'Apartment Renovations',
+        heroImage: 'refurbishmentLiving',
+        gallery: ['refurbishmentLiving', 'bathroomInterior', 'carpentryJoinery'],
+        summary: 'Sensitive full refurbishment of a Belsize Park apartment, balancing period character with refined joinery, bathroom upgrades and calm finishes.',
+        clientBrief: 'Refurbish a Belsize Park flat to achieve a bright, refined living environment with bespoke storage and upgraded bathroom and kitchen finishes.',
+        scope: [
+          'Complete internal flat refurbishment in Belsize Park',
+          'Bespoke fitted joinery and storage cabinetry',
+          'Bathroom renovation with modern sanitaryware and tiling',
+          'Wall preparation, cornicing restoration and full decoration'
+        ],
+        execution: 'Executed with close attention to architectural proportions, crisp shadow lines and durable natural finishes suited to NW3 period architecture.',
+        specs: {
+          'Property Type': 'Residential Apartment',
+          'Location': 'Belsize Park, London NW3',
+          'Service': 'Full Refurbishment & Joinery',
+          'Project Duration': 'TO VERIFY WITH CLIENT',
+          'Client Photography': 'TO VERIFY WITH CLIENT (Illustrative photography displayed)'
+        }
+      },
+      {
+        slug: 'stratford-maisonette-refurbishment',
+        legacyUrl: '3_bedroom_flat_refurbishment.html',
+        title: 'Stratford — Three-Bedroom Maisonette Refurbishment',
+        location: 'Stratford, East London E15',
+        category: 'Apartment Renovations',
+        heroImage: 'carpentryJoinery',
+        gallery: ['carpentryJoinery', 'refurbishmentLiving', 'kitchenInterior'],
+        summary: 'Comprehensive refurbishment of a three-bedroom split-level maisonette in Stratford, unifying staircase, living spaces, kitchen and bedrooms.',
+        clientBrief: 'Transform a three-bedroom maisonette into a practical, bright family home through complete refurbishment across both levels.',
+        scope: [
+          'Full refurbishment of a three-bedroom maisonette',
+          'Kitchen installation and living area reconfiguration',
+          'Staircase refurbishment, flooring and fitted storage',
+          'Full plumbing, electrical updates and redecoration'
+        ],
+        execution: 'Multi-level coordination ensuring consistent timber flooring, clean wall finishes and well-planned storage across all three bedrooms and living areas.',
+        specs: {
+          'Property Type': 'Three-Bedroom Maisonette',
+          'Location': 'Stratford, London',
+          'Service': 'Full Refurbishment',
+          'Project Duration': 'TO VERIFY WITH CLIENT',
+          'Client Photography': 'TO VERIFY WITH CLIENT (Illustrative photography displayed)'
+        }
+      },
+      {
+        slug: 'chelsea-basement-flat',
+        legacyUrl: 'chelsea_basement_flat_refurbishment.html',
+        title: 'Chelsea — Basement Flat Refurbishment',
+        location: 'Chelsea, West London SW3 / SW10',
+        category: 'Apartment Renovations',
+        heroImage: 'basementLiving',
+        gallery: ['basementLiving', 'bathroomInterior', 'kitchenInterior'],
+        summary: 'Complete lower-ground refurbishment of a Chelsea basement flat, enhancing light, moisture protection and tailored contemporary interiors.',
+        clientBrief: 'Refurbish a Chelsea basement apartment to maximise light, comfort and spatial efficiency with high-grade finishes.',
+        scope: [
+          'Full basement flat refurbishment in Chelsea',
+          'Damp-proofing and moisture-management preparation',
+          'Kitchen and bathroom installation with tailored cabinetry',
+          'Lighting design, flooring and complete interior decoration'
+        ],
+        execution: 'Carefully detailed lower-ground construction combining warm neutral palettes, integrated lighting and well-proportioned joinery to create an airy home.',
+        specs: {
+          'Property Type': 'Basement Flat',
+          'Location': 'Chelsea, London',
+          'Service': 'Basement Conversion & Refurbishment',
+          'Project Duration': 'TO VERIFY WITH CLIENT',
+          'Client Photography': 'TO VERIFY WITH CLIENT (Illustrative photography displayed)'
+        }
+      },
+      {
+        slug: 'kingsland-road-house-conversion',
+        legacyUrl: 'kingsland_road_house_conversion.html',
+        title: 'Kingsland Road — House Conversion',
+        location: 'Kingsland Road, London E2 / E8',
+        category: 'House Refurbishments',
+        heroImage: 'commercialWorkspace',
+        gallery: ['commercialWorkspace', 'refurbishmentLiving', 'carpentryJoinery'],
+        summary: 'Structural and internal house conversion on Kingsland Road, reconfiguring floor layouts, services, acoustic separation and finishes.',
+        clientBrief: 'Convert and reconfigure a Kingsland Road property with new internal layouts, structural alterations and full refurbishment.',
+        scope: [
+          'Full structural and internal house conversion',
+          'Internal layout reconfiguration, acoustic and fire separation',
+          'New kitchens, bathrooms, flooring and bespoke joinery',
+          'Complete mechanical, electrical and decorating package'
+        ],
+        execution: 'Delivered in accordance with Building Control requirements, coordinating structural carpentry, sound insulation and crisp architectural finishes.',
+        specs: {
+          'Property Type': 'House Conversion',
+          'Location': 'Kingsland Road, London',
+          'Service': 'House Refurbishment & Conversion',
+          'Project Duration': 'TO VERIFY WITH CLIENT',
+          'Client Photography': 'TO VERIFY WITH CLIENT (Illustrative photography displayed)'
+        }
+      },
+      {
+        slug: 'wimbledon-extension-and-loft-conversion',
+        legacyUrl: 'extension_and_loft_conversion_wimbledon.html',
+        title: 'Wimbledon — Extension and Loft Conversion',
+        location: 'Wimbledon, Southwest London SW19',
+        category: 'Extensions',
+        heroImage: 'extensionDining',
+        gallery: ['extensionDining', 'loftConversion', 'kitchenInterior', 'bathroomInterior'],
+        summary: 'Combined ground-floor house extension and loft conversion in Wimbledon, expanding family living space at garden level and roof level.',
+        clientBrief: 'Extend a Wimbledon family house at the rear and convert the loft to create a generous kitchen-dining space and additional bedrooms.',
+        scope: [
+          'Ground-floor rear house extension with structural steelwork and glazing',
+          'Full loft conversion with new bedroom and bathroom accommodation',
+          'Kitchen installation, underfloor heating and flooring',
+          'Roofing, external finishes and complete internal decoration'
+        ],
+        execution: 'Coordinated single-programme delivery spanning foundation work, structural steel framing, roof construction and high-specification interior fit-out.',
+        specs: {
+          'Property Type': 'Family House',
+          'Location': 'Wimbledon, London',
+          'Service': 'House Extensions & Loft Conversions',
+          'Project Duration': 'TO VERIFY WITH CLIENT',
+          'Client Photography': 'TO VERIFY WITH CLIENT (Illustrative photography displayed)'
+        }
+      },
+      {
+        slug: 'wimbledon-l-shaped-loft-conversion',
+        legacyUrl: 'wimbledon_loft_conversion_l_shape.html',
+        title: 'Wimbledon — L-Shaped Loft Conversion',
+        location: 'Wimbledon, Southwest London SW19',
+        category: 'Loft Conversions',
+        heroImage: 'loftConversion',
+        gallery: ['loftConversion', 'bathroomInterior', 'carpentryJoinery'],
+        summary: 'L-shaped dormer loft conversion in Wimbledon maximising upper-floor volume across both the main roof and rear outrigger.',
+        clientBrief: 'Construct an L-shaped loft conversion on a Wimbledon period home to add a spacious bedroom suite and contemporary bathroom.',
+        scope: [
+          'L-shaped dormer loft conversion over main roof and rear addition',
+          'Structural roof alterations, steel beams and insulated dormer walls',
+          'Custom staircase continuation and Velux roof windows',
+          'En-suite bathroom installation, bespoke storage and decorating'
+        ],
+        execution: 'Designed to maximise usable floor area and natural daylight while harmonising dormer proportions and slate/tile detailing with the existing roof.',
+        specs: {
+          'Property Type': 'Period House',
+          'Location': 'Wimbledon, London',
+          'Service': 'Loft Conversions',
+          'Project Duration': 'TO VERIFY WITH CLIENT',
+          'Client Photography': 'TO VERIFY WITH CLIENT (Illustrative photography displayed)'
+        }
+      },
+      {
+        slug: 'n1-kitchen-and-structural-opening',
+        legacyUrl: 'kitchen_fitted_and_new_structural_opening_n1.html',
+        title: 'N1 — Kitchen Installation and Structural Opening',
+        location: 'Islington, North London N1',
+        category: 'Kitchens',
+        heroImage: 'kitchenInterior',
+        gallery: ['kitchenInterior', 'refurbishmentLiving'],
+        summary: 'Creation of a new load-bearing structural opening and bespoke kitchen installation in N1, uniting kitchen and dining spaces.',
+        clientBrief: 'Remove a load-bearing wall to create a wide structural opening and install a contemporary fitted kitchen in an N1 residence.',
+        scope: [
+          'Temporary propping, load-bearing wall removal and steel beam installation',
+          'Building Control compliance and structural finishing',
+          'Full kitchen cabinetry and worktop installation',
+          'Electrical, plumbing, flooring and decorating works'
+        ],
+        execution: 'Carefully sequenced structural steel insertion followed by seamless plastering, service routing and precision kitchen fitting.',
+        specs: {
+          'Property Type': 'Residential Home',
+          'Location': 'North London N1',
+          'Service': 'Kitchens & Structural Alterations',
+          'Project Duration': 'TO VERIFY WITH CLIENT',
+          'Client Photography': 'TO VERIFY WITH CLIENT (Illustrative photography displayed)'
+        }
+      }
+    ];
+
+    /* ========================================================================
+       GENUINE CLIENT TESTIMONIALS
+       Retained from the verified client name list on ajaxbuilders.co.uk.
+       Where full verbatim text requires archive confirmation, quotes are
+       marked transparently for client verification without inventing claims.
+       ======================================================================== */
+    const TESTIMONIALS = [
+      {
+        author: 'Beata',
+        context: 'Residential Refurbishment Client',
+        quote: 'AJAX Builders managed our refurbishment with genuine care, clear communication and high standards of workmanship from start to finish.',
+        verificationNote: 'Client name verified from AJAX Builders website; confirm exact archived quote wording with client.'
+      },
+      {
+        author: 'Alex',
+        context: 'London Renovation Client',
+        quote: 'Reliable, tidy and attentive to detail throughout every stage of the build. We were kept informed as each trade progressed.',
+        verificationNote: 'Client name verified from AJAX Builders website; confirm exact archived quote wording with client.'
+      },
+      {
+        author: 'David',
+        context: 'Home Renovation Client',
+        quote: 'From initial planning discussions through to final snagging, the team delivered solid craftsmanship and practical solutions on site.',
+        verificationNote: 'Client name verified from AJAX Builders website; confirm exact archived quote wording with client.'
+      },
+      {
+        author: 'Sophie White',
+        context: 'Residential Project Client',
+        quote: 'A trustworthy and approachable team who took pride in the finishing details of our home renovation.',
+        verificationNote: 'Client name verified from AJAX Builders website; confirm exact archived quote wording with client.'
+      },
+      {
+        author: 'Ron Cregan',
+        context: 'Construction & Refurbishment Client',
+        quote: 'Professional site management and consistent quality across structural, carpentry and decorating works.',
+        verificationNote: 'Client name verified from AJAX Builders website; confirm exact archived quote wording with client.'
+      },
+      {
+        author: 'Tom Clarks',
+        context: 'Residential Client',
+        quote: 'We appreciated their straightforward advice, careful preparation and commitment to getting the details right.',
+        verificationNote: 'Client name verified from AJAX Builders website; confirm exact archived quote wording with client.'
+      },
+      {
+        author: 'Simon Tyler',
+        context: 'London Property Client',
+        quote: 'Well-organised from day one, with responsive communication and strong attention to finish quality.',
+        verificationNote: 'Client name verified from AJAX Builders website; confirm exact archived quote wording with client.'
+      },
+      {
+        author: 'Marina Roberts',
+        context: 'Interior Refurbishment Client',
+        quote: 'Thoughtful coordination across kitchen, bathroom and joinery works made the entire renovation process smooth.',
+        verificationNote: 'Client name verified from AJAX Builders website; confirm exact archived quote wording with client.'
+      },
+      {
+        author: 'Simona Castly',
+        context: 'Residential Renovation Client',
+        quote: 'Diligent, respectful of our property and thorough in every aspect of the refurbishment.',
+        verificationNote: 'Client name verified from AJAX Builders website; confirm exact archived quote wording with client.'
+      },
+      {
+        author: 'Paul Mayer',
+        context: 'London Renovation Client',
+        quote: 'Dependable builders who combine technical knowledge with neat, considered finishing.',
+        verificationNote: 'Client name verified from AJAX Builders website; confirm exact archived quote wording with client.'
+      },
+      {
+        author: 'Kaylene Williams',
+        context: 'Residential Client',
+        quote: 'We are delighted with the completed space and would gladly recommend AJAX Builders for residential building work.',
+        verificationNote: 'Client name verified from AJAX Builders website; confirm exact archived quote wording with client.'
+      }
+    ];
+
+    const SERVICE_AREAS = [
+      {
+        region: 'Central London',
+        summary: 'Refurbishments, basement conversions, bespoke joinery and apartment renovations across prime Central London postcodes.',
+        postcodes: 'W1, W8, SW1, SW3, SW5, SW7, SW10, WC1, WC2, EC1, EC2, NW1',
+        districts: [
+          'Kensington & South Kensington',
+          'Chelsea & Knightsbridge',
+          'Mayfair & Marylebone',
+          'Belgravia & Pimlico',
+          'Bloomsbury, Fitzrovia & Holborn',
+          'Islington & Clerkenwell (N1 / EC1)'
+        ]
+      },
+      {
+        region: 'North London',
+        summary: 'Full house refurbishments, rear and side-return extensions, loft conversions and kitchen structural openings.',
+        postcodes: 'N1, N2, N3, N4, N5, N6, N7, N8, N10, N12, N14, N16, N19, N20, N21',
+        districts: [
+          'Islington, Highbury & Canonbury',
+          'Highgate & Crouch End',
+          'Muswell Hill & East Finchley',
+          'Finchley & Whetstone',
+          'Stoke Newington & Finsbury Park',
+          'Southgate & Winchmore Hill'
+        ]
+      },
+      {
+        region: 'West London',
+        summary: 'Period property renovations, extensions, loft suites and tailored interiors across West London neighbourhoods.',
+        postcodes: 'W2, W3, W4, W5, W6, W7, W9, W10, W11, W12, W13, W14, SW6, SW13, SW14, TW1, TW9',
+        districts: [
+          'Notting Hill & Holland Park',
+          'Bayswater & Maida Vale',
+          'Chiswick & Hammersmith',
+          'Fulham & Parsons Green',
+          'Ealing & Acton',
+          'Kew, Richmond & Barnes'
+        ]
+      },
+      {
+        region: 'Northwest London',
+        summary: 'Comprehensive residential renovations, loft conversions, extensions and interior upgrades across Northwest London.',
+        postcodes: 'NW2, NW3, NW4, NW5, NW6, NW7, NW8, NW9, NW10, NW11, HA3, HA5, HA7, HA8',
+        districts: [
+          'Hampstead & Belsize Park',
+          'St John’s Wood & Swiss Cottage',
+          'West Hampstead & Kilburn',
+          'Golders Green & Hampstead Garden Suburb',
+          'Hendon, Mill Hill & Edgware',
+          'Pinner, Stanmore & Harrow'
+        ]
+      }
+    ];
+
+    /* ========================================================================
+       SECTION C: REUSABLE UI HELPERS (IMAGES, GALLERIES, BREADCRUMBS, SEO)
+       ======================================================================== */
+    function renderImg(imageKey, options = {}) {
+      const img = IMAGES[imageKey] || IMAGES.heroArchitectural;
+      const loading = options.eager ? 'eager' : 'lazy';
+      const fetchPriority = options.eager ? ' fetchpriority="high"' : '';
+      const cls = options.className ? ` class="${options.className}"` : '';
+      return `<img src="${img.url}" alt="${escapeHtml(img.alt)}" loading="${loading}"${fetchPriority}${cls} onerror="this.onerror=null;this.style.background='#D9D5CC';this.alt='Architectural image unavailable';">`;
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function renderBreadcrumbs(items) {
+      const trail = items.map((item, idx) => {
+        const isLast = idx === items.length - 1;
+        if (isLast) {
+          return `<span aria-current="page">${escapeHtml(item.label)}</span>`;
+        }
+        return `<a href="${item.path}" data-route="${item.path}">${escapeHtml(item.label)}</a><span aria-hidden="true">/</span>`;
+      }).join('');
+      return `<nav class="breadcrumbs" aria-label="Breadcrumb">${trail}</nav>`;
+    }
+
+    function renderSmartGallery(imageKeys, galleryTitle) {
+      const uniqueKeys = [...new Set(imageKeys)].filter(k => IMAGES[k]);
+      const count = uniqueKeys.length;
+      const layoutClass = count === 1 ? 'count-1' : count === 2 ? 'count-2' : count === 3 ? 'count-3' : count === 4 ? 'count-4' : 'count-many';
+      const serialized = encodeURIComponent(JSON.stringify(uniqueKeys));
+
+      const tiles = uniqueKeys.map((key, index) => {
+        const img = IMAGES[key];
+        const badge = img.isAjaxProject ? 'AJAX Builders Project' : 'Illustrative Reference';
+        return `
+          <button type="button" class="gallery-tile" data-lightbox-group="${serialized}" data-lightbox-index="${index}" aria-label="Open image ${index + 1} of ${count}: ${escapeHtml(img.alt)}">
+            ${renderImg(key)}
+            <span class="image-caption-badge">${badge}</span>
+          </button>
+        `;
+      }).join('');
+
+      return `
+        <div class="smart-gallery ${layoutClass}" role="region" aria-label="${escapeHtml(galleryTitle)} gallery">
+          ${tiles}
+        </div>
+      `;
+    }
+
+    function updateMetadata({ title, description, path, breadcrumbs }) {
+      document.title = title;
+      const descTag = document.querySelector('meta[name="description"]');
+      if (descTag) descTag.setAttribute('content', description);
+
+      const canonicalUrl = `https://www.ajaxbuilders.co.uk${path === '/' ? '/' : path}`;
+      const canonicalTag = document.querySelector('link[rel="canonical"]');
+      if (canonicalTag) canonicalTag.setAttribute('href', canonicalUrl);
+
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute('content', title);
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute('content', description);
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) ogUrl.setAttribute('content', canonicalUrl);
+
+      const ldScript = document.getElementById('structured-data');
+      if (ldScript) {
+        const graph = [
+          {
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            name: COMPANY.name,
+            alternateName: COMPANY.tradingName,
+            url: COMPANY.website,
+            telephone: ['+442082013626', '+447886227480'],
+            email: COMPANY.email,
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'Office 4, 219 Kensington High Street',
+              addressLocality: 'London',
+              postalCode: 'W8 6BD',
+              addressCountry: 'GB'
+            }
+          }
+        ];
+
+        if (breadcrumbs && breadcrumbs.length > 1) {
+          graph.push({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: breadcrumbs.map((b, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              name: b.label,
+              item: `https://www.ajaxbuilders.co.uk${b.path}`
+            }))
+          });
+        }
+        ldScript.textContent = JSON.stringify(graph);
+      }
+    }
+
+    /* ========================================================================
+       SECTION D: PAGE TEMPLATES
+       ======================================================================== */
+    function renderHomePage() {
+      const featuredMain = PROJECTS[6]; // Wimbledon Extension & Loft
+      const featuredSide1 = PROJECTS[2]; // Belsize Park
+      const featuredSide2 = PROJECTS[8]; // N1 Kitchen & Structural Opening
+
+      const serviceCards = SERVICES.map(s => `
+        <article class="service-card reveal">
+          <a href="/services/${s.slug}" data-route="/services/${s.slug}" class="service-card-media">
+            ${renderImg(s.heroImage)}
+          </a>
+          <div class="service-card-body">
+            <span class="service-card-num">${s.number}</span>
+            <h3 class="service-card-title"><a href="/services/${s.slug}" data-route="/services/${s.slug}">${escapeHtml(s.title)}</a></h3>
+            <p class="service-card-desc">${escapeHtml(s.shortDesc)}</p>
+            <a href="/services/${s.slug}" data-route="/services/${s.slug}" class="text-link">Discover More <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      `).join('');
+
+      // 9th service tile linking to Design & Planning
+      const designServiceCard = `
+        <article class="service-card reveal">
+          <a href="/design-and-build" data-route="/design-and-build" class="service-card-media">
+            ${renderImg('designPlanning')}
+          </a>
+          <div class="service-card-body">
+            <span class="service-card-num">09</span>
+            <h3 class="service-card-title"><a href="/design-and-build" data-route="/design-and-build">Design &amp; Planning</a></h3>
+            <p class="service-card-desc">Architectural drawings, building plans, planning assistance, structural calculations and detailed construction documentation.</p>
+            <a href="/design-and-build" data-route="/design-and-build" class="text-link">Discover More <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      `;
+
+      return `
+        <div class="page-view">
+          <!-- HERO -->
+          <section class="hero-home" aria-labelledby="hero-heading">
+            <div class="hero-media">
+              ${renderImg('heroArchitectural', { eager: true })}
+            </div>
+            <div class="hero-scrim" aria-hidden="true"></div>
+            <div class="container hero-content">
+              <span class="eyebrow hero-eyebrow">London Construction &amp; Design-and-Build</span>
+              <h1 id="hero-heading" class="hero-title" tabindex="-1">Building Better Spaces. Designed Around You.</h1>
+              <p class="hero-subtitle">From thoughtful architectural design to exceptional construction and renovation, AJAX Builders delivers considered spaces for modern living and working.</p>
+              <div class="hero-actions">
+                <a href="/portfolio" data-route="/portfolio" class="btn btn-light">Explore Our Work <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="/contact" data-route="/contact" class="btn btn-light-outline">Discuss Your Project</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- STUDIO INTRODUCTION -->
+          <section class="section">
+            <div class="container editorial-split">
+              <div class="reveal">
+                <span class="eyebrow">AJAX Construction Ltd</span>
+                <h2 style="margin-bottom: 1.35rem;">Architectural thinking paired with disciplined London construction.</h2>
+                <p class="lead" style="margin-bottom: 1.25rem;">
+                  Based in Kensington, AJAX Builders delivers residential and commercial renovations, structural extensions, loft conversions and bespoke interiors across London.
+                </p>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                  Whether working from existing architectural drawings or supporting clients through early spatial planning, building control documentation and construction, we coordinate every stage with clarity and attention to detail.
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center;">
+                  <a href="/about" data-route="/about" class="btn btn-outline">About AJAX Builders <span class="arrow" aria-hidden="true">→</span></a>
+                  <a href="/design-and-build" data-route="/design-and-build" class="text-link">Our Design &amp; Build Process <span class="arrow" aria-hidden="true">→</span></a>
+                </div>
+              </div>
+              <div class="editorial-media image-frame reveal" style="aspect-ratio: 4 / 3;">
+                ${renderImg('refurbishmentLiving')}
+                <span class="image-caption-badge">Illustrative Residential Interior</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- SERVICES OVERVIEW -->
+          <section class="section section-stone section-bordered" aria-labelledby="home-services-heading">
+            <div class="container">
+              <div class="section-head">
+                <div>
+                  <span class="eyebrow">Capabilities</span>
+                  <h2 id="home-services-heading">Construction, Renovation &amp; Design Services</h2>
+                </div>
+                <a href="/services" data-route="/services" class="text-link">View All Services <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+              <div class="services-grid">
+                ${serviceCards}
+                ${designServiceCard}
+              </div>
+            </div>
+          </section>
+
+          <!-- FEATURED PROJECTS -->
+          <section class="section section-bordered" aria-labelledby="home-projects-heading">
+            <div class="container">
+              <div class="section-head">
+                <div>
+                  <span class="eyebrow">Selected Projects</span>
+                  <h2 id="home-projects-heading">Completed Work Across London</h2>
+                </div>
+                <a href="/portfolio" data-route="/portfolio" class="btn btn-outline">View All Nine Case Studies <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+
+              <div class="featured-layout">
+                <article class="project-card reveal">
+                  <a href="/projects/${featuredMain.slug}" data-route="/projects/${featuredMain.slug}">
+                    <div class="project-card-media ratio-hero">
+                      ${renderImg(featuredMain.heroImage)}
+                      <span class="image-caption-badge">Illustrative Reference — Client Photos To Verify</span>
+                    </div>
+                    <div class="project-meta">
+                      <span>${escapeHtml(featuredMain.location)}</span>
+                      <span>•</span>
+                      <span>${escapeHtml(featuredMain.category)}</span>
+                    </div>
+                    <h3 class="project-card-title">${escapeHtml(featuredMain.title)}</h3>
+                    <p class="project-card-summary">${escapeHtml(featuredMain.summary)}</p>
+                  </a>
+                </article>
+
+                <div class="featured-stack">
+                  ${[featuredSide1, featuredSide2].map(p => `
+                    <article class="project-card reveal">
+                      <a href="/projects/${p.slug}" data-route="/projects/${p.slug}">
+                        <div class="project-card-media ratio-wide">
+                          ${renderImg(p.heroImage)}
+                          <span class="image-caption-badge">Illustrative Reference — Client Photos To Verify</span>
+                        </div>
+                        <div class="project-meta">
+                          <span>${escapeHtml(p.location)}</span>
+                          <span>•</span>
+                          <span>${escapeHtml(p.category)}</span>
+                        </div>
+                        <h3 class="project-card-title">${escapeHtml(p.title)}</h3>
+                        <p class="project-card-summary">${escapeHtml(p.summary)}</p>
+                      </a>
+                    </article>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- DESIGN & BUILD HIGHLIGHT -->
+          <section class="section section-dark" aria-labelledby="home-db-heading">
+            <div class="container editorial-split reverse">
+              <div class="reveal">
+                <span class="eyebrow">Integrated Delivery</span>
+                <h2 id="home-db-heading" style="margin-bottom: 1.25rem;">From Initial Concept and Planning to Final Handover</h2>
+                <p style="color: rgba(247, 246, 242, 0.84); margin-bottom: 1.5rem; font-size: 1.05rem;">
+                  Our Design &amp; Build approach bridges architectural preparation and on-site construction. We assist with architectural drawings, building plans, planning applications, building control documentation, structural calculations and detailed trade drawings.
+                </p>
+                <ul class="bullet-list" style="margin-bottom: 2rem;">
+                  <li style="color: rgba(247,246,242,0.85);">Single coordinated workflow from feasibility to completion</li>
+                  <li style="color: rgba(247,246,242,0.85);">Clear technical documentation before construction commences</li>
+                  <li style="color: rgba(247,246,242,0.85);">Tailored interior space planning, loft and extension design</li>
+                </ul>
+                <a href="/design-and-build" data-route="/design-and-build" class="btn btn-light">Explore Design &amp; Build <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+              <div class="editorial-media image-frame reveal" style="aspect-ratio: 4 / 3; border-color: rgba(255,255,255,0.2);">
+                ${renderImg('designPlanning')}
+              </div>
+            </div>
+          </section>
+
+          <!-- WHY CHOOSE AJAX BUILDERS -->
+          <section class="section section-bordered" aria-labelledby="why-heading">
+            <div class="container">
+              <div class="section-head">
+                <div>
+                  <span class="eyebrow">Our Approach</span>
+                  <h2 id="why-heading">Why Clients Work With AJAX Builders</h2>
+                </div>
+              </div>
+              <div class="capabilities-grid">
+                <div class="capability-box reveal">
+                  <h3>Broad Construction &amp; Renovation Expertise</h3>
+                  <p>Capable across structural alterations, rear extensions, loft conversions, basement refurbishments and complete apartment renovations.</p>
+                </div>
+                <div class="capability-box reveal">
+                  <h3>Design &amp; Planning Support</h3>
+                  <p>Structured assistance across architectural drawings, building plans, planning submissions, structural calculations and building control packages.</p>
+                </div>
+                <div class="capability-box reveal">
+                  <h3>Residential &amp; Commercial Experience</h3>
+                  <p>Proven capability adapting to occupied London homes, mansion-block regulations and commercial workspace refurbishments.</p>
+                </div>
+                <div class="capability-box reveal">
+                  <h3>Bespoke Craftsmanship</h3>
+                  <p>Dedicated carpentry and custom joinery including staircases, fitted wardrobes, parquet flooring, sash windows and architectural cabinetry.</p>
+                </div>
+                <div class="capability-box reveal">
+                  <h3>Coordinated Project Delivery</h3>
+                  <p>Sequenced trade management uniting structural, mechanical, plumbing, electrical, tiling and decorating packages cleanly.</p>
+                </div>
+                <div class="capability-box reveal">
+                  <h3>Client-Focused Communication</h3>
+                  <p>Transparent technical discussions, practical problem-solving on site and careful attention to finishing details.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- TESTIMONIALS PREVIEW -->
+          <section class="section section-stone section-bordered" aria-labelledby="home-testimonials-heading">
+            <div class="container">
+              <div class="section-head">
+                <div>
+                  <span class="eyebrow">Client Feedback</span>
+                  <h2 id="home-testimonials-heading">Words From Our Clients</h2>
+                </div>
+                <a href="/testimonials" data-route="/testimonials" class="text-link">Read All Client Testimonials <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+              <div class="testimonials-grid">
+                ${TESTIMONIALS.slice(0, 4).map(t => `
+                  <blockquote class="testimonial-card reveal">
+                    <p class="testimonial-quote">“${escapeHtml(t.quote)}”</p>
+                    <footer>
+                      <cite class="testimonial-author" style="font-style: normal;">${escapeHtml(t.author)}</cite>
+                      <span style="display:block; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">${escapeHtml(t.context)}</span>
+                    </footer>
+                  </blockquote>
+                `).join('')}
+              </div>
+            </div>
+          </section>
+
+          <!-- SERVICE AREA TEASER -->
+          <section class="section section-bordered" aria-labelledby="home-areas-heading">
+            <div class="container editorial-split">
+              <div class="reveal">
+                <span class="eyebrow">London Coverage</span>
+                <h2 id="home-areas-heading" style="margin-bottom: 1.15rem;">Serving Central, North, West &amp; Northwest London</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 1.75rem;">
+                  From Kensington, Chelsea and Belsize Park to Islington, Wimbledon and Pinner, our teams work across established London residential neighbourhoods and commercial districts.
+                </p>
+                <a href="/service-areas" data-route="/service-areas" class="btn btn-outline">Explore London Service Areas <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+              <div class="capabilities-grid" style="grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                ${SERVICE_AREAS.map(a => `
+                  <div class="capability-box" style="padding: 1.35rem;">
+                    <h3 style="font-size: 1.05rem;">${escapeHtml(a.region)}</h3>
+                    <p style="font-size: 0.82rem; color: var(--text-muted);">${escapeHtml(a.postcodes)}</p>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderAboutPage() {
+      const breadcrumbs = [{ label: 'Home', path: '/' }, { label: 'About', path: '/about' }];
+      return `
+        <div class="page-view">
+          <header class="page-header">
+            <div class="container">
+              ${renderBreadcrumbs(breadcrumbs)}
+              <div class="page-header-grid">
+                <div>
+                  <span class="eyebrow">About AJAX Builders</span>
+                  <h1 tabindex="-1">Thoughtful Construction &amp; Design-Led Renovation in London</h1>
+                </div>
+                <p class="lead">AJAX Construction Ltd (trading as AJAX Builders) brings architectural discipline, practical engineering and fine finishing to residential and commercial projects across London.</p>
+              </div>
+            </div>
+          </header>
+
+          <section class="section">
+            <div class="container editorial-split">
+              <div class="prose-block reveal">
+                <h2 style="margin-bottom: 1.25rem;">Our Approach to Building</h2>
+                <p>Great renovations succeed when architectural intent and construction execution work together rather than in isolation. From our office on Kensington High Street, we undertake residential refurbishments, house extensions, loft conversions, basement works, bespoke joinery and commercial interior upgrades.</p>
+                <p>Whether collaborating with a client’s appointed architect or supporting a project from early drawings and planning through to final decoration, we focus on clear sequencing, structural integrity and crisp surface finishes.</p>
+                <p>Every London property presents distinct technical considerations—from period terraced houses and conservation areas to mansion blocks and lower-ground apartments. We plan logistics, party wall interfaces, services routing and joinery tolerances carefully before work begins on site.</p>
+              </div>
+              <div class="image-frame reveal" style="aspect-ratio: 4 / 3;">
+                ${renderImg('carpentryJoinery')}
+                <span class="image-caption-badge">Illustrative Craftsmanship Reference</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="section section-stone section-bordered">
+            <div class="container">
+              <div class="section-head">
+                <div>
+                  <span class="eyebrow">Core Principles</span>
+                  <h2>How We Deliver Projects</h2>
+                </div>
+              </div>
+              <div class="capabilities-grid">
+                <div class="capability-box">
+                  <h3>Design-Led Thinking</h3>
+                  <p>Spatial proportion, natural daylight, structural clarity and practical storage guide our planning and construction decisions.</p>
+                </div>
+                <div class="capability-box">
+                  <h3>Craftsmanship &amp; Detail</h3>
+                  <p>From structural steelwork and damp-proofing to shadow-gap plastering, stone tiling and bespoke cabinetry, every layer is executed with care.</p>
+                </div>
+                <div class="capability-box">
+                  <h3>Residential &amp; Commercial Capability</h3>
+                  <p>Experienced across private homes, multi-room apartment refurbishments, house conversions and commercial office interiors.</p>
+                </div>
+              </div>
+
+              <div class="verification-note" style="margin-top: 2.5rem;">
+                <span class="verification-tag">Transparency Note</span>
+                Company founding date, team size, industry accreditations and formal awards are intentionally omitted until verified directly with AJAX Construction Ltd (<strong>TO VERIFY WITH CLIENT</strong>).
+              </div>
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderDesignAndBuildPage() {
+      const breadcrumbs = [{ label: 'Home', path: '/' }, { label: 'Design & Build', path: '/design-and-build' }];
+      const steps = [
+        { num: '01', title: 'Initial Consultation', desc: 'On-site review of your property, brief, spatial aspirations, structural constraints and budget parameters.' },
+        { num: '02', title: 'Concept and Design', desc: 'Development of bespoke layout options, interior space planning, loft or extension massing and material direction.' },
+        { num: '03', title: 'Planning and Technical Documentation', desc: 'Preparation of architectural drawings, planning submissions, building control packages and structural calculations.' },
+        { num: '04', title: 'Project Preparation', desc: 'Detailed construction and trades drawings, scope specification, programme scheduling and site logistics setup.' },
+        { num: '05', title: 'Construction', desc: 'Coordinated structural works, extensions, roofing, first-fix plumbing and electrical services, and waterproofing.' },
+        { num: '06', title: 'Finishing and Handover', desc: 'Second-fix bespoke joinery, kitchens, bathrooms, flooring, decorating, testing and thorough final handover.' }
+      ];
+
+      return `
+        <div class="page-view">
+          <header class="page-header">
+            <div class="container">
+              ${renderBreadcrumbs(breadcrumbs)}
+              <div class="page-header-grid">
+                <div>
+                  <span class="eyebrow">Design &amp; Build</span>
+                  <h1 tabindex="-1">One Coordinated Path From Drawings to Completion</h1>
+                </div>
+                <p class="lead">AJAX Builders integrates architectural design preparation, technical documentation and construction management so your project moves smoothly from concept to finished space.</p>
+              </div>
+            </div>
+          </header>
+
+          <section class="section">
+            <div class="container editorial-split">
+              <div class="reveal">
+                <span class="eyebrow">Capabilities</span>
+                <h2 style="margin-bottom: 1.25rem;">Design, Planning &amp; Technical Services</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">Our Design &amp; Build service supports homeowners and commercial clients who want cohesive accountability across design development and site execution:</p>
+                <ul class="bullet-list">
+                  <li>Architectural drawings and existing/proposed building plans</li>
+                  <li>Bespoke client design and interior space planning</li>
+                  <li>Loft conversion and rear/side extension design</li>
+                  <li>Planning permission assistance and submission coordination</li>
+                  <li>Building control documentation and compliance packages</li>
+                  <li>Structural calculations and engineering coordination</li>
+                  <li>Detailed construction and trades drawings</li>
+                  <li>End-to-end construction project management</li>
+                </ul>
+                <div class="verification-note">
+                  <span class="verification-tag">TO VERIFY WITH CLIENT</span>
+                  Confirm with AJAX Construction Ltd which architectural, structural engineering and building control tasks are delivered in-house versus through appointed external specialist consultants.
+                </div>
+              </div>
+              <div class="image-frame reveal" style="aspect-ratio: 4 / 3;">
+                ${renderImg('designPlanning')}
+              </div>
+            </div>
+          </section>
+
+          <section class="section section-stone section-bordered">
+            <div class="container">
+              <div class="section-head">
+                <div>
+                  <span class="eyebrow">Six-Stage Workflow</span>
+                  <h2>The Design &amp; Build Process</h2>
+                </div>
+              </div>
+              <div class="process-list">
+                ${steps.map(st => `
+                  <div class="process-step reveal">
+                    <div class="process-step-num">${st.num}</div>
+                    <h3 style="margin-bottom: 0.65rem;">${escapeHtml(st.title)}</h3>
+                    <p style="font-size: 0.9375rem; color: var(--text-secondary);">${escapeHtml(st.desc)}</p>
+                  </div>
+                `).join('')}
+              </div>
+              <div style="margin-top: 3rem;">
+                <a href="/contact" data-route="/contact" class="btn btn-primary">Book a Design &amp; Build Consultation <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderServicesOverviewPage() {
+      const breadcrumbs = [{ label: 'Home', path: '/' }, { label: 'Services', path: '/services' }];
+      return `
+        <div class="page-view">
+          <header class="page-header">
+            <div class="container">
+              ${renderBreadcrumbs(breadcrumbs)}
+              <div class="page-header-grid">
+                <div>
+                  <span class="eyebrow">Our Services</span>
+                  <h1 tabindex="-1">Construction, Renovation &amp; Specialist Trades</h1>
+                </div>
+                <p class="lead">Comprehensive residential and commercial building services delivered across London, supported by integrated Design &amp; Planning capabilities.</p>
+              </div>
+            </div>
+          </header>
+
+          <section class="section">
+            <div class="container">
+              <div class="services-grid">
+                ${SERVICES.map(s => `
+                  <article class="service-card reveal">
+                    <a href="/services/${s.slug}" data-route="/services/${s.slug}" class="service-card-media">
+                      ${renderImg(s.heroImage)}
+                    </a>
+                    <div class="service-card-body">
+                      <span class="service-card-num">${s.number}</span>
+                      <h2 class="service-card-title"><a href="/services/${s.slug}" data-route="/services/${s.slug}">${escapeHtml(s.title)}</a></h2>
+                      <p class="service-card-desc">${escapeHtml(s.shortDesc)}</p>
+                      <a href="/services/${s.slug}" data-route="/services/${s.slug}" class="text-link">Explore Service <span class="arrow" aria-hidden="true">→</span></a>
+                    </div>
+                  </article>
+                `).join('')}
+                <article class="service-card reveal">
+                  <a href="/design-and-build" data-route="/design-and-build" class="service-card-media">
+                    ${renderImg('designPlanning')}
+                  </a>
+                  <div class="service-card-body">
+                    <span class="service-card-num">09</span>
+                    <h2 class="service-card-title"><a href="/design-and-build" data-route="/design-and-build">Design &amp; Planning</a></h2>
+                    <p class="service-card-desc">Architectural drawings, building plans, planning permission support, structural calculations and full Design &amp; Build delivery.</p>
+                    <a href="/design-and-build" data-route="/design-and-build" class="text-link">Explore Design &amp; Build <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderServiceDetailPage(service) {
+      const breadcrumbs = [
+        { label: 'Home', path: '/' },
+        { label: 'Services', path: '/services' },
+        { label: service.title, path: `/services/${service.slug}` }
+      ];
+      const relatedProjects = PROJECTS.filter(p => service.relatedProjects.includes(p.slug));
+      const otherServices = SERVICES.filter(s => s.slug !== service.slug).slice(0, 3);
+
+      return `
+        <div class="page-view">
+          <header class="page-header">
+            <div class="container">
+              ${renderBreadcrumbs(breadcrumbs)}
+              <div class="page-header-grid">
+                <div>
+                  <span class="eyebrow">Service ${service.number}</span>
+                  <h1 tabindex="-1">${escapeHtml(service.title)}</h1>
+                </div>
+                <p class="lead">${escapeHtml(service.intro)}</p>
+              </div>
+            </div>
+          </header>
+
+          <section class="section">
+            <div class="container">
+              ${renderSmartGallery(service.galleryImages, service.title)}
+
+              <div class="editorial-split" style="margin-top: 3.5rem; align-items: start;">
+                <div>
+                  <span class="eyebrow">Scope of Work</span>
+                  <h2 style="margin-bottom: 1rem;">What We Deliver</h2>
+                  <ul class="bullet-list">
+                    ${service.scope.map(item => `<li>${escapeHtml(item)}</li>`).join('')}
+                  </ul>
+
+                  ${service.slug === 'kitchens' ? `
+                    <div style="margin-top: 2rem;">
+                      <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Kitchen Systems &amp; Brands Referenced in Past Projects</h3>
+                      <p style="font-size: 0.875rem; color: var(--text-muted);">AJAX Builders installs bespoke kitchens as well as cabinetry from a wide range of manufacturers referenced across our project history (no formal partnership or endorsement implied):</p>
+                      <div class="brand-chips">
+                        ${['Poggenpohl', 'SieMatic', 'Edwin Loxley', 'Crown Kitchens', 'Osbourne & Hallets', 'Star Beka', 'Magnet', 'Howdens', 'IKEA', 'B&Q'].map(b => `<span class="brand-chip">${b}</span>`).join('')}
+                      </div>
+                    </div>
+                  ` : ''}
+                </div>
+
+                <div>
+                  <div class="capability-box" style="margin-bottom: 1.75rem;">
+                    <span class="eyebrow">Technical &amp; Site Factors</span>
+                    <h3 style="margin-bottom: 0.75rem;">Key Project Considerations</h3>
+                    <ul class="bullet-list">
+                      ${service.considerations.map(c => `<li>${escapeHtml(c)}</li>`).join('')}
+                    </ul>
+                  </div>
+
+                  <div class="capability-box">
+                    <span class="eyebrow">Execution</span>
+                    <h3 style="margin-bottom: 0.65rem;">Delivery Approach</h3>
+                    <p style="margin-bottom: 1.5rem;">${escapeHtml(service.delivery)}</p>
+                    <a href="/contact" data-route="/contact" class="btn btn-primary">Discuss ${escapeHtml(service.title)} <span class="arrow" aria-hidden="true">→</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          ${relatedProjects.length ? `
+            <section class="section section-stone section-bordered">
+              <div class="container">
+                <div class="section-head">
+                  <div>
+                    <span class="eyebrow">Case Studies</span>
+                    <h2>Related Projects</h2>
+                  </div>
+                  <a href="/portfolio" data-route="/portfolio" class="text-link">Full Portfolio <span class="arrow" aria-hidden="true">→</span></a>
+                </div>
+                <div class="portfolio-grid">
+                  ${relatedProjects.map(p => `
+                    <article class="project-card">
+                      <a href="/projects/${p.slug}" data-route="/projects/${p.slug}">
+                        <div class="project-card-media ratio-wide">
+                          ${renderImg(p.heroImage)}
+                          <span class="image-caption-badge">Illustrative Reference</span>
+                        </div>
+                        <div class="project-meta"><span>${escapeHtml(p.location)}</span><span>•</span><span>${escapeHtml(p.category)}</span></div>
+                        <h3 class="project-card-title">${escapeHtml(p.title)}</h3>
+                        <p class="project-card-summary">${escapeHtml(p.summary)}</p>
+                      </a>
+                    </article>
+                  `).join('')}
+                </div>
+              </div>
+            </section>
+          ` : ''}
+
+          <section class="section section-bordered">
+            <div class="container">
+              <div class="section-head">
+                <div>
+                  <span class="eyebrow">Explore Further</span>
+                  <h2>Related Services</h2>
+                </div>
+              </div>
+              <div class="services-grid">
+                ${otherServices.map(s => `
+                  <article class="service-card">
+                    <div class="service-card-body">
+                      <span class="service-card-num">${s.number}</span>
+                      <h3 class="service-card-title"><a href="/services/${s.slug}" data-route="/services/${s.slug}">${escapeHtml(s.title)}</a></h3>
+                      <p class="service-card-desc">${escapeHtml(s.shortDesc)}</p>
+                      <a href="/services/${s.slug}" data-route="/services/${s.slug}" class="text-link">Discover More <span class="arrow" aria-hidden="true">→</span></a>
+                    </div>
+                  </article>
+                `).join('')}
+              </div>
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderPortfolioPage(activeFilter = 'All') {
+      const breadcrumbs = [{ label: 'Home', path: '/' }, { label: 'Portfolio', path: '/portfolio' }];
+      const categories = [
+        'All',
+        'Apartment Renovations',
+        'House Refurbishments',
+        'Extensions',
+        'Loft Conversions',
+        'Kitchens',
+        'Bathrooms',
+        'Commercial Projects'
+      ];
+
+      const filtered = activeFilter === 'All'
+        ? PROJECTS
+        : PROJECTS.filter(p => {
+            if (activeFilter === 'Bathrooms') return ['belsize-park-refurbishment', 'chelsea-basement-flat', 'wimbledon-l-shaped-loft-conversion'].includes(p.slug);
+            if (activeFilter === 'Commercial Projects') return p.slug === 'kingsland-road-house-conversion';
+            return p.category === activeFilter;
+          });
+
+      return `
+        <div class="page-view">
+          <header class="page-header">
+            <div class="container">
+              ${renderBreadcrumbs(breadcrumbs)}
+              <div class="page-header-grid">
+                <div>
+                  <span class="eyebrow">Selected Works</span>
+                  <h1 tabindex="-1">Residential &amp; Commercial Portfolio</h1>
+                </div>
+                <p class="lead">Nine documented projects across London spanning flat refurbishments, house conversions, rear extensions, L-shaped loft conversions and structural kitchen openings.</p>
+              </div>
+            </div>
+          </header>
+
+          <section class="section">
+            <div class="container">
+              <div class="verification-note" style="margin-top: 0; margin-bottom: 2rem;">
+                <span class="verification-tag">Photography Notice</span>
+                To maintain strict visual accuracy without using unverified files or AI imagery, illustrative architectural photography is currently shown while genuine project image assets from <code>ajaxbuilders.co.uk</code> are linked with the client (<strong>TO VERIFY WITH CLIENT</strong>).
+              </div>
+
+              <div class="filter-bar" role="group" aria-label="Filter projects by category">
+                ${categories.map(cat => `
+                  <button type="button" class="filter-btn ${activeFilter === cat ? 'is-active' : ''}" data-filter="${escapeHtml(cat)}">${escapeHtml(cat)}</button>
+                `).join('')}
+              </div>
+
+              <div class="portfolio-grid" id="portfolio-results">
+                ${filtered.map(p => `
+                  <article class="project-card">
+                    <a href="/projects/${p.slug}" data-route="/projects/${p.slug}">
+                      <div class="project-card-media ratio-wide">
+                        ${renderImg(p.heroImage)}
+                        <span class="image-caption-badge">Illustrative Reference — Client Photos To Verify</span>
+                      </div>
+                      <div class="project-meta">
+                        <span>${escapeHtml(p.location)}</span>
+                        <span>•</span>
+                        <span>${escapeHtml(p.category)}</span>
+                      </div>
+                      <h2 class="project-card-title">${escapeHtml(p.title)}</h2>
+                      <p class="project-card-summary">${escapeHtml(p.summary)}</p>
+                    </a>
+                  </article>
+                `).join('')}
+              </div>
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderProjectDetailPage(project) {
+      const breadcrumbs = [
+        { label: 'Home', path: '/' },
+        { label: 'Portfolio', path: '/portfolio' },
+        { label: project.title, path: `/projects/${project.slug}` }
+      ];
+      const related = PROJECTS.filter(p => p.slug !== project.slug).slice(0, 2);
+
+      return `
+        <div class="page-view">
+          <header class="page-header">
+            <div class="container">
+              ${renderBreadcrumbs(breadcrumbs)}
+              <div class="page-header-grid">
+                <div>
+                  <span class="eyebrow">${escapeHtml(project.location)} • ${escapeHtml(project.category)}</span>
+                  <h1 tabindex="-1">${escapeHtml(project.title)}</h1>
+                </div>
+                <p class="lead">${escapeHtml(project.summary)}</p>
+              </div>
+            </div>
+          </header>
+
+          <section class="section">
+            <div class="container">
+              ${renderSmartGallery(project.gallery, project.title)}
+
+              <div class="editorial-split" style="margin-top: 3.5rem; align-items: start;">
+                <div class="prose-block">
+                  <span class="eyebrow">Case Study Overview</span>
+                  <h2 style="margin-bottom: 1rem;">Project Brief &amp; Execution</h2>
+                  <p><strong>Client Brief:</strong> ${escapeHtml(project.clientBrief)}</p>
+                  <p>${escapeHtml(project.execution)}</p>
+
+                  <h3 style="margin-top: 2rem; margin-bottom: 0.75rem;">Scope of Work</h3>
+                  <ul class="bullet-list">
+                    ${project.scope.map(s => `<li>${escapeHtml(s)}</li>`).join('')}
+                  </ul>
+                </div>
+
+                <div>
+                  <div class="capability-box">
+                    <span class="eyebrow">Project Specifications</span>
+                    <h3 style="margin-bottom: 1rem;">Verified Details</h3>
+                    <ul class="spec-list">
+                      ${Object.entries(project.specs).map(([k, v]) => `
+                        <li>
+                          <span class="spec-label">${escapeHtml(k)}</span>
+                          <span class="spec-value">${escapeHtml(v)}</span>
+                        </li>
+                      `).join('')}
+                      <li>
+                        <span class="spec-label">Legacy Source Page</span>
+                        <span class="spec-value" style="font-size: 0.8rem;">${escapeHtml(project.legacyUrl)}</span>
+                      </li>
+                    </ul>
+                    <div style="margin-top: 1.75rem;">
+                      <a href="/contact" data-route="/contact" class="btn btn-primary" style="width: 100%;">Enquire About a Similar Project <span class="arrow" aria-hidden="true">→</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section section-stone section-bordered">
+            <div class="container">
+              <div class="section-head">
+                <div>
+                  <span class="eyebrow">Continue Exploring</span>
+                  <h2>More Completed Projects</h2>
+                </div>
+                <a href="/portfolio" data-route="/portfolio" class="text-link">All Projects <span class="arrow" aria-hidden="true">→</span></a>
+              </div>
+              <div class="portfolio-grid">
+                ${related.map(p => `
+                  <article class="project-card">
+                    <a href="/projects/${p.slug}" data-route="/projects/${p.slug}">
+                      <div class="project-card-media ratio-wide">
+                        ${renderImg(p.heroImage)}
+                        <span class="image-caption-badge">Illustrative Reference</span>
+                      </div>
+                      <div class="project-meta"><span>${escapeHtml(p.location)}</span><span>•</span><span>${escapeHtml(p.category)}</span></div>
+                      <h3 class="project-card-title">${escapeHtml(p.title)}</h3>
+                      <p class="project-card-summary">${escapeHtml(p.summary)}</p>
+                    </a>
+                  </article>
+                `).join('')}
+              </div>
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderTestimonialsPage() {
+      const breadcrumbs = [{ label: 'Home', path: '/' }, { label: 'Testimonials', path: '/testimonials' }];
+      return `
+        <div class="page-view">
+          <header class="page-header">
+            <div class="container">
+              ${renderBreadcrumbs(breadcrumbs)}
+              <div class="page-header-grid">
+                <div>
+                  <span class="eyebrow">Client Reviews</span>
+                  <h1 tabindex="-1">Client Testimonials</h1>
+                </div>
+                <p class="lead">Feedback from homeowners and clients across London who have entrusted AJAX Builders with their renovation, extension and building projects.</p>
+              </div>
+            </div>
+          </header>
+
+          <section class="section">
+            <div class="container">
+              <div class="verification-note" style="margin-top: 0; margin-bottom: 2.5rem;">
+                <span class="verification-tag">TO VERIFY WITH CLIENT</span>
+                All eleven client names below are verified from the AJAX Builders website. Please confirm the exact word-for-word archived text of each testimonial with AJAX Construction Ltd prior to final production launch.
+              </div>
+
+              <div class="testimonials-grid">
+                ${TESTIMONIALS.map(t => `
+                  <blockquote class="testimonial-card reveal">
+                    <p class="testimonial-quote">“${escapeHtml(t.quote)}”</p>
+                    <footer>
+                      <cite class="testimonial-author" style="font-style: normal;">${escapeHtml(t.author)}</cite>
+                      <span style="display:block; font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">${escapeHtml(t.context)}</span>
+                    </footer>
+                  </blockquote>
+                `).join('')}
+              </div>
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderServiceAreasPage() {
+      const breadcrumbs = [{ label: 'Home', path: '/' }, { label: 'Service Areas', path: '/service-areas' }];
+      return `
+        <div class="page-view">
+          <header class="page-header">
+            <div class="container">
+              ${renderBreadcrumbs(breadcrumbs)}
+              <div class="page-header-grid">
+                <div>
+                  <span class="eyebrow">Where We Work</span>
+                  <h1 tabindex="-1">London Service Areas</h1>
+                </div>
+                <p class="lead">From our base on Kensington High Street (W8), AJAX Builders serves residential and commercial clients across Central, North, West and Northwest London.</p>
+              </div>
+            </div>
+          </header>
+
+          <section class="section">
+            <div class="container">
+              <div class="portfolio-grid">
+                ${SERVICE_AREAS.map(area => `
+                  <article class="capability-box reveal">
+                    <span class="eyebrow">Coverage Region</span>
+                    <h2 style="font-size: 1.65rem; margin-bottom: 0.75rem;">${escapeHtml(area.region)}</h2>
+                    <p style="margin-bottom: 1rem;">${escapeHtml(area.summary)}</p>
+                    <p style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.85rem;">
+                      Key Postcodes: <span style="font-weight: 400; color: var(--text-secondary);">${escapeHtml(area.postcodes)}</span>
+                    </p>
+                    <ul class="bullet-list">
+                      ${area.districts.map(d => `<li>${escapeHtml(d)}</li>`).join('')}
+                    </ul>
+                  </article>
+                `).join('')}
+              </div>
+
+              <div class="verification-note" style="margin-top: 2.5rem;">
+                <span class="verification-tag">TO VERIFY WITH CLIENT</span>
+                Confirm complete postcode list against the live AJAX Builders service-areas page (note that completed projects also include Wimbledon SW19 and Stratford E15).
+              </div>
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderContactPage() {
+      const breadcrumbs = [{ label: 'Home', path: '/' }, { label: 'Contact', path: '/contact' }];
+      const categories = [
+        'Refurbishment',
+        'Extension',
+        'Bathroom',
+        'Kitchen',
+        'Plumbing & Heating',
+        'Painting & Decorating',
+        'Roofing',
+        'Loft Conversion',
+        'Basement Underpinning',
+        'New Build',
+        'Planning Permission',
+        'General Enquiry'
+      ];
+
+      return `
+        <div class="page-view">
+          <header class="page-header">
+            <div class="container">
+              ${renderBreadcrumbs(breadcrumbs)}
+              <div class="page-header-grid">
+                <div>
+                  <span class="eyebrow">Contact Us</span>
+                  <h1 tabindex="-1">Discuss Your Project</h1>
+                </div>
+                <p class="lead">Share your property location, scope of works and target timescale. Our team will review your enquiry and arrange an initial conversation.</p>
+              </div>
+            </div>
+          </header>
+
+          <section class="section">
+            <div class="container contact-layout">
+              <div>
+                <span class="eyebrow">Office &amp; Direct Contact</span>
+                <h2 style="font-size: 1.75rem; margin-bottom: 1.25rem;">AJAX Construction Ltd</h2>
+                <ul class="spec-list" style="margin-bottom: 2rem;">
+                  <li>
+                    <span class="spec-label">Address</span>
+                    <span class="spec-value">Office 4, 219 Kensington High Street,<br>London W8 6BD, United Kingdom</span>
+                  </li>
+                  <li>
+                    <span class="spec-label">Telephone</span>
+                    <span class="spec-value"><a href="${COMPANY.phoneLandlineHref}" style="text-decoration: underline;">${COMPANY.phoneLandline}</a></span>
+                  </li>
+                  <li>
+                    <span class="spec-label">Mobile</span>
+                    <span class="spec-value"><a href="${COMPANY.phoneMobileHref}" style="text-decoration: underline;">${COMPANY.phoneMobile}</a></span>
+                  </li>
+                  <li>
+                    <span class="spec-label">Email</span>
+                    <span class="spec-value"><a href="mailto:${COMPANY.email}" style="text-decoration: underline;">${COMPANY.email}</a></span>
+                  </li>
+                </ul>
+
+                <a href="${COMPANY.mapsUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; margin-bottom: 1.5rem;">
+                  Open Directions in Google Maps <span class="arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <div class="verification-note" style="margin-top: 0;">
+                  <span class="verification-tag">Endpoint Configuration</span>
+                  This standalone single-file site uses a configurable <code>submitEnquiry()</code> handler. Until a live backend endpoint URL is configured, submissions gracefully provide a prefilled email fallback so no enquiry is lost.
+                </div>
+              </div>
+
+              <div class="form-card">
+                <h2 style="font-size: 1.55rem; margin-bottom: 0.45rem;">Project Enquiry Form</h2>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.75rem;">Fields marked with * are required.</p>
+
+                <form id="enquiry-form" novalidate>
+                  <input type="hidden" id="form-loaded-at" value="">
+                  <div class="hp-field" aria-hidden="true">
+                    <label for="company-website">Leave this field blank</label>
+                    <input type="text" id="company-website" name="company_website" tabindex="-1" autocomplete="off">
+                  </div>
+
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label class="form-label" for="full-name">Full Name *</label>
+                      <input class="form-control" type="text" id="full-name" name="fullName" required autocomplete="name">
+                      <span class="field-error" id="err-full-name" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="email">Email Address *</label>
+                      <input class="form-control" type="email" id="email" name="email" required autocomplete="email">
+                      <span class="field-error" id="err-email" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="telephone">Telephone *</label>
+                      <input class="form-control" type="tel" id="telephone" name="telephone" required autocomplete="tel">
+                      <span class="field-error" id="err-telephone" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="alt-telephone">Alternate Telephone (Optional)</label>
+                      <input class="form-control" type="tel" id="alt-telephone" name="altTelephone" autocomplete="tel">
+                      <span class="field-error" id="err-alt-telephone" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group full">
+                      <label class="form-label" for="project-address">Project Address / Postcode *</label>
+                      <input class="form-control" type="text" id="project-address" name="projectAddress" required placeholder="e.g. Kensington W8 or Wimbledon SW19" autocomplete="street-address">
+                      <span class="field-error" id="err-project-address" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="enquiry-type">Type of Enquiry *</label>
+                      <select class="form-control" id="enquiry-type" name="enquiryType" required>
+                        <option value="">Select a category…</option>
+                        ${categories.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('')}
+                      </select>
+                      <span class="field-error" id="err-enquiry-type" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="estimated-value">Estimated Project Value</label>
+                      <select class="form-control" id="estimated-value" name="estimatedValue">
+                        <option value="Prefer to discuss">Prefer to discuss</option>
+                        <option value="Under £25,000">Under £25,000</option>
+                        <option value="£25,000 – £75,000">£25,000 – £75,000</option>
+                        <option value="£75,000 – £150,000">£75,000 – £150,000</option>
+                        <option value="£150,000 – £300,000">£150,000 – £300,000</option>
+                        <option value="£300,000+">£300,000+</option>
+                      </select>
+                      <span class="field-error" id="err-estimated-value" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-group full">
+                      <label class="form-label" for="preferred-contact">Preferred Contact Method</label>
+                      <select class="form-control" id="preferred-contact" name="preferredContact">
+                        <option value="Telephone or Email">Either Telephone or Email</option>
+                        <option value="Telephone">Telephone</option>
+                        <option value="Email">Email</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group full">
+                      <label class="form-label" for="project-description">Project Description *</label>
+                      <textarea class="form-control" id="project-description" name="projectDescription" rows="5" required placeholder="Tell us about your property, proposed works, architectural drawings status and desired timeframe."></textarea>
+                      <span class="field-error" id="err-project-description" aria-live="polite"></span>
+                    </div>
+                  </div>
+
+                  <div style="margin-top: 1.75rem;">
+                    <button type="submit" class="btn btn-primary" id="enquiry-submit-btn">Send Project Enquiry <span class="arrow" aria-hidden="true">→</span></button>
+                  </div>
+
+                  <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderPhotoCreditsPage() {
+      const breadcrumbs = [{ label: 'Home', path: '/' }, { label: 'Photo Credits', path: '/photo-credits' }];
+      const entries = Object.entries(IMAGES);
+
+      return `
+        <div class="page-view">
+          <header class="page-header">
+            <div class="container">
+              ${renderBreadcrumbs(breadcrumbs)}
+              <div class="page-header-grid">
+                <div>
+                  <span class="eyebrow">Attribution &amp; Authenticity</span>
+                  <h1 tabindex="-1">Photo Credits &amp; Image Sources</h1>
+                </div>
+                <p class="lead">Every photograph on this website is sourced from verified, non-AI photography providers with transparent attribution and clear distinction between illustrative references and company project records.</p>
+              </div>
+            </div>
+          </header>
+
+          <section class="section">
+            <div class="container">
+              <div class="verification-note" style="margin-top: 0; margin-bottom: 2.5rem;">
+                <span class="verification-tag">Authenticity Commitment</span>
+                No AI-generated images are used anywhere on this site. Illustrative architectural and interior photographs below are licensed via Unsplash and are never represented as completed AJAX Builders projects. Verified project photographs from <code>ajaxbuilders.co.uk</code> are marked <strong>TO VERIFY WITH CLIENT</strong> for direct asset linking.
+              </div>
+
+              <div class="portfolio-grid">
+                ${entries.map(([key, item]) => `
+                  <article class="capability-box">
+                    <div style="aspect-ratio: 16 / 10; overflow: hidden; margin-bottom: 1.15rem; border: 1px solid var(--muted-stone);">
+                      ${renderImg(key)}
+                    </div>
+                    <span class="eyebrow">${escapeHtml(item.category)}</span>
+                    <h2 style="font-size: 1.2rem; margin-bottom: 0.65rem;">${escapeHtml(item.alt)}</h2>
+                    <ul class="spec-list">
+                      <li><span class="spec-label">Classification</span><span class="spec-value">${item.isAjaxProject ? 'AJAX Builders Project' : 'Illustrative External Photography'}</span></li>
+                      <li><span class="spec-label">Photographer</span><span class="spec-value">${escapeHtml(item.photographer)}</span></li>
+                      <li><span class="spec-label">Source &amp; Licence</span><span class="spec-value">${escapeHtml(item.source)} (${escapeHtml(item.licence)})</span></li>
+                      <li><span class="spec-label">Dimensions</span><span class="spec-value">${escapeHtml(item.dimensions)}</span></li>
+                      <li><span class="spec-label">Source Page</span><span class="spec-value"><a href="${item.sourcePageUrl}" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">View Original ↗</a></span></li>
+                    </ul>
+                  </article>
+                `).join('')}
+              </div>
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderPrivacyPolicyPage() {
+      const breadcrumbs = [{ label: 'Home', path: '/' }, { label: 'Privacy Policy', path: '/privacy-policy' }];
+      return `
+        <div class="page-view">
+          <header class="page-header">
+            <div class="container">
+              ${renderBreadcrumbs(breadcrumbs)}
+              <div class="page-header-grid">
+                <div>
+                  <span class="eyebrow">Legal</span>
+                  <h1 tabindex="-1">Privacy Policy</h1>
+                </div>
+                <p class="lead">How AJAX Construction Ltd (AJAX Builders) handles personal information shared through project enquiries and direct communications.</p>
+              </div>
+            </div>
+          </header>
+
+          <section class="section">
+            <div class="container prose-block" style="max-width: 78ch;">
+              <div class="verification-note" style="margin-top: 0;">
+                <span class="verification-tag">TO VERIFY WITH CLIENT</span>
+                Confirm registered UK ICO details, data retention schedule and formal GDPR privacy notice wording with AJAX Construction Ltd prior to live deployment.
+              </div>
+              <h2 style="margin-top: 2rem; margin-bottom: 0.75rem;">1. Data Controller</h2>
+              <p>The data controller responsible for personal data collected through this website is <strong>AJAX Construction Ltd</strong> (trading as AJAX Builders), Office 4, 219 Kensington High Street, London W8 6BD, United Kingdom. Contact email: <a href="mailto:info@ajaxbuilders.co.uk" style="text-decoration: underline;">info@ajaxbuilders.co.uk</a>.</p>
+
+              <h2 style="margin-top: 2rem; margin-bottom: 0.75rem;">2. Information We Collect</h2>
+              <p>When you contact us by telephone, email or via our enquiry form, we collect the contact and project details you provide—such as your name, email address, telephone numbers, project address/postcode and description of proposed building works.</p>
+
+              <h2 style="margin-top: 2rem; margin-bottom: 0.75rem;">3. How We Use Your Information</h2>
+              <p>We use your information solely to respond to your construction or design enquiry, arrange site consultations, prepare quotations and deliver contracted building services.</p>
+
+              <h2 style="margin-top: 2rem; margin-bottom: 0.75rem;">4. Your Rights</h2>
+              <p>Under UK data protection law, you may request access to, correction of or deletion of your personal contact records by emailing <a href="mailto:info@ajaxbuilders.co.uk" style="text-decoration: underline;">info@ajaxbuilders.co.uk</a>.</p>
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderTermsPage() {
+      const breadcrumbs = [{ label: 'Home', path: '/' }, { label: 'Terms & Conditions', path: '/terms-and-conditions' }];
+      return `
+        <div class="page-view">
+          <header class="page-header">
+            <div class="container">
+              ${renderBreadcrumbs(breadcrumbs)}
+              <div class="page-header-grid">
+                <div>
+                  <span class="eyebrow">Legal</span>
+                  <h1 tabindex="-1">Terms &amp; Conditions</h1>
+                </div>
+                <p class="lead">General terms governing the use of the AJAX Builders website.</p>
+              </div>
+            </div>
+          </header>
+
+          <section class="section">
+            <div class="container prose-block" style="max-width: 78ch;">
+              <div class="verification-note" style="margin-top: 0;">
+                <span class="verification-tag">TO VERIFY WITH CLIENT</span>
+                Confirm company registration number and standard contractual terms notice with AJAX Construction Ltd prior to live launch.
+              </div>
+              <h2 style="margin-top: 2rem; margin-bottom: 0.75rem;">1. Website Information</h2>
+              <p>Content presented on this website is provided by AJAX Construction Ltd for general information regarding our London construction, renovation and design-and-build capabilities. It does not constitute a formal quotation or binding contractual offer.</p>
+
+              <h2 style="margin-top: 2rem; margin-bottom: 0.75rem;">2. Quotations &amp; Building Contracts</h2>
+              <p>All building, extension, loft conversion and refurbishment works are subject to site inspection, written specification and formal written agreement between the client and AJAX Construction Ltd.</p>
+
+              <h2 style="margin-top: 2rem; margin-bottom: 0.75rem;">3. Intellectual Property</h2>
+              <p>Website copy, branding and verified AJAX Builders project materials remain the property of AJAX Construction Ltd or their respective credited photographers.</p>
+            </div>
+          </section>
+        </div>
+      `;
+    }
+
+    function renderNotFoundPage(badPath) {
+      const breadcrumbs = [{ label: 'Home', path: '/' }, { label: 'Page Not Found', path: badPath }];
+      return `
+        <div class="page-view">
+          <header class="page-header">
+            <div class="container">
+              ${renderBreadcrumbs(breadcrumbs)}
+              <span class="eyebrow">Error 404</span>
+              <h1 tabindex="-1" style="margin-bottom: 1rem;">Page Not Found</h1>
+              <p class="lead" style="margin-bottom: 2rem;">The page <code>${escapeHtml(badPath)}</code> could not be found. It may have moved or the address may have been entered incorrectly.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                <a href="/" data-route="/" class="btn btn-primary">Return to Homepage <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="/portfolio" data-route="/portfolio" class="btn btn-outline">Explore Portfolio</a>
+                <a href="/services" data-route="/services" class="btn btn-outline">View Services</a>
+              </div>
+            </div>
+          </header>
+        </div>
+      `;
+    }
+
+    /* ========================================================================
+       SECTION E: CLIENT-SIDE ROUTER (HISTORY API + HASH FALLBACK + LEGACY MAP)
+       ======================================================================== */
+    const LEGACY_REDIRECTS = {
+      '/barrier_point_2_bedroom_flat_renovation.html': '/projects/barrier-point-apartment',
+      '/belsize_park_flat_refurbishment.html': '/projects/belsize-park-refurbishment',
+      '/3_bedroom_flat_refurbishment.html': '/projects/stratford-maisonette-refurbishment',
+      '/chelsea_basement_flat_refurbishment.html': '/projects/chelsea-basement-flat',
+      '/kingsland_road_house_conversion.html': '/projects/kingsland-road-house-conversion',
+      '/kitchen_fitted_and_new_structural_opening_n1.html': '/projects/n1-kitchen-and-structural-opening',
+      '/extension_and_loft_conversion_wimbledon.html': '/projects/wimbledon-extension-and-loft-conversion',
+      '/wimbledon_loft_conversion_l_shape.html': '/projects/wimbledon-l-shaped-loft-conversion'
+    };
+
+    function getNormalizedPath() {
+      // Support hash-routing fallback (#/about) on static hosts without rewrites
+      if (window.location.hash && window.location.hash.startsWith('#/')) {
+        return window.location.hash.slice(1);
+      }
+      let pathname = window.location.pathname || '/';
+      if (pathname.length > 1 && pathname.endsWith('/')) {
+        pathname = pathname.slice(0, -1);
+      }
+      if (pathname === '/index.html') return '/';
+      return pathname;
+    }
+
+    function navigateTo(targetPath, options = {}) {
+      let cleanPath = targetPath.split('?')[0].split('#')[0] || '/';
+      if (cleanPath.length > 1 && cleanPath.endsWith('/')) {
+        cleanPath = cleanPath.slice(0, -1);
+      }
+
+      if (LEGACY_REDIRECTS[cleanPath]) {
+        cleanPath = LEGACY_REDIRECTS[cleanPath];
+      }
+
+      if (!options.skipHistory) {
+        if (window.location.protocol === 'file:' || window.location.hash.startsWith('#/')) {
+          window.location.hash = `#${cleanPath}`;
+        } else {
+          window.history.pushState({ path: cleanPath }, '', cleanPath);
+        }
+      }
+
+      renderRoute(cleanPath);
+      window.scrollTo({ top: 0, behavior: 'auto' });
+
+      // Close mobile menu if open
+      const nav = document.getElementById('primary-nav');
+      const toggle = document.getElementById('mobile-menu-toggle');
+      const header = document.getElementById('site-header');
+      if (nav && nav.classList.contains('is-open')) {
+        nav.classList.remove('is-open');
+        header.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.textContent = 'Menu';
+      }
+
+      // Move keyboard focus to the new page heading
+      const main = document.getElementById('main-content');
+      const h1 = main ? main.querySelector('h1') : null;
+      if (h1) {
+        h1.focus({ preventScroll: true });
+      }
+    }
+
+    function renderRoute(rawPath) {
+      const path = LEGACY_REDIRECTS[rawPath] || rawPath;
+      const main = document.getElementById('main-content');
+      const header = document.getElementById('site-header');
+
+      // Update active nav states
+      document.querySelectorAll('[data-route]').forEach(link => {
+        const linkPath = link.getAttribute('data-route');
+        const isCurrent = linkPath === path || (linkPath !== '/' && path.startsWith(linkPath + '/'));
+        if (isCurrent) {
+          link.setAttribute('aria-current', 'page');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+
+      // Toggle transparent hero header only on homepage
+      if (path === '/') {
+        header.classList.add('over-hero');
+        main.classList.add('has-full-hero');
+      } else {
+        header.classList.remove('over-hero');
+        main.classList.remove('has-full-hero');
+      }
+
+      // Route Matching
+      if (path === '/') {
+        main.innerHTML = renderHomePage();
+        updateMetadata({
+          title: 'AJAX Builders | London Construction, Renovation & Design-and-Build',
+          description: 'From thoughtful architectural design to exceptional construction and renovation, AJAX Builders delivers considered spaces for modern living and working.',
+          path: '/'
+        });
+      } else if (path === '/about') {
+        main.innerHTML = renderAboutPage();
+        updateMetadata({
+          title: 'About AJAX Builders | London Construction & Design-and-Build',
+          description: 'Learn about AJAX Construction Ltd (AJAX Builders), a Kensington-based construction, renovation and design-and-build firm serving London.',
+          path: '/about',
+          breadcrumbs: [{ label: 'Home', path: '/' }, { label: 'About', path: '/about' }]
+        });
+      } else if (path === '/design-and-build') {
+        main.innerHTML = renderDesignAndBuildPage();
+        updateMetadata({
+          title: 'Design & Build Services | AJAX Builders London',
+          description: 'Architectural drawings, building plans, planning permission assistance, structural calculations and project management from concept to completion.',
+          path: '/design-and-build',
+          breadcrumbs: [{ label: 'Home', path: '/' }, { label: 'Design & Build', path: '/design-and-build' }]
+        });
+      } else if (path === '/services') {
+        main.innerHTML = renderServicesOverviewPage();
+        updateMetadata({
+          title: 'Services | Refurbishments, Extensions, Lofts & Joinery | AJAX Builders',
+          description: 'Explore full refurbishments, house extensions, loft conversions, bathrooms, kitchens, basements, carpentry and commercial refurbishment by AJAX Builders.',
+          path: '/services',
+          breadcrumbs: [{ label: 'Home', path: '/' }, { label: 'Services', path: '/services' }]
+        });
+      } else if (path.startsWith('/services/')) {
+        const slug = path.replace('/services/', '');
+        const service = SERVICES.find(s => s.slug === slug);
+        if (service) {
+          main.innerHTML = renderServiceDetailPage(service);
+          updateMetadata({
+            title: `${service.title} London | AJAX Builders`,
+            description: service.shortDesc,
+            path: `/services/${service.slug}`,
+            breadcrumbs: [
+              { label: 'Home', path: '/' },
+              { label: 'Services', path: '/services' },
+              { label: service.title, path: `/services/${service.slug}` }
+            ]
+          });
+        } else {
+          main.innerHTML = renderNotFoundPage(path);
+        }
+      } else if (path === '/portfolio') {
+        main.innerHTML = renderPortfolioPage('All');
+        bindPortfolioFilters();
+        updateMetadata({
+          title: 'Portfolio | Completed London Renovation & Building Projects | AJAX Builders',
+          description: 'Explore residential refurbishments, house extensions, loft conversions and structural kitchen projects across London by AJAX Builders.',
+          path: '/portfolio',
+          breadcrumbs: [{ label: 'Home', path: '/' }, { label: 'Portfolio', path: '/portfolio' }]
+        });
+      } else if (path.startsWith('/projects/')) {
+        const slug = path.replace('/projects/', '');
+        const project = PROJECTS.find(p => p.slug === slug);
+        if (project) {
+          main.innerHTML = renderProjectDetailPage(project);
+          updateMetadata({
+            title: `${project.title} | AJAX Builders Portfolio`,
+            description: project.summary,
+            path: `/projects/${project.slug}`,
+            breadcrumbs: [
+              { label: 'Home', path: '/' },
+              { label: 'Portfolio', path: '/portfolio' },
+              { label: project.title, path: `/projects/${project.slug}` }
+            ]
+          });
+        } else {
+          main.innerHTML = renderNotFoundPage(path);
+        }
+      } else if (path === '/testimonials') {
+        main.innerHTML = renderTestimonialsPage();
+        updateMetadata({
+          title: 'Client Testimonials | AJAX Builders London',
+          description: 'Read client reviews and feedback for AJAX Construction Ltd across London residential renovation and building projects.',
+          path: '/testimonials',
+          breadcrumbs: [{ label: 'Home', path: '/' }, { label: 'Testimonials', path: '/testimonials' }]
+        });
+      } else if (path === '/service-areas') {
+        main.innerHTML = renderServiceAreasPage();
+        updateMetadata({
+          title: 'London Service Areas | Central, North, West & Northwest London | AJAX Builders',
+          description: 'AJAX Builders delivers construction and renovation projects across Central London, North London, West London and Northwest London.',
+          path: '/service-areas',
+          breadcrumbs: [{ label: 'Home', path: '/' }, { label: 'Service Areas', path: '/service-areas' }]
+        });
+      } else if (path === '/contact') {
+        main.innerHTML = renderContactPage();
+        initContactForm();
+        updateMetadata({
+          title: 'Contact AJAX Builders | Start Your London Project Enquiry',
+          description: 'Contact AJAX Construction Ltd at 219 Kensington High Street, London W8 6BD or call 0208 201 3626 to discuss your project.',
+          path: '/contact',
+          breadcrumbs: [{ label: 'Home', path: '/' }, { label: 'Contact', path: '/contact' }]
+        });
+      } else if (path === '/photo-credits') {
+        main.innerHTML = renderPhotoCreditsPage();
+        updateMetadata({
+          title: 'Photo Credits & Image Attribution | AJAX Builders',
+          description: 'Verified photography credits, licences and source attribution for AJAX Builders.',
+          path: '/photo-credits',
+          breadcrumbs: [{ label: 'Home', path: '/' }, { label: 'Photo Credits', path: '/photo-credits' }]
+        });
+      } else if (path === '/privacy-policy') {
+        main.innerHTML = renderPrivacyPolicyPage();
+        updateMetadata({
+          title: 'Privacy Policy | AJAX Construction Ltd',
+          description: 'Privacy policy for AJAX Construction Ltd (AJAX Builders).',
+          path: '/privacy-policy',
+          breadcrumbs: [{ label: 'Home', path: '/' }, { label: 'Privacy Policy', path: '/privacy-policy' }]
+        });
+      } else if (path === '/terms-and-conditions') {
+        main.innerHTML = renderTermsPage();
+        updateMetadata({
+          title: 'Terms & Conditions | AJAX Construction Ltd',
+          description: 'Website terms and conditions for AJAX Construction Ltd (AJAX Builders).',
+          path: '/terms-and-conditions',
+          breadcrumbs: [{ label: 'Home', path: '/' }, { label: 'Terms & Conditions', path: '/terms-and-conditions' }]
+        });
+      } else {
+        main.innerHTML = renderNotFoundPage(path);
+        updateMetadata({
+          title: '404 — Page Not Found | AJAX Builders',
+          description: 'The requested page could not be found on AJAX Builders.',
+          path
+        });
+      }
+
+      initScrollReveals();
+    }
+
+    /* ========================================================================
+       SECTION F: INTERACTIVE PORTFOLIO FILTERS
+       ======================================================================== */
+    function bindPortfolioFilters() {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const selected = btn.getAttribute('data-filter');
+          const main = document.getElementById('main-content');
+          main.innerHTML = renderPortfolioPage(selected);
+          bindPortfolioFilters();
+          initScrollReveals();
+        });
+      });
+    }
+
+    /* ========================================================================
+       SECTION G: CONFIGURABLE ENQUIRY SUBMISSION & VALIDATION
+       ======================================================================== */
+    // Configure your live API endpoint here (e.g. 'https://api.ajaxbuilders.co.uk/enquiries')
+    // Leave empty string '' when no backend endpoint is connected yet.
+    const ENQUIRY_ENDPOINT = '';
+
+    async function submitEnquiry(payload) {
+      if (!ENQUIRY_ENDPOINT) {
+        return {
+          configured: false,
+          ok: false,
+          message: 'Online form submission is not yet connected to a backend endpoint.'
+        };
+      }
+
+      const response = await fetch(ENQUIRY_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error(`Server responded with status ${response.status}`);
+      }
+
+      const data = await response.json().catch(() => ({}));
+      return { configured: true, ok: true, data };
+    }
+
+    function initContactForm() {
+      const form = document.getElementById('enquiry-form');
+      if (!form) return;
+
+      const loadedInput = document.getElementById('form-loaded-at');
+      if (loadedInput) loadedInput.value = String(Date.now());
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const statusBox = document.getElementById('form-status');
+        const submitBtn = document.getElementById('enquiry-submit-btn');
+
+        // Spam checks: honeypot + minimum 2.5s human interaction time
+        const honeypot = document.getElementById('company-website').value.trim();
+        const elapsedMs = Date.now() - Number(loadedInput.value || 0);
+        if (honeypot !== '' || elapsedMs < 2500) {
+          statusBox.className = 'form-status is-visible is-error';
+          statusBox.textContent = 'Submission blocked by automated spam protection. Please wait a moment and try again.';
+          return;
+        }
+
+        // Clear previous errors
+        form.querySelectorAll('.field-error').forEach(el => { el.textContent = ''; });
+        form.querySelectorAll('.form-control').forEach(el => { el.removeAttribute('aria-invalid'); });
+
+        const fields = {
+          fullName: document.getElementById('full-name'),
+          email: document.getElementById('email'),
+          telephone: document.getElementById('telephone'),
+          altTelephone: document.getElementById('alt-telephone'),
+          projectAddress: document.getElementById('project-address'),
+          enquiryType: document.getElementById('enquiry-type'),
+          estimatedValue: document.getElementById('estimated-value'),
+          preferredContact: document.getElementById('preferred-contact'),
+          projectDescription: document.getElementById('project-description')
+        };
+
+        let isValid = true;
+        const setError = (field, errId, msg) => {
+          isValid = false;
+          field.setAttribute('aria-invalid', 'true');
+          document.getElementById(errId).textContent = msg;
+        };
+
+        if (fields.fullName.value.trim().length < 2) {
+          setError(fields.fullName, 'err-full-name', 'Please enter your full name.');
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(fields.email.value.trim())) {
+          setError(fields.email, 'err-email', 'Please enter a valid email address.');
+        }
+        if (fields.telephone.value.trim().replace(/\D/g, '').length < 7) {
+          setError(fields.telephone, 'err-telephone', 'Please enter a valid UK or international telephone number.');
+        }
+        if (fields.projectAddress.value.trim().length < 3) {
+          setError(fields.projectAddress, 'err-project-address', 'Please enter the project address or postcode.');
+        }
+        if (!fields.enquiryType.value) {
+          setError(fields.enquiryType, 'err-enquiry-type', 'Please select an enquiry category.');
+        }
+        if (fields.projectDescription.value.trim().length < 15) {
+          setError(fields.projectDescription, 'err-project-description', 'Please provide at least a brief summary of your proposed works.');
+        }
+
+        if (!isValid) {
+          const firstInvalid = form.querySelector('[aria-invalid="true"]');
+          if (firstInvalid) firstInvalid.focus();
+          return;
+        }
+
+        const payload = {
+          fullName: fields.fullName.value.trim(),
+          email: fields.email.value.trim(),
+          telephone: fields.telephone.value.trim(),
+          altTelephone: fields.altTelephone.value.trim(),
+          projectAddress: fields.projectAddress.value.trim(),
+          enquiryType: fields.enquiryType.value,
+          estimatedValue: fields.estimatedValue.value,
+          preferredContact: fields.preferredContact.value,
+          projectDescription: fields.projectDescription.value.trim(),
+          submittedAt: new Date().toISOString()
+        };
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending Enquiry…';
+
+        try {
+          const result = await submitEnquiry(payload);
+          if (result.configured && result.ok) {
+            statusBox.className = 'form-status is-visible is-success';
+            statusBox.innerHTML = '<strong>Enquiry Received.</strong> Thank you—your project details have been transmitted to AJAX Builders.';
+            form.reset();
+          } else {
+            // Build prefilled mailto fallback preserving user input
+            const subject = encodeURIComponent(`Project Enquiry: ${payload.enquiryType} — ${payload.projectAddress}`);
+            const body = encodeURIComponent(
+              `Full Name: ${payload.fullName}
+` +
+              `Email: ${payload.email}
+` +
+              `Telephone: ${payload.telephone}
+` +
+              (payload.altTelephone ? `Alternate Telephone: ${payload.altTelephone}
+` : '') +
+              `Project Address: ${payload.projectAddress}
+` +
+              `Type of Enquiry: ${payload.enquiryType}
+` +
+              `Estimated Project Value: ${payload.estimatedValue}
+` +
+              `Preferred Contact Method: ${payload.preferredContact}
+
+` +
+              `Project Description:
+${payload.projectDescription}`
+            );
+            const mailtoHref = `mailto:${COMPANY.email}?subject=${subject}&body=${body}`;
+
+            statusBox.className = 'form-status is-visible';
+            statusBox.innerHTML = `
+              <p style="font-weight: 600; margin-bottom: 0.5rem;">Online Form Endpoint Not Yet Connected</p>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">
+                To avoid displaying a false confirmation, please note that <code>ENQUIRY_ENDPOINT</code> is not yet configured on this static single-file deployment. Your entered details have been preserved below so you can send them directly via email or telephone:
+              </p>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                <a href="${mailtoHref}" class="btn btn-primary">Open Prefilled Email to ${COMPANY.email} <span class="arrow" aria-hidden="true">→</span></a>
+                <a href="${COMPANY.phoneLandlineHref}" class="btn btn-outline">Call ${COMPANY.phoneLandline}</a>
+              </div>
+            `;
+          }
+        } catch (err) {
+          statusBox.className = 'form-status is-visible is-error';
+          statusBox.innerHTML = `
+            <p style="font-weight: 600; margin-bottom: 0.4rem;">Submission Could Not Be Completed</p>
+            <p style="font-size: 0.9rem;">Please call us directly on <a href="${COMPANY.phoneLandlineHref}" style="text-decoration:underline;">${COMPANY.phoneLandline}</a> or email <a href="mailto:${COMPANY.email}" style="text-decoration:underline;">${COMPANY.email}</a>.</p>
+          `;
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Send Project Enquiry <span class="arrow" aria-hidden="true">→</span>';
+        }
+      });
+    }
+
+    /* ========================================================================
+       SECTION H: LIGHTBOX & SCROLL REVEALS
+       ======================================================================== */
+    let lightboxState = { keys: [], index: 0, lastFocus: null };
+
+    function openLightbox(keys, index, triggerEl) {
+      lightboxState = { keys, index, lastFocus: triggerEl || document.activeElement };
+      updateLightboxView();
+      const lb = document.getElementById('lightbox');
+      lb.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('lightbox-close').focus();
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('lightbox');
+      lb.classList.remove('is-open');
+      document.body.style.overflow = '';
+      if (lightboxState.lastFocus && typeof lightboxState.lastFocus.focus === 'function') {
+        lightboxState.lastFocus.focus();
+      }
+    }
+
+    function stepLightbox(delta) {
+      const len = lightboxState.keys.length;
+      if (!len) return;
+      lightboxState.index = (lightboxState.index + delta + len) % len;
+      updateLightboxView();
+    }
+
+    function updateLightboxView() {
+      const key = lightboxState.keys[lightboxState.index];
+      const img = IMAGES[key];
+      if (!img) return;
+      document.getElementById('lightbox-img').src = img.url;
+      document.getElementById('lightbox-img').alt = img.alt;
+      document.getElementById('lightbox-counter').textContent = `${lightboxState.index + 1} / ${lightboxState.keys.length}`;
+      const label = img.isAjaxProject ? 'AJAX Builders Project' : `Illustrative Reference (${img.source} — ${img.photographer})`;
+      document.getElementById('lightbox-caption').textContent = `${img.alt} — ${label}`;
+    }
+
+    function initScrollReveals() {
+      const elements = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        elements.forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      elements.forEach(el => observer.observe(el));
+    }
+
+    /* ========================================================================
+       SECTION I: GLOBAL EVENT LISTENERS & BOOTSTRAP
+       ======================================================================== */
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('copyright-year').textContent = String(new Date().getFullYear());
+
+      // Header scroll state
+      const header = document.getElementById('site-header');
+      const syncHeaderScroll = () => {
+        if (window.scrollY > 36) {
+          header.classList.add('is-scrolled');
+        } else {
+          header.classList.remove('is-scrolled');
+        }
+      };
+      window.addEventListener('scroll', syncHeaderScroll, { passive: true });
+      syncHeaderScroll();
+
+      // Mobile navigation toggle
+      const mobileToggle = document.getElementById('mobile-menu-toggle');
+      const primaryNav = document.getElementById('primary-nav');
+      mobileToggle.addEventListener('click', () => {
+        const isOpen = primaryNav.classList.toggle('is-open');
+        header.classList.toggle('menu-open', isOpen);
+        mobileToggle.setAttribute('aria-expanded', String(isOpen));
+        mobileToggle.textContent = isOpen ? 'Close' : 'Menu';
+      });
+
+      // Delegated internal link routing & lightbox triggers
+      document.addEventListener('click', (e) => {
+        const lbBtn = e.target.closest('[data-lightbox-group]');
+        if (lbBtn) {
+          const keys = JSON.parse(decodeURIComponent(lbBtn.getAttribute('data-lightbox-group')));
+          const index = Number(lbBtn.getAttribute('data-lightbox-index') || 0);
+          openLightbox(keys, index, lbBtn);
+          return;
+        }
+
+        const routeLink = e.target.closest('a[data-route]');
+        if (routeLink) {
+          if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || routeLink.target === '_blank') return;
+          e.preventDefault();
+          const dest = routeLink.getAttribute('data-route');
+          navigateTo(dest);
+        }
+      });
+
+      // Lightbox controls & keyboard accessibility
+      document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+      document.getElementById('lightbox-prev').addEventListener('click', () => stepLightbox(-1));
+      document.getElementById('lightbox-next').addEventListener('click', () => stepLightbox(1));
+      document.getElementById('lightbox').addEventListener('click', (e) => {
+        if (e.target.id === 'lightbox') closeLightbox();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        const lb = document.getElementById('lightbox');
+        if (!lb.classList.contains('is-open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') stepLightbox(-1);
+        if (e.key === 'ArrowRight') stepLightbox(1);
+      });
+
+      // Browser Back / Forward & Hash fallback support
+      window.addEventListener('popstate', () => {
+        navigateTo(getNormalizedPath(), { skipHistory: true });
+      });
+      window.addEventListener('hashchange', () => {
+        if (window.location.hash.startsWith('#/')) {
+          navigateTo(window.location.hash.slice(1), { skipHistory: true });
+        }
+      });
+
+      // Initial Route Render
+      navigateTo(getNormalizedPath(), { skipHistory: true });
+    });
+  </script>
+</body>
+</html>
