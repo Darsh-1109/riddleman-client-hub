@@ -1,0 +1,2231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Gutters | Guttering Supplies, Downpipes & Seamless Gutters UK</title>
+    <meta name="description" content="Premium UK supplier of guttering products, downpipes and seamless guttering solutions. Precision in Every Detail. Protection in Every Drop.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #101C2C;
+            --graphite: #252B32;
+            --warm-white: #F8F8F5;
+            --concrete: #ECEFEE;
+            --teal: #218C87;
+            --teal-dark: #1a706c;
+            --steel: #87929B;
+            --white: #FFFFFF;
+            --error: #d32f2f;
+            
+            --font-head: 'Archivo', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --shadow-sm: 0 2px 8px rgba(16, 28, 44, 0.04);
+            --shadow-md: 0 8px 24px rgba(16, 28, 44, 0.08);
+            --shadow-lg: 0 16px 48px rgba(16, 28, 44, 0.12);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--warm-white);
+            color: var(--graphite);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-head);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--navy);
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+            font-size: inherit;
+            border: none;
+            outline: none;
+            background: none;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 clamp(1.5rem, 4vw, 4rem);
+        }
+
+        /* --- ANNOUNCEMENT BAR --- */
+        .announcement-bar {
+            background-color: var(--navy);
+            color: var(--white);
+            text-align: center;
+            padding: 0.75rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 100;
+        }
+
+        .announcement-bar span {
+            color: var(--teal);
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        /* --- HEADER & NAV --- */
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(248, 248, 245, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(16, 28, 44, 0.05);
+            z-index: 90;
+            transition: var(--transition);
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: var(--font-head);
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: var(--navy);
+            letter-spacing: -0.03em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--teal);
+            font-weight: 900;
+            border-radius: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--graphite);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--teal);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-links .has-mega:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .icon-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--navy);
+            position: relative;
+        }
+
+        .icon-btn:hover {
+            background: var(--concrete);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            background: var(--teal);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 600;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: scale(0);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .cart-count.active {
+            transform: scale(1);
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            width: 24px;
+        }
+
+        .mobile-toggle span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--navy);
+            transition: var(--transition);
+        }
+
+        /* --- MEGA MENU --- */
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--white);
+            border-top: 1px solid var(--concrete);
+            box-shadow: var(--shadow-lg);
+            padding: 3rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 80;
+        }
+
+        .nav-links li.has-mega:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mega-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 2fr;
+            gap: 3rem;
+        }
+
+        .mega-col h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--steel);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .mega-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .mega-links a {
+            font-size: 0.95rem;
+            color: var(--graphite);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .mega-links a:hover {
+            color: var(--teal);
+            transform: translateX(4px);
+        }
+
+        .mega-featured {
+            background: var(--concrete);
+            border-radius: 8px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mega-featured-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            background: var(--teal);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 2px;
+            display: inline-block;
+            width: fit-content;
+            margin-bottom: 1rem;
+        }
+
+        .mega-featured h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .mega-featured p {
+            font-size: 0.85rem;
+            color: var(--steel);
+            margin-bottom: 1.5rem;
+        }
+
+        .mega-featured-btn {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--navy);
+            border-bottom: 1px solid var(--navy);
+            padding-bottom: 2px;
+            align-self: flex-start;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: grid;
+            grid-template-columns: 55% 45%;
+            background: var(--warm-white);
+            overflow: hidden;
+        }
+
+        .hero-visual {
+            position: relative;
+            background: var(--concrete);
+            overflow: hidden;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.05);
+            transition: transform 8s ease-out;
+        }
+
+        .hero.loaded .hero-img {
+            transform: scale(1);
+        }
+
+        .hero-visual::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--teal), transparent);
+            z-index: 2;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: clamp(3rem, 6vw, 8rem);
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--teal);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: var(--teal);
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 5.5vw, 5.5rem);
+            margin-bottom: 2rem;
+            color: var(--navy);
+        }
+
+        .hero h1 .accent {
+            color: var(--teal);
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .hero-desc {
+            font-size: 1.15rem;
+            color: var(--steel);
+            max-width: 500px;
+            margin-bottom: 3rem;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2rem;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--graphite);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--navy);
+            border: 1px solid var(--navy);
+        }
+
+        .btn-secondary:hover {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .hero-search {
+            max-width: 500px;
+            position: relative;
+        }
+
+        .hero-search input {
+            width: 100%;
+            padding: 1.25rem 1.5rem;
+            border: 1px solid var(--concrete);
+            background: var(--white);
+            font-size: 0.95rem;
+            color: var(--graphite);
+            transition: var(--transition);
+        }
+
+        .hero-search input::placeholder {
+            color: var(--steel);
+        }
+
+        .hero-search input:focus {
+            border-color: var(--teal);
+            box-shadow: 0 0 0 4px rgba(33, 140, 135, 0.1);
+        }
+
+        .hero-search button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--teal);
+            color: white;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .hero-grid-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero-grid-lines::before,
+        .hero-grid-lines::after {
+            content: '';
+            position: absolute;
+            background: rgba(16, 28, 44, 0.03);
+        }
+
+        .hero-grid-lines::before {
+            width: 1px;
+            height: 100%;
+            left: 33.33%;
+        }
+
+        .hero-grid-lines::after {
+            width: 100%;
+            height: 1px;
+            top: 50%;
+        }
+
+        /* --- SECTION STYLES --- */
+        .section {
+            padding: clamp(5rem, 10vw, 10rem) 0;
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            max-width: 600px;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--steel);
+            max-width: 400px;
+            text-align: right;
+        }
+
+        /* --- CATEGORIES GRID --- */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto;
+            gap: 1.5rem;
+        }
+
+        .cat-card {
+            position: relative;
+            overflow: hidden;
+            background: var(--concrete);
+            cursor: pointer;
+            min-height: 300px;
+        }
+
+        .cat-card.large {
+            grid-column: span 8;
+            grid-row: span 2;
+            min-height: 600px;
+        }
+
+        .cat-card.medium {
+            grid-column: span 4;
+            min-height: 290px;
+        }
+
+        .cat-card.small {
+            grid-column: span 4;
+            min-height: 290px;
+        }
+
+        .cat-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .cat-card:hover .cat-img {
+            transform: scale(1.05);
+        }
+
+        .cat-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(16, 28, 44, 0.9), transparent);
+            color: white;
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+        }
+
+        .cat-card:hover .cat-overlay {
+            transform: translateY(0);
+        }
+
+        .cat-overlay h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cat-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        .cat-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--teal);
+        }
+
+        .cat-link svg {
+            transition: transform 0.3s ease;
+        }
+
+        .cat-card:hover .cat-link svg {
+            transform: translateX(5px);
+        }
+
+        /* --- PRODUCTS SECTION --- */
+        .products-section {
+            background: var(--white);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--warm-white);
+            border: 1px solid transparent;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            border-color: var(--concrete);
+            box-shadow: var(--shadow-md);
+        }
+
+        .product-image-wrap {
+            position: relative;
+            aspect-ratio: 1/1;
+            background: var(--concrete);
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .product-card:hover .product-image-wrap img {
+            transform: scale(1.03);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--navy);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .product-actions {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-actions {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 0.75rem;
+            background: var(--white);
+            color: var(--navy);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .action-btn:hover {
+            background: var(--teal);
+            color: white;
+        }
+
+        .action-btn.primary {
+            background: var(--navy);
+            color: white;
+        }
+
+        .action-btn.primary:hover {
+            background: var(--teal);
+        }
+
+        .product-info {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .product-sku {
+            font-size: 0.75rem;
+            color: var(--steel);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            font-family: var(--font-head);
+        }
+
+        .product-desc {
+            font-size: 0.85rem;
+            color: var(--steel);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .product-price .from {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--steel);
+        }
+
+        /* --- SEAMLESS FEATURE SECTION --- */
+        .feature-section {
+            background: var(--navy);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 600px;
+        }
+
+        .feature-content {
+            padding: clamp(3rem, 6vw, 8rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-content .hero-eyebrow {
+            color: var(--teal);
+        }
+
+        .feature-content .hero-eyebrow::before {
+            background: var(--teal);
+        }
+
+        .feature-content h2 {
+            color: var(--white);
+            font-size: clamp(2.5rem, 4vw, 4rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-content p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.1rem;
+            max-width: 450px;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .feature-specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .spec-item {
+            border-left: 2px solid var(--teal);
+            padding-left: 1rem;
+        }
+
+        .spec-item h4 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .spec-item p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            margin: 0;
+        }
+
+        .btn-light {
+            background: var(--white);
+            color: var(--navy);
+            padding: 1rem 2rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            align-self: flex-start;
+            transition: var(--transition);
+        }
+
+        .btn-light:hover {
+            background: var(--teal);
+            color: var(--white);
+        }
+
+        .feature-visual {
+            position: relative;
+            background: var(--graphite);
+        }
+
+        .feature-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .feature-blueprint {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            border: 1px dashed rgba(33, 140, 135, 0.5);
+            pointer-events: none;
+        }
+
+        /* --- WHY US SECTION --- */
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .why-us-image {
+            position: relative;
+            aspect-ratio: 4/5;
+            overflow: hidden;
+            background: var(--concrete);
+        }
+
+        .why-us-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .why-us-image::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background: var(--teal);
+            z-index: -1;
+        }
+
+        .why-us-content h2 {
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            margin-bottom: 2rem;
+        }
+
+        .why-us-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .why-us-item {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .why-us-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            background: var(--concrete);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--teal);
+        }
+
+        .why-us-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .why-us-item p {
+            font-size: 0.95rem;
+            color: var(--steel);
+        }
+
+        /* --- GUIDES SECTION --- */
+        .guides-section {
+            background: var(--concrete);
+        }
+
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .guide-card {
+            background: var(--white);
+            padding: 2rem;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border-bottom: 3px solid transparent;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-5px);
+            border-bottom-color: var(--teal);
+            box-shadow: var(--shadow-md);
+        }
+
+        .guide-number {
+            font-family: var(--font-head);
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--concrete);
+            line-height: 1;
+            margin-bottom: 1rem;
+            -webkit-text-stroke: 1px var(--steel);
+        }
+
+        .guide-card:hover .guide-number {
+            color: var(--teal);
+            -webkit-text-stroke: 1px var(--teal);
+        }
+
+        .guide-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .guide-card p {
+            font-size: 0.9rem;
+            color: var(--steel);
+            margin-bottom: 1.5rem;
+        }
+
+        .guide-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* --- TRADE ENQUIRIES --- */
+        .trade-section {
+            background: var(--graphite);
+            color: var(--white);
+        }
+
+        .trade-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .trade-content h2 {
+            color: var(--white);
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .trade-content p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .trade-form {
+            background: var(--navy);
+            padding: 3rem;
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 1rem;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--teal);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .btn-submit {
+            background: var(--teal);
+            color: white;
+            padding: 1.25rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-submit:hover {
+            background: var(--teal-dark);
+        }
+
+        /* --- FOOTER --- */
+        .footer {
+            background: var(--navy);
+            color: rgba(255,255,255,0.7);
+            padding: 6rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-brand p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            max-width: 300px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-contact {
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .footer-contact a {
+            color: var(--teal);
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-col a {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-col a:hover {
+            color: var(--teal);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* --- CART DRAWER --- */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(16, 28, 44, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .cart-drawer {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 450px;
+            max-width: 90vw;
+            height: 100vh;
+            background: var(--white);
+            z-index: 110;
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-drawer.active {
+            transform: translateX(0);
+        }
+
+        .cart-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--concrete);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-header h3 {
+            font-size: 1.25rem;
+        }
+
+        .cart-close {
+            cursor: pointer;
+            color: var(--steel);
+            transition: var(--transition);
+        }
+
+        .cart-close:hover {
+            color: var(--navy);
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 80px 1fr auto;
+            gap: 1rem;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--concrete);
+        }
+
+        .cart-item-img {
+            width: 80px;
+            height: 80px;
+            background: var(--concrete);
+            object-fit: cover;
+        }
+
+        .cart-item-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .cart-item-info p {
+            font-size: 0.8rem;
+            color: var(--steel);
+            margin-bottom: 0.5rem;
+        }
+
+        .cart-item-qty {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--concrete);
+            width: fit-content;
+        }
+
+        .qty-btn {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .qty-val {
+            padding: 0 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .cart-item-price {
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .cart-footer {
+            padding: 1.5rem;
+            border-top: 1px solid var(--concrete);
+            background: var(--warm-white);
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .cart-checkout-btn {
+            width: 100%;
+            background: var(--navy);
+            color: white;
+            padding: 1.25rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            display: block;
+        }
+
+        .cart-checkout-btn:hover {
+            background: var(--teal);
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--steel);
+        }
+
+        /* --- TOAST NOTIFICATION --- */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--navy);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-left: 4px solid var(--teal);
+            box-shadow: var(--shadow-lg);
+            z-index: 120;
+            transform: translateX(120%);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            max-width: 350px;
+        }
+
+        .toast.active {
+            transform: translateX(0);
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+            
+            .hero-visual {
+                height: 50vh;
+                min-height: 400px;
+            }
+            
+            .hero-visual::after {
+                display: none;
+            }
+            
+            .mega-menu {
+                display: none; /* Simplified for tablet/mobile */
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-toggle {
+                display: flex;
+            }
+            
+            .categories-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .cat-card.large, .cat-card.medium, .cat-card.small {
+                grid-column: span 2;
+                grid-row: span 1;
+                min-height: 300px;
+            }
+            
+            .feature-grid, .why-us-grid, .trade-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-visual {
+                height: 400px;
+                order: -1;
+            }
+            
+            .guides-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .section-subtitle {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 3rem 1.5rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+            }
+            
+            .btn-primary, .btn-secondary {
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cat-card.large, .cat-card.medium, .cat-card.small {
+                grid-column: span 1;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+
+        /* --- ANIMATIONS --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--warm-white);
+            z-index: 95;
+            padding: 100px 2rem 2rem;
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .mobile-menu a {
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--navy);
+            border-bottom: 1px solid var(--concrete);
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar">
+        <span>UK Delivery Available</span> Specialist Supplier of Seamless Guttering & Downpipes
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav-main">
+                <a href="#" class="logo">
+                    <div class="logo-icon">AG</div>
+                    All Gutters
+                </a>
+                
+                <ul class="nav-links">
+                    <li class="has-mega">
+                        <a href="#shop">Shop All</a>
+                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="mega-grid">
+                                    <div class="mega-col">
+                                        <h4>Guttering Systems</h4>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Half-Round Guttering</a></li>
+                                            <li><a href="#">Square Line Guttering</a></li>
+                                            <li><a href="#">Ogee Guttering</a></li>
+                                            <li><a href="#">Deep Flow Systems</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-col">
+                                        <h4>Downpipes</h4>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Round Downpipes</a></li>
+                                            <li><a href="#">Square Downpipes</a></li>
+                                            <li><a href="#">Rainwater Hoppers</a></li>
+                                            <li><a href="#">Shoes & Bends</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-col">
+                                        <h4>Accessories</h4>
+                                        <ul class="mega-links">
+                                            <li><a href="#">Brackets & Fixings</a></li>
+                                            <li><a href="#">Unions & Connectors</a></li>
+                                            <li><a href="#">Stop Ends & Outlets</a></li>
+                                            <li><a href="#">Gutter Guards</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-featured">
+                                        <div>
+                                            <span class="mega-featured-tag">Specialist</span>
+                                            <h3>Seamless Aluminium</h3>
+                                            <p>Continuous length guttering for a flawless finish and superior water management.</p>
+                                        </div>
+                                        <a href="#seamless" class="mega-featured-btn">Discover Seamless →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#seamless">Seamless Gutters</a></li>
+                    <li><a href="#shop">Downpipes</a></li>
+                    <li><a href="#trade">Trade Enquiries</a></li>
+                    <li><a href="#guides">Guides</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="icon-btn" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                    <button class="icon-btn" aria-label="Account">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </button>
+                    <button class="icon-btn" id="cart-btn" aria-label="Cart">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </button>
+                    <div class="mobile-toggle" id="mobile-toggle">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#shop" class="mobile-link">Shop All</a>
+        <a href="#seamless" class="mobile-link">Seamless Gutters</a>
+        <a href="#shop" class="mobile-link">Downpipes</a>
+        <a href="#trade" class="mobile-link">Trade Enquiries</a>
+        <a href="#guides" class="mobile-link">Guides</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="hero">
+            <div class="hero-visual">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200" alt="Modern UK residential architecture with premium guttering" class="hero-img">
+            </div>
+            <div class="hero-content">
+                <div class="hero-grid-lines"></div>
+                <span class="hero-eyebrow">Precision in Every Detail</span>
+                <h1>The Right Guttering. <span class="accent">Down to the Last Detail.</span></h1>
+                <p class="hero-desc">Explore dependable guttering supplies, downpipes and seamless guttering solutions for property upgrades, replacements and renovation projects across the UK.</p>
+                
+                <div class="hero-actions">
+                    <a href="#shop" class="btn-primary">
+                        Shop All Products 
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="#seamless" class="btn-secondary">Discover Seamless</a>
+                </div>
+
+                <div class="hero-search">
+                    <input type="text" placeholder="Search by product, profile, size or category...">
+                    <button aria-label="Search">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORIES SECTION -->
+        <section class="section" id="shop">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Shop by Category</h2>
+                    <p class="section-subtitle">Specialist rainwater management systems engineered for UK properties. Browse our comprehensive range of profiles and materials.</p>
+                </div>
+
+                <div class="categories-grid reveal">
+                    <div class="cat-card large">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=1200" alt="Seamless Aluminium Guttering" class="cat-img">
+                        <div class="cat-overlay">
+                            <h3>Seamless Guttering</h3>
+                            <p>Continuous aluminium systems for a flawless finish.</p>
+                            <span class="cat-link">Explore Systems <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        </div>
+                    </div>
+                    <div class="cat-card medium">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=800" alt="Cast Iron Guttering" class="cat-img">
+                        <div class="cat-overlay">
+                            <h3>Cast Iron</h3>
+                            <p>Heritage profiles for period properties.</p>
+                            <span class="cat-link">Explore Range <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        </div>
+                    </div>
+                    <div class="cat-card medium">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800" alt="uPVC Guttering Systems" class="cat-img">
+                        <div class="cat-overlay">
+                            <h3>uPVC Systems</h3>
+                            <p>Durable, cost-effective rainwater solutions.</p>
+                            <span class="cat-link">Explore Range <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        </div>
+                    </div>
+                    <div class="cat-card small">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=600" alt="Downpipes" class="cat-img">
+                        <div class="cat-overlay">
+                            <h3>Downpipes</h3>
+                            <p>Round and square profiles.</p>
+                            <span class="cat-link">View All <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        </div>
+                    </div>
+                    <div class="cat-card small">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=600" alt="Gutter Accessories" class="cat-img">
+                        <div class="cat-overlay">
+                            <h3>Accessories</h3>
+                            <p>Brackets, unions and fixings.</p>
+                            <span class="cat-link">View All <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED PRODUCTS -->
+        <section class="section products-section" id="products">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Featured Systems</h2>
+                    <p class="section-subtitle">Premium materials engineered for the UK climate. Discover our most specified rainwater products.</p>
+                </div>
+
+                <div class="products-grid reveal">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-id="1" data-name="Seamless Aluminium Half-Round" data-price="14.50">
+                        <div class="product-image-wrap">
+                            <span class="product-badge">Seamless</span>
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=600" alt="Seamless Aluminium Gutter">
+                            <div class="product-actions">
+                                <button class="action-btn">Quick View</button>
+                                <button class="action-btn primary add-to-cart">Add to Basket</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-sku">SKU: AG-ALU-HR-115</div>
+                            <h3 class="product-name">Seamless Aluminium Half-Round</h3>
+                            <p class="product-desc">115mm profile. Continuous length, powder-coated finish.</p>
+                            <div class="product-meta">
+                                <div class="product-price"><span class="from">From </span>£14.50 /m</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card" data-id="2" data-name="Cast Iron Ogee Gutter" data-price="28.00">
+                        <div class="product-image-wrap">
+                            <span class="product-badge">Heritage</span>
+                            <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=600" alt="Cast Iron Gutter">
+                            <div class="product-actions">
+                                <button class="action-btn">Quick View</button>
+                                <button class="action-btn primary add-to-cart">Add to Basket</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-sku">SKU: AG-CI-OG-115</div>
+                            <h3 class="product-name">Cast Iron Ogee Gutter</h3>
+                            <p class="product-desc">115mm Ogee profile. Traditional sand-cast finish.</p>
+                            <div class="product-meta">
+                                <div class="product-price"><span class="from">From </span>£28.00 /m</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card" data-id="3" data-name="uPVC Square Line System" data-price="6.75">
+                        <div class="product-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=600" alt="uPVC Gutter">
+                            <div class="product-actions">
+                                <button class="action-btn">Quick View</button>
+                                <button class="action-btn primary add-to-cart">Add to Basket</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-sku">SKU: AG-UPVC-SQ-114</div>
+                            <h3 class="product-name">uPVC Square Line System</h3>
+                            <p class="product-desc">114mm square profile. High capacity, easy-fit joints.</p>
+                            <div class="product-meta">
+                                <div class="product-price"><span class="from">From </span>£6.75 /m</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card" data-id="4" data-name="65mm Square Downpipe" data-price="9.20">
+                        <div class="product-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=600" alt="Downpipe">
+                            <div class="product-actions">
+                                <button class="action-btn">Quick View</button>
+                                <button class="action-btn primary add-to-cart">Add to Basket</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-sku">SKU: AG-DP-SQ-65</div>
+                            <h3 class="product-name">65mm Square Downpipe</h3>
+                            <p class="product-desc">Compatible with square line gutter systems.</p>
+                            <div class="product-meta">
+                                <div class="product-price"><span class="from">From </span>£9.20 /m</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEAMLESS FEATURE -->
+        <section class="section feature-section" id="seamless">
+            <div class="feature-grid">
+                <div class="feature-content reveal">
+                    <span class="hero-eyebrow">Seamless Technology</span>
+                    <h2>A Cleaner Finish. <br>A More Seamless Look.</h2>
+                    <p>Explore seamless guttering solutions designed to complement modern and traditional properties. Roll-formed on-site or supplied in continuous lengths to eliminate unsightly joints and reduce leak risks.</p>
+                    
+                    <div class="feature-specs">
+                        <div class="spec-item">
+                            <h4>Continuous Lengths</h4>
+                            <p>Up to 30m without joints</p>
+                        </div>
+                        <div class="spec-item">
+                            <h4>Marine Grade</h4>
+                            <p>Aluminium alloy construction</p>
+                        </div>
+                        <div class="spec-item">
+                            <h4>Custom Colours</h4>
+                            <p>Polyester powder coated</p>
+                        </div>
+                        <div class="spec-item">
+                            <h4>Profile Options</h4>
+                            <p>Half-Round, Box, Ogee</p>
+                        </div>
+                    </div>
+
+                    <a href="#shop" class="btn-light">
+                        Explore Seamless Range
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+                <div class="feature-visual">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1000" alt="Seamless Gutter Profile Detail">
+                    <div class="feature-blueprint"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY US -->
+        <section class="section">
+            <div class="container">
+                <div class="why-us-grid">
+                    <div class="why-us-image reveal">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800" alt="Gutter installation detail">
+                    </div>
+                    <div class="why-us-content reveal">
+                        <span class="hero-eyebrow">Why All Gutters</span>
+                        <h2>Specialist Knowledge. Reliable Supply.</h2>
+                        <ul class="why-us-list">
+                            <li class="why-us-item">
+                                <div class="why-us-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                                </div>
+                                <div>
+                                    <h4>Comprehensive Range</h4>
+                                    <p>From standard uPVC systems to specialist cast iron and seamless aluminium, we supply the exact profiles your project requires.</p>
+                                </div>
+                            </li>
+                            <li class="why-us-item">
+                                <div class="why-us-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                                </div>
+                                <div>
+                                    <h4>Replacement & Renovation</h4>
+                                    <p>We specialise in matching existing profiles for seamless replacements, ensuring compatibility with your current rainwater system.</p>
+                                </div>
+                            </li>
+                            <li class="why-us-item">
+                                <div class="why-us-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4>Technical Support</h4>
+                                    <p>Our team understands roofline drainage. We provide guidance on sizing, falls, and fitting compatibility for both trade and domestic customers.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GUIDES -->
+        <section class="section guides-section" id="guides">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Knowledge Centre</h2>
+                    <p class="section-subtitle">Technical guidance for homeowners and trade professionals. Understand profiles, sizing and installation requirements.</p>
+                </div>
+
+                <div class="guides-grid reveal">
+                    <article class="guide-card">
+                        <div class="guide-number">01</div>
+                        <h3>How to Choose the Right Guttering System</h3>
+                        <p>Understanding roof pitch, catchment area and flow rates to select the correct profile and size for your property.</p>
+                        <a href="#" class="guide-link">Read Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    </article>
+                    <article class="guide-card">
+                        <div class="guide-number">02</div>
+                        <h3>Understanding Different Gutter Profiles</h3>
+                        <p>A technical comparison of Half-Round, Square Line, Ogee and Deep Flow systems, including capacity specifications.</p>
+                        <a href="#" class="guide-link">Read Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    </article>
+                    <article class="guide-card">
+                        <div class="guide-number">03</div>
+                        <h3>Measuring Your Existing Guttering</h3>
+                        <p>Step-by-step instructions for identifying profiles and taking accurate measurements for replacement systems.</p>
+                        <a href="#" class="guide-link">Read Guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRADE ENQUIRIES -->
+        <section class="section trade-section" id="trade">
+            <div class="container">
+                <div class="trade-grid">
+                    <div class="trade-content reveal">
+                        <span class="hero-eyebrow" style="color: var(--teal);">Trade & Bulk Orders</span>
+                        <h2>Your Next Project Starts with the Right Supplies.</h2>
+                        <p>Are you a contractor, builder, or managing a large renovation? Submit your project requirements for a bespoke quotation. We support trade professionals across the UK with reliable supply and technical guidance.</p>
+                        
+                        <div style="margin-top: 2rem; color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+                            <p style="margin-bottom: 0.5rem;">✓ Bulk quantity quotations</p>
+                            <p style="margin-bottom: 0.5rem;">✓ Project-specific material schedules</p>
+                            <p>✓ Dedicated trade support</p>
+                        </div>
+                    </div>
+                    <form class="trade-form reveal" id="tradeForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="t-name">Full Name</label>
+                                <input type="text" id="t-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="t-company">Company Name</label>
+                                <input type="text" id="t-company">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="t-email">Email Address</label>
+                                <input type="email" id="t-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="t-phone">Phone Number</label>
+                                <input type="tel" id="t-phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="t-project">Project Details & Requirements</label>
+                            <textarea id="t-project" rows="4" placeholder="Please specify profiles, materials, estimated lengths and quantities..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Request Quotation</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">AG</div>
+                        All Gutters
+                    </a>
+                    <p>Specialist UK supplier of guttering products, downpipes and seamless guttering solutions for property upgrades, replacements and renovation projects.</p>
+                    <div class="footer-contact">
+                        <p>213 Darnley Road<br>Rochester, ME2 2UJ<br>England, United Kingdom</p>
+                        <p style="margin-top: 1rem;"><a href="mailto:info@allgutters.co.uk">info@allgutters.co.uk</a></p>
+                        <p><a href="tel:+441634718087">+44 1634 718087</a></p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">Shop All</a></li>
+                        <li><a href="#">Seamless Gutters</a></li>
+                        <li><a href="#">Cast Iron Systems</a></li>
+                        <li><a href="#">uPVC Systems</a></li>
+                        <li><a href="#">Downpipes</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Trade Enquiries</a></li>
+                        <li><a href="#">Delivery Information</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Buying Guides</a></li>
+                        <li><a href="#">Measuring Guide</a></li>
+                        <li><a href="#">Profile Comparison</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 All Gutters. All rights reserved. Registered in England.</p>
+                <p>Precision in Every Detail. Protection in Every Drop.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART DRAWER -->
+    <div class="overlay" id="overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Basket (<span id="cart-total-items">0</span>)</h3>
+            <div class="cart-close" id="cart-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </div>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="empty-cart" id="empty-cart">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="margin-bottom: 1rem; opacity: 0.3;"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <p>Your basket is currently empty.</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cart-footer" style="display: none;">
+            <div class="cart-total">
+                <span>Subtotal</span>
+                <span id="cart-total-price">£0.00</span>
+            </div>
+            <p style="font-size: 0.8rem; color: var(--steel); margin-bottom: 1.5rem;">Delivery calculated at checkout.</p>
+            <a href="#" class="cart-checkout-btn">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span id="toast-message">Item added to basket</span>
+    </div>
+
+    <script>
+        // --- STATE ---
+        let cart = [];
+        const cartBtn = document.getElementById('cart-btn');
+        const cartDrawer = document.getElementById('cart-drawer');
+        const cartClose = document.getElementById('cart-close');
+        const overlay = document.getElementById('overlay');
+        const cartItemsEl = document.getElementById('cart-items');
+        const cartFooterEl = document.getElementById('cart-footer');
+        const cartCountEl = document.getElementById('cart-count');
+        const cartTotalItemsEl = document.getElementById('cart-total-items');
+        const cartTotalPriceEl = document.getElementById('cart-total-price');
+        const emptyCartEl = document.getElementById('empty-cart');
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toast-message');
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const header = document.getElementById('header');
+
+        // --- CART FUNCTIONS ---
+        function showToast(msg) {
+            toastMessage.textContent = msg;
+            toast.classList.add('active');
+            setTimeout(() => toast.classList.remove('active'), 3000);
+        }
+
+        function addToCart(id, name, price) {
+            const existing = cart.find(item => item.id === id);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ id, name, price: parseFloat(price), qty: 1 });
+            }
+            updateCart();
+            showToast(`${name} added to basket`);
+        }
+
+        function updateQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (item) {
+                item.qty += delta;
+                if (item.qty <= 0) {
+                    cart = cart.filter(i => i.id !== id);
+                }
+                updateCart();
+            }
+        }
+
+        function updateCart() {
+            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            cartCountEl.textContent = totalItems;
+            cartTotalItemsEl.textContent = totalItems;
+            cartTotalPriceEl.textContent = `£${totalPrice.toFixed(2)}`;
+
+            if (totalItems > 0) {
+                cartCountEl.classList.add('active');
+                emptyCartEl.style.display = 'none';
+                cartFooterEl.style.display = 'block';
+            } else {
+                cartCountEl.classList.remove('active');
+                emptyCartEl.style.display = 'block';
+                cartFooterEl.style.display = 'none';
+            }
+
+            renderCartItems();
+        }
+
+        function renderCartItems() {
+            // Keep empty cart div, clear others
+            cartItemsEl.innerHTML = '';
+            if (cart.length === 0) {
+                cartItemsEl.appendChild(emptyCartEl);
+                return;
+            }
+
+            cart.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'cart-item';
+                div.innerHTML = `
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=200" alt="${item.name}" class="cart-item-img">
+                    <div class="cart-item-info">
+                        <h4>${item.name}</h4>
+                        <p>SKU: AG-${item.id.toString().padStart(3, '0')}</p>
+                        <div class="cart-item-qty">
+                            <div class="qty-btn" onclick="updateQty('${item.id}', -1)">-</div>
+                            <div class="qty-val">${item.qty}</div>
+                            <div class="qty-btn" onclick="updateQty('${item.id}', 1)">+</div>
+                        </div>
+                    </div>
+                    <div class="cart-item-price">£${(item.price * item.qty).toFixed(2)}</div>
+                `;
+                cartItemsEl.appendChild(div);
+            });
+        }
+
+        // --- EVENT LISTENERS ---
+        document.querySelectorAll('.add-to-cart').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const card = e.target.closest('.product-card');
+                const id = card.dataset.id;
+                const name = card.dataset.name;
+                const price = card.dataset.price;
+                addToCart(id, name, price);
+            });
+        });
+
+        cartBtn.addEventListener('click', () => {
+            cartDrawer.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        function closeCart() {
+            cartDrawer.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        cartClose.addEventListener('click', closeCart);
+        overlay.addEventListener('click', closeCart);
+
+        // Mobile Menu
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            });
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Hero Load Animation
+        window.addEventListener('load', () => {
+            document.querySelector('.hero').classList.add('loaded');
+        });
+
+        // Intersection Observer for Reveal Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Form Handling
+        document.getElementById('tradeForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            showToast('Enquiry submitted successfully. We will be in touch.');
+            e.target.reset();
+        });
+
+    </script>
+</body>
+</html>
+Displaying index.html. 
