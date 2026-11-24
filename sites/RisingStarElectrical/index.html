@@ -1,0 +1,2225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rising Star Electrical & Co. — Electrical Contracting, Mumbai</title>
+<meta name="description" content="Rising Star Electrical & Co. — electrical contracting, installation and maintenance for residential, commercial and industrial clients across Mumbai, Maharashtra." />
+<meta name="keywords" content="electrical contractor Mumbai, LT HT electrical works, industrial electrical contractor, commercial electrical services Mumbai" />
+<meta name="geo.region" content="IN-MH" />
+<meta name="geo.placename" content="Mumbai" />
+<meta property="og:title" content="Rising Star Electrical & Co. — Mumbai" />
+<meta property="og:description" content="Reliable electrical solutions. Built on expertise and safety." />
+<meta property="og:locale" content="en_IN" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2318334D'/%3E%3Cpath d='M36 10L18 36h12l-4 18 18-26H32l4-18z' fill='%23E9AE45'/%3E%3C/svg%3E" />
+
+<style>
+  /* ============ RESET & TOKENS ============ */
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  :root{
+    --navy:#18334D;
+    --navy-deep:#0E2236;
+    --steel:#477A9B;
+    --steel-soft:#7A9AB3;
+    --amber:#E9AE45;
+    --amber-soft:#F4D48A;
+    --bg:#FAFBFD;
+    --alt:#EFF4F7;
+    --ink:#293541;
+    --muted:#6B7A8A;
+    --line:#E1E8EE;
+    --line-soft:#EEF2F5;
+    --white:#FFFFFF;
+
+    --sans:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+    --serif:'Instrument Serif',Georgia,serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+
+    --ease:cubic-bezier(.22,1,.36,1);
+    --ease-out:cubic-bezier(.16,1,.3,1);
+    --max:1360px;
+  }
+
+  body{
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.55;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    font-weight:400;
+  }
+
+  /* Grain texture overlay */
+  body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:9999;
+    opacity:.035;
+    mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  ul{list-style:none}
+
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+  @media(max-width:640px){.wrap{padding:0 20px}}
+
+  /* ============ TYPOGRAPHY ============ */
+  .display{
+    font-family:var(--sans);
+    font-weight:700;
+    letter-spacing:-.035em;
+    line-height:.95;
+    color:var(--navy);
+  }
+  .serif-i{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+  .mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-family:var(--mono);
+    font-size:.72rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--navy);
+    font-weight:500;
+  }
+  .eyebrow::before{
+    content:'';
+    width:28px;height:1px;
+    background:var(--amber);
+  }
+
+  /* ============ NAV ============ */
+  .nav{
+    position:fixed;top:0;left:0;right:0;
+    z-index:100;
+    padding:22px 0;
+    transition:all .4s var(--ease);
+  }
+  .nav.scrolled{
+    padding:14px 0;
+    background:rgba(250,251,253,.82);
+    backdrop-filter:blur(20px) saturate(180%);
+    -webkit-backdrop-filter:blur(20px) saturate(180%);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+  }
+  .logo{
+    display:flex;align-items:center;gap:12px;
+    font-weight:700;font-size:.95rem;
+    color:var(--navy);
+    letter-spacing:-.01em;
+  }
+  .logo-mark{
+    width:36px;height:36px;
+    background:var(--navy);
+    border-radius:9px;
+    display:grid;place-items:center;
+    position:relative;
+  }
+  .logo-mark::after{
+    content:'';
+    position:absolute;inset:-3px;
+    border-radius:12px;
+    border:1px solid var(--amber);
+    opacity:0;
+    transition:opacity .4s var(--ease);
+  }
+  .logo:hover .logo-mark::after{opacity:1}
+  .logo-mark svg{width:18px;height:18px}
+  .logo small{
+    display:block;
+    font-family:var(--mono);
+    font-size:.62rem;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:500;
+    margin-top:1px;
+  }
+
+  .nav-links{
+    display:flex;
+    align-items:center;
+    gap:38px;
+  }
+  .nav-links a{
+    font-size:.88rem;
+    font-weight:500;
+    color:var(--ink);
+    position:relative;
+    transition:color .3s var(--ease);
+  }
+  .nav-links a::after{
+    content:'';
+    position:absolute;
+    left:0;bottom:-4px;
+    width:0;height:1px;
+    background:var(--amber);
+    transition:width .4s var(--ease);
+  }
+  .nav-links a:hover{color:var(--navy)}
+  .nav-links a:hover::after{width:100%}
+
+  .nav-cta{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 22px;
+    background:var(--navy);
+    color:var(--white);
+    border-radius:100px;
+    font-size:.84rem;
+    font-weight:500;
+    transition:all .3s var(--ease);
+  }
+  .nav-cta:hover{background:var(--amber);color:var(--navy)}
+  .nav-cta svg{width:13px;height:13px;transition:transform .3s var(--ease)}
+  .nav-cta:hover svg{transform:translate(2px,-2px)}
+
+  .nav-toggle{display:none;width:40px;height:40px;position:relative}
+  .nav-toggle span{
+    position:absolute;left:8px;
+    width:24px;height:1.5px;
+    background:var(--navy);
+    transition:all .3s var(--ease);
+  }
+  .nav-toggle span:nth-child(1){top:14px}
+  .nav-toggle span:nth-child(2){top:22px;width:16px;left:16px}
+  .nav-toggle.open span:nth-child(1){top:19px;transform:rotate(45deg)}
+  .nav-toggle.open span:nth-child(2){top:19px;transform:rotate(-45deg);width:24px;left:8px}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    padding:140px 0 60px;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    overflow:hidden;
+  }
+  .hero-meta{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:60px;
+    padding-bottom:24px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-meta-left{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+  }
+  .hero-meta-right{
+    text-align:right;
+    font-family:var(--mono);
+    font-size:.72rem;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--muted);
+    line-height:1.8;
+  }
+
+  .hero-headline{
+    font-size:clamp(3rem,9.5vw,9.5rem);
+    font-weight:700;
+    letter-spacing:-.045em;
+    line-height:.88;
+    color:var(--navy);
+    margin-bottom:40px;
+  }
+  .hero-headline .line{display:block;overflow:hidden}
+  .hero-headline .line span{
+    display:inline-block;
+    animation:rise 1.1s var(--ease-out) both;
+  }
+  .hero-headline .line:nth-child(2) span{animation-delay:.15s}
+  .hero-headline .line:nth-child(3) span{animation-delay:.3s}
+  @keyframes rise{from{transform:translateY(110%)}to{transform:translateY(0)}}
+
+  .hero-headline .accent{
+    color:var(--amber);
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    letter-spacing:-.02em;
+  }
+
+  .hero-bottom{
+    display:grid;
+    grid-template-columns:1fr 1fr auto;
+    gap:60px;
+    align-items:end;
+    padding-top:40px;
+    border-top:1px solid var(--line);
+  }
+  .hero-desc{
+    font-size:1.05rem;
+    color:var(--muted);
+    max-width:420px;
+    line-height:1.65;
+  }
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:16px 28px;
+    border-radius:100px;
+    font-size:.9rem;
+    font-weight:500;
+    transition:all .35s var(--ease);
+    position:relative;
+    overflow:hidden;
+  }
+  .btn-dark{background:var(--navy);color:var(--white)}
+  .btn-dark:hover{background:var(--amber);color:var(--navy)}
+  .btn-ghost{
+    background:transparent;
+    color:var(--navy);
+    border:1px solid var(--line);
+  }
+  .btn-ghost:hover{border-color:var(--navy);background:var(--navy);color:var(--white)}
+  .btn svg{width:14px;height:14px;transition:transform .3s var(--ease)}
+  .btn:hover svg{transform:translate(3px,-3px)}
+
+  .hero-scroll{
+    font-family:var(--mono);
+    font-size:.7rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--muted);
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
+    display:flex;align-items:center;gap:14px;
+  }
+  .hero-scroll::after{
+    content:'';
+    width:1px;height:60px;
+    background:linear-gradient(to bottom,var(--amber),transparent);
+    animation:scrollPulse 2.4s ease-in-out infinite;
+  }
+  @keyframes scrollPulse{
+    0%,100%{opacity:.3;transform:scaleY(.5);transform-origin:bottom}
+    50%{opacity:1;transform:scaleY(1)}
+  }
+
+  /* Floating image composition */
+  .hero-visual{
+    position:absolute;
+    right:32px;
+    top:50%;
+    transform:translateY(-50%);
+    width:380px;
+    pointer-events:none;
+    z-index:1;
+  }
+  .hero-img-main{
+    width:100%;
+    aspect-ratio:3/4;
+    border-radius:8px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:0 30px 80px -20px rgba(24,51,77,.3);
+  }
+  .hero-img-main img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.02)}
+  .hero-img-tag{
+    position:absolute;
+    bottom:20px;left:20px;right:20px;
+    padding:16px 18px;
+    background:rgba(250,251,253,.94);
+    backdrop-filter:blur(10px);
+    border-radius:6px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    font-size:.82rem;
+    color:var(--navy);
+  }
+  .hero-img-tag .dot{
+    width:8px;height:8px;
+    background:var(--amber);
+    border-radius:50%;
+    box-shadow:0 0 0 4px rgba(233,174,69,.2);
+    animation:pulseDot 2s ease-in-out infinite;
+  }
+  @keyframes pulseDot{
+    0%,100%{box-shadow:0 0 0 4px rgba(233,174,69,.2)}
+    50%{box-shadow:0 0 0 8px rgba(233,174,69,0)}
+  }
+  .hero-img-tag strong{font-weight:600;display:block}
+  .hero-img-tag small{display:block;font-family:var(--mono);font-size:.68rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
+
+  .hero-sticker{
+    position:absolute;
+    top:-30px;left:-60px;
+    width:140px;height:140px;
+    background:var(--amber);
+    border-radius:50%;
+    display:grid;place-items:center;
+    color:var(--navy);
+    text-align:center;
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:1.1rem;
+    line-height:1.1;
+    box-shadow:0 20px 40px -10px rgba(233,174,69,.4);
+    animation:rotate 20s linear infinite;
+  }
+  @keyframes rotate{to{transform:rotate(360deg)}}
+  .hero-sticker-inner{
+    animation:counterRotate 20s linear infinite;
+  }
+  @keyframes counterRotate{to{transform:rotate(-360deg)}}
+
+  /* ============ MARQUEE ============ */
+  .marquee{
+    padding:28px 0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+    background:var(--bg);
+  }
+  .marquee-track{
+    display:flex;
+    gap:60px;
+    animation:marquee 40s linear infinite;
+    white-space:nowrap;
+  }
+  .marquee-item{
+    display:inline-flex;
+    align-items:center;
+    gap:60px;
+    font-size:1.4rem;
+    font-weight:500;
+    color:var(--navy);
+    letter-spacing:-.01em;
+  }
+  .marquee-item .sep{
+    width:6px;height:6px;
+    background:var(--amber);
+    border-radius:50%;
+    flex-shrink:0;
+  }
+  @keyframes marquee{to{transform:translateX(-50%)}}
+
+  /* ============ SECTION BASE ============ */
+  section{padding:140px 0;position:relative}
+  @media(max-width:768px){section{padding:90px 0}}
+
+  .section-label{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:80px;
+    padding-bottom:24px;
+    border-bottom:1px solid var(--line);
+  }
+  .section-label .num{
+    font-family:var(--mono);
+    font-size:.72rem;
+    letter-spacing:.2em;
+    color:var(--muted);
+  }
+
+  /* ============ ABOUT / MANIFESTO ============ */
+  .about{background:var(--bg)}
+  .about-grid{
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:80px;
+    align-items:start;
+  }
+  .about-sticky{position:sticky;top:120px}
+  .about-visual{
+    position:relative;
+    aspect-ratio:4/5;
+    border-radius:8px;
+    overflow:hidden;
+    margin-bottom:24px;
+  }
+  .about-visual img{width:100%;height:100%;object-fit:cover}
+  .about-visual::after{
+    content:'';
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 60%,rgba(24,51,77,.3));
+  }
+  .about-visual-caption{
+    position:absolute;
+    bottom:20px;left:20px;right:20px;
+    color:var(--white);
+    font-family:var(--mono);
+    font-size:.7rem;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    z-index:2;
+    display:flex;
+    justify-content:space-between;
+  }
+
+  .about-content h2{
+    font-size:clamp(2rem,4.5vw,3.8rem);
+    font-weight:700;
+    letter-spacing:-.035em;
+    line-height:1.02;
+    color:var(--navy);
+    margin-bottom:40px;
+  }
+  .about-content h2 .serif-i{
+    color:var(--amber);
+    display:inline-block;
+  }
+  .about-paragraphs{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+    margin-bottom:50px;
+  }
+  .about-paragraphs p{
+    font-size:1.05rem;
+    color:var(--ink);
+    line-height:1.7;
+    max-width:620px;
+  }
+  .about-paragraphs p.lead{
+    font-size:1.2rem;
+    color:var(--navy);
+    font-weight:400;
+  }
+
+  .about-pillars{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+  }
+  .pillar{
+    background:var(--bg);
+    padding:28px 24px;
+    transition:background .3s var(--ease);
+  }
+  .pillar:hover{background:var(--white)}
+  .pillar-num{
+    font-family:var(--mono);
+    font-size:.7rem;
+    letter-spacing:.15em;
+    color:var(--amber);
+    margin-bottom:14px;
+  }
+  .pillar h4{
+    font-size:1rem;
+    font-weight:600;
+    color:var(--navy);
+    margin-bottom:6px;
+    letter-spacing:-.01em;
+  }
+  .pillar p{
+    font-size:.85rem;
+    color:var(--muted);
+    line-height:1.55;
+  }
+
+  /* ============ SERVICES — BENTO ============ */
+  .services{background:var(--navy);color:var(--white);overflow:hidden}
+  .services .eyebrow{color:var(--amber-soft)}
+  .services .section-label{border-bottom-color:rgba(255,255,255,.1)}
+  .services .section-label .num{color:rgba(255,255,255,.4)}
+  .services-head{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:end;
+    margin-bottom:60px;
+  }
+  .services-head h2{
+    font-size:clamp(2.2rem,5.5vw,4.5rem);
+    font-weight:700;
+    letter-spacing:-.04em;
+    line-height:.95;
+    color:var(--white);
+  }
+  .services-head h2 .serif-i{color:var(--amber)}
+  .services-head p{
+    color:rgba(255,255,255,.65);
+    font-size:1rem;
+    line-height:1.7;
+    max-width:440px;
+  }
+
+  .bento{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    grid-auto-rows:minmax(220px,auto);
+    gap:16px;
+  }
+  .bento-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:14px;
+    padding:32px;
+    position:relative;
+    overflow:hidden;
+    transition:all .5s var(--ease);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .bento-card:hover{
+    background:rgba(255,255,255,.07);
+    border-color:rgba(233,174,69,.3);
+    transform:translateY(-4px);
+  }
+  .bento-card.large{grid-column:span 3;grid-row:span 2}
+  .bento-card.wide{grid-column:span 3}
+  .bento-card.tall{grid-column:span 2;grid-row:span 2}
+  .bento-card.half{grid-column:span 3}
+
+  .bento-card .card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:30px;
+  }
+  .bento-card .card-num{
+    font-family:var(--mono);
+    font-size:.7rem;
+    letter-spacing:.15em;
+    color:var(--amber);
+  }
+  .bento-card .card-icon{
+    width:44px;height:44px;
+    border-radius:10px;
+    background:rgba(233,174,69,.1);
+    color:var(--amber);
+    display:grid;place-items:center;
+    transition:all .4s var(--ease);
+  }
+  .bento-card:hover .card-icon{
+    background:var(--amber);
+    color:var(--navy);
+    transform:rotate(-6deg);
+  }
+  .bento-card .card-icon svg{width:22px;height:22px}
+
+  .bento-card h3{
+    font-size:1.5rem;
+    font-weight:600;
+    color:var(--white);
+    letter-spacing:-.02em;
+    line-height:1.15;
+    margin-bottom:12px;
+  }
+  .bento-card.large h3{font-size:2.2rem}
+  .bento-card p{
+    font-size:.9rem;
+    color:rgba(255,255,255,.6);
+    line-height:1.6;
+    margin-bottom:20px;
+  }
+  .bento-card.large p{font-size:1rem;max-width:420px}
+
+  .bento-list{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+  .bento-list li{
+    font-size:.82rem;
+    color:rgba(255,255,255,.55);
+    padding-left:18px;
+    position:relative;
+  }
+  .bento-list li::before{
+    content:'';
+    position:absolute;
+    left:0;top:9px;
+    width:8px;height:1px;
+    background:var(--amber);
+  }
+
+  /* Image bento card */
+  .bento-card.has-img{
+    padding:0;
+    background-size:cover;
+    background-position:center;
+  }
+  .bento-card.has-img::before{
+    content:'';
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(14,34,54,.2) 0%,rgba(14,34,54,.85) 100%);
+  }
+  .bento-card.has-img > *{position:relative;z-index:1}
+  .bento-card.has-img .card-content{
+    padding:32px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    height:100%;
+  }
+  .bento-card.has-img h3{color:var(--white)}
+  .bento-card.has-img p{color:rgba(255,255,255,.75)}
+
+  /* ============ WHY — LARGE LIST ============ */
+  .why{background:var(--bg)}
+  .why-list{
+    display:flex;
+    flex-direction:column;
+  }
+  .why-item{
+    display:grid;
+    grid-template-columns:80px 1fr 2fr auto;
+    gap:40px;
+    align-items:center;
+    padding:36px 0;
+    border-top:1px solid var(--line);
+    transition:all .4s var(--ease);
+    cursor:default;
+  }
+  .why-item:last-child{border-bottom:1px solid var(--line)}
+  .why-item:hover{
+    padding-left:20px;
+    background:linear-gradient(90deg,rgba(233,174,69,.04),transparent);
+  }
+  .why-item:hover .why-num{color:var(--amber)}
+  .why-num{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:2.2rem;
+    color:var(--navy);
+    transition:color .3s var(--ease);
+    line-height:1;
+  }
+  .why-title{
+    font-size:1.4rem;
+    font-weight:600;
+    color:var(--navy);
+    letter-spacing:-.02em;
+  }
+  .why-desc{
+    font-size:.95rem;
+    color:var(--muted);
+    line-height:1.6;
+    max-width:520px;
+  }
+  .why-arrow{
+    width:40px;height:40px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    display:grid;place-items:center;
+    color:var(--muted);
+    transition:all .4s var(--ease);
+  }
+  .why-item:hover .why-arrow{
+    background:var(--navy);
+    color:var(--white);
+    border-color:var(--navy);
+    transform:rotate(-45deg);
+  }
+  .why-arrow svg{width:14px;height:14px}
+
+  /* ============ PORTFOLIO — HORIZONTAL SCROLL ============ */
+  .portfolio{background:var(--alt);overflow:hidden}
+  .portfolio-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:60px;
+    flex-wrap:wrap;
+    gap:30px;
+  }
+  .portfolio-head h2{
+    font-size:clamp(2.2rem,5vw,4rem);
+    font-weight:700;
+    letter-spacing:-.04em;
+    line-height:.95;
+    color:var(--navy);
+    max-width:700px;
+  }
+  .portfolio-head h2 .serif-i{color:var(--amber)}
+  .portfolio-controls{
+    display:flex;
+    gap:10px;
+  }
+  .scroll-btn{
+    width:48px;height:48px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    background:var(--white);
+    color:var(--navy);
+    display:grid;place-items:center;
+    transition:all .3s var(--ease);
+  }
+  .scroll-btn:hover{background:var(--navy);color:var(--white);border-color:var(--navy)}
+  .scroll-btn svg{width:16px;height:16px}
+
+  .portfolio-track{
+    display:flex;
+    gap:24px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+    padding-bottom:20px;
+    cursor:grab;
+  }
+  .portfolio-track::-webkit-scrollbar{display:none}
+  .portfolio-track.dragging{cursor:grabbing}
+
+  .project{
+    flex:0 0 420px;
+    scroll-snap-align:start;
+    background:var(--white);
+    border-radius:12px;
+    overflow:hidden;
+    transition:all .5s var(--ease);
+  }
+  .project:hover{transform:translateY(-6px);box-shadow:0 30px 60px -20px rgba(24,51,77,.15)}
+  .project-img{
+    aspect-ratio:4/3;
+    overflow:hidden;
+    position:relative;
+  }
+  .project-img img{
+    width:100%;height:100%;
+    object-fit:cover;
+    transition:transform .8s var(--ease);
+  }
+  .project:hover .project-img img{transform:scale(1.05)}
+  .project-tag{
+    position:absolute;
+    top:16px;left:16px;
+    padding:6px 12px;
+    background:rgba(250,251,253,.92);
+    backdrop-filter:blur(8px);
+    border-radius:100px;
+    font-family:var(--mono);
+    font-size:.66rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--navy);
+    font-weight:500;
+  }
+  .project-body{padding:26px 28px 30px}
+  .project-loc{
+    font-family:var(--mono);
+    font-size:.7rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--steel);
+    margin-bottom:10px;
+    display:flex;align-items:center;gap:6px;
+  }
+  .project-loc::before{
+    content:'';width:4px;height:4px;background:var(--amber);border-radius:50%;
+  }
+  .project h3{
+    font-size:1.25rem;
+    font-weight:600;
+    color:var(--navy);
+    letter-spacing:-.015em;
+    margin-bottom:10px;
+    line-height:1.25;
+  }
+  .project p{
+    font-size:.88rem;
+    color:var(--muted);
+    line-height:1.6;
+  }
+
+  /* ============ PROCESS — VERTICAL ============ */
+  .process{background:var(--bg)}
+  .process-grid{
+    display:grid;
+    grid-template-columns:1fr 1.5fr;
+    gap:80px;
+  }
+  .process-sticky{position:sticky;top:120px;align-self:start}
+  .process-sticky h2{
+    font-size:clamp(2rem,4vw,3.4rem);
+    font-weight:700;
+    letter-spacing:-.035em;
+    line-height:1;
+    color:var(--navy);
+    margin-bottom:24px;
+  }
+  .process-sticky h2 .serif-i{color:var(--amber)}
+  .process-sticky p{
+    color:var(--muted);
+    font-size:1rem;
+    line-height:1.7;
+    margin-bottom:30px;
+    max-width:380px;
+  }
+
+  .process-steps{
+    display:flex;
+    flex-direction:column;
+    position:relative;
+  }
+  .process-steps::before{
+    content:'';
+    position:absolute;
+    left:34px;top:20px;bottom:20px;
+    width:1px;
+    background:linear-gradient(to bottom,var(--amber),var(--line));
+  }
+  .step{
+    display:grid;
+    grid-template-columns:70px 1fr;
+    gap:30px;
+    padding:28px 0;
+    position:relative;
+  }
+  .step-num{
+    width:70px;height:70px;
+    border-radius:50%;
+    background:var(--white);
+    border:1px solid var(--line);
+    display:grid;place-items:center;
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:1.8rem;
+    color:var(--navy);
+    position:relative;
+    z-index:2;
+    transition:all .4s var(--ease);
+  }
+  .step:hover .step-num{
+    background:var(--amber);
+    color:var(--navy);
+    border-color:var(--amber);
+    transform:scale(1.08);
+  }
+  .step-content{padding-top:14px}
+  .step-content h4{
+    font-size:1.2rem;
+    font-weight:600;
+    color:var(--navy);
+    letter-spacing:-.015em;
+    margin-bottom:8px;
+  }
+  .step-content p{
+    font-size:.92rem;
+    color:var(--muted);
+    line-height:1.6;
+    max-width:480px;
+  }
+
+  /* ============ SAFETY — SPLIT ============ */
+  .safety{
+    background:var(--navy);
+    color:var(--white);
+    overflow:hidden;
+    position:relative;
+  }
+  .safety::before{
+    content:'';
+    position:absolute;
+    top:-20%;right:-10%;
+    width:60%;height:140%;
+    background:radial-gradient(circle,rgba(233,174,69,.08),transparent 60%);
+    pointer-events:none;
+  }
+  .safety-grid{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:80px;
+    align-items:center;
+    position:relative;
+    z-index:1;
+  }
+  .safety h2{
+    font-size:clamp(2.2rem,5vw,4rem);
+    font-weight:700;
+    letter-spacing:-.04em;
+    line-height:.95;
+    color:var(--white);
+    margin-bottom:30px;
+  }
+  .safety h2 .serif-i{color:var(--amber)}
+  .safety > .wrap > .safety-grid > .safety-content > .eyebrow{color:var(--amber-soft)}
+  .safety-lead{
+    font-size:1.1rem;
+    color:rgba(255,255,255,.7);
+    line-height:1.7;
+    margin-bottom:40px;
+    max-width:500px;
+  }
+
+  .safety-points{display:flex;flex-direction:column;gap:2px}
+  .safety-point{
+    display:grid;
+    grid-template-columns:50px 1fr;
+    gap:20px;
+    padding:24px 0;
+    border-top:1px solid rgba(255,255,255,.08);
+    align-items:start;
+    transition:all .3s var(--ease);
+  }
+  .safety-point:last-child{border-bottom:1px solid rgba(255,255,255,.08)}
+  .safety-point:hover{padding-left:10px}
+  .safety-point-num{
+    font-family:var(--mono);
+    font-size:.72rem;
+    letter-spacing:.15em;
+    color:var(--amber);
+    padding-top:4px;
+  }
+  .safety-point h4{
+    font-size:1.05rem;
+    font-weight:600;
+    color:var(--white);
+    margin-bottom:6px;
+    letter-spacing:-.01em;
+  }
+  .safety-point p{
+    font-size:.88rem;
+    color:rgba(255,255,255,.55);
+    line-height:1.6;
+  }
+
+  .safety-visual{
+    position:relative;
+    aspect-ratio:4/5;
+    border-radius:12px;
+    overflow:hidden;
+  }
+  .safety-visual img{width:100%;height:100%;object-fit:cover}
+  .safety-visual::after{
+    content:'';
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 40%,rgba(14,34,54,.6));
+  }
+  .safety-stat{
+    position:absolute;
+    bottom:24px;left:24px;right:24px;
+    padding:22px 24px;
+    background:rgba(250,251,253,.95);
+    backdrop-filter:blur(10px);
+    border-radius:8px;
+    color:var(--navy);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:2;
+  }
+  .safety-stat strong{
+    display:block;
+    font-size:1.6rem;
+    font-weight:700;
+    letter-spacing:-.02em;
+    line-height:1;
+  }
+  .safety-stat small{
+    display:block;
+    font-family:var(--mono);
+    font-size:.68rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-top:4px;
+  }
+  .safety-stat-icon{
+    width:44px;height:44px;
+    border-radius:10px;
+    background:var(--amber);
+    color:var(--navy);
+    display:grid;place-items:center;
+  }
+  .safety-stat-icon svg{width:22px;height:22px}
+
+  /* ============ CONTACT ============ */
+  .contact{background:var(--bg);padding-bottom:80px}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:60px;
+    align-items:start;
+  }
+  .contact-info h2{
+    font-size:clamp(2rem,4.5vw,3.6rem);
+    font-weight:700;
+    letter-spacing:-.035em;
+    line-height:1;
+    color:var(--navy);
+    margin-bottom:24px;
+  }
+  .contact-info h2 .serif-i{color:var(--amber)}
+  .contact-info > p{
+    color:var(--muted);
+    font-size:1rem;
+    line-height:1.7;
+    margin-bottom:40px;
+    max-width:400px;
+  }
+
+  .contact-details{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+    padding-top:30px;
+    border-top:1px solid var(--line);
+    margin-bottom:40px;
+  }
+  .contact-row{
+    display:grid;
+    grid-template-columns:100px 1fr;
+    gap:20px;
+    align-items:baseline;
+  }
+  .contact-row-label{
+    font-family:var(--mono);
+    font-size:.7rem;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .contact-row-value{
+    font-size:1rem;
+    color:var(--navy);
+    font-weight:500;
+  }
+  .contact-row-value a{transition:color .3s var(--ease)}
+  .contact-row-value a:hover{color:var(--amber)}
+
+  .contact-socials{
+    display:flex;
+    gap:10px;
+  }
+  .contact-socials a{
+    width:42px;height:42px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    display:grid;place-items:center;
+    color:var(--navy);
+    transition:all .3s var(--ease);
+  }
+  .contact-socials a:hover{
+    background:var(--navy);
+    color:var(--white);
+    border-color:var(--navy);
+    transform:translateY(-2px);
+  }
+  .contact-socials svg{width:16px;height:16px}
+
+  .contact-form{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:44px;
+    position:relative;
+  }
+  .contact-form::before{
+    content:'ENQ/01';
+    position:absolute;
+    top:20px;right:24px;
+    font-family:var(--mono);
+    font-size:.68rem;
+    letter-spacing:.15em;
+    color:var(--muted);
+  }
+  .contact-form h3{
+    font-size:1.5rem;
+    font-weight:600;
+    color:var(--navy);
+    letter-spacing:-.02em;
+    margin-bottom:6px;
+  }
+  .contact-form > p{
+    color:var(--muted);
+    font-size:.9rem;
+    margin-bottom:32px;
+  }
+
+  .form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+  .field{display:flex;flex-direction:column;gap:8px}
+  .field.full{grid-column:1/-1}
+  .field label{
+    font-family:var(--mono);
+    font-size:.7rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--muted);
+    font-weight:500;
+  }
+  .field input,.field select,.field textarea{
+    padding:14px 0;
+    border:none;
+    border-bottom:1px solid var(--line);
+    background:transparent;
+    font-family:var(--sans);
+    font-size:.95rem;
+    color:var(--navy);
+    transition:border-color .3s var(--ease);
+    border-radius:0;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none;
+    border-bottom-color:var(--amber);
+  }
+  .field textarea{resize:vertical;min-height:90px;font-family:var(--sans)}
+  .field select{
+    appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B7A8A' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 0 center;
+    padding-right:20px;
+  }
+
+  .form-submit{
+    margin-top:32px;
+    width:100%;
+    justify-content:center;
+    padding:18px;
+    font-size:.95rem;
+  }
+  .form-message{
+    margin-top:20px;
+    padding:16px 20px;
+    border-radius:8px;
+    font-size:.88rem;
+    display:none;
+  }
+  .form-message.success{
+    display:block;
+    background:rgba(233,174,69,.1);
+    color:var(--navy);
+    border:1px solid rgba(233,174,69,.3);
+  }
+  .form-message.error{
+    display:block;
+    background:rgba(220,53,69,.06);
+    color:#8b2a33;
+    border:1px solid rgba(220,53,69,.15);
+  }
+
+  /* ============ FOOTER ============ */
+  .footer{
+    background:var(--navy-deep);
+    color:rgba(255,255,255,.6);
+    padding:80px 0 30px;
+  }
+  .footer-top{
+    padding-bottom:60px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .footer-wordmark{
+    font-size:clamp(3rem,12vw,11rem);
+    font-weight:700;
+    letter-spacing:-.05em;
+    line-height:.85;
+    color:var(--white);
+    margin-bottom:40px;
+    overflow:hidden;
+  }
+  .footer-wordmark .serif-i{color:var(--amber)}
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    gap:50px;
+    padding:50px 0;
+  }
+  .footer-brand p{
+    font-size:.9rem;
+    line-height:1.7;
+    max-width:320px;
+    margin-top:20px;
+  }
+  .footer h5{
+    font-family:var(--mono);
+    font-size:.7rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--amber);
+    margin-bottom:22px;
+    font-weight:500;
+  }
+  .footer-links li{margin-bottom:12px}
+  .footer-links a{
+    font-size:.88rem;
+    color:rgba(255,255,255,.6);
+    transition:all .3s var(--ease);
+  }
+  .footer-links a:hover{color:var(--white);padding-left:4px}
+
+  .footer-bottom{
+    padding-top:30px;
+    border-top:1px solid rgba(255,255,255,.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+    font-family:var(--mono);
+    font-size:.72rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.4);
+  }
+  .footer-legal{display:flex;gap:24px}
+  .footer-legal a:hover{color:var(--amber)}
+
+  /* ============ WHATSAPP ============ */
+  .wa{
+    position:fixed;
+    bottom:28px;right:28px;
+    width:56px;height:56px;
+    border-radius:50%;
+    background:var(--navy);
+    color:var(--white);
+    display:grid;place-items:center;
+    z-index:90;
+    box-shadow:0 12px 30px -8px rgba(24,51,77,.4);
+    transition:all .3s var(--ease);
+  }
+  .wa:hover{background:var(--amber);color:var(--navy);transform:scale(1.06)}
+  .wa svg{width:26px;height:26px}
+  .wa::before{
+    content:'';
+    position:absolute;inset:-6px;
+    border-radius:50%;
+    border:1px solid var(--amber);
+    opacity:.4;
+    animation:waPulse 2.4s ease-out infinite;
+  }
+  @keyframes waPulse{
+    0%{transform:scale(.8);opacity:.6}
+    100%{transform:scale(1.4);opacity:0}
+  }
+
+  /* ============ REVEAL ============ */
+  .reveal{
+    opacity:0;
+    transform:translateY(30px);
+    transition:opacity .9s var(--ease-out),transform .9s var(--ease-out);
+  }
+  .reveal.in{opacity:1;transform:none}
+
+  /* ============ RESPONSIVE ============ */
+  @media(max-width:1100px){
+    .hero-visual{display:none}
+    .about-grid,.process-grid,.safety-grid,.contact-grid{grid-template-columns:1fr;gap:50px}
+    .about-sticky,.process-sticky{position:static}
+    .bento{grid-template-columns:repeat(4,1fr)}
+    .bento-card.large{grid-column:span 4;grid-row:span 1}
+    .bento-card.wide,.bento-card.half{grid-column:span 4}
+    .bento-card.tall{grid-column:span 2;grid-row:span 1}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+    .services-head{grid-template-columns:1fr;gap:30px}
+  }
+  @media(max-width:768px){
+    .nav-links{
+      position:fixed;
+      top:0;right:0;
+      width:min(320px,85vw);
+      height:100vh;
+      background:var(--white);
+      flex-direction:column;
+      align-items:flex-start;
+      padding:100px 32px 40px;
+      gap:0;
+      transform:translateX(100%);
+      transition:transform .5s var(--ease);
+      box-shadow:-20px 0 60px rgba(24,51,77,.1);
+    }
+    .nav-links.open{transform:translateX(0)}
+    .nav-links a{padding:18px 0;border-bottom:1px solid var(--line-soft);width:100%;font-size:1rem}
+    .nav-links a::after{display:none}
+    .nav-links .nav-cta{margin-top:20px;width:100%;justify-content:center}
+    .nav-toggle{display:block}
+
+    .hero{padding:120px 0 40px;min-height:auto}
+    .hero-meta{flex-direction:column;align-items:flex-start;gap:20px}
+    .hero-meta-right{text-align:left}
+    .hero-bottom{grid-template-columns:1fr;gap:30px}
+    .hero-scroll{display:none}
+
+    .bento{grid-template-columns:1fr}
+    .bento-card.large,.bento-card.wide,.bento-card.half,.bento-card.tall{grid-column:span 1;grid-row:auto}
+
+    .why-item{grid-template-columns:50px 1fr;gap:20px;padding:24px 0}
+    .why-desc,.why-arrow{display:none}
+
+    .project{flex:0 0 85vw}
+
+    .contact-row{grid-template-columns:1fr;gap:4px}
+    .contact-form{padding:28px 22px}
+    .form-grid{grid-template-columns:1fr}
+
+    .footer-grid{grid-template-columns:1fr;gap:36px}
+    .footer-bottom{flex-direction:column;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#home" class="logo" aria-label="Rising Star Electrical & Co.">
+      <span class="logo-mark">
+        <svg viewBox="0 0 64 64" fill="none"><path d="M36 10L18 36h12l-4 18 18-26H32l4-18z" fill="#E9AE45"/></svg>
+      </span>
+      <span>
+        Rising Star Electrical
+        <small>& Co. / Est. Mumbai</small>
+      </span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#safety">Safety</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Get a Quote
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+      </a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-meta">
+      <div class="hero-meta-left">
+        <span class="eyebrow">Electrical Contracting — Mumbai</span>
+        <span class="mono" style="margin-top:6px">Since operations began · MH / IN</span>
+      </div>
+      <div class="hero-meta-right">
+        Index / 01<br>
+        LT · HT · Industrial<br>
+        Residential · Commercial
+      </div>
+    </div>
+
+    <h1 class="hero-headline">
+      <span class="line"><span>Reliable</span></span>
+      <span class="line"><span>electrical work, <em class="serif-i accent">built</em></span></span>
+      <span class="line"><span>on <em class="serif-i accent">expertise</em> & safety.</span></span>
+    </h1>
+
+    <div class="hero-bottom">
+      <p class="hero-desc">Professional electrical contracting and installation solutions for residential, commercial and industrial requirements across Mumbai and surrounding regions.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-dark">Request Consultation
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        </a>
+        <a href="#services" class="btn btn-ghost">Explore Services</a>
+      </div>
+      <div class="hero-scroll">Scroll</div>
+    </div>
+  </div>
+
+  <!-- Floating visual composition -->
+  <div class="hero-visual">
+    <div class="hero-sticker">
+      <div class="hero-sticker-inner">
+        Safety<br>· First ·<br>Always
+      </div>
+    </div>
+    <div class="hero-img-main">
+      <img src="https://images.unsplash.com/photo-1565608087341-404b25492fee?auto=format&fit=crop&w=800&q=80" alt="Electrical engineer inspecting an industrial control panel" loading="eager" />
+      <div class="hero-img-tag">
+        <span class="dot"></span>
+        <div>
+          <strong>On-site execution</strong>
+          <small>Panel inspection · Mumbai</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item">
+      Industrial Electrical <span class="sep"></span>
+      LT Contracting <span class="sep"></span>
+      HT Contracting <span class="sep"></span>
+      Commercial Installation <span class="sep"></span>
+      Residential Wiring <span class="sep"></span>
+      Internal Electrification <span class="sep"></span>
+      External Electrification <span class="sep"></span>
+    </div>
+    <div class="marquee-item">
+      Industrial Electrical <span class="sep"></span>
+      LT Contracting <span class="sep"></span>
+      HT Contracting <span class="sep"></span>
+      Commercial Installation <span class="sep"></span>
+      Residential Wiring <span class="sep"></span>
+      Internal Electrification <span class="sep"></span>
+      External Electrification <span class="sep"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="section-label reveal">
+      <span class="eyebrow">01 / About</span>
+      <span class="num">— A Mumbai-based electrical contracting practice</span>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-sticky reveal">
+        <div class="about-visual">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Electrical technician at work on commercial wiring installation" loading="lazy" />
+          <div class="about-visual-caption">
+            <span>Field work</span>
+            <span>MH / IN</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content reveal">
+        <h2>A dependable electrical partner — <span class="serif-i">grounded</span> in careful execution.</h2>
+
+        <div class="about-paragraphs">
+          <p class="lead">Rising Star Electrical & Co. is an electrical contracting business based in Mumbai, Maharashtra, serving customers with a focused range of electrical installation and contracting requirements.</p>
+          <p>We work across residential, commercial and industrial settings — approaching every engagement with the same discipline: clear scoping, careful planning, quality workmanship and responsive communication.</p>
+          <p>From internal and external electrification to LT and HT contracting, our practice is built on practical, project-oriented execution rather than promises we cannot verify.</p>
+        </div>
+
+        <div class="about-pillars">
+          <div class="pillar">
+            <div class="pillar-num">/ 01</div>
+            <h4>Installation & Execution</h4>
+            <p>Disciplined on-site electrical work from planning through handover.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">/ 02</div>
+            <h4>Residential & Commercial</h4>
+            <p>Wiring, fixtures and electrification across varied building types.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">/ 03</div>
+            <h4>Industrial Electrical</h4>
+            <p>Project-specific execution for industrial facilities and infrastructure.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">/ 04</div>
+            <h4>LT & HT Contracting</h4>
+            <p>Low and high tension electrical contracting for appropriate applications.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES — BENTO ============ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-label reveal">
+      <span class="eyebrow">02 / Services</span>
+      <span class="num">— Six focused capabilities</span>
+    </div>
+
+    <div class="services-head reveal">
+      <h2>Electrical work, <span class="serif-i">organised</span> by scope.</h2>
+      <p>A focused range of electrical services designed to meet the practical requirements of residential, commercial and industrial clients — each delivered with the same standard of execution.</p>
+    </div>
+
+    <div class="bento">
+      <!-- Large featured card with image -->
+      <article class="bento-card large has-img reveal" style="background-image:url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80')">
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-num">/ 01</span>
+            <span class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 20h20M4 20V8l8-5 8 5v12M9 20v-6h6v6"/></svg>
+            </span>
+          </div>
+          <h3>Industrial Electrical Works</h3>
+          <p>Electrical installations and infrastructure for industrial facilities, executed with project-specific planning and discipline.</p>
+          <ul class="bento-list">
+            <li>Electrical installations for industrial facilities</li>
+            <li>Electrical infrastructure requirements</li>
+            <li>Industrial wiring and associated work</li>
+            <li>Project-specific electrical execution</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Tall card -->
+      <article class="bento-card tall reveal">
+        <div class="card-top">
+          <span class="card-num">/ 02</span>
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </span>
+        </div>
+        <div>
+          <h3>LT Electrical Works</h3>
+          <p>Low-tension electrical installations, distribution and wiring infrastructure.</p>
+        </div>
+        <ul class="bento-list">
+          <li>Low-tension electrical installations</li>
+          <li>Electrical distribution requirements</li>
+          <li>Wiring and associated infrastructure</li>
+          <li>Installation and maintenance</li>
+        </ul>
+      </article>
+
+      <!-- Half width -->
+      <article class="bento-card half reveal">
+        <div class="card-top">
+          <span class="card-num">/ 03</span>
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+          </span>
+        </div>
+        <div>
+          <h3>HT Electrical Works</h3>
+          <p>High-tension electrical contracting and project-specific installation work for appropriate applications.</p>
+        </div>
+        <ul class="bento-list">
+          <li>High-tension electrical contracting</li>
+          <li>Electrical infrastructure requirements</li>
+          <li>Project-specific installation work</li>
+        </ul>
+      </article>
+
+      <!-- Half width -->
+      <article class="bento-card half reveal">
+        <div class="card-top">
+          <span class="card-num">/ 04</span>
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+          </span>
+        </div>
+        <div>
+          <h3>Commercial Electrical Works</h3>
+          <p>Office and commercial electrical installations with attention to infrastructure and distribution needs.</p>
+        </div>
+        <ul class="bento-list">
+          <li>Office and commercial installations</li>
+          <li>Internal electrification</li>
+          <li>Electrical wiring and distribution</li>
+          <li>Electrical infrastructure improvements</li>
+        </ul>
+      </article>
+
+      <!-- Wide card with image -->
+      <article class="bento-card wide has-img reveal" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80')">
+        <div class="card-content">
+          <div class="card-top">
+            <span class="card-num">/ 05</span>
+            <span class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
+            </span>
+          </div>
+          <h3>Residential Electrical Works</h3>
+          <p>Residential wiring, electrification and fixture installations with troubleshooting and repair support.</p>
+        </div>
+      </article>
+
+      <!-- Wide card -->
+      <article class="bento-card wide reveal">
+        <div class="card-top">
+          <span class="card-num">/ 06</span>
+          <span class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>
+          </span>
+        </div>
+        <div>
+          <h3>Internal & External Electrification</h3>
+          <p>Complete building electrical installations covering internal wiring infrastructure and external electrical connections.</p>
+        </div>
+        <ul class="bento-list">
+          <li>Building electrical installations</li>
+          <li>Internal wiring infrastructure</li>
+          <li>External electrical installations</li>
+          <li>Electrical connections and associated work</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY — LARGE LIST ============ -->
+<section class="why">
+  <div class="wrap">
+    <div class="section-label reveal">
+      <span class="eyebrow">03 / Why us</span>
+      <span class="num">— What sets our work apart</span>
+    </div>
+
+    <div class="why-list">
+      <div class="why-item reveal">
+        <div class="why-num">i.</div>
+        <div class="why-title">Professional Electrical Execution</div>
+        <div class="why-desc">Careful planning and disciplined execution across every stage of an electrical project.</div>
+        <div class="why-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-num">ii.</div>
+        <div class="why-title">Residential, Commercial & Industrial</div>
+        <div class="why-desc">Versatile capability to handle electrical requirements across different environments and scales.</div>
+        <div class="why-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-num">iii.</div>
+        <div class="why-title">Attention to Electrical Safety</div>
+        <div class="why-desc">Safety-conscious practices are built into our workflow from site inspection to handover.</div>
+        <div class="why-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-num">iv.</div>
+        <div class="why-title">Practical Project-Oriented Solutions</div>
+        <div class="why-desc">We focus on practical, workable solutions aligned with actual site and client requirements.</div>
+        <div class="why-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-num">v.</div>
+        <div class="why-title">Focus on Quality Workmanship</div>
+        <div class="why-desc">Attention to detail and quality materials ensure installations that perform reliably over time.</div>
+        <div class="why-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="why-num">vi.</div>
+        <div class="why-title">Responsive Customer Communication</div>
+        <div class="why-desc">Clear, timely communication keeps clients informed and involved throughout the project.</div>
+        <div class="why-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO — HORIZONTAL ============ -->
+<section class="portfolio" id="projects">
+  <div class="wrap">
+    <div class="section-label reveal">
+      <span class="eyebrow">04 / Projects</span>
+      <span class="num">— Selected completed work</span>
+    </div>
+
+    <div class="portfolio-head reveal">
+      <h2>A record of work <span class="serif-i">delivered</span> across Mumbai.</h2>
+      <div class="portfolio-controls">
+        <button class="scroll-btn" id="scrollPrev" aria-label="Previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <button class="scroll-btn" id="scrollNext" aria-label="Next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="portfolio-track" id="portfolioTrack">
+      <article class="project">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80" alt="Industrial electrical panel installation" loading="lazy" />
+          <span class="project-tag">Industrial</span>
+        </div>
+        <div class="project-body">
+          <div class="project-loc">Mumbai, Maharashtra</div>
+          <h3>Industrial Panel Installation</h3>
+          <p>Electrical panel installation and industrial wiring for a manufacturing facility.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Commercial office electrical infrastructure" loading="lazy" />
+          <span class="project-tag">Commercial</span>
+        </div>
+        <div class="project-body">
+          <div class="project-loc">Mumbai, Maharashtra</div>
+          <h3>Commercial Office Electrification</h3>
+          <p>Internal electrification and wiring distribution for a commercial office space.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Residential home wiring installation" loading="lazy" />
+          <span class="project-tag">Residential</span>
+        </div>
+        <div class="project-body">
+          <div class="project-loc">Mumbai, Maharashtra</div>
+          <h3>Residential Wiring & Fixtures</h3>
+          <p>Complete residential wiring, lighting and electrical fixture installation.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=800&q=80" alt="Low tension electrical distribution board" loading="lazy" />
+          <span class="project-tag">LT Works</span>
+        </div>
+        <div class="project-body">
+          <div class="project-loc">Mumbai, Maharashtra</div>
+          <h3>LT Distribution System</h3>
+          <p>Low-tension electrical distribution installation and wiring infrastructure.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80" alt="High tension electrical infrastructure" loading="lazy" />
+          <span class="project-tag">HT Works</span>
+        </div>
+        <div class="project-body">
+          <div class="project-loc">Mumbai, Maharashtra</div>
+          <h3>HT Electrical Contracting</h3>
+          <p>High-tension electrical contracting and project-specific installation work.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Building external electrification" loading="lazy" />
+          <span class="project-tag">Electrification</span>
+        </div>
+        <div class="project-body">
+          <div class="project-loc">Mumbai, Maharashtra</div>
+          <h3>Internal & External Electrification</h3>
+          <p>Complete building electrification covering internal wiring and external connections.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-label reveal">
+      <span class="eyebrow">05 / Process</span>
+      <span class="num">— A structured approach to every project</span>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-sticky reveal">
+        <h2>Seven steps, <span class="serif-i">clearly</span> defined.</h2>
+        <p>Our process is designed to keep projects organised, transparent and aligned with client expectations — from the first enquiry through to final handover.</p>
+        <a href="#contact" class="btn btn-dark">Start a Project
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        </a>
+      </div>
+
+      <div class="process-steps">
+        <div class="step reveal">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h4>Initial Enquiry</h4>
+            <p>Receive and acknowledge your enquiry through phone, email or the enquiry form.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h4>Requirement Discussion</h4>
+            <p>Understand scope, expectations and site-specific considerations in detail.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h4>Site Inspection</h4>
+            <p>On-site assessment of requirements, constraints and existing infrastructure.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h4>Scope & Cost Estimation</h4>
+            <p>Detailed scope of work and transparent cost estimation shared with the client.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">05</div>
+          <div class="step-content">
+            <h4>Project Planning</h4>
+            <p>Resource allocation, material planning and schedule coordination.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">06</div>
+          <div class="step-content">
+            <h4>Installation & Execution</h4>
+            <p>Disciplined on-site electrical work executed to the agreed scope.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">07</div>
+          <div class="step-content">
+            <h4>Testing & Handover</h4>
+            <p>Testing, documentation and formal handover to the client.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAFETY ============ -->
+<section class="safety" id="safety">
+  <div class="wrap">
+    <div class="section-label reveal" style="border-bottom-color:rgba(255,255,255,.1)">
+      <span class="eyebrow" style="color:var(--amber-soft)">06 / Safety & Quality</span>
+      <span class="num" style="color:rgba(255,255,255,.4)">— Non-negotiable foundations</span>
+    </div>
+
+    <div class="safety-grid">
+      <div class="safety-content reveal">
+        <h2>Responsible electrical work, <span class="serif-i">done right.</span></h2>
+        <p class="safety-lead">Electrical work demands discipline. We treat safety and installation quality as non-negotiable foundations of every project we take on.</p>
+
+        <div class="safety-points">
+          <div class="safety-point">
+            <span class="safety-point-num">/ 01</span>
+            <div>
+              <h4>Safety-First Practices</h4>
+              <p>Appropriate safety practices integrated into every stage of work.</p>
+            </div>
+          </div>
+          <div class="safety-point">
+            <span class="safety-point-num">/ 02</span>
+            <div>
+              <h4>Quality Installation Standards</h4>
+              <p>Attention to installation quality ensures reliable, long-term performance.</p>
+            </div>
+          </div>
+          <div class="safety-point">
+            <span class="safety-point-num">/ 03</span>
+            <div>
+              <h4>Proper Equipment & Tools</h4>
+              <p>Use of appropriate tools and equipment for each electrical task.</p>
+            </div>
+          </div>
+          <div class="safety-point">
+            <span class="safety-point-num">/ 04</span>
+            <div>
+              <h4>Testing Before Handover</h4>
+              <p>Every installation is tested before being handed over to the client.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="safety-visual reveal">
+        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="Engineer in safety gear inspecting electrical installation" loading="lazy" />
+        <div class="safety-stat">
+          <div>
+            <strong>Tested · Verified</strong>
+            <small>Before every handover</small>
+          </div>
+          <span class="safety-stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-label reveal">
+      <span class="eyebrow">07 / Contact</span>
+      <span class="num">— Request a consultation or quote</span>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h2>Let's discuss <span class="serif-i">your</span> project.</h2>
+        <p>Tell us about your electrical requirements and we'll get back to you with a practical approach to your project.</p>
+
+        <div class="contact-details">
+          <div class="contact-row">
+            <span class="contact-row-label">Phone</span>
+            <span class="contact-row-value"><a href="tel:+910000000000">+91 (000) 000-0000</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-row-label">Email</span>
+            <span class="contact-row-value"><a href="mailto:info@risingstarelectrical.in">info@risingstarelectrical.in</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-row-label">Location</span>
+            <span class="contact-row-value">Mumbai, Maharashtra, India</span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-row-label">Hours</span>
+            <span class="contact-row-value">Mon – Sat · 9:00 – 19:00</span>
+          </div>
+        </div>
+
+        <div class="contact-socials">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.55 9-4.76 9-9.95z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 11-.01-4.13 2.06 2.06 0 01.01 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+          <a href="https://wa.me/910000000000" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 .02 5.35.02 11.98c0 2.11.55 4.17 1.6 5.99L0 24l6.2-1.63a11.94 11.94 0 005.8 1.48h.01c6.63 0 11.98-5.36 11.98-11.98 0-3.21-1.25-6.22-3.47-8.39z"/></svg></a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="enquiryForm" novalidate>
+        <h3>Request a Quote</h3>
+        <p>Fill out the form and our team will respond shortly.</p>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required placeholder="Your full name" />
+          </div>
+          <div class="field">
+            <label for="phone">Phone *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+91 ..." />
+          </div>
+          <div class="field">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" />
+          </div>
+          <div class="field">
+            <label for="customerType">Customer Type</label>
+            <select id="customerType" name="customerType">
+              <option value="">Select type</option>
+              <option>Residential</option>
+              <option>Commercial</option>
+              <option>Industrial</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="service">Service Required *</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option>Industrial Electrical Works</option>
+              <option>LT Electrical Works</option>
+              <option>HT Electrical Works</option>
+              <option>Commercial Electrical Works</option>
+              <option>Residential Electrical Works</option>
+              <option>Internal & External Electrification</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="location">Project Location</label>
+            <input type="text" id="location" name="location" placeholder="City / Area" />
+          </div>
+          <div class="field full">
+            <label for="description">Brief Project Description *</label>
+            <textarea id="description" name="description" required placeholder="Tell us about your electrical requirements..."></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-dark form-submit">
+          Submit Enquiry
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        </button>
+
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-wordmark">
+        Rising Star <span class="serif-i">Electrical</span>
+      </div>
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo" style="color:var(--white)">
+          <span class="logo-mark">
+            <svg viewBox="0 0 64 64" fill="none"><path d="M36 10L18 36h12l-4 18 18-26H32l4-18z" fill="#E9AE45"/></svg>
+          </span>
+          <span style="color:var(--white)">
+            Rising Star Electrical
+            <small style="color:rgba(255,255,255,.4)">& Co. / Mumbai</small>
+          </span>
+        </a>
+        <p>Professional electrical contracting and installation services for residential, commercial and industrial requirements in Mumbai, Maharashtra.</p>
+      </div>
+
+      <div>
+        <h5>Navigate</h5>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#safety">Safety</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Services</h5>
+        <ul class="footer-links">
+          <li><a href="#services">Industrial Electrical</a></li>
+          <li><a href="#services">LT Electrical Works</a></li>
+          <li><a href="#services">HT Electrical Works</a></li>
+          <li><a href="#services">Commercial Electrical</a></li>
+          <li><a href="#services">Residential Electrical</a></li>
+          <li><a href="#services">Electrification</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Contact</h5>
+        <ul class="footer-links">
+          <li>Mumbai, Maharashtra, India</li>
+          <li><a href="tel:+910000000000">+91 (000) 000-0000</a></li>
+          <li><a href="mailto:info@risingstarelectrical.in">info@risingstarelectrical.in</a></li>
+          <li>Mon – Sat · 9:00 – 19:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© <span id="year"></span> Rising Star Electrical & Co.</div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP ============ -->
+<a href="https://wa.me/910000000000" class="wa" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 .02 5.35.02 11.98c0 2.11.55 4.17 1.6 5.99L0 24l6.2-1.63a11.94 11.94 0 005.8 1.48h.01c6.63 0 11.98-5.36 11.98-11.98 0-3.21-1.25-6.22-3.47-8.39z"/></svg>
+</a>
+
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Mobile nav
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Portfolio horizontal scroll + drag
+  const track = document.getElementById('portfolioTrack');
+  const prev = document.getElementById('scrollPrev');
+  const next = document.getElementById('scrollNext');
+  const scrollAmount = () => track.querySelector('.project').offsetWidth + 24;
+  prev.addEventListener('click', () => track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' }));
+  next.addEventListener('click', () => track.scrollBy({ left: scrollAmount(), behavior: 'smooth' }));
+
+  // Drag to scroll
+  let isDown = false, startX, scrollLeft;
+  track.addEventListener('mousedown', (e) => {
+    isDown = true;
+    track.classList.add('dragging');
+    startX = e.pageX - track.offsetLeft;
+    scrollLeft = track.scrollLeft;
+  });
+  track.addEventListener('mouseleave', () => { isDown = false; track.classList.remove('dragging'); });
+  track.addEventListener('mouseup', () => { isDown = false; track.classList.remove('dragging'); });
+  track.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - track.offsetLeft;
+    track.scrollLeft = scrollLeft - (x - startX) * 1.5;
+  });
+
+  // Form
+  const form = document.getElementById('enquiryForm');
+  const msg = document.getElementById('formMessage');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    msg.className = 'form-message';
+    const data = {
+      fullName: form.fullName.value.trim(),
+      phone: form.phone.value.trim(),
+      email: form.email.value.trim(),
+      customerType: form.customerType.value,
+      service: form.service.value,
+      location: form.location.value.trim(),
+      description: form.description.value.trim()
+    };
+    if (!data.fullName || !data.phone || !data.email || !data.service || !data.description) {
+      msg.className = 'form-message error';
+      msg.textContent = 'Please complete all required fields.';
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+      msg.className = 'form-message error';
+      msg.textContent = 'Please enter a valid email address.';
+      return;
+    }
+    // Backend integration point:
+    // fetch('/api/enquiry', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) })
+    console.log('Enquiry submitted:', data);
+    msg.className = 'form-message success';
+    msg.textContent = 'Thank you. Your enquiry has been received — we will respond shortly.';
+    form.reset();
+    setTimeout(() => { msg.className = 'form-message'; msg.textContent = ''; }, 8000);
+  });
+</script>
+
+</body>
+</html>
+Displaying index.html. 
