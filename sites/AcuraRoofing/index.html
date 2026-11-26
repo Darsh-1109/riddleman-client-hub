@@ -1,0 +1,1130 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acura Roofing, Inc. | Premium Residential Roofing in Austin, TX</title>
+    <meta name="description" content="Locally owned and operated residential roofing company in Austin, TX. Over 30 years of experience, 5-year labor guarantee, and personalized service. Get a free estimate today.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Acura Roofing, Inc. | Premium Residential Roofing in Austin, TX">
+    <meta property="og:description" content="Over 30 years of experience protecting Austin homes with quality roofing, personalized service, and dependable workmanship.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://acuraroofing.com/">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: '#173D32',
+                        evergreen: '#245342',
+                        gold: '#C5A66B',
+                        ivory: '#F7F5EF',
+                        sage: '#DCE5DC',
+                        charcoal: '#252C29',
+                    },
+                    fontFamily: {
+                        heading: ['"Playfair Display"', 'serif'],
+                        body: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Animations & Utilities */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Form Transitions */
+        .form-step {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        .form-step.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(23, 61, 50, 0.95);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        #lightbox.active {
+            display: flex;
+        }
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border: 2px solid #C5A66B;
+        }
+
+        /* Accordion */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.open {
+            max-height: 500px;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F7F5EF;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #173D32;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #245342;
+        }
+    </style>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RoofingContractor",
+      "name": "Acura Roofing, Inc.",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3122 Festus Drive",
+        "addressLocality": "Austin",
+        "addressRegion": "TX",
+        "postalCode": "78748",
+        "addressCountry": "US"
+      },
+      "telephone": "+15122806875",
+      "email": "patrickmoran@acuraroofing.com",
+      "openingHours": "Mo-Fr 08:00-17:00",
+      "priceRange": "$$",
+      "areaServed": ["Austin", "San Marcos", "Bastrop", "Kyle", "Buda", "Round Rock", "Pflugerville", "Dripping Springs", "Cedar Park", "Oak Hill"]
+    }
+    </script>
+</head>
+<body class="font-body text-charcoal bg-ivory antialiased">
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-forest/95 backdrop-blur-sm shadow-lg transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2 group">
+                    <div class="w-10 h-10 bg-gold rounded-sm flex items-center justify-center">
+                        <span class="text-forest font-heading font-bold text-xl">A</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-ivory font-heading font-bold text-xl tracking-wide group-hover:text-gold transition-colors">ACURA ROOFING</span>
+                        <span class="text-sage text-xs tracking-widest uppercase">Inc.</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="text-ivory/90 hover:text-gold text-sm font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-ivory/90 hover:text-gold text-sm font-medium transition-colors">About</a>
+                    <a href="#services" class="text-ivory/90 hover:text-gold text-sm font-medium transition-colors">Services</a>
+                    <a href="#storm" class="text-ivory/90 hover:text-gold text-sm font-medium transition-colors">Storm Damage</a>
+                    <a href="#gallery" class="text-ivory/90 hover:text-gold text-sm font-medium transition-colors">Our Work</a>
+                    <a href="#reviews" class="text-ivory/90 hover:text-gold text-sm font-medium transition-colors">Reviews</a>
+                    <a href="#contact" class="text-ivory/90 hover:text-gold text-sm font-medium transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA -->
+                <div class="hidden lg:block">
+                    <a href="#estimate" class="bg-gold text-forest px-6 py-3 rounded-sm font-semibold text-sm hover:bg-white transition-colors duration-300 shadow-md">
+                        Get a Free Estimate
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-ivory hover:text-gold focus:outline-none" aria-label="Toggle menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-forest border-t border-evergreen">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block text-ivory hover:text-gold py-2 text-base font-medium">Home</a>
+                <a href="#about" class="block text-ivory hover:text-gold py-2 text-base font-medium">About</a>
+                <a href="#services" class="block text-ivory hover:text-gold py-2 text-base font-medium">Services</a>
+                <a href="#storm" class="block text-ivory hover:text-gold py-2 text-base font-medium">Storm Damage</a>
+                <a href="#gallery" class="block text-ivory hover:text-gold py-2 text-base font-medium">Our Work</a>
+                <a href="#contact" class="block text-ivory hover:text-gold py-2 text-base font-medium">Contact</a>
+                <a href="#estimate" class="block bg-gold text-forest text-center py-3 rounded-sm font-semibold mt-4">Get a Free Estimate</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1920" alt="Beautiful Austin home with professional roofing" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-forest/80 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-forest via-forest/40 to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center fade-in-up">
+            <h1 class="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-ivory mb-6 leading-tight">
+                A Better Roof.<br>
+                <span class="text-gold">A Stronger Peace of Mind.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-ivory/90 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                Locally owned and operated, Acura Roofing has been helping homeowners across Greater Austin protect their homes with quality roofing, personalized service, and dependable workmanship for over 30 years.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#estimate" class="bg-gold text-forest px-8 py-4 rounded-sm font-semibold text-lg hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Get Your Free Estimate
+                </a>
+                <a href="tel:5122806875" class="bg-transparent border-2 border-ivory text-ivory px-8 py-4 rounded-sm font-semibold text-lg hover:bg-ivory hover:text-forest transition-all duration-300">
+                    Call (512) 280-6875
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <section class="bg-sage py-8 border-b border-forest/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center fade-in-up">
+                    <svg class="w-8 h-8 text-forest mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    <span class="font-heading font-semibold text-forest">Locally Owned & Operated</span>
+                </div>
+                <div class="flex flex-col items-center fade-in-up" style="transition-delay: 100ms;">
+                    <svg class="w-8 h-8 text-forest mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span class="font-heading font-semibold text-forest">Serving Austin for 30+ Years</span>
+                </div>
+                <div class="flex flex-col items-center fade-in-up" style="transition-delay: 200ms;">
+                    <svg class="w-8 h-8 text-forest mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <span class="font-heading font-semibold text-forest">Five-Year Labor Guarantee</span>
+                </div>
+                <div class="flex flex-col items-center fade-in-up" style="transition-delay: 300ms;">
+                    <svg class="w-8 h-8 text-forest mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                    <span class="font-heading font-semibold text-forest">Free, No-Obligation Estimates</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-ivory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="text-gold font-semibold tracking-widest uppercase text-sm">Our Expertise</span>
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-forest mt-2 mb-4">Comprehensive Roofing Solutions</h2>
+                <p class="text-charcoal/80 max-w-2xl mx-auto">From minor repairs to complete replacements, we provide tailored solutions to protect your home and investment.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-sm shadow-sm hover:shadow-xl transition-shadow duration-300 border-t-4 border-gold fade-in-up">
+                    <h3 class="font-heading text-2xl font-bold text-forest mb-3">Residential Roofing</h3>
+                    <p class="text-charcoal/80 leading-relaxed">Personalized service and meticulous attention to detail to protect your home's most critical defense against the Texas elements.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-sm shadow-sm hover:shadow-xl transition-shadow duration-300 border-t-4 border-gold fade-in-up" style="transition-delay: 100ms;">
+                    <h3 class="font-heading text-2xl font-bold text-forest mb-3">Roof Replacement</h3>
+                    <p class="text-charcoal/80 leading-relaxed">A carefully managed process from initial assessment and material selection to professional installation and our 5-year labor guarantee.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-sm shadow-sm hover:shadow-xl transition-shadow duration-300 border-t-4 border-gold fade-in-up" style="transition-delay: 200ms;">
+                    <h3 class="font-heading text-2xl font-bold text-forest mb-3">Metal Roofing</h3>
+                    <p class="text-charcoal/80 leading-relaxed">Durable, energy-efficient standing-seam and metal roofing styles that offer exceptional longevity and distinctive curb appeal.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-sm shadow-sm hover:shadow-xl transition-shadow duration-300 border-t-4 border-gold fade-in-up">
+                    <h3 class="font-heading text-2xl font-bold text-forest mb-3">Flat Roofing</h3>
+                    <p class="text-charcoal/80 leading-relaxed">Specialized solutions for flat and low-slope roofing systems, ensuring proper drainage and long-term waterproofing.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-sm shadow-sm hover:shadow-xl transition-shadow duration-300 border-t-4 border-gold fade-in-up" style="transition-delay: 100ms;">
+                    <h3 class="font-heading text-2xl font-bold text-forest mb-3">Leak Repairs</h3>
+                    <p class="text-charcoal/80 leading-relaxed">Rapid identification and repair of roof leaks, damaged flashing, and water intrusion to prevent further structural damage.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-sm shadow-sm hover:shadow-xl transition-shadow duration-300 border-t-4 border-gold fade-in-up" style="transition-delay: 200ms;">
+                    <h3 class="font-heading text-2xl font-bold text-forest mb-3">Roof Decking</h3>
+                    <p class="text-charcoal/80 leading-relaxed">Thorough evaluation and replacement of compromised roof decking to ensure a solid, safe foundation for your new roof.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Acura Roofing -->
+    <section id="about" class="py-20 bg-sage">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&q=80&w=800" alt="Professional roofer inspecting a roof" class="rounded-sm shadow-2xl w-full object-cover h-[500px]">
+                    <div class="absolute -bottom-6 -right-6 bg-forest text-ivory p-6 rounded-sm shadow-xl hidden md:block">
+                        <p class="font-heading text-3xl font-bold text-gold">30+</p>
+                        <p class="text-sm uppercase tracking-wider">Years of Excellence</p>
+                    </div>
+                </div>
+                <div class="fade-in-up">
+                    <span class="text-gold font-semibold tracking-widest uppercase text-sm">The Acura Difference</span>
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-forest mt-2 mb-6">Built on Trust.<br>Proven Through Every Roof.</h2>
+                    <p class="text-charcoal/80 mb-8 leading-relaxed">We are not a large, impersonal corporation. We are your neighbors, committed to craftsmanship, protection, and long-term customer relationships.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-forest rounded-sm flex items-center justify-center text-gold">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-heading text-xl font-semibold text-forest">Personalized Service</h4>
+                                <p class="text-charcoal/70 text-sm mt-1">Direct, approachable support. You speak directly with our team, not a call center.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-forest rounded-sm flex items-center justify-center text-gold">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-heading text-xl font-semibold text-forest">Five-Year Labor Guarantee</h4>
+                                <p class="text-charcoal/70 text-sm mt-1">Peace of mind with our 5-year labor guarantee on replacements, plus manufacturer warranties.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-forest rounded-sm flex items-center justify-center text-gold">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-heading text-xl font-semibold text-forest">Clear, Honest Estimates</h4>
+                                <p class="text-charcoal/70 text-sm mt-1">No hidden fees. Free on-site assessments and written estimates you can understand.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-ivory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-forest mb-4">The Acura Roofing Process</h2>
+                <p class="text-charcoal/80">A seamless, transparent experience from first contact to final cleanup.</p>
+            </div>
+
+            <div class="relative">
+                <!-- Desktop Line -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-sage -translate-y-1/2 z-0"></div>
+                
+                <div class="grid md:grid-cols-4 gap-8 relative z-10">
+                    <div class="bg-white p-6 rounded-sm shadow-md text-center fade-in-up">
+                        <div class="w-12 h-12 bg-gold text-forest rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4 border-4 border-ivory">1</div>
+                        <h3 class="font-heading text-xl font-bold text-forest mb-2">Get in Touch</h3>
+                        <p class="text-sm text-charcoal/70">Tell us about your roofing concern or project via phone or our online form.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-sm shadow-md text-center fade-in-up" style="transition-delay: 100ms;">
+                        <div class="w-12 h-12 bg-gold text-forest rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4 border-4 border-ivory">2</div>
+                        <h3 class="font-heading text-xl font-bold text-forest mb-2">Roof Assessment</h3>
+                        <p class="text-sm text-charcoal/70">We arrange a thorough, no-obligation on-site assessment of your roof's condition.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-sm shadow-md text-center fade-in-up" style="transition-delay: 200ms;">
+                        <div class="w-12 h-12 bg-gold text-forest rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4 border-4 border-ivory">3</div>
+                        <h3 class="font-heading text-xl font-bold text-forest mb-2">Clear Estimate</h3>
+                        <p class="text-sm text-charcoal/70">Receive a detailed, written estimate explaining the proposed work and exact costs.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-sm shadow-md text-center fade-in-up" style="transition-delay: 300ms;">
+                        <div class="w-12 h-12 bg-gold text-forest rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4 border-4 border-ivory">4</div>
+                        <h3 class="font-heading text-xl font-bold text-forest mb-2">Professional Work</h3>
+                        <p class="text-sm text-charcoal/70">We execute the agreed solution with precision, backed by our workmanship guarantee.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Storm Damage Section -->
+    <section id="storm" class="py-20 bg-forest text-ivory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-up">
+                    <span class="text-gold font-semibold tracking-widest uppercase text-sm">Storm Damage & Insurance</span>
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold mt-2 mb-6">When Storms Hit,<br>Know What to Do Next.</h2>
+                    <p class="text-ivory/80 mb-8 leading-relaxed">Severe weather in Central Texas can be unpredictable. If you suspect hail or wind damage, acting methodically protects your home and your insurance claim.</p>
+                    
+                    <ol class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 w-6 h-6 bg-gold text-forest rounded-full flex items-center justify-center text-sm font-bold mt-0.5 mr-3">1</span>
+                            <span>Arrange a professional roof assessment with our team.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 w-6 h-6 bg-gold text-forest rounded-full flex items-center justify-center text-sm font-bold mt-0.5 mr-3">2</span>
+                            <span>If damage is suspected, contact your insurance company to report it.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 w-6 h-6 bg-gold text-forest rounded-full flex items-center justify-center text-sm font-bold mt-0.5 mr-3">3</span>
+                            <span>Allow the insurance adjuster to assess the damage on-site.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 w-6 h-6 bg-gold text-forest rounded-full flex items-center justify-center text-sm font-bold mt-0.5 mr-3">4</span>
+                            <span>Compare the approved scope with our contractor's proposed work.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 w-6 h-6 bg-gold text-forest rounded-full flex items-center justify-center text-sm font-bold mt-0.5 mr-3">5</span>
+                            <span>Discuss the repair or replacement plan with us before proceeding.</span>
+                        </li>
+                    </ol>
+                    <p class="text-sm text-ivory/60 italic mb-6">*Note: Insurance coverage and claim approval are determined solely by your insurer and policy terms.</p>
+                    <a href="#estimate" class="inline-block bg-gold text-forest px-8 py-3 rounded-sm font-semibold hover:bg-white transition-colors duration-300">
+                        Not Sure If Your Roof Has Storm Damage? Let's Take a Look.
+                    </a>
+                </div>
+                <div class="fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1596238618386-35b399770513?auto=format&fit=crop&q=80&w=800" alt="Roof inspection after storm" class="rounded-sm shadow-2xl w-full object-cover h-[500px] border-4 border-gold/30">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section class="py-16 bg-sage">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-heading text-3xl font-bold text-forest mb-4">Quality Materials & Trusted Partnerships</h2>
+            <p class="text-charcoal/80 max-w-3xl mx-auto mb-10">We use only time-proven materials in our application process. Our relationships with Austin's top roofing supply companies allow us to provide a large selection of material choices, including premium architectural shingles and standing-seam metal.</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70">
+                <div class="text-2xl font-heading font-bold text-forest">Owens Corning®</div>
+                <div class="text-2xl font-heading font-bold text-forest">GAF®</div>
+                <div class="text-2xl font-heading font-bold text-forest">CertainTeed®</div>
+                <div class="text-2xl font-heading font-bold text-forest">Malarkey®</div>
+            </div>
+            <p class="text-xs text-charcoal/50 mt-8">We can install your desired product. Manufacturer warranties apply as per their specific terms.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-ivory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-forest mb-4">Our Work</h2>
+                <p class="text-charcoal/80">A glimpse into the craftsmanship and care we bring to every Austin home.</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex flex-wrap justify-center gap-4 mb-10 fade-in-up">
+                <button class="gallery-filter active bg-forest text-ivory px-6 py-2 rounded-sm text-sm font-medium transition-colors" data-filter="all">All Projects</button>
+                <button class="gallery-filter bg-white text-charcoal border border-sage px-6 py-2 rounded-sm text-sm font-medium hover:bg-forest hover:text-ivory transition-colors" data-filter="replacement">Replacements</button>
+                <button class="gallery-filter bg-white text-charcoal border border-sage px-6 py-2 rounded-sm text-sm font-medium hover:bg-forest hover:text-ivory transition-colors" data-filter="metal">Metal Roofing</button>
+                <button class="gallery-filter bg-white text-charcoal border border-sage px-6 py-2 rounded-sm text-sm font-medium hover:bg-forest hover:text-ivory transition-colors" data-filter="flat">Flat Roofing</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer fade-in-up" data-category="replacement" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&q=80&w=600" alt="Roof replacement project" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-forest/0 group-hover:bg-forest/60 transition-colors duration-300 flex items-center justify-center">
+                        <span class="text-ivory font-semibold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Project</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer fade-in-up" data-category="metal" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&q=80&w=600" alt="Metal roofing installation" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-forest/0 group-hover:bg-forest/60 transition-colors duration-300 flex items-center justify-center">
+                        <span class="text-ivory font-semibold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Project</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer fade-in-up" data-category="replacement" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=600" alt="Architectural shingle roof" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-forest/0 group-hover:bg-forest/60 transition-colors duration-300 flex items-center justify-center">
+                        <span class="text-ivory font-semibold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Project</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer fade-in-up" data-category="flat" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&q=80&w=600" alt="Flat roofing system" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-forest/0 group-hover:bg-forest/60 transition-colors duration-300 flex items-center justify-center">
+                        <span class="text-ivory font-semibold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Project</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer fade-in-up" data-category="metal" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=600" alt="Standing seam metal roof" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-forest/0 group-hover:bg-forest/60 transition-colors duration-300 flex items-center justify-center">
+                        <span class="text-ivory font-semibold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Project</span>
+                    </div>
+                </div>
+                <div class="gallery-item group relative overflow-hidden rounded-sm cursor-pointer fade-in-up" data-category="replacement" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=600" alt="Complete roof transformation" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-forest/0 group-hover:bg-forest/60 transition-colors duration-300 flex items-center justify-center">
+                        <span class="text-ivory font-semibold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View Project</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-sage">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="text-gold font-semibold tracking-widest uppercase text-sm">Our Team</span>
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-forest mt-2 mb-4">Meet the People Behind the Business</h2>
+                <p class="text-charcoal/80 max-w-2xl mx-auto">A locally operated business where you interact with real people who care about your home.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Patrick -->
+                <div class="bg-white rounded-sm shadow-lg overflow-hidden fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" alt="Patrick Moran" class="w-full h-64 object-cover object-top">
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-bold text-forest">Patrick Moran</h3>
+                        <p class="text-gold font-medium text-sm mb-4">Owner and President</p>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">Patrick started roofing as an installer before becoming a contractor in the 80s. His integrity and passion have made him stand out in the industry. He enjoys working directly with customers to help them make the best decisions for their homes.</p>
+                    </div>
+                </div>
+                <!-- Sean -->
+                <div class="bg-white rounded-sm shadow-lg overflow-hidden fade-in-up" style="transition-delay: 100ms;">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400" alt="Sean Moran" class="w-full h-64 object-cover object-top">
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-bold text-forest">Sean Moran</h3>
+                        <p class="text-gold font-medium text-sm mb-4">Lead Estimator</p>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">As Patrick's son, Sean shares his father's passion for the successful future of Acura Roofing. He is professional, honest, and takes the time to answer any questions you might have when visiting your home.</p>
+                    </div>
+                </div>
+                <!-- Alissa -->
+                <div class="bg-white rounded-sm shadow-lg overflow-hidden fade-in-up" style="transition-delay: 200ms;">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" alt="Alissa" class="w-full h-64 object-cover object-top">
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-bold text-forest">Alissa</h3>
+                        <p class="text-gold font-medium text-sm mb-4">Office Manager</p>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">Alissa is the person most likely to answer your call and put together your estimates and invoicing. She is an invaluable asset to Acura Roofing, ensuring smooth communication from day one.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-ivory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-forest mb-4">Customer Reviews & Reputation</h2>
+                <div class="flex justify-center items-center gap-2 mb-4">
+                    <div class="flex text-gold">
+                        ★★★★★
+                    </div>
+                    <span class="text-charcoal font-semibold">5.0 Based on 70+ Verified Reviews</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-sm shadow-md border-l-4 border-gold fade-in-up">
+                    <p class="text-charcoal/80 italic mb-6">"Patrick and his team are friendly, professional and conscientious. Their communications with me from day one were thorough and transparent. They were the only company whose estimate was equal to the insurance company and that's with upgrades!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-sage rounded-full flex items-center justify-center text-forest font-bold">DS</div>
+                        <div class="ml-3">
+                            <p class="font-semibold text-forest">Derek Stearns</p>
+                            <p class="text-xs text-charcoal/50">Austin, TX</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-sm shadow-md border-l-4 border-gold fade-in-up" style="transition-delay: 100ms;">
+                    <p class="text-charcoal/80 italic mb-6">"I found Acura to be easy to communicate with, helpful in making important decisions, not condescending, and I would recommend them to anyone else. Patrick was great at communicating and made himself available."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-sage rounded-full flex items-center justify-center text-forest font-bold">SC</div>
+                        <div class="ml-3">
+                            <p class="font-semibold text-forest">Sara Ines Calderon</p>
+                            <p class="text-xs text-charcoal/50">Austin, TX</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-sm shadow-md border-l-4 border-gold fade-in-up" style="transition-delay: 200ms;">
+                    <p class="text-charcoal/80 italic mb-6">"We have worked with Acura Roofing for over twenty years and they have never failed to be responsive, helpful and full of excellent advice. Patrick Moran and now his son are both very meticulous in their assessments."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-sage rounded-full flex items-center justify-center text-forest font-bold">MH</div>
+                        <div class="ml-3">
+                            <p class="font-semibold text-forest">Mike Hale</p>
+                            <p class="text-xs text-charcoal/50">Central Austin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="https://www.google.com/search?q=acura+roofing+austin+reviews" target="_blank" rel="noopener noreferrer" class="text-forest font-semibold border-b-2 border-gold hover:text-gold transition-colors">Read more reviews on Google →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estimate & Financing Section -->
+    <section id="estimate" class="py-20 bg-forest text-ivory">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-up">
+            <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">Your Next Roofing Project Starts With a Free Estimate.</h2>
+            <p class="text-ivory/80 text-lg mb-10 max-w-3xl mx-auto">We offer on-site roof assessments and detailed written estimates to help you understand your options clearly, with no pressure and no hidden fees.</p>
+            
+            <div class="bg-evergreen/50 p-8 rounded-sm border border-gold/30 mb-10">
+                <h3 class="font-heading text-2xl font-bold text-gold mb-4">Flexible Financing Available</h3>
+                <p class="text-ivory/80 mb-6">We partner with Hearth to offer convenient monthly payment options for your project. See your personalized payment plans within minutes without affecting your credit score.</p>
+                <div class="grid md:grid-cols-3 gap-4 text-sm text-ivory/90 mb-6">
+                    <div>• Loan amounts up to $250,000</div>
+                    <div>• Funding within 1-3 days</div>
+                    <div>• No prepayment penalties</div>
+                </div>
+                <a href="#" class="inline-block border border-gold text-gold px-6 py-3 rounded-sm font-semibold hover:bg-gold hover:text-forest transition-colors duration-300">Explore Financing Options</a>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact-form" class="bg-gold text-forest px-8 py-4 rounded-sm font-bold text-lg hover:bg-white transition-colors duration-300 shadow-lg">Get My Free Estimate</a>
+                <a href="tel:5122806875" class="bg-transparent border-2 border-ivory text-ivory px-8 py-4 rounded-sm font-semibold text-lg hover:bg-ivory hover:text-forest transition-colors duration-300">Call Acura Roofing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-ivory">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="font-heading text-4xl font-bold text-forest mb-4">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="space-y-4 fade-in-up">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-sm shadow-sm overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-gold" aria-expanded="false">
+                        <span class="font-semibold text-forest">How do I know whether my roof needs repair or replacement?</span>
+                        <svg class="w-5 h-5 text-gold transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-4 text-charcoal/80 text-sm leading-relaxed">Age, visible damage (missing or cracked shingles), and interior leaks are key indicators. We provide free on-site assessments to give you an honest, professional recommendation based on the actual condition of your roof.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-sm shadow-sm overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-gold" aria-expanded="false">
+                        <span class="font-semibold text-forest">Does Acura Roofing provide free estimates?</span>
+                        <svg class="w-5 h-5 text-gold transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-4 text-charcoal/80 text-sm leading-relaxed">Yes. We provide thorough, no-obligation, written estimates for all roofing projects. You do not need to be home when we come, but we will call to schedule a convenient time.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-sm shadow-sm overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-gold" aria-expanded="false">
+                        <span class="font-semibold text-forest">What does the five-year labor guarantee cover?</span>
+                        <svg class="w-5 h-5 text-gold transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-4 text-charcoal/80 text-sm leading-relaxed">Our five-year labor guarantee covers the workmanship of the roof replacement. This is in addition to all manufacturers' warranties on the products used. There is absolutely no money down or payments until all work is completed.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-sm shadow-sm overflow-hidden">
+                    <button class="accordion-btn w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-gold" aria-expanded="false">
+                        <span class="font-semibold text-forest">Can Acura Roofing help with insurance claims?</span>
+                        <svg class="w-5 h-5 text-gold transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-4 text-charcoal/80 text-sm leading-relaxed">Yes, we are happy to serve as your advocate with your insurance company. We will represent your interests, help document damage, and can help resolve issues you might have. Please note that final coverage and claim approval are determined by your insurer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Form Section -->
+    <section id="contact" class="py-20 bg-sage">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="fade-in-up">
+                    <span class="text-gold font-semibold tracking-widest uppercase text-sm">Contact Us</span>
+                    <h2 class="font-heading text-4xl font-bold text-forest mt-2 mb-6">Get In Touch Today</h2>
+                    <p class="text-charcoal/80 mb-8">Thank you for your interest in our services. Please feel free to contact us directly with any questions, or fill out the form to request your free estimate.</p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-gold mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <div>
+                                <h4 class="font-semibold text-forest">Address</h4>
+                                <p class="text-charcoal/80">3122 Festus Drive<br>Austin, TX 78748, USA</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-gold mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <div>
+                                <h4 class="font-semibold text-forest">Phone</h4>
+                                <a href="tel:5122806875" class="text-charcoal/80 hover:text-forest transition-colors">(512) 280-6875</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-gold mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <div>
+                                <h4 class="font-semibold text-forest">Email</h4>
+                                <a href="mailto:patrickmoran@acuraroofing.com" class="text-charcoal/80 hover:text-forest transition-colors">patrickmoran@acuraroofing.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-gold mt-1 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="font-semibold text-forest">Hours of Operation</h4>
+                                <p class="text-charcoal/80">Monday – Friday: 8:00 AM – 5:00 PM<br>Saturday & Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-sm shadow-sm">
+                        <h4 class="font-semibold text-forest mb-2">Service Area</h4>
+                        <p class="text-sm text-charcoal/70">Austin, San Marcos, Bastrop, Kyle, Buda, Round Rock, Pflugerville, Dripping Springs, Cedar Park, Oak Hill, and surrounding Greater Central Texas areas.</p>
+                    </div>
+                </div>
+
+                <!-- Multi-step Form -->
+                <div id="contact-form" class="bg-white p-8 rounded-sm shadow-xl fade-in-up">
+                    <h3 class="font-heading text-2xl font-bold text-forest mb-6">Request a Free Estimate</h3>
+                    
+                    <form id="estimateForm" onsubmit="handleFormSubmit(event)">
+                        <!-- Progress Bar -->
+                        <div class="mb-6">
+                            <div class="flex justify-between text-xs font-semibold text-charcoal/60 mb-2">
+                                <span id="step1-indicator" class="text-forest">Step 1: Contact Info</span>
+                                <span id="step2-indicator">Step 2: Project Details</span>
+                            </div>
+                            <div class="w-full bg-sage rounded-full h-2">
+                                <div id="progress-bar" class="bg-gold h-2 rounded-full transition-all duration-300" style="width: 50%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Step 1 -->
+                        <div id="step1" class="form-step active space-y-4">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-charcoal mb-1">First Name *</label>
+                                    <input type="text" name="firstName" required class="w-full px-4 py-2 border border-sage rounded-sm focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-charcoal mb-1">Last Name *</label>
+                                    <input type="text" name="lastName" required class="w-full px-4 py-2 border border-sage rounded-sm focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all">
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-charcoal mb-1">Email *</label>
+                                    <input type="email" name="email" required class="w-full px-4 py-2 border border-sage rounded-sm focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-charcoal mb-1">Phone *</label>
+                                    <input type="tel" name="phone" required class="w-full px-4 py-2 border border-sage rounded-sm focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-charcoal mb-1">Job Site Address *</label>
+                                <input type="text" name="address" required class="w-full px-4 py-2 border border-sage rounded-sm focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-charcoal mb-1">City *</label>
+                                    <input type="text" name="city" required class="w-full px-4 py-2 border border-sage rounded-sm focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-charcoal mb-1">ZIP Code *</label>
+                                    <input type="text" name="zip" required class="w-full px-4 py-2 border border-sage rounded-sm focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-charcoal mb-1">Mailing Address (if different)</label>
+                                <input type="text" name="mailingAddress" class="w-full px-4 py-2 border border-sage rounded-sm focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all">
+                            </div>
+                            <button type="button" onclick="nextStep()" class="w-full bg-forest text-ivory py-3 rounded-sm font-semibold hover:bg-evergreen transition-colors duration-300 mt-4">Next: Project Details</button>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div id="step2" class="form-step space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-charcoal mb-1">Service Required *</label>
+                                <select name="service" required class="w-full px-4 py-2 border border-sage rounded-sm focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all bg-white">
+                                    <option value="">--Select--</option>
+                                    <option value="Repair">Repair</option>
+                                    <option value="Replace">Replace</option>
+                                    <option value="Repair and Replace">Repair and Replace</option>
+                                    <option value="Inspection">Inspection</option>
+                                </select>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-charcoal mb-1">Is Your Roof Leaking? *</label>
+                                    <select name="leaking" required class="w-full px-4 py-2 border border-sage rounded-sm focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all bg-white">
+                                        <option value="Unknown">Unknown</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-charcoal mb-1">Approved Insurance Claim? *</label>
+                                    <select name="insurance" required class="w-full px-4 py-2 border border-sage rounded-sm focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all bg-white">
+                                        <option value="Unknown">Unknown</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-charcoal mb-1">Roof Type *</label>
+                                <select name="roofType" required class="w-full px-4 py-2 border border-sage rounded-sm focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all bg-white">
+                                    <option value="">--Select--</option>
+                                    <option value="Shingle">Shingle</option>
+                                    <option value="Metal">Metal</option>
+                                    <option value="Flat">Flat</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-charcoal mb-1">Additional Comments</label>
+                                <textarea name="comments" rows="3" class="w-full px-4 py-2 border border-sage rounded-sm focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all"></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-charcoal mb-1">Upload Roof Photos (Optional)</label>
+                                <input type="file" name="photos" accept="image/jpeg, image/png" class="w-full text-sm text-charcoal/60 file:mr-4 file:py-2 file:px-4 file:rounded-sm file:border-0 file:text-sm file:font-semibold file:bg-sage file:text-forest hover:file:bg-forest hover:file:text-ivory transition-colors">
+                                <p class="text-xs text-charcoal/50 mt-1">Accepted: jpg, png. Max size: 300 MB.</p>
+                            </div>
+                            
+                            <div class="flex gap-4 mt-4">
+                                <button type="button" onclick="prevStep()" class="w-1/3 bg-sage text-charcoal py-3 rounded-sm font-semibold hover:bg-gray-300 transition-colors duration-300">Previous</button>
+                                <button type="submit" id="submitBtn" class="w-2/3 bg-gold text-forest py-3 rounded-sm font-bold hover:bg-forest hover:text-ivory transition-colors duration-300">Submit Request</button>
+                            </div>
+                        </div>
+
+                        <!-- Success Message (Hidden by default) -->
+                        <div id="successMessage" class="hidden text-center py-8">
+                            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <h3 class="font-heading text-2xl font-bold text-forest mb-2">Thank You!</h3>
+                            <p class="text-charcoal/80 mb-4">Your request has been prepared. In a production environment, this data would be securely transmitted to our processing endpoint or CRM.</p>
+                            <p class="text-sm text-charcoal/60 mb-6">For immediate assistance, please call us directly at <a href="tel:5122806875" class="text-forest font-semibold hover:underline">(512) 280-6875</a>.</p>
+                            <button type="button" onclick="resetForm()" class="text-gold font-semibold hover:text-forest transition-colors">Submit another request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-forest text-ivory pt-16 pb-8 border-t border-evergreen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gold rounded-sm flex items-center justify-center">
+                            <span class="text-forest font-heading font-bold text-lg">A</span>
+                        </div>
+                        <span class="text-ivory font-heading font-bold text-xl tracking-wide">ACURA ROOFING</span>
+                    </div>
+                    <p class="text-ivory/70 text-sm leading-relaxed mb-6">Locally owned and operated residential roofing company committed to professionalism, integrity, customer service, and quality workmanship for over 30 years.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-ivory/70 hover:text-gold transition-colors" aria-label="Facebook"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                        <a href="#" class="text-ivory/70 hover:text-gold transition-colors" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4 text-gold">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-ivory/70">
+                        <li><a href="#home" class="hover:text-gold transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-gold transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-gold transition-colors">Our Services</a></li>
+                        <li><a href="#storm" class="hover:text-gold transition-colors">Storm Damage</a></li>
+                        <li><a href="#gallery" class="hover:text-gold transition-colors">Project Gallery</a></li>
+                        <li><a href="#estimate" class="hover:text-gold transition-colors">Free Estimate</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4 text-gold">Services</h4>
+                    <ul class="space-y-2 text-sm text-ivory/70">
+                        <li><a href="#services" class="hover:text-gold transition-colors">Residential Roofing</a></li>
+                        <li><a href="#services" class="hover:text-gold transition-colors">Roof Replacement</a></li>
+                        <li><a href="#services" class="hover:text-gold transition-colors">Metal Roofing</a></li>
+                        <li><a href="#services" class="hover:text-gold transition-colors">Flat Roofing</a></li>
+                        <li><a href="#services" class="hover:text-gold transition-colors">Leak Repairs</a></li>
+                        <li><a href="#services" class="hover:text-gold transition-colors">Insurance Consultation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4 text-gold">Contact Info</h4>
+                    <ul class="space-y-3 text-sm text-ivory/70">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-gold mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            3122 Festus Drive, Austin, TX 78748
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <a href="tel:5122806875" class="hover:text-gold transition-colors">(512) 280-6875</a>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-gold mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <a href="mailto:patrickmoran@acuraroofing.com" class="hover:text-gold transition-colors">patrickmoran@acuraroofing.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-evergreen pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-ivory/50">
+                <p>&copy; 2026 Acura Roofing, Inc. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-gold transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" onclick="closeLightbox()" role="dialog" aria-modal="true" aria-label="Image preview">
+        <button class="absolute top-6 right-6 text-ivory hover:text-gold focus:outline-none" aria-label="Close lightbox">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <img id="lightbox-img" src="" alt="Enlarged project view">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Scroll Animations (Intersection Observer)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Multi-step Form Logic
+        let currentStep = 1;
+        
+        function nextStep() {
+            // Basic validation for Step 1
+            const step1Inputs = document.querySelectorAll('#step1 input[required]');
+            let isValid = true;
+            step1Inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.classList.add('border-red-500');
+                } else {
+                    input.classList.remove('border-red-500');
+                }
+            });
+
+            if (isValid) {
+                document.getElementById('step1').classList.remove('active');
+                document.getElementById('step2').classList.add('active');
+                document.getElementById('progress-bar').style.width = '100%';
+                document.getElementById('step1-indicator').classList.remove('text-forest');
+                document.getElementById('step1-indicator').classList.add('text-charcoal/60');
+                document.getElementById('step2-indicator').classList.add('text-forest');
+                currentStep = 2;
+            }
+        }
+
+        function prevStep() {
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('step1').classList.add('active');
+            document.getElementById('progress-bar').style.width = '50%';
+            document.getElementById('step1-indicator').classList.add('text-forest');
+            document.getElementById('step1-indicator').classList.remove('text-charcoal/60');
+            document.getElementById('step2-indicator').classList.remove('text-forest');
+            currentStep = 1;
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.innerText;
+            
+            // Simulate processing state
+            submitBtn.innerText = 'Processing...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            setTimeout(() => {
+                document.getElementById('step2').classList.remove('active');
+                document.getElementById('successMessage').classList.remove('hidden');
+                document.getElementById('progress-bar').style.width = '100%';
+                document.getElementById('progress-bar').classList.remove('bg-gold');
+                document.getElementById('progress-bar').classList.add('bg-green-500');
+                
+                // Reset button for future use
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+            }, 1500);
+        }
+
+        function resetForm() {
+            document.getElementById('estimateForm').reset();
+            document.getElementById('successMessage').classList.add('hidden');
+            document.getElementById('step1').classList.add('active');
+            document.getElementById('progress-bar').style.width = '50%';
+            document.getElementById('progress-bar').classList.add('bg-gold');
+            document.getElementById('progress-bar').classList.remove('bg-green-500');
+            document.getElementById('step1-indicator').classList.add('text-forest');
+            document.getElementById('step1-indicator').classList.remove('text-charcoal/60');
+            document.getElementById('step2-indicator').classList.remove('text-forest');
+            currentStep = 1;
+        }
+
+        // Accordion Logic
+        document.querySelectorAll('.accordion-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('svg');
+                const isOpen = content.classList.contains('open');
+                
+                // Close all others
+                document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+                document.querySelectorAll('.accordion-btn svg').forEach(i => i.classList.remove('rotate-180'));
+                document.querySelectorAll('.accordion-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+                if (!isOpen) {
+                    content.classList.add('open');
+                    icon.classList.add('rotate-180');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Gallery Filtering
+        const filterBtns = document.querySelectorAll('.gallery-filter');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button state
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-forest', 'text-ivory');
+                    b.classList.add('bg-white', 'text-charcoal');
+                });
+                btn.classList.remove('bg-white', 'text-charcoal');
+                btn.classList.add('bg-forest', 'text-ivory');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Lightbox Logic
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Sticky Header Shadow on Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-xl');
+            } else {
+                navbar.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body>
+</html>
