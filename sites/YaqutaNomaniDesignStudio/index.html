@@ -1,0 +1,2366 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yaquta Nomani Design Studio is an independent interior design practice based in Sewri, Mumbai, specializing in thoughtful residential, commercial, and retail interior design, space planning, and custom furniture.">
+    <meta name="keywords" content="Interior Designer in Mumbai, Interior Design Studio in Mumbai, Residential Interior Design Mumbai, Contemporary Home Interiors, Kitchen Interior Design, Living Room Interior Design, Bedroom Interior Design, Space Planning and Interior Design, Yaquta Nomani">
+    <meta name="author" content="Yaquta Nomani Design Studio">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Yaquta Nomani Design Studio | Interior Design in Mumbai">
+    <meta property="og:description" content="Thoughtful interiors, considered details, and spaces shaped around the people who experience them. Based in Sewri, Mumbai.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yaqutanomani.design">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80">
+    
+    <title>Yaquta Nomani Design Studio | Interior Design in Mumbai</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "InteriorDesignStudio",
+      "name": "Yaquta Nomani Design Studio",
+      "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
+      "telephone": "099816 96175",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sewri",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "postalCode": "400015",
+        "addressCountry": "IN"
+      },
+      "description": "Independent interior design practice based in Sewri, Mumbai, led by designer Yaquta Nomani, specializing in residential, commercial, and retail spaces.",
+      "founder": {
+        "@type": "Person",
+        "name": "Yaquta Nomani"
+      },
+      "areaServed": "Mumbai",
+      "priceRange": "₹15 lakh - ₹5 crore"
+    }
+    </script>
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --color-ivory: #F5F1E9;
+            --color-sand: #D9CDBB;
+            --color-walnut: #554235;
+            --color-olive: #747B61;
+            --color-charcoal: #292B28;
+            --color-taupe: #B8AA99;
+            --color-white: #FFFFFF;
+            
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 8rem;
+            
+            --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Reset & Base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-ivory);
+            color: var(--color-charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color var(--transition-base);
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid var(--color-walnut);
+            outline-offset: 4px;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 500;
+            line-height: 1.2;
+            color: var(--color-charcoal);
+        }
+
+        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); letter-spacing: -0.02em; }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.01em; }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+        
+        .text-serif { font-family: var(--font-serif); }
+        .text-sans { font-family: var(--font-sans); }
+        .text-uppercase { 
+            text-transform: uppercase; 
+            letter-spacing: 0.15em; 
+            font-size: 0.75rem; 
+            font-weight: 600; 
+        }
+        .text-olive { color: var(--color-olive); }
+        .text-walnut { color: var(--color-walnut); }
+
+        /* Layout Utilities */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .section-padding {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .grid {
+            display: grid;
+            gap: var(--spacing-md);
+        }
+
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+        @media (max-width: 1024px) {
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .grid-3 { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+            .section-padding { padding: var(--spacing-lg) 0; }
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            padding: 1rem 2rem;
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+
+        .btn-primary {
+            background-color: var(--color-walnut);
+            color: var(--color-white);
+            border-color: var(--color-walnut);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-charcoal);
+            border-color: var(--color-charcoal);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--color-charcoal);
+            border-color: var(--color-charcoal);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-charcoal);
+            color: var(--color-white);
+        }
+
+        .btn-text {
+            background: none;
+            border: none;
+            color: var(--color-walnut);
+            padding: 0;
+            border-bottom: 1px solid var(--color-walnut);
+            border-radius: 0;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: var(--spacing-md) 0;
+            transition: background-color var(--transition-base), padding var(--transition-base);
+        }
+
+        .nav.scrolled {
+            background-color: rgba(245, 241, 233, 0.95);
+            backdrop-filter: blur(10px);
+            padding: var(--spacing-sm) 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-charcoal);
+            line-height: 1.1;
+        }
+
+        .brand span {
+            display: block;
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 500;
+            color: var(--color-olive);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-md);
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--color-walnut);
+            transition: width var(--transition-base);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--spacing-xs);
+        }
+
+        @media (max-width: 1024px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background-color: var(--color-ivory);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: var(--spacing-md);
+                transition: right var(--transition-slow);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 1.5rem;
+                font-family: var(--font-serif);
+                text-transform: none;
+                letter-spacing: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                z-index: 1001;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.85);
+        }
+
+        .hero-content {
+            color: var(--color-white);
+            max-width: 800px;
+            padding: var(--spacing-md);
+        }
+
+        .hero-content h1 {
+            color: var(--color-white);
+            margin-bottom: var(--spacing-md);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards 0.3s;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-md);
+            font-weight: 300;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards 0.6s;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: var(--spacing-sm);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards 0.9s;
+        }
+
+        .hero-actions .btn-outline {
+            color: var(--color-white);
+            border-color: var(--color-white);
+        }
+
+        .hero-actions .btn-outline:hover {
+            background-color: var(--color-white);
+            color: var(--color-charcoal);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: var(--spacing-md);
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--color-white);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-xs);
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 1.2s;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 60px;
+            background-color: rgba(255,255,255,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scroll-line::after {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-white);
+            animation: scrollDown 2s ease infinite;
+        }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes scrollDown {
+            0% { top: -100%; }
+            100% { top: 100%; }
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Studio Intro */
+        .studio-intro {
+            background-color: var(--color-white);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .intro-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .intro-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .intro-caption {
+            position: absolute;
+            bottom: var(--spacing-md);
+            left: var(--spacing-md);
+            background-color: rgba(255,255,255,0.9);
+            padding: var(--spacing-sm) var(--spacing-md);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .intro-content h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .intro-content p {
+            margin-bottom: var(--spacing-md);
+            color: var(--color-walnut);
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+
+        .quote {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--color-olive);
+            border-left: 3px solid var(--color-olive);
+            padding-left: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        @media (max-width: 1024px) {
+            .intro-grid { grid-template-columns: 1fr; }
+            .intro-image img { height: 400px; }
+        }
+
+        /* Projects Section */
+        .projects-section {
+            background-color: var(--color-ivory);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .section-header h2 {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .filter-btn {
+            background: none;
+            border: none;
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-taupe);
+            cursor: pointer;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            transition: color var(--transition-base);
+            position: relative;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            color: var(--color-walnut);
+        }
+
+        .filter-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 2px;
+            background-color: var(--color-walnut);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+        }
+
+        .project-card {
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--color-white);
+            transition: transform var(--transition-base);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .project-card.featured {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-info {
+            padding: var(--spacing-md);
+            background-color: var(--color-white);
+        }
+
+        .project-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-olive);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .project-title {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .project-location {
+            font-size: 0.875rem;
+            color: var(--color-taupe);
+        }
+
+        @media (max-width: 1024px) {
+            .projects-grid { grid-template-columns: repeat(2, 1fr); }
+            .project-card.featured { grid-column: span 2; grid-row: span 1; }
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid { grid-template-columns: 1fr; }
+            .project-card.featured { grid-column: span 1; }
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(41, 43, 40, 0.95);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity var(--transition-base), visibility var(--transition-base);
+            overflow-y: auto;
+            padding: var(--spacing-md);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background-color: var(--color-ivory);
+            max-width: 1000px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            transform: translateY(20px);
+            transition: transform var(--transition-base);
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: var(--spacing-md);
+            right: var(--spacing-md);
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-white);
+            border-radius: 50%;
+            transition: background-color var(--transition-base);
+        }
+
+        .modal-close:hover {
+            background-color: var(--color-sand);
+        }
+
+        .modal-body {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+        }
+
+        .modal-gallery {
+            position: relative;
+        }
+
+        .modal-gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 500px;
+        }
+
+        .modal-details {
+            padding: var(--spacing-lg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .modal-details h3 {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .modal-details .project-category {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .detail-block {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .detail-block h4 {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-olive);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .detail-block p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--color-charcoal);
+        }
+
+        @media (max-width: 768px) {
+            .modal-body { grid-template-columns: 1fr; }
+            .modal-gallery img { min-height: 300px; }
+            .modal-details { padding: var(--spacing-md); }
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.95);
+            z-index: 3000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity var(--transition-base);
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: var(--spacing-md);
+            right: var(--spacing-md);
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color var(--transition-base);
+        }
+
+        .lightbox-nav:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .lightbox-prev { left: var(--spacing-md); }
+        .lightbox-next { right: var(--spacing-md); }
+
+        /* Philosophy Section */
+        .philosophy-section {
+            background-color: var(--color-white);
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-lg);
+        }
+
+        .philosophy-item {
+            padding: var(--spacing-md);
+            border-left: 2px solid var(--color-sand);
+            transition: border-color var(--transition-base);
+        }
+
+        .philosophy-item:hover {
+            border-left-color: var(--color-walnut);
+        }
+
+        .philosophy-item h3 {
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.5rem;
+        }
+
+        .philosophy-item p {
+            color: var(--color-walnut);
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .philosophy-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Services Section */
+        .services-section {
+            background-color: var(--color-charcoal);
+            color: var(--color-ivory);
+        }
+
+        .services-section h2, .services-section h3 {
+            color: var(--color-ivory);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-md);
+        }
+
+        .service-card {
+            padding: var(--spacing-md);
+            background-color: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: background-color var(--transition-base);
+        }
+
+        .service-card:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-sand);
+        }
+
+        .service-card ul {
+            list-style: none;
+            font-size: 0.9rem;
+            color: var(--color-taupe);
+            line-height: 1.8;
+        }
+
+        .service-card li::before {
+            content: '—';
+            margin-right: var(--spacing-xs);
+            color: var(--color-olive);
+        }
+
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Materials Section */
+        .materials-section {
+            background-color: var(--color-ivory);
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-sm);
+        }
+
+        .material-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
+            cursor: pointer;
+        }
+
+        .material-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .material-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .material-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: var(--spacing-md);
+            background: linear-gradient(to top, rgba(41,43,40,0.8), transparent);
+            color: var(--color-white);
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            transform: translateY(100%);
+            transition: transform var(--transition-base);
+        }
+
+        .material-item:hover .material-label {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 1024px) {
+            .materials-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .materials-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Journey Section */
+        .journey-section {
+            background-color: var(--color-white);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--color-sand);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--color-ivory);
+            border: 2px solid var(--color-walnut);
+        }
+
+        .timeline-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .timeline-item p {
+            color: var(--color-walnut);
+            line-height: 1.7;
+        }
+
+        /* Designer Profile */
+        .designer-section {
+            background-color: var(--color-sand);
+        }
+
+        .designer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .designer-image {
+            position: relative;
+        }
+
+        .designer-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .designer-content h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .designer-content p {
+            margin-bottom: var(--spacing-md);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 1024px) {
+            .designer-grid { grid-template-columns: 1fr; }
+            .designer-image img { height: 400px; }
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background-color: var(--color-ivory);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 300px;
+            gap: var(--spacing-sm);
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .gallery-item.tall { grid-row: span 2; }
+        .gallery-item.wide { grid-column: span 2; }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 1024px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-item.wide { grid-column: span 2; }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 250px; }
+            .gallery-item.wide, .gallery-item.tall { grid-column: span 1; grid-row: span 1; }
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--color-white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--color-sand);
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: var(--spacing-md) 0;
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--color-charcoal);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color var(--transition-base);
+        }
+
+        .faq-question:hover {
+            color: var(--color-walnut);
+        }
+
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            transition: transform var(--transition-base);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-base), padding var(--transition-base);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: var(--spacing-md);
+        }
+
+        .faq-answer p {
+            color: var(--color-walnut);
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--color-charcoal);
+            color: var(--color-ivory);
+        }
+
+        .contact-section h2 {
+            color: var(--color-ivory);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: var(--spacing-lg);
+        }
+
+        .contact-info h3 {
+            color: var(--color-sand);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.5rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+            color: var(--color-taupe);
+        }
+
+        .contact-detail svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .contact-form {
+            background-color: rgba(255,255,255,0.05);
+            padding: var(--spacing-lg);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+        }
+
+        label {
+            display: block;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-xs);
+            color: var(--color-sand);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: var(--spacing-sm);
+            background-color: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: var(--color-ivory);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: border-color var(--transition-base);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--color-sand);
+        }
+
+        select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23D9CDBB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+        }
+
+        select option {
+            background-color: var(--color-charcoal);
+            color: var(--color-ivory);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-message {
+            margin-top: var(--spacing-md);
+            padding: var(--spacing-sm);
+            display: none;
+        }
+
+        .form-message.success {
+            display: block;
+            background-color: rgba(116, 123, 97, 0.2);
+            color: var(--color-sand);
+            border: 1px solid var(--color-olive);
+        }
+
+        .form-message.error {
+            display: block;
+            background-color: rgba(255, 100, 100, 0.1);
+            color: #ffcccc;
+            border: 1px solid #ff6666;
+        }
+
+        @media (max-width: 1024px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-charcoal);
+            color: var(--color-taupe);
+            padding: var(--spacing-lg) 0 var(--spacing-md);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .footer-brand {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--color-ivory);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-brand span {
+            display: block;
+            font-family: var(--font-sans);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-olive);
+            margin-top: var(--spacing-xs);
+        }
+
+        .footer-links h4 {
+            color: var(--color-ivory);
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-ivory);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--spacing-md);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; gap: var(--spacing-md); }
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: var(--spacing-md);
+            right: var(--spacing-md);
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-walnut);
+            color: var(--color-white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity var(--transition-base), visibility var(--transition-base), transform var(--transition-base);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-4px);
+            background-color: var(--color-charcoal);
+        }
+
+        /* Utility */
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="container nav-inner">
+            <a href="#hero" class="brand">
+                YAQUTA NOMANI
+                <span>Design Studio</span>
+            </a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" onclick="closeMobileMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+                <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+                <li><a href="#philosophy" onclick="closeMobileMenu()">Design Approach</a></li>
+                <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
+                <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+                <li><a href="#contact" class="btn btn-primary" onclick="closeMobileMenu()">Discuss Your Project</a></li>
+            </ul>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1920&q=80" alt="Contemporary residential interior with natural materials and warm lighting">
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Spaces That Reflect the Way You Live.</h1>
+                    <p>Thoughtful interiors, considered details and spaces shaped around the people who experience them.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Explore Projects</a>
+                        <a href="#contact" class="btn btn-outline">Start a Conversation</a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- Studio Introduction -->
+        <section class="section-padding studio-intro" id="about">
+            <div class="container">
+                <div class="intro-grid reveal">
+                    <div class="intro-image">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Elegant interior design detail">
+                        <div class="intro-caption">Yaquta Nomani Design Studio</div>
+                    </div>
+                    <div class="intro-content">
+                        <span class="text-uppercase text-olive">About the Studio</span>
+                        <h2>Design Is Not Just About How a Space Looks. It Is About How It Works and Feels.</h2>
+                        <div class="quote">"A designer by profession, a thinker by habit, and an inventor by choice."</div>
+                        <p>Yaquta Nomani, a graduate of the Academy of Interiors INIFD, brings over five years of dedicated experience to every project. Having collaborated with varied organizations, the studio has cultivated a deep understanding of designing and executing residential and commercial spaces, alongside styling for magazine photoshoots and art installations.</p>
+                        <p>We believe that good design is a key part of every structure. We strive to make each space safe, appealing, and profoundly functional, translating ideas into innovative design that honors the relationship between creativity, spatial thinking, material selection, and everyday living.</p>
+                        <a href="#designer" class="btn btn-text">Meet the Designer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="section-padding projects-section" id="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="text-uppercase text-olive">Portfolio</span>
+                    <h2>Selected Spaces. Individual Stories.</h2>
+                </div>
+
+                <div class="filter-buttons reveal">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="residential">Residential Interiors</button>
+                    <button class="filter-btn" data-filter="living">Living Spaces</button>
+                    <button class="filter-btn" data-filter="bedrooms">Bedrooms</button>
+                    <button class="filter-btn" data-filter="kitchens">Kitchens</button>
+                    <button class="filter-btn" data-filter="commercial">Commercial</button>
+                </div>
+
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Projects injected via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Philosophy -->
+        <section class="section-padding philosophy-section" id="philosophy">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="text-uppercase text-olive">Our Approach</span>
+                    <h2>A Thoughtful Approach to Every Detail.</h2>
+                </div>
+                
+                <div class="philosophy-grid reveal">
+                    <div class="philosophy-item">
+                        <h3>Understanding the Space</h3>
+                        <p>Study the proportions, layout, natural light and practical requirements of the space to establish a strong foundational strategy.</p>
+                    </div>
+                    <div class="philosophy-item">
+                        <h3>Understanding the People</h3>
+                        <p>Consider the client's lifestyle, routines, preferences and aspirations to ensure the design serves its inhabitants authentically.</p>
+                    </div>
+                    <div class="philosophy-item">
+                        <h3>Exploring Materials</h3>
+                        <p>Explore finishes, textures, surfaces and colours to establish a coherent, tactile design language that ages gracefully.</p>
+                    </div>
+                    <div class="philosophy-item">
+                        <h3>Balancing Form and Function</h3>
+                        <p>Bring together aesthetics, usability, storage, movement and comfort without compromising on visual harmony.</p>
+                    </div>
+                    <div class="philosophy-item">
+                        <h3>Refining the Details</h3>
+                        <p>Pay meticulous attention to furniture proportions, lighting, joinery and the smaller elements that complete a space.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="section-padding services-section" id="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="text-uppercase" style="color: var(--color-olive);">Expertise</span>
+                    <h2>Design Solutions for Spaces That Matter.</h2>
+                </div>
+
+                <div class="services-grid reveal">
+                    <div class="service-card">
+                        <h3>Residential Interior Design</h3>
+                        <ul>
+                            <li>Living room interiors</li>
+                            <li>Bedroom design</li>
+                            <li>Kitchen design</li>
+                            <li>Furniture and storage planning</li>
+                            <li>Colour and material selection</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Space Planning</h3>
+                        <ul>
+                            <li>Layout development</li>
+                            <li>Furniture placement</li>
+                            <li>Space utilisation</li>
+                            <li>Storage planning</li>
+                            <li>Functional circulation</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Design Concepts & Visualisation</h3>
+                        <ul>
+                            <li>Concept development</li>
+                            <li>Moodboards</li>
+                            <li>Material palettes</li>
+                            <li>Colour exploration</li>
+                            <li>3D rendering</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Commercial Interiors</h3>
+                        <ul>
+                            <li>Office spaces</li>
+                            <li>Workspaces</li>
+                            <li>Retail interiors</li>
+                            <li>Home office design</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Renovation & Redesign</h3>
+                        <ul>
+                            <li>Existing-space improvements</li>
+                            <li>Interior refreshes</li>
+                            <li>Layout improvements</li>
+                            <li>Material and finish updates</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <h3>Furniture & Detail Design</h3>
+                        <ul>
+                            <li>Custom furniture concepts</li>
+                            <li>Storage solutions</li>
+                            <li>Built-in furniture</li>
+                            <li>Interior detailing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Materials and Details -->
+        <section class="section-padding materials-section" id="materials">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="text-uppercase text-olive">Craft</span>
+                    <h2>The Beauty Is in the Details.</h2>
+                </div>
+
+                <div class="materials-grid reveal">
+                    <div class="material-item">
+                        <img src="https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?auto=format&fit=crop&w=600&q=80" alt="Natural wood texture">
+                        <div class="material-label">Natural Wood</div>
+                    </div>
+                    <div class="material-item">
+                        <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=600&q=80" alt="Stone and marble surfaces">
+                        <div class="material-label">Stone & Marble</div>
+                    </div>
+                    <div class="material-item">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="Textured wall finishes">
+                        <div class="material-label">Textured Finishes</div>
+                    </div>
+                    <div class="material-item">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80" alt="Custom upholstery and fabrics">
+                        <div class="material-label">Custom Upholstery</div>
+                    </div>
+                    <div class="material-item">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Kitchen surfaces and cabinetry">
+                        <div class="material-label">Kitchen Surfaces</div>
+                    </div>
+                    <div class="material-item">
+                        <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80" alt="Architectural lighting details">
+                        <div class="material-label">Architectural Lighting</div>
+                    </div>
+                    <div class="material-item">
+                        <img src="https://images.unsplash.com/photo-1532372320572-cda25653a26d?auto=format&fit=crop&w=600&q=80" alt="Decorative objects and styling">
+                        <div class="material-label">Decorative Objects</div>
+                    </div>
+                    <div class="material-item">
+                        <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=600&q=80" alt="Custom furniture detailing">
+                        <div class="material-label">Custom Furniture</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Journey -->
+        <section class="section-padding journey-section" id="journey">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="text-uppercase text-olive">Process</span>
+                    <h2>From an Idea to a Space You Call Your Own.</h2>
+                </div>
+
+                <div class="timeline reveal">
+                    <div class="timeline-item">
+                        <h3>1. Initial Conversation</h3>
+                        <p>Understand the space, requirements and design aspirations through an open, collaborative dialogue.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>2. Site & Space Understanding</h3>
+                        <p>Review the existing conditions, measurements, and practical considerations of your property.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>3. Concept Development</h3>
+                        <p>Explore the design direction, moodboards, spatial layouts, and material possibilities.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>4. Design Refinement</h3>
+                        <p>Develop detailed layouts, finalise selections, and refine visual details for approval.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>5. Design Coordination</h3>
+                        <p>Coordinate the agreed design information, specifications, and relevant next steps with partners.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>6. Project Completion</h3>
+                        <p>Support the final stages, styling, and handover according to the studio's agreed scope.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Designer Profile -->
+        <section class="section-padding designer-section" id="designer">
+            <div class="container">
+                <div class="designer-grid reveal">
+                    <div class="designer-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Yaquta Nomani, Principal Designer">
+                    </div>
+                    <div class="designer-content">
+                        <span class="text-uppercase text-olive">Principal Designer</span>
+                        <h2>Meet Yaquta Nomani.</h2>
+                        <p>Yaquta Nomani has graduated from the Academy of Interiors INIFD, Indore, and has been working in the field of interior design for more than five years. She has worked with three varied organizations to date, gaining comprehensive knowledge in designing and executing residential and commercial spaces, along with styling for magazine photoshoots and art installations.</p>
+                        <p>As the founder of Yaquta Nomani Design Studio, she specializes in translating ideas into innovative design. The studio understands that good design is a key part of every structure, striving to make each design safe, appealing, and functional.</p>
+                        <p>Her creative perspective is rooted in the belief that spaces should not only be visually compelling but should also deeply support the routines, aspirations, and well-being of the people who inhabit them.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="section-padding gallery-section" id="gallery">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="text-uppercase text-olive">Visual Inspiration</span>
+                    <h2>Curated Design Details.</h2>
+                </div>
+
+                <div class="gallery-grid reveal">
+                    <div class="gallery-item tall" onclick="openLightbox(0)">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Living room interior design detail">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(1)">
+                        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80" alt="Bedroom interior design">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(2)">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=80" alt="Kitchen design detail">
+                    </div>
+                    <div class="gallery-item wide" onclick="openLightbox(3)">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Architectural details and furniture">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(4)">
+                        <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=800&q=80" alt="Material textures and finishes">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(5)">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Custom furniture design">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section-padding faq-section" id="faq">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="text-uppercase text-olive">Questions</span>
+                    <h2>Frequently Asked Questions.</h2>
+                </div>
+
+                <div class="faq-container reveal">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            What types of interior design projects does the studio undertake?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We specialize in Residential, Commercial, and Retail spaces, translating ideas into innovative, functional design tailored to your specific needs.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Does the studio work on residential projects?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, residential interiors are a core focus. We work on apartments, studios, and independent homes across Mumbai, handling everything from single rooms to full-home interiors.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Can I consult the designer for a single room?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely. We offer consultations and design services for individual spaces, including living rooms, bedrooms, kitchens, and home offices.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Do you offer 3D visualisations?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, 3D rendering and visualisation are part of our design concept phase, helping you clearly understand the proposed spatial layout and material palette before execution.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            Which locations does the studio serve?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The studio is based in Sewri, Mumbai, and primarily serves clients across Mumbai and the surrounding metropolitan region.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            How can I arrange an initial consultation?
+                            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can reach out via the contact form below or call us directly at 099816 96175 to schedule an initial conversation about your project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section-padding contact-section" id="contact">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="text-uppercase" style="color: var(--color-olive);">Enquire</span>
+                    <h2>Let's Create a Space That Feels Like Yours.</h2>
+                </div>
+
+                <div class="contact-grid reveal">
+                    <div class="contact-info">
+                        <h3>Yaquta Nomani Design Studio</h3>
+                        
+                        <div class="contact-detail">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>Sewri, Mumbai, Maharashtra 400015, India</span>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <span>099816 96175</span>
+                        </div>
+
+                        <div class="contact-detail">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <span>Enquire via the form for project discussions</span>
+                        </div>
+
+                        <p style="margin-top: var(--spacing-md); color: var(--color-taupe); font-size: 0.9rem;">
+                            Typical project investments range from ₹15 lakh to ₹5 crore, depending on scope and requirements. We tailor our services to align with your vision and practical considerations.
+                        </p>
+                    </div>
+
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,}">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Project Location</label>
+                                <input type="text" id="location" name="location" placeholder="e.g., Mumbai">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="projectType">Project Type *</label>
+                                <select id="projectType" name="projectType" required>
+                                    <option value="">Select a type</option>
+                                    <option value="residential">Residential Interior Design</option>
+                                    <option value="living">Living Room</option>
+                                    <option value="bedroom">Bedroom</option>
+                                    <option value="kitchen">Kitchen</option>
+                                    <option value="full-home">Full Home Interiors</option>
+                                    <option value="commercial">Commercial Interiors</option>
+                                    <option value="renovation">Renovation / Redesign</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="propertyType">Property Type</label>
+                                <select id="propertyType" name="propertyType">
+                                    <option value="">Select property type</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="villa">Villa / Independent House</option>
+                                    <option value="studio">Studio Apartment</option>
+                                    <option value="commercial">Commercial Space</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="area">Approximate Area (sq. ft.)</label>
+                                <input type="text" id="area" name="area" placeholder="Optional">
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Estimated Budget</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Select budget range</option>
+                                    <option value="15-25">₹15 Lakh - ₹25 Lakh</option>
+                                    <option value="25-50">₹25 Lakh - ₹50 Lakh</option>
+                                    <option value="50-100">₹50 Lakh - ₹1 Crore</option>
+                                    <option value="100+">₹1 Crore+</option>
+                                    <option value="discuss">Prefer to discuss</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline">Expected Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select timeline</option>
+                                <option value="1-3">1 - 3 months</option>
+                                <option value="3-6">3 - 6 months</option>
+                                <option value="6-12">6 - 12 months</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Project Description *</label>
+                            <textarea id="description" name="description" required placeholder="Tell us about your space, your vision, and any specific requirements..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Enquiry</button>
+                        
+                        <div class="form-message" id="formMessage"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        YAQUTA NOMANI
+                        <span>Design Studio</span>
+                    </div>
+                    <p style="color: var(--color-taupe); line-height: 1.7; max-width: 400px;">
+                        An independent interior design practice based in Mumbai, crafting people-centric environments with thoughtful spatial planning and refined materiality.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Residential Design</a></li>
+                        <li><a href="#services">Space Planning</a></li>
+                        <li><a href="#services">3D Visualisation</a></li>
+                        <li><a href="#services">Renovation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Yaquta Nomani Design Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <!-- Project Modal -->
+    <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close project details">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-body">
+                <div class="modal-gallery" id="modalGallery">
+                    <!-- Images injected via JS -->
+                </div>
+                <div class="modal-details">
+                    <span class="project-category" id="modalCategory"></span>
+                    <h3 id="modalTitle"></h3>
+                    <p class="project-location" id="modalLocation"></p>
+                    
+                    <div class="detail-block">
+                        <h4>Description</h4>
+                        <p id="modalDescription"></p>
+                    </div>
+                    
+                    <div class="detail-block">
+                        <h4>Design Concept</h4>
+                        <p id="modalConcept"></p>
+                    </div>
+                    
+                    <div class="detail-block">
+                        <h4>Materials & Details</h4>
+                        <p id="modalMaterials"></p>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="closeModal(); window.location.href='#contact';" style="margin-top: var(--spacing-md);">Discuss Similar Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <img src="" alt="Enlarged project view" class="lightbox-img" id="lightboxImg">
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        // Project Data based on authentic Houzz portfolio
+        const projects = [
+            {
+                id: 1,
+                title: "Apartment - Godrej Vikhroli",
+                category: "Residential Interiors",
+                filter: "residential",
+                location: "Vikhroli, Mumbai",
+                description: "A contemporary residential space balancing aesthetics and everyday functionality, designed for modern family living.",
+                concept: "Focusing on natural light and fluid movement between living and dining areas, creating an open yet defined spatial experience.",
+                materials: "Natural wood finishes, muted olive accents, warm ivory walls, and custom storage solutions.",
+                images: [
+                    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
+                    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80"
+                ]
+            },
+            {
+                id: 2,
+                title: "Apartment - Pride Palm",
+                category: "Bedrooms",
+                filter: "bedrooms",
+                location: "Mumbai, Maharashtra",
+                description: "A serene bedroom retreat designed for rest and rejuvenation, prioritizing comfort and calm.",
+                concept: "Soft textures and warm, layered lighting to create a calming atmosphere that supports healthy sleep routines.",
+                materials: "Walnut brown woodwork, soft taupe upholstery, and textured wall finishes.",
+                images: [
+                    "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80",
+                    "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80"
+                ]
+            },
+            {
+                id: 3,
+                title: "Contemporary Kitchen Design",
+                category: "Kitchens",
+                filter: "kitchens",
+                location: "Mumbai, Maharashtra",
+                description: "Functional and elegant kitchen space tailored for modern culinary routines and family gatherings.",
+                concept: "Maximizing storage and workflow efficiency while maintaining a clean, minimalist aesthetic.",
+                materials: "Custom kitchen cabinets, stone countertops, matte finishes, and integrated lighting.",
+                images: [
+                    "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80",
+                    "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80"
+                ]
+            },
+            {
+                id: 4,
+                title: "Studio Apartment Redesign",
+                category: "Living Spaces",
+                filter: "living",
+                location: "Mumbai, Maharashtra",
+                description: "Smart space planning for a compact urban studio, maximizing utility without sacrificing style.",
+                concept: "Multi-functional furniture and clever, hidden storage to maintain visual calm in a compact footprint.",
+                materials: "Light wood tones, reflective surfaces, and soft, durable textiles.",
+                images: [
+                    "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+                    "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80"
+                ]
+            },
+            {
+                id: 5,
+                title: "Mini Workstation",
+                category: "Commercial Interiors",
+                filter: "commercial",
+                location: "Mumbai, Maharashtra",
+                description: "A focused, ergonomic workspace designed for productivity and creative flow.",
+                concept: "Balancing professional aesthetics with personal comfort, ensuring adequate task lighting and organization.",
+                materials: "Muted olive accents, walnut desk surfaces, and dedicated task lighting.",
+                images: [
+                    "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+                    "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80"
+                ]
+            },
+            {
+                id: 6,
+                title: "Washroom Design",
+                category: "Residential Interiors",
+                filter: "residential",
+                location: "Mumbai, Maharashtra",
+                description: "A refined bathroom space focusing on hygiene, comfort, and elegant materiality.",
+                concept: "Creating a spa-like retreat within the home through thoughtful fixture placement and moisture-resistant finishes.",
+                materials: "Natural stone tiles, custom bathroom vanities, and warm ambient lighting.",
+                images: [
+                    "https://images.unsplash.com/photo-1552321901-71137868f0ea?auto=format&fit=crop&w=1200&q=80",
+                    "https://images.unsplash.com/photo-1620626012053-1c12164d59fc?auto=format&fit=crop&w=1200&q=80"
+                ]
+            }
+        ];
+
+        // Gallery Images for Lightbox
+        const galleryImages = [
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80",
+            "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1600&q=80",
+            "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1600&q=80",
+            "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=80",
+            "https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=1600&q=80",
+            "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1600&q=80"
+        ];
+
+        // DOM Elements
+        const navbar = document.getElementById('navbar');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        const projectsGrid = document.getElementById('projectsGrid');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectModal = document.getElementById('projectModal');
+        const modalClose = document.getElementById('modalClose');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        const backToTop = document.getElementById('backToTop');
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+
+        let currentLightboxIndex = 0;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProjects('all');
+            setupIntersectionObserver();
+            setupEventListeners();
+        });
+
+        // Render Projects
+        function renderProjects(filter) {
+            projectsGrid.innerHTML = '';
+            const filtered = filter === 'all' ? projects : projects.filter(p => p.filter === filter || (filter === 'living' && p.category.includes('Living')));
+            
+            filtered.forEach((project, index) => {
+                const card = document.createElement('div');
+                card.className = `project-card reveal ${index === 0 ? 'featured' : ''}`;
+                card.onclick = () => openModal(project);
+                card.innerHTML = `
+                    <img src="${project.images[0]}" alt="${project.title} - ${project.category}" loading="lazy">
+                    <div class="project-info">
+                        <div class="project-category">${project.category}</div>
+                        <h3 class="project-title">${project.title}</h3>
+                        <div class="project-location">${project.location}</div>
+                    </div>
+                `;
+                projectsGrid.appendChild(card);
+            });
+            
+            // Re-trigger observer for new elements
+            setupIntersectionObserver();
+        }
+
+        // Filter Buttons
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderProjects(btn.dataset.filter);
+            });
+        });
+
+        // Modal Functions
+        function openModal(project) {
+            document.getElementById('modalCategory').textContent = project.category;
+            document.getElementById('modalTitle').textContent = project.title;
+            document.getElementById('modalLocation').textContent = project.location;
+            document.getElementById('modalDescription').textContent = project.description;
+            document.getElementById('modalConcept').textContent = project.concept;
+            document.getElementById('modalMaterials').textContent = project.materials;
+            
+            const gallery = document.getElementById('modalGallery');
+            gallery.innerHTML = project.images.map((img, idx) => 
+                `<img src="${img}" alt="${project.title} view ${idx + 1}" style="cursor: pointer;" onclick="openLightboxFromModal(${idx}, '${project.id}')">`
+            ).join('');
+            
+            projectModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            projectModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Lightbox Functions
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            lightboxImg.src = galleryImages[currentLightboxIndex];
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openLightboxFromModal(imgIndex, projectId) {
+            // For simplicity in this single file, we'll map modal images to the lightbox
+            const project = projects.find(p => p.id == projectId);
+            if (project) {
+                // Temporarily replace gallery images with project images for the lightbox session
+                window.tempGallery = project.images;
+                currentLightboxIndex = imgIndex;
+                lightboxImg.src = window.tempGallery[currentLightboxIndex];
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+            window.tempGallery = null;
+        }
+
+        function nextImage() {
+            const source = window.tempGallery || galleryImages;
+            currentLightboxIndex = (currentLightboxIndex + 1) % source.length;
+            lightboxImg.src = source[currentLightboxIndex];
+        }
+
+        function prevImage() {
+            const source = window.tempGallery || galleryImages;
+            currentLightboxIndex = (currentLightboxIndex - 1 + source.length) % source.length;
+            lightboxImg.src = source[currentLightboxIndex];
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+                
+                // Open clicked if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Form Validation
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const projectType = document.getElementById('projectType').value;
+            const description = document.getElementById('description').value.trim();
+            
+            if (!name || !phone || !email || !projectType || !description) {
+                showFormMessage('Please fill in all required fields.', 'error');
+                return;
+            }
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showFormMessage('Please enter a valid email address.', 'error');
+                return;
+            }
+            
+            const phoneRegex = /^[0-9]{10,}$/;
+            if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
+                showFormMessage('Please enter a valid phone number.', 'error');
+                return;
+            }
+            
+            // Simulate submission
+            showFormMessage('Thank you for your enquiry. We will review your project details and contact you shortly.', 'success');
+            contactForm.reset();
+        });
+
+        function showFormMessage(message, type) {
+            formMessage.textContent = message;
+            formMessage.className = `form-message ${type}`;
+            setTimeout(() => {
+                formMessage.className = 'form-message';
+            }, 5000);
+        }
+
+        // Event Listeners
+        function setupEventListeners() {
+            // Mobile Menu
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            window.closeMobileMenu = () => {
+                navLinks.classList.remove('active');
+            };
+
+            // Modal Close
+            modalClose.addEventListener('click', closeModal);
+            projectModal.addEventListener('click', (e) => {
+                if (e.target === projectModal) closeModal();
+            });
+
+            // Lightbox Controls
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxNext.addEventListener('click', nextImage);
+            lightboxPrev.addEventListener('click', prevImage);
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            // Keyboard Navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    if (lightbox.classList.contains('active')) closeLightbox();
+                    else if (projectModal.classList.contains('active')) closeModal();
+                }
+                if (lightbox.classList.contains('active')) {
+                    if (e.key === 'ArrowRight') nextImage();
+                    if (e.key === 'ArrowLeft') prevImage();
+                }
+            });
+
+            // Scroll Events
+            window.addEventListener('scroll', () => {
+                // Navbar
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                
+                // Back to Top
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Intersection Observer for Scroll Animations
+        function setupIntersectionObserver() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                observer.observe(el);
+            });
+        }
+    </script>
+</body>
+</html>
