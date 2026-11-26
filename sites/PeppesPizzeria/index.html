@@ -1,0 +1,2860 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#343F2D" />
+<title>Peppe's Pizzeria And Cafe — Pizza, Pasta & Good Times in Bandra East, Mumbai</title>
+<meta name="description" content="Peppe's Pizzeria And Cafe in Bandra East, Mumbai — a neighbourhood pizzeria serving freshly baked pizzas, pasta, tacos and cafe classics. Dine in, take away or order via WhatsApp. Opposite Kherwadi Police Station." />
+<meta name="keywords" content="Peppe's Pizzeria, Pizza Bandra East, Best Pizzeria Bandra East, Italian Restaurant Bandra East, Cafe Bandra East Mumbai, Pizza Near Kherwadi, Restaurants Near Bandra East, Pizzeria Near Me, Bandra pizza delivery, pasta Bandra" />
+<meta name="author" content="Peppe's Pizzeria And Cafe" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://peppespizzeria.example/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="restaurant.restaurant" />
+<meta property="og:title" content="Peppe's Pizzeria And Cafe — Bandra East, Mumbai" />
+<meta property="og:description" content="Good Pizza. Great Company. Always. Discover freshly baked pizzas, pasta, tacos and cafe classics at Peppe's in Bandra East." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1200&q=80" />
+<meta property="og:locale" content="en_IN" />
+<meta property="og:site_name" content="Peppe's Pizzeria And Cafe" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Peppe's Pizzeria And Cafe — Bandra East" />
+<meta name="twitter:description" content="Good Pizza. Great Company. Always. Neighbourhood pizzeria in Bandra East, Mumbai." />
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1200&q=80" />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Peppe's Pizzeria And Cafe",
+  "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1200&q=80",
+  "description": "A neighbourhood pizzeria and cafe in Bandra East serving pizzas, pasta, tacos and cafe classics.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Shop 1 & 2, CTS 629, Ground and Upper Floor, Vedant Bhavan, opposite Kherwadi Police Station",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "postalCode": "400051",
+    "addressCountry": "IN"
+  },
+  "telephone": "+919004014409",
+  "priceRange": "₹₹",
+  "servesCuisine": ["Pizza", "Italian", "Cafe"],
+  "acceptsReservations": "True",
+  "url": "https://peppespizzeria.example/",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "19.0596",
+    "longitude": "72.8510"
+  }
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* =========================================================
+   PEPPE'S PIZZERIA AND CAFE — DESIGN SYSTEM
+   ========================================================= */
+
+:root{
+  --cream:#F5F0E6;
+  --cream-soft:#EFE8D9;
+  --olive:#343F2D;
+  --olive-soft:#45523B;
+  --burgundy:#642F37;
+  --burgundy-deep:#4E242B;
+  --espresso:#30251F;
+  --sage:#A7AC91;
+  --sage-soft:#C3C7B0;
+  --beige:#DDD2C0;
+  --beige-soft:#E8DFCF;
+  --white:#FFFFFF;
+  --shadow-sm:0 2px 8px rgba(48,37,31,.06);
+  --shadow-md:0 8px 24px rgba(48,37,31,.10);
+  --shadow-lg:0 20px 60px rgba(48,37,31,.18);
+  --radius-sm:6px;
+  --radius-md:14px;
+  --radius-lg:24px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --container:1280px;
+  --nav-h:78px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  background:var(--cream);
+  color:var(--espresso);
+  line-height:1.6;
+  font-weight:400;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+input,textarea,select{font:inherit;color:inherit}
+
+/* Typography */
+.serif{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-.01em}
+.italic{font-style:italic}
+.eyebrow{
+  font-family:'Inter',sans-serif;
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--olive);
+  display:inline-flex;
+  align-items:center;
+  gap:.6rem;
+}
+.eyebrow::before{
+  content:"";
+  width:28px;height:1px;background:var(--olive);
+  display:inline-block;
+}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;color:var(--espresso);line-height:1.1;letter-spacing:-.015em}
+h1{font-size:clamp(2.6rem,6vw,5.4rem);font-weight:500}
+h2{font-size:clamp(2rem,4.2vw,3.6rem)}
+h3{font-size:clamp(1.4rem,2.4vw,2rem)}
+h4{font-size:clamp(1.1rem,1.6vw,1.35rem)}
+p{color:#4a3e35}
+
+.container{max-width:var(--container);margin:0 auto;padding:0 clamp(1.25rem,3vw,2.5rem)}
+section{padding:clamp(4rem,8vw,7.5rem) 0;position:relative}
+
+/* Skip link */
+.skip-link{
+  position:absolute;left:-9999px;top:0;
+  background:var(--olive);color:var(--white);
+  padding:.75rem 1.25rem;z-index:9999;
+  border-radius:0 0 var(--radius-sm) 0;
+}
+.skip-link:focus{left:0}
+
+/* Focus */
+:focus-visible{
+  outline:2px solid var(--burgundy);
+  outline-offset:3px;
+  border-radius:3px;
+}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  padding:.95rem 1.75rem;
+  font-family:'Inter',sans-serif;
+  font-size:.82rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;
+  border-radius:999px;
+  transition:all .35s var(--ease);
+  cursor:pointer;
+  border:1px solid transparent;
+  white-space:nowrap;
+}
+.btn-primary{background:var(--burgundy);color:var(--white)}
+.btn-primary:hover{background:var(--burgundy-deep);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-secondary{background:transparent;color:var(--white);border-color:rgba(255,255,255,.6)}
+.btn-secondary:hover{background:var(--white);color:var(--espresso);border-color:var(--white)}
+.btn-ghost{background:transparent;color:var(--espresso);border-color:var(--espresso)}
+.btn-ghost:hover{background:var(--espresso);color:var(--white)}
+.btn-olive{background:var(--olive);color:var(--white)}
+.btn-olive:hover{background:var(--olive-soft);transform:translateY(-2px)}
+.btn svg{width:16px;height:16px}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+.nav{
+  position:fixed;top:0;left:0;right:0;
+  z-index:1000;
+  padding:0 clamp(1.25rem,3vw,2.5rem);
+  height:var(--nav-h);
+  display:flex;align-items:center;
+  transition:all .4s var(--ease);
+  background:transparent;
+}
+.nav.scrolled{
+  background:rgba(245,240,230,.96);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  box-shadow:0 1px 0 rgba(48,37,31,.08);
+}
+.nav-inner{
+  max-width:var(--container);
+  width:100%;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:2rem;
+}
+.logo{
+  font-family:'Fraunces',serif;
+  font-size:1.6rem;
+  font-weight:700;
+  color:var(--white);
+  letter-spacing:-.02em;
+  display:flex;align-items:center;gap:.5rem;
+  transition:color .4s var(--ease);
+}
+.nav.scrolled .logo{color:var(--espresso)}
+.logo-dot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--burgundy);
+  display:inline-block;
+}
+.nav.scrolled .logo-dot{background:var(--burgundy)}
+.logo:not(.scrolled) .logo-dot{background:var(--white)}
+
+.nav-links{
+  display:flex;align-items:center;gap:2.25rem;
+}
+.nav-links a{
+  font-size:.82rem;font-weight:500;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--white);
+  position:relative;
+  transition:color .3s var(--ease);
+}
+.nav.scrolled .nav-links a{color:var(--espresso)}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:-6px;
+  width:0;height:1px;background:currentColor;
+  transition:width .35s var(--ease);
+}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{
+  background:var(--burgundy);color:var(--white)!important;
+  padding:.7rem 1.3rem;border-radius:999px;
+  font-size:.75rem!important;letter-spacing:.14em!important;
+  transition:all .35s var(--ease)!important;
+}
+.nav-cta::after{display:none!important}
+.nav-cta:hover{background:var(--burgundy-deep);transform:translateY(-1px)}
+.nav.scrolled .nav-cta{color:var(--white)!important}
+
+/* Mobile menu toggle */
+.menu-toggle{
+  display:none;
+  width:44px;height:44px;
+  flex-direction:column;justify-content:center;align-items:center;
+  gap:6px;
+  z-index:1001;
+}
+.menu-toggle span{
+  width:24px;height:2px;background:var(--white);
+  transition:all .35s var(--ease);
+  border-radius:2px;
+}
+.nav.scrolled .menu-toggle span{background:var(--espresso)}
+.menu-toggle.open span:nth-child(1){transform:translateY(8px) rotate(45deg);background:var(--espresso)}
+.menu-toggle.open span:nth-child(2){opacity:0}
+.menu-toggle.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);background:var(--espresso)}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;align-items:center;
+  overflow:hidden;
+  padding:calc(var(--nav-h) + 2rem) 0 4rem;
+  color:var(--white);
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1513104890138-7c749659a591?w=2000&q=85');
+  background-size:cover;
+  background-position:center;
+  transform:scale(1.05);
+  transition:transform 10s linear;
+  will-change:transform;
+}
+.hero.in-view .hero-bg{transform:scale(1)}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(48,37,31,.35) 0%,rgba(48,37,31,.55) 55%,rgba(48,37,31,.85) 100%);
+}
+.hero-content{
+  position:relative;z-index:2;
+  max-width:880px;
+}
+.hero-eyebrow{
+  color:var(--beige);
+  font-size:.72rem;font-weight:600;
+  letter-spacing:.28em;text-transform:uppercase;
+  margin-bottom:1.5rem;
+  opacity:0;transform:translateY(20px);
+  animation:fadeUp .9s var(--ease-out) .2s forwards;
+}
+.hero-eyebrow::before{background:var(--beige)}
+.hero h1{
+  color:var(--white);
+  margin-bottom:1.5rem;
+  opacity:0;transform:translateY(30px);
+  animation:fadeUp 1s var(--ease-out) .4s forwards;
+}
+.hero h1 em{
+  font-style:italic;
+  font-weight:400;
+  color:var(--beige);
+}
+.hero-sub{
+  font-size:clamp(1rem,1.4vw,1.2rem);
+  color:rgba(255,255,255,.88);
+  max-width:560px;
+  margin-bottom:2.5rem;
+  opacity:0;transform:translateY(20px);
+  animation:fadeUp .9s var(--ease-out) .6s forwards;
+}
+.hero-ctas{
+  display:flex;gap:1rem;flex-wrap:wrap;
+  opacity:0;transform:translateY(20px);
+  animation:fadeUp .9s var(--ease-out) .8s forwards;
+}
+.scroll-indicator{
+  position:absolute;
+  bottom:2.5rem;left:50%;transform:translateX(-50%);
+  z-index:2;
+  color:var(--white);
+  font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+  display:flex;flex-direction:column;align-items:center;gap:.8rem;
+  opacity:0;animation:fadeIn 1s var(--ease-out) 1.4s forwards;
+}
+.scroll-indicator::after{
+  content:"";width:1px;height:40px;background:var(--white);
+  animation:scrollLine 2s var(--ease) infinite;
+  transform-origin:top;
+}
+
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{to{opacity:1}}
+@keyframes scrollLine{
+  0%{transform:scaleY(0);transform-origin:top}
+  50%{transform:scaleY(1);transform-origin:top}
+  51%{transform:scaleY(1);transform-origin:bottom}
+  100%{transform:scaleY(0);transform-origin:bottom}
+}
+
+/* =========================================================
+   BRAND INTRO
+   ========================================================= */
+.brand-intro{background:var(--cream)}
+.brand-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(2.5rem,6vw,5rem);
+  align-items:center;
+}
+.brand-text .eyebrow{margin-bottom:1.25rem}
+.brand-text h2{margin-bottom:1.75rem}
+.brand-text h2 em{font-style:italic;color:var(--burgundy);font-weight:500}
+.brand-text p{
+  font-size:1.05rem;line-height:1.8;
+  margin-bottom:1.25rem;color:#5a4d42;
+}
+.brand-text p:last-of-type{margin-bottom:2rem}
+.brand-signature{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-size:1.15rem;
+  color:var(--olive);
+  padding-left:1.5rem;
+  border-left:2px solid var(--burgundy);
+  margin-top:2rem;
+}
+.brand-images{
+  position:relative;
+  aspect-ratio:4/5;
+}
+.brand-img-main{
+  position:absolute;
+  top:0;right:0;
+  width:78%;height:72%;
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  box-shadow:var(--shadow-lg);
+}
+.brand-img-main img{width:100%;height:100%;object-fit:cover}
+.brand-img-accent{
+  position:absolute;
+  bottom:0;left:0;
+  width:58%;height:50%;
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  box-shadow:var(--shadow-lg);
+  border:8px solid var(--cream);
+}
+.brand-img-accent img{width:100%;height:100%;object-fit:cover}
+.brand-badge{
+  position:absolute;
+  top:50%;left:-20px;
+  width:130px;height:130px;
+  background:var(--burgundy);color:var(--white);
+  border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;
+  font-family:'Fraunces',serif;
+  box-shadow:var(--shadow-md);
+  z-index:3;
+}
+.brand-badge .big{font-size:1.8rem;font-weight:600;line-height:1}
+.brand-badge .small{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;margin-top:.35rem;font-family:'Inter',sans-serif;font-weight:500}
+
+/* =========================================================
+   MENU SECTION
+   ========================================================= */
+.menu-section{
+  background:var(--cream-soft);
+  position:relative;
+}
+.menu-section::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--beige),transparent);
+}
+.menu-header{text-align:center;margin-bottom:3.5rem}
+.menu-header .eyebrow{margin-bottom:1rem;justify-content:center}
+.menu-header .eyebrow::before{background:var(--olive)}
+.menu-header h2{margin-bottom:1rem}
+.menu-header h2 em{font-style:italic;color:var(--burgundy);font-weight:500}
+.menu-header p{max-width:620px;margin:0 auto;color:#5a4d42}
+
+.menu-controls{
+  max-width:900px;margin:0 auto 3rem;
+  display:flex;flex-direction:column;gap:1.5rem;
+}
+.menu-search{
+  position:relative;
+  max-width:480px;margin:0 auto;width:100%;
+}
+.menu-search input{
+  width:100%;
+  padding:1rem 1.25rem 1rem 3.25rem;
+  background:var(--white);
+  border:1px solid var(--beige);
+  border-radius:999px;
+  font-size:.95rem;
+  transition:all .3s var(--ease);
+}
+.menu-search input:focus{
+  outline:none;
+  border-color:var(--olive);
+  box-shadow:0 0 0 4px rgba(52,63,45,.08);
+}
+.menu-search svg{
+  position:absolute;left:1.15rem;top:50%;transform:translateY(-50%);
+  width:18px;height:18px;color:var(--olive);
+}
+
+.menu-tabs{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:.5rem;
+}
+.menu-tab{
+  padding:.65rem 1.25rem;
+  font-size:.78rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--espresso);
+  background:transparent;
+  border:1px solid var(--beige);
+  border-radius:999px;
+  transition:all .3s var(--ease);
+}
+.menu-tab:hover{border-color:var(--olive);color:var(--olive)}
+.menu-tab.active{
+  background:var(--olive);color:var(--white);border-color:var(--olive);
+}
+
+.menu-filters{
+  display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;
+}
+.menu-filter{
+  padding:.5rem 1rem;
+  font-size:.72rem;font-weight:500;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--espresso);
+  background:transparent;
+  border-radius:999px;
+  transition:all .3s var(--ease);
+}
+.menu-filter:hover{background:var(--beige-soft)}
+.menu-filter.active{background:var(--espresso);color:var(--white)}
+
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(290px,1fr));
+  gap:1.75rem;
+}
+.menu-category-title{
+  grid-column:1/-1;
+  font-family:'Fraunces',serif;
+  font-size:clamp(1.6rem,2.6vw,2.2rem);
+  font-weight:600;
+  color:var(--espresso);
+  padding:1.5rem 0 .5rem;
+  border-bottom:1px solid var(--beige);
+  margin-bottom:.5rem;
+  display:flex;align-items:center;gap:1rem;
+}
+.menu-category-title .count{
+  font-family:'Inter',sans-serif;
+  font-size:.75rem;font-weight:500;
+  color:var(--olive);
+  letter-spacing:.1em;
+}
+
+.menu-card{
+  background:var(--white);
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  cursor:pointer;
+  transition:all .4s var(--ease);
+  display:flex;flex-direction:column;
+  position:relative;
+  border:1px solid rgba(221,210,192,.4);
+}
+.menu-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-lg);
+  border-color:var(--beige);
+}
+.menu-card-img{
+  aspect-ratio:4/3;
+  overflow:hidden;
+  background:var(--beige-soft);
+  position:relative;
+}
+.menu-card-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .7s var(--ease);
+}
+.menu-card:hover .menu-card-img img{transform:scale(1.06)}
+.menu-card-tags{
+  position:absolute;top:.85rem;left:.85rem;
+  display:flex;gap:.4rem;flex-wrap:wrap;
+}
+.menu-tag{
+  padding:.3rem .65rem;
+  font-size:.62rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  background:var(--white);
+  color:var(--olive);
+  border-radius:999px;
+  box-shadow:var(--shadow-sm);
+}
+.menu-tag.signature{background:var(--burgundy);color:var(--white)}
+.menu-tag.popular{background:var(--olive);color:var(--white)}
+.menu-card-body{
+  padding:1.25rem 1.25rem 1.5rem;
+  display:flex;flex-direction:column;gap:.6rem;
+  flex:1;
+}
+.menu-card-head{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  gap:.75rem;
+}
+.menu-card-name{
+  font-family:'Fraunces',serif;
+  font-size:1.2rem;font-weight:600;
+  color:var(--espresso);
+  line-height:1.25;
+}
+.menu-card-price{
+  font-family:'Fraunces',serif;
+  font-size:1.1rem;font-weight:600;
+  color:var(--burgundy);
+  white-space:nowrap;
+}
+.menu-card-desc{
+  font-size:.88rem;line-height:1.55;
+  color:#6b5d52;
+  flex:1;
+}
+.menu-card-foot{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:.5rem;
+  padding-top:.85rem;
+  border-top:1px solid var(--beige-soft);
+}
+.veg-indicator{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-size:.7rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--olive);
+}
+.veg-indicator .dot{
+  width:14px;height:14px;
+  border:1.5px solid currentColor;
+  display:flex;align-items:center;justify-content:center;
+}
+.veg-indicator .dot::after{
+  content:"";width:6px;height:6px;border-radius:50%;
+  background:currentColor;
+}
+.veg-indicator.non-veg{color:var(--burgundy)}
+.add-btn{
+  padding:.5rem 1rem;
+  font-size:.7rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  background:var(--espresso);color:var(--white);
+  border-radius:999px;
+  transition:all .3s var(--ease);
+}
+.add-btn:hover{background:var(--burgundy)}
+
+.menu-empty{
+  grid-column:1/-1;
+  text-align:center;
+  padding:4rem 2rem;
+  color:#6b5d52;
+}
+.menu-empty h3{margin-bottom:.5rem;color:var(--espresso)}
+
+/* =========================================================
+   SIGNATURE SHOWCASE
+   ========================================================= */
+.signature{
+  background:var(--olive);
+  color:var(--white);
+  overflow:hidden;
+}
+.signature .eyebrow{color:var(--sage)}
+.signature .eyebrow::before{background:var(--sage)}
+.signature h2{color:var(--white);margin-bottom:1rem}
+.signature h2 em{color:var(--sage);font-weight:500}
+.signature-intro{
+  max-width:640px;margin-bottom:4rem;
+  color:rgba(255,255,255,.78);
+  font-size:1.05rem;
+}
+.signature-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
+.signature-card{
+  position:relative;
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  aspect-ratio:3/4;
+  cursor:pointer;
+  transition:transform .5s var(--ease);
+}
+.signature-card:hover{transform:translateY(-4px)}
+.signature-card img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .8s var(--ease);
+}
+.signature-card:hover img{transform:scale(1.08)}
+.signature-card::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(48,37,31,.85) 100%);
+}
+.signature-card-content{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  padding:1.75rem;
+  z-index:2;
+  color:var(--white);
+}
+.signature-card-content .tag{
+  display:inline-block;
+  padding:.3rem .7rem;
+  background:var(--burgundy);
+  color:var(--white);
+  font-size:.62rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  border-radius:999px;
+  margin-bottom:.85rem;
+}
+.signature-card-content h3{
+  color:var(--white);
+  font-size:1.5rem;
+  margin-bottom:.4rem;
+}
+.signature-card-content p{
+  color:rgba(255,255,255,.85);
+  font-size:.9rem;
+  line-height:1.5;
+}
+
+/* =========================================================
+   PHILOSOPHY
+   ========================================================= */
+.philosophy{
+  background:var(--cream);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.philosophy::before{
+  content:"";position:absolute;
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  width:600px;height:600px;
+  background:radial-gradient(circle,var(--beige-soft) 0%,transparent 70%);
+  opacity:.5;
+  z-index:0;
+}
+.philosophy-inner{position:relative;z-index:1;max-width:820px;margin:0 auto}
+.philosophy .eyebrow{margin-bottom:1.5rem;justify-content:center}
+.philosophy h2{margin-bottom:2rem}
+.philosophy h2 em{font-style:italic;color:var(--burgundy);font-weight:500}
+.philosophy-lead{
+  font-family:'Fraunces',serif;
+  font-size:clamp(1.2rem,2vw,1.6rem);
+  line-height:1.55;
+  color:var(--espresso);
+  font-weight:400;
+  margin-bottom:2rem;
+}
+.philosophy-lead em{color:var(--burgundy);font-style:italic}
+.philosophy p{
+  font-size:1rem;line-height:1.8;
+  color:#5a4d42;
+  max-width:640px;margin:0 auto 1.25rem;
+}
+.philosophy-strip{
+  display:flex;justify-content:center;gap:3rem;
+  margin-top:3.5rem;
+  flex-wrap:wrap;
+}
+.philosophy-strip-item{
+  display:flex;flex-direction:column;align-items:center;gap:.5rem;
+}
+.philosophy-strip-item .icon{
+  width:54px;height:54px;
+  background:var(--white);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--olive);
+  box-shadow:var(--shadow-sm);
+}
+.philosophy-strip-item .label{
+  font-size:.72rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--olive);
+}
+
+/* =========================================================
+   AMBIENCE
+   ========================================================= */
+.ambience{background:var(--cream-soft)}
+.ambience-header{text-align:center;margin-bottom:3.5rem}
+.ambience-header .eyebrow{margin-bottom:1rem;justify-content:center}
+.ambience-header h2{margin-bottom:1rem}
+.ambience-header h2 em{font-style:italic;color:var(--burgundy);font-weight:500}
+.ambience-header p{max-width:580px;margin:0 auto;color:#5a4d42}
+
+.ambience-collage{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-auto-rows:110px;
+  gap:1rem;
+}
+.ambience-item{
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  position:relative;
+  transition:transform .5s var(--ease);
+}
+.ambience-item:hover{transform:scale(1.01)}
+.ambience-item img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .8s var(--ease);
+}
+.ambience-item:hover img{transform:scale(1.06)}
+.ambience-item:nth-child(1){grid-column:span 5;grid-row:span 3}
+.ambience-item:nth-child(2){grid-column:span 4;grid-row:span 2}
+.ambience-item:nth-child(3){grid-column:span 3;grid-row:span 2}
+.ambience-item:nth-child(4){grid-column:span 3;grid-row:span 2}
+.ambience-item:nth-child(5){grid-column:span 4;grid-row:span 3}
+.ambience-item:nth-child(6){grid-column:span 7;grid-row:span 2}
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+.gallery{background:var(--cream)}
+.gallery-header{text-align:center;margin-bottom:3rem}
+.gallery-header .eyebrow{margin-bottom:1rem;justify-content:center}
+.gallery-header h2{margin-bottom:1rem}
+.gallery-header h2 em{font-style:italic;color:var(--burgundy);font-weight:500}
+.gallery-filters{
+  display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;
+  margin-bottom:2.5rem;
+}
+.gallery-filter{
+  padding:.6rem 1.2rem;
+  font-size:.75rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--espresso);
+  background:transparent;
+  border:1px solid var(--beige);
+  border-radius:999px;
+  transition:all .3s var(--ease);
+}
+.gallery-filter:hover{border-color:var(--olive)}
+.gallery-filter.active{background:var(--olive);color:var(--white);border-color:var(--olive)}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1rem;
+  grid-auto-rows:220px;
+}
+.gallery-item{
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  cursor:pointer;
+  position:relative;
+  transition:all .4s var(--ease);
+}
+.gallery-item:hover{transform:translateY(-4px)}
+.gallery-item img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .7s var(--ease);
+}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 50%,rgba(48,37,31,.6) 100%);
+  opacity:0;transition:opacity .4s var(--ease);
+}
+.gallery-item:hover::after{opacity:1}
+.gallery-item-label{
+  position:absolute;
+  bottom:1rem;left:1rem;right:1rem;
+  color:var(--white);
+  font-family:'Fraunces',serif;
+  font-size:1rem;font-weight:500;
+  opacity:0;transform:translateY(10px);
+  transition:all .4s var(--ease);
+  z-index:2;
+}
+.gallery-item:hover .gallery-item-label{opacity:1;transform:translateY(0)}
+.gallery-item:nth-child(1){grid-row:span 2}
+.gallery-item:nth-child(4){grid-row:span 2}
+.gallery-item:nth-child(7){grid-row:span 2}
+
+/* =========================================================
+   ORDER SECTION
+   ========================================================= */
+.order{
+  background:var(--espresso);
+  color:var(--white);
+  position:relative;
+  overflow:hidden;
+}
+.order::before{
+  content:"";position:absolute;
+  top:-100px;right:-100px;
+  width:400px;height:400px;
+  background:radial-gradient(circle,rgba(100,47,55,.3) 0%,transparent 70%);
+}
+.order-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(2rem,5vw,4rem);
+  align-items:center;
+  position:relative;z-index:1;
+}
+.order-text .eyebrow{color:var(--sage)}
+.order-text .eyebrow::before{background:var(--sage)}
+.order-text h2{color:var(--white);margin-bottom:1.5rem}
+.order-text h2 em{color:var(--sage);font-weight:500}
+.order-text p{color:rgba(255,255,255,.78);margin-bottom:2rem;font-size:1.05rem}
+.order-steps{
+  display:flex;flex-direction:column;gap:1rem;
+  margin-bottom:2.5rem;
+}
+.order-step{
+  display:flex;align-items:flex-start;gap:1rem;
+  padding:1rem 1.25rem;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius-md);
+  transition:all .3s var(--ease);
+}
+.order-step:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15)}
+.order-step-num{
+  flex-shrink:0;
+  width:32px;height:32px;
+  background:var(--burgundy);color:var(--white);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Fraunces',serif;font-weight:600;font-size:.95rem;
+}
+.order-step-text strong{
+  display:block;color:var(--white);
+  font-family:'Fraunces',serif;font-size:1.05rem;font-weight:500;
+  margin-bottom:.2rem;
+}
+.order-step-text span{color:rgba(255,255,255,.68);font-size:.88rem}
+
+.order-visual{
+  position:relative;
+  aspect-ratio:4/5;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-lg);
+}
+.order-visual img{width:100%;height:100%;object-fit:cover}
+.order-visual::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(48,37,31,.5) 100%);
+}
+.order-visual-badge{
+  position:absolute;
+  bottom:1.5rem;left:1.5rem;right:1.5rem;
+  background:var(--white);color:var(--espresso);
+  padding:1.25rem 1.5rem;
+  border-radius:var(--radius-md);
+  display:flex;align-items:center;gap:1rem;
+  z-index:2;
+}
+.order-visual-badge .icon{
+  width:48px;height:48px;
+  background:var(--olive);color:var(--white);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.order-visual-badge strong{
+  display:block;font-family:'Fraunces',serif;font-size:1.1rem;
+  color:var(--espresso);
+}
+.order-visual-badge span{font-size:.82rem;color:#6b5d52}
+
+.order-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-whatsapp{
+  background:#25D366;color:var(--white);
+}
+.btn-whatsapp:hover{background:#1DA851;transform:translateY(-2px);box-shadow:var(--shadow-md)}
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+.location{background:var(--cream)}
+.location-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:clamp(2rem,5vw,4rem);
+  align-items:stretch;
+}
+.location-info{
+  padding:clamp(1.5rem,3vw,2.5rem);
+  background:var(--white);
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-sm);
+  border:1px solid var(--beige-soft);
+}
+.location-info .eyebrow{margin-bottom:1rem}
+.location-info h2{margin-bottom:1.5rem}
+.location-info h2 em{font-style:italic;color:var(--burgundy);font-weight:500}
+.location-detail{
+  display:flex;gap:1rem;
+  padding:1.25rem 0;
+  border-bottom:1px solid var(--beige-soft);
+}
+.location-detail:last-child{border-bottom:none}
+.location-detail .icon{
+  flex-shrink:0;
+  width:42px;height:42px;
+  background:var(--cream-soft);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--olive);
+}
+.location-detail strong{
+  display:block;
+  font-family:'Fraunces',serif;
+  font-size:1rem;font-weight:600;
+  color:var(--espresso);
+  margin-bottom:.25rem;
+}
+.location-detail p,.location-detail a{
+  font-size:.92rem;color:#5a4d42;line-height:1.55;
+}
+.location-detail a:hover{color:var(--burgundy)}
+.location-cta{
+  display:flex;gap:.75rem;flex-wrap:wrap;
+  margin-top:1.5rem;
+}
+.location-map{
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-md);
+  min-height:480px;
+  background:var(--beige-soft);
+}
+.location-map iframe{width:100%;height:100%;border:0;display:block;min-height:480px}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+.contact{background:var(--cream-soft)}
+.contact-header{text-align:center;margin-bottom:3rem}
+.contact-header .eyebrow{margin-bottom:1rem;justify-content:center}
+.contact-header h2{margin-bottom:1rem}
+.contact-header h2 em{font-style:italic;color:var(--burgundy);font-weight:500}
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1.5rem;
+  max-width:1100px;margin:0 auto;
+}
+.contact-card{
+  background:var(--white);
+  padding:2rem 1.75rem;
+  border-radius:var(--radius-md);
+  text-align:center;
+  transition:all .4s var(--ease);
+  border:1px solid var(--beige-soft);
+}
+.contact-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.contact-card .icon{
+  width:56px;height:56px;
+  background:var(--cream-soft);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--olive);
+  margin:0 auto 1.25rem;
+}
+.contact-card h4{
+  font-family:'Fraunces',serif;
+  font-size:1.15rem;font-weight:600;
+  margin-bottom:.5rem;
+}
+.contact-card p,.contact-card a{
+  font-size:.92rem;color:#5a4d42;line-height:1.6;
+}
+.contact-card a:hover{color:var(--burgundy)}
+.contact-card a{display:block}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+.faq{background:var(--cream)}
+.faq-header{text-align:center;margin-bottom:3rem}
+.faq-header .eyebrow{margin-bottom:1rem;justify-content:center}
+.faq-header h2{margin-bottom:1rem}
+.faq-header h2 em{font-style:italic;color:var(--burgundy);font-weight:500}
+.faq-list{
+  max-width:820px;margin:0 auto;
+  display:flex;flex-direction:column;gap:.75rem;
+}
+.faq-item{
+  background:var(--white);
+  border:1px solid var(--beige-soft);
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  transition:all .3s var(--ease);
+}
+.faq-item.open{border-color:var(--olive);box-shadow:var(--shadow-sm)}
+.faq-question{
+  width:100%;
+  padding:1.35rem 1.5rem;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  text-align:left;
+  font-family:'Fraunces',serif;
+  font-size:1.05rem;font-weight:500;
+  color:var(--espresso);
+  transition:color .3s var(--ease);
+}
+.faq-question:hover{color:var(--burgundy)}
+.faq-icon{
+  flex-shrink:0;
+  width:32px;height:32px;
+  border-radius:50%;
+  background:var(--cream-soft);
+  display:flex;align-items:center;justify-content:center;
+  transition:all .35s var(--ease);
+}
+.faq-item.open .faq-icon{background:var(--olive);color:var(--white);transform:rotate(45deg)}
+.faq-answer{
+  max-height:0;overflow:hidden;
+  transition:max-height .4s var(--ease);
+}
+.faq-answer-inner{
+  padding:0 1.5rem 1.5rem;
+  color:#5a4d42;line-height:1.7;
+  font-size:.95rem;
+}
+.faq-answer-inner a{color:var(--burgundy);text-decoration:underline;text-underline-offset:3px}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer{
+  background:var(--olive);
+  color:var(--white);
+  padding:4rem 0 2rem;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1.2fr;
+  gap:3rem;
+  margin-bottom:3rem;
+}
+.footer-brand .logo{color:var(--white);margin-bottom:1rem}
+.footer-brand p{color:rgba(255,255,255,.7);font-size:.92rem;line-height:1.7;max-width:320px}
+.footer-col h5{
+  font-family:'Fraunces',serif;
+  font-size:1rem;font-weight:600;
+  margin-bottom:1.25rem;
+  color:var(--white);
+}
+.footer-col ul{display:flex;flex-direction:column;gap:.65rem}
+.footer-col a{
+  font-size:.88rem;color:rgba(255,255,255,.7);
+  transition:color .3s var(--ease);
+}
+.footer-col a:hover{color:var(--white)}
+.footer-social{display:flex;gap:.65rem;margin-top:1rem}
+.footer-social a{
+  width:40px;height:40px;
+  background:rgba(255,255,255,.08);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .3s var(--ease);
+}
+.footer-social a:hover{background:var(--burgundy);transform:translateY(-2px)}
+.footer-bottom{
+  padding-top:2rem;
+  border-top:1px solid rgba(255,255,255,.1);
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+  font-size:.82rem;color:rgba(255,255,255,.6);
+}
+
+/* =========================================================
+   CART SIDEBAR
+   ========================================================= */
+.cart-toggle{
+  position:fixed;
+  bottom:2rem;right:2rem;
+  width:60px;height:60px;
+  background:var(--burgundy);color:var(--white);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--shadow-lg);
+  z-index:900;
+  transition:all .35s var(--ease);
+}
+.cart-toggle:hover{background:var(--burgundy-deep);transform:scale(1.05)}
+.cart-toggle svg{width:24px;height:24px}
+.cart-count{
+  position:absolute;top:-4px;right:-4px;
+  min-width:24px;height:24px;padding:0 6px;
+  background:var(--olive);color:var(--white);
+  border-radius:999px;
+  font-size:.72rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  border:2px solid var(--cream);
+  transform:scale(0);
+  transition:transform .3s var(--ease-out);
+}
+.cart-count.show{transform:scale(1)}
+
+.cart-sidebar{
+  position:fixed;top:0;right:0;bottom:0;
+  width:min(440px,100%);
+  background:var(--white);
+  z-index:1100;
+  transform:translateX(100%);
+  transition:transform .45s var(--ease-out);
+  display:flex;flex-direction:column;
+  box-shadow:-10px 0 40px rgba(48,37,31,.15);
+}
+.cart-sidebar.open{transform:translateX(0)}
+.cart-overlay{
+  position:fixed;inset:0;
+  background:rgba(48,37,31,.5);
+  backdrop-filter:blur(4px);
+  z-index:1099;
+  opacity:0;pointer-events:none;
+  transition:opacity .35s var(--ease);
+}
+.cart-overlay.show{opacity:1;pointer-events:auto}
+.cart-header{
+  padding:1.5rem;
+  border-bottom:1px solid var(--beige-soft);
+  display:flex;justify-content:space-between;align-items:center;
+}
+.cart-header h3{font-size:1.35rem}
+.cart-close{
+  width:40px;height:40px;
+  border-radius:50%;
+  background:var(--cream-soft);
+  display:flex;align-items:center;justify-content:center;
+  transition:all .3s var(--ease);
+}
+.cart-close:hover{background:var(--beige)}
+.cart-body{
+  flex:1;overflow-y:auto;
+  padding:1.5rem;
+}
+.cart-empty{
+  text-align:center;
+  padding:3rem 1rem;
+  color:#6b5d52;
+}
+.cart-empty svg{
+  width:64px;height:64px;
+  color:var(--beige);
+  margin:0 auto 1rem;
+}
+.cart-empty h4{margin-bottom:.5rem;color:var(--espresso)}
+.cart-item{
+  display:flex;gap:1rem;
+  padding:1rem 0;
+  border-bottom:1px solid var(--beige-soft);
+  align-items:center;
+}
+.cart-item:last-child{border-bottom:none}
+.cart-item-img{
+  width:64px;height:64px;
+  border-radius:var(--radius-sm);
+  overflow:hidden;
+  flex-shrink:0;
+  background:var(--beige-soft);
+}
+.cart-item-img img{width:100%;height:100%;object-fit:cover}
+.cart-item-info{flex:1;min-width:0}
+.cart-item-name{
+  font-family:'Fraunces',serif;
+  font-size:.98rem;font-weight:600;
+  color:var(--espresso);
+  margin-bottom:.25rem;
+  line-height:1.3;
+}
+.cart-item-price{font-size:.82rem;color:#6b5d52}
+.cart-qty{
+  display:flex;align-items:center;gap:.5rem;
+  margin-top:.5rem;
+}
+.qty-btn{
+  width:26px;height:26px;
+  border-radius:50%;
+  background:var(--cream-soft);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.95rem;font-weight:600;
+  color:var(--espresso);
+  transition:all .25s var(--ease);
+}
+.qty-btn:hover{background:var(--olive);color:var(--white)}
+.qty-val{
+  min-width:24px;text-align:center;
+  font-weight:600;font-size:.9rem;
+}
+.cart-item-remove{
+  color:#a89c90;
+  padding:.5rem;
+  transition:color .3s var(--ease);
+}
+.cart-item-remove:hover{color:var(--burgundy)}
+.cart-footer{
+  padding:1.5rem;
+  border-top:1px solid var(--beige-soft);
+  background:var(--cream-soft);
+}
+.cart-total{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:1rem;
+  font-family:'Fraunces',serif;
+}
+.cart-total-label{font-size:.92rem;color:#6b5d52}
+.cart-total-value{font-size:1.6rem;font-weight:600;color:var(--espresso)}
+.cart-note{
+  font-size:.78rem;color:#6b5d52;
+  margin-bottom:1rem;line-height:1.5;
+}
+.cart-form{display:flex;flex-direction:column;gap:.75rem;margin-bottom:1rem}
+.cart-form input,.cart-form select{
+  padding:.85rem 1rem;
+  background:var(--white);
+  border:1px solid var(--beige);
+  border-radius:var(--radius-sm);
+  font-size:.9rem;
+  transition:border-color .3s var(--ease);
+}
+.cart-form input:focus,.cart-form select:focus{
+  outline:none;border-color:var(--olive);
+}
+.cart-form label{
+  font-size:.72rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--olive);
+}
+.cart-form .field{display:flex;flex-direction:column;gap:.35rem}
+
+/* =========================================================
+   MODALS
+   ========================================================= */
+.modal{
+  position:fixed;inset:0;
+  z-index:1200;
+  display:flex;align-items:center;justify-content:center;
+  padding:1.5rem;
+  opacity:0;pointer-events:none;
+  transition:opacity .35s var(--ease);
+}
+.modal.show{opacity:1;pointer-events:auto}
+.modal-overlay{
+  position:absolute;inset:0;
+  background:rgba(48,37,31,.75);
+  backdrop-filter:blur(6px);
+}
+.modal-content{
+  position:relative;
+  background:var(--white);
+  border-radius:var(--radius-lg);
+  max-width:880px;width:100%;
+  max-height:90vh;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  box-shadow:var(--shadow-lg);
+  transform:scale(.96);
+  transition:transform .4s var(--ease-out);
+}
+.modal.show .modal-content{transform:scale(1)}
+.modal-img{
+  aspect-ratio:auto;
+  min-height:300px;
+  background:var(--beige-soft);
+  overflow:hidden;
+}
+.modal-img img{width:100%;height:100%;object-fit:cover}
+.modal-body{
+  padding:2.5rem;
+  overflow-y:auto;
+  display:flex;flex-direction:column;
+}
+.modal-close{
+  position:absolute;top:1rem;right:1rem;
+  width:40px;height:40px;
+  background:var(--white);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--shadow-sm);
+  z-index:2;
+  transition:all .3s var(--ease);
+}
+.modal-close:hover{background:var(--cream-soft);transform:rotate(90deg)}
+.modal-tag{
+  display:inline-block;
+  padding:.3rem .7rem;
+  background:var(--burgundy);color:var(--white);
+  font-size:.65rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  border-radius:999px;
+  margin-bottom:1rem;
+  align-self:flex-start;
+}
+.modal-body h3{
+  font-size:1.8rem;
+  margin-bottom:.5rem;
+}
+.modal-body .desc{
+  color:#5a4d42;line-height:1.7;
+  margin:1rem 0 1.5rem;
+  font-size:.98rem;
+}
+.modal-price{
+  font-family:'Fraunces',serif;
+  font-size:2rem;font-weight:600;
+  color:var(--burgundy);
+  margin-bottom:1.5rem;
+}
+.modal-veg{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.5rem .9rem;
+  background:var(--cream-soft);
+  border-radius:999px;
+  font-size:.75rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--olive);
+  margin-bottom:1.5rem;
+  align-self:flex-start;
+}
+.modal-veg.non-veg{color:var(--burgundy)}
+.modal-qty{
+  display:flex;align-items:center;gap:1rem;
+  margin-bottom:1.5rem;
+}
+.modal-qty-label{
+  font-size:.75rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--olive);
+}
+.modal-qty-controls{
+  display:flex;align-items:center;gap:.75rem;
+  background:var(--cream-soft);
+  padding:.35rem;
+  border-radius:999px;
+}
+.modal-qty-btn{
+  width:32px;height:32px;
+  border-radius:50%;
+  background:var(--white);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;font-weight:600;
+  color:var(--espresso);
+  transition:all .25s var(--ease);
+}
+.modal-qty-btn:hover{background:var(--olive);color:var(--white)}
+.modal-qty-val{
+  min-width:32px;text-align:center;
+  font-weight:600;font-size:1.05rem;
+}
+.modal-add-btn{
+  width:100%;
+  padding:1rem;
+  background:var(--burgundy);color:var(--white);
+  border-radius:999px;
+  font-size:.82rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  transition:all .35s var(--ease);
+  margin-top:auto;
+}
+.modal-add-btn:hover{background:var(--burgundy-deep);transform:translateY(-2px)}
+
+/* Lightbox */
+.lightbox{
+  position:fixed;inset:0;
+  z-index:1300;
+  background:rgba(20,15,12,.96);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;
+  transition:opacity .35s var(--ease);
+}
+.lightbox.show{opacity:1;pointer-events:auto}
+.lightbox-img{
+  max-width:90vw;max-height:85vh;
+  object-fit:contain;
+  border-radius:var(--radius-md);
+  transform:scale(.96);
+  transition:transform .4s var(--ease-out);
+}
+.lightbox.show .lightbox-img{transform:scale(1)}
+.lightbox-close{
+  position:absolute;top:1.5rem;right:1.5rem;
+  width:48px;height:48px;
+  background:rgba(255,255,255,.1);
+  color:var(--white);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .3s var(--ease);
+}
+.lightbox-close:hover{background:rgba(255,255,255,.2)}
+.lightbox-nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:52px;height:52px;
+  background:rgba(255,255,255,.1);
+  color:var(--white);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .3s var(--ease);
+}
+.lightbox-nav:hover{background:rgba(255,255,255,.2)}
+.lightbox-prev{left:1.5rem}
+.lightbox-next{right:1.5rem}
+.lightbox-caption{
+  position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);
+  color:var(--white);
+  font-family:'Fraunces',serif;
+  font-size:1.05rem;
+  background:rgba(0,0,0,.4);
+  padding:.5rem 1.25rem;
+  border-radius:999px;
+  backdrop-filter:blur(8px);
+}
+
+/* Back to top */
+.back-top{
+  position:fixed;
+  bottom:2rem;left:2rem;
+  width:48px;height:48px;
+  background:var(--olive);color:var(--white);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--shadow-md);
+  z-index:800;
+  opacity:0;pointer-events:none;
+  transform:translateY(10px);
+  transition:all .35s var(--ease);
+}
+.back-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.back-top:hover{background:var(--burgundy);transform:translateY(-2px)}
+
+/* Reveal animations */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out)}
+.reveal.in-view{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+    scroll-behavior:auto!important;
+  }
+  .hero-bg{transform:none!important}
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width:1024px){
+  .brand-grid{grid-template-columns:1fr;gap:3rem}
+  .brand-images{max-width:500px;margin:0 auto}
+  .signature-grid{grid-template-columns:1fr 1fr}
+  .signature-card:nth-child(3){grid-column:span 2;aspect-ratio:16/9}
+  .ambience-collage{grid-auto-rows:100px}
+  .order-inner{grid-template-columns:1fr}
+  .order-visual{max-width:500px;margin:0 auto}
+  .location-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+  .gallery-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+@media (max-width:768px){
+  :root{--nav-h:68px}
+  .menu-toggle{display:flex}
+  .nav-links{
+    position:fixed;
+    top:0;right:0;bottom:0;
+    width:min(320px,85%);
+    background:var(--cream);
+    flex-direction:column;
+    align-items:flex-start;
+    padding:calc(var(--nav-h) + 2rem) 2rem 2rem;
+    gap:1.5rem;
+    transform:translateX(100%);
+    transition:transform .4s var(--ease-out);
+    box-shadow:-10px 0 40px rgba(48,37,31,.15);
+    overflow-y:auto;
+  }
+  .nav-links.open{transform:translateX(0)}
+  .nav-links a{color:var(--espresso);font-size:1rem}
+  .nav-cta{margin-top:1rem}
+  .hero{min-height:90vh}
+  .hero-ctas{flex-direction:column;width:100%;max-width:320px}
+  .hero-ctas .btn{width:100%}
+  .scroll-indicator{display:none}
+  .brand-badge{width:100px;height:100px;top:40%;left:-10px}
+  .brand-badge .big{font-size:1.4rem}
+  .signature-grid{grid-template-columns:1fr}
+  .signature-card:nth-child(3){grid-column:span 1;aspect-ratio:3/4}
+  .ambience-collage{
+    grid-template-columns:repeat(2,1fr);
+    grid-auto-rows:160px;
+  }
+  .ambience-item:nth-child(1),
+  .ambience-item:nth-child(2),
+  .ambience-item:nth-child(3),
+  .ambience-item:nth-child(4),
+  .ambience-item:nth-child(5),
+  .ambience-item:nth-child(6){grid-column:span 1;grid-row:span 1}
+  .ambience-item:nth-child(1){grid-column:span 2;grid-row:span 2}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(4),
+  .gallery-item:nth-child(7){grid-row:span 1}
+  .modal-content{grid-template-columns:1fr;max-height:95vh}
+  .modal-img{aspect-ratio:16/10;min-height:220px}
+  .modal-body{padding:1.75rem}
+  .footer-grid{grid-template-columns:1fr;gap:2rem}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .cart-toggle{bottom:1.25rem;right:1.25rem;width:54px;height:54px}
+  .back-top{bottom:1.25rem;left:1.25rem;width:42px;height:42px}
+  .philosophy-strip{gap:1.5rem}
+}
+
+@media (max-width:480px){
+  .menu-grid{grid-template-columns:1fr}
+  .menu-tabs{gap:.35rem}
+  .menu-tab{padding:.55rem .9rem;font-size:.7rem}
+  .gallery-grid{grid-template-columns:1fr;grid-auto-rows:240px}
+  .order-actions{flex-direction:column}
+  .order-actions .btn{width:100%}
+  .location-cta{flex-direction:column}
+  .location-cta .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo" aria-label="Peppe's Pizzeria And Cafe — Home">
+      <span class="logo-dot" aria-hidden="true"></span>
+      Peppe's
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#story">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#location">Find Us</a>
+      <a href="#contact">Contact</a>
+      <a href="#menu" class="nav-cta">Explore Menu</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="container hero-content">
+    <div class="hero-eyebrow">Peppe's Pizzeria And Cafe · Bandra East</div>
+    <h1>Good Pizza.<br/><em>Great Company.</em><br/>Always.</h1>
+    <p class="hero-sub">From comforting classics to exciting flavour combinations, discover your next favourite bite at Peppe's — a neighbourhood pizzeria and cafe in the heart of Bandra East.</p>
+    <div class="hero-ctas">
+      <a href="#menu" class="btn btn-primary">Explore Our Menu
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#location" class="btn btn-secondary">Find Us in Bandra</a>
+    </div>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true">Scroll</div>
+</section>
+
+<!-- ============ BRAND INTRO ============ -->
+<section class="brand-intro" id="story">
+  <div class="container">
+    <div class="brand-grid">
+      <div class="brand-text reveal">
+        <div class="eyebrow">The Peppe's Experience</div>
+        <h2>Made for Cravings.<br/><em>Best Shared With Friends.</em></h2>
+        <p>Peppe's is a neighbourhood pizzeria and cafe built around the simple idea that good food tastes better when it's shared. Whether you're dropping in for a quick slice, settling in for a long lunch, or gathering with friends over plates of pasta and pizzas, the vibe here is easy, the portions are generous, and the flavours are made to be remembered.</p>
+        <p>From classic pizzas with familiar comforts to creative combinations that surprise your palate, every dish at Peppe's is prepared with the kind of care you'd expect from a place that takes its food seriously — but never itself.</p>
+        <div class="brand-signature">A little more than just pizza.</div>
+      </div>
+      <div class="brand-images reveal reveal-delay-1">
+        <div class="brand-img-main">
+          <img src="https://images.unsplash.com/photo-1574071318778-1d3c2f89c6ae?w=900&q=85" alt="Freshly baked pizza with melted cheese and basil" loading="lazy" />
+        </div>
+        <div class="brand-img-accent">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=700&q=85" alt="Warm cafe interior with ambient lighting" loading="lazy" />
+        </div>
+        <div class="brand-badge" aria-hidden="true">
+          <span class="big">Fresh</span>
+          <span class="small">Daily · Local</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section class="menu-section" id="menu">
+  <div class="container">
+    <div class="menu-header reveal">
+      <div class="eyebrow">The Menu</div>
+      <h2>Explore <em>Every Slice</em> of Peppe's</h2>
+      <p>Browse our full menu — from signature pizzas and pastas to tacos, starters, desserts and drinks. Tap any dish to see more, or add it straight to your order.</p>
+    </div>
+
+    <div class="menu-controls reveal">
+      <div class="menu-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="menuSearch" placeholder="Search the menu — margherita, pasta, tacos…" aria-label="Search menu" />
+      </div>
+      <div class="menu-tabs" id="menuTabs" role="tablist"></div>
+      <div class="menu-filters" id="menuFilters">
+        <button class="menu-filter active" data-filter="all">All</button>
+        <button class="menu-filter" data-filter="veg">Vegetarian</button>
+        <button class="menu-filter" data-filter="non-veg">Non-Vegetarian</button>
+      </div>
+    </div>
+
+    <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE SHOWCASE ============ -->
+<section class="signature" id="signature">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Signature Flavours</div>
+      <h2>Flavours <em>Worth Coming Back For.</em></h2>
+      <p class="signature-intro">A few of the dishes that regulars keep coming back for — the ones that define what Peppe's is all about. (Availability may vary; please confirm with the restaurant.)</p>
+    </div>
+    <div class="signature-grid">
+      <div class="signature-card reveal reveal-delay-1" data-item-id="pz5">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=85" alt="Thecha Prawn pizza close-up" loading="lazy" />
+        <div class="signature-card-content">
+          <span class="tag">Signature</span>
+          <h3>Thecha Prawn Pizza</h3>
+          <p>A bold Maharashtrian twist — spicy thecha, succulent prawns and melted cheese on a crisp crust.</p>
+        </div>
+      </div>
+      <div class="signature-card reveal reveal-delay-2" data-item-id="tc1">
+        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&q=85" alt="Thecha Prawn Tacos" loading="lazy" />
+        <div class="signature-card-content">
+          <span class="tag">Signature</span>
+          <h3>Thecha Prawn Tacos</h3>
+          <p>Soft tortillas filled with spicy thecha prawns, crunchy slaw, lime and fresh coriander.</p>
+        </div>
+      </div>
+      <div class="signature-card reveal reveal-delay-3" data-item-id="pz2">
+        <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=800&q=85" alt="Classic pepperoni pizza" loading="lazy" />
+        <div class="signature-card-content">
+          <span class="tag">Popular</span>
+          <h3>Pepperoni Passion</h3>
+          <p>Premium pepperoni, mozzarella and oregano on a rich tomato base — a timeless favourite.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PHILOSOPHY ============ -->
+<section class="philosophy">
+  <div class="container">
+    <div class="philosophy-inner reveal">
+      <div class="eyebrow">Our Food Philosophy</div>
+      <h2>Food That Feels Like <em>Home.</em></h2>
+      <p class="philosophy-lead">At Peppe's, we believe the best meals aren't just eaten — they're <em>shared, remembered, and looked forward to.</em></p>
+      <p>Our kitchen is guided by a simple idea: comfort food done well. Pizza as the centrepiece, pasta as the companion, and a cafe menu that rounds out every visit. We play with flavours — Indian, Italian, and everything in between — because the best combinations are the ones that surprise you.</p>
+      <p>Whether you're here for a quick slice, a long catch-up with friends, or a family dinner that runs late, the food is made to bring people together. That's what a neighbourhood pizzeria should feel like.</p>
+      <div class="philosophy-strip">
+        <div class="philosophy-strip-item">
+          <div class="icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <span class="label">Comfort First</span>
+        </div>
+        <div class="philosophy-strip-item">
+          <div class="icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 0 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/></svg>
+          </div>
+          <span class="label">Pizza-Led</span>
+        </div>
+        <div class="philosophy-strip-item">
+          <div class="icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <span class="label">Made to Share</span>
+        </div>
+        <div class="philosophy-strip-item">
+          <div class="icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <span class="label">Always Fresh</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AMBIENCE ============ -->
+<section class="ambience">
+  <div class="container">
+    <div class="ambience-header reveal">
+      <div class="eyebrow">The Space</div>
+      <h2>Your Neighbourhood Spot for <em>Good Food and Good Times.</em></h2>
+      <p>Casual seating, warm lighting, and the kind of atmosphere that makes you want to stay a little longer.</p>
+    </div>
+    <div class="ambience-collage reveal">
+      <div class="ambience-item">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1000&q=85" alt="Restaurant dining area with warm lighting" loading="lazy" />
+      </div>
+      <div class="ambience-item">
+        <img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=700&q=85" alt="Dining table set for guests" loading="lazy" />
+      </div>
+      <div class="ambience-item">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=85" alt="Plated dish on restaurant table" loading="lazy" />
+      </div>
+      <div class="ambience-item">
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=700&q=85" alt="Evening ambience at the restaurant" loading="lazy" />
+      </div>
+      <div class="ambience-item">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&q=85" alt="Cafe interior with seating" loading="lazy" />
+      </div>
+      <div class="ambience-item">
+        <img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=1100&q=85" alt="Group dining setup" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="gallery-header reveal">
+      <div class="eyebrow">Gallery</div>
+      <h2>Moments at <em>Peppe's.</em></h2>
+    </div>
+    <div class="gallery-filters reveal" id="galleryFilters">
+      <button class="gallery-filter active" data-filter="all">All</button>
+      <button class="gallery-filter" data-filter="pizzas">Pizzas</button>
+      <button class="gallery-filter" data-filter="food">Food &amp; Drinks</button>
+      <button class="gallery-filter" data-filter="interiors">Cafe Interiors</button>
+      <button class="gallery-filter" data-filter="dining">Dining Experience</button>
+    </div>
+    <div class="gallery-grid reveal" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ============ ORDER ============ -->
+<section class="order" id="order">
+  <div class="container">
+    <div class="order-inner">
+      <div class="order-text reveal">
+        <div class="eyebrow">Ordering</div>
+        <h2>Your Next Favourite Meal Is <em>Just a Few Clicks Away.</em></h2>
+        <p>Browse the menu, build your order, and send it straight to us on WhatsApp. We'll confirm the details and get your food ready.</p>
+        <div class="order-steps">
+          <div class="order-step">
+            <div class="order-step-num">1</div>
+            <div class="order-step-text">
+              <strong>Browse &amp; Add</strong>
+              <span>Explore the menu and add your favourites to the cart.</span>
+            </div>
+          </div>
+          <div class="order-step">
+            <div class="order-step-num">2</div>
+            <div class="order-step-text">
+              <strong>Share Your Details</strong>
+              <span>Add your name, contact and choose pickup or delivery enquiry.</span>
+            </div>
+          </div>
+          <div class="order-step">
+            <div class="order-step-num">3</div>
+            <div class="order-step-text">
+              <strong>Send via WhatsApp</strong>
+              <span>We'll receive your order enquiry and confirm it with you directly.</span>
+            </div>
+          </div>
+        </div>
+        <div class="order-actions">
+          <button class="btn btn-whatsapp" id="openCartBtn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.66a11.92 11.92 0 0 0 5.73 1.46h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.44-8.4ZM12.04 21.8h-.01a9.88 9.88 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.25c0-5.45 4.43-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.87-9.88 9.87Z"/></svg>
+            View Cart &amp; Order
+          </button>
+          <a href="#menu" class="btn btn-secondary">Browse Menu</a>
+        </div>
+      </div>
+      <div class="order-visual reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4a?w=900&q=85" alt="Freshly sliced pizza ready to serve" loading="lazy" />
+        <div class="order-visual-badge">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div>
+            <strong>Order via WhatsApp</strong>
+            <span>Quick · Personal · Confirmed by us</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="location" id="location">
+  <div class="container">
+    <div class="location-grid">
+      <div class="location-info reveal">
+        <div class="eyebrow">Find Us</div>
+        <h2>Find Your Way to <em>Something Delicious.</em></h2>
+        <div class="location-detail">
+          <div class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <strong>Address</strong>
+            <p>Shop 1 &amp; 2, CTS 629, Ground and Upper Floor, Vedant Bhavan, opposite Kherwadi Police Station, Bandra East, Mumbai, Maharashtra 400051, India.</p>
+          </div>
+        </div>
+        <div class="location-detail">
+          <div class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <strong>Phone</strong>
+            <p><a href="tel:+919004014409">+91 90040 14409</a></p>
+          </div>
+        </div>
+        <div class="location-detail">
+          <div class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <div>
+            <strong>WhatsApp</strong>
+            <p><a href="https://wa.me/919004014409" target="_blank" rel="noopener">Chat with us on WhatsApp</a></p>
+          </div>
+        </div>
+        <div class="location-detail">
+          <div class="icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20l-5.447-2.724A1 1 0 0 1 3 16.382V5.618a1 1 0 0 1 1.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0 0 21 18.382V7.618a1 1 0 0 0-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          </div>
+          <div>
+            <strong>Landmark</strong>
+            <p>Opposite Kherwadi Police Station, Bandra East. Easily accessible from the Eastern Express Highway.</p>
+          </div>
+        </div>
+        <div class="location-cta">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Peppe's+Pizzeria+And+Cafe+Bandra+East+Mumbai" target="_blank" rel="noopener" class="btn btn-primary">
+            Get Directions
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+          <a href="tel:+919004014409" class="btn btn-ghost">Call Now</a>
+        </div>
+      </div>
+      <div class="location-map reveal reveal-delay-1">
+        <iframe
+          src="https://www.google.com/maps?q=Vedant+Bhavan+Kherwadi+Bandra+East+Mumbai&output=embed"
+          loading="lazy"
+          title="Peppe's Pizzeria And Cafe location on Google Maps"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-header reveal">
+      <div class="eyebrow">Get in Touch</div>
+      <h2>We'd Love to <em>Hear From You.</em></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <div class="icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h4>Call Us</h4>
+        <a href="tel:+919004014409">+91 90040 14409</a>
+      </div>
+      <div class="contact-card reveal reveal-delay-1">
+        <div class="icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.66a11.92 11.92 0 0 0 5.73 1.46h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.44-8.4Z"/></svg>
+        </div>
+        <h4>WhatsApp</h4>
+        <a href="https://wa.me/919004014409" target="_blank" rel="noopener">Chat with us</a>
+      </div>
+      <div class="contact-card reveal reveal-delay-2">
+        <div class="icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h4>Visit Us</h4>
+        <p>Vedant Bhavan, opposite Kherwadi Police Station, Bandra East, Mumbai 400051</p>
+      </div>
+      <div class="contact-card reveal reveal-delay-3">
+        <div class="icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h4>Opening Hours</h4>
+        <p>Please call or message us to confirm today's hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-header reveal">
+      <div class="eyebrow">Questions</div>
+      <h2>Frequently <em>Asked.</em></h2>
+    </div>
+    <div class="faq-list reveal" id="faqList">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Where is Peppe's Pizzeria And Cafe located?</span>
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            We're located at Shop 1 &amp; 2, CTS 629, Ground and Upper Floor, Vedant Bhavan, opposite Kherwadi Police Station, Bandra East, Mumbai, Maharashtra 400051. You can find us easily on Google Maps — just <a href="#location">head to our location section</a>.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What type of food does Peppe's serve?</span>
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Peppe's is a pizzeria and cafe. Our menu features pizzas, pastas, starters, tacos, sides, desserts and beverages — with a mix of classic Italian-inspired dishes and creative flavour combinations. You can explore the full menu in the <a href="#menu">Menu section</a>.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Where can I view the full menu?</span>
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            The full digital menu is available right here on the website — scroll to the <a href="#menu">Menu section</a> to browse by category, search for specific dishes, or filter by vegetarian and non-vegetarian options.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Do you offer vegetarian options?</span>
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Yes — our menu includes a wide range of vegetarian pizzas, pastas, starters, sides, desserts and beverages. Use the "Vegetarian" filter in the menu section to see only veg options.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Can I place an order through WhatsApp?</span>
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Yes. You can build your order in our digital cart and send it to us on WhatsApp. Our team will confirm availability, finalise the details and let you know when your order is ready. Please note that WhatsApp is used for order enquiries — confirmation comes directly from us.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Do you accept group dining enquiries?</span>
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Absolutely. For group bookings, parties or special occasions, please call us at <a href="tel:+919004014409">+91 90040 14409</a> or reach out on WhatsApp so we can arrange the best seating for your group.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What are the restaurant's opening hours?</span>
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Opening hours may vary. Please call <a href="tel:+919004014409">+91 90040 14409</a> or message us on WhatsApp to confirm today's timings before visiting.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How can I contact the restaurant?</span>
+          <span class="faq-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            You can reach us by phone at <a href="tel:+919004014409">+91 90040 14409</a>, on <a href="https://wa.me/919004014409" target="_blank" rel="noopener">WhatsApp</a>, or visit us at Vedant Bhavan, opposite Kherwadi Police Station, Bandra East, Mumbai.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="logo"><span class="logo-dot"></span> Peppe's</a>
+        <p>A neighbourhood pizzeria and cafe in Bandra East, Mumbai. Good pizza, great company, always.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/919004014409" aria-label="WhatsApp" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.66a11.92 11.92 0 0 0 5.73 1.46h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.44-8.4Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Visit</h5>
+        <ul>
+          <li><a href="#location">Find Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#order">Order Online</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+919004014409">+91 90040 14409</a></li>
+          <li><a href="https://wa.me/919004014409" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li>Bandra East, Mumbai 400051</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© <span id="year"></span> Peppe's Pizzeria And Cafe. All rights reserved.</div>
+      <div>Made with care in Bandra East, Mumbai.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CART SIDEBAR ============ -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-sidebar" id="cartSidebar" aria-label="Your cart" aria-hidden="true">
+  <div class="cart-header">
+    <h3>Your Order</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total">
+      <span class="cart-total-label">Subtotal</span>
+      <span class="cart-total-value" id="cartTotal">₹0</span>
+    </div>
+    <div class="cart-note">This is an order enquiry. Our team will confirm availability and final pricing with you on WhatsApp.</div>
+    <form class="cart-form" id="cartForm">
+      <div class="field">
+        <label for="custName">Your Name</label>
+        <input type="text" id="custName" required placeholder="e.g. Rahul Sharma" autocomplete="name" />
+      </div>
+      <div class="field">
+        <label for="custPhone">Contact Number</label>
+        <input type="tel" id="custPhone" required placeholder="+91 ..." autocomplete="tel" pattern="[0-9+\s\-]{7,}" />
+      </div>
+      <div class="field">
+        <label for="orderType">Order Type</label>
+        <select id="orderType">
+          <option value="Pickup">Pickup</option>
+          <option value="Delivery Enquiry">Delivery Enquiry</option>
+        </select>
+      </div>
+    </form>
+    <button class="btn btn-whatsapp" id="sendWhatsApp" style="width:100%">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.04 0C5.46 0 .12 5.34.12 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.66a11.92 11.92 0 0 0 5.73 1.46h.01c6.58 0 11.92-5.34 11.92-11.92 0-3.18-1.24-6.17-3.44-8.4Z"/></svg>
+      Send Order Enquiry
+    </button>
+  </div>
+</aside>
+
+<!-- ============ CART TOGGLE ============ -->
+<button class="cart-toggle" id="cartToggle" aria-label="Open cart">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+  <span class="cart-count" id="cartCount">0</span>
+</button>
+
+<!-- ============ ITEM DETAIL MODAL ============ -->
+<div class="modal" id="itemModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-overlay" data-close-modal></div>
+  <div class="modal-content">
+    <button class="modal-close" data-close-modal aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="modal-img"><img id="modalImg" src="" alt="" loading="lazy" /></div>
+    <div class="modal-body">
+      <span class="modal-tag" id="modalTag" style="display:none"></span>
+      <h3 id="modalTitle"></h3>
+      <div class="modal-veg" id="modalVeg"></div>
+      <p class="desc" id="modalDesc"></p>
+      <div class="modal-price" id="modalPrice"></div>
+      <div class="modal-qty">
+        <span class="modal-qty-label">Quantity</span>
+        <div class="modal-qty-controls">
+          <button class="modal-qty-btn" id="modalQtyMinus" aria-label="Decrease">−</button>
+          <span class="modal-qty-val" id="modalQtyVal">1</span>
+          <button class="modal-qty-btn" id="modalQtyPlus" aria-label="Increase">+</button>
+        </div>
+      </div>
+      <button class="modal-add-btn" id="modalAdd">Add to Order</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lightbox-close" id="lbClose" aria-label="Close">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <button class="lightbox-nav lightbox-prev" id="lbPrev" aria-label="Previous image">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+  </button>
+  <img class="lightbox-img" id="lbImg" src="" alt="" />
+  <button class="lightbox-nav lightbox-next" id="lbNext" aria-label="Next image">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+  </button>
+  <div class="lightbox-caption" id="lbCaption"></div>
+</div>
+
+<!-- ============ BACK TO TOP ============ -->
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<script>
+/* =========================================================
+   PEPPE'S — APPLICATION LOGIC
+   ========================================================= */
+
+/* ---------- MENU DATA ----------
+   Representative menu structure for Peppe's Pizzeria And Cafe.
+   Replace or extend this object with verified menu items, prices
+   and availability from the restaurant before publishing. */
+const menuData = {
+  pizzas: {
+    label: 'Pizzas',
+    items: [
+      { id:'pz1', name:'Classic Margherita', desc:'San Marzano-style tomato sauce, fresh mozzarella, basil and a drizzle of extra virgin olive oil on a crisp crust.', price:399, veg:true, img:'https://images.unsplash.com/photo-1574071318778-1d3c2f89c6ae?w=700&q=85', tags:['classic'] },
+      { id:'pz2', name:'Pepperoni Passion', desc:'Tomato sauce, mozzarella, premium pepperoni and a sprinkle of oregano.', price:499, veg:false, img:'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=700&q=85', tags:['popular'] },
+      { id:'pz3', name:'Veggie Supreme', desc:'Tomato sauce, mozzarella, bell peppers, onions, mushrooms, olives and jalapeños.', price:449, veg:true, img:'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=85', tags:[] },
+      { id:'pz4', name:'BBQ Chicken', desc:'Smoky BBQ sauce, grilled chicken, red onions, mozzarella and fresh coriander.', price:549, veg:false, img:'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700&q=85', tags:['popular'] },
+      { id:'pz5', name:'Thecha Prawn', desc:'Spicy thecha base, succulent prawns, onions, coriander and melted mozzarella.', price:599, veg:false, img:'https://images.unsplash.com/photo-1593560708920-61dd98c46a4a?w=700&q=85', tags:['signature'] },
+      { id:'pz6', name:'Four Cheese', desc:'Mozzarella, cheddar, parmesan and gorgonzola on a garlic white base.', price:499, veg:true, img:'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=700&q=85', tags:[] },
+      { id:'pz7', name:'Tandoori Chicken', desc:'Tandoori-marinated chicken, capsicum, onion, mozzarella and mint mayo.', price:549, veg:false, img:'https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=700&q=85', tags:[] },
+      { id:'pz8', name:'Paneer Tikka', desc:'Char-grilled paneer, bell peppers, onions, tikka spice and mozzarella.', price:479, veg:true, img:'https://images.unsplash.com/photo-1601924582970-9238bcb495d9?w=700&q=85', tags:['popular'] }
+    ]
+  },
+  pasta: {
+    label: 'Pasta',
+    items: [
+      { id:'pa1', name:'Penne Arrabiata', desc:'Penne in a spicy tomato sauce with garlic, chilli and fresh basil.', price:349, veg:true, img:'https://images.unsplash.com/photo-1551183053-bf91a1d81411?w=700&q=85', tags:[] },
+      { id:'pa2', name:'Creamy Alfredo', desc:'Fettuccine in a rich parmesan cream sauce with garlic and herbs.', price:399, veg:true, img:'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=700&q=85', tags:['popular'] },
+      { id:'pa3', name:'Chicken Pesto', desc:'Penne tossed with basil pesto, grilled chicken and cherry tomatoes.', price:429, veg:false, img:'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=700&q=85', tags:[] },
+      { id:'pa4', name:'Seafood Marinara', desc:'Spaghetti with prawns, mussels and squid in a white wine tomato sauce.', price:549, veg:false, img:'https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=700&q=85', tags:[] }
+    ]
+  },
+  starters: {
+    label: 'Starters',
+    items: [
+      { id:'st1', name:'Garlic Bread', desc:'Toasted baguette with garlic butter, herbs and melted cheese.', price:199, veg:true, img:'https://images.unsplash.com/photo-1619535860434-ba1d8fa12536?w=700&q=85', tags:[] },
+      { id:'st2', name:'Bruschetta', desc:'Grilled sourdough topped with tomato, basil, garlic and olive oil.', price:249, veg:true, img:'https://images.unsplash.com/photo-1572695157366-5e9595e30d8c?w=700&q=85', tags:[] },
+      { id:'st3', name:'Chicken Wings', desc:'Crispy chicken wings tossed in your choice of BBQ or hot sauce.', price:349, veg:false, img:'https://images.unsplash.com/photo-1527477396000-e27163b4bff3?w=700&q=85', tags:['popular'] },
+      { id:'st4', name:'Peri Peri Fries', desc:'Crispy fries dusted with peri peri seasoning, served with dip.', price:199, veg:true, img:'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=700&q=85', tags:[] }
+    ]
+  },
+  tacos: {
+    label: 'Tacos',
+    items: [
+      { id:'tc1', name:'Thecha Prawn Tacos', desc:'Soft tortillas with spicy thecha prawns, crunchy slaw, lime and fresh coriander.', price:399, veg:false, img:'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=700&q=85', tags:['signature'] },
+      { id:'tc2', name:'Paneer Tikka Tacos', desc:'Char-grilled paneer, mint chutney and pickled onions in crispy shells.', price:349, veg:true, img:'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=700&q=85', tags:[] },
+      { id:'tc3', name:'Chicken Shawarma Tacos', desc:'Slow-cooked spiced chicken, garlic sauce and fresh vegetables.', price:369, veg:false, img:'https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?w=700&q=85', tags:[] }
+    ]
+  },
+  sides: {
+    label: 'Sides',
+    items: [
+      { id:'sd1', name:'French Fries', desc:'Classic golden fries with seasoning.', price:149, veg:true, img:'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=700&q=85', tags:[] },
+      { id:'sd2', name:'Cheese Nachos', desc:'Crispy nachos with melted cheese, jalapeños and salsa.', price:249, veg:true, img:'https://images.unsplash.com/photo-1519666315444-85275f05e5d5?w=700&q=85', tags:[] },
+      { id:'sd3', name:'Onion Rings', desc:'Crispy battered onion rings with dipping sauce.', price:199, veg:true, img:'https://images.unsplash.com/photo-1639024471283-03518883512d?w=700&q=85', tags:[] }
+    ]
+  },
+  desserts: {
+    label: 'Desserts',
+    items: [
+      { id:'de1', name:'Classic Tiramisu', desc:'Layers of espresso-soaked ladyfingers and mascarpone cream.', price:249, veg:true, img:'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=700&q=85', tags:[] },
+      { id:'de2', name:'Chocolate Lava Cake', desc:'Warm chocolate cake with a molten centre, served with ice cream.', price:279, veg:true, img:'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=700&q=85', tags:['popular'] },
+      { id:'de3', name:'New York Cheesecake', desc:'Creamy baked cheesecake with a buttery biscuit base.', price:249, veg:true, img:'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=700&q=85', tags:[] }
+    ]
+  },
+  beverages: {
+    label: 'Beverages',
+    items: [
+      { id:'bv1', name:'Fresh Lime Soda', desc:'Sweet, salted or spicy — your choice.', price:129, veg:true, img:'https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=700&q=85', tags:[] },
+      { id:'bv2', name:'Cold Coffee', desc:'Rich, creamy cold coffee blended with ice cream.', price:199, veg:true, img:'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=700&q=85', tags:[] },
+      { id:'bv3', name:'Virgin Mojito', desc:'Fresh mint, lime, soda and a hint of sweetness.', price:179, veg:true, img:'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=700&q=85', tags:['popular'] },
+      { id:'bv4', name:'Italian Soda', desc:'Sparkling soda with your choice of flavoured syrup.', price:149, veg:true, img:'https://images.unsplash.com/photo-1544145945-f90425340c7e?w=700&q=85', tags:[] },
+      { id:'bv5', name:'Soft Drinks', desc:'Choice of cola, lemon or orange.', price:79, veg:true, img:'https://images.unsplash.com/photo-1581636625402-29b2a704ef13?w=700&q=85', tags:[] }
+    ]
+  }
+};
+
+/* ---------- GALLERY DATA ---------- */
+const galleryData = [
+  { id:1, src:'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=900&q=85', cat:'pizzas', label:'Signature Pizza' },
+  { id:2, src:'https://images.unsplash.com/photo-1574071318778-1d3c2f89c6ae?w=900&q=85', cat:'pizzas', label:'Fresh from the Oven' },
+  { id:3, src:'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&q=85', cat:'interiors', label:'Cafe Interiors' },
+  { id:4, src:'https://images.unsplash.com/photo-1551183053-bf91a1d81411?w=900&q=85', cat:'food', label:'Pasta Perfection' },
+  { id:5, src:'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=85', cat:'interiors', label:'Warm Ambience' },
+  { id:6, src:'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=900&q=85', cat:'food', label:'Thecha Prawn Tacos' },
+  { id:7, src:'https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=900&q=85', cat:'dining', label:'Dining Experience' },
+  { id:8, src:'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=900&q=85', cat:'food', label:'Classic Tiramisu' },
+  { id:9, src:'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=900&q=85', cat:'interiors', label:'Evening Vibes' },
+  { id:10, src:'https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=900&q=85', cat:'food', label:'Seafood Pasta' },
+  { id:11, src:'https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?w=900&q=85', cat:'dining', label:'Gather Around' },
+  { id:12, src:'https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=900&q=85', cat:'pizzas', label:'Cheesy Goodness' }
+];
+
+/* ---------- STATE ---------- */
+const state = {
+  cart: [],
+  activeCategory: 'all',
+  activeFilter: 'all',
+  searchQuery: '',
+  modalItem: null,
+  modalQty: 1,
+  galleryFilter: 'all',
+  lightboxIndex: 0
+};
+
+const WHATSAPP_NUMBER = '919004014409';
+
+/* ---------- HELPERS ---------- */
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const fmt = n => '₹' + n.toLocaleString('en-IN');
+
+/* ---------- NAV ---------- */
+const nav = $('#nav');
+const navLinks = $('#navLinks');
+const menuToggle = $('#menuToggle');
+
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+  $('#backTop').classList.toggle('show', window.scrollY > 600);
+}, { passive:true });
+
+menuToggle.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  menuToggle.classList.toggle('open', open);
+  menuToggle.setAttribute('aria-expanded', open);
+});
+
+$$('#navLinks a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  menuToggle.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded', 'false');
+}));
+
+/* Active section highlighting */
+const sections = $$('main section[id]');
+const navAnchors = $$('#navLinks a[href^="#"]');
+const sectionObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const id = e.target.id;
+      navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+    }
+  });
+}, { rootMargin:'-40% 0px -55% 0px' });
+sections.forEach(s => sectionObs.observe(s));
+
+/* ---------- HERO PARALLAX ---------- */
+const hero = $('.hero');
+const heroBg = $('.hero-bg');
+const heroObs = new IntersectionObserver(entries => {
+  entries.forEach(e => hero.classList.toggle('in-view', e.isIntersecting));
+}, { threshold:0.1 });
+heroObs.observe(hero);
+
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      if (y < window.innerHeight && heroBg) {
+        heroBg.style.transform = `scale(1.05) translateY(${y * 0.15}px)`;
+      }
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, { passive:true });
+
+/* ---------- REVEAL ANIMATIONS ---------- */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in-view');
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold:0.12, rootMargin:'0px 0px -60px 0px' });
+$$('.reveal').forEach(el => revealObs.observe(el));
+
+/* ---------- MENU RENDERING ---------- */
+const menuTabs = $('#menuTabs');
+const menuGrid = $('#menuGrid');
+const menuSearch = $('#menuSearch');
+const menuFilters = $('#menuFilters');
+
+function renderTabs() {
+  const tabs = [{ key:'all', label:'All' }];
+  Object.entries(menuData).forEach(([k, v]) => tabs.push({ key:k, label:v.label }));
+  menuTabs.innerHTML = tabs.map(t =>
+    `<button class="menu-tab${t.key===state.activeCategory?' active':''}" data-cat="${t.key}" role="tab" aria-selected="${t.key===state.activeCategory}">${t.label}</button>`
+  ).join('');
+  $$('.menu-tab', menuTabs).forEach(btn => btn.addEventListener('click', () => {
+    state.activeCategory = btn.dataset.cat;
+    renderTabs();
+    renderMenu();
+  }));
+}
+
+function renderMenu() {
+  const q = state.searchQuery.trim().toLowerCase();
+  const f = state.activeFilter;
+  let html = '';
+  let any = false;
+
+  const cats = state.activeCategory === 'all'
+    ? Object.entries(menuData)
+    : [[state.activeCategory, menuData[state.activeCategory]]];
+
+  cats.forEach(([key, cat]) => {
+    const items = cat.items.filter(it => {
+      const matchQ = !q || it.name.toLowerCase().includes(q) || it.desc.toLowerCase().includes(q);
+      const matchF = f === 'all' || (f === 'veg' && it.veg) || (f === 'non-veg' && !it.veg);
+      return matchQ && matchF;
+    });
+    if (!items.length) return;
+    any = true;
+    html += `<h3 class="menu-category-title">${cat.label} <span class="count">${items.length} ${items.length===1?'item':'items'}</span></h3>`;
+    items.forEach(it => {
+      const tags = (it.tags || []).map(t =>
+        `<span class="menu-tag ${t}">${t==='signature'?'Signature':t==='popular'?'Popular':t}</span>`
+      ).join('');
+      html += `
+        <article class="menu-card" data-item-id="${it.id}" tabindex="0" role="button" aria-label="View ${it.name}">
+          <div class="menu-card-img">
+            <img src="${it.img}" alt="${it.name}" loading="lazy" />
+            ${tags ? `<div class="menu-card-tags">${tags}</div>` : ''}
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-head">
+              <h4 class="menu-card-name">${it.name}</h4>
+              <span class="menu-card-price">${fmt(it.price)}</span>
+            </div>
+            <p class="menu-card-desc">${it.desc}</p>
+            <div class="menu-card-foot">
+              <span class="veg-indicator ${it.veg?'':'non-veg'}">
+                <span class="dot" aria-hidden="true"></span>
+                ${it.veg?'Vegetarian':'Non-Veg'}
+              </span>
+              <button class="add-btn" data-add="${it.id}" aria-label="Add ${it.name} to order">Add</button>
+            </div>
+          </div>
+        </article>`;
+    });
+  });
+
+  if (!any) {
+    html = `<div class="menu-empty">
+      <h3>No dishes match your search</h3>
+      <p>Try a different keyword or clear the filters.</p>
+    </div>`;
+  }
+
+  menuGrid.innerHTML = html;
+
+  $$('.menu-card', menuGrid).forEach(card => {
+    const openModal = () => openItemModal(card.dataset.itemId);
+    card.addEventListener('click', e => {
+      if (e.target.closest('[data-add]')) return;
+      openModal();
+    });
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); }
+    });
+  });
+  $$('[data-add]', menuGrid).forEach(btn => btn.addEventListener('click', e => {
+    e.stopPropagation();
+    addToCart(btn.dataset.add, 1);
+    pulseCart();
+  }));
+}
+
+menuSearch.addEventListener('input', e => {
+  state.searchQuery = e.target.value;
+  renderMenu();
+});
+
+$$('.menu-filter', menuFilters).forEach(btn => btn.addEventListener('click', () => {
+  $$('.menu-filter', menuFilters).forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  state.activeFilter = btn.dataset.filter;
+  renderMenu();
+}));
+
+renderTabs();
+renderMenu();
+
+/* ---------- ITEM MODAL ---------- */
+const itemModal = $('#itemModal');
+
+function findItem(id) {
+  for (const cat of Object.values(menuData)) {
+    const it = cat.items.find(i => i.id === id);
+    if (it) return it;
+  }
+  return null;
+}
+
+function openItemModal(id) {
+  const it = findItem(id);
+  if (!it) return;
+  state.modalItem = it;
+  state.modalQty = 1;
+  $('#modalImg').src = it.img;
+  $('#modalImg').alt = it.name;
+  $('#modalTitle').textContent = it.name;
+  $('#modalDesc').textContent = it.desc;
+  $('#modalPrice').textContent = fmt(it.price);
+  $('#modalQtyVal').textContent = 1;
+
+  const tag = $('#modalTag');
+  const primaryTag = (it.tags || [])[0];
+  if (primaryTag) {
+    tag.textContent = primaryTag === 'signature' ? 'Signature' : primaryTag === 'popular' ? 'Popular' : primaryTag;
+    tag.style.display = 'inline-block';
+  } else {
+    tag.style.display = 'none';
+  }
+
+  const veg = $('#modalVeg');
+  veg.className = 'modal-veg' + (it.veg ? '' : ' non-veg');
+  veg.innerHTML = `<span class="dot" style="width:12px;height:12px;border:1.5px solid currentColor;display:inline-flex;align-items:center;justify-content:center;border-radius:50%"><span style="width:5px;height:5px;border-radius:50%;background:currentColor"></span></span>${it.veg ? 'Vegetarian' : 'Non-Vegetarian'}`;
+
+  itemModal.classList.add('show');
+  itemModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeItemModal() {
+  itemModal.classList.remove('show');
+  itemModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+$$('[data-close-modal]', itemModal).forEach(el => el.addEventListener('click', closeItemModal));
+$('#modalQtyMinus').addEventListener('click', () => {
+  if (state.modalQty > 1) { state.modalQty--; $('#modalQtyVal').textContent = state.modalQty; }
+});
+$('#modalQtyPlus').addEventListener('click', () => {
+  if (state.modalQty < 20) { state.modalQty++; $('#modalQtyVal').textContent = state.modalQty; }
+});
+$('#modalAdd').addEventListener('click', () => {
+  if (!state.modalItem) return;
+  addToCart(state.modalItem.id, state.modalQty);
+  closeItemModal();
+  pulseCart();
+  openCart();
+});
+
+/* ---------- CART ---------- */
+const cartSidebar = $('#cartSidebar');
+const cartOverlay = $('#cartOverlay');
+const cartBody = $('#cartBody');
+const cartFooter = $('#cartFooter');
+const cartCount = $('#cartCount');
+const cartTotal = $('#cartTotal');
+
+function addToCart(id, qty=1) {
+  const it = findItem(id);
+  if (!it) return;
+  const existing = state.cart.find(c => c.id === id);
+  if (existing) existing.qty += qty;
+  else state.cart.push({ id, name:it.name, price:it.price, img:it.img, qty });
+  renderCart();
+}
+
+function updateQty(id, delta) {
+  const item = state.cart.find(c => c.id === id);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) state.cart = state.cart.filter(c => c.id !== id);
+  renderCart();
+}
+
+function removeFromCart(id) {
+  state.cart = state.cart.filter(c => c.id !== id);
+  renderCart();
+}
+
+function renderCart() {
+  const total = state.cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const count = state.cart.reduce((s, i) => s + i.qty, 0);
+
+  cartCount.textContent = count;
+  cartCount.classList.toggle('show', count > 0);
+  cartTotal.textContent = fmt(total);
+
+  if (!state.cart.length) {
+    cartBody.innerHTML = `
+      <div class="cart-empty">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <h4>Your cart is empty</h4>
+        <p>Browse the menu and add your favourites.</p>
+      </div>`;
+    cartFooter.style.display = 'none';
+  } else {
+    cartBody.innerHTML = state.cart.map(i => `
+      <div class="cart-item">
+        <div class="cart-item-img"><img src="${i.img}" alt="${i.name}" /></div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">${i.name}</div>
+          <div class="cart-item-price">${fmt(i.price)} each</div>
+          <div class="cart-qty">
+            <button class="qty-btn" data-qty-minus="${i.id}" aria-label="Decrease">−</button>
+            <span class="qty-val">${i.qty}</span>
+            <button class="qty-btn" data-qty-plus="${i.id}" aria-label="Increase">+</button>
+          </div>
+        </div>
+        <button class="cart-item-remove" data-remove="${i.id}" aria-label="Remove ${i.name}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6h14z"/></svg>
+        </button>
+      </div>
+    `).join('');
+    cartFooter.style.display = 'block';
+
+    $$('[data-qty-minus]', cartBody).forEach(b => b.addEventListener('click', () => updateQty(b.dataset.qtyMinus, -1)));
+    $$('[data-qty-plus]', cartBody).forEach(b => b.addEventListener('click', () => updateQty(b.dataset.qtyPlus, 1)));
+    $$('[data-remove]', cartBody).forEach(b => b.addEventListener('click', () => removeFromCart(b.dataset.remove)));
+  }
+}
+
+function openCart() {
+  cartSidebar.classList.add('open');
+  cartOverlay.classList.add('show');
+  cartSidebar.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+function closeCart() {
+  cartSidebar.classList.remove('open');
+  cartOverlay.classList.remove('show');
+  cartSidebar.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+$('#cartToggle').addEventListener('click', openCart);
+$('#openCartBtn').addEventListener('click', openCart);
+$('#cartClose').addEventListener('click', closeCart);
+cartOverlay.addEventListener('click', closeCart);
+
+function pulseCart() {
+  cartCount.style.transform = 'scale(1.3)';
+  setTimeout(() => cartCount.style.transform = '', 250);
+}
+
+/* ---------- WHATSAPP ORDER ---------- */
+$('#sendWhatsApp').addEventListener('click', () => {
+  if (!state.cart.length) return;
+  const name = $('#custName').value.trim();
+  const phone = $('#custPhone').value.trim();
+  const type = $('#orderType').value;
+
+  if (!name || !phone) {
+    $('#custName').reportValidity();
+    $('#custPhone').reportValidity();
+    return;
+  }
+
+  const total = state.cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const lines = state.cart.map(i => `• ${i.name} × ${i.qty} — ${fmt(i.price * i.qty)}`);
+
+  const msg =
+`Hi Peppe's! I'd like to place an order enquiry.
+
+*Name:* ${name}
+*Contact:* ${phone}
+*Order Type:* ${type}
+
+*My Order:*
+${lines.join('\n')}
+
+*Subtotal:* ${fmt(total)}
+
+Please confirm availability and final details. Thank you!`;
+
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+  window.open(url, '_blank', 'noopener');
+});
+
+/* ---------- SIGNATURE CARD CLICK ---------- */
+$$('.signature-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const id = card.dataset.itemId;
+    if (id) openItemModal(id);
+  });
+});
+
+/* ---------- GALLERY ---------- */
+const galleryGrid = $('#galleryGrid');
+const galleryFilters = $('#galleryFilters');
+
+function renderGallery() {
+  const items = state.galleryFilter === 'all'
+    ? galleryData
+    : galleryData.filter(g => g.cat === state.galleryFilter);
+
+  galleryGrid.innerHTML = items.map((g, i) => `
+    <div class="gallery-item" data-gallery-index="${i}" tabindex="0" role="button" aria-label="View ${g.label}">
+      <img src="${g.src}" alt="${g.label}" loading="lazy" />
+      <div class="gallery-item-label">${g.label}</div>
+    </div>
+  `).join('');
+
+  $$('.gallery-item', galleryGrid).forEach(el => {
+    const open = () => openLightbox(parseInt(el.dataset.galleryIndex));
+    el.addEventListener('click', open);
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+  });
+}
+
+$$('.gallery-filter', galleryFilters).forEach(btn => btn.addEventListener('click', () => {
+  $$('.gallery-filter', galleryFilters).forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  state.galleryFilter = btn.dataset.filter;
+  renderGallery();
+}));
+
+renderGallery();
+
+/* ---------- LIGHTBOX ---------- */
+const lightbox = $('#lightbox');
+const lbImg = $('#lbImg');
+const lbCaption = $('#lbCaption');
+
+function currentGalleryItems() {
+  return state.galleryFilter === 'all' ? galleryData : galleryData.filter(g => g.cat === state.galleryFilter);
+}
+
+function openLightbox(idx) {
+  const items = currentGalleryItems();
+  state.lightboxIndex = idx;
+  updateLightbox(items);
+  lightbox.classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  lightbox.classList.remove('show');
+  document.body.style.overflow = '';
+}
+function updateLightbox(items) {
+  const it = items[state.lightboxIndex];
+  lbImg.src = it.src;
+  lbImg.alt = it.label;
+  lbCaption.textContent = `${it.label} · ${state.lightboxIndex + 1} / ${items.length}`;
+}
+function lbPrev() {
+  const items = currentGalleryItems();
+  state.lightboxIndex = (state.lightboxIndex - 1 + items.length) % items.length;
+  updateLightbox(items);
+}
+function lbNext() {
+  const items = currentGalleryItems();
+  state.lightboxIndex = (state.lightboxIndex + 1) % items.length;
+  updateLightbox(items);
+}
+
+$('#lbClose').addEventListener('click', closeLightbox);
+$('#lbPrev').addEventListener('click', lbPrev);
+$('#lbNext').addEventListener('click', lbNext);
+lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+/* ---------- FAQ ---------- */
+$$('.faq-item').forEach(item => {
+  const btn = $('.faq-question', item);
+  const ans = $('.faq-answer', item);
+  btn.addEventListener('click', () => {
+    const open = item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+    ans.style.maxHeight = open ? ans.scrollHeight + 'px' : '0';
+  });
+});
+
+/* ---------- BACK TO TOP ---------- */
+$('#backTop').addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+/* ---------- KEYBOARD ---------- */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    if (lightbox.classList.contains('show')) closeLightbox();
+    else if (itemModal.classList.contains('show')) closeItemModal();
+    else if (cartSidebar.classList.contains('open')) closeCart();
+    else if (navLinks.classList.contains('open')) {
+      navLinks.classList.remove('open');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  }
+  if (lightbox.classList.contains('show')) {
+    if (e.key === 'ArrowLeft') lbPrev();
+    if (e.key === 'ArrowRight') lbNext();
+  }
+});
+
+/* ---------- YEAR ---------- */
+$('#year').textContent = new Date().getFullYear();
+
+/* ---------- INITIAL RENDER ---------- */
+renderCart();
+
+/* ---------- SMOOTH SCROLL OFFSET ---------- */
+$$('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const href = a.getAttribute('href');
+    if (href === '#' || href.length < 2) return;
+    const target = document.querySelector(href);
+    if (!target) return;
+    e.preventDefault();
+    const top = target.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({ top, behavior:'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>
