@@ -1,0 +1,1306 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amstill Roofing | Houston's Trusted Roofing Contractor Since 1974</title>
+    <meta name="description" content="Amstill Roofing has provided Houston homeowners and businesses with premium roofing solutions, unmatched craftsmanship, and a commitment to quality since 1974. Request a free estimate today.">
+    <meta name="keywords" content="Roofing contractor Houston TX, Houston roof replacement, Roof repair Houston, Residential roofing Houston, Commercial roofing Houston, Metal roofing Houston, Storm damage roof repair Houston">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Amstill Roofing | Houston's Trusted Roofing Contractor Since 1974">
+    <meta property="og:description" content="Premium roofing solutions, unmatched craftsmanship, and a commitment to quality. Family-owned and serving Houston for over 50 years.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amstillroofing.com/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0F172A',
+                            800: '#1E293B',
+                        },
+                        copper: {
+                            600: '#9A3412',
+                            700: '#7C2D12',
+                        },
+                        offwhite: '#FAFAF9',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RoofingContractor",
+      "name": "Amstill Roofing",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "14125 Memorial Dr",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "postalCode": "77079",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-281-612-8747",
+      "foundingDate": "1974",
+      "priceRange": "$$",
+      "areaServed": "Houston, TX and surrounding areas"
+    }
+    </script>
+
+    <style>
+        /* Custom Premium Styles */
+        body {
+            background-color: #FAFAF9;
+            color: #0F172A;
+        }
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Before/After Slider */
+        .ba-slider {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: col-resize;
+        }
+        .ba-slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .ba-slider .resize {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            overflow: hidden;
+            border-right: 3px solid white;
+            z-index: 10;
+        }
+        .ba-slider .handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            pointer-events: none;
+        }
+        
+        /* Form Steps */
+        .form-step {
+            display: none;
+        }
+        .form-step.active {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        /* Page Views */
+        .page-view {
+            display: none;
+        }
+        .page-view.active {
+            display: block;
+            animation: pageIn 0.5s ease-out;
+        }
+        @keyframes pageIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAFAF9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #9A3412;
+            border-radius: 4px;
+        }
+
+        /* ===== UI Refresh ===== */
+        :root{--accent:#C2410C;--accent-hi:#EA580C;--glow:#FB923C;--ease:cubic-bezier(.16,1,.3,1)}
+        html{scroll-padding-top:5rem}
+        body{font-feature-settings:"cv11","ss01";-webkit-font-smoothing:antialiased}
+        h1,h2,h3,.font-heading{letter-spacing:-.02em;text-wrap:balance}
+        p{text-wrap:pretty}
+        ::selection{background:var(--accent);color:#fff}
+        :focus-visible{outline:3px solid var(--glow);outline-offset:3px;border-radius:6px}
+
+        /* Softer, modern corners */
+        .rounded-sm{border-radius:14px!important}
+        .rounded{border-radius:10px!important}
+
+        /* Accent contrast fix (copper was too dark on navy) */
+        .bg-copper-600{background:linear-gradient(135deg,var(--accent-hi),var(--accent))!important}
+        .bg-copper-600:hover,.hover\:bg-copper-700:hover{background:linear-gradient(135deg,var(--accent),#9A3412)!important}
+        .text-copper-600{color:var(--accent)}
+        .bg-navy-900 .text-copper-600,.bg-navy-800 .text-copper-600,nav .text-copper-600,footer .text-copper-600{color:var(--glow)}
+
+        /* Nav */
+        #navbar{background:rgba(15,23,42,.78)!important;backdrop-filter:saturate(1.6) blur(16px);-webkit-backdrop-filter:saturate(1.6) blur(16px)}
+        #navbar.shadow-lg{background:rgba(15,23,42,.94)!important;box-shadow:0 10px 30px -10px rgba(0,0,0,.5)}
+        #scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:60;background:linear-gradient(90deg,var(--accent-hi),var(--glow))}
+
+        /* Buttons */
+        button{transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,color .25s}
+        button.bg-copper-600{box-shadow:0 8px 20px -8px rgba(234,88,12,.6)}
+        button.bg-copper-600:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(234,88,12,.7)}
+        button.bg-copper-600:active{transform:translateY(0)}
+        button.border-2:hover{transform:translateY(-2px)}
+
+        /* Hero */
+        #view-home>section:first-child{isolation:isolate}
+        #view-home>section:first-child img{transform:scale(1.05);animation:kenburns 18s ease-out forwards}
+        @keyframes kenburns{to{transform:scale(1)}}
+        #view-home>section:first-child h1{font-size:clamp(2.4rem,5.5vw,4.5rem);line-height:1.05}
+        #view-home>section:first-child:after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(to top,#FAFAF9,transparent);z-index:5;pointer-events:none;opacity:.0}
+
+        /* Cards */
+        .group.bg-white,.reveal.bg-white,.bg-offwhite>div>.bg-white,.bg-white.shadow-sm{border:1px solid rgba(15,23,42,.06)!important;box-shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px -12px rgba(15,23,42,.12)}
+        .group.bg-white{transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+        .group.bg-white:hover{transform:translateY(-6px);box-shadow:0 24px 48px -20px rgba(15,23,42,.3)}
+        .group img{transition:transform .8s var(--ease)}
+        .group:hover img{transform:scale(1.06)}
+        section img{border-radius:inherit}
+
+        /* Section rhythm */
+        section.bg-navy-900{background:radial-gradient(1200px 500px at 85% -10%,rgba(234,88,12,.14),transparent 60%),#0F172A}
+        section.bg-offwhite{background:linear-gradient(180deg,#FAFAF9,#F5F5F4)}
+        section h2{font-weight:800}
+
+        /* Reveal */
+        .reveal{transition:opacity .9s var(--ease),transform .9s var(--ease);transform:translateY(32px) scale(.98)}
+        .reveal.active{transform:none}
+        @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+        /* Forms */
+        input,select,textarea{border-radius:12px!important;background:#fff;border-color:#D6D3D1!important;transition:box-shadow .2s,border-color .2s}
+        input:hover,select:hover,textarea:hover{border-color:#A8A29E!important}
+        input:focus,select:focus,textarea:focus{border-color:var(--accent-hi)!important;box-shadow:0 0 0 4px rgba(234,88,12,.15)!important}
+
+        /* Slider & lightbox */
+        .ba-slider{border-radius:18px;box-shadow:0 24px 50px -20px rgba(15,23,42,.45)}
+        .ba-slider .handle{width:46px;height:46px;box-shadow:0 6px 18px rgba(0,0,0,.4);border:3px solid var(--accent-hi)}
+
+        /* Pills */
+        span.rounded-full{transition:background .25s,transform .25s}
+        span.rounded-full:hover{background:rgba(251,146,60,.18)}
+
+        /* Footer */
+        footer a,footer button{transition:color .2s}
+        footer a:hover,footer button:hover{color:var(--glow)}
+
+        /* Mobile sticky call bar */
+        #call-bar{display:none}
+        @media(max-width:767px){
+          #call-bar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:45;gap:8px}
+          #call-bar a{flex:1;text-align:center;padding:14px;border-radius:14px;font:700 14px Montserrat,sans-serif;color:#fff;box-shadow:0 12px 30px -8px rgba(0,0,0,.5)}
+          #call-bar a:first-child{background:linear-gradient(135deg,var(--accent-hi),var(--accent))}
+          #call-bar a:last-child{background:rgba(15,23,42,.94);backdrop-filter:blur(10px)}
+          body{padding-bottom:84px}
+        }
+        /* ===== /UI Refresh ===== */
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-navy-900/95 backdrop-blur-md text-white border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="navigateTo('home')">
+                    <i class="fa-solid fa-house-chimney text-copper-600 text-2xl mr-2"></i>
+                    <div>
+                        <span class="font-heading font-bold text-xl tracking-wide block leading-none">AMSTILL</span>
+                        <span class="text-xs tracking-[0.2em] text-gray-300">ROOFING</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <button onclick="navigateTo('home')" class="nav-link hover:text-copper-600 transition-colors text-sm font-medium">Home</button>
+                    <button onclick="navigateTo('residential-roofing')" class="nav-link hover:text-copper-600 transition-colors text-sm font-medium">Residential</button>
+                    <button onclick="navigateTo('commercial-roofing')" class="nav-link hover:text-copper-600 transition-colors text-sm font-medium">Commercial</button>
+                    <button onclick="navigateTo('storm-damage')" class="nav-link hover:text-copper-600 transition-colors text-sm font-medium">Storm Damage</button>
+                    <button onclick="navigateTo('projects')" class="nav-link hover:text-copper-600 transition-colors text-sm font-medium">Our Projects</button>
+                    <button onclick="navigateTo('about')" class="nav-link hover:text-copper-600 transition-colors text-sm font-medium">About Us</button>
+                    <button onclick="navigateTo('resources')" class="nav-link hover:text-copper-600 transition-colors text-sm font-medium">Resources</button>
+                </div>
+
+                <!-- CTA & Phone -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="tel:+12816128747" class="flex items-center text-sm font-semibold hover:text-copper-600 transition-colors">
+                        <i class="fa-solid fa-phone mr-2 text-copper-600"></i> (281) 612-8747
+                    </a>
+                    <button onclick="navigateTo('contact')" class="bg-copper-600 hover:bg-copper-700 text-white px-6 py-2.5 rounded-sm font-heading font-bold text-sm tracking-wide transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        Request Estimate
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-copper-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-800 border-t border-white/10 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <button onclick="navigateTo('home'); toggleMobileMenu()" class="block w-full text-left px-3 py-3 text-base font-medium hover:bg-white/5 rounded">Home</button>
+                <button onclick="navigateTo('residential-roofing'); toggleMobileMenu()" class="block w-full text-left px-3 py-3 text-base font-medium hover:bg-white/5 rounded">Residential Roofing</button>
+                <button onclick="navigateTo('commercial-roofing'); toggleMobileMenu()" class="block w-full text-left px-3 py-3 text-base font-medium hover:bg-white/5 rounded">Commercial Roofing</button>
+                <button onclick="navigateTo('storm-damage'); toggleMobileMenu()" class="block w-full text-left px-3 py-3 text-base font-medium hover:bg-white/5 rounded">Storm Damage</button>
+                <button onclick="navigateTo('projects'); toggleMobileMenu()" class="block w-full text-left px-3 py-3 text-base font-medium hover:bg-white/5 rounded">Our Projects</button>
+                <button onclick="navigateTo('about'); toggleMobileMenu()" class="block w-full text-left px-3 py-3 text-base font-medium hover:bg-white/5 rounded">About Us</button>
+                <button onclick="navigateTo('resources'); toggleMobileMenu()" class="block w-full text-left px-3 py-3 text-base font-medium hover:bg-white/5 rounded">Resources</button>
+                <div class="pt-4 border-t border-white/10 mt-4">
+                    <a href="tel:+12816128747" class="flex items-center justify-center w-full px-3 py-3 text-base font-bold text-copper-600 mb-3">
+                        <i class="fa-solid fa-phone mr-2"></i> (281) 612-8747
+                    </a>
+                    <button onclick="navigateTo('contact'); toggleMobileMenu()" class="w-full bg-copper-600 text-white px-6 py-3 rounded-sm font-heading font-bold text-center">
+                        Request Free Estimate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="pt-20">
+
+        <!-- ================= HOME VIEW ================= -->
+        <div id="view-home" class="page-view active">
+            
+            <!-- Hero Section -->
+            <section class="relative h-[85vh] min-h-[600px] flex items-center">
+                <div class="absolute inset-0 z-0">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2070" alt="Premium American home with professionally installed roof" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-900/70 to-transparent"></div>
+                </div>
+                
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <div class="max-w-2xl reveal active">
+                        <div class="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 mb-6">
+                            <i class="fa-solid fa-star text-copper-600 mr-2 text-xs"></i>
+                            <span class="text-white text-sm font-medium tracking-wide">Serving Houston Families Since 1974</span>
+                        </div>
+                        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 text-shadow">
+                            Protecting Houston Homes. <br>
+                            <span class="text-copper-600">Building Trust,</span> One Roof at a Time.
+                        </h1>
+                        <p class="text-gray-200 text-lg md:text-xl mb-8 leading-relaxed max-w-xl">
+                            For over 50 years, Amstill Roofing has provided Houston homeowners and businesses with premium roofing solutions, unmatched craftsmanship, and a commitment to quality that stands the test of time.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button onclick="navigateTo('contact')" class="bg-copper-600 hover:bg-copper-700 text-white px-8 py-4 rounded-sm font-heading font-bold text-lg tracking-wide transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center">
+                                Request a Free Roofing Estimate
+                                <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </button>
+                            <button onclick="navigateTo('residential-roofing')" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-navy-900 px-8 py-4 rounded-sm font-heading font-bold text-lg tracking-wide transition-all flex items-center justify-center">
+                                Explore Our Services
+                            </button>
+                        </div>
+                        
+                        <!-- Trust Indicators -->
+                        <div class="mt-12 flex flex-wrap gap-6 items-center text-gray-300 text-sm">
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-shield-halved text-copper-600 mr-2 text-lg"></i>
+                                <span>BBB Accredited</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-certificate text-copper-600 mr-2 text-lg"></i>
+                                <span>GAF Certified</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-users text-copper-600 mr-2 text-lg"></i>
+                                <span>Family-Owned</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trust & Reputation Section -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="reveal p-6 border-l-4 border-copper-600 bg-offwhite">
+                            <div class="text-copper-600 text-3xl mb-4"><i class="fa-solid fa-landmark"></i></div>
+                            <h3 class="font-heading font-bold text-xl mb-2">Established 1974</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Founded by Frank Stilley, we bring over 50 years of continuous roofing excellence to the Houston community.</p>
+                        </div>
+                        <div class="reveal p-6 border-l-4 border-copper-600 bg-offwhite" style="transition-delay: 100ms;">
+                            <div class="text-copper-600 text-3xl mb-4"><i class="fa-solid fa-award"></i></div>
+                            <h3 class="font-heading font-bold text-xl mb-2">GAF Certified</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Manufacturer-certified contractors, ensuring premium materials and industry-leading warranty protection.</p>
+                        </div>
+                        <div class="reveal p-6 border-l-4 border-copper-600 bg-offwhite" style="transition-delay: 200ms;">
+                            <div class="text-copper-600 text-3xl mb-4"><i class="fa-solid fa-handshake"></i></div>
+                            <h3 class="font-heading font-bold text-xl mb-2">BBB Accredited</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Committed to the highest standards of business ethics, transparency, and customer trust.</p>
+                        </div>
+                        <div class="reveal p-6 border-l-4 border-copper-600 bg-offwhite" style="transition-delay: 300ms;">
+                            <div class="text-copper-600 text-3xl mb-4"><i class="fa-solid fa-house-chimney-user"></i></div>
+                            <h3 class="font-heading font-bold text-xl mb-2">Family-Owned</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">A legacy of personal care, community commitment, and treating your home like our own.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Overview -->
+            <section class="py-24 bg-offwhite">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                        <span class="text-copper-600 font-bold tracking-widest text-sm uppercase">Our Expertise</span>
+                        <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy-900 mt-3 mb-4">Comprehensive Roofing Solutions</h2>
+                        <p class="text-gray-600 text-lg">From minor repairs to complete commercial installations, we deliver tailored roofing solutions built to withstand the Texas climate.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Residential -->
+                        <div class="reveal group bg-white rounded-sm shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+                            <div class="h-48 overflow-hidden">
+                                <img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20800%20600%22%20preserveAspectRatio=%22xMidYMid%20slice%22%3E%0A%3Cdefs%3E%3ClinearGradient%20id=%22s%22%20x1=%220%22%20y1=%220%22%20x2=%220%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%231E3A5F%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%23F6B98A%22/%3E%3C/linearGradient%3E%0A%3Cpattern%20id=%22sh%22%20width=%2240%22%20height=%2220%22%20patternUnits=%22userSpaceOnUse%22%3E%3Crect%20width=%2240%22%20height=%2220%22%20fill=%22%233B4252%22/%3E%3Cpath%20d=%22M0%2019.5H40M20%200V10M0%2010H40M0%200V10%22%20stroke=%22%23232834%22%20stroke-width=%222%22%20fill=%22none%22/%3E%3C/pattern%3E%0A%3ClinearGradient%20id=%22rf%22%20x1=%220%22%20y1=%220%22%20x2=%220%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%23fff%22%20stop-opacity=%22.12%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%23000%22%20stop-opacity=%22.25%22/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width=%22800%22%20height=%22600%22%20fill=%22url%28%23s%29%22/%3E%3Ccircle%20cx=%22640%22%20cy=%22130%22%20r=%2250%22%20fill=%22%23FDE2B8%22%20opacity=%22.85%22/%3E%0A%3Crect%20y=%22500%22%20width=%22800%22%20height=%22100%22%20fill=%22%232F4A3A%22/%3E%0A%3Crect%20x=%22150%22%20y=%22320%22%20width=%22500%22%20height=%22190%22%20fill=%22%23E7DCCB%22/%3E%0A%3Crect%20x=%22210%22%20y=%22370%22%20width=%2280%22%20height=%2290%22%20fill=%22%231E293B%22/%3E%3Crect%20x=%22510%22%20y=%22370%22%20width=%2280%22%20height=%2290%22%20fill=%22%231E293B%22/%3E%0A%3Crect%20x=%22355%22%20y=%22380%22%20width=%2290%22%20height=%22130%22%20fill=%22%237C2D12%22/%3E%0A%3Crect%20x=%22475%22%20y=%22150%22%20width=%2246%22%20height=%22110%22%20fill=%22%238B5E3C%22/%3E%3Crect%20x=%22468%22%20y=%22144%22%20width=%2260%22%20height=%2212%22%20fill=%22%235B3A22%22/%3E%0A%3Cpolygon%20points=%22110,335%20400,130%20690,335%22%20fill=%22url%28%23sh%29%22/%3E%3Cpolygon%20points=%22110,335%20400,130%20690,335%22%20fill=%22url%28%23rf%29%22/%3E%0A%3Cpolygon%20points=%22110,335%20400,130%20690,335%22%20fill=%22none%22%20stroke=%22%23EA580C%22%20stroke-width=%226%22%20stroke-linejoin=%22round%22/%3E%0A%3C/svg%3E" alt="Residential roofing installation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-8">
+                                <h3 class="font-heading text-2xl font-bold text-navy-900 mb-3">Residential Roofing</h3>
+                                <ul class="space-y-2 mb-6 text-gray-600 text-sm">
+                                    <li class="flex items-start"><i class="fa-solid fa-check text-copper-600 mt-1 mr-2"></i> Roof Replacement & New Installation</li>
+                                    <li class="flex items-start"><i class="fa-solid fa-check text-copper-600 mt-1 mr-2"></i> Asphalt, Metal, Tile & Slate Roofing</li>
+                                    <li class="flex items-start"><i class="fa-solid fa-check text-copper-600 mt-1 mr-2"></i> Detailed Roof Inspections & Repairs</li>
+                                </ul>
+                                <button onclick="navigateTo('residential-roofing')" class="text-copper-600 font-bold text-sm uppercase tracking-wide hover:text-copper-700 flex items-center group-hover:translate-x-1 transition-transform">
+                                    Learn More <i class="fa-solid fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Commercial -->
+                        <div class="reveal group bg-white rounded-sm shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" style="transition-delay: 100ms;">
+                            <div class="h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" alt="Commercial roofing systems" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-8">
+                                <h3 class="font-heading text-2xl font-bold text-navy-900 mb-3">Commercial Roofing</h3>
+                                <ul class="space-y-2 mb-6 text-gray-600 text-sm">
+                                    <li class="flex items-start"><i class="fa-solid fa-check text-copper-600 mt-1 mr-2"></i> Flat Roofing Systems (TPO, EPDM, PVC)</li>
+                                    <li class="flex items-start"><i class="fa-solid fa-check text-copper-600 mt-1 mr-2"></i> Commercial Roof Installation & Replacement</li>
+                                    <li class="flex items-start"><i class="fa-solid fa-check text-copper-600 mt-1 mr-2"></i> Preventative Maintenance Programs</li>
+                                </ul>
+                                <button onclick="navigateTo('commercial-roofing')" class="text-copper-600 font-bold text-sm uppercase tracking-wide hover:text-copper-700 flex items-center group-hover:translate-x-1 transition-transform">
+                                    Learn More <i class="fa-solid fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Storm Damage -->
+                        <div class="reveal group bg-white rounded-sm shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100" style="transition-delay: 200ms;">
+                            <div class="h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?auto=format&fit=crop&q=80&w=800" alt="Storm damage roof assessment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-8">
+                                <h3 class="font-heading text-2xl font-bold text-navy-900 mb-3">Storm Damage Roofing</h3>
+                                <ul class="space-y-2 mb-6 text-gray-600 text-sm">
+                                    <li class="flex items-start"><i class="fa-solid fa-check text-copper-600 mt-1 mr-2"></i> Rapid Post-Storm Damage Assessments</li>
+                                    <li class="flex items-start"><i class="fa-solid fa-check text-copper-600 mt-1 mr-2"></i> Emergency Tarping & Repair Services</li>
+                                    <li class="flex items-start"><i class="fa-solid fa-check text-copper-600 mt-1 mr-2"></i> Guidance Through the Restoration Process</li>
+                                </ul>
+                                <button onclick="navigateTo('storm-damage')" class="text-copper-600 font-bold text-sm uppercase tracking-wide hover:text-copper-700 flex items-center group-hover:translate-x-1 transition-transform">
+                                    Learn More <i class="fa-solid fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Choose Us (Asymmetric) -->
+            <section class="py-24 bg-navy-900 text-white overflow-hidden">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <div class="relative reveal">
+                            <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-copper-600"></div>
+                            <img src="https://images.unsplash.com/photo-1621293954908-907159247fc8?auto=format&fit=crop&q=80&w=800" alt="Professional roofing team at work" class="rounded-sm shadow-2xl w-full object-cover h-[500px]">
+                            <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-copper-600 rounded-sm flex items-center justify-center p-6 shadow-xl hidden md:flex">
+                                <div class="text-center">
+                                    <span class="block text-4xl font-heading font-bold">50+</span>
+                                    <span class="text-sm uppercase tracking-wider">Years of Excellence</span>
+                                </div>
+                            </div>
+                            <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-copper-600"></div>
+                        </div>
+                        
+                        <div class="reveal">
+                            <span class="text-copper-600 font-bold tracking-widest text-sm uppercase">Why Choose Amstill</span>
+                            <h2 class="font-heading text-3xl md:text-4xl font-bold mt-3 mb-6">A Legacy of Craftsmanship and Care</h2>
+                            <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                                We don't just install roofs; we protect your most valuable investment. Our family-owned heritage means we approach every project with the same care and attention to detail we would give our own homes.
+                            </p>
+                            
+                            <div class="space-y-6">
+                                <div class="flex">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <div class="w-10 h-10 rounded-full bg-copper-600/20 flex items-center justify-center">
+                                            <i class="fa-solid fa-medal text-copper-600"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="font-heading font-bold text-lg">Uncompromising Workmanship</h4>
+                                        <p class="text-gray-400 text-sm mt-1">Every installation follows strict manufacturer guidelines and our own rigorous quality control standards.</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <div class="w-10 h-10 rounded-full bg-copper-600/20 flex items-center justify-center">
+                                            <i class="fa-solid fa-comments text-copper-600"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="font-heading font-bold text-lg">Transparent Communication</h4>
+                                        <p class="text-gray-400 text-sm mt-1">No hidden fees, no surprises. We keep you informed at every stage of the roofing process.</p>
+                                    </div>
+                                </div>
+                                <div class="flex">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <div class="w-10 h-10 rounded-full bg-copper-600/20 flex items-center justify-center">
+                                            <i class="fa-solid fa-layer-group text-copper-600"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="font-heading font-bold text-lg">Premium Materials</h4>
+                                        <p class="text-gray-400 text-sm mt-1">We partner with top-tier manufacturers to provide roofing systems built for Houston's extreme weather.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Gallery Preview -->
+            <section class="py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+                        <div>
+                            <span class="text-copper-600 font-bold tracking-widest text-sm uppercase">Our Portfolio</span>
+                            <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy-900 mt-3">Recent Roofing Transformations</h2>
+                        </div>
+                        <button onclick="navigateTo('projects')" class="mt-4 md:mt-0 text-copper-600 font-bold text-sm uppercase tracking-wide hover:text-copper-700 flex items-center">
+                            View All Projects <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="reveal group relative overflow-hidden rounded-sm cursor-pointer h-64" onclick="openLightbox('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200')">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600" alt="Residential asphalt shingle roof replacement" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <span class="text-white font-heading font-bold text-lg border-2 border-white px-4 py-2">View Project</span>
+                            </div>
+                        </div>
+                        <div class="reveal group relative overflow-hidden rounded-sm cursor-pointer h-64 lg:col-span-2" style="transition-delay: 100ms;" onclick="openLightbox('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=1200')">
+                            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=800" alt="Luxury home metal roofing installation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <span class="text-white font-heading font-bold text-lg border-2 border-white px-4 py-2">View Project</span>
+                            </div>
+                        </div>
+                        <div class="reveal group relative overflow-hidden rounded-sm cursor-pointer h-64 lg:col-span-2" style="transition-delay: 200ms;" onclick="openLightbox('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200')">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" alt="Commercial flat roofing system installation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <span class="text-white font-heading font-bold text-lg border-2 border-white px-4 py-2">View Project</span>
+                            </div>
+                        </div>
+                        <div class="reveal group relative overflow-hidden rounded-sm cursor-pointer h-64" style="transition-delay: 300ms;" onclick="openLightbox('https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=1200')">
+                            <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=600" alt="Tile roofing installation Houston" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-navy-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <span class="text-white font-heading font-bold text-lg border-2 border-white px-4 py-2">View Project</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customer Reviews -->
+            <section class="py-24 bg-offwhite">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                        <span class="text-copper-600 font-bold tracking-widest text-sm uppercase">Testimonials</span>
+                        <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy-900 mt-3 mb-4">Trusted by Houston Homeowners</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="reveal bg-white p-8 rounded-sm shadow-sm border border-gray-100 relative">
+                            <i class="fa-solid fa-quote-left text-copper-600/20 text-5xl absolute top-6 left-6"></i>
+                            <p class="text-gray-600 italic mb-6 relative z-10 pt-4">"I had a full roof replacement done by Amstill Roofing on my home in Houston, and I couldn't be happier. From the initial inspection to the final cleanup, their team was professional and thorough."</p>
+                            <div class="flex items-center">
+                                <div class="text-copper-600 text-sm">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="ml-3 text-sm font-bold text-navy-900">- Verified Angi Member</span>
+                            </div>
+                        </div>
+                        <div class="reveal bg-white p-8 rounded-sm shadow-sm border border-gray-100 relative" style="transition-delay: 100ms;">
+                            <i class="fa-solid fa-quote-left text-copper-600/20 text-5xl absolute top-6 left-6"></i>
+                            <p class="text-gray-600 italic mb-6 relative z-10 pt-4">"My new roof is lovely and has zero leaks, even during heavy storms. I enthusiastically recommend Amstill Roofing for their quality and personable team."</p>
+                            <div class="flex items-center">
+                                <div class="text-copper-600 text-sm">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="ml-3 text-sm font-bold text-navy-900">- Best Pick Reports Verified</span>
+                            </div>
+                        </div>
+                        <div class="reveal bg-white p-8 rounded-sm shadow-sm border border-gray-100 relative" style="transition-delay: 200ms;">
+                            <i class="fa-solid fa-quote-left text-copper-600/20 text-5xl absolute top-6 left-6"></i>
+                            <p class="text-gray-600 italic mb-6 relative z-10 pt-4">"Danny and John did an amazing job from start to finish. The price was very fair, and the quality of the asphalt shingle installation is top-notch. Highly recommend."</p>
+                            <div class="flex items-center">
+                                <div class="text-copper-600 text-sm">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="ml-3 text-sm font-bold text-navy-900">- Houston Homeowner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Service Areas -->
+            <section class="py-20 bg-navy-900 text-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+                    <h2 class="font-heading text-3xl font-bold mb-8">Proudly Serving Houston and Surrounding Communities</h2>
+                    <div class="flex flex-wrap justify-center gap-4 text-gray-300">
+                        <span class="px-4 py-2 bg-white/5 rounded-full border border-white/10">Houston</span>
+                        <span class="px-4 py-2 bg-white/5 rounded-full border border-white/10">Katy</span>
+                        <span class="px-4 py-2 bg-white/5 rounded-full border border-white/10">Memorial</span>
+                        <span class="px-4 py-2 bg-white/5 rounded-full border border-white/10">Spring</span>
+                        <span class="px-4 py-2 bg-white/5 rounded-full border border-white/10">The Woodlands</span>
+                        <span class="px-4 py-2 bg-white/5 rounded-full border border-white/10">Round Rock</span>
+                        <span class="px-4 py-2 bg-white/5 rounded-full border border-white/10">Sugar Land</span>
+                        <span class="px-4 py-2 bg-white/5 rounded-full border border-white/10">Pearland</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= RESIDENTIAL ROOFING VIEW ================= -->
+        <div id="view-residential-roofing" class="page-view">
+            <div class="bg-navy-900 text-white py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <span class="text-copper-600 font-bold tracking-widest text-sm uppercase">Residential Services</span>
+                    <h1 class="font-heading text-4xl md:text-5xl font-bold mt-4 mb-6">Residential Roofing Excellence</h1>
+                    <p class="text-gray-300 text-lg max-w-2xl mx-auto">Comprehensive roofing solutions tailored to protect and enhance your Houston home, from architectural shingles to premium slate.</p>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+                <div class="grid md:grid-cols-2 gap-12 items-center reveal">
+                    <img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20800%20600%22%20preserveAspectRatio=%22xMidYMid%20slice%22%3E%0A%3Cdefs%3E%3ClinearGradient%20id=%22s%22%20x1=%220%22%20y1=%220%22%20x2=%220%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%231E3A5F%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%23F6B98A%22/%3E%3C/linearGradient%3E%0A%3Cpattern%20id=%22sh%22%20width=%2240%22%20height=%2220%22%20patternUnits=%22userSpaceOnUse%22%3E%3Crect%20width=%2240%22%20height=%2220%22%20fill=%22%233B4252%22/%3E%3Cpath%20d=%22M0%2019.5H40M20%200V10M0%2010H40M0%200V10%22%20stroke=%22%23232834%22%20stroke-width=%222%22%20fill=%22none%22/%3E%3C/pattern%3E%0A%3ClinearGradient%20id=%22rf%22%20x1=%220%22%20y1=%220%22%20x2=%220%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%23fff%22%20stop-opacity=%22.12%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%23000%22%20stop-opacity=%22.25%22/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width=%22800%22%20height=%22600%22%20fill=%22url%28%23s%29%22/%3E%3Ccircle%20cx=%22640%22%20cy=%22130%22%20r=%2250%22%20fill=%22%23FDE2B8%22%20opacity=%22.85%22/%3E%0A%3Crect%20y=%22500%22%20width=%22800%22%20height=%22100%22%20fill=%22%232F4A3A%22/%3E%0A%3Crect%20x=%22150%22%20y=%22320%22%20width=%22500%22%20height=%22190%22%20fill=%22%23E7DCCB%22/%3E%0A%3Crect%20x=%22210%22%20y=%22370%22%20width=%2280%22%20height=%2290%22%20fill=%22%231E293B%22/%3E%3Crect%20x=%22510%22%20y=%22370%22%20width=%2280%22%20height=%2290%22%20fill=%22%231E293B%22/%3E%0A%3Crect%20x=%22355%22%20y=%22380%22%20width=%2290%22%20height=%22130%22%20fill=%22%237C2D12%22/%3E%0A%3Crect%20x=%22475%22%20y=%22150%22%20width=%2246%22%20height=%22110%22%20fill=%22%238B5E3C%22/%3E%3Crect%20x=%22468%22%20y=%22144%22%20width=%2260%22%20height=%2212%22%20fill=%22%235B3A22%22/%3E%0A%3Cpolygon%20points=%22110,335%20400,130%20690,335%22%20fill=%22url%28%23sh%29%22/%3E%3Cpolygon%20points=%22110,335%20400,130%20690,335%22%20fill=%22url%28%23rf%29%22/%3E%0A%3Cpolygon%20points=%22110,335%20400,130%20690,335%22%20fill=%22none%22%20stroke=%22%23EA580C%22%20stroke-width=%226%22%20stroke-linejoin=%22round%22/%3E%0A%3C/svg%3E" alt="Residential roof replacement" class="rounded-sm shadow-lg w-full">
+                    <div>
+                        <h2 class="font-heading text-3xl font-bold text-navy-900 mb-4">Roof Replacement & New Installation</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">When your roof reaches the end of its lifespan, a complete replacement is the most effective way to protect your home. We manage the entire process, from removing the old materials to installing a premium, weather-resistant roofing system.</p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-copper-600 mr-3"></i> Complete tear-off and disposal</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-copper-600 mr-3"></i> Decking inspection and repair</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-copper-600 mr-3"></i> Premium underlayment installation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-offwhite p-8 md:p-12 rounded-sm reveal">
+                    <h3 class="font-heading text-2xl font-bold text-navy-900 mb-6 text-center">Roofing Material Options</h3>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-sm shadow-sm">
+                            <h4 class="font-bold text-lg mb-2">Asphalt Shingles</h4>
+                            <p class="text-sm text-gray-600">The most popular choice for Houston homes, offering excellent value, durability, and a wide variety of architectural styles.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-sm shadow-sm">
+                            <h4 class="font-bold text-lg mb-2">Metal Roofing</h4>
+                            <p class="text-sm text-gray-600">Exceptional longevity and energy efficiency. Ideal for reflecting Houston's intense summer heat and resisting severe weather.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-sm shadow-sm">
+                            <h4 class="font-bold text-lg mb-2">Tile & Slate</h4>
+                            <p class="text-sm text-gray-600">Premium, high-end materials that offer unmatched aesthetic appeal and a lifespan that can exceed 50 years with proper maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button onclick="navigateTo('contact')" class="bg-copper-600 hover:bg-copper-700 text-white px-8 py-4 rounded-sm font-heading font-bold text-lg tracking-wide transition-all shadow-lg">Get Your Residential Roofing Estimate</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= COMMERCIAL ROOFING VIEW ================= -->
+        <div id="view-commercial-roofing" class="page-view">
+            <div class="bg-navy-900 text-white py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <span class="text-copper-600 font-bold tracking-widest text-sm uppercase">Commercial Services</span>
+                    <h1 class="font-heading text-4xl md:text-5xl font-bold mt-4 mb-6">Commercial Roofing Solutions</h1>
+                    <p class="text-gray-300 text-lg max-w-2xl mx-auto">Protecting your business assets with durable, code-compliant commercial roofing systems designed for minimal disruption.</p>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid md:grid-cols-2 gap-12 items-center reveal">
+                    <div>
+                        <h2 class="font-heading text-3xl font-bold text-navy-900 mb-4">Flat & Low-Slope Roofing Systems</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Commercial properties require specialized roofing solutions. We install and maintain TPO, EPDM, PVC, and modified bitumen systems that provide superior waterproofing and energy efficiency for your business.</p>
+                        <button onclick="navigateTo('contact')" class="bg-copper-600 hover:bg-copper-700 text-white px-6 py-3 rounded-sm font-heading font-bold transition-all">Request Commercial Assessment</button>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" alt="Commercial flat roofing" class="rounded-sm shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= STORM DAMAGE VIEW ================= -->
+        <div id="view-storm-damage" class="page-view">
+            <div class="bg-navy-900 text-white py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <span class="text-copper-600 font-bold tracking-widest text-sm uppercase">Emergency Services</span>
+                    <h1 class="font-heading text-4xl md:text-5xl font-bold mt-4 mb-6">Storm Damage Roof Repair</h1>
+                    <p class="text-gray-300 text-lg max-w-2xl mx-auto">Rapid response and comprehensive restoration services for roofs affected by Houston's severe weather, hail, and high winds.</p>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid md:grid-cols-3 gap-8 reveal">
+                    <div class="bg-offwhite p-8 rounded-sm text-center">
+                        <i class="fa-solid fa-bolt text-copper-600 text-4xl mb-4"></i>
+                        <h3 class="font-heading font-bold text-xl mb-3">Rapid Assessment</h3>
+                        <p class="text-gray-600 text-sm">Immediate post-storm inspections to identify vulnerabilities and prevent secondary water damage to your property.</p>
+                    </div>
+                    <div class="bg-offwhite p-8 rounded-sm text-center">
+                        <i class="fa-solid fa-tarp text-copper-600 text-4xl mb-4"></i>
+                        <h3 class="font-heading font-bold text-xl mb-3">Emergency Tarping</h3>
+                        <p class="text-gray-600 text-sm">Swift temporary sealing of compromised roof areas to protect your home's interior while permanent repairs are scheduled.</p>
+                    </div>
+                    <div class="bg-offwhite p-8 rounded-sm text-center">
+                        <i class="fa-solid fa-file-contract text-copper-600 text-4xl mb-4"></i>
+                        <h3 class="font-heading font-bold text-xl mb-3">Restoration Guidance</h3>
+                        <p class="text-gray-600 text-sm">We help you understand the repair process and document damage thoroughly for your records.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="tel:+12816128747" class="inline-flex items-center text-2xl font-heading font-bold text-navy-900 hover:text-copper-600 transition-colors">
+                        <i class="fa-solid fa-phone mr-3 text-copper-600"></i> Call (281) 612-8747 for Emergency Service
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= PROJECTS VIEW ================= -->
+        <div id="view-projects" class="page-view">
+            <div class="bg-navy-900 text-white py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="font-heading text-4xl md:text-5xl font-bold mt-4 mb-6">Our Roofing Projects</h1>
+                    <p class="text-gray-300 text-lg">A showcase of our craftsmanship across Houston.</p>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <!-- Filters -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12 reveal">
+                    <button class="filter-btn active px-6 py-2 rounded-full border border-copper-600 bg-copper-600 text-white font-medium text-sm transition-all" data-filter="all">All</button>
+                    <button class="filter-btn px-6 py-2 rounded-full border border-gray-300 text-gray-600 hover:border-copper-600 hover:text-copper-600 font-medium text-sm transition-all" data-filter="residential">Residential</button>
+                    <button class="filter-btn px-6 py-2 rounded-full border border-gray-300 text-gray-600 hover:border-copper-600 hover:text-copper-600 font-medium text-sm transition-all" data-filter="commercial">Commercial</button>
+                    <button class="filter-btn px-6 py-2 rounded-full border border-gray-300 text-gray-600 hover:border-copper-600 hover:text-copper-600 font-medium text-sm transition-all" data-filter="metal">Metal</button>
+                </div>
+                
+                <!-- Gallery Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                    <div class="gallery-item residential group relative overflow-hidden rounded-sm cursor-pointer h-64" onclick="openLightbox('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200')">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600" alt="Residential project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="gallery-item commercial group relative overflow-hidden rounded-sm cursor-pointer h-64" onclick="openLightbox('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200')">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600" alt="Commercial project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="gallery-item metal residential group relative overflow-hidden rounded-sm cursor-pointer h-64" onclick="openLightbox('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=1200')">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=600" alt="Metal roofing project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= ABOUT VIEW ================= -->
+        <div id="view-about" class="page-view">
+            <div class="bg-navy-900 text-white py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="font-heading text-4xl md:text-5xl font-bold mt-4 mb-6">About Amstill Roofing</h1>
+                    <p class="text-gray-300 text-lg max-w-2xl mx-auto">A family-owned legacy of protecting Houston homes since 1974.</p>
+                </div>
+            </div>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center reveal">
+                <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                    Founded in 1974 by Frank Stilley, Amstill Roofing began with a simple mission: to install the best residential roofing systems in Houston with unwavering integrity. Over five decades later, that mission remains unchanged.
+                </p>
+                <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                    As a family-owned and operated business, we understand that a roof is more than just shingles and underlayment—it's the primary shield protecting your family, your memories, and your most significant investment. We combine old-school craftsmanship with modern roofing technology to deliver results that stand the test of time.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8 mt-12 text-left">
+                    <div class="p-6 bg-offwhite rounded-sm">
+                        <h3 class="font-heading font-bold text-xl mb-2">Our Mission</h3>
+                        <p class="text-gray-600 text-sm">To provide unparalleled roofing quality and customer service, treating every home as if it were our own.</p>
+                    </div>
+                    <div class="p-6 bg-offwhite rounded-sm">
+                        <h3 class="font-heading font-bold text-xl mb-2">Our Values</h3>
+                        <p class="text-gray-600 text-sm">Integrity, craftsmanship, transparency, and a deep respect for the communities we serve.</p>
+                    </div>
+                    <div class="p-6 bg-offwhite rounded-sm">
+                        <h3 class="font-heading font-bold text-xl mb-2">Our Promise</h3>
+                        <p class="text-gray-600 text-sm">We stand behind our work with robust warranties and a commitment to your complete satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= RESOURCES VIEW ================= -->
+        <div id="view-resources" class="page-view">
+            <div class="bg-navy-900 text-white py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="font-heading text-4xl md:text-5xl font-bold mt-4 mb-6">Roofing Resources</h1>
+                    <p class="text-gray-300 text-lg">Educational guides to help you make informed decisions about your roof.</p>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="bg-white rounded-sm shadow-sm overflow-hidden hover:shadow-lg transition-shadow reveal">
+                        <img src="https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?auto=format&fit=crop&q=80&w=600" alt="Roof damage" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-copper-600 text-xs font-bold uppercase tracking-wider">Maintenance</span>
+                            <h3 class="font-heading font-bold text-xl mt-2 mb-3">How to Identify Roof Damage Early</h3>
+                            <p class="text-gray-600 text-sm mb-4">Learn the key warning signs of roof deterioration, from missing shingles to granular loss, before they become costly leaks.</p>
+                            <a href="#" class="text-copper-600 font-bold text-sm hover:underline">Read Article</a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-sm shadow-sm overflow-hidden hover:shadow-lg transition-shadow reveal" style="transition-delay: 100ms;">
+                        <img src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20800%20600%22%20preserveAspectRatio=%22xMidYMid%20slice%22%3E%0A%3Cdefs%3E%3ClinearGradient%20id=%22s%22%20x1=%220%22%20y1=%220%22%20x2=%220%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%231E3A5F%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%23F6B98A%22/%3E%3C/linearGradient%3E%0A%3Cpattern%20id=%22sh%22%20width=%2240%22%20height=%2220%22%20patternUnits=%22userSpaceOnUse%22%3E%3Crect%20width=%2240%22%20height=%2220%22%20fill=%22%233B4252%22/%3E%3Cpath%20d=%22M0%2019.5H40M20%200V10M0%2010H40M0%200V10%22%20stroke=%22%23232834%22%20stroke-width=%222%22%20fill=%22none%22/%3E%3C/pattern%3E%0A%3ClinearGradient%20id=%22rf%22%20x1=%220%22%20y1=%220%22%20x2=%220%22%20y2=%221%22%3E%3Cstop%20offset=%220%22%20stop-color=%22%23fff%22%20stop-opacity=%22.12%22/%3E%3Cstop%20offset=%221%22%20stop-color=%22%23000%22%20stop-opacity=%22.25%22/%3E%3C/linearGradient%3E%3C/defs%3E%0A%3Crect%20width=%22800%22%20height=%22600%22%20fill=%22url%28%23s%29%22/%3E%3Ccircle%20cx=%22640%22%20cy=%22130%22%20r=%2250%22%20fill=%22%23FDE2B8%22%20opacity=%22.85%22/%3E%0A%3Crect%20y=%22500%22%20width=%22800%22%20height=%22100%22%20fill=%22%232F4A3A%22/%3E%0A%3Crect%20x=%22150%22%20y=%22320%22%20width=%22500%22%20height=%22190%22%20fill=%22%23E7DCCB%22/%3E%0A%3Crect%20x=%22210%22%20y=%22370%22%20width=%2280%22%20height=%2290%22%20fill=%22%231E293B%22/%3E%3Crect%20x=%22510%22%20y=%22370%22%20width=%2280%22%20height=%2290%22%20fill=%22%231E293B%22/%3E%0A%3Crect%20x=%22355%22%20y=%22380%22%20width=%2290%22%20height=%22130%22%20fill=%22%237C2D12%22/%3E%0A%3Crect%20x=%22475%22%20y=%22150%22%20width=%2246%22%20height=%22110%22%20fill=%22%238B5E3C%22/%3E%3Crect%20x=%22468%22%20y=%22144%22%20width=%2260%22%20height=%2212%22%20fill=%22%235B3A22%22/%3E%0A%3Cpolygon%20points=%22110,335%20400,130%20690,335%22%20fill=%22url%28%23sh%29%22/%3E%3Cpolygon%20points=%22110,335%20400,130%20690,335%22%20fill=%22url%28%23rf%29%22/%3E%0A%3Cpolygon%20points=%22110,335%20400,130%20690,335%22%20fill=%22none%22%20stroke=%22%23EA580C%22%20stroke-width=%226%22%20stroke-linejoin=%22round%22/%3E%0A%3C/svg%3E" alt="Roof replacement" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-copper-600 text-xs font-bold uppercase tracking-wider">Planning</span>
+                            <h3 class="font-heading font-bold text-xl mt-2 mb-3">When Should You Replace Your Roof?</h3>
+                            <p class="text-gray-600 text-sm mb-4">Understanding the typical lifespan of asphalt, metal, and tile roofing in the Houston climate to plan your replacement.</p>
+                            <a href="#" class="text-copper-600 font-bold text-sm hover:underline">Read Article</a>
+                        </div>
+                    </article>
+                    <article class="bg-white rounded-sm shadow-sm overflow-hidden hover:shadow-lg transition-shadow reveal" style="transition-delay: 200ms;">
+                        <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=600" alt="Roofing materials" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-copper-600 text-xs font-bold uppercase tracking-wider">Materials</span>
+                            <h3 class="font-heading font-bold text-xl mt-2 mb-3">Architectural vs. Traditional Shingles</h3>
+                            <p class="text-gray-600 text-sm mb-4">A detailed comparison of dimensional architectural shingles and standard 3-tab shingles for your home.</p>
+                            <a href="#" class="text-copper-600 font-bold text-sm hover:underline">Read Article</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= CONTACT & ESTIMATE VIEW ================= -->
+        <div id="view-contact" class="page-view">
+            <div class="bg-navy-900 text-white py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="font-heading text-4xl md:text-5xl font-bold mt-4 mb-6">Ready for a Roof You Can Rely On?</h1>
+                    <p class="text-gray-300 text-lg max-w-2xl mx-auto">Schedule your free, no-obligation roofing inspection and estimate today.</p>
+                </div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 -mt-12 relative z-10">
+                <div class="bg-white rounded-sm shadow-2xl p-8 md:p-12 reveal">
+                    <!-- Progress Bar -->
+                    <div class="mb-8">
+                        <div class="flex justify-between text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">
+                            <span id="step-1-label" class="text-copper-600">Contact Info</span>
+                            <span id="step-2-label">Property Details</span>
+                            <span id="step-3-label">Additional Info</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div id="progress-bar" class="bg-copper-600 h-2 rounded-full transition-all duration-500" style="width: 33%"></div>
+                        </div>
+                    </div>
+
+                    <form id="estimate-form" onsubmit="handleFormSubmit(event)">
+                        <!-- Step 1 -->
+                        <div class="form-step active" data-step="1">
+                            <h3 class="font-heading text-2xl font-bold text-navy-900 mb-6">Let's Start with Your Contact Information</h3>
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                                    <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-copper-600 focus:border-transparent outline-none transition-all" placeholder="John Doe">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                                    <input type="tel" name="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-copper-600 focus:border-transparent outline-none transition-all" placeholder="(281) 555-0123">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-copper-600 focus:border-transparent outline-none transition-all" placeholder="john@example.com">
+                            </div>
+                            <div class="flex justify-end">
+                                <button type="button" onclick="nextStep(2)" class="bg-copper-600 hover:bg-copper-700 text-white px-8 py-3 rounded-sm font-bold transition-all">Next Step <i class="fa-solid fa-arrow-right ml-2"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="form-step" data-step="2">
+                            <h3 class="font-heading text-2xl font-bold text-navy-900 mb-6">Tell Us About Your Property</h3>
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Property ZIP Code *</label>
+                                    <input type="text" name="zip" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-copper-600 focus:border-transparent outline-none transition-all" placeholder="77079">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Property Type *</label>
+                                    <select name="property_type" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-copper-600 focus:border-transparent outline-none transition-all bg-white">
+                                        <option value="">Select...</option>
+                                        <option value="residential">Residential</option>
+                                        <option value="commercial">Commercial</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Service Required *</label>
+                                <select name="service" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-copper-600 focus:border-transparent outline-none transition-all bg-white">
+                                    <option value="">Select a service...</option>
+                                    <option value="replacement">Roof Replacement</option>
+                                    <option value="repair">Roof Repair</option>
+                                    <option value="inspection">Roof Inspection</option>
+                                    <option value="storm">Storm Damage Assessment</option>
+                                    <option value="new">New Construction Installation</option>
+                                </select>
+                            </div>
+                            <div class="flex justify-between">
+                                <button type="button" onclick="prevStep(1)" class="text-gray-600 hover:text-navy-900 font-medium px-4 py-3"><i class="fa-solid fa-arrow-left mr-2"></i> Back</button>
+                                <button type="button" onclick="nextStep(3)" class="bg-copper-600 hover:bg-copper-700 text-white px-8 py-3 rounded-sm font-bold transition-all">Next Step <i class="fa-solid fa-arrow-right ml-2"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="form-step" data-step="3">
+                            <h3 class="font-heading text-2xl font-bold text-navy-900 mb-6">Additional Details</h3>
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Material (If Known)</label>
+                                    <select name="material" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-copper-600 focus:border-transparent outline-none transition-all bg-white">
+                                        <option value="">Not sure yet</option>
+                                        <option value="asphalt">Asphalt Shingles</option>
+                                        <option value="metal">Metal Roofing</option>
+                                        <option value="tile">Tile / Slate</option>
+                                        <option value="flat">Flat Roofing System</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Contact Method</label>
+                                    <select name="contact_method" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-copper-600 focus:border-transparent outline-none transition-all bg-white">
+                                        <option value="phone">Phone Call</option>
+                                        <option value="email">Email</option>
+                                        <option value="text">Text Message</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Describe Your Roofing Concern</label>
+                                <textarea name="description" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-copper-600 focus:border-transparent outline-none transition-all" placeholder="e.g., Missing shingles after recent storm, leaking in the attic..."></textarea>
+                            </div>
+                            <div class="mb-8">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Upload Photos (Optional)</label>
+                                <div class="border-2 border-dashed border-gray-300 rounded-sm p-6 text-center hover:bg-gray-50 transition-colors cursor-pointer">
+                                    <i class="fa-solid fa-cloud-arrow-up text-gray-400 text-2xl mb-2"></i>
+                                    <p class="text-sm text-gray-500">Click to upload or drag and drop images of your roof</p>
+                                    <input type="file" class="hidden" multiple accept="image/*">
+                                </div>
+                            </div>
+                            <div class="flex justify-between">
+                                <button type="button" onclick="prevStep(2)" class="text-gray-600 hover:text-navy-900 font-medium px-4 py-3"><i class="fa-solid fa-arrow-left mr-2"></i> Back</button>
+                                <button type="submit" class="bg-navy-900 hover:bg-navy-800 text-white px-8 py-3 rounded-sm font-bold transition-all shadow-lg">Submit Request</button>
+                            </div>
+                        </div>
+
+                        <!-- Success Message (Hidden by default) -->
+                        <div id="form-success" class="hidden text-center py-12">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa-solid fa-check text-green-600 text-2xl"></i>
+                            </div>
+                            <h3 class="font-heading text-2xl font-bold text-navy-900 mb-2">Request Received</h3>
+                            <p class="text-gray-600 mb-4">Thank you for contacting Amstill Roofing. A member of our team will review your information and contact you shortly.</p>
+                            <p class="text-sm text-gray-500 italic">Note: This is a frontend demonstration. To process real inquiries, connect this form to a backend service (e.g., Formspree, Netlify Forms, or custom API).</p>
+                            <button type="button" onclick="resetForm()" class="mt-6 text-copper-600 font-bold hover:underline">Submit another request</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="grid md:grid-cols-3 gap-8 mt-12 text-center reveal">
+                    <div>
+                        <i class="fa-solid fa-location-dot text-copper-600 text-2xl mb-3"></i>
+                        <h4 class="font-bold text-navy-900">Visit Us</h4>
+                        <p class="text-gray-600 text-sm mt-1">14125 Memorial Dr<br>Houston, TX 77079</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-phone text-copper-600 text-2xl mb-3"></i>
+                        <h4 class="font-bold text-navy-900">Call Us</h4>
+                        <p class="text-gray-600 text-sm mt-1"><a href="tel:+12816128747" class="hover:text-copper-600">(281) 612-8747</a><br>Mon-Fri: 8:00 AM - 5:00 PM</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-envelope text-copper-600 text-2xl mb-3"></i>
+                        <h4 class="font-bold text-navy-900">Email Us</h4>
+                        <p class="text-gray-600 text-sm mt-1">info@amstillroofing.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fa-solid fa-house-chimney text-copper-600 text-2xl mr-2"></i>
+                        <div>
+                            <span class="font-heading font-bold text-xl tracking-wide block leading-none">AMSTILL</span>
+                            <span class="text-xs tracking-[0.2em] text-gray-400">ROOFING</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Houston's trusted roofing contractor since 1974. Family-owned and committed to protecting your home with premium materials and unmatched craftsmanship.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-copper-600 transition-colors"><i class="fa-brands fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-copper-600 transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-copper-600 transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4">Roofing Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><button onclick="navigateTo('residential-roofing')" class="hover:text-copper-600 transition-colors">Residential Roofing</button></li>
+                        <li><button onclick="navigateTo('commercial-roofing')" class="hover:text-copper-600 transition-colors">Commercial Roofing</button></li>
+                        <li><button onclick="navigateTo('storm-damage')" class="hover:text-copper-600 transition-colors">Storm Damage Repair</button></li>
+                        <li><button onclick="navigateTo('projects')" class="hover:text-copper-600 transition-colors">Our Projects</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><button onclick="navigateTo('about')" class="hover:text-copper-600 transition-colors">About Us</button></li>
+                        <li><button onclick="navigateTo('resources')" class="hover:text-copper-600 transition-colors">Resources & Blog</button></li>
+                        <li><button onclick="navigateTo('contact')" class="hover:text-copper-600 transition-colors">Contact & Estimate</button></li>
+                        <li><a href="#" class="hover:text-copper-600 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-copper-600 transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-3 text-copper-600"></i>
+                            <span>14125 Memorial Dr<br>Houston, TX 77079</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone mr-3 text-copper-600"></i>
+                            <a href="tel:+12816128747" class="hover:text-white transition-colors">(281) 612-8747</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope mr-3 text-copper-600"></i>
+                            <a href="mailto:info@amstillroofing.com" class="hover:text-white transition-colors">info@amstillroofing.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 Amstill Roofing. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Designed with excellence for Houston homeowners.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[60] bg-black/95 hidden flex items-center justify-center p-4" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white text-4xl hover:text-copper-600 transition-colors">&times;</button>
+        <img id="lightbox-img" src="" alt="Enlarged project view" class="max-w-full max-h-[90vh] object-contain rounded-sm shadow-2xl">
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-8 right-8 bg-copper-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-copper-700 z-40">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // --- Navigation & View Routing ---
+        function navigateTo(viewId) {
+            // Hide all views
+            document.querySelectorAll('.page-view').forEach(view => {
+                view.classList.remove('active');
+            });
+            
+            // Show target view
+            const targetView = document.getElementById('view-' + viewId);
+            if (targetView) {
+                targetView.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Update URL hash without jumping
+                history.pushState({ view: viewId }, '', `#${viewId}`);
+            }
+            
+            // Re-trigger reveal animations for the new view
+            setTimeout(initScrollReveal, 100);
+        }
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', (e) => {
+            const viewId = e.state?.view || 'home';
+            navigateTo(viewId);
+        });
+
+        // Initialize view based on URL hash on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.replace('#', '');
+            if (hash && document.getElementById('view-' + hash)) {
+                navigateTo(hash);
+            } else {
+                initScrollReveal();
+            }
+        });
+
+        // --- Mobile Menu ---
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
+
+        // --- Sticky Navbar & Back to Top ---
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            const backToTop = document.getElementById('back-to-top');
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+            
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                backToTop.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+
+        // --- Scroll Reveal Animation ---
+        function initScrollReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            document.querySelectorAll('.reveal').forEach(el => {
+                el.classList.remove('active'); // Reset for new views
+                observer.observe(el);
+            });
+        }
+
+        // --- Multi-Step Form Logic ---
+        let currentStep = 1;
+        const totalSteps = 3;
+
+        function updateProgress() {
+            const progress = (currentStep / totalSteps) * 100;
+            document.getElementById('progress-bar').style.width = `${progress}%`;
+            
+            for (let i = 1; i <= totalSteps; i++) {
+                const label = document.getElementById(`step-${i}-label`);
+                if (i <= currentStep) {
+                    label.classList.add('text-copper-600');
+                    label.classList.remove('text-gray-500');
+                } else {
+                    label.classList.remove('text-copper-600');
+                    label.classList.add('text-gray-500');
+                }
+            }
+        }
+
+        function validateStep(step) {
+            const currentStepEl = document.querySelector(`.form-step[data-step="${step}"]`);
+            const inputs = currentStepEl.querySelectorAll('input[required], select[required]');
+            let isValid = true;
+            
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.classList.add('border-red-500');
+                } else {
+                    input.classList.remove('border-red-500');
+                }
+            });
+            
+            return isValid;
+        }
+
+        function nextStep(step) {
+            if (!validateStep(currentStep)) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.remove('active');
+            currentStep = step;
+            document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.add('active');
+            updateProgress();
+        }
+
+        function prevStep(step) {
+            document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.remove('active');
+            currentStep = step;
+            document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.add('active');
+            updateProgress();
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            if (!validateStep(currentStep)) return;
+            
+            // Simulate submission
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = 'Submitting...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                document.querySelectorAll('.form-step').forEach(el => el.classList.remove('active'));
+                document.getElementById('form-success').classList.remove('hidden');
+                document.getElementById('progress-bar').style.width = '100%';
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
+        }
+
+        function resetForm() {
+            document.getElementById('estimate-form').reset();
+            document.getElementById('form-success').classList.add('hidden');
+            currentStep = 1;
+            document.querySelector(`.form-step[data-step="1"]`).classList.add('active');
+            updateProgress();
+        }
+
+        // --- Gallery Filtering ---
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button state
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('bg-copper-600', 'text-white', 'border-copper-600');
+                    b.classList.add('text-gray-600', 'border-gray-300');
+                });
+                btn.classList.remove('text-gray-600', 'border-gray-300');
+                btn.classList.add('bg-copper-600', 'text-white', 'border-copper-600');
+                
+                const filter = btn.getAttribute('data-filter');
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // --- Lightbox ---
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+    </script>
+
+    <div id="scroll-progress"></div>
+    <div id="call-bar"><a href="tel:+12816128747"><i class="fa-solid fa-phone"></i> Call Now</a><a href="#" onclick="navigateTo('contact');return false;">Free Estimate</a></div>
+    <script>
+        (function(){
+            const bar=document.getElementById('scroll-progress');
+            addEventListener('scroll',()=>{
+                const h=document.documentElement;
+                bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight||1)*100)+'%';
+            },{passive:true});
+        })();
+    </script>
+</body>
+</html>
