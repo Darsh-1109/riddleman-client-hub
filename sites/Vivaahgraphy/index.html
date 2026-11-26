@@ -1,0 +1,1856 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivaahgraphy – The Wedding Studio | Premium Wedding Photography Mumbai</title>
+    <meta name="description" content="Vivaahgraphy is a premium wedding photography and cinematography studio based in Juhu, Mumbai. We capture authentic emotions, beautiful celebrations, and timeless memories.">
+    <meta name="keywords" content="Wedding photographer Mumbai, Wedding photography Juhu, Candid wedding photographer Mumbai, Wedding cinematography Mumbai, Pre-wedding photographer Mumbai, Destination wedding photographer India">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Vivaahgraphy – The Wedding Studio | Premium Wedding Photography Mumbai">
+    <meta property="og:description" content="Capturing authentic emotions, beautiful celebrations, and meaningful details through photography and cinematic films in Mumbai and beyond.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.vivaahgraphy.com">
+    <meta property="og:image" content="https://images.pexels.com/photos/23710315/pexels-photo-23710315.jpeg?auto=compress&cs=tinysrgb&w=1200">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PhotographyBusiness",
+      "name": "Vivaahgraphy – The Wedding Studio",
+      "image": "https://images.pexels.com/photos/23710315/pexels-photo-23710315.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Juhu, Mumbai",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "priceRange": "₹₹₹",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "1"
+      }
+    }
+    </script>
+
+    <style>
+        /* CSS Variables & Reset */
+        :root {
+            --color-burgundy: #492B35;
+            --color-rose: #B98D91;
+            --color-champagne: #C8AD83;
+            --color-ivory: #F8F5EF;
+            --color-beige: #E9E0D5;
+            --color-espresso: #302724;
+            --color-white: #FFFFFF;
+            
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+            
+            --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-fast: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-ivory);
+            color: var(--color-espresso);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-fast);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .text-center { text-align: center; }
+        .text-burgundy { color: var(--color-burgundy); }
+        .text-champagne { color: var(--color-champagne); }
+        .bg-beige { background-color: var(--color-beige); }
+        .bg-burgundy { background-color: var(--color-burgundy); color: var(--color-ivory); }
+        .bg-espresso { background-color: var(--color-espresso); color: var(--color-ivory); }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-primary {
+            background-color: var(--color-burgundy);
+            color: var(--color-white);
+            border-color: var(--color-burgundy);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--color-burgundy);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-white);
+            border-color: var(--color-white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-white);
+            color: var(--color-espresso);
+        }
+
+        .btn-outline-dark {
+            background-color: transparent;
+            color: var(--color-espresso);
+            border-color: var(--color-espresso);
+        }
+
+        .btn-outline-dark:hover {
+            background-color: var(--color-espresso);
+            color: var(--color-white);
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: var(--transition-smooth);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 24px 0;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(248, 245, 239, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 16px 0;
+            box-shadow: 0 2px 20px rgba(48, 39, 36, 0.05);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-white);
+            letter-spacing: 0.05em;
+        }
+
+        .navbar.scrolled .logo {
+            color: var(--color-burgundy);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-white);
+            position: relative;
+        }
+
+        .navbar.scrolled .nav-links a {
+            color: var(--color-espresso);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--color-champagne);
+            transition: var(--transition-fast);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 10px 24px !important;
+            border: 1px solid var(--color-white);
+            font-size: 0.75rem !important;
+        }
+
+        .navbar.scrolled .nav-cta {
+            border-color: var(--color-burgundy);
+            color: var(--color-burgundy) !important;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--color-white);
+            color: var(--color-espresso) !important;
+        }
+
+        .navbar.scrolled .nav-cta:hover {
+            background-color: var(--color-burgundy);
+            color: var(--color-white) !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--color-white);
+            margin: 6px 0;
+            transition: var(--transition-fast);
+        }
+
+        .navbar.scrolled .mobile-menu-btn span {
+            background-color: var(--color-espresso);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--color-white);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #3b1a22;
+            background-image: url('https://images.pexels.com/photos/23710315/pexels-photo-23710315.jpeg?auto=compress&cs=tinysrgb&w=1920');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(48, 39, 36, 0.3), rgba(48, 39, 36, 0.6));
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 24px;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Philosophy Section */
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .philosophy-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .philosophy-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .philosophy-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .philosophy-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--color-burgundy);
+            margin-bottom: 32px;
+        }
+
+        .philosophy-content p {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            color: var(--color-espresso);
+            opacity: 0.85;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background-color: var(--color-white);
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            border: 1px solid rgba(48, 39, 36, 0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(48, 39, 36, 0.08);
+        }
+
+        .service-image {
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.08);
+        }
+
+        .service-content {
+            padding: 32px;
+        }
+
+        .service-content h3 {
+            font-size: 1.4rem;
+            color: var(--color-burgundy);
+            margin-bottom: 12px;
+        }
+
+        .service-content p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* Portfolio Section */
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .filter-btn {
+            background: none;
+            border: none;
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-espresso);
+            opacity: 0.6;
+            cursor: pointer;
+            padding: 8px 16px;
+            transition: var(--transition-fast);
+            position: relative;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            opacity: 1;
+            color: var(--color-burgundy);
+        }
+
+        .filter-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 2px;
+            background-color: var(--color-champagne);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 3/4;
+        }
+
+        .portfolio-item.wide {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px 24px 24px;
+            background: linear-gradient(to top, rgba(48, 39, 36, 0.8), transparent);
+            color: var(--color-white);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: var(--transition-smooth);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .portfolio-overlay h3 {
+            font-size: 1.3rem;
+            margin-bottom: 4px;
+        }
+
+        .portfolio-overlay p {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        .portfolio-item.hidden {
+            display: none;
+        }
+
+        /* Cinematic Films Section */
+        .films-section {
+            background-color: var(--color-espresso);
+            color: var(--color-ivory);
+        }
+
+        .films-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .film-card {
+            position: relative;
+            aspect-ratio: 16/9;
+            background-color: var(--color-burgundy);
+            overflow: hidden;
+            cursor: pointer;
+            group: film;
+        }
+
+        .film-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            transition: var(--transition-smooth);
+        }
+
+        .film-card:hover img {
+            opacity: 0.4;
+            transform: scale(1.05);
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            border: 2px solid var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-fast);
+        }
+
+        .play-button::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 16px solid var(--color-white);
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            margin-left: 4px;
+        }
+
+        .film-card:hover .play-button {
+            background-color: var(--color-white);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .film-card:hover .play-button::after {
+            border-left-color: var(--color-espresso);
+        }
+
+        .film-info {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            color: var(--color-white);
+        }
+
+        .film-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
+
+        .film-info p {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 60px auto 0;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: var(--color-champagne);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 48px;
+            padding-left: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -44px;
+            top: 8px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: var(--color-burgundy);
+            border: 2px solid var(--color-ivory);
+        }
+
+        .timeline-item h3 {
+            font-size: 1.3rem;
+            color: var(--color-burgundy);
+            margin-bottom: 8px;
+        }
+
+        .timeline-item p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+
+        /* Approach Section */
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 48px;
+        }
+
+        .approach-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .approach-icon {
+            width: 48px;
+            height: 48px;
+            background-color: var(--color-beige);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--color-burgundy);
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+        }
+
+        .approach-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--color-espresso);
+        }
+
+        .approach-text p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 60px 40px;
+            background-color: var(--color-white);
+            border: 1px solid rgba(48, 39, 36, 0.05);
+        }
+
+        .quote-icon {
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            color: var(--color-champagne);
+            line-height: 1;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-text {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--color-espresso);
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        .testimonial-author {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-burgundy);
+        }
+
+        .testimonial-source {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-top: 8px;
+        }
+
+        /* Enquiry Form */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: var(--color-espresso);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 14px 16px;
+            border: 1px solid rgba(48, 39, 36, 0.2);
+            background-color: var(--color-white);
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            color: var(--color-espresso);
+            transition: var(--transition-fast);
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--color-burgundy);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 8px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--color-burgundy);
+        }
+
+        .form-note {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 24px;
+            font-style: italic;
+        }
+
+        /* FAQ Accordion */
+        .faq-container {
+            max-width: 800px;
+            margin: 48px auto 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(48, 39, 36, 0.1);
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 24px 0;
+            background: none;
+            border: none;
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            color: var(--color-espresso);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition-fast);
+        }
+
+        .faq-question:hover {
+            color: var(--color-burgundy);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-answer.open {
+            max-height: 300px;
+            padding-bottom: 24px;
+        }
+
+        .faq-answer p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            line-height: 1.7;
+        }
+
+        /* Footer & Contact */
+        .footer {
+            background-color: var(--color-espresso);
+            color: var(--color-ivory);
+            padding: 80px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+            color: var(--color-white);
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            max-width: 300px;
+            margin-bottom: 24px;
+        }
+
+        .footer h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            color: var(--color-champagne);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            transition: var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--color-champagne);
+        }
+
+        .contact-info p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(248, 245, 239, 0.1);
+            padding-top: 32px;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(48, 39, 36, 0.95);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: none;
+            border: none;
+            color: var(--color-white);
+            font-size: 2rem;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-fast);
+        }
+
+        .lightbox-close:hover {
+            color: var(--color-champagne);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .philosophy-grid,
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .philosophy-image img {
+                height: 400px;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .portfolio-item.wide {
+                grid-column: span 2;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: var(--color-ivory);
+                flex-direction: column;
+                justify-content: center;
+                padding: 40px;
+                transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                color: var(--color-espresso);
+                font-size: 1rem;
+            }
+
+            .nav-cta {
+                border-color: var(--color-burgundy) !important;
+                color: var(--color-burgundy) !important;
+                margin-top: 20px;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .mobile-menu-btn.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 6px);
+                background-color: var(--color-espresso);
+            }
+
+            .mobile-menu-btn.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .mobile-menu-btn.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -6px);
+                background-color: var(--color-espresso);
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-item.wide {
+                grid-column: span 1;
+                aspect-ratio: 16/9;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="logo">Vivaahgraphy</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#services" onclick="closeMenu()">Services</a></li>
+                <li><a href="#stories" onclick="closeMenu()">Stories</a></li>
+                <li><a href="#films" onclick="closeMenu()">Films</a></li>
+                <li><a href="#approach" onclick="closeMenu()">Our Approach</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+                <li><a href="#enquiry" class="nav-cta" onclick="closeMenu()">Check Availability</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Every Love Story Deserves to Be Remembered.</h1>
+            <p>From fleeting glances to unforgettable celebrations, we capture the emotions, people and moments that make your wedding uniquely yours.</p>
+            <div class="hero-buttons">
+                <a href="#stories" class="btn btn-primary">Explore Our Stories</a>
+                <a href="#enquiry" class="btn btn-secondary">Let's Talk About Your Wedding</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Philosophy Section -->
+    <section class="section-padding" id="philosophy">
+        <div class="container">
+            <div class="philosophy-grid reveal">
+                <div class="philosophy-image">
+                    <!-- Placeholder representing Vivaahgraphy's candid style -->
+                    <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/23710316/pexels-photo-23710316.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Candid emotional wedding moment" loading="lazy">
+                </div>
+                <div class="philosophy-content">
+                    <h2>We Don't Just Photograph Weddings. We Preserve How They Felt.</h2>
+                    <p>At Vivaahgraphy – The Wedding Studio, we believe that marriages are made in heaven, and our privilege is to capture them on Earth. Based in the heart of Juhu, Mumbai, our approach is deeply rooted in photojournalistic storytelling.</p>
+                    <p>We look beyond the posed frames to find the unscripted moments: the quiet tear during the vows, the unrestrained laughter at the Sangeet, and the tender connections between families. With over 7 years of experience and a commitment to natural, timeless editing, we ensure your memories remain as vivid and authentic as the day they were created.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-padding bg-beige" id="services">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="text-burgundy" style="font-size: 2.5rem; margin-bottom: 16px;">Our Services</h2>
+                <p style="max-width: 600px; margin: 0 auto; opacity: 0.8;">Comprehensive visual storytelling tailored to every chapter of your celebration.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/26871310/pexels-photo-26871310.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Candid Wedding Photography" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Candid Wedding Photography</h3>
+                        <p>Capturing spontaneous expressions, emotional reactions, laughter, tears, and genuine interactions throughout your celebration.</p>
+                    </div>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/26871336/pexels-photo-26871336.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Traditional Wedding Photography" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Traditional Photography</h3>
+                        <p>Documenting important ceremonies, family portraits, rituals, and group photographs with careful attention to composition and lighting.</p>
+                    </div>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/8483803/pexels-photo-8483803.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wedding Cinematography" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Wedding Cinematography</h3>
+                        <p>Cinematic films that tell the story of your celebration through movement, sound, emotions, and visual storytelling.</p>
+                    </div>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/8483801/pexels-photo-8483801.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pre-Wedding Photography" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Pre-Wedding Photography</h3>
+                        <p>Creative couple portraits and location-based sessions that reflect your unique personality and journey together.</p>
+                    </div>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/8483808/pexels-photo-8483808.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Destination Weddings" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Destination Weddings</h3>
+                        <p>Seamless coverage for weddings across India and beyond. Travel and accommodation arrangements are discussed during booking.</p>
+                    </div>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-image">
+                        <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/26871334/pexels-photo-26871334.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wedding Albums" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Heirloom Wedding Albums</h3>
+                        <p>Handcrafted, premium wedding albums designed as beautiful physical keepsakes to pass down through generations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section-padding" id="stories">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="text-burgundy" style="font-size: 2.5rem; margin-bottom: 16px;">Wedding Stories</h2>
+                <p style="max-width: 600px; margin: 0 auto 40px; opacity: 0.8;">A curated selection of real celebrations, authentic emotions, and timeless details.</p>
+            </div>
+
+            <div class="portfolio-filters reveal">
+                <button class="filter-btn active" data-filter="all">All Stories</button>
+                <button class="filter-btn" data-filter="wedding">Weddings</button>
+                <button class="filter-btn" data-filter="sangeet">Sangeet</button>
+                <button class="filter-btn" data-filter="mehendi">Haldi & Mehendi</button>
+                <button class="filter-btn" data-filter="prewedding">Pre-Weddings</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Ketki & Sumegh Wedding -->
+                <div class="portfolio-item wide reveal" data-category="wedding" onclick="openLightbox(this)">
+                    <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/18790551/pexels-photo-18790551.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ketki & Sumegh Wedding" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Ketki & Sumegh</h3>
+                        <p>The Wedding Day • Mumbai</p>
+                    </div>
+                </div>
+
+                <!-- Ketki & Sumegh Sangeet -->
+                <div class="portfolio-item reveal" data-category="sangeet" onclick="openLightbox(this)">
+                    <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/8483797/pexels-photo-8483797.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ketki & Sumegh Sangeet" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Ketki & Sumegh</h3>
+                        <p>Sangeet Celebrations • Mumbai</p>
+                    </div>
+                </div>
+
+                <!-- Ketki Mehendi -->
+                <div class="portfolio-item reveal" data-category="mehendi" onclick="openLightbox(this)">
+                    <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/26871319/pexels-photo-26871319.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ketki Mehendi" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Ketki's Mehendi</h3>
+                        <p>Intimate Details • Mumbai</p>
+                    </div>
+                </div>
+
+                <!-- Pre-Wedding -->
+                <div class="portfolio-item reveal" data-category="prewedding" onclick="openLightbox(this)">
+                    <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/8483809/pexels-photo-8483809.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pre-Wedding Session" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Pre-Wedding</h3>
+                        <p>Couple Portraits</p>
+                    </div>
+                </div>
+
+                <!-- Destination Wedding -->
+                <div class="portfolio-item wide reveal" data-category="wedding" onclick="openLightbox(this)">
+                    <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/8483799/pexels-photo-8483799.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Destination Wedding" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Destination Celebration</h3>
+                        <p>Palace Wedding • India</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 48px;">
+                <p style="font-size: 0.85rem; opacity: 0.6; font-style: italic;">*Representational imagery showcasing Vivaahgraphy's signature aesthetic. Actual portfolio assets will be displayed upon request.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cinematic Films Section -->
+    <section class="section-padding films-section" id="films">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 style="font-size: 2.5rem; margin-bottom: 16px; color: var(--color-white);">Some Moments Are Too Beautiful to Be Stilled.</h2>
+                <p style="max-width: 600px; margin: 0 auto; opacity: 0.8; color: var(--color-ivory);">Experience the emotion, sound, and movement of your celebration through our cinematic wedding films.</p>
+            </div>
+
+            <div class="films-grid">
+                <div class="film-card reveal" onclick="alert('Video playback would initialize here with embedded studio content.')">
+                    <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/26871335/pexels-photo-26871335.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Wedding Highlight Film" loading="lazy">
+                    <div class="play-button"></div>
+                    <div class="film-info">
+                        <h3>Wedding Highlight Film</h3>
+                        <p>Ketki & Sumegh</p>
+                    </div>
+                </div>
+
+                <div class="film-card reveal" onclick="alert('Video playback would initialize here with embedded studio content.')">
+                    <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/8483805/pexels-photo-8483805.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pre-Wedding Film" loading="lazy">
+                    <div class="play-button"></div>
+                    <div class="film-info">
+                        <h3>Pre-Wedding Cinematic</h3>
+                        <p>Couple Story</p>
+                    </div>
+                </div>
+
+                <div class="film-card reveal" onclick="alert('Video playback would initialize here with embedded studio content.')">
+                    <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/26871297/pexels-photo-26871297.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sangeet Celebration Film" loading="lazy">
+                    <div class="play-button"></div>
+                    <div class="film-info">
+                        <h3>Celebration Highlights</h3>
+                        <p>Sangeet Night</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="section-padding bg-beige" id="experience">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="text-burgundy" style="font-size: 2.5rem; margin-bottom: 16px;">The Vivaahgraphy Experience</h2>
+                <p style="max-width: 600px; margin: 0 auto; opacity: 0.8;">From our first conversation to the delivery of your final album, we ensure a seamless, personalized journey.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <h3>1. The Conversation</h3>
+                    <p>We begin by understanding you as a couple, your unique story, and your vision for the wedding day.</p>
+                </div>
+                <div class="timeline-item reveal">
+                    <h3>2. Creative Planning</h3>
+                    <p>We discuss photography requirements, event schedules, coverage preferences, and specific moments you want preserved.</p>
+                </div>
+                <div class="timeline-item reveal">
+                    <h3>3. The Celebration</h3>
+                    <p>Our passionate team arrives equipped and ready to capture genuine moments and important ceremonies with unobtrusive professionalism.</p>
+                </div>
+                <div class="timeline-item reveal">
+                    <h3>4. The Story Comes Together</h3>
+                    <p>We meticulously curate, color-grade, and edit your photographs and films using a natural, timeless aesthetic.</p>
+                </div>
+                <div class="timeline-item reveal">
+                    <h3>5. Memories to Keep</h3>
+                    <p>We deliver your agreed digital photographs, cinematic films, and handcrafted albums, ready to be cherished forever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="section-padding" id="approach">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="text-burgundy" style="font-size: 2.5rem; margin-bottom: 16px;">Natural Moments. Thoughtful Frames. Timeless Memories.</h2>
+            </div>
+            
+            <div class="approach-grid">
+                <div class="approach-item reveal">
+                    <div class="approach-icon">01</div>
+                    <div class="approach-text">
+                        <h4>Photojournalistic Storytelling</h4>
+                        <p>We prioritize authentic, unscripted moments over rigid posing, allowing the true emotion of the day to unfold naturally.</p>
+                    </div>
+                </div>
+                <div class="approach-item reveal">
+                    <div class="approach-icon">02</div>
+                    <div class="approach-text">
+                        <h4>Natural Editing Style</h4>
+                        <p>Our post-processing enhances the natural beauty of the light and color, avoiding heavy filters for a timeless, classic look.</p>
+                    </div>
+                </div>
+                <div class="approach-item reveal">
+                    <div class="approach-icon">03</div>
+                    <div class="approach-text">
+                        <h4>Professional Equipment</h4>
+                        <p>We utilize full-kit, professional-grade cameras and lighting to ensure flawless coverage in any environment or challenging circumstance.</p>
+                    </div>
+                </div>
+                <div class="approach-item reveal">
+                    <div class="approach-icon">04</div>
+                    <div class="approach-text">
+                        <h4>Collaborative Team</h4>
+                        <p>Our ethics-oriented, passionate team works seamlessly together, providing personal assistance throughout the entire photography process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Team -->
+    <section class="section-padding bg-beige" id="about">
+        <div class="container">
+            <div class="philosophy-grid reveal">
+                <div class="philosophy-content">
+                    <h2 class="text-burgundy">The People Behind the Lens</h2>
+                    <p>Vivaahgraphy – The Wedding Studio is driven by a team of passionate photographers dedicated to the pursuit of excellence. With over 7 years of experience in the industry, we have honed our technical expertise and creative vision.</p>
+                    <p>We believe in progressing and working together, constantly updating our skills with the newest tools and techniques. Our goal is to be the premier establishment you walk into with no doubts regarding the professionalism, warmth, and quality of the final product. We are not just vendors; we are your visual storytellers.</p>
+                </div>
+                <div class="philosophy-image">
+                    <img referrerpolicy="no-referrer" onerror="imgFallback(this)" src="https://images.pexels.com/photos/8483806/pexels-photo-8483806.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Vivaahgraphy Photography Team" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding" id="testimonials">
+        <div class="container">
+            <div class="testimonial-card reveal">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-text">Perfect clicks you gave .. loved your work .. thanks for making my Day special ..</p>
+                <div class="testimonial-author">Shefali</div>
+                <div class="testimonial-source">Verified WedMeGood Review • 5.0 Rating</div>
+                <a href="https://www.wedmegood.com/profile/VIVAAHGRAPHY-THE-WEDDING-STUDIO-126642" target="_blank" rel="noopener" style="display: inline-block; margin-top: 24px; font-size: 0.85rem; color: var(--color-burgundy); border-bottom: 1px solid var(--color-burgundy);">View Full Profile & Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Section -->
+    <section class="section-padding bg-beige" id="enquiry">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="text-burgundy" style="font-size: 2.5rem; margin-bottom: 16px;">Let's Create Something Worth Remembering.</h2>
+                <p style="max-width: 600px; margin: 0 auto;">Photography and cinematography requirements are customized based on your wedding schedule, locations, number of functions, and desired deliverables.</p>
+            </div>
+
+            <form class="form-grid reveal" id="enquiryForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="partner">Partner's Name *</label>
+                    <input type="text" id="partner" name="partner" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone / WhatsApp Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Wedding Date *</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Wedding Location *</label>
+                    <input type="text" id="location" name="location" placeholder="e.g., Mumbai, Udaipur" required>
+                </div>
+                <div class="form-group">
+                    <label for="functions">Number of Wedding Functions *</label>
+                    <select id="functions" name="functions" required>
+                        <option value="">Select...</option>
+                        <option value="1-2">1 - 2 Functions</option>
+                        <option value="3-4">3 - 4 Functions</option>
+                        <option value="5+">5+ Functions</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="budget">Approximate Budget</label>
+                    <select id="budget" name="budget">
+                        <option value="">Select Range...</option>
+                        <option value="50k-1L">₹50,000 - ₹1,00,000</option>
+                        <option value="1L-2L">₹1,00,000 - ₹2,00,000</option>
+                        <option value="2L+">₹2,00,000+</option>
+                        <option value="discuss">Prefer to Discuss</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Photography Requirements</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item"><input type="checkbox" name="photo_req" value="candid"> Candid</label>
+                        <label class="checkbox-item"><input type="checkbox" name="photo_req" value="traditional"> Traditional</label>
+                        <label class="checkbox-item"><input type="checkbox" name="photo_req" value="both"> Both</label>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Cinematography Requirements</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item"><input type="checkbox" name="video_req" value="highlight"> Highlight Film</label>
+                        <label class="checkbox-item"><input type="checkbox" name="video_req" value="full"> Full Event Coverage</label>
+                        <label class="checkbox-item"><input type="checkbox" name="video_req" value="prewedding"> Pre-Wedding Film</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="prewedding">Pre-Wedding Shoot Interest</label>
+                    <select id="prewedding" name="prewedding">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                        <option value="maybe">Maybe / Discuss</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="album">Wedding Album Requirement</label>
+                    <select id="album" name="album">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="maybe">Maybe / Discuss</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="details">Additional Details</label>
+                    <textarea id="details" name="details" placeholder="Tell us about your vision, specific events, or any questions you have..."></textarea>
+                </div>
+
+                <div class="form-group full-width text-center">
+                    <button type="submit" class="btn btn-primary" style="min-width: 250px;">Send My Wedding Enquiry</button>
+                    <p class="form-note">Standard booking requires a 50% advance to secure your date. Outstation travel and accommodation costs are borne by the client. Please enquire for current, customized terms.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding" id="faq">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="text-burgundy" style="font-size: 2.5rem; margin-bottom: 16px;">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-container reveal">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        What photography styles do you offer?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We specialize in a blend of photojournalistic (candid) storytelling and traditional coverage, ensuring both spontaneous emotions and important ritualistic moments are beautifully documented with a natural editing style.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Do you provide both photography and cinematography?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer comprehensive packages that include both still photography and cinematic videography, allowing for a cohesive visual narrative of your wedding day.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Do you travel for destination weddings?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We travel to all parts of India and internationally for destination weddings. Please note that outstation travel and accommodation costs are borne by the client.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Can we book only pre-wedding photography?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer standalone pre-wedding and engagement photography sessions. Please reach out via the enquiry form for specific pricing and availability.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How does the booking process work?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>After an initial consultation to understand your needs, we will provide a customized proposal. To secure your wedding date, a 50% advance payment is required, with the balance due as per the agreed schedule.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How can we discuss a customised wedding package?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Every wedding is unique. Please use the enquiry form above or contact us directly via WhatsApp or email to schedule a conversation about your specific requirements and budget.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Vivaahgraphy</h3>
+                    <p>Capturing authentic emotions, beautiful celebrations, and meaningful details through photography and cinematic films in Mumbai and beyond.</p>
+                    <a href="#enquiry" class="btn btn-primary" style="padding: 12px 24px; font-size: 0.75rem;">Check Availability</a>
+                </div>
+                
+                <div>
+                    <h4>Navigate</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#stories">Portfolio</a></li>
+                        <li><a href="#films">Films</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Candid Photography</a></li>
+                        <li><a href="#services">Wedding Cinematography</a></li>
+                        <li><a href="#services">Pre-Wedding Shoots</a></li>
+                        <li><a href="#services">Destination Weddings</a></li>
+                        <li><a href="#services">Wedding Albums</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p>📍 Juhu, Mumbai, Maharashtra, India</p>
+                        <p>✉️ hello@vivaahgraphy.com</p>
+                        <p>📱 +91 98XXX XXXXX <span style="font-size: 0.75rem; opacity: 0.6;">(Verified)</span></p>
+                        <p>
+                            <a href="https://www.wedmegood.com/profile/VIVAAHGRAPHY-THE-WEDDING-STUDIO-126642" target="_blank" rel="noopener" style="color: var(--color-champagne); text-decoration: underline;">WedMeGood Profile</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vivaahgraphy – The Wedding Studio. All rights reserved. | Designed with timeless elegance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Enlarged portfolio image" class="lightbox-img" id="lightboxImg" onclick="event.stopPropagation()">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        function closeMenu() {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Portfolio Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hidden');
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            item.classList.add('hidden');
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+
+        // Image fallback: if a photo fails to load, show an elegant placeholder instead of a broken icon
+        const FALLBACK_IMG = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+            '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3e9dc"/><stop offset="1" stop-color="#d9b99b"/></linearGradient></defs><rect width="800" height="600" fill="url(#g)"/><text x="400" y="310" text-anchor="middle" font-family="Georgia,serif" font-size="40" fill="#7a2335" opacity=".7">Vivaahgraphy</text></svg>');
+        function imgFallback(img) {
+            img.onerror = null;
+            img.src = FALLBACK_IMG;
+        }
+
+        // Lightbox Functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // FAQ Accordion
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const isOpen = answer.classList.contains('open');
+            
+            // Close all others
+            document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+            document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+            
+            if (!isOpen) {
+                answer.classList.add('open');
+                button.classList.add('active');
+            }
+        }
+
+        // Form Handling
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerText;
+            
+            // Basic validation check
+            const email = form.querySelector('#email').value;
+            const phone = form.querySelector('#phone').value;
+            
+            if (!email.includes('@') || phone.length < 10) {
+                alert('Please enter a valid email address and phone number.');
+                return;
+            }
+
+            // Simulate loading state
+            submitBtn.innerText = 'Sending Enquiry...';
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+
+            // Simulate API call delay
+            setTimeout(() => {
+                submitBtn.innerText = 'Enquiry Sent Successfully!';
+                submitBtn.style.backgroundColor = 'var(--color-champagne)';
+                submitBtn.style.borderColor = 'var(--color-champagne)';
+                submitBtn.style.color = 'var(--color-espresso)';
+                
+                // Note for developer: Replace this simulation with actual fetch() to backend/Formspree
+                console.log('Form submitted successfully. Integrate with actual backend endpoint.');
+                
+                // Reset form after delay
+                setTimeout(() => {
+                    form.reset();
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = '1';
+                    submitBtn.style.backgroundColor = '';
+                    submitBtn.style.borderColor = '';
+                    submitBtn.style.color = '';
+                }, 3000);
+            }, 1500);
+        }
+
+        // Smooth scroll for anchor links (fallback for older browsers)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
