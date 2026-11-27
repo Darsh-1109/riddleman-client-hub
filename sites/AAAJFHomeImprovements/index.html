@@ -1,0 +1,1985 @@
+
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAA JF Home Improvements | Quality Construction in Adelaide, SA</title>
+    <meta name="description" content="AAA JF Home Improvements provides practical, quality-focused residential construction, garage building, demolition, and outdoor property improvements in Sturt, Adelaide, and surrounding South Australian areas.">
+    <meta name="keywords" content="home improvements, garage construction, garage demolition, sheds, carports, pergolas, site preparation, Sturt, Adelaide, South Australia">
+    <meta property="og:title" content="AAA JF Home Improvements | Quality Construction in Adelaide, SA">
+    <meta property="og:description" content="Practical home improvement and construction solutions, delivered with a focus on quality, reliability and workmanship.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.aaajfhomeimprovements.com.au/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1599809275372-b40c7e9316e5?auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS Variables & Reset --- */
+        :root {
+            --color-forest: #193B32;
+            --color-charcoal: #292E2C;
+            --color-offwhite: #F7F6F1;
+            --color-sandstone: #C3AD8D;
+            --color-concrete: #E6E7E2;
+            --color-white: #FFFFFF;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Manrope', sans-serif;
+            --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-sm: 0 1px 3px rgba(25, 59, 50, 0.08);
+            --shadow-md: 0 4px 12px rgba(25, 59, 50, 0.1);
+            --shadow-lg: 0 10px 30px rgba(25, 59, 50, 0.12);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-offwhite);
+            color: var(--color-charcoal);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--color-forest);
+            line-height: 1.2;
+            font-weight: 600;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color var(--transition-base);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul { list-style: none; }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        @media (min-width: 768px) {
+            .section-padding { padding: 7rem 0; }
+        }
+
+        /* --- Utilities --- */
+        .text-center { text-align: center; }
+        .text-sandstone { color: var(--color-sandstone); }
+        .bg-forest { background-color: var(--color-forest); color: var(--color-offwhite); }
+        .bg-forest h2, .bg-forest h3, .bg-forest p { color: var(--color-offwhite); }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.875rem 2rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--color-sandstone);
+            color: var(--color-forest);
+        }
+
+        .btn-primary:hover {
+            background-color: #b39d7a;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border-color: var(--color-offwhite);
+            color: var(--color-offwhite);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-offwhite);
+            color: var(--color-forest);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--color-forest);
+            color: var(--color-forest);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-forest);
+            color: var(--color-offwhite);
+        }
+
+        /* --- Animations --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Navigation --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(247, 246, 241, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--color-concrete);
+            transition: box-shadow var(--transition-base);
+        }
+
+        .navbar.scrolled {
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-forest);
+            letter-spacing: -0.02em;
+        }
+
+        .nav-logo span {
+            color: var(--color-sandstone);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--color-charcoal);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-sandstone);
+            transition: width var(--transition-base);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--color-forest);
+            transition: all var(--transition-base);
+        }
+
+        @media (max-width: 900px) {
+            .hamburger { display: flex; }
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--color-offwhite);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem 1.5rem;
+                gap: 1.5rem;
+                border-bottom: 1px solid var(--color-concrete);
+                transform: translateY(-150%);
+                transition: transform var(--transition-base);
+                box-shadow: var(--shadow-md);
+            }
+            .nav-menu.active {
+                transform: translateY(0);
+            }
+            .nav-cta {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--color-white);
+            background: linear-gradient(rgba(25, 59, 50, 0.75), rgba(41, 46, 44, 0.85)), 
+                        url('https://images.unsplash.com/photo-1599809275372-b40c7e9316e5?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        @media (min-width: 600px) {
+            .hero-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator svg {
+            width: 30px;
+            height: 30px;
+            stroke: var(--color-white);
+            opacity: 0.7;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* --- About Section --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 900px) {
+            .about-grid {
+                grid-template-columns: 1fr 1.2fr;
+                gap: 5rem;
+            }
+            .about-image {
+                order: 2;
+            }
+        }
+
+        .about-image img {
+            border-radius: 4px;
+            box-shadow: var(--shadow-lg);
+            transition: transform var(--transition-base);
+        }
+
+        .about-image img:hover {
+            transform: scale(1.02);
+        }
+
+        .about-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: var(--color-charcoal);
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        /* --- Services Section --- */
+        .services-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .services-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .service-item:nth-child(1) { grid-column: span 2; }
+            .service-item:nth-child(4) { grid-column: span 2; }
+        }
+
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .service-item:nth-child(1) { grid-column: span 2; }
+            .service-item:nth-child(4) { grid-column: span 2; }
+            .service-item:nth-child(7) { grid-column: span 3; }
+        }
+
+        .service-item {
+            background-color: var(--color-white);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow var(--transition-base), transform var(--transition-base);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-item:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .service-item.featured {
+            flex-direction: row;
+        }
+
+        .service-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .service-item.featured .service-image {
+            width: 50%;
+            height: auto;
+            min-height: 350px;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .service-item:hover .service-image img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-content p {
+            font-size: 0.95rem;
+            color: var(--color-charcoal);
+            opacity: 0.85;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .service-list {
+            margin-bottom: 1.5rem;
+        }
+
+        .service-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--color-charcoal);
+        }
+
+        .service-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-sandstone);
+            font-weight: 700;
+        }
+
+        /* --- Why Choose Us --- */
+        .why-us {
+            background-color: var(--color-forest);
+            color: var(--color-offwhite);
+        }
+
+        .why-us h2 {
+            color: var(--color-offwhite);
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 4rem;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (min-width: 1024px) {
+            .why-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        .why-item {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color var(--transition-base);
+        }
+
+        .why-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .why-icon {
+            width: 48px;
+            height: 48px;
+            background-color: var(--color-sandstone);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--color-forest);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .why-item h3 {
+            color: var(--color-offwhite);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+        }
+
+        .why-item p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* --- Project Showcase --- */
+        .projects-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .projects-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 2rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            background-color: transparent;
+            border: 1px solid var(--color-concrete);
+            border-radius: 30px;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-charcoal);
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--color-forest);
+            color: var(--color-offwhite);
+            border-color: var(--color-forest);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-item {
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+        }
+
+        .project-item.hidden {
+            display: none;
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .project-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(25, 59, 50, 0.9), transparent);
+            opacity: 0;
+            transition: opacity var(--transition-base);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+
+        .project-item:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-overlay h4 {
+            color: var(--color-white);
+            font-size: 1.2rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 4px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            color: var(--color-white);
+            font-size: 2rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* --- Process Section --- */
+        .process-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--color-concrete);
+        }
+
+        @media (min-width: 768px) {
+            .process-timeline::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .process-step {
+            position: relative;
+            padding-left: 70px;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .process-step {
+                padding-left: 0;
+                width: 50%;
+            }
+            .process-step:nth-child(odd) {
+                padding-right: 3rem;
+                text-align: right;
+            }
+            .process-step:nth-child(even) {
+                margin-left: 50%;
+                padding-left: 3rem;
+            }
+        }
+
+        .process-dot {
+            position: absolute;
+            left: 14px;
+            top: 0;
+            width: 22px;
+            height: 22px;
+            background-color: var(--color-sandstone);
+            border: 4px solid var(--color-offwhite);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        @media (min-width: 768px) {
+            .process-dot {
+                left: auto;
+                right: -11px;
+            }
+            .process-step:nth-child(even) .process-dot {
+                right: auto;
+                left: -11px;
+            }
+        }
+
+        .process-step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        /* --- Service Areas --- */
+        .service-areas {
+            background-color: var(--color-concrete);
+        }
+
+        .areas-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 900px) {
+            .areas-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .areas-text h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .areas-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .areas-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .areas-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .areas-list li::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: var(--color-sandstone);
+            border-radius: 50%;
+        }
+
+        .map-placeholder {
+            background-color: var(--color-white);
+            border-radius: 4px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--color-concrete);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .map-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .map-overlay {
+            position: absolute;
+            background: rgba(255,255,255,0.9);
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* --- Testimonials --- */
+        .testimonials-placeholder {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem;
+            border: 2px dashed var(--color-concrete);
+            border-radius: 4px;
+            background-color: rgba(195, 173, 141, 0.1);
+        }
+
+        .testimonials-placeholder h3 {
+            margin-bottom: 1rem;
+        }
+
+        /* --- FAQ Section --- */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--color-concrete);
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.5rem 0;
+            text-align: left;
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-forest);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color var(--transition-base);
+        }
+
+        .faq-question:hover {
+            color: var(--color-sandstone);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform var(--transition-base);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-answer p {
+            font-size: 1rem;
+            opacity: 0.85;
+            line-height: 1.7;
+        }
+
+        /* --- Contact Section --- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1.2fr 1fr;
+            }
+        }
+
+        .contact-form {
+            background-color: var(--color-white);
+            padding: 2.5rem;
+            border-radius: 4px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--color-forest);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 1px solid var(--color-concrete);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color var(--transition-base);
+            background-color: var(--color-offwhite);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-sandstone);
+            background-color: var(--color-white);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-error {
+            color: #c53030;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .form-group.error input,
+        .form-group.error select,
+        .form-group.error textarea {
+            border-color: #c53030;
+        }
+
+        .form-group.error .form-error {
+            display: block;
+        }
+
+        .form-success {
+            display: none;
+            background-color: #c6f6d5;
+            color: #22543d;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .contact-info-panel {
+            padding: 2rem;
+        }
+
+        .contact-info-panel h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-detail-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-concrete);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--color-forest);
+        }
+
+        .contact-detail h4 {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-detail p, .contact-detail a {
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        .contact-detail a:hover {
+            color: var(--color-sandstone);
+        }
+
+        .verification-note {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: rgba(195, 173, 141, 0.2);
+            border-left: 3px solid var(--color-sandstone);
+            font-size: 0.85rem;
+            color: var(--color-charcoal);
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background-color: var(--color-charcoal);
+            color: var(--color-concrete);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            }
+        }
+
+        .footer-brand h3 {
+            color: var(--color-offwhite);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            line-height: 1.7;
+        }
+
+        .footer h4 {
+            color: var(--color-offwhite);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            transition: opacity var(--transition-base), color var(--transition-base);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--color-sandstone);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        /* --- Back to Top --- */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            background-color: var(--color-forest);
+            color: var(--color-offwhite);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-md);
+            z-index: 900;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--color-sandstone);
+            color: var(--color-forest);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">AAA JF <span>Home Improvements</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#process" class="nav-link">Our Process</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="btn btn-primary nav-cta">Get a Quote</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content reveal">
+            <h1>Built for Your Property. Made to Last.</h1>
+            <p>Practical home improvement and construction solutions, delivered with a focus on quality, reliability and workmanship.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Request a Free Quote</a>
+                <a href="#services" class="btn btn-secondary">Explore Our Services</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+            </svg>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?auto=format&fit=crop&w=800&q=80" alt="Professional construction site preparation and framing" loading="lazy">
+                </div>
+                <div class="about-content reveal">
+                    <h2>Quality Improvements. Built Around Your Needs.</h2>
+                    <p>At AAA JF Home Improvements, we understand that your property is a significant investment. Whether you are looking to add functional storage, protect your vehicles, or enhance your outdoor living space, the foundation of a successful project lies in careful planning, suitable materials, and dependable workmanship.</p>
+                    <p>We take a practical, no-nonsense approach to residential construction. By focusing on clear communication, attention to detail, and solutions tailored to your specific property requirements, we ensure that every project is completed to a standard we are proud to stand behind.</p>
+                    <a href="#contact" class="btn btn-outline" style="margin-top: 1rem;">Discuss Your Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding" style="background-color: var(--color-white);">
+        <div class="container">
+            <div class="services-header reveal">
+                <h2>Our Construction Capabilities</h2>
+                <p>Comprehensive residential improvement solutions, executed with precision and care.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1: Garage Construction (Featured) -->
+                <div class="service-item featured reveal">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1599809275372-b40c7e9316e5?auto=format&fit=crop&w=800&q=80" alt="Modern residential garage construction" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Garage Construction</h3>
+                        <p>Custom-built garage solutions designed to provide secure vehicle protection and practical storage, tailored to your property's dimensions and aesthetic.</p>
+                        <ul class="service-list">
+                            <li>Garage planning and custom construction</li>
+                            <li>Practical storage and vehicle protection design</li>
+                            <li>Property-specific structural considerations</li>
+                            <li>Quality materials and professional installation</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" style="align-self: flex-start;">Enquire About Garages</a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Garage Demolition -->
+                <div class="service-item reveal">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356f0e?auto=format&fit=crop&w=600&q=80" alt="Site clearance and preparation" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Garage Demolition</h3>
+                        <p>Safe and efficient removal of existing structures to prepare your site for new construction or improved land use.</p>
+                        <ul class="service-list">
+                            <li>Existing garage and structure removal</li>
+                            <li>Site preparation for replacement structures</li>
+                            <li>Responsible site clearance and coordination</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" style="align-self: flex-start;">Discuss Demolition</a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Sheds and Outdoor Structures -->
+                <div class="service-item reveal">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1591825729269-caeb344f6df2?auto=format&fit=crop&w=600&q=80" alt="Residential steel shed and storage structure" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Sheds & Outdoor Structures</h3>
+                        <p>Functional, durable outdoor buildings designed to meet the practical demands of Australian residential properties.</p>
+                        <ul class="service-list">
+                            <li>Residential sheds and storage structures</li>
+                            <li>Utility buildings and workshops</li>
+                            <li>Custom outdoor property improvements</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" style="align-self: flex-start;">Explore Shed Options</a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Carports (Featured) -->
+                <div class="service-item featured reveal">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1623164052125-44d92c0bb814?auto=format&fit=crop&w=800&q=80" alt="Contemporary residential carport" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Carports & Covered Parking</h3>
+                        <p>Protect your vehicles from the elements while enhancing the functionality and curb appeal of your property with a purpose-built carport.</p>
+                        <ul class="service-list">
+                            <li>Single and double carport construction</li>
+                            <li>Vehicle protection and improved usability</li>
+                            <li>Designs complementing existing architecture</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" style="align-self: flex-start;">Enquire About Carports</a>
+                    </div>
+                </div>
+
+                <!-- Service 5: Pergolas, Patios and Verandahs -->
+                <div class="service-item reveal">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Covered outdoor patio and pergola area" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Pergolas, Patios & Verandahs</h3>
+                        <p>Extend your living space outdoors with covered entertaining areas built for year-round enjoyment.</p>
+                        <ul class="service-list">
+                            <li>Covered outdoor entertaining areas</li>
+                            <li>Pergolas and verandah construction</li>
+                            <li>Quality materials for outdoor durability</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" style="align-self: flex-start;">Plan Your Outdoor Space</a>
+                    </div>
+                </div>
+
+                <!-- Service 6: Site Preparation -->
+                <div class="service-item reveal">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80" alt="Ground levelling and site preparation" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Site Preparation & Levelling</h3>
+                        <p>Proper ground preparation is critical for the longevity and stability of any new structure.</p>
+                        <ul class="service-list">
+                            <li>Ground levelling and grading</li>
+                            <li>Site clearing for construction</li>
+                            <li>Foundation preparation support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline" style="align-self: flex-start;">Discuss Site Prep</a>
+                    </div>
+                </div>
+
+                <!-- Service 7: Trenching -->
+                <div class="service-item reveal" style="grid-column: 1 / -1;">
+                    <div class="service-content" style="flex-direction: row; align-items: center; gap: 2rem; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <h3>Trenching & Related Site Work</h3>
+                            <p>We provide careful trenching services to support utility connections and site infrastructure, ensuring minimal disruption to your property.</p>
+                            <ul class="service-list">
+                                <li>Electrical connection trenching (where authorised)</li>
+                                <li>Drainage and utility trenching</li>
+                                <li>Coordinated site work alongside construction</li>
+                            </ul>
+                            <p style="font-size: 0.85rem; font-style: italic; margin-top: 1rem; opacity: 0.7;">*Note: We do not perform licensed electrical installation or connection work. All electrical work is coordinated with licensed professionals.</p>
+                        </div>
+                        <div style="flex: 1; min-width: 250px;">
+                            <img src="https://images.unsplash.com/photo-1590059390239-014f37699b4c?auto=format&fit=crop&w=600&q=80" alt="Trenching and site work" loading="lazy" style="border-radius: 4px; width: 100%; height: 250px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-padding why-us">
+        <div class="container">
+            <h2 class="reveal">A Better Approach to Your Next Project.</h2>
+            <div class="why-grid">
+                <div class="why-item reveal">
+                    <div class="why-icon">01</div>
+                    <h3>Quality-Focused Workmanship</h3>
+                    <p>We take pride in our craft, ensuring every detail meets high standards of durability and finish.</p>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-icon">02</div>
+                    <h3>Practical Solutions</h3>
+                    <p>We design and build improvements that solve real property needs, avoiding unnecessary complexity.</p>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-icon">03</div>
+                    <h3>Material Attention</h3>
+                    <p>We select materials suited to the Australian environment, balancing longevity, aesthetics, and value.</p>
+                </div>
+                <div class="why-item reveal">
+                    <div class="why-icon">04</div>
+                    <h3>Clear Communication</h3>
+                    <p>From the initial quote to project completion, we keep you informed with transparent, honest updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Showcase -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="projects-header reveal">
+                <h2>Projects That Make a Difference.</h2>
+                <p>A selection of our residential construction and improvement work. <em>(Note: Images are illustrative placeholders pending authentic project photography.)</em></p>
+            </div>
+
+            <div class="filter-buttons reveal">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="garages">Garages</button>
+                <button class="filter-btn" data-filter="carports">Carports</button>
+                <button class="filter-btn" data-filter="sheds">Sheds</button>
+                <button class="filter-btn" data-filter="outdoor">Outdoor Improvements</button>
+            </div>
+
+            <div class="projects-grid reveal">
+                <div class="project-item" data-category="garages" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1599809275372-b40c7e9316e5?auto=format&fit=crop&w=600&q=80" alt="Modern Garage" loading="lazy">
+                    <div class="project-overlay"><h4>Residential Garage</h4></div>
+                </div>
+                <div class="project-item" data-category="carports" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1623164052125-44d92c0bb814?auto=format&fit=crop&w=600&q=80" alt="Contemporary Carport" loading="lazy">
+                    <div class="project-overlay"><h4>Double Carport</h4></div>
+                </div>
+                <div class="project-item" data-category="sheds" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1591825729269-caeb344f6df2?auto=format&fit=crop&w=600&q=80" alt="Storage Shed" loading="lazy">
+                    <div class="project-overlay"><h4>Utility Shed</h4></div>
+                </div>
+                <div class="project-item" data-category="outdoor" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Patio Area" loading="lazy">
+                    <div class="project-overlay"><h4>Covered Patio</h4></div>
+                </div>
+                <div class="project-item" data-category="garages" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?auto=format&fit=crop&w=600&q=80" alt="Garage Framing" loading="lazy">
+                    <div class="project-overlay"><h4>Garage Construction</h4></div>
+                </div>
+                <div class="project-item" data-category="outdoor" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1591825729269-caeb344f6df2?auto=format&fit=crop&w=600&q=80" alt="Outdoor Structure" loading="lazy">
+                    <div class="project-overlay"><h4>Outdoor Improvement</h4></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <img src="" alt="Enlarged project view" id="lightbox-img">
+    </div>
+
+    <!-- Construction Process -->
+    <section id="process" class="section-padding" style="background-color: var(--color-white);">
+        <div class="container">
+            <div class="text-center reveal" style="margin-bottom: 4rem;">
+                <h2>From First Conversation to Finished Project.</h2>
+                <p style="max-width: 600px; margin: 1rem auto 0; opacity: 0.85;">A transparent, structured approach to delivering your home improvement.</p>
+            </div>
+
+            <div class="process-timeline">
+                <div class="process-step reveal">
+                    <div class="process-dot"></div>
+                    <h3>1. Initial Enquiry</h3>
+                    <p>We listen to understand your requirements, property constraints, and overall vision for the improvement.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-dot"></div>
+                    <h3>2. Project Discussion</h3>
+                    <p>We discuss the property specifics, proposed work, material options, and mutual expectations in detail.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-dot"></div>
+                    <h3>3. Planning and Quote</h3>
+                    <p>We establish a clear scope of work and provide a formal quotation, subject to necessary site assessment.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-dot"></div>
+                    <h3>4. Preparation and Work</h3>
+                    <p>We coordinate the agreed construction or improvement work, maintaining site safety and cleanliness.</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="process-dot"></div>
+                    <h3>5. Project Completion</h3>
+                    <p>We complete the agreed scope, conduct a final walkthrough with you, and ensure your complete satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="section-padding service-areas">
+        <div class="container">
+            <div class="areas-content">
+                <div class="areas-text reveal">
+                    <h2>Proudly Serving Adelaide and Surrounding Areas.</h2>
+                    <p>Based in Sturt, South Australia, AAA JF Home Improvements is strategically located to service a wide range of suburbs across the southern and central Adelaide regions.</p>
+                    <ul class="areas-list">
+                        <li>Sturt & Marion Area</li>
+                        <li>Southern Suburbs</li>
+                        <li>Western Suburbs</li>
+                        <li>Greater Adelaide Region</li>
+                    </ul>
+                    <p style="font-size: 0.95rem; opacity: 0.8;"><em>Please contact us to confirm service availability for your specific suburb.</em></p>
+                    <a href="#contact" class="btn btn-primary" style="margin-top: 1rem;">Check Your Suburb</a>
+                </div>
+                <div class="map-placeholder reveal">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" alt="Map representation of Adelaide service area" loading="lazy">
+                    <div class="map-overlay">
+                        <strong>Sturt, SA 5047</strong><br>
+                        <span style="font-size: 0.9rem;">Marion Road Area</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center reveal" style="margin-bottom: 3rem;">
+                <h2>Client Experiences</h2>
+            </div>
+            <div class="testimonials-placeholder reveal">
+                <h3>Authentic Customer Reviews Coming Soon</h3>
+                <p>We are currently gathering verified feedback from our recent clients. This section will be updated with genuine testimonials, ratings, and project experiences to reflect our commitment to transparency and quality service.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding" style="background-color: var(--color-white);">
+        <div class="container">
+            <div class="text-center reveal" style="margin-bottom: 3rem;">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-container reveal">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        What types of home improvement projects do you undertake?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We specialise in residential garage construction, garage demolition, sheds, carports, pergolas, patios, verandahs, and related site preparation and trenching work.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Can I request a quote for a new garage?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. Please use our contact form or email us directly with your requirements, including your suburb and approximate dimensions, and we will arrange a discussion to provide a tailored quote.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Do you provide garage demolition?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer safe and efficient garage demolition and site clearance services to prepare your property for new structures or alternative uses.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Can you help with carports and outdoor structures?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we design and construct a variety of covered parking solutions and outdoor living structures, including pergolas, patios, and verandahs, tailored to your property.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Do you undertake site preparation and levelling?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, proper site preparation and ground levelling are critical first steps we provide to ensure the stability and longevity of your new construction.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        How do I discuss my project requirements?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The best way to start is by submitting an enquiry through our contact form below, or by emailing us directly. We will then arrange a time to discuss your project in detail.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Which areas around Adelaide do you service?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We are based in Sturt, SA 5047, and primarily service the Marion area, southern suburbs, western suburbs, and the greater Adelaide region. Please contact us to confirm coverage for your specific location.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        How can I arrange an initial consultation?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Simply fill out the quote request form on this page with your contact details and a brief description of your project. We will reach out to you promptly to arrange a consultation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="text-center reveal" style="margin-bottom: 3rem;">
+                <h2>Let's Discuss Your Next Project.</h2>
+                <p>Request a free, no-obligation quote today.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form reveal">
+                    <div class="form-success" id="form-success">
+                        Thank you for your enquiry. Your email client should open shortly to send this request. If it does not, please email us directly at aaajfhomeimprovements.au@gmail.com
+                    </div>
+                    <form id="quote-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="form-error">Please enter your full name.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="form-error">Please enter a valid email address.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <span class="form-error">Please enter a valid phone number.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="suburb">Suburb / Location *</label>
+                            <input type="text" id="suburb" name="suburb" required>
+                            <span class="form-error">Please enter your suburb.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="project-type">Type of Project *</label>
+                            <select id="project-type" name="project-type" required>
+                                <option value="">Select a project type...</option>
+                                <option value="Garage Construction">Garage Construction</option>
+                                <option value="Garage Demolition">Garage Demolition</option>
+                                <option value="Sheds & Outdoor Structures">Sheds & Outdoor Structures</option>
+                                <option value="Carports & Covered Parking">Carports & Covered Parking</option>
+                                <option value="Pergolas, Patios & Verandahs">Pergolas, Patios & Verandahs</option>
+                                <option value="Site Preparation & Levelling">Site Preparation & Levelling</option>
+                                <option value="Trenching & Site Work">Trenching & Site Work</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span class="form-error">Please select a project type.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Brief Project Description</label>
+                            <textarea id="description" name="description" placeholder="Tell us about your project, approximate dimensions, or any specific requirements..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-method">Preferred Contact Method *</label>
+                            <select id="contact-method" name="contact-method" required>
+                                <option value="">Select preferred method...</option>
+                                <option value="Email">Email</option>
+                                <option value="Phone">Phone</option>
+                            </select>
+                            <span class="form-error">Please select a preferred contact method.</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Enquiry</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-panel reveal">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:aaajfhomeimprovements.au@gmail.com">aaajfhomeimprovements.au@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Marion Road area<br>Sturt SA 5047, Australia</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="contact-detail-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        </div>
+                        <div>
+                            <h4>Website</h4>
+                            <a href="http://www.aaajfhomeimprovements.com.au/" target="_blank" rel="noopener noreferrer">www.aaajfhomeimprovements.com.au</a>
+                        </div>
+                    </div>
+
+                    <div class="verification-note">
+                        <strong>Owner Verification Note:</strong> The contact details above are exactly as supplied. Please verify the email address, physical location specifics, and website URL before final publication to ensure they match your current business operations.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>AAA JF <span style="color: var(--color-sandstone);">Home Improvements</span></h3>
+                    <p>Dependable, experienced, and quality-focused residential construction and outdoor property improvements in Sturt, Adelaide, and surrounding South Australian areas.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Garage Construction</a></li>
+                        <li><a href="#services">Garage Demolition</a></li>
+                        <li><a href="#services">Sheds & Structures</a></li>
+                        <li><a href="#services">Carports</a></li>
+                        <li><a href="#services">Site Preparation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Get in Touch</h4>
+                    <ul class="footer-links">
+                        <li>Sturt SA 5047, Australia</li>
+                        <li><a href="mailto:aaajfhomeimprovements.au@gmail.com">aaajfhomeimprovements.au@gmail.com</a></li>
+                        <li><a href="http://www.aaajfhomeimprovements.com.au/">www.aaajfhomeimprovements.com.au</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> AAA JF Home Improvements. All rights reserved.</p>
+                <p>ABN: [To Be Supplied]</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // --- Current Year ---
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // --- Mobile Navigation ---
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const isExpanded = navMenu.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // --- Sticky Navbar Shadow ---
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // --- Scroll Reveal Animation ---
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // --- Project Filtering ---
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                projectItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hidden');
+                        // Small timeout to allow display:block to apply before opacity transition if we added one
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            item.classList.add('hidden');
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // --- Lightbox ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+
+        // --- FAQ Accordion ---
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all others
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+
+                // Toggle current
+                if (!isActive) {
+                    item.classList.add('active');
+                    question.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // --- Form Validation & Mailto Fallback ---
+        const form = document.getElementById('quote-form');
+        const formSuccess = document.getElementById('form-success');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+
+            // Clear previous errors
+            document.querySelectorAll('.form-group').forEach(group => group.classList.remove('error'));
+
+            // Validate required fields
+            const requiredFields = ['name', 'email', 'phone', 'suburb', 'project-type', 'contact-method'];
+            requiredFields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                const group = field.closest('.form-group');
+                
+                if (!field.value.trim()) {
+                    group.classList.add('error');
+                    isValid = false;
+                } else if (fieldId === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
+                    group.classList.add('error');
+                    isValid = false;
+                } else if (fieldId === 'phone' && !/^[\d\s\-\+\(\)]{8,}$/.test(field.value)) {
+                    group.classList.add('error');
+                    isValid = false;
+                }
+            });
+
+            if (isValid) {
+                // Gather form data
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const suburb = document.getElementById('suburb').value;
+                const projectType = document.getElementById('project-type').value;
+                const description = document.getElementById('description').value || 'No additional details provided.';
+                const contactMethod = document.getElementById('contact-method').value;
+
+                // Construct mailto link
+                const subject = encodeURIComponent(`New Quote Request: ${projectType} - ${suburb}`);
+                const body = encodeURIComponent(
+                    `Name: ${name}\n` +
+                    `Email: ${email}\n` +
+                    `Phone: ${phone}\n` +
+                    `Suburb: ${suburb}\n` +
+                    `Project Type: ${projectType}\n` +
+                    `Preferred Contact: ${contactMethod}\n\n` +
+                    `Project Description:\n${description}`
+                );
+
+                const mailtoLink = `mailto:aaajfhomeimprovements.au@gmail.com?subject=${subject}&body=${body}`;
+
+                // Show success message
+                formSuccess.style.display = 'block';
+                form.reset();
+
+                // Open mailto
+                window.location.href = mailtoLink;
+
+                // Hide success message after 10 seconds
+                setTimeout(() => {
+                    formSuccess.style.display = 'none';
+                }, 10000);
+            }
+        });
+
+        // Remove error state on input
+        document.querySelectorAll('input, select, textarea').forEach(field => {
+            field.addEventListener('input', function() {
+                this.closest('.form-group').classList.remove('error');
+            });
+        });
+
+        // --- Back to Top ---
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
