@@ -1,0 +1,1596 @@
+
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Advanced Building Constructions | Port Elliot, South Australia</title>
+    <meta name="description" content="ABC Advanced Building Constructions offers premium building design, residential, and commercial construction services in Port Elliot and the Fleurieu Peninsula, South Australia.">
+    <meta name="keywords" content="building construction, custom homes, commercial construction, building design, Port Elliot, South Australia, Fleurieu Peninsula, renovations, extensions">
+    <meta property="og:title" content="ABC Advanced Building Constructions | Port Elliot, SA">
+    <meta property="og:description" content="Thoughtful Design. Exceptional Construction. Premium building solutions in South Australia.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_AU">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy: #1D2C3A;
+            --ivory: #F6F4EF;
+            --stone: #D8D4CA;
+            --eucalyptus: #758477;
+            --graphite: #303638;
+            --bronze: #A88D68;
+            --white: #FFFFFF;
+            
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Inter', sans-serif;
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--graphite);
+            background-color: var(--ivory);
+            line-height: 1.6;
+            font-weight: 400;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            color: var(--navy);
+            line-height: 1.2;
+            font-weight: 600;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; }
+        h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        
+        p { margin-bottom: 1rem; color: var(--graphite); }
+        
+        a { color: var(--bronze); text-decoration: none; transition: var(--transition); }
+        a:hover { color: var(--navy); }
+
+        img { max-width: 100%; height: auto; display: block; }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        .text-center { text-align: center; }
+        .text-ivory { color: var(--ivory); }
+        .bg-navy { background-color: var(--navy); }
+        .bg-white { background-color: var(--white); }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--bronze);
+            color: var(--white);
+            border-color: var(--bronze);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--bronze);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--navy);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--navy);
+            border-color: var(--navy);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--navy);
+            color: var(--white);
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+            padding: 1.5rem 0;
+        }
+
+        header.scrolled {
+            background-color: rgba(29, 44, 58, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--ivory);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: var(--bronze);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        #hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(29, 44, 58, 0.6), rgba(29, 44, 58, 0.4)), 
+                        url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            color: var(--ivory);
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--bronze);
+            z-index: -1;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border: 1px solid var(--stone);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(29, 44, 58, 0.1);
+            border-color: var(--bronze);
+        }
+
+        .service-card h3 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--graphite);
+            margin-bottom: 0;
+        }
+
+        .service-note {
+            font-size: 0.85rem;
+            color: var(--eucalyptus);
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* Projects Section */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: none;
+            border: 1px solid var(--stone);
+            padding: 0.5rem 1.5rem;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--graphite);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+        }
+
+        .project-item.hidden {
+            display: none;
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .project-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(29, 44, 58, 0.9));
+            padding: 2rem 1.5rem 1.5rem;
+            color: var(--white);
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .project-item:hover .project-overlay {
+            transform: translateY(0);
+        }
+
+        .project-overlay h4 {
+            color: var(--white);
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .project-overlay p {
+            color: var(--stone);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(29, 44, 58, 0.95);
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .lightbox-image {
+            max-width: 90%;
+            max-height: 80vh;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 3rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .lightbox-caption {
+            color: var(--white);
+            margin-top: 1rem;
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+        }
+
+        /* Philosophy Section */
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .principle {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .principle-number {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            color: var(--bronze);
+            opacity: 0.5;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        /* Process Section */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            position: relative;
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .timeline {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .timeline::before {
+                content: '';
+                position: absolute;
+                top: 24px;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background-color: var(--stone);
+                z-index: 0;
+            }
+        }
+
+        .timeline-item {
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .timeline-marker {
+            width: 48px;
+            height: 48px;
+            background-color: var(--navy);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 600;
+            border: 3px solid var(--ivory);
+        }
+
+        .timeline-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            font-size: 0.9rem;
+            color: var(--graphite);
+        }
+
+        /* Why Us Section */
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .why-us-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .why-us-icon {
+            color: var(--bronze);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        /* Locations Section */
+        .locations-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .location-tag {
+            background: var(--white);
+            border: 1px solid var(--stone);
+            padding: 0.75rem 1.5rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            color: var(--navy);
+        }
+
+        /* Testimonials Section */
+        .testimonial-placeholder {
+            background: var(--white);
+            border: 2px dashed var(--stone);
+            padding: 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-placeholder p {
+            color: var(--graphite);
+            font-style: italic;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--stone);
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.5rem 0;
+            text-align: left;
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--bronze);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-answer p {
+            padding-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .verification-note {
+            background-color: rgba(168, 141, 104, 0.1);
+            border-left: 4px solid var(--bronze);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            color: var(--graphite);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .verification-note strong {
+            color: var(--navy);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--navy);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--stone);
+            background: var(--white);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            color: var(--graphite);
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--bronze);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-details {
+            padding: 2rem;
+            background: var(--navy);
+            color: var(--ivory);
+        }
+
+        .contact-details h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details p {
+            color: var(--stone);
+            margin-bottom: 1rem;
+        }
+
+        .contact-details a {
+            color: var(--bronze);
+        }
+
+        .contact-details a:hover {
+            color: var(--white);
+        }
+
+        .form-success {
+            display: none;
+            background: var(--eucalyptus);
+            color: var(--white);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--navy);
+            color: var(--stone);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--stone);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--bronze);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(216, 212, 202, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* Back to Top */
+        #back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            background: var(--bronze);
+            color: var(--white);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        #back-to-top.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        #back-to-top:hover {
+            background: var(--navy);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background: var(--navy);
+                flex-direction: column;
+                justify-content: center;
+                padding: 2rem;
+                transition: right 0.3s ease;
+                box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image img {
+                height: 400px;
+            }
+
+            .services-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#hero" class="logo">ABC Advanced Building</a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#philosophy">Our Approach</a></li>
+                    <li><a href="#contact" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Discuss Your Project</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <div class="hero-content reveal">
+                    <h1>Thoughtful Design.<br>Exceptional Construction.</h1>
+                    <p>Building solutions shaped by careful planning, considered design and a commitment to quality.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Discuss Your Project</a>
+                        <a href="#projects" class="btn btn-secondary">Explore Our Work</a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <span>↓</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding bg-white">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image reveal">
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Contemporary Australian architectural detail" loading="lazy">
+                    </div>
+                    <div class="about-content reveal">
+                        <h2>Building with Purpose.<br>Designing for Life.</h2>
+                        <p>At ABC Advanced Building Constructions, we bring together thoughtful planning, quality design, and professional construction execution. Based in Port Elliot, South Australia, we serve as a dedicated building partner for both residential and commercial projects.</p>
+                        <p>Our approach begins with a deep understanding of your requirements. We develop practical building solutions that carefully consider aesthetics, materials, and functionality. By managing project requirements with precision and attention to detail, we create spaces that genuinely serve their intended purpose.</p>
+                        <p>Whether refining an existing structure or delivering a new build, our commitment remains constant: professional communication, meticulous project delivery, and an unwavering focus on quality.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section-padding">
+            <div class="container">
+                <div class="text-center reveal">
+                    <h2>Our Capabilities</h2>
+                    <p>Comprehensive building and construction solutions tailored to your vision.</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card reveal">
+                        <h3>Building Design</h3>
+                        <p>Our building design process encompasses comprehensive space planning, functional layouts, and thoughtful architectural considerations. We guide your project through design development and seamless coordination of all project requirements.</p>
+                    </article>
+                    <article class="service-card reveal">
+                        <h3>Custom Homes</h3>
+                        <p>We specialise in custom home concepts and tailored residential building solutions. Our approach includes meticulous interior and exterior planning, careful material and finish considerations, and the creation of highly functional living spaces.</p>
+                    </article>
+                    <article class="service-card reveal">
+                        <h3>Home Extensions</h3>
+                        <p>Seamlessly integrate additional space into your existing property. We focus on layout improvements, indoor-outdoor integration, and ensuring complete design continuity with your existing structures.</p>
+                    </article>
+                    <article class="service-card reveal">
+                        <h3>Renovations & Alterations</h3>
+                        <p>Transform your existing property with our renovation services. We handle structural and layout changes, modernisation, space optimisation, and comprehensive interior and exterior upgrades.</p>
+                    </article>
+                    <article class="service-card reveal">
+                        <h3>Commercial Construction</h3>
+                        <p>We deliver functional business spaces through careful construction planning and project coordination. Our commercial construction focuses on practical, durable design considerations that meet specific building requirements.</p>
+                    </article>
+                    <article class="service-card reveal">
+                        <h3>Architectural Drawings & Planning</h3>
+                        <p>We assist with the preparation of building plans, architectural drawings, and design documentation. This includes planning coordination and thorough project preparation.</p>
+                        <p class="service-note">*Note: We coordinate with licensed professionals for certified architectural, engineering, or certification services as required.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding bg-white">
+            <div class="container">
+                <div class="text-center reveal">
+                    <h2>A Closer Look at Our Work</h2>
+                    <p>A selection of our residential, commercial, and design projects.</p>
+                </div>
+                
+                <div class="filter-buttons reveal">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="residential">Residential</button>
+                    <button class="filter-btn" data-filter="commercial">Commercial</button>
+                    <button class="filter-btn" data-filter="custom">Custom Homes</button>
+                    <button class="filter-btn" data-filter="renovation">Renovations</button>
+                    <button class="filter-btn" data-filter="extension">Extensions</button>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-item reveal" data-category="custom" data-title="Coastal Custom Residence" data-location="Port Elliot, SA">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=80" alt="Custom home exterior" loading="lazy">
+                        <div class="project-overlay">
+                            <h4>Coastal Custom Residence</h4>
+                            <p>Custom Homes • Port Elliot, SA</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" data-category="commercial" data-title="Fleurieu Commercial Hub" data-location="Victor Harbor, SA">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Commercial building" loading="lazy">
+                        <div class="project-overlay">
+                            <h4>Fleurieu Commercial Hub</h4>
+                            <p>Commercial • Victor Harbor, SA</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" data-category="renovation" data-title="Heritage Home Modernisation" data-location="Middleton, SA">
+                        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=600&q=80" alt="Renovated interior" loading="lazy">
+                        <div class="project-overlay">
+                            <h4>Heritage Home Modernisation</h4>
+                            <p>Renovation • Middleton, SA</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" data-category="extension" data-title="Indoor-Outdoor Extension" data-location="Encounter Bay, SA">
+                        <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=600&q=80" alt="Home extension" loading="lazy">
+                        <div class="project-overlay">
+                            <h4>Indoor-Outdoor Extension</h4>
+                            <p>Extension • Encounter Bay, SA</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" data-category="residential" data-title="Contemporary Family Home" data-location="Goolwa, SA">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Contemporary residential architecture" loading="lazy">
+                        <div class="project-overlay">
+                            <h4>Contemporary Family Home</h4>
+                            <p>Residential • Goolwa, SA</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" data-category="residential" data-title="Architectural Planning Project" data-location="Port Elliot, SA">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" alt="Architectural plans and design" loading="lazy">
+                        <div class="project-overlay">
+                            <h4>Architectural Planning Project</h4>
+                            <p>Building Design • Port Elliot, SA</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center" style="margin-top: 2rem; font-size: 0.85rem; color: var(--eucalyptus);">
+                    <em>Note: Images shown are illustrative architectural photography. Editable placeholders are ready for genuine ABC Advanced Building Constructions project images.</em>
+                </p>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox" aria-hidden="true">
+            <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+            <img src="" alt="Project detail" class="lightbox-image">
+            <div class="lightbox-caption"></div>
+        </div>
+
+        <!-- Philosophy Section -->
+        <section id="philosophy" class="section-padding bg-navy text-ivory">
+            <div class="container">
+                <div class="text-center reveal">
+                    <h2 style="color: var(--white);">Where Design Meets Construction</h2>
+                    <p style="color: var(--stone);">The relationship between good planning and successful building outcomes.</p>
+                </div>
+                <div class="philosophy-grid">
+                    <div class="principle reveal">
+                        <div class="principle-number">01</div>
+                        <h3 style="color: var(--white);">Considered Design</h3>
+                        <p style="color: var(--stone);">Understanding how the space should look and function to meet your specific lifestyle or business needs.</p>
+                    </div>
+                    <div class="principle reveal">
+                        <div class="principle-number">02</div>
+                        <h3 style="color: var(--white);">Practical Planning</h3>
+                        <p style="color: var(--stone);">Carefully considering site conditions, project requirements, and real-world feasibility.</p>
+                    </div>
+                    <div class="principle reveal">
+                        <div class="principle-number">03</div>
+                        <h3 style="color: var(--white);">Quality Materials</h3>
+                        <p style="color: var(--stone);">Focusing on appropriate, durable materials and informed construction decisions.</p>
+                    </div>
+                    <div class="principle reveal">
+                        <div class="principle-number">04</div>
+                        <h3 style="color: var(--white);">Attention to Detail</h3>
+                        <p style="color: var(--stone);">Respecting the finer details throughout every stage of the project lifecycle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="section-padding bg-white">
+            <div class="container">
+                <div class="text-center reveal">
+                    <h2>A Clear Approach to Every Project</h2>
+                    <p>A structured, transparent process from initial concept to final handover.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">1</div>
+                        <h4>Initial Consultation</h4>
+                        <p>Understand your vision, goals, and specific requirements.</p>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">2</div>
+                        <h4>Project Assessment</h4>
+                        <p>Discuss site conditions, scope, and practical feasibility.</p>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">3</div>
+                        <h4>Design & Planning</h4>
+                        <p>Develop the proposed design and relevant documentation.</p>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">4</div>
+                        <h4>Quotation & Coordination</h4>
+                        <p>Establish project scope and discuss costs and arrangements.</p>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">5</div>
+                        <h4>Construction</h4>
+                        <p>Proceed with the agreed building work with professional oversight.</p>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">6</div>
+                        <h4>Project Completion</h4>
+                        <p>Review the completed scope and communicate final details.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section id="why-us" class="section-padding">
+            <div class="container">
+                <div class="text-center reveal">
+                    <h2>The Right Thinking Behind Every Build</h2>
+                </div>
+                <div class="why-us-grid">
+                    <div class="why-us-item reveal">
+                        <div class="why-us-icon">◆</div>
+                        <div>
+                            <h4>Integrated Perspective</h4>
+                            <p>Seamless integration of design and construction expertise under one coordinated approach.</p>
+                        </div>
+                    </div>
+                    <div class="why-us-item reveal">
+                        <div class="why-us-icon">◆</div>
+                        <div>
+                            <h4>Dual Sector Understanding</h4>
+                            <p>Proven capability in both residential and commercial project environments.</p>
+                        </div>
+                    </div>
+                    <div class="why-us-item reveal">
+                        <div class="why-us-icon">◆</div>
+                        <div>
+                            <h4>Purpose-Driven Solutions</h4>
+                            <p>Practical outcomes that prioritise functionality without compromising on aesthetics.</p>
+                        </div>
+                    </div>
+                    <div class="why-us-item reveal">
+                        <div class="why-us-icon">◆</div>
+                        <div>
+                            <h4>Material Consideration</h4>
+                            <p>Thoughtful selection of materials and finishes suited to the South Australian coastal environment.</p>
+                        </div>
+                    </div>
+                    <div class="why-us-item reveal">
+                        <div class="why-us-icon">◆</div>
+                        <div>
+                            <h4>Professional Communication</h4>
+                            <p>Clear, consistent updates and transparent project management from start to finish.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Locations Section -->
+        <section id="locations" class="section-padding bg-white">
+            <div class="container text-center reveal">
+                <h2>Building Across the Fleurieu Peninsula and Beyond</h2>
+                <p>Based in Port Elliot, we proudly service the surrounding South Australian coastal and regional communities.</p>
+                <div class="locations-list">
+                    <span class="location-tag">Port Elliot</span>
+                    <span class="location-tag">Victor Harbor</span>
+                    <span class="location-tag">Middleton</span>
+                    <span class="location-tag">Goolwa</span>
+                    <span class="location-tag">Encounter Bay</span>
+                    <span class="location-tag">Surrounding Fleurieu Peninsula Areas</span>
+                </div>
+                <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--eucalyptus);">
+                    <em>*Please confirm actual service area coverage with the business prior to project commencement.</em>
+                </p>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section-padding">
+            <div class="container">
+                <div class="text-center reveal">
+                    <h2>Client Feedback</h2>
+                </div>
+                <div class="testimonial-placeholder reveal">
+                    <p>"Verified client testimonials and project reviews will be featured here upon confirmation from the business owner. This section is intentionally left as a placeholder to ensure no fabricated reviews, names, or ratings are published."</p>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--bronze);">[Owner: Replace this block with genuine client feedback when available]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding bg-white">
+            <div class="container">
+                <div class="text-center reveal">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-container reveal">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">What types of construction projects do you undertake?</button>
+                        <div class="faq-answer">
+                            <p>We undertake a diverse range of projects including custom residential homes, home extensions, renovations, alterations, and commercial construction projects across the Fleurieu Peninsula.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">Do you provide commercial construction services?</button>
+                        <div class="faq-answer">
+                            <p>Yes. We provide commercial construction services focused on functional business spaces, practical design considerations, and careful project coordination to meet specific building requirements.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">Can you assist with custom home projects?</button>
+                        <div class="faq-answer">
+                            <p>Absolutely. Custom homes are a core part of our residential building solutions, encompassing interior and exterior planning, material selection, and the creation of functional living spaces tailored to your lifestyle.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">Do you undertake home renovations and extensions?</button>
+                        <div class="faq-answer">
+                            <p>Yes. We specialise in integrating additional space into existing properties and transforming current layouts through modernisation, space optimisation, and structural upgrades while maintaining design continuity.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">Can you assist with building design and planning?</button>
+                        <div class="faq-answer">
+                            <p>Yes. We assist with building design concepts, space planning, functional layouts, and the preparation of design documentation. We coordinate with licensed professionals for any required certified architectural or engineering services.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">How does the initial consultation work?</button>
+                        <div class="faq-answer">
+                            <p>The initial consultation is an opportunity for us to understand your vision, discuss your requirements, and assess the practical feasibility of your project. It is a no-obligation conversation to determine how we can best assist you.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">Which areas of South Australia do you service?</button>
+                        <div class="faq-answer">
+                            <p>We are based in Port Elliot and primarily service the Fleurieu Peninsula region, including Victor Harbor, Middleton, Goolwa, Encounter Bay, and surrounding areas.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">How can I request a project quotation?</button>
+                        <div class="faq-answer">
+                            <p>You can request a quotation by completing the project enquiry form below. Once we receive your details, we will contact you to discuss your project scope and arrange a formal assessment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="text-center reveal">
+                    <h2>Have a Project in Mind?<br>Let's Build It Together.</h2>
+                </div>
+                
+                <div class="verification-note reveal">
+                    <strong>⚠️ Important Verification Note for Business Owner:</strong><br>
+                    The contact details below reflect the supplied directory listing. However, other indexed business sources show differing details: 
+                    <em>Email: abcconst@bigpond.com | Mobile: 0414 499 913 | Address: 14 Frenchman Drive, Port Elliot SA 5212 | Website: abcdesigned.com.au</em>. 
+                    Please verify and update these details in the HTML before publishing.
+                </div>
+
+                <div class="contact-grid reveal">
+                    <div class="contact-form-wrapper">
+                        <div id="form-success" class="form-success">
+                            Thank you. Your email client should now open with your enquiry details. If it does not, please contact us directly using the details provided.
+                        </div>
+                        <form id="enquiry-form">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Project Location *</label>
+                                <input type="text" id="location" name="location" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="project-type">Project Type *</label>
+                                <select id="project-type" name="project-type" required>
+                                    <option value="">Select a project type</option>
+                                    <option value="Building Design">Building Design</option>
+                                    <option value="Custom Home">Custom Home</option>
+                                    <option value="Commercial Construction">Commercial Construction</option>
+                                    <option value="Home Extension">Home Extension</option>
+                                    <option value="Renovation">Renovation</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="sector">Residential or Commercial *</label>
+                                <select id="sector" name="sector" required>
+                                    <option value="">Select sector</option>
+                                    <option value="Residential">Residential</option>
+                                    <option value="Commercial">Commercial</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Estimated Project Budget (Optional)</label>
+                                <input type="text" id="budget" name="budget" placeholder="e.g., $200k - $300k">
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Project Description *</label>
+                                <textarea id="description" name="description" required placeholder="Please describe your project vision, requirements, and any specific considerations."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-method">Preferred Contact Method *</label>
+                                <select id="contact-method" name="contact-method" required>
+                                    <option value="Email">Email</option>
+                                    <option value="Phone">Phone</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Enquiry</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-details">
+                        <h3>Contact Information</h3>
+                        <p><strong>ABC Advanced Building Constructions</strong></p>
+                        <p>39 North Terrace<br>Port Elliot SA 5212<br>Australia</p>
+                        <p style="margin-top: 1.5rem;">
+                            <strong>Phone:</strong><br>
+                            <a href="tel:0885543167">08 8554 3167</a>
+                        </p>
+                        <p>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:abcconst@ozemail.com.au">abcconst@ozemail.com.au</a>
+                        </p>
+                        <p>
+                            <strong>Website:</strong><br>
+                            <a href="http://www.abcadvancedbuildingconstructions.websyte.com.au/" target="_blank" rel="noopener">www.abcadvancedbuildingconstructions.websyte.com.au</a>
+                        </p>
+                        <p style="margin-top: 2rem; font-size: 0.85rem; opacity: 0.8;">
+                            <em>Office hours: Monday to Friday, 8:00 AM – 5:00 PM<br>(Please verify current operating hours)</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <span class="footer-brand">ABC Advanced Building</span>
+                    <p style="color: var(--stone); font-size: 0.9rem;">Thoughtful design and exceptional construction services in Port Elliot and the Fleurieu Peninsula, South Australia.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--white); margin-bottom: 1rem; font-size: 1rem;">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--white); margin-bottom: 1rem; font-size: 1rem;">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Building Design</a></li>
+                        <li><a href="#services">Custom Homes</a></li>
+                        <li><a href="#services">Commercial Construction</a></li>
+                        <li><a href="#services">Renovations & Extensions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--white); margin-bottom: 1rem; font-size: 1rem;">Contact</h4>
+                    <ul class="footer-links">
+                        <li>Port Elliot, SA 5212</li>
+                        <li><a href="tel:0885543167">08 8554 3167</a></li>
+                        <li><a href="mailto:abcconst@ozemail.com.au">abcconst@ozemail.com.au</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ABC Advanced Building Constructions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            });
+        });
+
+        // Sticky Header
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Portfolio Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                projectItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.classList.remove('hidden');
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.9)';
+                        setTimeout(() => {
+                            item.classList.add('hidden');
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Lightbox Functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = lightbox.querySelector('.lightbox-image');
+        const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+        const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+        projectItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                const title = item.getAttribute('data-title');
+                const location = item.getAttribute('data-location');
+                
+                lightboxImage.src = img.src;
+                lightboxImage.alt = img.alt;
+                lightboxCaption.textContent = `${title} — ${location}`;
+                lightbox.classList.add('active');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                const isActive = item.classList.contains('active');
+
+                // Close all others
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                    faq.querySelector('.faq-answer').style.maxHeight = null;
+                    faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+
+                // Toggle current
+                if (!isActive) {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    question.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Form Handling with Mailto Fallback
+        const form = document.getElementById('enquiry-form');
+        const formSuccess = document.getElementById('form-success');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Basic validation check (HTML5 handles most, but double-check)
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            const formData = new FormData(form);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const location = formData.get('location');
+            const projectType = formData.get('project-type');
+            const sector = formData.get('sector');
+            const budget = formData.get('budget') || 'Not specified';
+            const description = formData.get('description');
+            const contactMethod = formData.get('contact-method');
+
+            const subject = encodeURIComponent(`Project Enquiry: ${projectType} - ${name}`);
+            const body = encodeURIComponent(
+                `New Project Enquiry\n\n` +
+                `Name: ${name}\n` +
+                `Email: ${email}\n` +
+                `Phone: ${phone}\n` +
+                `Preferred Contact: ${contactMethod}\n` +
+                `Location: ${location}\n` +
+                `Sector: ${sector}\n` +
+                `Project Type: ${projectType}\n` +
+                `Estimated Budget: ${budget}\n\n` +
+                `Project Description:\n${description}`
+            );
+
+            // Open mailto client
+            window.location.href = `mailto:abcconst@ozemail.com.au?subject=${subject}&body=${body}`;
+
+            // Show success message
+            formSuccess.style.display = 'block';
+            form.reset();
+            
+            // Hide success message after 10 seconds
+            setTimeout(() => {
+                formSuccess.style.display = 'none';
+            }, 10000);
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
