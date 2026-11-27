@@ -1,0 +1,2875 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andy Nichols Roofing | Houston TX Residential & Commercial Roofing Contractor</title>
+<meta name="description" content="Andy Nichols Roofing — Houston, Texas-based roofing contractor specialising in residential and commercial roofing services, roof repairs, re-roofing and storm damage assessment. Reliable Roofing. Lasting Protection.">
+<meta name="keywords" content="Andy Nichols Roofing, Roofing Contractor Houston TX, Residential Roofing Houston, Commercial Roofing Houston, Roof Repair Houston TX, Roof Replacement Houston, Storm Damage Roofing Houston">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Andy Nichols Roofing | Houston TX Residential & Commercial Roofing">
+<meta property="og:description" content="Roofing solutions built around your property's needs. Residential, commercial, repairs and storm damage assessment.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Andy Nichols Roofing",
+  "description": "Houston, Texas-based roofing contractor specialising in residential and commercial roofing services.",
+  "email": "andynicholsroofing@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1617 Monarch Oaks St",
+    "addressLocality": "Houston",
+    "addressRegion": "TX",
+    "postalCode": "77055",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Houston"
+  },
+  "slogan": "Reliable Roofing. Lasting Protection.",
+  "note": "Brand presentation / relaunch concept. Business operational status unconfirmed."
+}
+</script>
+
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #172B45;
+  --navy-deep: #0F1D30;
+  --forest: #23483D;
+  --warm-white: #F7F7F3;
+  --slate: #66717C;
+  --gold: #B9A273;
+  --charcoal: #252A30;
+  --stone: #E7E8E4;
+  --stone-warm: #EFECE4;
+  
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-editorial: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--charcoal);
+  background: var(--warm-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; color: var(--navy); }
+
+.container { width: 100%; max-width: 1320px; margin: 0 auto; padding: 0 2rem; }
+@media (max-width: 640px) { .container { padding: 0 1.25rem; } }
+
+.section-pad { padding: 7rem 0; }
+@media (max-width: 768px) { .section-pad { padding: 4.5rem 0; } }
+
+/* ===== PREVIEW BANNER ===== */
+.preview-banner {
+  background: var(--charcoal);
+  color: var(--warm-white);
+  padding: 0.6rem 1rem;
+  text-align: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1000;
+}
+.preview-banner strong { color: var(--gold); font-weight: 600; }
+
+/* ===== NAVIGATION ===== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 900;
+  padding: 1.4rem 0;
+  background: transparent;
+  transition: all 0.4s var(--ease);
+}
+.nav.scrolled {
+  background: rgba(23, 43, 69, 0.97);
+  backdrop-filter: blur(12px);
+  padding: 0.9rem 0;
+  box-shadow: 0 4px 24px rgba(15, 29, 48, 0.12);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--warm-white);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+.nav-logo-mark {
+  width: 36px;
+  height: 36px;
+  position: relative;
+}
+.nav-logo-mark svg { width: 100%; height: 100%; }
+.nav-logo-text span { display: block; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.15em; color: var(--gold); margin-top: 3px; text-transform: uppercase; }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  list-style: none;
+}
+.nav-links a {
+  color: var(--warm-white);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  position: relative;
+  transition: color 0.3s;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.4s var(--ease);
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--gold); }
+.nav-links a.active::after { width: 100%; }
+
+.nav-cta {
+  background: var(--gold);
+  color: var(--navy-deep) !important;
+  padding: 0.7rem 1.4rem;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  transition: all 0.3s;
+}
+.nav-cta::after { display: none !important; }
+.nav-cta:hover { background: var(--warm-white); color: var(--navy) !important; transform: translateY(-1px); }
+
+.nav-mobile-toggle {
+  display: none;
+  width: 34px;
+  height: 34px;
+  color: var(--warm-white);
+  align-items: center;
+  justify-content: center;
+}
+.nav-mobile-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+  position: relative;
+  transition: all 0.3s;
+}
+.nav-mobile-toggle span::before,
+.nav-mobile-toggle span::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+  left: 0;
+  transition: all 0.3s;
+}
+.nav-mobile-toggle span::before { top: -7px; }
+.nav-mobile-toggle span::after { top: 7px; }
+.nav-mobile-toggle.active span { background: transparent; }
+.nav-mobile-toggle.active span::before { top: 0; transform: rotate(45deg); }
+.nav-mobile-toggle.active span::after { top: 0; transform: rotate(-45deg); }
+
+@media (max-width: 1080px) {
+  .nav-links { gap: 1.6rem; }
+  .nav-links a { font-size: 0.82rem; }
+}
+
+@media (max-width: 920px) {
+  .nav-mobile-toggle { display: flex; }
+  .nav-links {
+    position: fixed;
+    top: 0; right: 0;
+    width: min(360px, 90vw);
+    height: 100vh;
+    background: var(--navy-deep);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 6rem 2.5rem 2rem;
+    gap: 1.5rem;
+    transform: translateX(100%);
+    transition: transform 0.5s var(--ease-out);
+    box-shadow: -20px 0 50px rgba(0,0,0,0.3);
+  }
+  .nav-links.open { transform: translateX(0); }
+  .nav-links a { font-size: 1.1rem; color: var(--warm-white); }
+  .nav-cta { margin-top: 1rem; width: 100%; text-align: center; }
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--navy-deep);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.55;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(15, 29, 48, 0.85) 0%, rgba(15, 29, 48, 0.4) 50%, rgba(15, 29, 48, 0.6) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  padding: 8rem 0 4rem;
+  color: var(--warm-white);
+  animation: heroReveal 1.2s var(--ease-out) 0.2s both;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+.hero h1 {
+  font-size: clamp(2.6rem, 6.5vw, 5.5rem);
+  color: var(--warm-white);
+  letter-spacing: -0.03em;
+  margin-bottom: 1.8rem;
+  line-height: 0.98;
+}
+.hero h1 em {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold);
+  letter-spacing: -0.02em;
+}
+.hero-sub {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: rgba(247, 247, 243, 0.85);
+  max-width: 540px;
+  margin-bottom: 2.8rem;
+  line-height: 1.6;
+}
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.8rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.35s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy-deep);
+}
+.btn-primary:hover {
+  background: var(--warm-white);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(185, 162, 115, 0.35);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--warm-white);
+  border: 1px solid rgba(247, 247, 243, 0.4);
+}
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+.btn-dark {
+  background: var(--navy);
+  color: var(--warm-white);
+}
+.btn-dark:hover { background: var(--forest); transform: translateY(-2px); }
+.btn svg { width: 16px; height: 16px; }
+
+.hero-meta {
+  display: flex;
+  gap: 3rem;
+  margin-top: 5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(247, 247, 243, 0.15);
+  flex-wrap: wrap;
+}
+.hero-meta-item { display: flex; flex-direction: column; gap: 0.3rem; }
+.hero-meta-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+.hero-meta-value {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--warm-white);
+}
+
+@keyframes heroReveal {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== SECTION HEADER ===== */
+.section-header {
+  max-width: 820px;
+  margin-bottom: 4rem;
+}
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-bottom: 1.2rem;
+}
+.section-eyebrow::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--forest);
+}
+.section-header h2 {
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+  margin-bottom: 1.5rem;
+  line-height: 1.02;
+}
+.section-header h2 em {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--forest);
+}
+.section-header p {
+  font-size: 1.05rem;
+  color: var(--slate);
+  line-height: 1.7;
+  max-width: 640px;
+}
+
+/* ===== ABOUT ===== */
+.about { background: var(--warm-white); }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+@media (max-width: 960px) { .about-grid { grid-template-columns: 1fr; gap: 3rem; } }
+
+.about-image-stack {
+  position: relative;
+  height: 620px;
+}
+.about-image-stack img {
+  position: absolute;
+  border-radius: 2px;
+  box-shadow: 0 20px 60px rgba(15, 29, 48, 0.18);
+  object-fit: cover;
+}
+.about-image-stack img:nth-child(1) {
+  width: 70%;
+  height: 65%;
+  top: 0;
+  left: 0;
+}
+.about-image-stack img:nth-child(2) {
+  width: 60%;
+  height: 55%;
+  bottom: 0;
+  right: 0;
+  border: 8px solid var(--warm-white);
+}
+@media (max-width: 640px) { .about-image-stack { height: 480px; } }
+
+.about-content h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  margin-bottom: 1.8rem;
+  line-height: 1.05;
+}
+.about-content h2 em {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--forest);
+}
+.about-content > p {
+  font-size: 1rem;
+  color: var(--slate);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+.about-principles {
+  list-style: none;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--stone);
+}
+.about-principles li {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--stone);
+  font-size: 0.95rem;
+}
+.about-principles li:last-child { border-bottom: none; }
+.about-principles-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  min-width: 32px;
+}
+.about-principles-text { color: var(--charcoal); font-weight: 500; }
+
+/* ===== SERVICES SHARED ===== */
+.services-section { padding: 7rem 0; }
+@media (max-width: 768px) { .services-section { padding: 4.5rem 0; } }
+
+.service-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+@media (max-width: 960px) { .service-layout { grid-template-columns: 1fr; gap: 3rem; } }
+
+.service-image-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  aspect-ratio: 4 / 5;
+}
+.service-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease);
+}
+.service-image-wrap:hover img { transform: scale(1.04); }
+
+/* ===== RESIDENTIAL ===== */
+.residential { background: var(--warm-white); }
+.residential .service-image-wrap { aspect-ratio: 3/4; }
+
+.service-list {
+  display: grid;
+  gap: 0;
+}
+.service-item {
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  gap: 1.5rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--stone);
+  align-items: start;
+  transition: all 0.4s var(--ease);
+  cursor: default;
+}
+.service-item:last-child { border-bottom: 1px solid var(--stone); }
+.service-item:hover { padding-left: 0.5rem; }
+.service-item:hover .service-item-title { color: var(--forest); }
+
+.service-item-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  padding-top: 4px;
+}
+.service-item-body { display: flex; flex-direction: column; gap: 0.4rem; }
+.service-item-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--navy);
+  transition: color 0.3s;
+}
+.service-item-desc {
+  font-size: 0.92rem;
+  color: var(--slate);
+  line-height: 1.55;
+}
+.service-item-arrow {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--stone);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  transition: all 0.3s;
+  color: var(--slate);
+}
+.service-item:hover .service-item-arrow {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--warm-white);
+}
+
+/* ===== COMMERCIAL ===== */
+.commercial { background: var(--navy); color: var(--warm-white); position: relative; overflow: hidden; }
+.commercial::before {
+  content: '';
+  position: absolute;
+  top: -20%; right: -10%;
+  width: 50%; height: 80%;
+  background: radial-gradient(circle, rgba(185, 162, 115, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.commercial .section-header h2 { color: var(--warm-white); }
+.commercial .section-header h2 em { color: var(--gold); }
+.commercial .section-header p { color: rgba(247, 247, 243, 0.7); }
+.commercial .section-eyebrow { color: var(--gold); }
+.commercial .section-eyebrow::before { background: var(--gold); }
+
+.commercial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+@media (max-width: 760px) { .commercial-grid { grid-template-columns: 1fr; } }
+
+.commercial-card {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--navy-deep);
+  transition: transform 0.5s var(--ease);
+}
+.commercial-card:hover { transform: translateY(-4px); }
+.commercial-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+  transition: opacity 0.5s, transform 0.7s;
+}
+.commercial-card:hover img { opacity: 0.7; transform: scale(1.05); }
+.commercial-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 29, 48, 0.95) 0%, rgba(15, 29, 48, 0.4) 60%, transparent 100%);
+}
+.commercial-card-content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 1.8rem;
+  z-index: 2;
+}
+.commercial-card-content h3 {
+  font-size: 1.3rem;
+  color: var(--warm-white);
+  margin-bottom: 0.5rem;
+}
+.commercial-card-content p {
+  font-size: 0.88rem;
+  color: rgba(247, 247, 243, 0.75);
+  line-height: 1.5;
+}
+
+.commercial-services-list {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.commercial-services-list span {
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(247, 247, 243, 0.15);
+  border-radius: 2px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--warm-white);
+  text-align: center;
+  transition: all 0.3s;
+}
+.commercial-services-list span:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ===== REPAIRS ===== */
+.repairs { background: var(--stone); }
+.repairs-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 960px) { .repairs-layout { grid-template-columns: 1fr; gap: 3rem; } }
+
+.repairs-issues {
+  list-style: none;
+  margin-top: 2rem;
+}
+.repairs-issues li {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(102, 113, 124, 0.2);
+  align-items: start;
+}
+.repairs-issues li:last-child { border-bottom: none; }
+.issue-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--warm-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  margin-top: 2px;
+}
+.issue-text h4 {
+  font-size: 1.05rem;
+  color: var(--navy);
+  margin-bottom: 0.3rem;
+}
+.issue-text p {
+  font-size: 0.9rem;
+  color: var(--slate);
+  line-height: 1.5;
+}
+
+.repairs-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.8rem;
+  height: 520px;
+}
+.repairs-images > div {
+  overflow: hidden;
+  border-radius: 2px;
+}
+.repairs-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease);
+}
+.repairs-images > div:hover img { transform: scale(1.05); }
+.repairs-images > div:first-child { grid-row: span 2; }
+
+@media (max-width: 640px) {
+  .repairs-images {
+    grid-template-rows: 200px 200px;
+    height: auto;
+  }
+}
+
+/* ===== MATERIALS ===== */
+.materials { background: var(--warm-white); }
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.2rem;
+}
+.material-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  background: var(--charcoal);
+}
+.material-card:nth-child(1) { grid-column: span 6; aspect-ratio: 16/10; }
+.material-card:nth-child(2) { grid-column: span 6; aspect-ratio: 16/10; }
+.material-card:nth-child(3) { grid-column: span 4; }
+.material-card:nth-child(4) { grid-column: span 4; }
+.material-card:nth-child(5) { grid-column: span 4; }
+
+@media (max-width: 900px) {
+  .materials-grid { grid-template-columns: repeat(2, 1fr); }
+  .material-card:nth-child(n) { grid-column: span 1; aspect-ratio: 1; }
+  .material-card:nth-child(1) { grid-column: span 2; aspect-ratio: 16/10; }
+  .material-card:nth-child(2) { grid-column: span 2; aspect-ratio: 16/10; }
+}
+
+.material-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease), opacity 0.4s;
+  opacity: 0.8;
+}
+.material-card:hover img { transform: scale(1.08); opacity: 0.95; }
+.material-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(23, 43, 69, 0.9) 0%, transparent 60%);
+}
+.material-card-content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 1.8rem;
+  z-index: 2;
+}
+.material-card-content h3 {
+  font-size: 1.2rem;
+  color: var(--warm-white);
+  margin-bottom: 0.4rem;
+}
+.material-card-content p {
+  font-size: 0.85rem;
+  color: rgba(247, 247, 243, 0.75);
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+/* ===== PROCESS ===== */
+.process { background: var(--navy-deep); color: var(--warm-white); position: relative; overflow: hidden; }
+.process .section-header h2 { color: var(--warm-white); }
+.process .section-header h2 em { color: var(--gold); }
+.process .section-header p { color: rgba(247, 247, 243, 0.75); }
+.process .section-eyebrow { color: var(--gold); }
+.process .section-eyebrow::before { background: var(--gold); }
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  position: relative;
+}
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 10%; right: 10%;
+  height: 1px;
+  background: rgba(247, 247, 243, 0.15);
+}
+@media (max-width: 900px) {
+  .process-steps { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .process-steps::before { display: none; }
+}
+@media (max-width: 520px) { .process-steps { grid-template-columns: 1fr; } }
+
+.process-step {
+  position: relative;
+  padding-top: 5rem;
+}
+.process-step-num {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy-deep);
+  border: 1px solid rgba(185, 162, 115, 0.4);
+  border-radius: 50%;
+  z-index: 2;
+}
+.process-step h3 {
+  color: var(--warm-white);
+  font-size: 1.25rem;
+  margin-bottom: 0.7rem;
+}
+.process-step p {
+  font-size: 0.92rem;
+  color: rgba(247, 247, 243, 0.7);
+  line-height: 1.6;
+}
+
+/* ===== WHY CHOOSE ===== */
+.why { background: var(--warm-white); }
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 900px) { .why-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .why-grid { grid-template-columns: 1fr; } }
+
+.why-card {
+  padding: 2.5rem 2rem;
+  background: var(--warm-white);
+  border: 1px solid var(--stone);
+  border-radius: 2px;
+  transition: all 0.4s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.why-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 0; height: 3px;
+  background: var(--gold);
+  transition: width 0.5s var(--ease);
+}
+.why-card:hover {
+  border-color: var(--forest);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(15, 29, 48, 0.08);
+}
+.why-card:hover::before { width: 100%; }
+.why-card-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--forest);
+  color: var(--warm-white);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.why-card-icon svg { width: 22px; height: 22px; }
+.why-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.7rem;
+  color: var(--navy);
+}
+.why-card p {
+  font-size: 0.92rem;
+  color: var(--slate);
+  line-height: 1.6;
+}
+
+/* ===== PORTFOLIO ===== */
+.portfolio { background: var(--stone); }
+
+.portfolio-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  padding: 0.65rem 1.3rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  color: var(--slate);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.filter-btn:hover { color: var(--navy); }
+.filter-btn.active {
+  background: var(--navy);
+  color: var(--warm-white);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 240px;
+  gap: 1rem;
+}
+@media (max-width: 900px) {
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 220px; }
+}
+@media (max-width: 600px) {
+  .portfolio-grid { grid-template-columns: 1fr; grid-auto-rows: 260px; }
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  cursor: pointer;
+  background: var(--navy-deep);
+  transition: all 0.4s;
+}
+.portfolio-item:nth-child(1) { grid-row: span 2; }
+.portfolio-item:nth-child(4) { grid-column: span 2; }
+.portfolio-item:nth-child(7) { grid-row: span 2; }
+@media (max-width: 600px) {
+  .portfolio-item:nth-child(n) { grid-column: span 1; grid-row: span 1; }
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease);
+}
+.portfolio-item:hover img { transform: scale(1.06); }
+
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 29, 48, 0.95) 0%, rgba(15, 29, 48, 0.2) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.8rem;
+}
+.portfolio-item:hover .portfolio-overlay { opacity: 1; }
+
+.portfolio-overlay-content {
+  color: var(--warm-white);
+  transform: translateY(10px);
+  transition: transform 0.4s var(--ease);
+}
+.portfolio-item:hover .portfolio-overlay-content { transform: translateY(0); }
+.portfolio-overlay-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+.portfolio-overlay-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+.portfolio-overlay-desc {
+  font-size: 0.82rem;
+  color: rgba(247, 247, 243, 0.75);
+}
+
+.portfolio-item.hidden { display: none; }
+
+/* ===== LIGHTBOX ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 29, 48, 0.97);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+.lightbox.active { display: flex; }
+.lightbox-inner {
+  max-width: 1100px;
+  width: 100%;
+  max-height: 90vh;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  background: var(--warm-white);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .lightbox-inner { grid-template-columns: 1fr; max-height: 95vh; overflow-y: auto; }
+}
+.lightbox-image {
+  background: var(--navy-deep);
+  min-height: 400px;
+  overflow: hidden;
+}
+.lightbox-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.lightbox-content {
+  padding: 3rem 2.5rem;
+  overflow-y: auto;
+  position: relative;
+}
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--warm-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  z-index: 10;
+}
+.lightbox-close:hover { background: var(--gold); color: var(--navy); }
+
+.lightbox-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--forest);
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+.lightbox-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--navy);
+}
+.lightbox-desc {
+  color: var(--slate);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+.lightbox-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--stone);
+}
+.lightbox-meta-item-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--slate);
+  font-family: var(--font-display);
+  margin-bottom: 0.3rem;
+}
+.lightbox-meta-item-value {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--navy);
+  font-size: 0.95rem;
+}
+
+.lightbox-nav {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+.lightbox-nav button {
+  flex: 1;
+  padding: 0.9rem;
+  background: var(--navy);
+  color: var(--warm-white);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.lightbox-nav button:hover { background: var(--forest); }
+
+/* ===== ESTIMATE FORM ===== */
+.estimate {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: var(--warm-white);
+  position: relative;
+  overflow: hidden;
+}
+.estimate::before {
+  content: '';
+  position: absolute;
+  bottom: -30%; right: -20%;
+  width: 70%; height: 70%;
+  background: radial-gradient(circle, rgba(185, 162, 115, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.estimate-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 960px) { .estimate-inner { grid-template-columns: 1fr; gap: 3rem; } }
+
+.estimate-info h2 {
+  color: var(--warm-white);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  margin-bottom: 1.5rem;
+}
+.estimate-info h2 em {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold);
+}
+.estimate-info > p {
+  color: rgba(247, 247, 243, 0.75);
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+.estimate-preview-notice {
+  background: rgba(185, 162, 115, 0.1);
+  border: 1px solid rgba(185, 162, 115, 0.3);
+  padding: 1.2rem;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(247, 247, 243, 0.85);
+  margin-bottom: 2rem;
+}
+.estimate-preview-notice strong { color: var(--gold); display: block; margin-bottom: 0.4rem; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+.estimate-contact-list {
+  list-style: none;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(247, 247, 243, 0.15);
+}
+.estimate-contact-list li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  align-items: center;
+}
+.estimate-contact-list svg {
+  width: 20px;
+  height: 20px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.estimate-contact-list span {
+  font-size: 0.92rem;
+  color: rgba(247, 247, 243, 0.85);
+}
+
+.estimate-form-wrap {
+  background: var(--warm-white);
+  padding: 3rem;
+  border-radius: 2px;
+  color: var(--charcoal);
+  position: relative;
+}
+@media (max-width: 600px) { .estimate-form-wrap { padding: 2rem 1.5rem; } }
+
+.form-disabled-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(247, 247, 243, 0.4);
+  backdrop-filter: blur(1px);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  border-radius: 2px;
+}
+.form-disabled-overlay span {
+  background: var(--navy);
+  color: var(--warm-white);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; gap: 1.2rem; } }
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+.form-field label {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: 0.5rem;
+}
+.form-field label .required { color: var(--forest); }
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--stone);
+  border-radius: 2px;
+  background: var(--warm-white);
+  color: var(--charcoal);
+  transition: all 0.3s;
+  width: 100%;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--forest);
+  box-shadow: 0 0 0 3px rgba(35, 72, 61, 0.1);
+}
+.form-field textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: var(--font-body);
+}
+.form-field.error input,
+.form-field.error select,
+.form-field.error textarea {
+  border-color: #B85450;
+  background: #FFF5F4;
+}
+.form-field .error-msg {
+  color: #B85450;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  display: none;
+}
+.form-field.error .error-msg { display: block; }
+
+.form-submit {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.form-submit-btn {
+  width: 100%;
+  padding: 1.1rem;
+  background: var(--navy);
+  color: var(--warm-white);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  border-radius: 2px;
+  position: relative;
+}
+.form-submit-btn:hover:not(:disabled) { background: var(--forest); transform: translateY(-1px); }
+.form-submit-btn:disabled {
+  background: var(--slate);
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.form-status {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  display: none;
+}
+.form-status.success {
+  display: block;
+  background: rgba(35, 72, 61, 0.1);
+  color: var(--forest);
+  border: 1px solid var(--forest);
+}
+
+/* ===== SERVICE AREA ===== */
+.area { background: var(--warm-white); }
+.area-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 960px) { .area-grid { grid-template-columns: 1fr; gap: 3rem; } }
+
+.area-info h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  margin-bottom: 1.5rem;
+}
+.area-info h2 em {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--forest);
+}
+.area-info > p {
+  color: var(--slate);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.area-details {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+.area-details li {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--stone);
+  align-items: start;
+}
+.area-details li:last-child { border-bottom: 1px solid var(--stone); }
+.area-details svg {
+  width: 20px;
+  height: 20px;
+  color: var(--forest);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.area-details strong {
+  font-family: var(--font-display);
+  color: var(--navy);
+  display: block;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+.area-details span {
+  font-size: 0.88rem;
+  color: var(--slate);
+  line-height: 1.5;
+}
+
+.area-map {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--navy-deep);
+}
+.area-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(20%) contrast(1.05);
+}
+
+/* ===== FAQ ===== */
+.faq { background: var(--stone); }
+.faq-list {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.faq-item {
+  background: var(--warm-white);
+  border: 1px solid var(--stone);
+  border-radius: 2px;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.faq-item.open { border-color: var(--forest); box-shadow: 0 10px 30px rgba(15, 29, 48, 0.06); }
+
+.faq-question {
+  width: 100%;
+  padding: 1.4rem 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  text-align: left;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--navy);
+  transition: color 0.3s;
+}
+.faq-question:hover { color: var(--forest); }
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  position: relative;
+  transition: transform 0.4s;
+}
+.faq-icon::before,
+.faq-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  background: currentColor;
+  transition: all 0.3s;
+}
+.faq-icon::before { width: 14px; height: 2px; transform: translate(-50%, -50%); }
+.faq-icon::after { width: 2px; height: 14px; transform: translate(-50%, -50%); }
+.faq-item.open .faq-icon { transform: rotate(45deg); color: var(--gold); }
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s var(--ease);
+}
+.faq-answer-inner {
+  padding: 0 1.8rem 1.6rem;
+  font-size: 0.95rem;
+  color: var(--slate);
+  line-height: 1.7;
+}
+
+/* ===== CONTACT ===== */
+.contact { background: var(--warm-white); }
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+.contact-card {
+  padding: 2.5rem 2rem;
+  background: var(--navy);
+  color: var(--warm-white);
+  border-radius: 2px;
+  transition: transform 0.4s;
+}
+.contact-card:hover { transform: translateY(-4px); }
+.contact-card-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--gold);
+  color: var(--navy-deep);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+.contact-card-icon svg { width: 20px; height: 20px; }
+.contact-card h3 {
+  color: var(--warm-white);
+  font-size: 1.15rem;
+  margin-bottom: 0.7rem;
+}
+.contact-card p {
+  font-size: 0.9rem;
+  color: rgba(247, 247, 243, 0.75);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.contact-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.88rem;
+  letter-spacing: 0.03em;
+  transition: color 0.3s;
+}
+.contact-card a:hover { color: var(--warm-white); }
+.contact-card a svg { width: 14px; height: 14px; }
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--navy-deep);
+  color: rgba(247, 247, 243, 0.7);
+  padding: 5rem 0 2rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; } }
+@media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
+
+.footer-brand h4 {
+  color: var(--warm-white);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.footer-brand p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 300px;
+  margin-bottom: 1.2rem;
+}
+.footer-tagline {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  color: var(--gold);
+  font-size: 0.95rem;
+}
+
+.footer-col h5 {
+  color: var(--warm-white);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.7rem; }
+.footer-col a {
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+.footer-col a:hover { color: var(--gold); }
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(247, 247, 243, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.82rem;
+}
+
+/* ===== BACK TO TOP ===== */
+.back-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  background: var(--navy);
+  color: var(--warm-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+  z-index: 500;
+  box-shadow: 0 10px 30px rgba(15, 29, 48, 0.3);
+}
+.back-top.visible { opacity: 1; pointer-events: auto; }
+.back-top:hover { background: var(--gold); color: var(--navy); transform: translateY(-3px); }
+.back-top svg { width: 18px; height: 18px; }
+
+/* ===== SCROLL ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== FOCUS & ACCESSIBILITY ===== */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+button:focus:not(:focus-visible) { outline: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ===== UTILITIES ===== */
+.text-center { text-align: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+</style>
+</head>
+<body>
+
+<!-- Preview Banner -->
+<div class="preview-banner">
+  <strong>Brand Presentation / Relaunch Concept</strong> — Not currently operating as an active business. Awaiting owner confirmation.
+</div>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo" aria-label="Andy Nichols Roofing Home">
+      <span class="nav-logo-mark">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 26 L18 8 L32 26" stroke="#B9A273" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M9 26 L9 30 L27 30 L27 26" stroke="#F7F7F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <line x1="18" y1="18" x2="18" y2="26" stroke="#B9A273" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="nav-logo-text">
+        Andy Nichols
+        <span>Roofing Co.</span>
+      </span>
+    </a>
+    
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#residential" class="nav-link">Residential</a></li>
+      <li><a href="#commercial" class="nav-link">Commercial</a></li>
+      <li><a href="#repairs" class="nav-link">Repairs</a></li>
+      <li><a href="#portfolio" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a href="#estimate" class="nav-cta">Request Estimate</a></li>
+    </ul>
+    
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80" alt="Modern residential home with pitched roofing" loading="eager">
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Houston, Texas · Roofing Contractor</div>
+      <h1>Reliable Roofing.<br><em>Lasting Protection.</em></h1>
+      <p class="hero-sub">Roofing solutions for homes and commercial properties, built around your building's needs, materials and long-term protection.</p>
+      <div class="hero-ctas">
+        <a href="#residential" class="btn btn-primary">
+          Explore Services
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#process" class="btn btn-outline">Our Approach</a>
+      </div>
+      
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Focus</span>
+          <span class="hero-meta-value">Residential & Commercial</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Service Area</span>
+          <span class="hero-meta-value">Houston, TX</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Approach</span>
+          <span class="hero-meta-value">Property-Specific Solutions</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about section-pad" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-stack reveal">
+        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="Illustrative roofing work" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80" alt="Illustrative roofing inspection" loading="lazy">
+      </div>
+      <div class="about-content reveal">
+        <div class="section-eyebrow">About Andy Nichols Roofing</div>
+        <h2>Roofing Solutions Built <em>Around Your Needs.</em></h2>
+        <p>Andy Nichols Roofing has focused on residential and commercial roofing, helping property owners address everything from storm damage and roof repairs to complete re-roofing projects. Every project begins with understanding the property's needs, evaluating the roof and identifying appropriate materials and solutions.</p>
+        <p>Our stated approach is consultative rather than transactional — taking time to discuss property-specific requirements, roofing materials and long-term goals before proposing any work.</p>
+        
+        <ul class="about-principles">
+          <li><span class="about-principles-num">01</span><span class="about-principles-text">Understanding customer requirements before any recommendation.</span></li>
+          <li><span class="about-principles-num">02</span><span class="about-principles-text">Assessing the roof and identifying relevant issues.</span></li>
+          <li><span class="about-principles-num">03</span><span class="about-principles-text">Discussing suitable materials for the property.</span></li>
+          <li><span class="about-principles-num">04</span><span class="about-principles-text">Aligning the project with expectations and goals.</span></li>
+          <li><span class="about-principles-num">05</span><span class="about-principles-text">Focusing on long-lasting, high-quality results.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESIDENTIAL -->
+<section class="services-section residential" id="residential">
+  <div class="container">
+    <div class="service-layout">
+      <div class="service-image-wrap reveal">
+        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=900&q=80" alt="Illustrative residential roofing" loading="lazy">
+      </div>
+      <div class="reveal">
+        <div class="section-header">
+          <div class="section-eyebrow">Residential Roofing</div>
+          <h2>Protecting the Places <em>That Matter Most.</em></h2>
+          <p>From individual roof repairs to complete re-roofing projects, residential roofing solutions should be selected according to the property's condition, requirements and long-term protection goals.</p>
+        </div>
+        
+        <div class="service-list">
+          <div class="service-item">
+            <span class="service-item-num">01</span>
+            <div class="service-item-body">
+              <div class="service-item-title">Roof Replacement</div>
+              <div class="service-item-desc">Complete re-roofing projects when repair is no longer sufficient or when upgrading materials.</div>
+            </div>
+            <div class="service-item-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-item-num">02</span>
+            <div class="service-item-body">
+              <div class="service-item-title">Roof Repairs</div>
+              <div class="service-item-desc">Addressing leaks, damaged shingles, flashing issues and localised deterioration.</div>
+            </div>
+            <div class="service-item-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-item-num">03</span>
+            <div class="service-item-body">
+              <div class="service-item-title">Re-Roofing</div>
+              <div class="service-item-desc">Adding a new layer of roofing over existing materials where structurally appropriate.</div>
+            </div>
+            <div class="service-item-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-item-num">04</span>
+            <div class="service-item-body">
+              <div class="service-item-title">Storm Damage Repairs</div>
+              <div class="service-item-desc">Assessment and repair of damage caused by wind, hail and severe weather.</div>
+            </div>
+            <div class="service-item-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-item-num">05</span>
+            <div class="service-item-body">
+              <div class="service-item-title">Roof Inspections</div>
+              <div class="service-item-desc">Detailed condition assessments for homeowners, prospective buyers or routine maintenance planning.</div>
+            </div>
+            <div class="service-item-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <div class="service-item">
+            <span class="service-item-num">06</span>
+            <div class="service-item-body">
+              <div class="service-item-title">General Maintenance</div>
+              <div class="service-item-desc">Ongoing upkeep to extend the lifespan of existing roofing systems.</div>
+            </div>
+            <div class="service-item-arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMERCIAL -->
+<section class="services-section commercial" id="commercial">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Commercial Roofing</div>
+      <h2>Commercial Roofing.<br><em>Practical Solutions.</em> Professional Results.</h2>
+      <p>Commercial roofing requirements vary significantly by building type, roof structure and materials. Solutions must account for building operations, occupant needs and long-term performance.</p>
+    </div>
+    
+    <div class="commercial-grid reveal">
+      <div class="commercial-card">
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80" alt="Illustrative apartment building" loading="lazy">
+        <div class="commercial-card-content">
+          <h3>Apartments & Multifamily</h3>
+          <p>Roofing solutions for apartment buildings and multifamily properties where tenant safety and building operations are priorities.</p>
+        </div>
+      </div>
+      <div class="commercial-card">
+        <img src="https://images.unsplash.com/photo-1604427229433-7bc6f56ae1dc?auto=format&fit=crop&w=900&q=80" alt="Illustrative religious building" loading="lazy">
+        <div class="commercial-card-content">
+          <h3>Churches & Religious Buildings</h3>
+          <p>Roofing services for churches and institutional properties, addressing the specific architectural and operational needs of congregations.</p>
+        </div>
+      </div>
+      <div class="commercial-card">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80" alt="Illustrative restaurant building" loading="lazy">
+        <div class="commercial-card-content">
+          <h3>Restaurants & Hospitality</h3>
+          <p>Roofing for restaurants and hospitality buildings, scheduled around business operations and customer access requirements.</p>
+        </div>
+      </div>
+      <div class="commercial-card">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80" alt="Illustrative commercial building" loading="lazy">
+        <div class="commercial-card-content">
+          <h3>Commercial Properties</h3>
+          <p>Roofing services for businesses, retail spaces, offices and other commercial buildings throughout the Houston area.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="commercial-services-list reveal">
+      <span>Commercial Roof Repairs</span>
+      <span>Re-Roofing</span>
+      <span>Roof Replacement</span>
+      <span>Storm Damage Assessment</span>
+      <span>Roofing Maintenance</span>
+      <span>Flat Roof Systems</span>
+    </div>
+  </div>
+</section>
+
+<!-- REPAIRS -->
+<section class="services-section repairs" id="repairs">
+  <div class="container">
+    <div class="repairs-layout">
+      <div class="reveal">
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <div class="section-eyebrow">Repairs & Storm Damage</div>
+          <h2>When Your Roof Needs Attention, <em>Start With the Right Assessment.</em></h2>
+          <p>Understanding the extent of damage before choosing between repair and replacement can significantly affect the outcome, cost and longevity of the solution.</p>
+        </div>
+        
+        <ul class="repairs-issues">
+          <li>
+            <div class="issue-icon">01</div>
+            <div class="issue-text">
+              <h4>Roof Leaks</h4>
+              <p>Identifying the source of water intrusion, which is often distant from where the leak appears indoors.</p>
+            </div>
+          </li>
+          <li>
+            <div class="issue-icon">02</div>
+            <div class="issue-text">
+              <h4>Missing or Damaged Shingles</h4>
+              <p>Wind, hail and age can dislodge or break roofing materials, exposing the substrate below.</p>
+            </div>
+          </li>
+          <li>
+            <div class="issue-icon">03</div>
+            <div class="issue-text">
+              <h4>Storm-Related Damage</h4>
+              <p>Hail impacts, wind uplift and debris strikes can cause damage that is not immediately visible.</p>
+            </div>
+          </li>
+          <li>
+            <div class="issue-icon">04</div>
+            <div class="issue-text">
+              <h4>Roof Deterioration</h4>
+              <p>Age-related wear affecting membranes, flashing and structural components over time.</p>
+            </div>
+          </li>
+          <li>
+            <div class="issue-icon">05</div>
+            <div class="issue-text">
+              <h4>Repair vs. Replacement Assessment</h4>
+              <p>Evaluating whether localised repairs are sufficient or whether replacement serves the property better long-term.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="repairs-images reveal">
+        <div>
+          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a3a3a?auto=format&fit=crop&w=700&q=80" alt="Illustrative roofing inspection" loading="lazy">
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1632823471565-1ecdf5c6d7fc?auto=format&fit=crop&w=600&q=80" alt="Illustrative roofing materials" loading="lazy">
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&w=600&q=80" alt="Illustrative roofing work" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS -->
+<section class="services-section materials" id="materials">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Roofing Materials</div>
+      <h2>The Right Materials <em>Make a Difference.</em></h2>
+      <p>Material selection affects durability, performance, appearance and maintenance requirements. The right choice depends on the property's design, climate and long-term goals.</p>
+    </div>
+    
+    <div class="materials-grid reveal">
+      <div class="material-card">
+        <img src="https://images.unsplash.com/photo-1635348729498-da24f49d5bb4?auto=format&fit=crop&w=900&q=80" alt="Asphalt shingle roofing" loading="lazy">
+        <div class="material-card-content">
+          <h3>Asphalt Shingles</h3>
+          <p>The most common residential roofing material, available in varied profiles, colours and performance grades.</p>
+        </div>
+      </div>
+      <div class="material-card">
+        <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&w=900&q=80" alt="Metal roofing" loading="lazy">
+        <div class="material-card-content">
+          <h3>Metal Roofing</h3>
+          <p>Standing seam and metal panel systems valued for longevity, weather resistance and modern aesthetics.</p>
+        </div>
+      </div>
+      <div class="material-card">
+        <img src="https://images.unsplash.com/photo-1617104551722-3b2d51366400?auto=format&fit=crop&w=700&q=80" alt="Flat roofing system" loading="lazy">
+        <div class="material-card-content">
+          <h3>Flat Roofing Systems</h3>
+          <p>Commonly used on commercial buildings and low-slope structures.</p>
+        </div>
+      </div>
+      <div class="material-card">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd24458039d?auto=format&fit=crop&w=700&q=80" alt="Tile roofing" loading="lazy">
+        <div class="material-card-content">
+          <h3>Tile Roofing</h3>
+          <p>Clay and concrete tiles offering distinct architectural character.</p>
+        </div>
+      </div>
+      <div class="material-card">
+        <img src="https://images.unsplash.com/photo-1597511511535-3d5b9f9c3b8a?auto=format&fit=crop&w=700&q=80" alt="Other roofing materials" loading="lazy">
+        <div class="material-card-content">
+          <h3>Specialised Systems</h3>
+          <p>Material selection guided by the specific needs of each property.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="services-section process" id="process">
+  <div class="container">
+    <div class="section-header reveal" style="text-align: center; max-width: 680px; margin: 0 auto 3rem;">
+      <div class="section-eyebrow" style="justify-content: center;">Our Approach</div>
+      <h2>A Clearer Approach <em>to Roofing.</em></h2>
+      <p>From consultation to completion, the process is designed to clarify options, set realistic expectations and deliver work aligned with the property's requirements.</p>
+    </div>
+    
+    <div class="process-steps reveal">
+      <div class="process-step">
+        <div class="process-step-num">01</div>
+        <h3>Understand</h3>
+        <p>Understand the customer's property, roofing requirements and expectations for the work.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">02</div>
+        <h3>Assess</h3>
+        <p>Evaluate the roof and identify relevant issues, structural considerations and requirements.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">03</div>
+        <h3>Recommend</h3>
+        <p>Discuss suitable materials and possible roofing solutions appropriate for the property.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">04</div>
+        <h3>Deliver</h3>
+        <p>Work towards the agreed project requirements and quality expectations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="services-section why">
+  <div class="container">
+    <div class="section-header reveal text-center mx-auto" style="max-width: 680px;">
+      <div class="section-eyebrow" style="justify-content: center;">Why Andy Nichols Roofing</div>
+      <h2>Experience That Starts With <em>Understanding Your Roof.</em></h2>
+    </div>
+    
+    <div class="why-grid reveal">
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3>Residential & Commercial</h3>
+        <p>Experience spanning homes, apartments, churches, restaurants and commercial properties throughout Houston.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+        </div>
+        <h3>Customer-Focused Consultations</h3>
+        <p>Time taken to understand property-specific requirements before proposing any work or materials.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        </div>
+        <h3>Property-Specific Solutions</h3>
+        <p>Recommendations based on the property's condition, structure and long-term protection goals.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Material Selection Guidance</h3>
+        <p>Discussion of appropriate materials based on performance, appearance and property-specific factors.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>Repairs & Re-Roofing</h3>
+        <p>Full service across repairs, maintenance and complete replacement projects as needed.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2-2h-4l-2 2v4h4l2-2h4l2 2h4v-4l-2-2zM12 3v6"/></svg>
+        </div>
+        <h3>Long-Lasting Results</h3>
+        <p>Focus on workmanship and materials that perform over time, not just immediate appearance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="services-section portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Project Portfolio</div>
+      <h2>Roofing Work That <em>Speaks for Itself.</em></h2>
+      <p>A selection of illustrative roofing project imagery representing the types of work the business has focused on.</p>
+    </div>
+    
+    <div class="portfolio-filters reveal">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="residential">Residential</button>
+      <button class="filter-btn" data-filter="commercial">Commercial</button>
+      <button class="filter-btn" data-filter="repairs">Repairs</button>
+      <button class="filter-btn" data-filter="reroofing">Re-Roofing</button>
+      <button class="filter-btn" data-filter="storm">Storm Damage</button>
+    </div>
+    
+    <div class="portfolio-grid reveal" id="portfolioGrid">
+      <div class="portfolio-item" data-category="residential" data-title="Suburban Residence Reroof" data-desc="Complete shingle replacement on a two-storey family home." data-type="Residential" data-material="Architectural Shingles">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=900&q=80" alt="Illustrative residential roof" loading="lazy">
+        <div class="portfolio-overlay">
+          <div class="portfolio-overlay-content">
+            <span class="portfolio-overlay-tag">Residential</span>
+            <div class="portfolio-overlay-title">Suburban Residence Reroof</div>
+            <div class="portfolio-overlay-desc">Architectural shingle replacement</div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item" data-category="commercial" data-title="Apartment Complex Roofing" data-desc="Flat roof maintenance and repair on multifamily property." data-type="Commercial" data-material="Flat Roofing System">
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=700&q=80" alt="Illustrative commercial roof" loading="lazy">
+        <div class="portfolio-overlay">
+          <div class="portfolio-overlay-content">
+            <span class="portfolio-overlay-tag">Commercial</span>
+            <div class="portfolio-overlay-title">Apartment Complex Roofing</div>
+            <div class="portfolio-overlay-desc">Multifamily property work</div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item" data-category="repairs" data-title="Shingle Repair Project" data-desc="Localised repair of damaged asphalt shingles." data-type="Repair" data-material="Asphalt Shingles">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a3a3a?auto=format&fit=crop&w=700&q=80" alt="Illustrative roof repair" loading="lazy">
+        <div class="portfolio-overlay">
+          <div class="portfolio-overlay-content">
+            <span class="portfolio-overlay-tag">Repair</span>
+            <div class="portfolio-overlay-title">Shingle Repair Project</div>
+            <div class="portfolio-overlay-desc">Localised damage repair</div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item" data-category="storm" data-title="Storm Damage Assessment" data-desc="Post-storm evaluation and planned repairs." data-type="Storm Damage" data-material="Assessment">
+        <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&w=1000&q=80" alt="Illustrative storm damage assessment" loading="lazy">
+        <div class="portfolio-overlay">
+          <div class="portfolio-overlay-content">
+            <span class="portfolio-overlay-tag">Storm Damage</span>
+            <div class="portfolio-overlay-title">Storm Damage Assessment</div>
+            <div class="portfolio-overlay-desc">Post-weather evaluation</div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item" data-category="residential" data-title="Modern Home Installation" data-desc="New roofing installation on contemporary residence." data-type="Residential" data-material="Architectural Shingles">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" alt="Illustrative modern home" loading="lazy">
+        <div class="portfolio-overlay">
+          <div class="portfolio-overlay-content">
+            <span class="portfolio-overlay-tag">Residential</span>
+            <div class="portfolio-overlay-title">Modern Home Installation</div>
+            <div class="portfolio-overlay-desc">Contemporary residence roofing</div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item" data-category="commercial" data-title="Commercial Property Maintenance" data-desc="Scheduled maintenance on commercial building." data-type="Commercial" data-material="Flat Roof System">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=700&q=80" alt="Illustrative commercial property" loading="lazy">
+        <div class="portfolio-overlay">
+          <div class="portfolio-overlay-content">
+            <span class="portfolio-overlay-tag">Commercial</span>
+            <div class="portfolio-overlay-title">Commercial Property Maintenance</div>
+            <div class="portfolio-overlay-desc">Routine upkeep project</div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item" data-category="reroofing" data-title="Full Re-Roofing Project" data-desc="Complete tear-off and replacement." data-type="Re-Roofing" data-material="Architectural Shingles">
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=700&q=80" alt="Illustrative re-roofing" loading="lazy">
+        <div class="portfolio-overlay">
+          <div class="portfolio-overlay-content">
+            <span class="portfolio-overlay-tag">Re-Roofing</span>
+            <div class="portfolio-overlay-title">Full Re-Roofing Project</div>
+            <div class="portfolio-overlay-desc">Complete replacement work</div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item" data-category="residential" data-title="Craftsman Home Roofing" data-desc="Roofing work on traditional craftsman-style residence." data-type="Residential" data-material="Asphalt Shingles">
+        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=700&q=80" alt="Illustrative craftsman home" loading="lazy">
+        <div class="portfolio-overlay">
+          <div class="portfolio-overlay-content">
+            <span class="portfolio-overlay-tag">Residential</span>
+            <div class="portfolio-overlay-title">Craftsman Home Roofing</div>
+            <div class="portfolio-overlay-desc">Traditional architecture roofing</div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item" data-category="commercial" data-title="Religious Building Services" data-desc="Roofing services for institutional property." data-type="Commercial" data-material="Mixed Materials">
+        <img src="https://images.unsplash.com/photo-1604427229433-7bc6f25118c8?auto=format&fit=crop&w=700&q=80" alt="Illustrative religious building" loading="lazy">
+        <div class="portfolio-overlay">
+          <div class="portfolio-overlay-content">
+            <span class="portfolio-overlay-tag">Commercial</span>
+            <div class="portfolio-overlay-title">Religious Building Services</div>
+            <div class="portfolio-overlay-desc">Institutional roofing work</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTIMATE -->
+<section class="services-section estimate" id="estimate">
+  <div class="container">
+    <div class="estimate-inner">
+      <div class="estimate-info reveal">
+        <div class="section-eyebrow" style="color: var(--gold);">Roofing Consultation</div>
+        <h2>Let's Understand <em>Your Roofing Needs.</em></h2>
+        <p>Share the details of your property and roofing concern. A consultation would aim to understand your requirements before any recommendation is made.</p>
+        
+        <div class="estimate-preview-notice">
+          <strong>Preview Interface</strong>
+          This form is displayed as a brand presentation. Enquiries will not be transmitted until the business owner confirms operational status and authorises a live enquiry channel.
+        </div>
+        
+        <ul class="estimate-contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6"/></svg>
+            <span>andynicholsroofing@gmail.com</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0zM12 7a3 3 0 100 6 3 3 0 000-6z"/></svg>
+            <span>1617 Monarch Oaks St, Houston, TX 77055</span>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="estimate-form-wrap reveal">
+        <div class="form-disabled-overlay">
+          <span>Preview Mode · Awaiting Business Reopen Confirmation</span>
+        </div>
+        
+        <form id="estimateForm" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fullName">Full Name <span class="required">*</span></label>
+              <input type="text" id="fullName" name="fullName" required autocomplete="name" disabled>
+              <span class="error-msg">Please enter your full name.</span>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone Number <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" disabled>
+              <span class="error-msg">Please enter a valid phone number.</span>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" disabled>
+              <span class="error-msg">Please enter a valid email address.</span>
+            </div>
+            <div class="form-field">
+              <label for="zip">Property ZIP Code <span class="required">*</span></label>
+              <input type="text" id="zip" name="zip" required inputmode="numeric" pattern="[0-9]{5}" maxlength="5" disabled>
+              <span class="error-msg">Please enter a valid 5-digit ZIP code.</span>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-field">
+              <label for="propertyType">Property Type <span class="required">*</span></label>
+              <select id="propertyType" name="propertyType" required disabled>
+                <option value="">Select property type</option>
+                <option>Residential Home</option>
+                <option>Apartment / Multifamily</option>
+                <option>Church / Religious Building</option>
+                <option>Restaurant</option>
+                <option>Commercial Property</option>
+                <option>Other</option>
+              </select>
+              <span class="error-msg">Please select a property type.</span>
+            </div>
+            <div class="form-field">
+              <label for="service">Service Required <span class="required">*</span></label>
+              <select id="service" name="service" required disabled>
+                <option value="">Select service</option>
+                <option>Roof Inspection</option>
+                <option>Roof Repair</option>
+                <option>Roof Replacement</option>
+                <option>Re-Roofing</option>
+                <option>Storm Damage Assessment</option>
+                <option>Commercial Roofing</option>
+                <option>Roofing Maintenance</option>
+                <option>Other</option>
+              </select>
+              <span class="error-msg">Please select a service.</span>
+            </div>
+          </div>
+          
+          <div class="form-field">
+            <label for="description">Brief Description of the Roofing Issue</label>
+            <textarea id="description" name="description" rows="4" disabled></textarea>
+          </div>
+          
+          <div class="form-field">
+            <label for="contactMethod">Preferred Contact Method <span class="required">*</span></label>
+            <select id="contactMethod" name="contactMethod" required disabled>
+              <option value="">Select method</option>
+              <option>Email</option>
+              <option>Phone</option>
+              <option>Either</option>
+            </select>
+            <span class="error-msg">Please select a contact method.</span>
+          </div>
+          
+          <div class="form-submit">
+            <button type="submit" class="form-submit-btn" disabled>Submit Estimate Enquiry</button>
+            <div class="form-status" id="formStatus"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="services-section area">
+  <div class="container">
+    <div class="area-grid">
+      <div class="area-info reveal">
+        <div class="section-eyebrow">Service Area</div>
+        <h2>Serving Houston <em>Property Owners.</em></h2>
+        <p>Based in Houston, Texas, with a focus on residential and commercial properties within the Houston service area.</p>
+        
+        <ul class="area-details">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0zM12 7a3 3 0 100 6 3 3 0 000-6z"/></svg>
+            <div>
+              <strong>Business Address</strong>
+              <span>1617 Monarch Oaks St, Houston, TX 77055, United States</span>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6"/></svg>
+            <div>
+              <strong>Email</strong>
+              <span>andynicholsroofing@gmail.com</span>
+            </div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div>
+              <strong>Service Area</strong>
+              <span>Houston, Texas. Additional areas subject to verification.</span>
+            </div>
+          </li>
+        </ul>
+        
+        <a href="https://www.google.com/maps/dir/?api=1&destination=1617+Monarch+Oaks+St+Houston+TX+77055" target="_blank" rel="noopener" class="btn btn-dark">
+          Get Directions
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+      
+      <div class="area-map reveal">
+        <iframe 
+          src="https://www.google.com/maps?q=1617+Monarch+Oaks+St,+Houston,+TX+77055&output=embed"
+          loading="lazy"
+          title="Andy Nichols Roofing Location Map"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="services-section faq">
+  <div class="container">
+    <div class="section-header text-center mx-auto reveal" style="max-width: 680px;">
+      <div class="section-eyebrow" style="justify-content: center;">Frequently Asked Questions</div>
+      <h2>Answers to <em>Common Questions.</em></h2>
+    </div>
+    
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What roofing services does Andy Nichols Roofing offer?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">The stated focus includes residential and commercial roofing, roof repairs, re-roofing, roof replacement, storm damage assessment and general roofing maintenance. Specific services offered would depend on the business's authorised scope at any given time.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Does the company handle residential and commercial roofing?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">The business description references both residential and commercial roofing. The approach described is consultative, aiming to understand property-specific requirements before recommending solutions.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Does the company work with apartments and multifamily properties?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Apartments and multifamily properties are specifically referenced as a customer category the business has engaged with. Work on such properties typically requires coordination with building management and consideration of tenant impact.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Can churches and restaurants enquire about roofing services?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Churches and restaurants are mentioned as recognised customer categories. However, the business's current operational status is unconfirmed, so active enquiry channels are not available until the owner confirms business reopening.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Does the company provide roof repair services?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Roof repairs are referenced as part of the business's stated service focus, alongside replacement and re-roofing. Assessment of whether repair or replacement is more appropriate is part of the described approach.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>Does the company handle storm damage?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Storm damage assessment is referenced as a service area. The described approach involves evaluating damage before determining whether repair or replacement is the appropriate response.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>What happens during a roofing consultation?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">The described approach begins with understanding the customer's property and expectations, followed by assessment of the roof, discussion of suitable materials and alignment with project goals before any work is proposed.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How are roofing materials selected?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Material selection is described as a discussion based on the property's condition, design, performance requirements and long-term goals, rather than a single default recommendation.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>How can I contact Andy Nichols Roofing?</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">The supplied contact email is andynicholsroofing@gmail.com and the listed address is 1617 Monarch Oaks St, Houston, TX 77055. As this page is a brand presentation awaiting owner confirmation, active customer acquisition is not currently enabled.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="services-section contact" id="contact">
+  <div class="container">
+    <div class="section-header text-center mx-auto reveal" style="max-width: 680px;">
+      <div class="section-eyebrow" style="justify-content: center;">Get In Touch</div>
+      <h2>Contact <em>Andy Nichols Roofing.</em></h2>
+      <p>For information about the business, service area or general enquiries.</p>
+    </div>
+    
+    <div class="contact-grid reveal">
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6"/></svg>
+        </div>
+        <h3>Email</h3>
+        <p>The supplied business contact email.</p>
+        <a href="mailto:andynicholsroofing@gmail.com">
+          andynicholsroofing@gmail.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0zM12 7a3 3 0 100 6 3 3 0 000-6z"/></svg>
+        </div>
+        <h3>Location</h3>
+        <p>Based in Houston, Texas.</p>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=1617+Monarch+Oaks+St+Houston+TX+77055" target="_blank" rel="noopener">
+          1617 Monarch Oaks St, Houston, TX 77055
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Services</h3>
+        <p>Return to roofing service information.</p>
+        <a href="#residential">
+          View Services
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 26 L18 8 L32 26" stroke="#B9A273" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M9 26 L9 30 L27 30 L27 26" stroke="#F7F7F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <line x1="18" y1="18" x2="18" y2="26" stroke="#B9A273" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          Andy Nichols Roofing
+        </h4>
+        <p>Houston, Texas-based roofing contractor focused on residential and commercial roofing solutions built around each property's needs.</p>
+        <div class="footer-tagline">Protecting Properties From the Top Down.</div>
+      </div>
+      
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#residential">Residential Roofing</a></li>
+          <li><a href="#commercial">Commercial Roofing</a></li>
+          <li><a href="#repairs">Roof Repairs</a></li>
+          <li><a href="#materials">Roofing Materials</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#process">Our Approach</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#estimate">Request Estimate</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:andynicholsroofing@gmail.com">andynicholsroofing@gmail.com</a></li>
+          <li>1617 Monarch Oaks St</li>
+          <li>Houston, TX 77055</li>
+          <li>United States</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div>© <span id="year"></span> Andy Nichols Roofing. Brand presentation / relaunch concept. All rights reserved.</div>
+      <div>Reliable Roofing. Lasting Protection.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="lightbox-image">
+      <img id="lightboxImage" src="" alt="">
+    </div>
+    <div class="lightbox-content">
+      <span class="lightbox-tag" id="lightboxTag"></span>
+      <h3 class="lightbox-title" id="lightboxTitle"></h3>
+      <p class="lightbox-desc" id="lightboxDesc"></p>
+      
+      <div class="lightbox-meta">
+        <div class="lightbox-meta-item">
+          <div class="lightbox-meta-item-label">Project Type</div>
+          <div class="lightbox-meta-item-value" id="lightboxType"></div>
+        </div>
+        <div class="lightbox-meta-item">
+          <div class="lightbox-meta-item-label">Materials</div>
+          <div class="lightbox-meta-item-value" id="lightboxMaterial"></div>
+        </div>
+      </div>
+      
+      <div class="lightbox-nav">
+        <button id="lightboxPrev">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Previous
+        </button>
+        <button id="lightboxNext">
+          Next
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ===== YEAR =====
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===== STICKY NAV =====
+  const nav = document.getElementById('nav');
+  const handleScroll = () => {
+    if (window.scrollY > 50) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+
+  // ===== MOBILE MENU =====
+  const mobileToggle = document.getElementById('mobileToggle');
+  const navLinks = document.getElementById('navLinks');
+  mobileToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    mobileToggle.classList.toggle('active');
+    mobileToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      mobileToggle.classList.remove('active');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ===== ACTIVE LINK ON SCROLL =====
+  const sections = document.querySelectorAll('section[id]');
+  const navLinkEls = document.querySelectorAll('.nav-link');
+  const updateActiveLink = () => {
+    let current = 'home';
+    sections.forEach(sec => {
+      const top = sec.offsetTop - 120;
+      if (window.scrollY >= top) current = sec.getAttribute('id');
+    });
+    navLinkEls.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+  };
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+
+  // ===== SCROLL REVEAL =====
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  revealEls.forEach(el => observer.observe(el));
+
+  // ===== PORTFOLIO FILTER =====
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      portfolioItems.forEach(item => {
+        if (filter === 'all' || item.dataset.category === filter) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // ===== LIGHTBOX =====
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const lightboxTitle = document.getElementById('lightboxTitle');
+  const lightboxDesc = document.getElementById('lightboxDesc');
+  const lightboxTag = document.getElementById('lightboxTag');
+  const lightboxType = document.getElementById('lightboxType');
+  const lightboxMaterial = document.getElementById('lightboxMaterial');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+  let currentIndex = 0;
+  let visibleItems = [];
+
+  const openLightbox = (index) => {
+    visibleItems = Array.from(portfolioItems).filter(i => !i.classList.contains('hidden'));
+    currentIndex = index;
+    updateLightbox();
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const updateLightbox = () => {
+    const item = visibleItems[currentIndex];
+    if (!item) return;
+    const img = item.querySelector('img');
+    lightboxImage.src = img.src;
+    lightboxImage.alt = img.alt;
+    lightboxTitle.textContent = item.dataset.title;
+    lightboxDesc.textContent = item.dataset.desc;
+    lightboxTag.textContent = item.dataset.category.toUpperCase();
+    lightboxType.textContent = item.dataset.type;
+    lightboxMaterial.textContent = item.dataset.material;
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  portfolioItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const visible = Array.from(portfolioItems).filter(i => !i.classList.contains('hidden'));
+      const index = visible.indexOf(item);
+      openLightbox(index);
+    });
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  lightboxPrev.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+    updateLightbox();
+  });
+  lightboxNext.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % visibleItems.length;
+    updateLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxPrev.click();
+    if (e.key === 'ArrowRight') lightboxNext.click();
+  });
+
+  // ===== FAQ ACCORDION =====
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const answer = item.querySelector('.faq-answer');
+      const isOpen = item.classList.contains('open');
+      
+      document.querySelectorAll('.faq-item').forEach(other => {
+        other.classList.remove('open');
+        other.querySelector('.faq-answer').style.maxHeight = null;
+        other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // ===== FORM VALIDATION =====
+  const form = document.getElementById('estimateForm');
+  const formStatus = document.getElementById('formStatus');
+  
+  const validators = {
+    fullName: (v) => v.trim().length >= 2,
+    phone: (v) => /^[\d\s\-\+\(\)]{7,20}$/.test(v.trim()),
+    email: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+    zip: (v) => /^\d{5}$/.test(v.trim()),
+    propertyType: (v) => v !== '',
+    service: (v) => v !== '',
+    contactMethod: (v) => v !== ''
+  };
+  
+  const validateField = (field) => {
+    const validator = validators[field.id];
+    if (!validator) return true;
+    const isValid = validator(field.value);
+    const parent = field.closest('.form-field');
+    parent.classList.toggle('error', !isValid);
+    return isValid;
+  };
+
+  // Form is disabled — but wire up validation logic for preview
+  // No submission occurs because business is not active
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    formStatus.className = 'form-status success';
+    formStatus.textContent = 'Preview: Form validation would trigger submission to the owner-authorised channel once the business reopens.';
+  });
+
+  // ===== BACK TO TOP =====
+  const backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) backTop.classList.add('visible');
+    else backTop.classList.remove('visible');
+  }, { passive: true });
+  backTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ===== SMOOTH SCROLL POLYFILL =====
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#' || href.length < 2) return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const offset = 70;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
