@@ -1,0 +1,2065 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kshana Coffee — Find Your Moment | Café Near Durgam Cheruvu, Madhapur, Hyderabad</title>
+<meta name="description" content="Kshana Coffee — a contemporary café near Durgam Cheruvu, Madhapur, Hyderabad. Specialty coffee, thoughtful food, and a space to slow down. Reserve a table today." />
+<meta name="keywords" content="Kshana Coffee, Kshana Coffee Hyderabad, cafés in Madhapur, coffee shops near Durgam Cheruvu, cafés in Hyderabad, coffee and food near Durgam Cheruvu" />
+<meta name="theme-color" content="#49352B" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Kshana Coffee — Find Your Moment. Find Your Kshana." />
+<meta property="og:description" content="A contemporary café near Durgam Cheruvu, Madhapur. Good coffee, thoughtful food, and a space to slow down." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_IN" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Kshana Coffee",
+  "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200",
+  "description": "A contemporary café near Durgam Cheruvu, Madhapur, Hyderabad — specialty coffee, thoughtful food, and a space to slow down.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plot 6/A, Survey No. 62, Durgam Cheruvu Road, opposite Durgam Cheruvu, Doctor's Colony, Madhapur",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "500081",
+    "addressCountry": "IN"
+  },
+  "telephone": "+918827656947",
+  "priceRange": "₹₹",
+  "servesCuisine": ["Coffee", "Continental", "Café"],
+  "url": "https://kshanacoffee.example"
+}
+</script>
+
+<style>
+/* =========================
+   RESET & BASE
+   ========================= */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+:root{
+  --coffee:#49352B;
+  --cream:#F5F0E6;
+  --sage:#929A7E;
+  --espresso:#25221F;
+  --taupe:#B5A38E;
+  --brass:#B49A70;
+  --white:#FFFFFF;
+  --serif:'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --shadow-sm:0 2px 10px rgba(37,34,31,.06);
+  --shadow-md:0 10px 40px rgba(37,34,31,.12);
+  --shadow-lg:0 30px 80px rgba(37,34,31,.22);
+}
+body{
+  font-family:var(--sans);
+  color:var(--espresso);
+  background:var(--cream);
+  line-height:1.6;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,select,textarea{font-family:inherit;font-size:1rem}
+::selection{background:var(--coffee);color:var(--cream)}
+
+/* Focus */
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:2px}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+
+/* =========================
+   TYPOGRAPHY
+   ========================= */
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.1;color:var(--espresso)}
+.eyebrow{
+  font-family:var(--sans);
+  font-size:.72rem;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:var(--brass);
+  font-weight:500;
+  display:inline-flex;
+  align-items:center;
+  gap:.8rem;
+}
+.eyebrow::before{content:"";width:32px;height:1px;background:var(--brass);display:inline-block}
+
+/* =========================
+   LAYOUT
+   ========================= */
+.container{width:100%;max-width:1320px;margin:0 auto;padding:0 2rem}
+@media (max-width:640px){.container{padding:0 1.25rem}}
+section{padding:7rem 0;position:relative}
+@media (max-width:768px){section{padding:4.5rem 0}}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1.5rem 0;
+  transition:all .5s var(--ease);
+  background:transparent;
+}
+.nav.scrolled{
+  background:rgba(245,240,230,.96);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  padding:1rem 0;
+  box-shadow:0 1px 0 rgba(73,53,43,.08);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.logo{
+  font-family:var(--serif);
+  font-size:1.6rem;
+  font-weight:500;
+  letter-spacing:.02em;
+  color:var(--cream);
+  transition:color .4s var(--ease);
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+.logo small{
+  font-family:var(--sans);
+  font-size:.58rem;
+  letter-spacing:.4em;
+  text-transform:uppercase;
+  opacity:.7;
+  margin-top:.35rem;
+  font-weight:400;
+}
+.nav.scrolled .logo{color:var(--coffee)}
+.nav-links{display:flex;align-items:center;gap:2.2rem;list-style:none}
+.nav-links a{
+  font-size:.82rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--cream);
+  font-weight:500;
+  position:relative;
+  padding:.4rem 0;
+  transition:color .3s var(--ease);
+}
+.nav.scrolled .nav-links a{color:var(--coffee)}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:0;width:0;height:1px;
+  background:var(--brass);transition:width .4s var(--ease);
+}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{
+  background:var(--brass);
+  color:var(--espresso);
+  padding:.85rem 1.6rem;
+  font-size:.75rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:600;
+  border-radius:2px;
+  transition:all .3s var(--ease);
+  white-space:nowrap;
+}
+.nav-cta:hover{background:var(--coffee);color:var(--cream)}
+.menu-toggle{display:none;width:32px;height:32px;position:relative;z-index:110}
+.menu-toggle span{
+  display:block;width:24px;height:1.5px;background:var(--cream);
+  margin:6px auto;transition:all .4s var(--ease);
+}
+.nav.scrolled .menu-toggle span{background:var(--coffee)}
+.menu-toggle.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg);background:var(--cream)}
+.menu-toggle.open span:nth-child(2){opacity:0}
+.menu-toggle.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);background:var(--cream)}
+
+@media (max-width:1024px){
+  .nav-links{
+    position:fixed;top:0;right:-100%;width:min(85%,380px);height:100vh;
+    background:var(--coffee);flex-direction:column;justify-content:center;
+    gap:2.2rem;padding:3rem;transition:right .5s var(--ease);
+    box-shadow:var(--shadow-lg);
+  }
+  .nav-links.open{right:0}
+  .nav-links a{color:var(--cream)!important;font-size:1rem}
+  .nav-cta{display:none}
+  .menu-toggle{display:block}
+}
+
+/* =========================
+   HERO
+   ========================= */
+.hero{
+  height:100vh;min-height:680px;
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--cream);
+  padding:0;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1920&q=85');
+  background-size:cover;background-position:center;
+  transform:scale(1.05);
+  will-change:transform;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(37,34,31,.35) 0%,rgba(37,34,31,.55) 60%,rgba(37,34,31,.85) 100%);
+}
+.hero-content{
+  position:relative;z-index:2;
+  text-align:center;
+  max-width:900px;padding:0 2rem;
+}
+.hero .eyebrow{color:var(--brass);justify-content:center;margin-bottom:1.5rem}
+.hero .eyebrow::before{background:var(--brass)}
+.hero h1{
+  font-size:clamp(2.8rem,7vw,5.6rem);
+  color:var(--cream);
+  font-weight:400;
+  line-height:1.05;
+  letter-spacing:-.02em;
+  margin-bottom:1.8rem;
+  font-style:italic;
+}
+.hero h1 em{font-style:normal;color:var(--brass)}
+.hero p{
+  font-size:clamp(1rem,1.3vw,1.2rem);
+  max-width:600px;margin:0 auto 2.8rem;
+  color:rgba(245,240,230,.88);
+  font-weight:300;
+  line-height:1.7;
+}
+.hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:1.05rem 2.2rem;
+  font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+  font-weight:600;
+  border-radius:2px;
+  transition:all .35s var(--ease);
+  cursor:pointer;
+}
+.btn-primary{background:var(--brass);color:var(--espresso)}
+.btn-primary:hover{background:var(--cream);color:var(--coffee);transform:translateY(-2px)}
+.btn-outline{border:1px solid rgba(245,240,230,.5);color:var(--cream)}
+.btn-outline:hover{background:var(--cream);color:var(--coffee);border-color:var(--cream)}
+.btn-dark{background:var(--coffee);color:var(--cream)}
+.btn-dark:hover{background:var(--espresso);transform:translateY(-2px)}
+
+.scroll-indicator{
+  position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);
+  z-index:2;display:flex;flex-direction:column;align-items:center;gap:.8rem;
+  color:var(--cream);
+}
+.scroll-indicator span{font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;opacity:.7}
+.scroll-indicator .line{
+  width:1px;height:40px;background:rgba(245,240,230,.4);position:relative;overflow:hidden;
+}
+.scroll-indicator .line::after{
+  content:"";position:absolute;top:-40px;left:0;width:100%;height:40px;
+  background:var(--brass);
+  animation:scrollLine 2.4s infinite var(--ease);
+}
+@keyframes scrollLine{0%{top:-40px}100%{top:40px}}
+
+/* Reveal animations */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.15s}
+.reveal-delay-2{transition-delay:.3s}
+.reveal-delay-3{transition-delay:.45s}
+
+/* =========================
+   SECTION HEADERS
+   ========================= */
+.section-head{text-align:center;max-width:720px;margin:0 auto 4rem}
+.section-head .eyebrow{margin-bottom:1.2rem;justify-content:center}
+.section-head h2{
+  font-size:clamp(2.2rem,4.5vw,3.6rem);
+  font-weight:400;
+  line-height:1.1;
+  letter-spacing:-.01em;
+  margin-bottom:1.2rem;
+}
+.section-head h2 em{font-style:italic;color:var(--brass)}
+.section-head p{color:var(--coffee);opacity:.75;font-size:1.05rem;line-height:1.7}
+
+/* =========================
+   OUR STORY
+   ========================= */
+.story{background:var(--cream)}
+.story-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;
+}
+.story-img{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:2px}
+.story-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.story-img:hover img{transform:scale(1.04)}
+.story-img::after{
+  content:"";position:absolute;inset:0;
+  box-shadow:inset 0 0 0 1px rgba(180,154,112,.2);
+  pointer-events:none;
+}
+.story-text h2{font-size:clamp(2rem,3.5vw,3rem);margin-bottom:1.5rem;line-height:1.15}
+.story-text h2 em{font-style:italic;color:var(--brass)}
+.story-text p{margin-bottom:1.2rem;color:var(--coffee);opacity:.8;font-size:1.02rem;line-height:1.8}
+.story-signature{
+  margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(73,53,43,.15);
+  font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--coffee);
+}
+@media (max-width:900px){.story-grid{grid-template-columns:1fr;gap:3rem}}
+
+/* =========================
+   COFFEE MENU
+   ========================= */
+.coffee-section{background:var(--coffee);color:var(--cream);position:relative;overflow:hidden}
+.coffee-section::before{
+  content:"";position:absolute;top:-100px;right:-100px;width:500px;height:500px;
+  background:radial-gradient(circle,rgba(180,154,112,.08) 0%,transparent 70%);
+  pointer-events:none;
+}
+.coffee-section .section-head h2{color:var(--cream)}
+.coffee-section .section-head h2 em{color:var(--brass)}
+.coffee-section .section-head p{color:rgba(245,240,230,.7)}
+.coffee-section .eyebrow{color:var(--brass)}
+
+.menu-controls{
+  display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;align-items:center;
+  margin-bottom:3rem;
+}
+.filter-group{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+.filter-btn{
+  padding:.6rem 1.3rem;
+  font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;
+  font-weight:500;
+  border:1px solid rgba(245,240,230,.2);
+  color:rgba(245,240,230,.8);
+  border-radius:40px;
+  transition:all .3s var(--ease);
+  background:transparent;
+}
+.filter-btn:hover{border-color:var(--brass);color:var(--brass)}
+.filter-btn.active{background:var(--brass);color:var(--espresso);border-color:var(--brass)}
+
+.search-wrap{
+  position:relative;width:100%;max-width:320px;
+}
+.search-wrap input{
+  width:100%;padding:.85rem 1.2rem .85rem 2.8rem;
+  background:rgba(245,240,230,.08);
+  border:1px solid rgba(245,240,230,.2);
+  color:var(--cream);
+  border-radius:40px;
+  font-size:.88rem;
+  transition:all .3s var(--ease);
+}
+.search-wrap input::placeholder{color:rgba(245,240,230,.5)}
+.search-wrap input:focus{outline:none;border-color:var(--brass);background:rgba(245,240,230,.12)}
+.search-wrap svg{position:absolute;left:1rem;top:50%;transform:translateY(-50%);opacity:.6}
+
+.menu-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:1.5rem;
+}
+.menu-card{
+  background:rgba(245,240,230,.04);
+  border:1px solid rgba(245,240,230,.08);
+  border-radius:4px;
+  overflow:hidden;
+  transition:all .4s var(--ease);
+  cursor:pointer;
+  display:flex;flex-direction:column;
+}
+.menu-card:hover{
+  background:rgba(245,240,230,.08);
+  transform:translateY(-4px);
+  border-color:rgba(180,154,112,.4);
+}
+.menu-card-img{
+  aspect-ratio:16/10;overflow:hidden;position:relative;
+  background:rgba(245,240,230,.05);
+}
+.menu-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.menu-card:hover .menu-card-img img{transform:scale(1.06)}
+.menu-card-badge{
+  position:absolute;top:1rem;left:1rem;
+  background:var(--brass);color:var(--espresso);
+  font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;
+  padding:.35rem .7rem;border-radius:2px;font-weight:600;
+}
+.menu-card-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+.menu-card-cat{
+  font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--brass);margin-bottom:.6rem;font-weight:500;
+}
+.menu-card h3{
+  font-family:var(--serif);font-size:1.5rem;font-weight:500;
+  color:var(--cream);margin-bottom:.6rem;line-height:1.2;
+}
+.menu-card-desc{
+  font-size:.88rem;color:rgba(245,240,230,.65);line-height:1.6;
+  margin-bottom:1.2rem;flex:1;
+}
+.menu-card-foot{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:1rem;border-top:1px solid rgba(245,240,230,.1);
+}
+.menu-card-price{font-family:var(--serif);font-size:1.4rem;color:var(--brass);font-weight:500}
+.menu-card-more{
+  font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(245,240,230,.6);display:flex;align-items:center;gap:.4rem;
+  transition:color .3s var(--ease);
+}
+.menu-card:hover .menu-card-more{color:var(--brass)}
+
+.empty-state{
+  grid-column:1/-1;text-align:center;padding:4rem 1rem;
+  color:rgba(245,240,230,.6);font-style:italic;
+}
+
+/* =========================
+   FOOD MENU
+   ========================= */
+.food-section{background:var(--cream)}
+.food-section .menu-card{
+  background:var(--white);
+  border:1px solid rgba(73,53,43,.08);
+  box-shadow:var(--shadow-sm);
+}
+.food-section .menu-card:hover{
+  background:var(--white);
+  box-shadow:var(--shadow-md);
+  border-color:var(--brass);
+}
+.food-section .menu-card h3{color:var(--espresso)}
+.food-section .menu-card-desc{color:var(--coffee);opacity:.7}
+.food-section .menu-card-price{color:var(--coffee)}
+.food-section .menu-card-more{color:var(--coffee);opacity:.5}
+.food-section .menu-card:hover .menu-card-more{color:var(--brass)}
+.food-section .menu-card-cat{color:var(--brass)}
+.food-section .menu-card-foot{border-top-color:rgba(73,53,43,.08)}
+.food-section .filter-btn{
+  border-color:rgba(73,53,43,.2);color:var(--coffee);
+}
+.food-section .filter-btn:hover{border-color:var(--brass);color:var(--brass)}
+.food-section .filter-btn.active{background:var(--coffee);color:var(--cream);border-color:var(--coffee)}
+.food-section .search-wrap input{
+  background:var(--white);border-color:rgba(73,53,43,.15);color:var(--espresso);
+}
+.food-section .search-wrap input::placeholder{color:var(--coffee);opacity:.5}
+.food-section .search-wrap svg{color:var(--coffee)}
+.food-section .empty-state{color:var(--coffee);opacity:.6}
+
+.diet-badge{
+  display:inline-flex;align-items:center;gap:.3rem;
+  font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--sage);font-weight:600;margin-top:.4rem;
+}
+.diet-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--sage)}
+.diet-badge.non-veg .dot{background:#a0522d}
+.diet-badge.non-veg{color:#a0522d}
+
+/* =========================
+   SIGNATURE FAVOURITES
+   ========================= */
+.signature{background:var(--espresso);color:var(--cream);overflow:hidden}
+.signature .section-head h2{color:var(--cream)}
+.signature .section-head h2 em{color:var(--brass)}
+.signature .section-head p{color:rgba(245,240,230,.7)}
+.sig-grid{
+  display:grid;grid-template-columns:repeat(12,1fr);gap:1.5rem;
+}
+.sig-item{
+  position:relative;overflow:hidden;border-radius:2px;
+  aspect-ratio:4/5;cursor:pointer;
+}
+.sig-item:nth-child(1){grid-column:span 5;aspect-ratio:4/5}
+.sig-item:nth-child(2){grid-column:span 4;aspect-ratio:3/4;margin-top:3rem}
+.sig-item:nth-child(3){grid-column:span 3;aspect-ratio:3/5}
+.sig-item:nth-child(4){grid-column:span 4;aspect-ratio:3/4}
+.sig-item:nth-child(5){grid-column:span 5;aspect-ratio:4/5;margin-top:-2rem}
+.sig-item:nth-child(6){grid-column:span 3;aspect-ratio:3/5;margin-top:1rem}
+.sig-item img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.sig-item:hover img{transform:scale(1.06)}
+.sig-item::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 50%,rgba(37,34,31,.85) 100%);
+}
+.sig-item-info{
+  position:absolute;bottom:0;left:0;right:0;padding:1.5rem;z-index:2;
+}
+.sig-item-info span{
+  font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--brass);font-weight:500;
+}
+.sig-item-info h4{
+  font-family:var(--serif);font-size:1.5rem;color:var(--cream);
+  margin-top:.4rem;font-weight:500;line-height:1.2;
+}
+@media (max-width:900px){
+  .sig-grid{grid-template-columns:1fr 1fr;gap:1rem}
+  .sig-item,.sig-item:nth-child(n){grid-column:span 1;margin-top:0;aspect-ratio:3/4}
+  .sig-item:nth-child(6){grid-column:span 2;aspect-ratio:16/9}
+}
+
+/* =========================
+   THE SPACE
+   ========================= */
+.space{background:var(--cream)}
+.space-hero{
+  position:relative;aspect-ratio:21/9;overflow:hidden;border-radius:2px;
+  margin-bottom:3rem;
+}
+.space-hero img{width:100%;height:100%;object-fit:cover}
+.space-hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(37,34,31,.7) 100%);
+}
+.space-hero-text{
+  position:absolute;bottom:2.5rem;left:2.5rem;right:2.5rem;z-index:2;color:var(--cream);
+}
+.space-hero-text h3{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;line-height:1.15}
+.space-hero-text h3 em{color:var(--brass);font-style:italic}
+.space-grid{
+  display:grid;grid-template-columns:repeat(12,1fr);gap:1.5rem;
+}
+.space-card{
+  position:relative;overflow:hidden;border-radius:2px;
+}
+.space-card:nth-child(1){grid-column:span 7;aspect-ratio:16/10}
+.space-card:nth-child(2){grid-column:span 5;aspect-ratio:4/5}
+.space-card:nth-child(3){grid-column:span 4;aspect-ratio:4/5}
+.space-card:nth-child(4){grid-column:span 4;aspect-ratio:4/5}
+.space-card:nth-child(5){grid-column:span 4;aspect-ratio:4/5}
+.space-card img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.space-card:hover img{transform:scale(1.04)}
+.space-card-text{
+  position:absolute;bottom:0;left:0;right:0;padding:1.5rem;z-index:2;
+  background:linear-gradient(180deg,transparent,rgba(37,34,31,.8));
+  color:var(--cream);
+}
+.space-card-text h4{font-size:1.3rem;font-weight:500;margin-bottom:.3rem}
+.space-card-text p{font-size:.85rem;opacity:.85}
+@media (max-width:900px){
+  .space-grid{grid-template-columns:1fr}
+  .space-card,.space-card:nth-child(n){grid-column:span 1;aspect-ratio:4/3}
+  .space-hero{aspect-ratio:4/3}
+  .space-hero-text{left:1.5rem;right:1.5rem;bottom:1.5rem}
+}
+
+/* =========================
+   COFFEE CULTURE
+   ========================= */
+.culture{background:var(--coffee);color:var(--cream);position:relative;overflow:hidden}
+.culture .section-head h2{color:var(--cream)}
+.culture .section-head h2 em{color:var(--brass)}
+.culture .section-head p{color:rgba(245,240,230,.7)}
+.culture-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;
+  margin-top:3rem;
+}
+.culture-item{text-align:center}
+.culture-item-img{
+  aspect-ratio:1;overflow:hidden;border-radius:50%;
+  margin:0 auto 1.5rem;width:220px;
+  border:1px solid rgba(180,154,112,.3);
+}
+.culture-item-img img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.culture-item:hover .culture-item-img img{transform:scale(1.08)}
+.culture-item h4{font-family:var(--serif);font-size:1.5rem;margin-bottom:.6rem;color:var(--cream)}
+.culture-item p{font-size:.92rem;color:rgba(245,240,230,.7);line-height:1.7;max-width:300px;margin:0 auto}
+@media (max-width:900px){
+  .culture-grid{grid-template-columns:1fr;gap:3rem}
+  .culture-item-img{width:180px}
+}
+
+/* =========================
+   GALLERY
+   ========================= */
+.gallery{background:var(--cream)}
+.gallery-grid{
+  column-count:3;column-gap:1rem;
+}
+.gallery-item{
+  break-inside:avoid;margin-bottom:1rem;
+  position:relative;overflow:hidden;border-radius:2px;cursor:pointer;
+}
+.gallery-item img{
+  width:100%;display:block;transition:transform .8s var(--ease);
+}
+.gallery-item:hover img{transform:scale(1.05)}
+.gallery-item::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 60%,rgba(37,34,31,.6));
+  opacity:0;transition:opacity .4s var(--ease);
+}
+.gallery-item:hover::after{opacity:1}
+.gallery-item-label{
+  position:absolute;bottom:1rem;left:1rem;z-index:2;
+  color:var(--cream);font-size:.7rem;letter-spacing:.2em;
+  text-transform:uppercase;font-weight:500;
+  opacity:0;transform:translateY(10px);
+  transition:all .4s var(--ease);
+}
+.gallery-item:hover .gallery-item-label{opacity:1;transform:translateY(0)}
+@media (max-width:900px){.gallery-grid{column-count:2}}
+@media (max-width:500px){.gallery-grid{column-count:1}}
+
+/* Lightbox */
+.lightbox{
+  position:fixed;inset:0;z-index:200;
+  background:rgba(37,34,31,.96);
+  display:none;align-items:center;justify-content:center;
+  padding:2rem;
+}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:2px}
+.lightbox-close,.lightbox-prev,.lightbox-next{
+  position:absolute;color:var(--cream);background:rgba(245,240,230,.1);
+  width:50px;height:50px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .3s var(--ease);
+}
+.lightbox-close:hover,.lightbox-prev:hover,.lightbox-next:hover{background:var(--brass);color:var(--espresso)}
+.lightbox-close{top:1.5rem;right:1.5rem}
+.lightbox-prev{left:1.5rem;top:50%;transform:translateY(-50%)}
+.lightbox-next{right:1.5rem;top:50%;transform:translateY(-50%)}
+.lightbox-counter{
+  position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);
+  color:var(--cream);font-size:.75rem;letter-spacing:.2em;
+}
+
+/* =========================
+   VISIT / LOCATION
+   ========================= */
+.visit{
+  background:var(--espresso);color:var(--cream);
+  position:relative;overflow:hidden;
+}
+.visit .section-head h2{color:var(--cream)}
+.visit .section-head h2 em{color:var(--brass)}
+.visit .section-head p{color:rgba(245,240,230,.7)}
+.visit-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:stretch;
+}
+.visit-info{
+  background:rgba(245,240,230,.04);
+  border:1px solid rgba(245,240,230,.1);
+  padding:3rem;border-radius:2px;
+}
+.visit-info h3{font-family:var(--serif);font-size:1.8rem;margin-bottom:1.5rem;color:var(--cream)}
+.visit-row{
+  display:flex;gap:1.2rem;padding:1.2rem 0;
+  border-bottom:1px solid rgba(245,240,230,.08);
+}
+.visit-row:last-child{border-bottom:none}
+.visit-row-icon{
+  width:40px;height:40px;flex-shrink:0;
+  background:rgba(180,154,112,.15);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--brass);
+}
+.visit-row-content{flex:1}
+.visit-row-content strong{
+  display:block;font-size:.7rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:.3rem;font-weight:500;
+}
+.visit-row-content span,.visit-row-content a{
+  color:var(--cream);font-size:.98rem;line-height:1.6;
+}
+.visit-row-content a:hover{color:var(--brass)}
+.visit-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
+.visit-actions .btn{padding:.85rem 1.4rem;font-size:.7rem}
+.visit-map{
+  border-radius:2px;overflow:hidden;min-height:480px;
+  border:1px solid rgba(245,240,230,.1);
+}
+.visit-map iframe{width:100%;height:100%;min-height:480px;border:0;filter:grayscale(.2) contrast(1.05)}
+@media (max-width:900px){
+  .visit-grid{grid-template-columns:1fr}
+  .visit-info{padding:2rem}
+}
+
+/* =========================
+   RESERVATION
+   ========================= */
+.reserve{background:var(--cream)}
+.reserve-wrap{
+  max-width:900px;margin:0 auto;
+  background:var(--white);
+  border:1px solid rgba(73,53,43,.08);
+  border-radius:2px;
+  padding:3.5rem;
+  box-shadow:var(--shadow-sm);
+}
+.reserve-form{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.form-field{display:flex;flex-direction:column;gap:.4rem}
+.form-field.full{grid-column:1/-1}
+.form-field label{
+  font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--coffee);font-weight:600;
+}
+.form-field label .req{color:var(--brass)}
+.form-field input,.form-field select,.form-field textarea{
+  padding:.9rem 1rem;
+  background:var(--cream);
+  border:1px solid rgba(73,53,43,.15);
+  border-radius:2px;
+  color:var(--espresso);
+  transition:all .3s var(--ease);
+}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{
+  outline:none;border-color:var(--brass);background:var(--white);
+}
+.form-field textarea{resize:vertical;min-height:100px}
+.form-field .error-msg{
+  font-size:.75rem;color:#a0522d;display:none;
+}
+.form-field.error input,.form-field.error select{border-color:#a0522d}
+.form-field.error .error-msg{display:block}
+.reserve-submit{
+  grid-column:1/-1;display:flex;gap:1rem;flex-wrap:wrap;
+  margin-top:1rem;align-items:center;
+}
+.reserve-submit .btn{padding:1rem 2rem}
+.reserve-note{
+  font-size:.82rem;color:var(--coffee);opacity:.65;font-style:italic;
+  margin-left:auto;max-width:320px;
+}
+.reserve-success{
+  display:none;text-align:center;padding:2rem;
+  background:rgba(146,154,126,.1);border:1px solid var(--sage);
+  border-radius:2px;margin-top:1.5rem;
+}
+.reserve-success.show{display:block}
+.reserve-success h4{font-family:var(--serif);font-size:1.5rem;color:var(--coffee);margin-bottom:.5rem}
+.reserve-success p{color:var(--coffee);opacity:.8;font-size:.95rem}
+@media (max-width:700px){
+  .reserve-wrap{padding:2rem}
+  .reserve-form{grid-template-columns:1fr}
+  .reserve-note{margin-left:0;max-width:none}
+}
+
+/* =========================
+   CONTACT
+   ========================= */
+.contact{background:var(--coffee);color:var(--cream)}
+.contact .section-head h2{color:var(--cream)}
+.contact .section-head h2 em{color:var(--brass)}
+.contact .section-head p{color:rgba(245,240,230,.7)}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1.3fr;gap:4rem;align-items:start;
+}
+.contact-info h3{font-family:var(--serif);font-size:2rem;margin-bottom:1.5rem;color:var(--cream)}
+.contact-info p{color:rgba(245,240,230,.75);margin-bottom:2rem;line-height:1.7}
+.contact-detail{
+  display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;
+  border-bottom:1px solid rgba(245,240,230,.1);
+}
+.contact-detail:last-of-type{border-bottom:none}
+.contact-detail-icon{
+  width:38px;height:38px;flex-shrink:0;border-radius:50%;
+  background:rgba(180,154,112,.15);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--brass);
+}
+.contact-detail strong{
+  display:block;font-size:.68rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:.25rem;font-weight:500;
+}
+.contact-detail a,.contact-detail span{color:var(--cream);font-size:.95rem}
+.contact-detail a:hover{color:var(--brass)}
+.socials{display:flex;gap:.8rem;margin-top:2rem}
+.socials a{
+  width:42px;height:42px;border-radius:50%;
+  border:1px solid rgba(245,240,230,.2);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--cream);transition:all .3s var(--ease);
+}
+.socials a:hover{background:var(--brass);color:var(--espresso);border-color:var(--brass)}
+
+.contact-form{
+  background:rgba(245,240,230,.04);
+  border:1px solid rgba(245,240,230,.1);
+  padding:2.5rem;border-radius:2px;
+}
+.contact-form .form-field label{color:var(--cream)}
+.contact-form .form-field input,
+.contact-form .form-field select,
+.contact-form .form-field textarea{
+  background:rgba(245,240,230,.06);
+  border-color:rgba(245,240,230,.15);
+  color:var(--cream);
+}
+.contact-form .form-field input::placeholder,
+.contact-form .form-field textarea::placeholder{color:rgba(245,240,230,.4)}
+.contact-form .form-field input:focus,
+.contact-form .form-field select:focus,
+.contact-form .form-field textarea:focus{
+  background:rgba(245,240,230,.1);border-color:var(--brass);
+}
+@media (max-width:900px){
+  .contact-grid{grid-template-columns:1fr;gap:3rem}
+  .contact-form{padding:1.8rem}
+}
+
+/* =========================
+   FAQ
+   ========================= */
+.faq{background:var(--cream)}
+.faq-wrap{max-width:820px;margin:0 auto}
+.faq-item{
+  border-bottom:1px solid rgba(73,53,43,.15);
+}
+.faq-q{
+  width:100%;text-align:left;
+  padding:1.5rem 0;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  font-family:var(--serif);font-size:1.3rem;color:var(--espresso);
+  font-weight:500;line-height:1.3;
+  transition:color .3s var(--ease);
+}
+.faq-q:hover{color:var(--brass)}
+.faq-icon{
+  width:32px;height:32px;flex-shrink:0;border-radius:50%;
+  border:1px solid rgba(73,53,43,.2);
+  display:flex;align-items:center;justify-content:center;
+  transition:all .4s var(--ease);
+  position:relative;
+}
+.faq-icon::before,.faq-icon::after{
+  content:"";position:absolute;background:var(--coffee);
+  transition:transform .4s var(--ease);
+}
+.faq-icon::before{width:12px;height:1.5px}
+.faq-icon::after{width:1.5px;height:12px}
+.faq-item.open .faq-icon{background:var(--coffee);border-color:var(--coffee)}
+.faq-item.open .faq-icon::before,.faq-item.open .faq-icon::after{background:var(--cream)}
+.faq-item.open .faq-icon::after{transform:rotate(90deg)}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height .5s var(--ease),padding .5s var(--ease);
+}
+.faq-item.open .faq-a{max-height:400px;padding-bottom:1.5rem}
+.faq-a p{color:var(--coffee);opacity:.75;line-height:1.7;padding-right:3rem;font-size:.98rem}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer{
+  background:var(--espresso);color:var(--cream);
+  padding:5rem 0 2rem;
+}
+.footer-top{
+  text-align:center;padding-bottom:4rem;
+  border-bottom:1px solid rgba(245,240,230,.1);
+  margin-bottom:3rem;
+}
+.footer-top h2{
+  font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);
+  color:var(--cream);margin-bottom:1.5rem;font-weight:400;font-style:italic;
+}
+.footer-top h2 em{color:var(--brass);font-style:normal}
+.footer-grid{
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;
+  margin-bottom:3rem;
+}
+.footer-col h5{
+  font-family:var(--sans);font-size:.72rem;letter-spacing:.25em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:1.2rem;font-weight:600;
+}
+.footer-col p,.footer-col a{
+  font-size:.92rem;color:rgba(245,240,230,.7);line-height:1.8;
+  display:block;transition:color .3s var(--ease);
+}
+.footer-col a:hover{color:var(--brass)}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:.4rem}
+.footer-brand .logo{color:var(--cream);margin-bottom:1.2rem}
+.footer-brand p{max-width:320px}
+.footer-bottom{
+  padding-top:2rem;border-top:1px solid rgba(245,240,230,.08);
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
+  font-size:.82rem;color:rgba(245,240,230,.5);
+}
+@media (max-width:900px){
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media (max-width:500px){
+  .footer-grid{grid-template-columns:1fr}
+}
+
+/* =========================
+   MODAL
+   ========================= */
+.modal{
+  position:fixed;inset:0;z-index:200;
+  background:rgba(37,34,31,.85);
+  backdrop-filter:blur(8px);
+  display:none;align-items:center;justify-content:center;
+  padding:1.5rem;
+}
+.modal.open{display:flex}
+.modal-inner{
+  background:var(--cream);max-width:720px;width:100%;
+  border-radius:4px;overflow:hidden;
+  display:grid;grid-template-columns:1fr 1fr;
+  max-height:90vh;
+  animation:modalIn .4s var(--ease);
+}
+@keyframes modalIn{from{opacity:0;transform:translateY(20px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+.modal-img{aspect-ratio:auto;min-height:400px;background:var(--coffee)}
+.modal-img img{width:100%;height:100%;object-fit:cover}
+.modal-body{padding:2.5rem;position:relative;overflow-y:auto}
+.modal-close{
+  position:absolute;top:1rem;right:1rem;
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(37,34,31,.08);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--coffee);transition:all .3s var(--ease);
+  z-index:2;
+}
+.modal-close:hover{background:var(--coffee);color:var(--cream)}
+.modal-cat{
+  font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--brass);margin-bottom:.6rem;font-weight:500;
+}
+.modal-body h3{
+  font-family:var(--serif);font-size:2rem;color:var(--espresso);
+  margin-bottom:1rem;line-height:1.15;
+}
+.modal-body .price{
+  font-family:var(--serif);font-size:1.8rem;color:var(--coffee);
+  margin-bottom:1.5rem;
+}
+.modal-body p{color:var(--coffee);opacity:.75;line-height:1.7;margin-bottom:1.5rem}
+.modal-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.modal-tag{
+  font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.35rem .8rem;background:rgba(73,53,43,.08);
+  color:var(--coffee);border-radius:20px;font-weight:500;
+}
+@media (max-width:700px){
+  .modal-inner{grid-template-columns:1fr;max-height:95vh}
+  .modal-img{aspect-ratio:16/10;min-height:auto}
+  .modal-body{padding:1.8rem}
+}
+
+/* =========================
+   BACK TO TOP
+   ========================= */
+.back-top{
+  position:fixed;bottom:2rem;right:2rem;z-index:90;
+  width:48px;height:48px;border-radius:50%;
+  background:var(--coffee);color:var(--cream);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;
+  transition:all .4s var(--ease);
+  box-shadow:var(--shadow-md);
+}
+.back-top.show{opacity:1;pointer-events:auto}
+.back-top:hover{background:var(--brass);color:var(--espresso);transform:translateY(-3px)}
+
+/* =========================
+   UTILITIES
+   ========================= */
+.divider{
+  width:60px;height:1px;background:var(--brass);margin:1.5rem auto;
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">
+      Kshana Coffee
+      <small>Find Your Moment</small>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#coffee">Coffee</a></li>
+      <li><a href="#food">Food Menu</a></li>
+      <li><a href="#space">The Space</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#visit">Visit Us</a></li>
+      <li><a href="#reserve" class="nav-cta">Find Your Table</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-content">
+    <div class="eyebrow reveal">A Contemporary Café · Madhapur, Hyderabad</div>
+    <h1 class="reveal reveal-delay-1">Find Your Moment.<br><em>Find Your Kshana.</em></h1>
+    <p class="reveal reveal-delay-2">Good coffee, thoughtful food and a space to slow down, connect and enjoy the little moments.</p>
+    <div class="hero-ctas reveal reveal-delay-3">
+      <a href="#food" class="btn btn-primary">Explore Our Menu</a>
+      <a href="#space" class="btn btn-outline">Discover the Space</a>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="line"></div>
+  </div>
+</header>
+
+<!-- OUR STORY -->
+<section class="story" id="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-img reveal">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=900&q=80" alt="Kshana Coffee interior with warm natural light" loading="lazy">
+      </div>
+      <div class="story-text reveal reveal-delay-1">
+        <div class="eyebrow">Our Story</div>
+        <h2 style="margin-top:1.2rem">Some Moments <em>Deserve to Be Savoured.</em></h2>
+        <p>Kshana Coffee began with a simple idea — that a good cup of coffee deserves a good space around it. A place where the morning feels slower, conversations feel longer, and the ordinary pause between tasks becomes something worth holding on to.</p>
+        <p>Nestled near Durgam Cheruvu in Madhapur, we are a contemporary café built around the everyday rituals that make a day feel lived: the first sip, the shared plate, the quiet corner, the long afternoon.</p>
+        <p>We don't chase trends. We pour carefully, plate thoughtfully, and leave room for the moment to breathe. That, to us, is the Kshana experience.</p>
+        <div class="story-signature">— A space for the moments in between.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COFFEE MENU -->
+<section class="coffee-section" id="coffee">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">At the Heart of Kshana</div>
+      <h2 style="margin-top:1.2rem">A Little More Than <em>Your Everyday Coffee.</em></h2>
+      <p>From a quiet espresso to a slow cold brew, every cup is prepared with care. Explore our coffee and beverage menu.</p>
+    </div>
+
+    <div class="menu-controls reveal">
+      <div class="filter-group" id="coffeeFilters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="hot">Hot</button>
+        <button class="filter-btn" data-filter="cold">Cold</button>
+        <button class="filter-btn" data-filter="espresso">Espresso</button>
+        <button class="filter-btn" data-filter="signature">Signature</button>
+        <button class="filter-btn" data-filter="non-coffee">Non-Coffee</button>
+      </div>
+      <div class="search-wrap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="coffeeSearch" placeholder="Search drinks...">
+      </div>
+    </div>
+
+    <div class="menu-grid" id="coffeeGrid"></div>
+  </div>
+</section>
+
+<!-- FOOD MENU -->
+<section class="food-section" id="food">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Good Food, Good Company</div>
+      <h2 style="margin-top:1.2rem">Made for the Moments <em>Around the Table.</em></h2>
+      <p>Thoughtfully prepared plates to pair with your coffee — from slow breakfasts to easy dinners.</p>
+    </div>
+
+    <div class="menu-controls reveal">
+      <div class="filter-group" id="foodFilters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+        <button class="filter-btn" data-filter="starters">Starters</button>
+        <button class="filter-btn" data-filter="sandwiches">Sandwiches</button>
+        <button class="filter-btn" data-filter="mains">Mains</button>
+        <button class="filter-btn" data-filter="pizza">Pizza</button>
+        <button class="filter-btn" data-filter="pasta">Pasta</button>
+        <button class="filter-btn" data-filter="desserts">Desserts</button>
+      </div>
+      <div class="search-wrap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="foodSearch" placeholder="Search dishes...">
+      </div>
+    </div>
+
+    <div class="menu-grid" id="foodGrid"></div>
+  </div>
+</section>
+
+<!-- SIGNATURE FAVOURITES -->
+<section class="signature">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Signature Favourites</div>
+      <h2 style="margin-top:1.2rem">A Few Things Worth <em>Coming Back For.</em></h2>
+      <p>The dishes and drinks our regulars keep ordering — and the ones we're quietly proud of.</p>
+    </div>
+
+    <div class="sig-grid reveal">
+      <div class="sig-item">
+        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=900&q=80" alt="Signature latte art" loading="lazy">
+        <div class="sig-item-info"><span>Coffee</span><h4>House Signature Latte</h4></div>
+      </div>
+      <div class="sig-item">
+        <img src="https://images.unsplash.com/photo-1528735602780-2552fd1d3cbe?w=800&q=80" alt="Continental breakfast plate" loading="lazy">
+        <div class="sig-item-info"><span>Breakfast</span><h4>Slow Morning Plate</h4></div>
+      </div>
+      <div class="sig-item">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=80" alt="Artisan pizza" loading="lazy">
+        <div class="sig-item-info"><span>Kitchen</span><h4>Wood-Fired Pizza</h4></div>
+      </div>
+      <div class="sig-item">
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&q=80" alt="Artisan dessert" loading="lazy">
+        <div class="sig-item-info"><span>Dessert</span><h4>Chocolate Fondant</h4></div>
+      </div>
+      <div class="sig-item">
+        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=900&q=80" alt="Cold brew coffee" loading="lazy">
+        <div class="sig-item-info"><span>Cold</span><h4>Slow-Steeped Cold Brew</h4></div>
+      </div>
+      <div class="sig-item">
+        <img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=700&q=80" alt="Sandwich platter" loading="lazy">
+        <div class="sig-item-info"><span>Light Meal</span><h4>Grilled Sandwich</h4></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE SPACE -->
+<section class="space" id="space">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">The Space</div>
+      <h2 style="margin-top:1.2rem">A Space to Pause, <em>Connect and Unwind.</em></h2>
+      <p>Warm interiors, natural light, and the quiet company of Durgam Cheruvu just beyond the window.</p>
+    </div>
+
+    <div class="space-hero reveal">
+      <img src="https://images.unsplash.com/photo-1559304822-9eb2813c9844?w=1600&q=85" alt="Kshana Coffee café ambience with warm lighting" loading="lazy">
+      <div class="space-hero-text">
+        <h3>Where the lake meets <em>the everyday.</em></h3>
+      </div>
+    </div>
+
+    <div class="space-grid">
+      <div class="space-card reveal">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1000&q=80" alt="Café interior seating" loading="lazy">
+        <div class="space-card-text"><h4>Indoor Seating</h4><p>Warm, unhurried corners for long conversations.</p></div>
+      </div>
+      <div class="space-card reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=900&q=80" alt="Coffee counter and barista" loading="lazy">
+        <div class="space-card-text"><h4>The Coffee Counter</h4><p>Where every cup begins.</p></div>
+      </div>
+      <div class="space-card reveal">
+        <img src="https://images.unsplash.com/photo-1521012706864-0b96f66db53b?w=800&q=80" alt="Outdoor seating area" loading="lazy">
+        <div class="space-card-text"><h4>Outdoor Seating</h4><p>Breath of fresh air, coffee in hand.</p></div>
+      </div>
+      <div class="space-card reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1481833761820-0509d3217039?w=800&q=80" alt="Café evening ambience" loading="lazy">
+        <div class="space-card-text"><h4>Evening Ambience</h4><p>Soft light, slower hours.</p></div>
+      </div>
+      <div class="space-card reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1525480122447-64809d765a2b?w=800&q=80" alt="Lake view from the café" loading="lazy">
+        <div class="space-card-text"><h4>Near Durgam Cheruvu</h4><p>The lake, a short walk away.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COFFEE CULTURE -->
+<section class="culture">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Coffee Culture & Craft</div>
+      <h2 style="margin-top:1.2rem">The Quiet Art <em>of a Good Cup.</em></h2>
+      <p>Coffee is more than a drink here. It's a ritual — one we take seriously, and invite you to slow down for.</p>
+    </div>
+
+    <div class="culture-grid">
+      <div class="culture-item reveal">
+        <div class="culture-item-img">
+          <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=600&q=80" alt="Espresso extraction close-up" loading="lazy">
+        </div>
+        <h4>The Pull</h4>
+        <p>A good espresso is measured in seconds. We watch every shot — because the details are the drink.</p>
+      </div>
+      <div class="culture-item reveal reveal-delay-1">
+        <div class="culture-item-img">
+          <img src="https://images.unsplash.com/photo-1534778101976-628477a24f11?w=600&q=80" alt="Latte art in a ceramic cup" loading="lazy">
+        </div>
+        <h4>The Pour</h4>
+        <p>Milk, texture, timing. A quiet conversation between barista and cup — every latte a small piece of craft.</p>
+      </div>
+      <div class="culture-item reveal reveal-delay-2">
+        <div class="culture-item-img">
+          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80" alt="Coffee beans close-up" loading="lazy">
+        </div>
+        <h4>The Pairing</h4>
+        <p>A bright espresso with a buttery croissant. A cold brew with a slice of chocolate cake. Coffee, and the moments it completes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Gallery</div>
+      <h2 style="margin-top:1.2rem">Moments <em>at Kshana.</em></h2>
+      <p>A glimpse of the coffee, the food, the light — and the people who make the place feel like home.</p>
+    </div>
+
+    <div class="menu-controls reveal">
+      <div class="filter-group" id="galleryFilters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="coffee">Coffee</button>
+        <button class="filter-btn" data-filter="food">Food</button>
+        <button class="filter-btn" data-filter="interiors">Interiors</button>
+        <button class="filter-btn" data-filter="ambience">Ambience</button>
+      </div>
+    </div>
+
+    <div class="gallery-grid reveal" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- VISIT / LOCATION -->
+<section class="visit" id="visit">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Visit Us</div>
+      <h2 style="margin-top:1.2rem">Your Next Coffee Break <em>Starts Here.</em></h2>
+      <p>Find us near Durgam Cheruvu in Madhapur. Walk in, settle in, take your time.</p>
+    </div>
+
+    <div class="visit-grid">
+      <div class="visit-info reveal">
+        <h3>Kshana Coffee</h3>
+        <div class="visit-row">
+          <div class="visit-row-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="visit-row-content">
+            <strong>Address</strong>
+            <span>Plot 6/A, Survey No. 62, Durgam Cheruvu Road, opposite Durgam Cheruvu, Doctor's Colony, Madhapur, Hyderabad, Telangana 500081</span>
+          </div>
+        </div>
+        <div class="visit-row">
+          <div class="visit-row-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="visit-row-content">
+            <strong>Phone</strong>
+            <a href="tel:+918827656947">+91 88276 56947</a>
+          </div>
+        </div>
+        <div class="visit-row">
+          <div class="visit-row-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="visit-row-content">
+            <strong>Opening Hours</strong>
+            <span>Please call ahead to confirm today's hours.</span>
+          </div>
+        </div>
+        <div class="visit-row">
+          <div class="visit-row-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <div class="visit-row-content">
+            <strong>Landmark</strong>
+            <span>Opposite Durgam Cheruvu, Madhapur</span>
+          </div>
+        </div>
+
+        <div class="visit-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Kshana+Coffee+Madhapur+Hyderabad" target="_blank" rel="noopener" class="btn btn-primary">Get Directions</a>
+          <a href="tel:+918827656947" class="btn btn-outline">Call Us</a>
+          <a href="https://wa.me/918827656947" target="_blank" rel="noopener" class="btn btn-outline">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="visit-map reveal reveal-delay-1">
+        <iframe
+          src="https://www.google.com/maps?q=Kshana+Coffee+Madhapur+Hyderabad&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Kshana Coffee location on Google Maps"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section class="reserve" id="reserve">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Reservations</div>
+      <h2 style="margin-top:1.2rem">Save a Moment <em>for Yourself.</em></h2>
+      <p>Send us a table enquiry and we'll confirm your reservation directly. This form opens a pre-filled WhatsApp message — it is not an instant booking.</p>
+    </div>
+
+    <div class="reserve-wrap reveal">
+      <form class="reserve-form" id="reserveForm" novalidate>
+        <div class="form-field">
+          <label for="rName">Full Name <span class="req">*</span></label>
+          <input type="text" id="rName" name="name" required>
+          <span class="error-msg">Please enter your name.</span>
+        </div>
+        <div class="form-field">
+          <label for="rPhone">Phone Number <span class="req">*</span></label>
+          <input type="tel" id="rPhone" name="phone" required placeholder="+91 ...">
+          <span class="error-msg">Please enter a valid phone number.</span>
+        </div>
+        <div class="form-field">
+          <label for="rEmail">Email (optional)</label>
+          <input type="email" id="rEmail" name="email" placeholder="you@example.com">
+          <span class="error-msg">Please enter a valid email.</span>
+        </div>
+        <div class="form-field">
+          <label for="rGuests">Number of Guests <span class="req">*</span></label>
+          <select id="rGuests" name="guests" required>
+            <option value="">Select</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option>
+            <option>5</option><option>6</option><option>7</option><option>8+</option>
+          </select>
+          <span class="error-msg">Please select number of guests.</span>
+        </div>
+        <div class="form-field">
+          <label for="rDate">Preferred Date <span class="req">*</span></label>
+          <input type="date" id="rDate" name="date" required>
+          <span class="error-msg">Please choose a future date.</span>
+        </div>
+        <div class="form-field">
+          <label for="rTime">Preferred Time <span class="req">*</span></label>
+          <input type="time" id="rTime" name="time" required>
+          <span class="error-msg">Please choose a time.</span>
+        </div>
+        <div class="form-field">
+          <label for="rOccasion">Occasion (optional)</label>
+          <select id="rOccasion" name="occasion">
+            <option value="">Select</option>
+            <option>Casual Visit</option>
+            <option>Birthday</option>
+            <option>Anniversary</option>
+            <option>Work Meeting</option>
+            <option>Date</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-field full">
+          <label for="rNotes">Special Requests (optional)</label>
+          <textarea id="rNotes" name="notes" placeholder="Window seat, dietary needs, etc."></textarea>
+        </div>
+        <div class="reserve-submit">
+          <button type="submit" class="btn btn-dark">Send Enquiry via WhatsApp</button>
+          <span class="reserve-note">Your message will open in WhatsApp. A team member will confirm your table directly.</span>
+        </div>
+      </form>
+      <div class="reserve-success" id="reserveSuccess">
+        <h4>Thank you.</h4>
+        <p>Your enquiry has been prepared. Please complete the message in WhatsApp — we'll confirm your table shortly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Get in Touch</div>
+      <h2 style="margin-top:1.2rem">We'd Love to <em>Hear from You.</em></h2>
+      <p>Questions, feedback, or a private event enquiry — drop us a line.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Kshana Coffee</h3>
+        <p>A contemporary café near Durgam Cheruvu, built around good coffee, thoughtful food, and the small moments that make a day feel lived.</p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <strong>Visit</strong>
+            <span>Plot 6/A, Durgam Cheruvu Road, Madhapur, Hyderabad 500081</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <strong>Call</strong>
+            <a href="tel:+918827656947">+91 88276 56947</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:hello@kshanacoffee.com">hello@kshanacoffee.com</a>
+          </div>
+        </div>
+
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://wa.me/918827656947" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal reveal-delay-1" id="contactForm" novalidate>
+        <div class="form-field">
+          <label for="cName">Full Name <span class="req">*</span></label>
+          <input type="text" id="cName" required>
+          <span class="error-msg">Please enter your name.</span>
+        </div>
+        <div class="form-field">
+          <label for="cPhone">Phone <span class="req">*</span></label>
+          <input type="tel" id="cPhone" required>
+          <span class="error-msg">Please enter a valid phone number.</span>
+        </div>
+        <div class="form-field">
+          <label for="cEmail">Email <span class="req">*</span></label>
+          <input type="email" id="cEmail" required>
+          <span class="error-msg">Please enter a valid email.</span>
+        </div>
+        <div class="form-field">
+          <label for="cSubject">Subject</label>
+          <input type="text" id="cSubject" placeholder="How can we help?">
+        </div>
+        <div class="form-field full">
+          <label for="cMessage">Message <span class="req">*</span></label>
+          <textarea id="cMessage" required rows="5"></textarea>
+          <span class="error-msg">Please write a short message.</span>
+        </div>
+        <div class="reserve-submit">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Frequently Asked</div>
+      <h2 style="margin-top:1.2rem">A Few <em>Common Questions.</em></h2>
+    </div>
+
+    <div class="faq-wrap reveal">
+      <div class="faq-item">
+        <button class="faq-q">Where is Kshana Coffee located?<span class="faq-icon"></span></button>
+        <div class="faq-a"><p>Kshana Coffee is located at Plot 6/A, Survey No. 62, Durgam Cheruvu Road, opposite Durgam Cheruvu, Doctor's Colony, Madhapur, Hyderabad, Telangana 500081.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What kind of coffee does Kshana Coffee serve?<span class="faq-icon"></span></button>
+        <div class="faq-a"><p>We serve a range of espresso-based coffees — from classic espresso, americano, cappuccino and latte to mochas, cold coffee, cold brew and signature café drinks, along with non-coffee beverages.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Where can I view the food menu?<span class="faq-icon"></span></button>
+        <div class="faq-a"><p>The full food menu is available on this website under the Food Menu section. You can also ask for a printed menu when you visit.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Does the café offer outdoor seating?<span class="faq-icon"></span></button>
+        <div class="faq-a"><p>Please call us at +91 88276 56947 to confirm current seating arrangements and availability on the day of your visit.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is there a rooftop seating area?<span class="faq-icon"></span></button>
+        <div class="faq-a"><p>For the latest information on rooftop or outdoor seating availability, please reach out to us directly — we're happy to help.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I reserve a table?<span class="faq-icon"></span></button>
+        <div class="faq-a"><p>Yes. You can send a table enquiry through the reservation form on this website, which opens a pre-filled WhatsApp message. Our team will confirm your reservation directly.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What are the café's opening hours?<span class="faq-icon"></span></button>
+        <div class="faq-a"><p>Opening hours may vary. Please call +91 88276 56947 or check our social channels for today's timings before visiting.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I contact Kshana Coffee?<span class="faq-icon"></span></button>
+        <div class="faq-a"><p>You can reach us at +91 88276 56947 by phone or WhatsApp, or use the contact form on this page. We typically respond within a few hours during operating times.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <h2>Make Time for a <em>Good Moment.</em></h2>
+      <a href="#food" class="btn btn-primary">Explore the Menu</a>
+    </div>
+
+    <div class="footer-grid">
+      <div class="footer-col footer-brand">
+        <div class="logo">Kshana Coffee<small>Find Your Moment</small></div>
+        <p>A contemporary café near Durgam Cheruvu, Madhapur — built around good coffee, thoughtful food, and the small moments worth holding on to.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#coffee">Coffee Menu</a></li>
+          <li><a href="#food">Food Menu</a></li>
+          <li><a href="#space">The Space</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Visit</h5>
+        <ul>
+          <li><a href="#visit">Location</a></li>
+          <li><a href="#reserve">Reserve a Table</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="tel:+918827656947">+91 88276 56947</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Find Us</h5>
+        <p>Plot 6/A, Durgam Cheruvu Road, Doctor's Colony, Madhapur, Hyderabad 500081</p>
+        <div class="socials" style="margin-top:1.2rem">
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://wa.me/918827656947" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Kshana Coffee. All rights reserved.</span>
+      <span>Crafted with care in Hyderabad.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="modal-inner">
+    <div class="modal-img"><img id="modalImg" src="" alt=""></div>
+    <div class="modal-body">
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-cat" id="modalCat"></div>
+      <h3 id="modalTitle"></h3>
+      <div class="price" id="modalPrice"></div>
+      <p id="modalDesc"></p>
+      <div class="modal-tags" id="modalTags"></div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-close" id="lbClose" aria-label="Close">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="lightbox-prev" id="lbPrev" aria-label="Previous">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <img id="lbImg" src="" alt="">
+  <button class="lightbox-next" id="lbNext" aria-label="Next">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="lightbox-counter" id="lbCounter"></div>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+/* =========================
+   DATA
+   Note: Menu items and prices shown are illustrative placeholders
+   for design demonstration. Please verify with the café before publishing.
+   ========================= */
+const coffeeMenu = [
+  {name:"Espresso",cat:"Espresso",type:"hot",price:"₹120",desc:"A single, concentrated shot — the purest expression of the bean.",img:"https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=700&q=80",tags:["Classic","Strong"]},
+  {name:"Double Espresso",cat:"Espresso",type:"hot",price:"₹160",desc:"Two shots pulled together — bolder, deeper, a little more of the day.",img:"https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=700&q=80",tags:["Classic","Strong"]},
+  {name:"Americano",cat:"Espresso",type:"hot",price:"₹150",desc:"Espresso lengthened with hot water — clean, bright, unhurried.",img:"https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=700&q=80",tags:["Classic"]},
+  {name:"Cappuccino",cat:"Espresso",type:"hot",price:"₹180",desc:"Espresso, steamed milk and a soft veil of foam. The everyday classic.",img:"https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=700&q=80",tags:["Milk","Classic"]},
+  {name:"Latte",cat:"Espresso",type:"hot",price:"₹200",desc:"Smooth espresso folded into silky steamed milk — gentle and rounded.",img:"https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=700&q=80",tags:["Milk","Smooth"]},
+  {name:"Mocha",cat:"Espresso",type:"hot",price:"₹230",desc:"Espresso, steamed milk and a touch of chocolate — a little indulgent.",img:"https://images.unsplash.com/photo-1578314675229-2b0e62fe46c5?w=700&q=80",tags:["Chocolate","Milk"]},
+  {name:"Flat White",cat:"Espresso",type:"hot",price:"₹210",desc:"A tighter, more coffee-forward milk drink with velvety microfoam.",img:"https://images.unsplash.com/photo-1577968897966-3d4325b36b61?w=700&q=80",tags:["Milk","Smooth"]},
+  {name:"Cold Coffee",cat:"Cold Coffee",type:"cold",price:"₹220",desc:"Chilled coffee blended with milk and ice — the café classic.",img:"https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=700&q=80",tags:["Iced","Milk"]},
+  {name:"Iced Coffee",cat:"Cold Coffee",type:"cold",price:"₹200",desc:"Brewed coffee, poured over ice — simple, clean, refreshing.",img:"https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=700&q=80",tags:["Iced"]},
+  {name:"Cold Brew",cat:"Cold Coffee",type:"cold",price:"₹250",desc:"Slow-steeped for hours, smooth and naturally sweet — no bitterness.",img:"https://images.unsplash.com/photo-1517701570846-03b570densa?w=700&q=80",tags:["Iced","Slow-steeped"]},
+  {name:"Signature Kshana Latte",cat:"Signature Coffee",type:"hot",price:"₹260",desc:"Our house take on a latte — balanced, warm, and quietly distinctive.",img:"https://images.unsplash.com/photo-1541167760496-1628856ab772?w=700&q=80",tags:["House","Signature"]},
+  {name:"Hazelnut Latte",cat:"Signature Coffee",type:"hot",price:"₹250",desc:"A warm latte with a soft hazelnut note — familiar, a little nutty.",img:"https://images.unsplash.com/photo-1572286258217-215cf9e4757b?w=700&q=80",tags:["Flavoured","Milk"]},
+  {name:"Caramel Macchiato",cat:"Signature Coffee",type:"hot",price:"₹260",desc:"Vanilla-kissed milk marked with espresso and a caramel finish.",img:"https://images.unsplash.com/photo-1572442571369-7b6886955 some?w=700&q=80",tags:["Sweet","Signature"]},
+  {name:"Hot Chocolate",cat:"Non-Coffee",type:"hot",price:"₹200",desc:"Rich cocoa and steamed milk — a warm, quiet comfort.",img:"https://images.unsplash.com/photo-1542990253-0b8be753b81e?w=700&q=80",tags:["Chocolate","No Coffee"]},
+  {name:"Masala Chai",cat:"Non-Coffee",type:"hot",price:"₹120",desc:"Black tea simmered with spices and milk — the familiar, everyday cup.",img:"https://images.unsplash.com/photo-1571658734881-d64d3f6e0975?w=700&q=80",tags:["Tea","Spiced"]},
+  {name:"Fresh Lime Soda",cat:"Non-Coffee",type:"cold",price:"₹150",desc:"Fresh lime, a little fizz — sweet, salted or between.",img:"https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=700&q=80",tags:["Refreshing","No Coffee"]},
+  {name:"Iced Chocolate",cat:"Non-Coffee",type:"cold",price:"₹220",desc:"Chilled chocolate blended with milk and ice — dessert in a glass.",img:"https://images.unsplash.com/photo-1573996637456-1089f7d15e11?w=700&q=80",tags:["Iced","Chocolate"]}
+];
+
+const foodMenu = [
+  {name:"Avocado Toast",cat:"breakfast",diet:"veg",price:"₹320",desc:"Smashed avocado on sourdough, cherry tomatoes, chilli flakes and a soft herb finish.",img:"https://images.unsplash.com/photo-1588137378633-dea1336ce1e2?w=700&q=80",tags:["Breakfast","Vegetarian"]},
+  {name:"All-Day Breakfast Plate",cat:"breakfast",diet:"veg",price:"₹380",desc:"Eggs your way, toast, sautéed vegetables, mushrooms and a little something sweet.",img:"https://images.unsplash.com/photo-1525351484163-7529414344d8?w=700&q=80",tags:["Breakfast","Hearty"]},
+  {name:"Pancakes with Berries",cat:"breakfast",diet:"veg",price:"₹340",desc:"Soft stacks of pancakes, seasonal berries, maple and a dusting of sugar.",img:"https://images.unsplash.com/photo-1528207776546-3656609e63a4?w=700&q=80",tags:["Breakfast","Sweet"]},
+  {name:"Bruschetta",cat:"starters",diet:"veg",price:"₹280",desc:"Toasted sourdough, ripe tomatoes, basil, garlic and a drizzle of olive oil.",img:"https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=700&q=80",tags:["Starter","Vegetarian"]},
+  {name:"Peri Peri Fries",cat:"starters",diet:"veg",price:"₹220",desc:"Crisp fries tossed in peri peri seasoning — a little heat, a little crunch.",img:"https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=700&q=80",tags:["Starter","Spicy"]},
+  {name:"Chicken Wings",cat:"starters",diet:"non-veg",price:"₹360",desc:"Slow-baked wings glazed in your choice of sauce — smoky, sticky, satisfying.",img:"https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=700&q=80",tags:["Starter","Non-Veg"]},
+  {name:"Grilled Chicken Sandwich",cat:"sandwiches",diet:"non-veg",price:"₹320",desc:"Tender grilled chicken, fresh greens, cheese and a soft herbed aioli on ciabatta.",img:"https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=700&q=80",tags:["Sandwich","Non-Veg"]},
+  {name:"Paneer Tikka Sandwich",cat:"sandwiches",diet:"veg",price:"₹280",desc:"Tandoor-kissed paneer, peppers, onions and mint chutney in a toasted bun.",img:"https://images.unsplash.com/photo-1601050690597-df0568f70950?w=700&q=80",tags:["Sandwich","Vegetarian"]},
+  {name:"Club Sandwich",cat:"sandwiches",diet:"non-veg",price:"₹340",desc:"A triple-decker classic — chicken, egg, cheese, lettuce and tomato.",img:"https://images.unsplash.com/photo-1528735602780-2552fd1d3cbe?w=700&q=80",tags:["Sandwich","Classic"]},
+  {name:"Classic Burger",cat:"mains",diet:"non-veg",price:"₹380",desc:"Juicy beef-style patty, cheese, lettuce, tomato, house sauce and fries on the side.",img:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700&q=80",tags:["Burger","Non-Veg"]},
+  {name:"Veggie Burger",cat:"mains",diet:"veg",price:"₹320",desc:"A hearty plant patty, fresh greens, cheese and a toasted brioche bun.",img:"https://images.unsplash.com/photo-1520072959219-c595dc870360?w=700&q=80",tags:["Burger","Vegetarian"]},
+  {name:"Margherita Pizza",cat:"pizza",diet:"veg",price:"₹360",desc:"San Marzano-style tomato, mozzarella, fresh basil — simple, honest, good.",img:"https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=700&q=80",tags:["Pizza","Vegetarian"]},
+  {name:"Pepperoni Pizza",cat:"pizza",diet:"non-veg",price:"₹420",desc:"Tomato, mozzarella and generous pepperoni — a timeless favourite.",img:"https://images.unsplash.com/photo-1628840042765-356cda07504e?w=700&q=80",tags:["Pizza","Non-Veg"]},
+  {name:"Penne Arrabbiata",cat:"pasta",diet:"veg",price:"₹340",desc:"Penne in a bright, spicy tomato sauce with garlic and a little chilli.",img:"https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=700&q=80",tags:["Pasta","Spicy"]},
+  {name:"Creamy Alfredo Pasta",cat:"pasta",diet:"veg",price:"₹360",desc:"Penne in a silky parmesan cream sauce — rich, warm, comforting.",img:"https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=700&q=80",tags:["Pasta","Creamy"]},
+  {name:"Chicken Pesto Pasta",cat:"pasta",diet:"non-veg",price:"₹400",desc:"Grilled chicken, penne and a fragrant basil pesto cream.",img:"https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=700&q=80",tags:["Pasta","Non-Veg"]},
+  {name:"Continental Grill Platter",cat:"mains",diet:"non-veg",price:"₹520",desc:"A plate of grilled chicken, sausage, vegetables and a choice of sauce.",img:"https://images.unsplash.com/photo-1544025162-d76694265947?w=700&q=80",tags:["Main","Hearty"]},
+  {name:"Mushroom Risotto",cat:"mains",diet:"veg",price:"₹420",desc:"Slow-stirred arborio rice with wild mushrooms, parmesan and herbs.",img:"https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=700&q=80",tags:["Main","Vegetarian"]},
+  {name:"Chocolate Fondant",cat:"desserts",diet:"veg",price:"₹280",desc:"Warm chocolate cake with a soft, molten centre — served with ice cream.",img:"https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=700&q=80",tags:["Dessert","Chocolate"]},
+  {name:"Classic Cheesecake",cat:"desserts",diet:"veg",price:"₹260",desc:"Creamy baked cheesecake on a buttery biscuit base, with seasonal berries.",img:"https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=700&q=80",tags:["Dessert","Sweet"]},
+  {name:"Tiramisu",cat:"desserts",diet:"veg",price:"₹280",desc:"Mascarpone, espresso-soaked sponge and a dusting of cocoa — a quiet classic.",img:"https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=700&q=80",tags:["Dessert","Coffee"]}
+];
+
+const galleryImages = [
+  {src:"https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=900&q=80",cat:"coffee",label:"Latte Art"},
+  {src:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&q=80",cat:"coffee",label:"Morning Pour"},
+  {src:"https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=900&q=80",cat:"food",label:"The Sandwich"},
+  {src:"https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=900&q=80",cat:"interiors",label:"Indoor Seating"},
+  {src:"https://images.unsplash.com/photo-1521012706864-0b96f66db53b?w=900&q=80",cat:"ambience",label:"Outdoor Corner"},
+  {src:"https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=900&q=80",cat:"coffee",label:"The Counter"},
+  {src:"https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=900&q=80",cat:"food",label:"Fresh Pizza"},
+  {src:"https://images.unsplash.com/photo-1481833761820-0509d3217039?w=900&q=80",cat:"ambience",label:"Evening Light"},
+  {src:"https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=900&q=80",cat:"coffee",label:"Espresso Pull"},
+  {src:"https://images.unsplash.com/photo-1551024506-0bccd828d307?w=900&q=80",cat:"food",label:"Dessert Plate"},
+  {src:"https://images.unsplash.com/photo-1525480122447-64809d765a2b?w=900&q=80",cat:"ambience",label:"Lake Side"},
+  {src:"https://images.unsplash.com/photo-1559304822-9eb2813c9844?w=900&q=80",cat:"interiors",label:"The Café"},
+  {src:"https://images.unsplash.com/photo-1541167760496-1628856ab772?w=900&q=80",cat:"coffee",label:"House Latte"},
+  {src:"https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=900&q=80",cat:"coffee",label:"Cold Brew"},
+  {src:"https://images.unsplash.com/photo-1528735602780-2552fd1d3cbe?w=900&q=80",cat:"food",label:"Breakfast Plate"},
+  {src:"https://images.unsplash.com/photo-1534778101976-628477a24f11?w=900&q=80",cat:"coffee",label:"The Pour"},
+  {src:"https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=900&q=80",cat:"coffee",label:"The Beans"},
+  {src:"https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=900&q=80",cat:"coffee",label:"Cappuccino"}
+];
+
+/* =========================
+   NAV SCROLL & MOBILE MENU
+   ========================= */
+const nav = document.getElementById('nav');
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+  document.getElementById('backTop').classList.toggle('show', window.scrollY > 600);
+
+  // Parallax hero
+  const heroBg = document.getElementById('heroBg');
+  if (heroBg && window.scrollY < window.innerHeight) {
+    heroBg.style.transform = `scale(1.05) translateY(${window.scrollY * 0.3}px)`;
+  }
+
+  // Active section
+  const sections = document.querySelectorAll('section[id], header[id]');
+  let current = '';
+  sections.forEach(s => {
+    const top = s.offsetTop - 120;
+    if (window.scrollY >= top) current = s.id;
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    menuToggle.classList.remove('open');
+    navLinks.classList.remove('open');
+  });
+});
+
+/* =========================
+   REVEAL ON SCROLL
+   ========================= */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* =========================
+   MENU RENDERING
+   ========================= */
+function renderCoffee(filter='all', search='') {
+  const grid = document.getElementById('coffeeGrid');
+  const s = search.toLowerCase().trim();
+  const items = coffeeMenu.filter(item => {
+    const matchFilter = filter === 'all' || item.type === filter || item.cat.toLowerCase().includes(filter) || (filter === 'signature' && item.cat === 'Signature Coffee') || (filter === 'non-coffee' && item.cat === 'Non-Coffee');
+    const matchSearch = !s || item.name.toLowerCase().includes(s) || item.desc.toLowerCase().includes(s) || item.cat.toLowerCase().includes(s);
+    return matchFilter && matchSearch;
+  });
+  if (!items.length) {
+    grid.innerHTML = '<div class="empty-state">No drinks match your search. Try another word or clear the filters.</div>';
+    return;
+  }
+  grid.innerHTML = items.map((item, i) => `
+    <article class="menu-card" data-idx="${coffeeMenu.indexOf(item)}" tabindex="0" role="button" aria-label="View ${item.name}">
+      <div class="menu-card-img">
+        <img src="${item.img}" alt="${item.name}" loading="lazy" onerror="this.style.opacity=.3">
+        <span class="menu-card-badge">${item.type === 'hot' ? 'Hot' : 'Cold'}</span>
+      </div>
+      <div class="menu-card-body">
+        <div class="menu-card-cat">${item.cat}</div>
+        <h3>${item.name}</h3>
+        <p class="menu-card-desc">${item.desc}</p>
+        <div class="menu-card-foot">
+          <span class="menu-card-price">${item.price}</span>
+          <span class="menu-card-more">View Details →</span>
+        </div>
+      </div>
+    </article>
+  `).join('');
+  attachCardHandlers(grid, coffeeMenu, 'coffee');
+}
+
+function renderFood(filter='all', search='') {
+  const grid = document.getElementById('foodGrid');
+  const s = search.toLowerCase().trim();
+  const items = foodMenu.filter(item => {
+    const matchFilter = filter === 'all' || item.cat === filter;
+    const matchSearch = !s || item.name.toLowerCase().includes(s) || item.desc.toLowerCase().includes(s) || item.cat.toLowerCase().includes(s);
+    return matchFilter && matchSearch;
+  });
+  if (!items.length) {
+    grid.innerHTML = '<div class="empty-state">No dishes match your search. Try another word or clear the filters.</div>';
+    return;
+  }
+  grid.innerHTML = items.map((item, i) => `
+    <article class="menu-card" data-idx="${foodMenu.indexOf(item)}" tabindex="0" role="button" aria-label="View ${item.name}">
+      <div class="menu-card-img">
+        <img src="${item.img}" alt="${item.name}" loading="lazy" onerror="this.style.opacity=.3">
+      </div>
+      <div class="menu-card-body">
+        <div class="menu-card-cat">${item.cat}</div>
+        <h3>${item.name}</h3>
+        <p class="menu-card-desc">${item.desc}</p>
+        ${item.diet ? `<span class="diet-badge ${item.diet === 'non-veg' ? 'non-veg' : ''}"><span class="dot"></span>${item.diet === 'veg' ? 'Vegetarian' : 'Non-Vegetarian'}</span>` : ''}
+        <div class="menu-card-foot">
+          <span class="menu-card-price">${item.price}</span>
+          <span class="menu-card-more">View Details →</span>
+        </div>
+      </div>
+    </article>
+  `).join('');
+  attachCardHandlers(grid, foodMenu, 'food');
+}
+
+function attachCardHandlers(grid, data, type) {
+  grid.querySelectorAll('.menu-card').forEach(card => {
+    const open = () => openModal(data[+card.dataset.idx], type);
+    card.addEventListener('click', open);
+    card.addEventListener('keypress', e => { if (e.key === 'Enter') open(); });
+  });
+}
+
+// Initial render
+renderCoffee();
+renderFood();
+
+// Filter handlers
+document.getElementById('coffeeFilters').addEventListener('click', e => {
+  if (!e.target.matches('.filter-btn')) return;
+  document.querySelectorAll('#coffeeFilters .filter-btn').forEach(b => b.classList.remove('active'));
+  e.target.classList.add('active');
+  renderCoffee(e.target.dataset.filter, document.getElementById('coffeeSearch').value);
+});
+document.getElementById('coffeeSearch').addEventListener('input', e => {
+  const active = document.querySelector('#coffeeFilters .filter-btn.active').dataset.filter;
+  renderCoffee(active, e.target.value);
+});
+
+document.getElementById('foodFilters').addEventListener('click', e => {
+  if (!e.target.matches('.filter-btn')) return;
+  document.querySelectorAll('#foodFilters .filter-btn').forEach(b => b.classList.remove('active'));
+  e.target.classList.add('active');
+  renderFood(e.target.dataset.filter, document.getElementById('foodSearch').value);
+});
+document.getElementById('foodSearch').addEventListener('input', e => {
+  const active = document.querySelector('#foodFilters .filter-btn.active').dataset.filter;
+  renderFood(active, e.target.value);
+});
+
+/* =========================
+   MODAL
+   ========================= */
+const modal = document.getElementById('modal');
+function openModal(item, type) {
+  document.getElementById('modalImg').src = item.img;
+  document.getElementById('modalImg').alt = item.name;
+  document.getElementById('modalCat').textContent = item.cat;
+  document.getElementById('modalTitle').textContent = item.name;
+  document.getElementById('modalPrice').textContent = item.price;
+  document.getElementById('modalDesc').textContent = item.desc;
+  const tags = document.getElementById('modalTags');
+  const allTags = [...(item.tags || [])];
+  if (item.type) allTags.push(item.type === 'hot' ? 'Served Hot' : 'Served Cold');
+  if (item.diet === 'veg') allTags.push('Vegetarian');
+  if (item.diet === 'non-veg') allTags.push('Non-Vegetarian');
+  tags.innerHTML = allTags.map(t => `<span class="modal-tag">${t}</span>`).join('');
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+document.getElementById('modalClose').addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+function closeModal() {
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* =========================
+   GALLERY
+   ========================= */
+let currentGalleryFilter = 'all';
+let visibleGallery = [...galleryImages];
+
+function renderGallery(filter='all') {
+  currentGalleryFilter = filter;
+  visibleGallery = filter === 'all' ? [...galleryImages] : galleryImages.filter(g => g.cat === filter);
+  const grid = document.getElementById('galleryGrid');
+  grid.innerHTML = visibleGallery.map((g, i) => `
+    <figure class="gallery-item" data-idx="${i}" tabindex="0" role="button" aria-label="Open ${g.label}">
+      <img src="${g.src}" alt="${g.label}" loading="lazy">
+      <span class="gallery-item-label">${g.label}</span>
+    </figure>
+  `).join('');
+  grid.querySelectorAll('.gallery-item').forEach(item => {
+    const open = () => openLightbox(+item.dataset.idx);
+    item.addEventListener('click', open);
+    item.addEventListener('keypress', e => { if (e.key === 'Enter') open(); });
+  });
+}
+renderGallery();
+
+document.getElementById('galleryFilters').addEventListener('click', e => {
+  if (!e.target.matches('.filter-btn')) return;
+  document.querySelectorAll('#galleryFilters .filter-btn').forEach(b => b.classList.remove('active'));
+  e.target.classList.add('active');
+  renderGallery(e.target.dataset.filter);
+});
+
+/* =========================
+   LIGHTBOX
+   ========================= */
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbCounter = document.getElementById('lbCounter');
+let lbIndex = 0;
+
+function openLightbox(idx) {
+  lbIndex = idx;
+  updateLightbox();
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function updateLightbox() {
+  const item = visibleGallery[lbIndex];
+  lbImg.src = item.src;
+  lbImg.alt = item.label;
+  lbCounter.textContent = `${lbIndex + 1} / ${visibleGallery.length}  ·  ${item.label}`;
+}
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+document.getElementById('lbPrev').addEventListener('click', () => {
+  lbIndex = (lbIndex - 1 + visibleGallery.length) % visibleGallery.length;
+  updateLightbox();
+});
+document.getElementById('lbNext').addEventListener('click', () => {
+  lbIndex = (lbIndex + 1) % visibleGallery.length;
+  updateLightbox();
+});
+lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+document.addEventListener('keydown', e => {
+  if (!lightbox.classList.contains('open') && !modal.classList.contains('open')) return;
+  if (e.key === 'Escape') { closeLightbox(); closeModal(); }
+  if (lightbox.classList.contains('open')) {
+    if (e.key === 'ArrowLeft') document.getElementById('lbPrev').click();
+    if (e.key === 'ArrowRight') document.getElementById('lbNext').click();
+  }
+});
+
+/* =========================
+   FAQ ACCORDION
+   ========================= */
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+/* =========================
+   RESERVATION FORM
+   ========================= */
+const reserveForm = document.getElementById('reserveForm');
+const rDate = document.getElementById('rDate');
+// Set min date to today
+const today = new Date();
+const yyyy = today.getFullYear();
+const mm = String(today.getMonth() + 1).padStart(2, '0');
+const dd = String(today.getDate()).padStart(2, '0');
+rDate.min = `${yyyy}-${mm}-${dd}`;
+
+reserveForm.addEventListener('submit', e => {
+  e.preventDefault();
+  let valid = true;
+  const fields = [
+    {id:'rName', test: v => v.trim().length >= 2},
+    {id:'rPhone', test: v => /^[\d+\-\s()]{7,}$/.test(v.trim())},
+    {id:'rEmail', test: v => !v.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()), optional: true},
+    {id:'rGuests', test: v => !!v},
+    {id:'rDate', test: v => {
+      if (!v) return false;
+      const sel = new Date(v);
+      const now = new Date(); now.setHours(0,0,0,0);
+      return sel >= now;
+    }},
+    {id:'rTime', test: v => !!v}
+  ];
+  fields.forEach(f => {
+    const el = document.getElementById(f.id);
+    const wrap = el.closest('.form-field');
+    const ok = f.test(el.value);
+    wrap.classList.toggle('error', !ok);
+    if (!ok) valid = false;
+  });
+  if (!valid) return;
+
+  // Build WhatsApp message
+  const name = document.getElementById('rName').value.trim();
+  const phone = document.getElementById('rPhone').value.trim();
+  const email = document.getElementById('rEmail').value.trim();
+  const guests = document.getElementById('rGuests').value;
+  const date = document.getElementById('rDate').value;
+  const time = document.getElementById('rTime').value;
+  const occasion = document.getElementById('rOccasion').value;
+  const notes = document.getElementById('rNotes').value.trim();
+
+  const msg =
+`Hello Kshana Coffee,
+
+I'd like to enquire about a table reservation.
+
+• Name: ${name}
+• Phone: ${phone}${email ? `\n• Email: ${email}` : ''}
+• Guests: ${guests}
+• Date: ${date}
+• Time: ${time}${occasion ? `\n• Occasion: ${occasion}` : ''}${notes ? `\n• Notes: ${notes}` : ''}
+
+Please confirm availability. Thank you.`;
+
+  const url = `https://wa.me/918827656947?text=${encodeURIComponent(msg)}`;
+  document.getElementById('reserveSuccess').classList.add('show');
+  window.open(url, '_blank');
+  setTimeout(() => {
+    document.getElementById('reserveSuccess').classList.remove('show');
+  }, 8000);
+});
+
+/* =========================
+   CONTACT FORM
+   ========================= */
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  let valid = true;
+  const fields = [
+    {id:'cName', test: v => v.trim().length >= 2},
+    {id:'cPhone', test: v => /^[\d+\-\s()]{7,}$/.test(v.trim())},
+    {id:'cEmail', test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim())},
+    {id:'cMessage', test: v => v.trim().length >= 5}
+  ];
+  fields.forEach(f => {
+    const el = document.getElementById(f.id);
+    const wrap = el.closest('.form-field');
+    const ok = f.test(el.value);
+    wrap.classList.toggle('error', !ok);
+    if (!ok) valid = false;
+  });
+  if (!valid) return;
+
+  const name = document.getElementById('cName').value.trim();
+  const phone = document.getElementById('cPhone').value.trim();
+  const email = document.getElementById('cEmail').value.trim();
+  const subject = document.getElementById('cSubject').value.trim();
+  const message = document.getElementById('cMessage').value.trim();
+
+  const msg =
+`Hello Kshana Coffee,
+
+• Name: ${name}
+• Phone: ${phone}
+• Email: ${email}${subject ? `\n• Subject: ${subject}` : ''}
+
+${message}`;
+
+  const url = `https://wa.me/918827656947?text=${encodeURIComponent(msg)}`;
+  window.open(url, '_blank');
+  e.target.reset();
+  alert('Thank you. Your message has been prepared in WhatsApp.');
+});
+
+/* =========================
+   BACK TO TOP
+   ========================= */
+document.getElementById('backTop').addEventListener('click', () => {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+});
+
+/* =========================
+   YEAR
+   ========================= */
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
