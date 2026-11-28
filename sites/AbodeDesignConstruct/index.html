@@ -1,0 +1,2263 @@
+
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abode Design & Construct | Premium Residential Construction & Property Development Moonee Ponds</title>
+    <meta name="description" content="Abode Design & Construct offers a transparent, owner-controlled approach to residential construction and multi-residential development in Moonee Ponds, Victoria. Discover our proprietary building system.">
+    <meta name="keywords" content="residential construction Moonee Ponds, custom home builder Melbourne, multi-residential development Victoria, transparent building process, owner-builder support, property development">
+    <meta property="og:title" content="Abode Design & Construct | Your Home. Your Choices. Your Build.">
+    <meta property="og:description" content="A more transparent approach to construction, where you have greater control over the products, inclusions and decisions that shape your home.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.abodedac.com.au/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --midnight-navy: #172638;
+            --warm-ivory: #F6F4EF;
+            --muted-sage: #899889;
+            --graphite: #30383C;
+            --champagne-bronze: #B49A75;
+            --soft-concrete: #E2E1DB;
+            --white: #FFFFFF;
+            
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --shadow-soft: 0 10px 40px -10px rgba(23, 38, 56, 0.1);
+            --shadow-medium: 0 20px 60px -15px rgba(23, 38, 56, 0.15);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--warm-ivory);
+            color: var(--graphite);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--midnight-navy);
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            color: var(--graphite);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        .text-center { text-align: center; }
+        .text-serif { font-family: var(--font-serif); }
+        .text-mono { font-family: var(--font-mono); }
+        .text-bronze { color: var(--champagne-bronze); }
+        .bg-navy { background-color: var(--midnight-navy); color: var(--warm-ivory); }
+        .bg-navy h2, .bg-navy h3, .bg-navy p { color: var(--warm-ivory); }
+
+        /* =========================================
+           UTILITY & ANIMATION CLASSES
+           ========================================= */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+            html { scroll-behavior: auto; }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            font-family: var(--font-sans);
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-primary {
+            background-color: var(--champagne-bronze);
+            color: var(--white);
+            border-color: var(--champagne-bronze);
+        }
+
+        .btn-primary:hover {
+            background-color: #9a8363;
+            border-color: #9a8363;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--midnight-navy);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--midnight-navy);
+            border-color: var(--midnight-navy);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--midnight-navy);
+            color: var(--white);
+        }
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 0;
+            transition: var(--transition-smooth);
+            background: transparent;
+        }
+
+        .navbar.scrolled {
+            background: rgba(246, 244, 239, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--white);
+            letter-spacing: 0.02em;
+        }
+
+        .navbar.scrolled .logo {
+            color: var(--midnight-navy);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            position: relative;
+        }
+
+        .navbar.scrolled .nav-links a {
+            color: var(--graphite);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--champagne-bronze);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 0.75rem 1.5rem !important;
+            background: var(--champagne-bronze);
+            color: var(--white) !important;
+            border-radius: 2px;
+        }
+
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover { background: #9a8363; }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 2px;
+            background: var(--white);
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled .hamburger span {
+            background: var(--midnight-navy);
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(23, 38, 56, 0.6), rgba(23, 38, 56, 0.7)), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--soft-concrete);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-supporting {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--champagne-bronze);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--white);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        /* =========================================
+           PROPRIETARY SYSTEM SECTION
+           ========================================= */
+        .system-demo {
+            background: var(--white);
+            border-top: 1px solid var(--soft-concrete);
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            background: var(--warm-ivory);
+            border: 1px solid var(--soft-concrete);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .demo-tabs {
+            background: var(--midnight-navy);
+            padding: 2rem 0;
+        }
+
+        .demo-tab {
+            display: block;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: transparent;
+            border: none;
+            border-left: 3px solid transparent;
+            color: var(--soft-concrete);
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            text-align: left;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .demo-tab:hover, .demo-tab.active {
+            background: rgba(255,255,255,0.05);
+            color: var(--white);
+            border-left-color: var(--champagne-bronze);
+        }
+
+        .demo-panel {
+            padding: 3rem;
+            display: none;
+        }
+
+        .demo-panel.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .spec-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--soft-concrete);
+        }
+
+        .spec-label {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted-sage);
+            margin-bottom: 0.5rem;
+        }
+
+        .spec-value {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--midnight-navy);
+        }
+
+        .cost-summary {
+            background: var(--midnight-navy);
+            color: var(--white);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            grid-column: 1 / -1;
+        }
+
+        .cost-summary .label {
+            font-size: 0.9rem;
+            color: var(--soft-concrete);
+        }
+
+        .cost-summary .value {
+            font-family: var(--font-mono);
+            font-size: 1.5rem;
+            color: var(--champagne-bronze);
+        }
+
+        .demo-disclaimer {
+            font-size: 0.8rem;
+            color: var(--muted-sage);
+            margin-top: 1.5rem;
+            font-style: italic;
+        }
+
+        /* =========================================
+           TRANSPARENCY & SERVICES
+           ========================================= */
+        .transparency-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .concern-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .concern-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--soft-concrete);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .concern-list li::before {
+            content: '—';
+            color: var(--champagne-bronze);
+            font-weight: bold;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-item {
+            background: var(--white);
+            padding: 3rem;
+            border: 1px solid var(--soft-concrete);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--champagne-bronze);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .service-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-item ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .service-item ul li {
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
+            color: var(--graphite);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-item ul li::before {
+            content: '•';
+            color: var(--champagne-bronze);
+            position: absolute;
+            left: 0;
+        }
+
+        /* =========================================
+           OWNER CONTROL SELECTOR
+           ========================================= */
+        .selector-interface {
+            background: var(--white);
+            border: 1px solid var(--soft-concrete);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        .selector-header {
+            background: var(--midnight-navy);
+            color: var(--white);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .selector-body {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+        }
+
+        .selector-controls {
+            padding: 2rem;
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .control-group label {
+            display: block;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--muted-sage);
+            margin-bottom: 0.5rem;
+        }
+
+        .control-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--soft-concrete);
+            background: var(--warm-ivory);
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            color: var(--midnight-navy);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .control-group select:focus {
+            outline: none;
+            border-color: var(--champagne-bronze);
+        }
+
+        .selector-summary {
+            background: var(--warm-ivory);
+            padding: 2rem;
+            border-left: 1px solid var(--soft-concrete);
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--soft-concrete);
+            font-size: 0.9rem;
+        }
+
+        .summary-item .name { font-weight: 500; }
+        .summary-item .price { font-family: var(--font-mono); color: var(--champagne-bronze); }
+
+        .summary-total {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--midnight-navy);
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* =========================================
+           FOUR-PARTY RELATIONSHIP
+           ========================================= */
+        .relationship-diagram {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 4rem auto 0;
+            position: relative;
+        }
+
+        .relationship-diagram::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background: var(--champagne-bronze);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .relationship-diagram::after {
+            content: 'Abode System';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--white);
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-align: center;
+            z-index: 3;
+            width: 100px;
+        }
+
+        .party-node {
+            background: var(--white);
+            padding: 2rem;
+            border: 1px solid var(--soft-concrete);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .party-node h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--midnight-navy);
+        }
+
+        .party-node p {
+            font-size: 0.9rem;
+            margin: 0;
+            color: var(--graphite);
+        }
+
+        /* =========================================
+           TIMELINE
+           ========================================= */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 4rem auto 0;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--soft-concrete);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--champagne-bronze);
+            border-radius: 50%;
+            border: 3px solid var(--warm-ivory);
+            box-shadow: 0 0 0 2px var(--champagne-bronze);
+        }
+
+        .timeline-item h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            font-size: 0.95rem;
+            margin: 0;
+            color: var(--graphite);
+        }
+
+        /* =========================================
+           PROJECTS GALLERY
+           ========================================= */
+        .filter-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            background: transparent;
+            border: 1px solid var(--soft-concrete);
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--midnight-navy);
+            color: var(--white);
+            border-color: var(--midnight-navy);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            group: project;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(23, 38, 56, 0.9), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-overlay h4 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .project-overlay p {
+            color: var(--champagne-bronze);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin: 0;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(23, 38, 56, 0.95);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .lightbox.active { display: flex; }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        /* =========================================
+           FAQ ACCORDION
+           ========================================= */
+        .faq-list {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--soft-concrete);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem 0;
+            background: none;
+            border: none;
+            text-align: left;
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            color: var(--midnight-navy);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition-smooth);
+        }
+
+        .faq-question:hover {
+            color: var(--champagne-bronze);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-answer p {
+            font-size: 0.95rem;
+            color: var(--graphite);
+            margin: 0;
+        }
+
+        /* =========================================
+           CONTACT FORM
+           ========================================= */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info-block {
+            margin-bottom: 2rem;
+        }
+
+        .contact-info-block h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--champagne-bronze);
+        }
+
+        .contact-info-block p, .contact-info-block a {
+            font-size: 1rem;
+            color: var(--graphite);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--muted-sage);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.75rem;
+            border: 1px solid var(--soft-concrete);
+            background: var(--white);
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            color: var(--midnight-navy);
+            transition: var(--transition-smooth);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--champagne-bronze);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-success {
+            display: none;
+            background: var(--muted-sage);
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .form-success.active { display: block; }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        .footer {
+            background: var(--midnight-navy);
+            color: var(--soft-concrete);
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .footer-brand p {
+            color: var(--soft-concrete);
+            font-size: 0.9rem;
+        }
+
+        .footer h4 {
+            color: var(--white);
+            font-size: 1rem;
+            font-family: var(--font-sans);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--soft-concrete);
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: var(--champagne-bronze);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--champagne-bronze);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-smooth);
+            z-index: 999;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--midnight-navy);
+            transform: translateY(-3px);
+        }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 1024px) {
+            .demo-grid { grid-template-columns: 1fr; }
+            .demo-tabs { display: flex; overflow-x: auto; padding: 0; }
+            .demo-tab { white-space: nowrap; border-left: none; border-bottom: 3px solid transparent; }
+            .demo-tab.active { border-left-color: transparent; border-bottom-color: var(--champagne-bronze); }
+            .selector-body { grid-template-columns: 1fr; }
+            .selector-summary { border-left: none; border-top: 1px solid var(--soft-concrete); }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 400px;
+                height: 100vh;
+                background: var(--midnight-navy);
+                flex-direction: column;
+                padding: 6rem 2rem 2rem;
+                transition: right 0.4s ease;
+                gap: 1.5rem;
+            }
+            .nav-links.active { right: 0; }
+            .nav-links a { color: var(--white) !important; font-size: 1.1rem; }
+            .transparency-grid { grid-template-columns: 1fr; }
+            .relationship-diagram { grid-template-columns: 1fr; }
+            .relationship-diagram::before, .relationship-diagram::after { display: none; }
+            .form-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+            .hero-buttons { flex-direction: column; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">Abode Design & Construct</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#system">Our System</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#process">Our Process</a></li>
+                <li><a href="#faq">FAQs</a></li>
+                <li><a href="#contact" class="nav-cta">Start Your Project</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content reveal">
+                <span class="hero-supporting">Greater transparency. Greater control. A better building experience.</span>
+                <h1>Your Home. Your Choices. Your Build.</h1>
+                <p>Discover a more transparent approach to construction, where you have greater control over the products, inclusions and decisions that shape your home.</p>
+                <div class="hero-buttons">
+                    <a href="#system" class="btn btn-primary">Discover Our Building System</a>
+                    <a href="#contact" class="btn btn-secondary">Discuss Your Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Proprietary Construction System -->
+    <section class="section-padding system-demo" id="system">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 800px; margin: 0 auto;">
+                <h2>A Better Way to Build. A System Designed Around You.</h2>
+                <p style="margin-top: 1.5rem;">Our proprietary online construction system allows you to nominate specific products, brands, sizes, styles, colours and inclusions for your proposed home. Know what goes into your home before you commit to building it.</p>
+            </div>
+
+            <div class="demo-grid reveal">
+                <div class="demo-tabs">
+                    <button class="demo-tab active" data-category="structural">Structural Components</button>
+                    <button class="demo-tab" data-category="external">External Finishes</button>
+                    <button class="demo-tab" data-category="flooring">Flooring</button>
+                    <button class="demo-tab" data-category="kitchen">Kitchen</button>
+                    <button class="demo-tab" data-category="bathroom">Bathroom</button>
+                    <button class="demo-tab" data-category="windows">Windows and Doors</button>
+                    <button class="demo-tab" data-category="fixtures">Fixtures and Fittings</button>
+                </div>
+                
+                <div class="demo-content">
+                    <div id="panel-structural" class="demo-panel active">
+                        <div class="spec-row">
+                            <div>
+                                <div class="spec-label">Product Name</div>
+                                <div class="spec-value">Hebel PowerWall System</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Brand / Supplier</div>
+                                <div class="spec-value">Hebel / CSR</div>
+                            </div>
+                        </div>
+                        <div class="spec-row">
+                            <div>
+                                <div class="spec-label">Specification</div>
+                                <div class="spec-value">75mm AAC Panels, reinforced</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Finish / Colour</div>
+                                <div class="spec-value">Rendered and painted (Dulux Monument)</div>
+                            </div>
+                        </div>
+                        <div class="spec-row" style="border-bottom: none;">
+                            <div>
+                                <div class="spec-label">Quantity / Selection</div>
+                                <div class="spec-value">Approx. 120 linear metres</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Illustrative Cost</div>
+                                <div class="spec-value text-bronze text-mono">$18,500.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="panel-external" class="demo-panel">
+                        <div class="spec-row">
+                            <div>
+                                <div class="spec-label">Product Name</div>
+                                <div class="spec-value">Axon Cladding</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Brand / Supplier</div>
+                                <div class="spec-value">James Hardie</div>
+                            </div>
+                        </div>
+                        <div class="spec-row">
+                            <div>
+                                <div class="spec-label">Specification</div>
+                                <div class="spec-value">10mm Sheet, fire-rated</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Finish / Colour</div>
+                                <div class="spec-value">Pre-primed, painted Woodland Grey</div>
+                            </div>
+                        </div>
+                        <div class="spec-row" style="border-bottom: none;">
+                            <div>
+                                <div class="spec-label">Quantity / Selection</div>
+                                <div class="spec-value">Approx. 85 square metres</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Illustrative Cost</div>
+                                <div class="spec-value text-bronze text-mono">$12,400.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="panel-flooring" class="demo-panel">
+                        <div class="spec-row">
+                            <div>
+                                <div class="spec-label">Product Name</div>
+                                <div class="spec-value">European Oak Solid Timber</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Brand / Supplier</div>
+                                <div class="spec-value">Bostik / Local Timber Co.</div>
+                            </div>
+                        </div>
+                        <div class="spec-row">
+                            <div>
+                                <div class="spec-label">Specification</div>
+                                <div class="spec-value">130mm x 14mm, tongue and groove</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Finish / Colour</div>
+                                <div class="spec-value">Natural Matte Polyurethane</div>
+                            </div>
+                        </div>
+                        <div class="spec-row" style="border-bottom: none;">
+                            <div>
+                                <div class="spec-label">Quantity / Selection</div>
+                                <div class="spec-value">Approx. 95 square metres</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Illustrative Cost</div>
+                                <div class="spec-value text-bronze text-mono">$21,000.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="panel-kitchen" class="demo-panel">
+                        <div class="spec-row">
+                            <div>
+                                <div class="spec-label">Product Name</div>
+                                <div class="spec-value">Engineered Stone Benchtop</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Brand / Supplier</div>
+                                <div class="spec-value">Caesarstone</div>
+                            </div>
+                        </div>
+                        <div class="spec-row">
+                            <div>
+                                <div class="spec-label">Specification</div>
+                                <div class="spec-value">40mm Slab, waterfall edge</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Finish / Colour</div>
+                                <div class="spec-value">Organic White</div>
+                            </div>
+                        </div>
+                        <div class="spec-row" style="border-bottom: none;">
+                            <div>
+                                <div class="spec-label">Quantity / Selection</div>
+                                <div class="spec-value">3.2 linear metres</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Illustrative Cost</div>
+                                <div class="spec-value text-bronze text-mono">$8,500.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="panel-bathroom" class="demo-panel">
+                        <div class="spec-row">
+                            <div>
+                                <div class="spec-label">Product Name</div>
+                                <div class="spec-value">Wall Hung Vanity Unit</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Brand / Supplier</div>
+                                <div class="spec-value">Caroma</div>
+                            </div>
+                        </div>
+                        <div class="spec-row">
+                            <div>
+                                <div class="spec-label">Specification</div>
+                                <div class="spec-value">1200mm, soft-close drawers</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Finish / Colour</div>
+                                <div class="spec-value">Dulux Lexicon Quarter</div>
+                            </div>
+                        </div>
+                        <div class="spec-row" style="border-bottom: none;">
+                            <div>
+                                <div class="spec-label">Quantity / Selection</div>
+                                <div class="spec-value">1 Unit (Master Ensuite)</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Illustrative Cost</div>
+                                <div class="spec-value text-bronze text-mono">$3,200.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="panel-windows" class="demo-panel">
+                        <div class="spec-row">
+                            <div>
+                                <div class="spec-label">Product Name</div>
+                                <div class="spec-value">Thermally Broken Awning Window</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Brand / Supplier</div>
+                                <div class="spec-value">Vantage Aluminium Systems</div>
+                            </div>
+                        </div>
+                        <div class="spec-row">
+                            <div>
+                                <div class="spec-label">Specification</div>
+                                <div class="spec-value">Double glazed, Low-E glass</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Finish / Colour</div>
+                                <div class="spec-value">Woodland Grey powder coat</div>
+                            </div>
+                        </div>
+                        <div class="spec-row" style="border-bottom: none;">
+                            <div>
+                                <div class="spec-label">Quantity / Selection</div>
+                                <div class="spec-value">6 Units (Standard size)</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Illustrative Cost</div>
+                                <div class="spec-value text-bronze text-mono">$15,600.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="panel-fixtures" class="demo-panel">
+                        <div class="spec-row">
+                            <div>
+                                <div class="spec-label">Product Name</div>
+                                <div class="spec-value">LED Downlight Package</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Brand / Supplier</div>
+                                <div class="spec-value">Hive Lighting</div>
+                            </div>
+                        </div>
+                        <div class="spec-row">
+                            <div>
+                                <div class="spec-label">Specification</div>
+                                <div class="spec-value">9W Dimmable, 3000K Warm White</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Finish / Colour</div>
+                                <div class="spec-value">Matte White trim</div>
+                            </div>
+                        </div>
+                        <div class="spec-row" style="border-bottom: none;">
+                            <div>
+                                <div class="spec-label">Quantity / Selection</div>
+                                <div class="spec-value">45 Units</div>
+                            </div>
+                            <div>
+                                <div class="spec-label">Illustrative Cost</div>
+                                <div class="spec-value text-bronze text-mono">$2,800.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cost-summary">
+                        <span class="label">Illustrative Selection Subtotal</span>
+                        <span class="value" id="demoTotal">$82,000.00</span>
+                    </div>
+                    <p class="demo-disclaimer">Disclaimer: This demonstration is illustrative only and does not represent the actual proprietary system interface, a live quotation, or a binding price. Final specifications and costs are determined during the formal selection and contracting phase.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Transparency Matters -->
+    <section class="section-padding" id="about" style="background: var(--warm-ivory);">
+        <div class="container">
+            <div class="transparency-grid reveal">
+                <div>
+                    <h2>Construction Shouldn't Be a Mystery.</h2>
+                    <p style="margin-top: 1.5rem;">The traditional construction process often leaves homeowners navigating unclear product specifications, generic building inclusions, and limited visibility into associated costs. This uncertainty can lead to a disconnect between your expectations and the final result.</p>
+                    <p>Abode Design & Construct addresses these industry-wide challenges head-on. By providing detailed, itemised specifications and encouraging active owner participation, we ensure you understand exactly what is being specified, purchased, and built.</p>
+                </div>
+                <div>
+                    <ul class="concern-list">
+                        <li>Unclear or vague product specifications in standard contracts.</li>
+                        <li>Generic building inclusions that lack brand or model detail.</li>
+                        <li>Uncertainty about the specific materials and brands being used.</li>
+                        <li>Limited visibility into how selections impact overall project costs.</li>
+                        <li>Difficulty understanding exactly what is included in a building contract.</li>
+                    </ul>
+                    <p style="font-style: italic; color: var(--muted-sage); margin-top: 2rem;">Our approach replaces ambiguity with clarity, aligning your vision with the construction contract from day one.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section-padding" id="services" style="background: var(--white);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 800px; margin: 0 auto;">
+                <h2>Complete Construction Solutions</h2>
+                <p style="margin-top: 1rem;">From single custom residences to multi-unit developments, our structured approach ensures clarity at every stage.</p>
+            </div>
+            
+            <div class="services-grid reveal">
+                <div class="service-item">
+                    <h3>Single Residential Homes</h3>
+                    <p>Custom residential building solutions tailored to your lifestyle.</p>
+                    <ul>
+                        <li>Custom residential building solutions</li>
+                        <li>Planning and selection coordination</li>
+                        <li>Detailed material and product specifications</li>
+                        <li>Active owner involvement throughout the process</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3>Multi-Residential Developments</h3>
+                    <p>Construction solutions for multi-unit and townhouse projects.</p>
+                    <ul>
+                        <li>Multi-unit residential construction</li>
+                        <li>Development planning and specification coordination</li>
+                        <li>Product and material selection management</li>
+                        <li>Enhanced construction cost visibility</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3>Owner-Builder Support</h3>
+                    <p>Structured guidance to help you understand materials, selections, and project costs.</p>
+                    <ul>
+                        <li>Building specification guidance</li>
+                        <li>Product selection visibility</li>
+                        <li>Construction planning discussions</li>
+                        <li>Cost estimation and project coordination</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3>Planning & Coordination</h3>
+                    <p>A methodical approach to preparing your project for construction.</p>
+                    <ul>
+                        <li>Understanding project requirements</li>
+                        <li>Establishing proposed specifications</li>
+                        <li>Coordinating selections with suppliers and trades</li>
+                        <li>Clarifying inclusions and construction scope</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3>Town Planning & Permits</h3>
+                    <p>Coordination and assistance for statutory requirements.</p>
+                    <ul>
+                        <li>Town planning coordination</li>
+                        <li>Building permit-related assistance</li>
+                        <li>Project documentation management</li>
+                        <li>Relevant professional coordination</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h3>Subdivisions & Development</h3>
+                    <p>Strategic discussions for land development and multi-residential projects.</p>
+                    <ul>
+                        <li>Development feasibility discussions</li>
+                        <li>Subdivision planning coordination</li>
+                        <li>Multi-residential project considerations</li>
+                        <li>Building design and construction discussions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owner Control Selector -->
+    <section class="section-padding" style="background: var(--warm-ivory);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 800px; margin: 0 auto;">
+                <h2>You Choose the Details. We Build Around Your Vision.</h2>
+                <p style="margin-top: 1rem;">Experience how our system allows you to nominate individual products and inclusions, with immediate visibility into specifications and illustrative costs.</p>
+            </div>
+
+            <div class="selector-interface reveal">
+                <div class="selector-header">
+                    <h3 style="color: var(--white); font-size: 1.25rem; margin: 0;">Project Selection Dashboard</h3>
+                    <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--champagne-bronze);">DEMONSTRATION MODE</span>
+                </div>
+                <div class="selector-body">
+                    <div class="selector-controls">
+                        <div class="control-group">
+                            <label>Flooring Material</label>
+                            <select id="sel-flooring" onchange="updateSummary()">
+                                <option value="European Oak Solid Timber|Bostik|130x14mm|Natural Matte|95sqm|21000">European Oak Solid Timber ($21,000)</option>
+                                <option value="Engineered Bamboo|EcoFloor|180x14mm|Satin Finish|95sqm|16500">Engineered Bamboo ($16,500)</option>
+                                <option value="Porcelain Tiles|Beaumont Tiles|600x600mm|Concrete Look|95sqm|12800">Porcelain Tiles ($12,800)</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label>Kitchen Benchtop</label>
+                            <select id="sel-kitchen" onchange="updateSummary()">
+                                <option value="Caesarstone Organic White|Caesarstone|40mm Slab|Waterfall Edge|3.2lm|8500">Caesarstone Organic White ($8,500)</option>
+                                <option value="Dekton Khalo|Dekton|20mm Slim|Matte Finish|3.2lm|11200">Dekton Khalo ($11,200)</option>
+                                <option value="Laminate Finish|Laminex|40mm Thick|Standard Edge|3.2lm|3200">Laminate Finish ($3,200)</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label>Bathroom Vanity</label>
+                            <select id="sel-bathroom" onchange="updateSummary()">
+                                <option value="Wall Hung Unit|Caroma|1200mm|Dulux Lexicon|1 Unit|3200">Caroma Wall Hung ($3,200)</option>
+                                <option value="Floor Standing|Reece|1000mm|Oak Veneer|1 Unit|2800">Reece Floor Standing ($2,800)</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label>Window Style</label>
+                            <select id="sel-windows" onchange="updateSummary()">
+                                <option value="Thermally Broken Awning|Vantage|Double Glazed|Woodland Grey|6 Units|15600">Vantage Thermally Broken ($15,600)</option>
+                                <option value="Standard Aluminium|Capral|Single Glazed|White|6 Units|9400">Standard Aluminium ($9,400)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="selector-summary">
+                        <h4 style="margin-bottom: 1.5rem; font-family: var(--font-sans); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Your Selection Summary</h4>
+                        <div id="summary-list">
+                            <!-- Populated by JS -->
+                        </div>
+                        <div class="summary-total">
+                            <span>Estimated Selection Value</span>
+                            <span class="text-bronze text-mono" id="selector-total">$0.00</span>
+                        </div>
+                        <p class="demo-disclaimer" style="margin-top: 1rem; font-size: 0.75rem;">Fictional demonstration data only. Not a live quotation or binding price.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Four-Party Relationship -->
+    <section class="section-padding" style="background: var(--white);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 800px; margin: 0 auto;">
+                <h2>Transparency Across the Entire Project</h2>
+                <p style="margin-top: 1rem;">Our system is designed to consider and align the interests of all four key participants in the construction process.</p>
+            </div>
+
+            <div class="relationship-diagram reveal">
+                <div class="party-node">
+                    <h4>The Property Owner</h4>
+                    <p>Greater visibility into selections, inclusions and costs, with more control over what goes into the property.</p>
+                </div>
+                <div class="party-node">
+                    <h4>The Builder</h4>
+                    <p>Clearer specifications and a better-defined understanding of the agreed requirements, reducing ambiguity.</p>
+                </div>
+                <div class="party-node">
+                    <h4>The Supplier</h4>
+                    <p>Greater clarity around nominated products, brands and materials, streamlining procurement.</p>
+                </div>
+                <div class="party-node">
+                    <h4>The Tradesperson</h4>
+                    <p>Better visibility into the relevant specifications and expected work, enabling precise execution.</p>
+                </div>
+            </div>
+            <p class="text-center" style="margin-top: 3rem; font-size: 0.9rem; color: var(--muted-sage); font-style: italic;">Note: While our system improves clarity and communication, it does not automatically eliminate the potential for errors, delays, disputes, or cost variations inherent in construction.</p>
+        </div>
+    </section>
+
+    <!-- Building Journey Timeline -->
+    <section class="section-padding" id="process" style="background: var(--midnight-navy); color: var(--warm-ivory);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 800px; margin: 0 auto;">
+                <h2 style="color: var(--white);">From Your Vision to a Clearly Specified Build</h2>
+                <p style="color: var(--soft-concrete); margin-top: 1rem;">A structured, transparent process from initial concept to project completion.</p>
+            </div>
+
+            <div class="timeline reveal">
+                <div class="timeline-item">
+                    <h4 style="color: var(--champagne-bronze);">1. Initial Discussion</h4>
+                    <p>Understand the owner's objectives, property details, and project requirements.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 style="color: var(--champagne-bronze);">2. Project Planning</h4>
+                    <p>Discuss the proposed design, scope, and construction approach.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 style="color: var(--champagne-bronze);">3. Selections and Inclusions</h4>
+                    <p>Identify individual products, brands, materials, finishes, and specifications.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 style="color: var(--champagne-bronze);">4. Cost Transparency</h4>
+                    <p>Present relevant cost information and clarify the proposed inclusions.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 style="color: var(--champagne-bronze);">5. Contract and Coordination</h4>
+                    <p>Establish the agreed scope and fixed-price contract where applicable.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 style="color: var(--champagne-bronze);">6. Construction</h4>
+                    <p>Coordinate the agreed construction work with transparency and regular updates.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 style="color: var(--champagne-bronze);">7. Project Completion</h4>
+                    <p>Work towards delivering the agreed project requirements and final handover.</p>
+                </div>
+            </div>
+            <p class="text-center" style="margin-top: 3rem; font-size: 0.85rem; color: var(--soft-concrete); font-style: italic;">Timelines and outcomes are subject to site conditions, statutory approvals, and contractual terms.</p>
+        </div>
+    </section>
+
+    <!-- Fixed Price Proposition -->
+    <section class="section-padding" style="background: var(--warm-ivory); border-top: 1px solid var(--soft-concrete); border-bottom: 1px solid var(--soft-concrete);">
+        <div class="container text-center reveal" style="max-width: 900px;">
+            <h2>A Fixed-Price Contract Built Around Your Selections.</h2>
+            <p style="margin-top: 1.5rem; font-size: 1.1rem;">We aim to prepare a specific fixed-price contract based on your nominated products and inclusions. This means clearer specifications, defined inclusions, visibility into selected products, and associated cost information, resulting in better alignment between your expectations and the agreed contract.</p>
+            <p style="font-size: 0.9rem; color: var(--muted-sage); margin-top: 2rem; font-style: italic;">Please note: The final price, scope, allowances, exclusions, variations, and contractual conditions must be formally established in the actual building contract. No construction project is entirely immune to additional costs or variations due to unforeseen circumstances or owner-initiated changes.</p>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="section-padding" id="projects" style="background: var(--white);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 800px; margin: 0 auto;">
+                <h2>Designed Around People. Built Around Possibilities.</h2>
+            </div>
+
+            <div class="filter-buttons reveal">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="single">Single Homes</button>
+                <button class="filter-btn" data-filter="multi">Multi-Residential</button>
+                <button class="filter-btn" data-filter="townhouse">Townhouses</button>
+                <button class="filter-btn" data-filter="renovation">Renovations</button>
+            </div>
+
+            <div class="projects-grid reveal">
+                <div class="project-card" data-category="single" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Contemporary single residential home exterior" loading="lazy">
+                    <div class="project-overlay">
+                        <h4>Moonee Ponds Residence</h4>
+                        <p>Single Home</p>
+                    </div>
+                </div>
+                <div class="project-card" data-category="multi" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Modern multi-residential apartment building" loading="lazy">
+                    <div class="project-overlay">
+                        <h4>Ascot Vale Development</h4>
+                        <p>Multi-Residential</p>
+                    </div>
+                </div>
+                <div class="project-card" data-category="townhouse" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Contemporary townhouse development" loading="lazy">
+                    <div class="project-overlay">
+                        <h4>Essendon Townhouses</h4>
+                        <p>Townhouse Development</p>
+                    </div>
+                </div>
+                <div class="project-card" data-category="renovation" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Premium residential interior renovation" loading="lazy">
+                    <div class="project-overlay">
+                        <h4>Flemington Heritage Renovation</h4>
+                        <p>Renovation</p>
+                    </div>
+                </div>
+                <div class="project-card" data-category="single" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="Custom home interior kitchen selection" loading="lazy">
+                    <div class="project-overlay">
+                        <h4>Custom Home Interior</h4>
+                        <p>Single Home</p>
+                    </div>
+                </div>
+                <div class="project-card" data-category="multi" onclick="openLightbox(this)">
+                    <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=800&q=80" alt="Multi-unit development architectural detail" loading="lazy">
+                    <div class="project-overlay">
+                        <h4>Maribyrnong Units</h4>
+                        <p>Multi-Residential</p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center" style="margin-top: 2rem; font-size: 0.85rem; color: var(--muted-sage); font-style: italic;">Images are illustrative architectural photography representing the style and quality of work. Specific project details, names, and locations are editable placeholders pending confirmed portfolio additions.</p>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close">&times;</button>
+        <img id="lightbox-img" src="" alt="Project detail view">
+    </div>
+
+    <!-- Why Choose Abode -->
+    <section class="section-padding" style="background: var(--midnight-navy); color: var(--warm-ivory);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 800px; margin: 0 auto;">
+                <h2 style="color: var(--white);">More Clarity. More Control. A More Considered Build.</h2>
+            </div>
+            <div class="services-grid reveal" style="margin-top: 3rem;">
+                <div class="service-item" style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1);">
+                    <h3 style="color: var(--champagne-bronze);">Proprietary System</h3>
+                    <p style="color: var(--soft-concrete);">Our patented online construction system is the primary differentiator, offering unprecedented visibility.</p>
+                </div>
+                <div class="service-item" style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1);">
+                    <h3 style="color: var(--champagne-bronze);">Owner Participation</h3>
+                    <p style="color: var(--soft-concrete);">Greater owner participation in selecting exact products, brands, and finishes.</p>
+                </div>
+                <div class="service-item" style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1);">
+                    <h3 style="color: var(--champagne-bronze);">Detailed Specifications</h3>
+                    <p style="color: var(--soft-concrete);">No vague inclusions. Detailed product and inclusion specifications down to the model number.</p>
+                </div>
+                <div class="service-item" style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1);">
+                    <h3 style="color: var(--champagne-bronze);">Cost Visibility</h3>
+                    <p style="color: var(--soft-concrete);">Visibility into associated product costs, aligning expectations with the contract.</p>
+                </div>
+                <div class="service-item" style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1);">
+                    <h3 style="color: var(--champagne-bronze);">Four-Party Alignment</h3>
+                    <p style="color: var(--soft-concrete);">Consideration of owners, builders, suppliers, and tradespeople for smoother delivery.</p>
+                </div>
+                <div class="service-item" style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.1);">
+                    <h3 style="color: var(--champagne-bronze);">Structured Planning</h3>
+                    <p style="color: var(--soft-concrete);">A structured approach to project planning across residential and multi-residential builds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding" id="faq" style="background: var(--warm-ivory);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 800px; margin: 0 auto;">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What makes Abode's construction approach different?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Unlike conventional builders who often use generic inclusions, Abode provides a transparent, owner-controlled approach. You nominate specific products, brands, and finishes, giving you clear visibility into what is being specified and purchased.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What is the proprietary online construction system?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>It is our dedicated platform that allows clients to view, select, and confirm individual products, materials, and inclusions for their project, complete with associated cost information and specification details.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I choose the brands and products used in my home?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. A core benefit of our system is allowing you to nominate specific product brands, models, sizes, styles, and colours, ensuring the final build aligns with your expectations.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I see product specifications and associated costs?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. The system provides actual cost information and detailed product specifications so you have greater visibility into what is being specified, moving away from vague or generic construction inclusions.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Does Abode build single residential homes?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we specialise in single-home construction and custom residential building solutions, coordinating planning, selections, and construction with high transparency.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Does Abode undertake multi-unit developments?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we provide construction solutions for multi-unit and multi-residential projects, including development planning, specification coordination, and cost visibility.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can owner-builders work with Abode?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Our structured and transparent approach can help owner-builders understand materials, selections, inclusions, and project costs. We provide specification guidance and construction planning discussions.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How does the fixed-price contract work?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We aim to prepare a specific fixed-price contract based on your nominated products and inclusions. This ensures clearer specifications and better alignment between expectations and the contract. Final terms, allowances, and exclusions are established in the formal agreement.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I discuss town planning and building permit requirements?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer town planning coordination and building permit-related assistance as part of our broader development and construction offering, working alongside relevant professionals.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do I start a construction project with Abode?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Simply fill out the enquiry form below or contact us directly. We will arrange an initial discussion to understand your objectives, property, and project requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding" id="contact" style="background: var(--white);">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 800px; margin: 0 auto;">
+                <h2>Let's Make Your Next Build More Transparent.</h2>
+                <p style="margin-top: 1rem;">Whether you're planning a new home, a multi-residential development or an owner-builder project, start a conversation with Abode Design & Construct.</p>
+            </div>
+
+            <div class="contact-grid reveal">
+                <div class="contact-info">
+                    <div class="contact-info-block">
+                        <h4>Visit Us</h4>
+                        <p>Suite 5, 4 Homer Street<br>Moonee Ponds VIC 3039<br>Australia</p>
+                    </div>
+                    <div class="contact-info-block">
+                        <h4>Contact</h4>
+                        <p>Email: <a href="mailto:enquiry@abodedac.com.au" style="color: var(--champagne-bronze);">enquiry@abodedac.com.au</a></p>
+                        <p>Phone: 1300 737 646 / 03 9326 1137<br><span style="font-size: 0.8rem; color: var(--muted-sage);">(Please confirm preferred number)</span></p>
+                    </div>
+                    <div class="contact-info-block">
+                        <h4>Web</h4>
+                        <p><a href="http://www.abodedac.com.au/" target="_blank" style="color: var(--champagne-bronze);">www.abodedac.com.au</a></p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="enquiryForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Project Location *</label>
+                            <input type="text" id="location" name="location" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectType">Project Type *</label>
+                            <select id="projectType" name="projectType" required>
+                                <option value="">Select a type...</option>
+                                <option value="Single Residential Home">Single Residential Home</option>
+                                <option value="Custom Home">Custom Home</option>
+                                <option value="Multi-Residential Development">Multi-Residential Development</option>
+                                <option value="Townhouse Development">Townhouse Development</option>
+                                <option value="Owner-Builder Project">Owner-Builder Project</option>
+                                <option value="Town Planning / Development">Town Planning / Development</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dwellings">Approx. Number of Dwellings</label>
+                            <input type="number" id="dwellings" name="dwellings" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="ownerBuilder">Are you an Owner-Builder?</label>
+                            <select id="ownerBuilder" name="ownerBuilder">
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                                <option value="Exploring">Exploring</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Estimated Project Budget (Optional)</label>
+                            <input type="text" id="budget" name="budget" placeholder="e.g., $500k - $750k">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="description">Project Description *</label>
+                            <textarea id="description" name="description" required placeholder="Tell us about your vision, property, and any specific requirements..."></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="contactMethod">Preferred Contact Method</label>
+                            <select id="contactMethod" name="contactMethod">
+                                <option value="Email">Email</option>
+                                <option value="Phone">Phone</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Submit Enquiry</button>
+                        </div>
+                    </div>
+                    <div class="form-success" id="formSuccess">
+                        Thank you for your enquiry. We have received your details and will contact you shortly to discuss your project.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Abode Design & Construct</a>
+                    <p>Premium residential construction and property development in Moonee Ponds, Victoria. Delivering transparency, control, and clarity through our proprietary building system.</p>
+                </div>
+                <div>
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#system">Our System</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Single Homes</a></li>
+                        <li><a href="#services">Multi-Residential</a></li>
+                        <li><a href="#services">Owner-Builder Support</a></li>
+                        <li><a href="#services">Town Planning</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>Suite 5, 4 Homer Street</li>
+                        <li>Moonee Ponds VIC 3039</li>
+                        <li><a href="mailto:enquiry@abodedac.com.au">enquiry@abodedac.com.au</a></li>
+                        <li>1300 737 646 / 03 9326 1137</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Abode Design & Construct. All rights reserved.</p>
+                <p>ABN: [To Be Confirmed] | Building Practitioner: [To Be Confirmed]</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <!-- JavaScript -->
+    <script>
+        // =========================================
+        // NAVIGATION & SCROLL EFFECTS
+        // =========================================
+        const navbar = document.getElementById('navbar');
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                backToTop.classList.add('visible');
+            } else {
+                navbar.classList.remove('scrolled');
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // =========================================
+        // SCROLL REVEAL ANIMATION
+        // =========================================
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // =========================================
+        // PROPRIETARY SYSTEM DEMO TABS
+        // =========================================
+        const demoTabs = document.querySelectorAll('.demo-tab');
+        const demoPanels = document.querySelectorAll('.demo-panel');
+        const demoTotal = document.getElementById('demoTotal');
+        
+        // Base costs for demonstration calculation
+        const baseCosts = {
+            structural: 18500, external: 12400, flooring: 21000, 
+            kitchen: 8500, bathroom: 3200, windows: 15600, fixtures: 2800
+        };
+
+        demoTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                demoTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Update active panel
+                const category = tab.getAttribute('data-category');
+                demoPanels.forEach(panel => {
+                    panel.classList.remove('active');
+                    if (panel.id === `panel-${category}`) {
+                        panel.classList.add('active');
+                    }
+                });
+
+                // Update illustrative total (simulate a dynamic calculation)
+                const total = Object.values(baseCosts).reduce((a, b) => a + b, 0);
+                demoTotal.textContent = '$' + total.toLocaleString('en-AU', {minimumFractionDigits: 2});
+            });
+        });
+
+        // =========================================
+        // OWNER CONTROL SELECTOR
+        // =========================================
+        function updateSummary() {
+            const flooring = document.getElementById('sel-flooring').value.split('|');
+            const kitchen = document.getElementById('sel-kitchen').value.split('|');
+            const bathroom = document.getElementById('sel-bathroom').value.split('|');
+            const windows = document.getElementById('sel-windows').value.split('|');
+
+            const selections = [flooring, kitchen, bathroom, windows];
+            const summaryList = document.getElementById('summary-list');
+            summaryList.innerHTML = '';
+            
+            let total = 0;
+
+            selections.forEach(sel => {
+                const name = sel[0];
+                const price = parseInt(sel[5]);
+                total += price;
+
+                const div = document.createElement('div');
+                div.className = 'summary-item';
+                div.innerHTML = `
+                    <span class="name">${name}</span>
+                    <span class="price">$${price.toLocaleString('en-AU')}</span>
+                `;
+                summaryList.appendChild(div);
+            });
+
+            document.getElementById('selector-total').textContent = '$' + total.toLocaleString('en-AU', {minimumFractionDigits: 2});
+        }
+
+        // Initialize selector
+        updateSummary();
+
+        // =========================================
+        // FAQ ACCORDION
+        // =========================================
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                
+                // Open clicked if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // =========================================
+        // PROJECT GALLERY FILTER & LIGHTBOX
+        // =========================================
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => card.style.opacity = '1', 10);
+                    } else {
+                        card.style.opacity = '0';
+                        setTimeout(() => card.style.display = 'none', 400);
+                    }
+                });
+            });
+        });
+
+        function openLightbox(card) {
+            const img = card.querySelector('img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close lightbox on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // =========================================
+        // CONTACT FORM HANDLING
+        // =========================================
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            // Basic validation is handled by HTML5 'required' attributes
+            // Simulate submission
+            const form = document.getElementById('enquiryForm');
+            const successMsg = document.getElementById('formSuccess');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                form.reset();
+                successMsg.classList.add('active');
+                submitBtn.textContent = 'Submit Enquiry';
+                submitBtn.disabled = false;
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMsg.classList.remove('active');
+                }, 5000);
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
