@@ -1,0 +1,1959 @@
+
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ABC Wall Removers: Specialist structural wall removal, load-bearing wall alterations, and steel support installations in South Fremantle and the Perth region.">
+    <meta name="keywords" content="structural wall removal, load-bearing wall removal, steel support installation, lintel replacement, Fremantle, South Fremantle, Perth renovation">
+    <meta name="author" content="ABC Wall Removers">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="ABC Wall Removers | Specialist Structural Wall Removal Perth">
+    <meta property="og:description" content="Open up your space. Strengthen your home. Specialist structural wall removal and renovation services in Fremantle and surrounding Perth areas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://abcwallremovers.com.au/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=1200&q=80">
+    
+    <title>ABC Wall Removers | Specialist Structural Wall Removal & Renovation | Fremantle, WA</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* =========================================
+           CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            --color-charcoal: #252B2D;
+            --color-ivory: #F6F4EF;
+            --color-steel: #879198;
+            --color-eucalyptus: #718477;
+            --color-bronze: #A88C67;
+            --color-concrete: #DADBD6;
+            --color-white: #FFFFFF;
+            
+            --font-heading: 'Manrope', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+            
+            --border-radius: 4px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-ivory);
+            color: var(--color-charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--color-charcoal);
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+
+        p { margin-bottom: var(--spacing-sm); color: #4a4f52; }
+        
+        a { color: var(--color-bronze); text-decoration: none; transition: var(--transition); }
+        a:hover { color: var(--color-eucalyptus); }
+
+        img { max-width: 100%; height: auto; display: block; }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .section-padding { padding: var(--spacing-xl) 0; }
+        
+        .text-center { text-align: center; }
+        .text-bronze { color: var(--color-bronze); }
+        .text-eucalyptus { color: var(--color-eucalyptus); }
+
+        /* =========================================
+           BUTTONS
+           ========================================= */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: 2px solid transparent;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: var(--color-bronze);
+            color: var(--color-white);
+            border-color: var(--color-bronze);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-charcoal);
+            border-color: var(--color-charcoal);
+            color: var(--color-white);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-white);
+            border-color: var(--color-white);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-white);
+            color: var(--color-charcoal);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--color-charcoal);
+            border-color: var(--color-charcoal);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-charcoal);
+            color: var(--color-white);
+        }
+
+        /* =========================================
+           NAVIGATION
+           ========================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(246, 244, 239, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--color-concrete);
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--color-charcoal);
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-logo span { color: var(--color-bronze); }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-md);
+            align-items: center;
+        }
+
+        .nav-link {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--color-charcoal);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-link:hover { color: var(--color-bronze); }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--color-charcoal);
+            transition: var(--transition);
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(37, 43, 45, 0.7), rgba(37, 43, 45, 0.85));
+            z-index: -1;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            padding: var(--spacing-md);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards 0.3s;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-bronze);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .hero-title {
+            color: var(--color-white);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero-text {
+            font-size: 1.25rem;
+            color: var(--color-concrete);
+            margin-bottom: var(--spacing-lg);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .hero-tagline {
+            font-size: 0.9rem;
+            color: var(--color-steel);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: var(--spacing-md);
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--color-white);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 1s;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 40px;
+            background-color: var(--color-bronze);
+            margin-top: var(--spacing-xs);
+            animation: scrollPulse 2s infinite;
+        }
+
+        /* =========================================
+           ABOUT SECTION
+           ========================================= */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .about-image:hover img { transform: scale(1.03); }
+
+        .about-content h2 { margin-bottom: var(--spacing-md); }
+        
+        .heritage-note {
+            display: inline-block;
+            background-color: var(--color-concrete);
+            color: var(--color-charcoal);
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            border-left: 3px solid var(--color-bronze);
+        }
+
+        /* =========================================
+           SERVICES SECTION
+           ========================================= */
+        .services-section { background-color: var(--color-white); }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--spacing-lg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .service-card {
+            background-color: var(--color-ivory);
+            padding: var(--spacing-md);
+            border-left: 4px solid var(--color-bronze);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-left-color: var(--color-eucalyptus);
+        }
+
+        .service-card h3 {
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin-top: auto;
+            padding-top: var(--spacing-sm);
+        }
+
+        .service-card li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--color-steel);
+        }
+
+        .service-card li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--color-bronze);
+        }
+
+        .service-flagship {
+            grid-column: 1 / -1;
+            background-color: var(--color-charcoal);
+            color: var(--color-white);
+            border-left-color: var(--color-bronze);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+            align-items: center;
+        }
+
+        .service-flagship h3, .service-flagship p, .service-flagship li {
+            color: var(--color-white);
+        }
+        
+        .service-flagship li { color: var(--color-concrete); }
+
+        .service-flagship img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+        }
+
+        /* =========================================
+           ADVISORY SECTION
+           ========================================= */
+        .advisory-section {
+            background-color: var(--color-charcoal);
+            color: var(--color-white);
+            text-align: center;
+        }
+
+        .advisory-section h2 { color: var(--color-white); margin-bottom: var(--spacing-md); }
+        .advisory-section p { color: var(--color-concrete); max-width: 700px; margin: 0 auto var(--spacing-md); }
+        
+        .advisory-features {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+            margin: var(--spacing-md) 0;
+        }
+
+        .advisory-feature {
+            background-color: rgba(255,255,255,0.05);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--border-radius);
+            font-weight: 500;
+        }
+
+        /* =========================================
+           WHY CHOOSE US
+           ========================================= */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .why-card {
+            text-align: center;
+            padding: var(--spacing-md);
+        }
+
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--color-concrete);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-sm);
+            color: var(--color-bronze);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* =========================================
+           PROJECT GALLERY & BEFORE/AFTER
+           ========================================= */
+        .gallery-section { background-color: var(--color-white); }
+
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-xs);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .filter-btn {
+            background: none;
+            border: 1px solid var(--color-concrete);
+            padding: 0.5rem 1.25rem;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--color-steel);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--color-charcoal);
+            color: var(--color-white);
+            border-color: var(--color-charcoal);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item.hidden { display: none; }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img { transform: scale(1.05); }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: var(--spacing-md);
+            background: linear-gradient(to top, rgba(37, 43, 45, 0.9), transparent);
+            color: var(--color-white);
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay { transform: translateY(0); }
+
+        /* Before/After Slider */
+        .ba-slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: var(--spacing-lg) auto;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            cursor: col-resize;
+            user-select: none;
+        }
+
+        .ba-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ba-image-before {
+            z-index: 2;
+            width: 50%; /* Initial state */
+            border-right: 2px solid var(--color-white);
+            overflow: hidden;
+        }
+
+        .ba-image-before img {
+            width: 800px; /* Match max-width of container to prevent squishing */
+            max-width: none;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ba-handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-white);
+            border-radius: 50%;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            pointer-events: none; /* Let clicks pass to container */
+        }
+
+        .ba-handle::before {
+            content: "↔";
+            color: var(--color-charcoal);
+            font-weight: 700;
+        }
+
+        .ba-label {
+            position: absolute;
+            top: var(--spacing-sm);
+            padding: 0.25rem 0.75rem;
+            background-color: rgba(37, 43, 45, 0.8);
+            color: var(--color-white);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: var(--border-radius);
+            z-index: 4;
+        }
+
+        .ba-label-before { left: var(--spacing-sm); z-index: 5; }
+        .ba-label-after { right: var(--spacing-sm); }
+
+        /* =========================================
+           PROCESS TIMELINE
+           ========================================= */
+        .process-section { background-color: var(--color-ivory); }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: var(--spacing-lg) auto 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--color-concrete);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: var(--spacing-md);
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.6s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-bronze);
+            color: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            z-index: 2;
+        }
+
+        .timeline-content h3 { margin-bottom: 0.5rem; }
+        .timeline-content p { color: var(--color-steel); margin: 0; }
+
+        /* =========================================
+           SAFETY SECTION
+           ========================================= */
+        .safety-section {
+            background-color: var(--color-eucalyptus);
+            color: var(--color-white);
+        }
+
+        .safety-section h2, .safety-section p { color: var(--color-white); }
+        .safety-section p { opacity: 0.9; }
+
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .safety-item {
+            background-color: rgba(255,255,255,0.1);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+        }
+
+        .safety-item h4 { color: var(--color-white); margin-bottom: 0.5rem; }
+        .safety-item p { color: var(--color-ivory); font-size: 0.95rem; margin: 0; }
+
+        /* =========================================
+           SERVICE AREAS
+           ========================================= */
+        .areas-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-md);
+        }
+
+        .area-tag {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-concrete);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            color: var(--color-charcoal);
+            transition: var(--transition);
+        }
+
+        .area-tag:hover {
+            background-color: var(--color-charcoal);
+            color: var(--color-white);
+            border-color: var(--color-charcoal);
+        }
+
+        /* =========================================
+           TESTIMONIALS (PLACEHOLDER)
+           ========================================= */
+        .testimonials-section { background-color: var(--color-white); }
+        
+        .placeholder-box {
+            border: 2px dashed var(--color-concrete);
+            padding: var(--spacing-lg);
+            text-align: center;
+            border-radius: var(--border-radius);
+            color: var(--color-steel);
+        }
+
+        /* =========================================
+           FAQ ACCORDION
+           ========================================= */
+        .faq-section { background-color: var(--color-ivory); }
+
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            background-color: var(--color-white);
+            margin-bottom: var(--spacing-xs);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid var(--color-concrete);
+        }
+
+        .accordion-header {
+            width: 100%;
+            padding: var(--spacing-md);
+            background: none;
+            border: none;
+            text-align: left;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--color-charcoal);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .accordion-header:hover { background-color: rgba(168, 140, 103, 0.05); }
+
+        .accordion-icon {
+            transition: transform 0.3s ease;
+            font-size: 1.5rem;
+            color: var(--color-bronze);
+        }
+
+        .accordion-item.active .accordion-icon { transform: rotate(45deg); }
+
+        .accordion-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content {
+            padding: 0 var(--spacing-md) var(--spacing-md);
+            color: var(--color-steel);
+        }
+
+        /* =========================================
+           CONTACT FORM
+           ========================================= */
+        .contact-section { background-color: var(--color-charcoal); color: var(--color-white); }
+        .contact-section h2 { color: var(--color-white); }
+        .contact-section p { color: var(--color-concrete); }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-md);
+        }
+
+        .contact-info-item {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .contact-info-item h4 {
+            color: var(--color-bronze);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .contact-info-item p, .contact-info-item a {
+            color: var(--color-white);
+            font-size: 1.1rem;
+        }
+
+        .form-group { margin-bottom: var(--spacing-sm); }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-concrete);
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background-color: rgba(255,255,255,0.05);
+            border: 1px solid var(--color-steel);
+            border-radius: var(--border-radius);
+            color: var(--color-white);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--color-bronze);
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .form-textarea { min-height: 120px; resize: vertical; }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-sm);
+        }
+
+        .form-error {
+            color: #e74c3c;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .form-success {
+            background-color: var(--color-eucalyptus);
+            color: var(--color-white);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            text-align: center;
+            display: none;
+            margin-top: var(--spacing-sm);
+        }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        .footer {
+            background-color: #1a1e20;
+            color: var(--color-steel);
+            padding: var(--spacing-lg) 0 var(--spacing-md);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .footer-brand { font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem; color: var(--color-white); margin-bottom: var(--spacing-sm); }
+        .footer-brand span { color: var(--color-bronze); }
+
+        .footer h4 { color: var(--color-white); margin-bottom: var(--spacing-sm); font-size: 1rem; }
+        
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.5rem; }
+        .footer-links a { color: var(--color-steel); font-size: 0.95rem; }
+        .footer-links a:hover { color: var(--color-bronze); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: var(--spacing-md);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* =========================================
+           LIGHTBOX
+           ========================================= */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(37, 43, 45, 0.95);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active { display: flex; opacity: 1; }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: var(--spacing-md);
+            right: var(--spacing-md);
+            background: none;
+            border: none;
+            color: var(--color-white);
+            font-size: 2rem;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* =========================================
+           BACK TO TOP
+           ========================================= */
+        .back-to-top {
+            position: fixed;
+            bottom: var(--spacing-md);
+            right: var(--spacing-md);
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-bronze);
+            color: var(--color-white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 900;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { background-color: var(--color-charcoal); }
+
+        /* =========================================
+           ANIMATIONS
+           ========================================= */
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(10px); opacity: 0.5; }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 992px) {
+            .about-grid, .contact-grid, .service-flagship { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .service-flagship img { order: -1; }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--color-ivory);
+                flex-direction: column;
+                padding: var(--spacing-md);
+                transition: left 0.3s ease;
+                border-top: 1px solid var(--color-concrete);
+            }
+
+            .nav-menu.active { left: 0; }
+            
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            
+            .ba-image-before img { width: 100vw; } /* Adjust for mobile viewport */
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2rem; }
+            .hero-ctas { flex-direction: column; width: 100%; }
+            .btn { width: 100%; }
+            .services-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">ABC <span>Wall Removers</span></a>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#process" class="nav-link">Our Process</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#faq" class="nav-link">FAQs</a></li>
+                    <li><a href="#contact" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.85rem;">Request Assessment</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="hero-subtitle">Structural Wall Removal | Steel Supports | Renovation Solutions</p>
+                <h1 class="hero-title">Open Up Your Space.<br>Strengthen Your Home.</h1>
+                <p class="hero-text">Specialist structural wall removal, load-bearing wall alterations and steel support solutions for residential and commercial properties.</p>
+                <div class="hero-ctas">
+                    <a href="#contact" class="btn btn-primary">Request a Site Assessment</a>
+                    <a href="#services" class="btn btn-secondary">Explore Our Services</a>
+                </div>
+                <p class="hero-tagline">Serving Fremantle & Surrounding Perth Areas</p>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section-padding" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image reveal">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Professional structural steel beam installation in residential renovation" loading="lazy">
+                    </div>
+                    <div class="about-content reveal">
+                        <span class="heritage-note">Note: Decades of specialist experience (up to 30 years, subject to owner confirmation)</span>
+                        <h2>Specialists in Structural Wall Removal.</h2>
+                        <p>Structural wall alterations can transform enclosed, dated spaces into bright, open, and highly functional environments. At ABC Wall Removers, we specialise in the precise and safe modification of residential and commercial properties.</p>
+                        <p>Our expertise extends beyond simple demolition. We handle complex load-bearing wall alterations, coordinate necessary engineering requirements, install permanent steel support structures, and manage the associated plastering and finishing work to deliver a seamless renovation experience.</p>
+                        <p>From initial consultation and cost estimation to final completion, our focus remains on structural integrity, safety-conscious project execution, and exceptional workmanship.</p>
+                        <a href="#contact" class="btn btn-outline" style="margin-top: 1rem;">Discuss Your Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section-padding services-section" id="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Comprehensive Specialist Services</h2>
+                    <p>Our primary focus is structural wall removal and associated building alterations, delivered with precision and professional coordination.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Flagship Service -->
+                    <article class="service-card service-flagship reveal">
+                        <div>
+                            <h3>Structural Wall Removal</h3>
+                            <p>Our flagship service. Removing selected walls to create expansive, open-plan interior spaces while maintaining the absolute structural integrity of your property.</p>
+                            <ul>
+                                <li>Load-bearing and non-load-bearing wall removal</li>
+                                <li>Residential and commercial wall removal</li>
+                                <li>Safe demolition and disposal within agreed scope</li>
+                                <li>Clear distinction between structural work and simple partition removal</li>
+                            </ul>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Open plan kitchen and living room transformation after wall removal" loading="lazy">
+                    </article>
+
+                    <article class="service-card reveal">
+                        <h3>Load-Bearing Wall Removal</h3>
+                        <p>Specialist alteration requiring precise planning. We assess existing conditions, coordinate engineering requirements, plan temporary and permanent supports, and install appropriate replacement structural elements.</p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <h3>Lintel Replacement</h3>
+                        <p>Essential specialist service for existing lintel replacement, structural support modifications, and doorway or window opening alterations, including related masonry and finishing work.</p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <h3>Custom Steel Structures</h3>
+                        <p>Tailored steel support solutions, including structural support elements, steel beam installation, and load-bearing support arrangements. Fabrication and installation coordination managed professionally.</p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <h3>Doorway & Window Modifications</h3>
+                        <p>Enlarging existing door openings, modifying window openings, removing sections of masonry, and executing related structural support work and associated finishing.</p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <h3>Building & Strengthening Walls</h3>
+                        <p>Structural wall modifications and reinforcement work, including support installations and coordination with relevant technical professionals as part of broader renovation projects.</p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <h3>Fireplace & Chimney Removal</h3>
+                        <p>Specialised renovation service for fireplace and chimney removal, addressing associated structural considerations and making good all affected surfaces.</p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <h3>Ceiling Patching & Replacement</h3>
+                        <p>Associated finishing services including ceiling repairs, patching, ceiling replacement, and thorough preparation for plastering and painting.</p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <h3>Plastering & Rendering</h3>
+                        <p>Professional finishing work to complete the renovation after structural alterations, including wall plastering, rendering, surface preparation, and patching.</p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <h3>Woodwork, Flooring & Concrete</h3>
+                        <p>Associated renovation work including woodwork, flooring-related adjustments, concrete structure modifications, and related property restoration. Precise scope established during assessment.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advisory Section -->
+        <section class="section-padding advisory-section" id="advisory">
+            <div class="container reveal">
+                <h2>Plan Your Wall Removal Project with Confidence.</h2>
+                <p>We provide comprehensive advisory and cost estimation services to ensure your project is viable, safe, and clearly scoped before any work begins.</p>
+                <div class="advisory-features">
+                    <div class="advisory-feature">Initial Project Discussions</div>
+                    <div class="advisory-feature">Structural Considerations</div>
+                    <div class="advisory-feature">Cost Estimation & Quotation</div>
+                    <div class="advisory-feature">Engineering & Approval Guidance</div>
+                </div>
+                <a href="#contact" class="btn btn-primary" style="margin-top: 1rem;">Discuss Your Project</a>
+                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">*We do not publish fixed prices. Every project requires a tailored assessment and quotation.</p>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="section-padding" id="why-choose-us">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Experience. Structural Expertise. Quality Workmanship.</h2>
+                </div>
+                <div class="why-grid">
+                    <div class="why-card reveal">
+                        <div class="why-icon">01</div>
+                        <h3>Specialist Experience</h3>
+                        <p>Drawing on decades of specialist experience (up to 30 years, subject to owner confirmation) in structural modifications and renovations.</p>
+                    </div>
+                    <div class="why-card reveal">
+                        <div class="why-icon">02</div>
+                        <h3>Structural Specialisation</h3>
+                        <p>Focused expertise in structural wall removal, load-bearing alterations, and steel support work, not general handyman services.</p>
+                    </div>
+                    <div class="why-card reveal">
+                        <div class="why-icon">03</div>
+                        <h3>Residential & Commercial</h3>
+                        <p>Proven capability to safely and effectively execute projects across both residential homes and commercial properties.</p>
+                    </div>
+                    <div class="why-card reveal">
+                        <div class="why-icon">04</div>
+                        <h3>Insurance Coverage</h3>
+                        <p>Carries public and products liability insurance (specific policy details and coverage amounts to be confirmed by owner).</p>
+                    </div>
+                    <div class="why-card reveal">
+                        <div class="why-icon">05</div>
+                        <h3>Customer-Focused</h3>
+                        <p>We prioritise your preferences, project requirements, and maintain clear, transparent communication throughout.</p>
+                    </div>
+                    <div class="why-card reveal">
+                        <div class="why-icon">06</div>
+                        <h3>Quality Workmanship</h3>
+                        <p>Meticulous attention to the agreed project scope, structural integrity, and high-quality associated finishing work.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Gallery -->
+        <section class="section-padding gallery-section" id="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>See the Difference a Wall Can Make.</h2>
+                    <p>Explore our project gallery showcasing transformations, structural installations, and renovation finishing.</p>
+                </div>
+
+                <!-- Before/After Slider -->
+                <div class="ba-slider-container reveal" id="baSlider">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="After: Open plan living space" class="ba-image ba-image-after">
+                    <div class="ba-image-before" id="baBefore">
+                        <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=800&q=80" alt="Before: Enclosed room with wall">
+                    </div>
+                    <div class="ba-handle" id="baHandle"></div>
+                    <span class="ba-label ba-label-before">Before</span>
+                    <span class="ba-label ba-label-after">After</span>
+                </div>
+
+                <!-- Gallery Filters -->
+                <div class="gallery-filters reveal">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="open-plan">Open Plan</button>
+                    <button class="filter-btn" data-filter="steel">Steel Supports</button>
+                    <button class="filter-btn" data-filter="openings">Openings</button>
+                    <button class="filter-btn" data-filter="finishing">Finishing</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid reveal">
+                    <div class="gallery-item" data-category="open-plan" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=600&q=80" alt="Open plan kitchen transformation" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Kitchen Wall Removal</h4>
+                            <p>Open-plan transformation</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="steel" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Structural steel beam installation" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Steel Beam Installation</h4>
+                            <p>Load-bearing support</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="openings" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=600&q=80" alt="Doorway modification" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Doorway Enlargement</h4>
+                            <p>Structural opening modification</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="finishing" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=80" alt="Plastering and ceiling repair" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Ceiling & Plastering</h4>
+                            <p>Post-removal finishing</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="open-plan" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=600&q=80" alt="Living room wall removal" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Living Space Expansion</h4>
+                            <p>Residential wall removal</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="steel" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?auto=format&fit=crop&w=600&q=80" alt="Lintel replacement" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4>Lintel Replacement</h4>
+                            <p>Structural support modification</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 2rem; font-size: 0.9rem; color: var(--color-steel);">* Images are illustrative examples. Authentic project photographs will be supplied by the business owner.</p>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="section-padding process-section" id="process">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>A Structured Approach to Every Project.</h2>
+                    <p>We follow a clear, professional process to ensure safety, compliance, and quality outcomes.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">1</div>
+                        <div class="timeline-content">
+                            <h3>Initial Enquiry</h3>
+                            <p>You explain the proposed wall removal or structural alteration. We listen to your goals and initial requirements.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">2</div>
+                        <div class="timeline-content">
+                            <h3>Site Assessment</h3>
+                            <p>We visit your property to understand existing conditions, structural elements, and the intended scope of work.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">3</div>
+                        <div class="timeline-content">
+                            <h3>Structural Planning</h3>
+                            <p>We identify relevant engineering requirements, temporary support needs, and necessary council approvals.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">4</div>
+                        <div class="timeline-content">
+                            <h3>Quotation</h3>
+                            <p>We establish a clear scope of work, associated trades, and provide a detailed project pricing quotation.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">5</div>
+                        <div class="timeline-content">
+                            <h3>Preparation & Execution</h3>
+                            <p>We coordinate the agreed work, manage relevant trades, and execute the structural alterations safely.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-marker">6</div>
+                        <div class="timeline-content">
+                            <h3>Finishing & Completion</h3>
+                            <p>We complete all agreed patching, plastering, and associated finishing work to a high standard.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Section -->
+        <section class="section-padding safety-section" id="safety">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Structural Changes Require the Right Planning.</h2>
+                    <p>Load-bearing wall removal is fundamentally different from ordinary partition removal. Safety and compliance are non-negotiable.</p>
+                </div>
+                <div class="safety-grid reveal">
+                    <div class="safety-item">
+                        <h4>Proper Assessment</h4>
+                        <p>Structural conditions must be professionally assessed before any demolition begins.</p>
+                    </div>
+                    <div class="safety-item">
+                        <h4>Engineering Advice</h4>
+                        <p>Independent engineering advice and documentation may be required for load-bearing alterations.</p>
+                    </div>
+                    <div class="safety-item">
+                        <h4>Permits & Approvals</h4>
+                        <p>Appropriate building permits and local council approvals must be obtained where applicable.</p>
+                    </div>
+                    <div class="safety-item">
+                        <h4>Support Requirements</h4>
+                        <p>Temporary and permanent structural support requirements must be carefully planned and executed.</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">ABC Wall Removers coordinates with qualified professionals. We do not provide independent engineering certification or building approval services unless explicitly verified.</p>
+            </div>
+        </section>
+
+        <!-- Service Areas -->
+        <section class="section-padding" id="service-areas">
+            <div class="container text-center reveal">
+                <h2>Serving Fremantle and the Perth Region.</h2>
+                <p>Based in South Fremantle, we provide specialist structural services across the following areas (proposed service areas, subject to owner confirmation):</p>
+                <div class="areas-list">
+                    <span class="area-tag">South Fremantle</span>
+                    <span class="area-tag">Fremantle</span>
+                    <span class="area-tag">East Fremantle</span>
+                    <span class="area-tag">North Fremantle</span>
+                    <span class="area-tag">Beaconsfield</span>
+                    <span class="area-tag">Hamilton Hill</span>
+                    <span class="area-tag">Hilton</span>
+                    <span class="area-tag">Surrounding Perth Suburbs</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section-padding testimonials-section" id="testimonials">
+            <div class="container reveal">
+                <div class="section-header">
+                    <h2>Client Feedback</h2>
+                </div>
+                <div class="placeholder-box">
+                    <h3>Authentic Testimonials Pending</h3>
+                    <p>This section is reserved for verified, authentic customer reviews, star ratings, and project descriptions. It will remain hidden or display this placeholder until genuine feedback is supplied by the business owner. We do not invent customer names, statistics, or reviews.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section-padding faq-section" id="faq">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="accordion reveal">
+                    <div class="accordion-item">
+                        <button class="accordion-header">What is the difference between load-bearing and non-load-bearing walls? <span class="accordion-icon">+</span></button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">Load-bearing walls support the weight of the structure above them (like floors or roofs), while non-load-bearing walls only support their own weight. Removing a load-bearing wall requires careful planning, temporary supports, and permanent structural replacements like steel beams.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Can you remove a wall between my kitchen and living room? <span class="accordion-icon">+</span></button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">Yes, this is one of our most common projects. We will assess whether the wall is load-bearing, coordinate any necessary engineering, and execute the removal to create your desired open-plan space.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Do you provide load-bearing wall removal? <span class="accordion-icon">+</span></button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">Absolutely. Load-bearing wall alteration is a core specialist service. We manage the entire process, including temporary propping, steel beam installation, and making good the surrounding areas.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Can you install replacement steel supports? <span class="accordion-icon">+</span></button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">Yes, we specialise in the installation of structural steel supports, including RSJs (rolled steel joists) and custom steel structures, coordinated with appropriate engineering specifications.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Do you undertake lintel replacement? <span class="accordion-icon">+</span></button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">Yes, we provide specialist lintel replacement services for doors, windows, and other structural openings, ensuring continued support for the masonry above.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Can you remove fireplaces and chimneys? <span class="accordion-icon">+</span></button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">Yes, fireplace and chimney removal is a specialised service we offer. We handle the structural considerations and ensure all affected surfaces are made good.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Do you provide plastering and ceiling repairs? <span class="accordion-icon">+</span></button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">Yes, we offer comprehensive finishing services, including ceiling patching, replacement, wall plastering, and rendering to ensure your space is ready for painting and final decoration.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Do I need engineering documentation before removing a wall? <span class="accordion-icon">+</span></button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">For load-bearing walls, yes. A qualified structural engineer must assess the property and provide specifications for the required support. We can help coordinate this process as part of our structural planning phase.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Do you undertake commercial wall removal? <span class="accordion-icon">+</span></button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">Yes, we have the expertise and capacity to handle structural wall removal and alterations in commercial properties, adhering to all relevant safety and compliance standards.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">How can I request a site assessment and quotation? <span class="accordion-icon">+</span></button>
+                        <div class="accordion-body">
+                            <div class="accordion-content">Simply fill out the contact form below with your project details, or call us. We will arrange a convenient time to visit your property, assess the scope, and provide a detailed quotation.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section-padding contact-section" id="contact">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Ready to Open Up Your Space?</h2>
+                    <p>Tell us about your proposed renovation or structural wall removal project. Get in touch to discuss the requirements and arrange the next steps.</p>
+                </div>
+                
+                <div class="contact-grid reveal">
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <h4>Business Name</h4>
+                            <p>ABC Wall Removers</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <h4>Email</h4>
+                            <a href="mailto:abcwallremovers.au@gmail.com">abcwallremovers.au@gmail.com</a>
+                        </div>
+                        <div class="contact-info-item">
+                            <h4>Phone</h4>
+                            <p>[Phone Number To Be Confirmed by Owner]<br><span style="font-size: 0.85rem; opacity: 0.7;">(Listings show: +61 408 904 310 or +61 449 520 264)</span></p>
+                        </div>
+                        <div class="contact-info-item">
+                            <h4>Address</h4>
+                            <p>6 Martha Street, South Fremantle WA 6162, Australia</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <h4>Website</h4>
+                            <a href="http://abcwallremovers.com.au/" target="_blank">abcwallremovers.com.au</a>
+                        </div>
+                    </div>
+
+                    <form id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" class="form-input" required>
+                                <span class="form-error">Please enter your full name.</span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                                <span class="form-error">Please enter a valid email address.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" required>
+                                <span class="form-error">Please enter your phone number.</span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="suburb">Property Suburb *</label>
+                                <input type="text" id="suburb" name="suburb" class="form-input" required>
+                                <span class="form-error">Please enter your suburb.</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="propertyType">Property Type *</label>
+                                <select id="propertyType" name="propertyType" class="form-select" required>
+                                    <option value="">Select...</option>
+                                    <option value="Residential">Residential</option>
+                                    <option value="Commercial">Commercial</option>
+                                </select>
+                                <span class="form-error">Please select a property type.</span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="workType">Type of Work *</label>
+                                <select id="workType" name="workType" class="form-select" required>
+                                    <option value="">Select...</option>
+                                    <option value="Structural Wall Removal">Structural Wall Removal</option>
+                                    <option value="Load-Bearing Wall Removal">Load-Bearing Wall Removal</option>
+                                    <option value="Lintel Replacement">Lintel Replacement</option>
+                                    <option value="Custom Steel Structures">Custom Steel Structures</option>
+                                    <option value="Doorway or Window Modification">Doorway or Window Modification</option>
+                                    <option value="Fireplace or Chimney Removal">Fireplace or Chimney Removal</option>
+                                    <option value="Ceiling Repairs">Ceiling Repairs</option>
+                                    <option value="Plastering and Rendering">Plastering and Rendering</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <span class="form-error">Please select the type of work.</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="loadBearing">Is the wall believed to be load-bearing? *</label>
+                            <select id="loadBearing" name="loadBearing" class="form-select" required>
+                                <option value="">Select...</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Unsure">Unsure</option>
+                            </select>
+                            <span class="form-error">Please indicate if you believe the wall is load-bearing.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="description">Project Description *</label>
+                            <textarea id="description" name="description" class="form-textarea" required placeholder="Please describe your project, including any known structural concerns or specific requirements."></textarea>
+                            <span class="form-error">Please provide a brief description of your project.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contactMethod">Preferred Contact Method *</label>
+                            <select id="contactMethod" name="contactMethod" class="form-select" required>
+                                <option value="">Select...</option>
+                                <option value="Phone">Phone</option>
+                                <option value="Email">Email</option>
+                            </select>
+                            <span class="form-error">Please select your preferred contact method.</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Submit Enquiry</button>
+                        
+                        <div id="formSuccess" class="form-success">
+                            <h4>Thank You!</h4>
+                            <p>Your enquiry has been prepared. As this is a static website, please click "Send Email" below to open your email client, or contact us directly.</p>
+                            <a id="mailtoLink" href="#" class="btn btn-secondary" style="margin-top: 1rem;">Send Email Now</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">ABC <span>Wall Removers</span></div>
+                    <p>Specialist structural wall removal, load-bearing wall alterations, and steel support installations. Serving Fremantle and the wider Perth region with professional, safety-conscious workmanship.</p>
+                </div>
+                <div>
+                    <h4>Quick Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Specialist Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Structural Wall Removal</a></li>
+                        <li><a href="#services">Load-Bearing Alterations</a></li>
+                        <li><a href="#services">Steel Support Installation</a></li>
+                        <li><a href="#services">Lintel Replacement</a></li>
+                        <li><a href="#services">Finishing & Plastering</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>6 Martha Street</li>
+                        <li>South Fremantle WA 6162</li>
+                        <li>Australia</li>
+                        <li style="margin-top: 1rem;"><a href="mailto:abcwallremovers.au@gmail.com">abcwallremovers.au@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> ABC Wall Removers. All rights reserved. | ABN: [To Be Confirmed]</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img src="" alt="Enlarged project view" class="lightbox-img" id="lightboxImg">
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">&uarr;</button>
+
+    <!-- JavaScript -->
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Navigation
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Sticky Navbar & Back to Top
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                backToTop.classList.add('visible');
+            } else {
+                navbar.classList.remove('scrolled');
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal, .timeline-item');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Before/After Slider
+        const baSlider = document.getElementById('baSlider');
+        const baBefore = document.getElementById('baBefore');
+        const baHandle = document.getElementById('baHandle');
+        let isDragging = false;
+
+        const updateSlider = (x) => {
+            const rect = baSlider.getBoundingClientRect();
+            let percentage = ((x - rect.left) / rect.width) * 100;
+            percentage = Math.max(0, Math.min(100, percentage));
+            
+            baBefore.style.width = percentage + '%';
+            baHandle.style.left = percentage + '%';
+        };
+
+        baSlider.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            updateSlider(e.clientX);
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            updateSlider(e.clientX);
+        });
+
+        window.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        // Touch support for slider
+        baSlider.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            updateSlider(e.touches[0].clientX);
+        });
+
+        window.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            updateSlider(e.touches[0].clientX);
+        });
+
+        window.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        // Gallery Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // FAQ Accordion
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const body = header.nextElementSibling;
+                const isActive = item.classList.contains('active');
+
+                // Close all others
+                document.querySelectorAll('.accordion-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.accordion-body').style.maxHeight = null;
+                });
+
+                // Toggle current
+                if (!isActive) {
+                    item.classList.add('active');
+                    body.style.maxHeight = body.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // Form Validation & Mailto Fallback
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+        const mailtoLink = document.getElementById('mailtoLink');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+            
+            // Clear previous errors
+            document.querySelectorAll('.form-error').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(el => {
+                el.style.borderColor = 'var(--color-steel)';
+            });
+
+            // Validate required fields
+            const requiredFields = ['fullName', 'email', 'phone', 'suburb', 'propertyType', 'workType', 'loadBearing', 'description', 'contactMethod'];
+            
+            requiredFields.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                const error = field.nextElementSibling;
+                
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = '#e74c3c';
+                    if (error && error.classList.contains('form-error')) {
+                        error.style.display = 'block';
+                    }
+                } else if (fieldId === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
+                    isValid = false;
+                    field.style.borderColor = '#e74c3c';
+                    error.style.display = 'block';
+                }
+            });
+
+            if (isValid) {
+                // Construct mailto link
+                const fullName = document.getElementById('fullName').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const suburb = document.getElementById('suburb').value;
+                const propertyType = document.getElementById('propertyType').value;
+                const workType = document.getElementById('workType').value;
+                const loadBearing = document.getElementById('loadBearing').value;
+                const description = document.getElementById('description').value;
+                const contactMethod = document.getElementById('contactMethod').value;
+
+                const subject = `New Project Enquiry: ${workType} - ${suburb}`;
+                const body = `Name: ${fullName}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0ASuburb: ${suburb}%0D%0AProperty Type: ${propertyType}%0D%0AType of Work: ${workType}%0D%0ALoad-Bearing: ${loadBearing}%0D%0APreferred Contact: ${contactMethod}%0D%0A%0D%0AProject Description:%0D%0A${description}`;
+                
+                mailtoLink.href = `mailto:abcwallremovers.au@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+                
+                // Show success message
+                contactForm.reset();
+                formSuccess.style.display = 'block';
+                
+                // Scroll to success message
+                formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    </script>
+</body>
+</html>
